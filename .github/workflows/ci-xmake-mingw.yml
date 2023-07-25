@@ -65,9 +65,7 @@ jobs:
       - name: Install dependencies
         run: |
           scoop install main/make
-          scoop install main/git
           scoop install main/mingw
-          scoop install main/cmake
           scoop install main/uutils-coreutils
           scoop install main/elvish
       - uses: xmake-io/github-action-setup-xmake@v1
@@ -80,8 +78,8 @@ jobs:
         with:
           fetch-depth: 1
       - name: config
-        run: elvish bin/config.elv
+        run: elvish bin/config
       - name: build
-        run: elvish bin/build.elv
+        run: elvish bin/build
       - name: test
-        run: elvish bin/test.elv
+        run: elvish bin/test
