@@ -3,6 +3,8 @@ set paths = [
     C:$E:HOMEPATH/scoop/apps/mingw/current/bin
     C:$E:HOMEPATH/scoop/shims 
     C:/hostedtoolcache/windows/xmake/2.8.1/x64
+    C:/Program Files/Git/bin
+    C:/Program Files/CMake/bin
 ]
 echo $paths
 
