@@ -78,8 +78,8 @@ jobs:
         with:
           fetch-depth: 1
       - name: config
-        run: elvish bin/config.elv
+        run: elvish bin/config
       - name: build
-        run: elvish bin/build.elv
+        run: elvish bin/build
       - name: test
-        run: elvish bin/test.elv
+        run: elvish bin/test

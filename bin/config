@@ -1,10 +1,10 @@
 set paths = [
     C:/Windows/System32
-    C:$E:HOMEPATH/scoop/apps/mingw/current/bin
-    C:$E:HOMEPATH/scoop/shims 
+    $E:ProgramFiles/Git/bin
+    $E:ProgramFiles/CMake/bin
+    $E:USERPROFILE/scoop/apps/mingw/current/bin
+    $E:USERPROFILE/scoop/shims 
     C:/hostedtoolcache/windows/xmake/2.8.1/x64
-    C:/Program Files/Git/bin
-    C:/Program Files/CMake/bin
 ]
 echo $paths
 
