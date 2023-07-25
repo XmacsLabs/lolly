@@ -65,7 +65,6 @@ jobs:
       - name: Install dependencies
         run: |
           scoop install main/make
-          scoop install main/git
           scoop install main/mingw
           scoop install main/cmake
           scoop install main/uutils-coreutils
