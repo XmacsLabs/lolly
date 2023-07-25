@@ -16,7 +16,8 @@
 #include <math.h>
 
 /**
- * @brief Macro used for template specialization of less than and greater than operators.
+ * @brief Macro used for template specialization of less than and greater than
+ * operators.
  */
 #define LESSGTR <>
 
@@ -28,37 +29,37 @@
 /**
  * @brief Typedef for a signed integer.
  */
-typedef int                    SI;
+typedef int SI;
 
 /**
  * @brief Typedef for an unsigned integer.
  */
-typedef unsigned int           SN;
+typedef unsigned int SN;
 
 /**
  * @brief Typedef for a signed short integer.
  */
-typedef short                  HI;
+typedef short HI;
 
 /**
  * @brief Typedef for an unsigned short integer.
  */
-typedef unsigned short         HN;
+typedef unsigned short HN;
 
 /**
  * @brief Typedef for a signed character.
  */
-typedef char                   QI;
+typedef char QI;
 
 /**
  * @brief Typedef for an unsigned character.
  */
-typedef unsigned char          QN;
+typedef unsigned char QN;
 
 /**
  * @brief Typedef for a signed long long integer.
  */
-typedef long long int          DI;
+typedef long long int DI;
 
 /**
  * @brief Typedef for an unsigned long long integer.
@@ -68,12 +69,12 @@ typedef unsigned long long int DN;
 /**
  * @brief Typedef for a void pointer.
  */
-typedef void*                  pointer;
+typedef void* pointer;
 
 /**
  * @brief Typedef for an unsigned integer used for color representation.
  */
-typedef unsigned int           color;
+typedef unsigned int color;
 
 /**
  * @brief Macro defining the maximum value of a signed integer.
@@ -121,10 +122,12 @@ enum {
 };
 
 /**
- * @brief Function used to enable or disable debugging output for a specific debugging flag.
+ * @brief Function used to enable or disable debugging output for a specific
+ * debugging flag.
  *
  * @param which The debugging flag to enable or disable.
- * @param write_flag Boolean flag indicating whether to write the flag to the debug output.
+ * @param write_flag Boolean flag indicating whether to write the flag to the
+ * debug output.
  *
  * @return True if debugging is enabled for the specified flag, false otherwise.
  */
@@ -135,7 +138,7 @@ bool debug (int which, bool write_flag= false);
  *
  * @return The previous state of the debugging output.
  */
-int  debug_off ();
+int debug_off ();
 
 /**
  * @brief Function used to enable debugging output for all debugging flags.
@@ -163,87 +166,104 @@ void debug_set (string s, bool flag);
 bool debug_get (string s);
 
 /**
- * @brief Macro used to enable or disable debugging output for the "auto" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "auto"
+ * debugging flag.
  */
 #define DEBUG_AUTO (debug (DEBUG_FLAG_AUTO))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "verbose" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "verbose"
+ * debugging flag.
  */
 #define DEBUG_VERBOSE (debug (DEBUG_FLAG_VERBOSE))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "events" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "events"
+ * debugging flag.
  */
 #define DEBUG_EVENTS (debug (DEBUG_FLAG_EVENTS))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "std" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "std"
+ * debugging flag.
  */
 #define DEBUG_STD (debug (DEBUG_FLAG_STD))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "io" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "io"
+ * debugging flag.
  */
 #define DEBUG_IO (debug (DEBUG_FLAG_IO))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "bench" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "bench"
+ * debugging flag.
  */
 #define DEBUG_BENCH (debug (DEBUG_FLAG_BENCH))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "history" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "history"
+ * debugging flag.
  */
 #define DEBUG_HISTORY (debug (DEBUG_FLAG_HISTORY))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "qt" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "qt"
+ * debugging flag.
  */
 #define DEBUG_QT (debug (DEBUG_FLAG_QT))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "qt_widgets" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "qt_widgets"
+ * debugging flag.
  */
 #define DEBUG_QT_WIDGETS (debug (DEBUG_FLAG_QT_WIDGETS))
 
 /**
- * @brief Macro usedto enable or disable debugging output for the "keyboard" debugging flag.
+ * @brief Macro usedto enable or disable debugging output for the "keyboard"
+ * debugging flag.
  */
 #define DEBUG_KEYBOARD (debug (DEBUG_FLAG_KEYBOARD))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "packrat" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "packrat"
+ * debugging flag.
  */
 #define DEBUG_PACKRAT (debug (DEBUG_FLAG_PACKRAT))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "flatten" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "flatten"
+ * debugging flag.
  */
 #define DEBUG_FLATTEN (debug (DEBUG_FLAG_FLATTEN))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "parser" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "parser"
+ * debugging flag.
  */
 #define DEBUG_PARSER (debug (DEBUG_FLAG_PARSER))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "correct" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "correct"
+ * debugging flag.
  */
 #define DEBUG_CORRECT (debug (DEBUG_FLAG_CORRECT))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "convert" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "convert"
+ * debugging flag.
  */
 #define DEBUG_CONVERT (debug (DEBUG_FLAG_CONVERT))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "remote" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "remote"
+ * debugging flag.
  */
 #define DEBUG_REMOTE (debug (DEBUG_FLAG_REMOTE))
 
 /**
- * @brief Macro used to enable or disable debugging output for the "live" debugging flag.
+ * @brief Macro used to enable or disable debugging output for the "live"
+ * debugging flag.
  */
 #define DEBUG_LIVE (debug (DEBUG_FLAG_LIVE))
 
@@ -256,7 +276,8 @@ bool debug_get (string s);
 #define USE_EXCEPTIONS
 
 /**
- * @brief Function used to handle a TM failure by displaying an error message and exiting the program.
+ * @brief Function used to handle a TM failure by displaying an error message
+ * and exiting the program.
  *
  * @param msg The error message to display.
  */
@@ -273,15 +294,17 @@ extern string the_exception;
  *
  * @param msg The error message to throw with the exception.
  */
-void          tm_throw (const char* msg);
+void tm_throw (const char* msg);
 
 /**
- * @brief Function used to handle exceptions by displaying the exception message and exiting the program.
+ * @brief Function used to handle exceptions by displaying the exception message
+ * and exiting the program.
  */
-void          handle_exceptions ();
+void handle_exceptions ();
 
 /**
- * @brief Macro used to assert that a condition is true, and throw an exception with an error message if the condition is false.
+ * @brief Macro used to assert that a condition is true, and throw an exception
+ * with an error message if the condition is false.
  */
 #define ASSERT(cond, msg)                                                      \
   {                                                                            \
@@ -298,7 +321,8 @@ void          handle_exceptions ();
 #include <assert.h>
 
 /**
- * @brief Macro used to assert that a condition is true, and print an error message and exit the program if the condition is false.
+ * @brief Macro used to assert that a condition is true, and print an error
+ * message and exit the program if the condition is false.
  */
 #define ASSERT(cond, msg)                                                      \
   {                                                                            \
@@ -310,7 +334,7 @@ void          handle_exceptions ();
 
 /**
  * @brief Macro used to print an error message and exit the program.
- */  
+ */
 #define FAILED(msg)                                                            \
   {                                                                            \
     tm_failure (msg);                                                          \
@@ -319,7 +343,8 @@ void          handle_exceptions ();
 #else
 
 /**
- * @brief Macro used to assert that a condition is true, and print an error message and exit the program if the condition is false.
+ * @brief Macro used to assert that a condition is true, and print an error
+ * message and exit the program if the condition is false.
  */
 #define ASSERT(cond, msg)                                                      \
   {                                                                            \
@@ -330,7 +355,7 @@ void          handle_exceptions ();
 
 /**
  * @brief Macro used to print an error message and exit the program.
- */  
+ */
 #define FAILED(msg)                                                            \
   { tm_failure (msg); }
 #endif
@@ -528,7 +553,8 @@ copy (int x) {
 }
 
 /**
- * @brief Converts a double to a signed integer, rounding to the nearest integer.
+ * @brief Converts a double to a signed integer, rounding to the nearest
+ * integer.
  *
  * @param x The double to convert.
  * @return The converted signed integer.
@@ -576,35 +602,35 @@ tm_ostream& operator<< (tm_ostream& out, display_control ctrl);
  *
  * @return Whether the GUI is X11.
  */
-bool        gui_is_x ();
+bool gui_is_x ();
 
 /**
  * @brief Returns whether the GUI is Qt.
  *
  * @return Whether the GUI is Qt.
  */
-bool        gui_is_qt ();
+bool gui_is_qt ();
 
 /**
  * @brief Returns whether the operating system is Windows.
  *
  * @return Whether the operating system is Windows.
  */
-bool        os_win32 ();
+bool os_win32 ();
 
 /**
  * @brief Returns whether the operating system is MinGW.
  *
  * @return Whether the operating system is MinGW.
  */
-bool        os_mingw ();
+bool os_mingw ();
 
 /**
  * @brief Returns whether the operating system is macOS.
  *
  * @return Whether the operating system is macOS.
  */
-bool        os_macos ();
+bool os_macos ();
 
 /**
  * @brief Returns the default look and feel for the GUI.
@@ -619,9 +645,11 @@ const char* default_look_and_feel ();
  * @tparam T The type to help identify and initialize.
  */
 template <typename T> struct type_helper {
-  static int      id;         ///< The type identifier.
-  static T        init;       ///< The initialized value of the type.
-  static inline T init_val () { return T (); }    ///< Returns the initialized value of the type.
+  static int      id;   ///< The type identifier.
+  static T        init; ///< The initialized value of the type.
+  static inline T init_val () {
+    return T ();
+  } ///< Returns the initialized value of the type.
 };
 
 /**
@@ -629,16 +657,17 @@ template <typename T> struct type_helper {
  *
  * @return The new type identifier.
  */
-int                       new_type_identifier ();
+int new_type_identifier ();
 
 /**
- * @brief Initializes the type identifier and initialized value for a giventemplate type T.
+ * @brief Initializes the type identifier and initialized value for a
+ * giventemplate type T.
  *
  * @tparam T The type to initialize.
  */
-template <typename T> int type_helper<T>::id  = new_type_identifier ();
+template <typename T> int type_helper<T>::id= new_type_identifier ();
 ///< The type identifier for type T.
-template <typename T> T   type_helper<T>::init= T ();
+template <typename T> T type_helper<T>::init= T ();
 ///< The initialized value for type T.
 
 #ifdef QTTEXMACS
@@ -662,7 +691,8 @@ void tm_sleep ();
  ******************************************************************************/
 
 /**
- * @brief Global variable holding the number of concrete structures currently active.
+ * @brief Global variable holding the number of concrete structures currently
+ * active.
  */
 extern int concrete_count;
 
@@ -670,21 +700,24 @@ extern int concrete_count;
  * @brief Structure representing a concrete object with a reference count.
  */
 struct concrete_struct {
-  int ref_count;  ///< The reference count for the concrete object.
+  int ref_count; ///< The reference count for the concrete object.
 
   /**
-   * @brief Default constructor for the concrete object. Increments the reference count.
+   * @brief Default constructor for the concrete object. Increments the
+   * reference count.
    */
   inline concrete_struct () : ref_count (1) { TM_DEBUG (concrete_count++); }
 
   /**
-   * @brief Virtual destructor for the concrete object. Decrements the reference count.
+   * @brief Virtual destructor for the concrete object. Decrements the reference
+   * count.
    */
   virtual inline ~concrete_struct () { TM_DEBUG (concrete_count--); }
 };
 
 /**
- * @brief Global variable holding the number of abstract structures currently active.
+ * @brief Global variable holding the number of abstract structures currently
+ * active.
  */
 extern int abstract_count;
 
@@ -692,15 +725,17 @@ extern int abstract_count;
  * @brief Structure representing an abstract object with a reference count.
  */
 struct abstract_struct {
-  int ref_count;  ///< The reference count for the abstract object.
+  int ref_count; ///< The reference count for the abstract object.
 
   /**
-   * @brief Default constructor for the abstract object. Sets the reference count to 0.
+   * @brief Default constructor for the abstract object. Sets the reference
+   * count to 0.
    */
   inline abstract_struct () : ref_count (0) { TM_DEBUG (abstract_count++); }
 
   /**
-   * @brief Virtual destructor for the abstract object. Decrements the reference count.
+   * @brief Virtual destructor for the abstract object. Decrements the reference
+   * count.
    */
   virtual inline ~abstract_struct () { TM_DEBUG (abstract_count--); }
 };
@@ -718,9 +753,11 @@ struct abstract_struct {
   { (R)->ref_count++; }
 
 /**
- * @brief Macro used to decrement the reference count for a structure object and delete it if the count reaches 0.
+ * @brief Macro used to decrement the reference count for a structure object and
+ * delete it if the count reaches 0.
  *
- * @param R The structure object to decrement the reference count for and delete if necessary.
+ * @param R The structure object to decrement the reference count for and delete
+ * if necessary.
  */
 #define DEC_COUNT(R)                                                           \
   {                                                                            \
@@ -731,7 +768,8 @@ struct abstract_struct {
 // #define DEC_COUNT(R) { if(0==--((R)->ref_count)) { tm_delete (R); R=NULL;}}
 
 /**
- * @brief Macro used to increment the reference count for a structure object, only if the object is not NULL.
+ * @brief Macro used to increment the reference count for a structure object,
+ * only if the object is not NULL.
  *
  * @param R The structure object to increment the reference count for.
  */
@@ -743,9 +781,11 @@ struct abstract_struct {
   { if ((R)!=NULL && 0==--((R)->ref_count)) { tm_delete (R); } } */
 
 /**
- * @brief Macro used to decrement the reference count for a structure object and delete it if the count reaches 0, only if the object is not NULL.
+ * @brief Macro used to decrement the reference count for a structure object and
+ * delete it if the count reaches 0, only if the object is not NULL.
  *
- * @param R The structure object to decrement the reference count for and delete if necessary.
+ * @param R The structure object to decrement the reference count for and delete
+ * if necessary.
  */
 #define DEC_COUNT_NULL(R)                                                      \
   {                                                                            \
@@ -760,12 +800,15 @@ struct abstract_struct {
 /**
  * @brief Macro used to define a concrete smart pointer with reference counting.
  *
- * The PTR parameter should be a valid identifier that will be used as the name of the smart pointer type.
+ * The PTR parameter should be a valid identifier that will be used as the name
+ * of the smart pointer type.
  *
  * The macro defines the following:
  * - An opaque pointer to the implementation class, named PTR##_rep;
- * - A public copy constructor and destructor for the smart pointer, and a pointer dereference operator;
- * - A public assignment operator that decrements the reference count for the old object and increments the reference count for the new object.
+ * - A public copy constructor and destructor for the smart pointer, and a
+ * pointer dereference operator;
+ * - A public assignment operator that decrements the reference count for the
+ * old object and increments the reference count for the new object.
  *
  * @param PTR The name of the concrete smart pointer type to be defined.
  */
@@ -785,8 +828,9 @@ public:                                                                        \
  * - A copy constructor that increments the reference count for the new object;
  * - A destructor that decrements the reference count for the old object;
  * - A pointer dereference operator that returns the implementation pointer;
- * - An assignment operator that decrements the reference count for the old object, increments the reference count for the new object,
- *   and updates the implementation pointer.
+ * - An assignment operator that decrements the reference count for the old
+ * object, increments the reference count for the new object, and updates the
+ * implementation pointer.
  *
  * @param PTR The name of the concrete smart pointer type to be defined.
  */
@@ -804,15 +848,19 @@ public:                                                                        \
 // definition for 1 parameter template classes
 
 /**
- * @brief Macro used to define a concrete smart pointer with reference counting for a single template parameter.
+ * @brief Macro used to define a concrete smart pointer with reference counting
+ * for a single template parameter.
  *
- * The PTR parameter should be a valid identifier that will be used as the name of the smart pointer type.
- * The T parameter should be a valid template parameter that will be used as the type of the managed object.
+ * The PTR parameter should be a valid identifier that will be used as the name
+ * of the smart pointer type. The T parameter should be a valid template
+ * parameter that will be used as the type of the managed object.
  *
  * The macro defines the following:
  * - An opaque pointer to the implementation class, named PTR##_rep<T>;
- * - A public copy constructor and destructor for the smart pointer, and a pointer dereference operator;
- * - A public assignment operator that decrements the reference count for the old object and increments the reference count for the new object.
+ * - A public copy constructor and destructor for the smart pointer, and a
+ * pointer dereference operator;
+ * - A public assignment operator that decrements the reference count for the
+ * old object and increments the reference count for the new object.
  *
  * @param PTR The name of the concrete smart pointer type to be defined.
  * @param T The type of the managed object.
@@ -827,14 +875,16 @@ public:                                                                        \
   inline PTR<T>&       operator= (PTR<T> x)
 
 /**
- * @brief Macro used to define the implementation of a concrete smart pointer with reference counting for a single template parameter.
+ * @brief Macro used to define the implementation of a concrete smart pointer
+ * with reference counting for a single template parameter.
  *
  * This macro defines the following:
  * - A copy constructor that increments the reference count for the new object;
  * - A destructor that decrements the reference count for the old object;
  * - A pointer dereference operator that returns the implementation pointer;
- * - An assignment operator that decrements the reference count for the old object, increments the reference count for the new object,
- *   and updates the implementation pointer.
+ * - An assignment operator that decrements the reference count for the old
+ * object, increments the reference count for the new object, and updates the
+ * implementation pointer.
  *
  * @param PTR The name of the concrete smart pointer type to be defined.
  * @param TT The template parameter type.
@@ -858,15 +908,19 @@ public:                                                                        \
 // definition for 2 parameter template classes
 
 /**
- * @brief Macro used to define a concrete smart pointer with reference counting for two template parameters.
+ * @brief Macro used to define a concrete smart pointer with reference counting
+ * for two template parameters.
  *
- * The PTR parameter should be a valid identifier that will be used as the name of the smart pointer type.
- * The T1 and T2 parameters should be valid template parameters that will be used as the types of the managed objects.
+ * The PTR parameter should be a valid identifier that will be used as the name
+ * of the smart pointer type. The T1 and T2 parameters should be valid template
+ * parameters that will be used as the types of the managed objects.
  *
  * The macro defines the following:
  * - An opaque pointer to the implementation class, named PTR##_rep<T1, T2>;
- * - A public copy constructor and destructor for the smart pointer, and a pointer dereference operator;
- * - A public assignment operator that decrements the reference count for the old object and increments the reference count for the new object.
+ * - A public copy constructor and destructor for the smart pointer, and a
+ * pointer dereference operator;
+ * - A public assignment operator that decrements the reference count for the
+ * old object and increments the reference count for the new object.
  *
  * @param PTR The name of the concrete smart pointer type to be defined.
  * @param T1 The first type of the managed object.
@@ -882,14 +936,16 @@ public:                                                                        \
   inline PTR<T1, T2>&       operator= (PTR<T1, T2> x)
 
 /**
- * @brief Macro used to define the implementation of a concrete smart pointer with reference counting for two template parameters.
+ * @brief Macro used to define the implementation of a concrete smart pointer
+ * with reference counting for two template parameters.
  *
  * This macro defines the following:
  * - A copy constructor that increments the reference count for the new object;
  * - A destructor that decrements the reference count for the old object;
  * - A pointer dereference operator that returns the implementation pointer;
- * - An assignment operator that decrements the reference count for the old object, increments the reference count for the new object,
- *   and updates the implementation pointer.
+ * - An assignment operator that decrements the reference count for the old
+ * object, increments the reference count for the new object, and updates the
+ * implementation pointer.
  *
  * @param PTR The name of the concrete smart pointer type to be defined.
  * @param TT1 The first template parameter type.
@@ -922,7 +978,7 @@ public:                                                                        \
 
 /**
  * @brief Macro to define an abstract pointer type.
- * 
+ *
  * @param PTR The name of the abstract pointer type to define.
  */
 #define ABSTRACT(PTR)                                                          \
@@ -931,7 +987,7 @@ public:                                                                        \
 
 /**
  * @brief Macro to define an abstract pointer type with code.
- * 
+ *
  * @param PTR The name of the abstract pointer type to define.
  */
 #define ABSTRACT_CODE(PTR)                                                     \
@@ -970,7 +1026,7 @@ public:                                                                        \
 
 /**
  * @brief Macro to define a concrete null pointer type.
- * 
+ *
  * @param PTR The name of the concrete null pointer type to define.
  */
 #define CONCRETE_NULL(PTR)                                                     \
@@ -1032,7 +1088,8 @@ public:                                                                        \
   template <TT T> inline bool is_nil (PTR<T> x) { return x.rep == NULL; }
 
 /**
- * @brief Macro for concrete null indirect structure two-template-parameter definition.
+ * @brief Macro for concrete null indirect structure two-template-parameter
+ * definition.
  * @param PTR Pointer type of the concrete null indirect structure.
  * @param T1 First template parameter of the concrete null indirect structure.
  * @param T2 Second template parameter of the concrete null indirect structure.
@@ -1043,11 +1100,14 @@ public:                                                                        \
   friend bool is_nil LESSGTR (PTR<T1, T2> x)
 
 /**
- * @brief Macro for concrete null indirect structure two-template-parameter code definition.
+ * @brief Macro for concrete null indirect structure two-template-parameter code
+ * definition.
  * @param PTR Pointer type of the concrete null indirect structure.
- * @param TT1 Template type of the first template parameter of the concrete null indirect structure.
+ * @param TT1 Template type of the first template parameter of the concrete null
+ * indirect structure.
  * @param T1 First template parameter of the concrete null indirect structure.
- * @param TT2 Template type of the second template parameter of the concrete null indirect structure.
+ * @param TT2 Template type of the second template parameter of the concrete
+ * null indirect structure.
  * @param T2 Second template parameter of the concrete null indirect structure.
  */
 #define CONCRETE_NULL_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)                   \
@@ -1115,7 +1175,8 @@ public:                                                                        \
   }
 
 /**
- * @brief Macro for abstract null indirect structure two-template-parameter definition.
+ * @brief Macro for abstract null indirect structure two-template-parameter
+ * definition.
  * @param PTR Pointer type of the abstract null indirect structure.
  * @param T1 First template parameter of the abstract null indirect structure.
  * @param T2 Second template parameter of the abstract null indirect structure.
@@ -1125,11 +1186,14 @@ public:                                                                        \
   inline PTR (PTR##_rep<T1, T2>*)
 
 /**
- * @brief Macro for abstract null indirect structure two-template-parameter code definition.
+ * @brief Macro for abstract null indirect structure two-template-parameter code
+ * definition.
  * @param PTR Pointer type of the abstract null indirect structure.
- * @param TT1 Template type of the first template parameter of the abstract null indirect structure.
+ * @param TT1 Template type of the first template parameter of the abstract null
+ * indirect structure.
  * @param T1 First template parameter of the abstract null indirect structure.
- * @param TT2 Template type of the second template parameter of the abstract null indirect structure.
+ * @param TT2 Template type of the second template parameter of the abstract
+ * null indirect structure.
  * @param T2 Second template parameter of the abstract null indirect structure.
  */
 #define ABSTRACT_NULL_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)                   \
@@ -1146,7 +1210,8 @@ public:                                                                        \
 
 /**
  * @def EXTEND(BASE, PTR)
- * @brief Macro for extension of a base indirect structure with an abstract indirect structure.
+ * @brief Macro for extension of a base indirect structure with an abstract
+ * indirect structure.
  * @param BASE Base indirect structure.
  * @param PTR Abstract indirect structure.
  */
@@ -1157,7 +1222,8 @@ public:                                                                        \
 
 /**
  * @def EXTEND_CODE(BASE, PTR)
- * @brief Macro for extension of a base indirect structure with an abstract indirect structure code implementation.
+ * @brief Macro for extension of a base indirect structure with an abstract
+ * indirect structure code implementation.
  * @param BASE Base indirect structure.
  * @param PTR Abstract indirect structure.
  */
@@ -1173,7 +1239,8 @@ public:                                                                        \
 
 /**
  * @def EXTEND_NULL(BASE, PTR)
- * @brief Macro for extension of a base indirect structure with a concrete null indirect structure.
+ * @brief Macro for extension of a base indirect structure with a concrete null
+ * indirect structure.
  * @param BASE Base indirect structure.
  * @param PTR Concrete null indirect structure.
  */
@@ -1184,7 +1251,8 @@ public:                                                                        \
 
 /**
  * @def EXTEND_NULL_CODE(BASE, PTR)
- * @brief Macro for extension of a base indirect structure with a concrete null indirect structure code implementation.
+ * @brief Macro for extension of a base indirect structure with a concrete null
+ * indirect structure code implementation.
  * @param BASE Base indirect structure.
  * @param PTR Concrete null indirect structure.
  */
@@ -1197,7 +1265,8 @@ public:                                                                        \
 
 /**
  * @def EXTEND_NULL_TEMPLATE(BASE, PTR, T)
- * @brief Macro for extension of a base indirect structure with a concrete null indirect structure with a template parameter.
+ * @brief Macro for extension of a base indirect structure with a concrete null
+ * indirect structure with a template parameter.
  * @param BASE Base indirect structure.
  * @param PTR Concrete null indirect structure.
  * @param T Template parameter of the concrete null indirect structure.
@@ -1209,7 +1278,8 @@ public:                                                                        \
 
 /**
  * @def EXTEND_NULL_TEMPLATE_CODE(BASE, PTR, TT, T)
- * @brief Macro for extension of a base indirect structure with a concrete null indirect structure with a template parameter code implementation.
+ * @brief Macro for extension of a base indirect structure with a concrete null
+ * indirect structure with a template parameter code implementation.
  * @param BASE Base indirect structure.
  * @param PTR Concrete null indirect structure.
  * @param TT Template type of the concrete null indirect structure.
