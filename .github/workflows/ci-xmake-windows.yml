@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  linuxbuild:
+  windowsbuild:
     runs-on: windows-2022
     env:
         # Force xmake to a specific folder (for cache)
@@ -41,7 +41,6 @@ jobs:
             ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
             ${{ github.workspace }}/build/.build_cache
           key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
-      # Force xmake to a specific folder (for cache)
       - name: config
         run: xmake config --yes -vD
       - name: build
