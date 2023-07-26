@@ -1,8 +1,9 @@
 /** \file hashfunc.hpp
  *  \copyright GPLv3
  *  \details This hashfunc is a generic hash function class that utilizes a
- * concrete implementation of a hash function for a given type. \author Joris
- * van der Hoeven \date   1999
+ *           concrete implementation of a hash function for a given type.
+ *  \author Joris van der Hoeven
+ *  \date   1999
  */
 
 #ifndef HASHFUNC_H
