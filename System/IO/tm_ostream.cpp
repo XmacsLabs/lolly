@@ -12,7 +12,7 @@
 #include "tm_ostream.hpp"
 #include "tree.hpp"
 
-#if(defined OS_MINGW || defined OS_WIN32)
+#if (defined OS_MINGW || defined OS_WIN32)
 #include "nowide/convert.hpp"
 #include "nowide/iostream.hpp"
 #include <string.h>
@@ -70,7 +70,7 @@ std_ostream_rep::std_ostream_rep (char* fn)
     : file (0), is_w (false), is_mine (false) {
   file= fopen (fn, "w");
   if (file) {
-#if(defined OS_MINGW || defined OS_WIN32)
+#if (defined OS_MINGW || defined OS_WIN32)
     if (strcmp (fn, "stdout") == 0) fstdout= file;
     if (strcmp (fn, "stderr") == 0) fstderr= file;
 #endif
@@ -102,7 +102,7 @@ std_ostream_rep::is_writable () const {
 
 void
 std_ostream_rep::write (const char* s) {
-#if(defined OS_MINGW || defined OS_WIN32)
+#if (defined OS_MINGW || defined OS_WIN32)
   if (file == fstdout) {
     nowide::cout << s;
     nowide::cout.flush ();
