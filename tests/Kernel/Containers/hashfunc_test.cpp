@@ -4,7 +4,7 @@
 #include "hashfunc.hpp"
 
 using namespace lolly;
-using lolly:tree_label;
+using lolly::tree_label;
 
 TEST_CASE ("hashfunc") {
   // Define the hash function for integers, where hash(x) = x % 7
