@@ -184,7 +184,9 @@ TEST_CASE ("test size") {
   CHECK_EQ (N (non_empty_hm) == 1, true);
 }
 
-TEST_CASE ("hashmap comparison operators") {
+TEST_CASE ("hashmap default") {
+  // Create a hashmap object with integer keys and string values
+  hashmap<int, std::string> map ("default");
   // Test the comparison operators
   hashmap<int, std::string> equal_map ("default");
   equal_map (1)= "one";
