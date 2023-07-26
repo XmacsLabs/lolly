@@ -183,3 +183,58 @@ TEST_CASE ("test size") {
   non_empty_hm (1) = nullptr;
   CHECK_EQ (N (non_empty_hm) == 1, true);
 }
+
+TEST_CASE ("hashmap") {
+  // Create a hashmap object with integer keys and string values
+  hashmap<int, std::string> map ("default");
+
+  // Test the bracket operator
+  map (1)= "one";
+  map (2)= "two";
+  map (3)= "three";
+  map (4)= "four";
+  CHECK (map[1] == "one");
+  CHECK (map[2] == "two");
+  CHECK (map[3] == "three");
+  CHECK (map[4] == "four");
+
+  // Test the size of the hashmap
+  CHECK (N (map) == 4);
+
+  // Test the copy function
+  hashmap<int, std::string> copy_map= copy (map);
+  CHECK (copy_map[1] == "one");
+  CHECK (copy_map[2] == "two");
+  CHECK (copy_map[3] == "three");
+  CHECK (copy_map[4] == "four");
+
+  // Test the changes function
+  hashmap<int, std::string> changes_map ("default");
+  changes_map (1)                  = "five";
+  changes_map (2)                  = "six";
+  hashmap<int, std::string> new_map= changes (changes_map, map);
+  CHECK (new_map[1] == "five");
+  CHECK (new_map[2] == "six");
+  CHECK (new_map[3] == "default");
+  CHECK (new_map[4] == "default");
+
+  // Test the invert function
+  hashmap<int, std::string> base_map ("default");
+  base_map (1)                        = "one";
+  base_map (2)                        = "two";
+  hashmap<int, std::string> invert_map= invert (changes_map, base_map);
+  CHECK (invert_map[1] == "one");
+  CHECK (invert_map[2] == "two");
+  CHECK (invert_map[3] == "default");
+  CHECK (invert_map[4] == "default");
+
+  // Test the comparison operators
+  hashmap<int, std::string> equal_map ("default");
+  equal_map (1)= "one";
+  equal_map (2)= "two";
+  hashmap<int, std::string> not_equal_map ("default");
+  not_equal_map (1)= "one";
+  not_equal_map (2)= "three";
+  CHECK_EQ (map == equal_map, false);
+  CHECK (map != not_equal_map);
+}
