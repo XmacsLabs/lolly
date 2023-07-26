@@ -1,6 +1,6 @@
 set_project("lolly")
 
-set_allowedplats("linux", "macosx", "mingw", "wasm")
+set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
 includes("check_cxxtypes.lua")
 configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
@@ -20,7 +20,7 @@ configvar_check_cxxsnippets(
 set_configvar("QTTEXMACS", 1)
 
 add_requires("doctest 2.4.11", {system=false})
-if is_plat("mingw") then
+if is_plat("mingw", "windows") then
     add_requires("nowide_standalone 11.2.0", {system=false})
 end
 
@@ -45,7 +45,7 @@ target("liblolly") do
 
     set_basename("lolly")
 
-    if is_plat("mingw") then
+    if is_plat("mingw", "windows") then
         add_packages("nowide_standalone")
     end
 
@@ -53,12 +53,17 @@ target("liblolly") do
         "System/config_l1.h.xmake", {
             filename = "L1/config.h",
             variables = {
-                OS_MINGW = is_plat("mingw")
+                OS_MINGW = is_plat("mingw"),
+                OS_WIN32 = is_plat("windows")
             }
         }
     )
 
-    add_cxxflags("-include $(buildir)/L1/config.h")
+    if is_plat("windows") then
+        add_cxxflags("-FI " .. path.absolute("$(buildir)\\L1\\config.h"))
+    else
+        add_cxxflags("-include $(buildir)/L1/config.h")
+    end
     add_headerfiles("Kernel/Abstractions/(*hpp)")
     add_headerfiles("Kernel/Containers/(*hpp)")
     add_headerfiles("Kernel/Types/(*hpp)")
