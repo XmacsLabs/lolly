@@ -3,6 +3,8 @@
 #include "doctest/doctest.h"
 #include "hashfunc.hpp"
 
+using namespace lolly;
+
 TEST_CASE ("hashfunc") {
   // Define the hash function for integers, where hash(x) = x % 7
   int                init= 0;
