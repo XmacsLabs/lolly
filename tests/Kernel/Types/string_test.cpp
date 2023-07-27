@@ -81,6 +81,9 @@ TEST_CASE ("test as strig bool") {
  ******************************************************************************/
 
 TEST_CASE ("test is empty") {
+  string uninitialized;
+
+  CHECK_EQ (is_empty (uninitialized), true);
   CHECK_EQ (is_empty (""), true);
   CHECK_EQ (!is_empty (" "), true);
   CHECK_EQ (!is_empty ("nonempty"), true);

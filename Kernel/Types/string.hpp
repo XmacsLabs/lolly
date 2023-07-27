@@ -34,7 +34,6 @@ public:
 class string {
   CONCRETE (string);
   inline string () : rep (tm_new<string_rep> ()) {}
-  inline string (int n) : rep (tm_new<string_rep> (n)) {}
   string (char c);
   string (char c, int n);
   string (const char* s);
