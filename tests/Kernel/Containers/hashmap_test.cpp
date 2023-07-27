@@ -5,7 +5,6 @@
 #undef ERROR
 #include "hashmap.hpp"
 
-
 TEST_CASE ("test_resize") {
   auto hm= hashmap<int, int> (0, 10);
   hm (1) = 10;

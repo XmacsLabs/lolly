@@ -23,7 +23,7 @@ template <class T> class list {
   inline list (T item, list<T> next);
   inline list (T item1, T item2, list<T> next);
   inline list (T item1, T item2, T item3, list<T> next);
-  T& operator[] (int i);
+  T&             operator[] (int i);
   static list<T> init;
 
   friend bool is_atom      LESSGTR (list<T> l);

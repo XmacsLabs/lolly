@@ -49,30 +49,29 @@ TEST_CASE ("test scm quote") {
   CHECK_EQ (scm_quote ("\\") == "\"\\\\\"", true);
 }
 
-/*
 TEST_CASE ("test_scm_unquote") {
-  CHECK_EQ (scm_unquote ("\"\""), "");
-  CHECK_EQ (scm_unquote ("\"abc\""), "abc");
-  CHECK_EQ (scm_unquote ("abc"), "abc");
-  CHECK_EQ (scm_unquote (""), "");
-  CHECK_EQ (scm_unquote ("\"\\\\\""), "\\");
+  CHECK_EQ (scm_unquote ("\"\"") == "", true);
+  CHECK_EQ (scm_unquote ("\"abc\"") == "abc", true);
+  CHECK_EQ (scm_unquote ("abc") == "abc", true);
+  CHECK_EQ (scm_unquote ("") == "", true);
+  CHECK_EQ (scm_unquote ("\"\\\\\"") == "\\", true);
 }
 
 TEST_CASE ("test_raw_quote") {
-  CHECK_EQ (raw_quote ("a"), "\"a\"");
-  CHECK_EQ (raw_quote (""), "\"\"");
+  CHECK_EQ (raw_quote ("a") == "\"a\"", true);
+  CHECK_EQ (raw_quote ("") == "\"\"", true);
 }
 
 TEST_CASE ("test_raw_unquote") {
-  CHECK_EQ (raw_unquote ("\"a\""), "a");
-  CHECK_EQ (raw_unquote ("\"a"), "\"a");
-  CHECK_EQ (raw_unquote ("a\""), "a\"");
-  CHECK_EQ (raw_unquote (""), "");
-  CHECK_EQ (raw_unquote ("a"), "a");
+  CHECK_EQ (raw_unquote ("\"a\"") == "a", true);
+  CHECK_EQ (raw_unquote ("\"a") == "\"a", true);
+  CHECK_EQ (raw_unquote ("a\"") == "a\"", true);
+  CHECK_EQ (raw_unquote ("") == "", true);
+  CHECK_EQ (raw_unquote ("a") == "a", true);
 }
 
 TEST_CASE ("test_unescape_guile") {
-  CHECK_EQ (unescape_guile ("\\\\"), "\\\\\\\\");
+  CHECK_EQ (unescape_guile ("\\\\") == "\\\\\\\\", true);
 }
 
 TEST_CASE ("test_starts") {
@@ -92,7 +91,7 @@ TEST_CASE ("test_read_word") {
   string word;
   int    i= 0;
   CHECK (read_word ("hello123", i, word));
-  CHECK_EQ (word, "hello");
+  CHECK_EQ (word == "hello", true);
   CHECK_EQ (i, 5);
 
   i   = 0;
@@ -134,4 +133,3 @@ TEST_CASE ("test_is_binary_digit") {
     }
   }
 }
-*/
