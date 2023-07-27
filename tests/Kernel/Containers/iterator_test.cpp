@@ -36,8 +36,6 @@ TEST_CASE ("Test iterate with hashmap") {
   while (it->busy ()) {
     a= a * as_string (it->next ());
   }
-  cout << string (1) << "1" << LF;
-  cout << a << "a" << LF;
   CHECK_EQ (a == string ("123"), true);
 }
 
