@@ -4,6 +4,7 @@
 #undef FAILED
 #undef ERROR
 #include "iterator.hpp"
+#include "string.hpp"
 using namespace lolly;
 
 hashset<int> set;
@@ -27,15 +28,17 @@ TEST_CASE ("Test iterator_rep") {
 
 TEST_CASE ("Test iterate with hashmap") {
   hashmap<int, int> h;
-  h (1)                = 1;
-  h (2)                = 4;
-  h (3)                = 6;
-  iterator<int>      it= iterate (h);
-  std::ostringstream oss;
+  h (1)           = 1;
+  h (2)           = 4;
+  h (3)           = 6;
+  iterator<int> it= iterate (h);
+  auto          a = string ();
   while (it->busy ()) {
-    oss << it->next () << " ";
+    a= a * as_string (it->next ());
   }
-  CHECK_EQ (oss.str (), "1 2 3 ");
+  cout << string (1) << "1" << LF;
+  cout << a << "a" << LF;
+  CHECK_EQ (a == string ("123"), true);
 }
 
 TEST_CASE ("Test iterate with hashset") {
@@ -43,10 +46,10 @@ TEST_CASE ("Test iterate with hashset") {
   h->insert (1);
   h->insert (2);
   h->insert (3);
-  iterator<int>      it= iterate (h);
-  std::ostringstream oss;
+  iterator<int> it= iterate (h);
+  string        a ("");
   while (it->busy ()) {
-    oss << it->next () << " ";
+    a << as_string (it->next ());
   }
-  CHECK_EQ (oss.str (), "1 2 3 ");
+  CHECK_EQ (a, "123");
 }
