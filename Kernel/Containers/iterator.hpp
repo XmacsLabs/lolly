@@ -56,12 +56,6 @@ public:
  */
 template <class T> struct iterator {
   ABSTRACT_TEMPLATE (iterator, T);
-
-  /**
-   * @brief Conversion operator to tree.
-   * @return A tree object representing the iterator.
-   */
-  operator tree ();
 };
 ABSTRACT_TEMPLATE_CODE (iterator, class, T);
 

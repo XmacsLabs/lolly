@@ -4,7 +4,7 @@
 #undef FAILED
 #undef ERROR
 #include "hashmap.hpp"
-using namespace lolly;
+
 
 TEST_CASE ("test_resize") {
   auto hm= hashmap<int, int> (0, 10);

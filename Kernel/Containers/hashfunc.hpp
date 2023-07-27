@@ -58,12 +58,6 @@ template <class T, class U> class hashfunc {
    * @return The output of the hash function for the given input.
    */
   inline U operator[] (T x) { return rep->apply (x); }
-
-  /**
-   * @brief Conversion operator to convert the hash function object to a tree.
-   * @return A tree representing the hash function object.
-   */
-  operator tree ();
 };
 CONCRETE_TEMPLATE_2_CODE (hashfunc, class, T, class, U);
 

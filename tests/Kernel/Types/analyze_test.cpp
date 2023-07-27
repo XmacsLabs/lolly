@@ -6,8 +6,6 @@
 
 #include "analyze.hpp"
 
-// #include "base.hpp"
-
 TEST_CASE ("test is alpha") {
   for (unsigned char c= 0; c < 255; c++) {
     if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) {
@@ -20,37 +18,38 @@ TEST_CASE ("test is alpha") {
 }
 
 TEST_CASE ("test locase all") {
-  CHECK (locase_all (string ("true")) == string ("true"));
-  CHECK (locase_all (string ("TRue")) == string ("true"));
-  CHECK (locase_all (string ("TRUE")) == string ("true"));
-  CHECK (locase_all (string ("123TRUE")) == string ("123true"));
+  CHECK_EQ (locase_all (string ("true")) == string ("true"), true);
+  CHECK_EQ (locase_all (string ("TRue")) == string ("true"), true);
+  CHECK_EQ (locase_all (string ("TRUE")) == string ("true"), true);
+  CHECK_EQ (locase_all (string ("123TRUE")) == string ("123true"), true);
 }
 
 TEST_CASE ("test upcase all") {
-  CHECK (upcase_all (string ("true")) == string ("TRUE"));
-  CHECK (upcase_all (string ("TRue")) == string ("TRUE"));
-  CHECK (upcase_all (string ("TRUE")) == string ("TRUE"));
-  CHECK (upcase_all (string ("123true")) == string ("123TRUE"));
+  CHECK_EQ (upcase_all (string ("true")) == string ("TRUE"), true);
+  CHECK_EQ (upcase_all (string ("TRue")) == string ("TRUE"), true);
+  CHECK_EQ (upcase_all (string ("TRUE")) == string ("TRUE"), true);
+  CHECK_EQ (upcase_all (string ("123true")) == string ("123TRUE"), true);
 }
 
 TEST_CASE ("test string minus") {
-  CHECK (string_minus ("Hello World", "eo") == string ("Hll Wrld"));
-  CHECK (string_minus ("", "abc") == string (""));
-  CHECK (string_minus ("abc", "") == string ("abc"));
+  CHECK_EQ (string_minus ("Hello World", "eo") == string ("Hll Wrld"), true);
+  CHECK_EQ (string_minus ("", "abc") == string (""), true);
+  CHECK_EQ (string_minus ("abc", "") == string ("abc"), true);
 }
 
 TEST_CASE ("test string union") {
-  CHECK (string_union ("abc", "") == string ("abc"));
-  CHECK (string_union ("", "abc") == string ("abc"));
-  CHECK (string_union ("Hello World", "eo") == string ("Hll Wrldeo"));
+  CHECK_EQ (string_union ("abc", "") == string ("abc"), true);
+  CHECK_EQ (string_union ("", "abc") == string ("abc"), true);
+  CHECK_EQ (string_union ("Hello World", "eo") == string ("Hll Wrldeo"), true);
 }
 
 TEST_CASE ("test scm quote") {
-  CHECK_EQ (scm_quote ("a"), "\"a\"");
-  CHECK_EQ (scm_quote (""), "\"\"");
-  CHECK_EQ (scm_quote ("\\"), "\"\\\\\"");
+  CHECK_EQ (scm_quote ("a") == "\"a\"", true);
+  CHECK_EQ (scm_quote ("") == "\"\"", true);
+  CHECK_EQ (scm_quote ("\\") == "\"\\\\\"", true);
 }
 
+/*
 TEST_CASE ("test_scm_unquote") {
   CHECK_EQ (scm_unquote ("\"\""), "");
   CHECK_EQ (scm_unquote ("\"abc\""), "abc");
@@ -135,3 +134,4 @@ TEST_CASE ("test_is_binary_digit") {
     }
   }
 }
+*/

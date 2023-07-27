@@ -7,9 +7,9 @@
 
 #ifndef LIST_H
 #define LIST_H
-#include "tree.hpp"
 
-class tree;
+#include "basic.hpp"
+
 template <class T> class list_rep;
 template <class T> class list;
 
@@ -24,7 +24,6 @@ template <class T> class list {
   inline list (T item1, T item2, list<T> next);
   inline list (T item1, T item2, T item3, list<T> next);
   T& operator[] (int i);
-  operator tree ();
   static list<T> init;
 
   friend bool is_atom      LESSGTR (list<T> l);
