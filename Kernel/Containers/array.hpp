@@ -11,8 +11,6 @@
 #define ARRAY_H
 #include "basic.hpp"
 
-class tree;
-
 /**
  * @brief A template class representing an array.
  *
@@ -161,14 +159,6 @@ template <class T> class array {
    * @return   A reference to the element at the specified index.
    */
   inline T& operator[] (int i) { return rep->a[i]; }
-
-  /**
-   * @brief Convert the array to a tree.
-   *
-   * @tparam T Type of elements in the array.
-   * @return   A tree representing the array.
-   */
-  operator tree (); // defined in tree.hpp
 };
 CONCRETE_TEMPLATE_CODE (array, class, T);
 

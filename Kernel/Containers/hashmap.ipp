@@ -24,10 +24,6 @@ TMPL
 H::hashentry (int code2, T key2, U im2)
     : code (code2), key (key2), im (im2) {}
 
-TMPL H::operator tree () {
-  return tree (lolly::ASSOCIATE, as_tree (key), as_tree (im));
-}
-
 TMPL tm_ostream&
 operator<< (tm_ostream& out, H h) {
   out << h.key << "->" << h.im;
@@ -148,17 +144,6 @@ operator<< (tm_ostream& out, hashmap<T, U> h) {
   }
   out << " }";
   return out;
-}
-
-TMPL hashmap<T, U>::operator tree () {
-  int  i= 0, j= 0, n= rep->n, size= rep->size;
-  tree t (lolly::COLLECTION, size);
-  for (; i < n; i++) {
-    list<hashentry<T, U>> l= rep->a[i];
-    for (; !is_nil (l); l= l->next, j++)
-      t[j]= (tree) l->item;
-  }
-  return t;
 }
 
 TMPL void
