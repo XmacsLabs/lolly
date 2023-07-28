@@ -57,5 +57,5 @@ TEST_CASE ("iterate on hashset") {
   while (it->busy ()) {
     a << as_string (it->next ());
   }
-  CHECK_EQ (a == string("123"), true);
+  CHECK_EQ (a == string ("123"), true);
 }
