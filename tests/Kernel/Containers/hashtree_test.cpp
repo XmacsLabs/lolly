@@ -6,19 +6,26 @@
 #include "hashtree.hpp"
 #include "string.hpp"
 
-// Create a hashtree object with integer keys and string values
-
 TEST_CASE ("Test the add_child function") {
   hashtree<int, string> t;
-
-  string a ("one");
-  string b ("two");
-
+  string                a ("one");
+  string                b ("two");
   hashtree<int, string> child1 (string ("one"));
   hashtree<int, string> child2 (string ("two"));
+  hashtree<int, string> child3 (string ("three"));
   t->add_child (1, child1);
   t->add_child (2, child2);
+
   CHECK (N (child1) == 0);
+  CHECK (N (child2) == 0);
+  CHECK (N (t) == 2);
+
+  child1->add_child (3, child3);
+
+  CHECK (N (child1) == 1);
+  CHECK (N (child2) == 0);
+  CHECK_EQ (N (t) == 3, false);
+  CHECK_EQ (N (t) == 2, true);
 }
 
 TEST_CASE ("Test the contains function") {
@@ -36,7 +43,7 @@ TEST_CASE ("Test the contains function") {
   CHECK (!t->contains (3));
 }
 
-TEST_CASE ("Test the add_new_child function") {
+TEST_CASE ("add_new_child function") {
   hashtree<int, string> t;
 
   string a ("one");
@@ -51,7 +58,7 @@ TEST_CASE ("Test the add_new_child function") {
   CHECK (t->contains (3));
 }
 
-TEST_CASE ("Test the set_label and get_label function") {
+TEST_CASE ("set_label and get_label function") {
   hashtree<int, string> t;
   t->set_label ("root");
   CHECK (t->get_label () == "root");
