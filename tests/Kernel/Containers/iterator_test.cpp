@@ -5,7 +5,6 @@
 #undef ERROR
 #include "iterator.hpp"
 #include "string.hpp"
-using namespace lolly;
 
 hashset<int> set;
 
