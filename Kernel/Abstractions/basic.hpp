@@ -314,7 +314,7 @@ void handle_exceptions ();
 /**
  * @brief Macro used to throw an exception with a specified error message.
  */
-#define FAILED(msg)                                                            \
+#define TM_FAILED(msg)                                                            \
   { tm_throw (msg); }
 #else
 #ifdef DEBUG_ASSERT
@@ -335,7 +335,7 @@ void handle_exceptions ();
 /**
  * @brief Macro used to print an error message and exit the program.
  */
-#define FAILED(msg)                                                            \
+#define TM_FAILED(msg)                                                            \
   {                                                                            \
     tm_failure (msg);                                                          \
     assert (false);                                                            \
@@ -356,7 +356,7 @@ void handle_exceptions ();
 /**
  * @brief Macro used to print an error message and exit the program.
  */
-#define FAILED(msg)                                                            \
+#define TM_FAILED(msg)                                                            \
   { tm_failure (msg); }
 #endif
 #endif

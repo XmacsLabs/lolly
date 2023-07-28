@@ -1,8 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 
 #include "doctest/doctest.h"
-#undef FAILED
-#undef ERROR
 #include "hashmap.hpp"
 
 TEST_CASE ("test_resize") {
