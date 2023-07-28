@@ -61,7 +61,7 @@ TEST_CASE ("add_new_child function") {
 TEST_CASE ("set_label and get_label function") {
   hashtree<int, string> t;
   t->set_label ("root");
-  CHECK (t->get_label () == "root");
+  CHECK_EQ (t->get_label () == "root", true);
 }
 
 TEST_CASE ("Test the N and is_nil functions") {
