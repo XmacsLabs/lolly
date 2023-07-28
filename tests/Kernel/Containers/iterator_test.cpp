@@ -9,24 +9,33 @@ using namespace lolly;
 
 hashset<int> set;
 
-TEST_CASE ("Test iterator_rep") {
+TEST_CASE ("iterate on hashset") {
   set->insert (1);
   set->insert (2);
+  hashset<string> set1;
+  set1->insert (string ("string1"));
+  set1->insert (string ("string2"));
   SUBCASE ("Test iterator busy") {
-    iterator<int> it= iterate (set);
+    iterator<int>    it = iterate (set);
+    iterator<string> it1= iterate (set1);
     CHECK (it->busy ());
+    CHECK (it1->busy ());
   }
   SUBCASE ("Test iterator remains") {
-    iterator<int> it= iterate (set);
+    iterator<int>    it = iterate (set);
+    iterator<string> it1= iterate (set1);
     CHECK (it->remains () == -1);
+    CHECK (it1->remains () == -1);
   }
   SUBCASE ("Test iterator next") {
-    iterator<int> it= iterate (set);
+    iterator<int>    it = iterate (set);
+    iterator<string> it1= iterate (set1);
     CHECK (it->next ());
+    CHECK_EQ (it1->next () == string ("string1"), true);
   }
 }
 
-TEST_CASE ("Test iterate with hashmap") {
+TEST_CASE ("iterate on hashmap") {
   hashmap<int, int> h;
   h (1)           = 1;
   h (2)           = 4;
@@ -39,7 +48,7 @@ TEST_CASE ("Test iterate with hashmap") {
   CHECK_EQ (a == string ("123"), true);
 }
 
-TEST_CASE ("Test iterate with hashset") {
+TEST_CASE ("iterate on hashset") {
   hashset<int> h;
   h->insert (1);
   h->insert (2);
