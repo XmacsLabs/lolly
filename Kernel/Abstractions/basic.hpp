@@ -612,34 +612,6 @@ bool gui_is_x ();
 bool gui_is_qt ();
 
 /**
- * @brief Returns whether the operating system is Windows.
- *
- * @return Whether the operating system is Windows.
- */
-bool os_win32 ();
-
-/**
- * @brief Returns whether the operating system is MinGW.
- *
- * @return Whether the operating system is MinGW.
- */
-bool os_mingw ();
-
-/**
- * @brief Returns whether the operating system is macOS.
- *
- * @return Whether the operating system is macOS.
- */
-bool os_macos ();
-
-/**
- * @brief Returns the default look and feel for the GUI.
- *
- * @return The default look and feel for the GUI.
- */
-const char* default_look_and_feel ();
-
-/**
  * @brief Helper struct for type identification and initialization.
  *
  * @tparam T The type to help identify and initialize.
