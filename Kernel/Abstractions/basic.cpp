@@ -161,25 +161,3 @@ operator<< (tm_ostream& out, display_control ctrl) {
   }
   return out;
 }
-
-/******************************************************************************
- * Various TeXmacs blends
- ******************************************************************************/
-
-bool
-gui_is_x () {
-#ifdef QTTEXMACS
-  return false;
-#else
-  return true;
-#endif
-}
-
-bool
-gui_is_qt () {
-#ifdef QTTEXMACS
-  return true;
-#else
-  return false;
-#endif
-}
