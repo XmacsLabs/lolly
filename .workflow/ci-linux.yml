@@ -1,9 +1,13 @@
 version: '1.0'
-name: gitee-ci-linux
-displayName: gitee-ci-linux
+name: ci-linux
+displayName: ci-linux
 triggers:
   trigger: auto
   pr:
+    branches:
+      precise:
+        - main
+  push:
     branches:
       precise:
         - main
@@ -15,15 +19,15 @@ variables:
           
 
 stages:
-  - name: xmake
-    displayName: xmake
+  - name: build_and_test 
+    displayName: build_and_test
     strategy: fast
     trigger: auto
     executor: []
     steps:
       - step: build@gcc
         name: build
-        displayName: ci for lolly
+        displayName: Build and Test
         gccVersion: '9.4'
         commands:
           - apt-get update
