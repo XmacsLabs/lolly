@@ -28,7 +28,8 @@ local l1_files = {
     "Kernel/Abstractions/basic.cpp",
     "Kernel/Types/**.cpp",
     "System/IO/**.cpp",
-    "System/Memory/**.cpp"
+    "System/Memory/**.cpp",
+    "Data/String/**.cpp",
 }
 local l1_includedirs = {
     "System/Memory",
@@ -36,6 +37,7 @@ local l1_includedirs = {
     "Kernel/Abstractions",
     "Kernel/Containers",
     "Kernel/Types",
+    "Data/String",
 }
 
 target("liblolly") do
@@ -66,10 +68,11 @@ target("liblolly") do
     end
     add_headerfiles("Kernel/Abstractions/(*hpp)")
     add_headerfiles("Kernel/Containers/(*hpp)")
+    add_headerfiles("Kernel/Containers/(*.ipp)")
     add_headerfiles("Kernel/Types/(*hpp)")
     add_headerfiles("System/IO/(*hpp)")
     add_headerfiles("System/Memory/(*hpp)")
-    add_headerfiles("Kernel/Containers/(*.ipp)")
+    add_headerfiles("Data/String/(*.hpp)")
     add_includedirs(l1_includedirs)
     add_files(l1_files)
 end
