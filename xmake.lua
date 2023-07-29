@@ -86,7 +86,9 @@ for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
         add_packages("doctest")
-        add_syslinks("stdc++", "m")
+        if is_plat("linux") then
+            add_syslinks("stdc++", "m")
+        end
 
         add_includedirs("$(buildir)/L1")
         add_includedirs(l1_includedirs)
