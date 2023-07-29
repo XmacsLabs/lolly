@@ -598,20 +598,6 @@ enum display_control { INDENT, UNINDENT, HRULE, LF };
 tm_ostream& operator<< (tm_ostream& out, display_control ctrl);
 
 /**
- * @brief Returns whether the GUI is X11.
- *
- * @return Whether the GUI is X11.
- */
-bool gui_is_x ();
-
-/**
- * @brief Returns whether the GUI is Qt.
- *
- * @return Whether the GUI is Qt.
- */
-bool gui_is_qt ();
-
-/**
  * @brief Helper struct for type identification and initialization.
  *
  * @tparam T The type to help identify and initialize.
@@ -641,22 +627,6 @@ template <typename T> int type_helper<T>::id= new_type_identifier ();
 ///< The type identifier for type T.
 template <typename T> T type_helper<T>::init= T ();
 ///< The initialized value for type T.
-
-#ifdef QTTEXMACS
-// #define QT_CPU_FIX 1
-#ifdef QT_CPU_FIX
-
-/**
- * @brief Function used to wake up the CPU.
- */
-void tm_wake_up ();
-
-/**
- * @brief Function used to put the CPU to sleep.
- */
-void tm_sleep ();
-#endif
-#endif
 
 /******************************************************************************
  * concrete and abstract base structures

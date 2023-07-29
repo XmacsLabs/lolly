@@ -13,7 +13,6 @@ ${define HAVE_INTTYPES_H}
 typedef long intptr_t;
 #endif
 
-${define QTTEXMACS}
 ${define SANITY_CHECKS}
 ${define OS_MINGW}
 ${define OS_WIN32}

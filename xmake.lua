@@ -18,8 +18,6 @@ configvar_check_cxxsnippets(
         static_assert(sizeof(void*) == 8, "");]])
 
 
-set_configvar("QTTEXMACS", 1)
-
 add_requires("doctest 2.4.11", {system=false})
 if is_plat("mingw", "windows") then
     add_requires("nowide_standalone 11.2.0", {system=false})
@@ -123,7 +121,7 @@ add_configfiles(
         filename = "doxyfile",
         pattern = "@(.-)@",
         variables = {
-            PACKAGE = "Mogan Editor",
+            PACKAGE = "Lolly",
             DOXYGEN_DIR = get_config("buildir"),
             DEVEL_VERSION = DEVEL_VERSION,
         }
