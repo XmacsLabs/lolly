@@ -1,4 +1,16 @@
 ${define HAVE_INTPTR_T}
+
+#ifdef HAVE_INTPTR_T
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
+#ifdef HAVE_STDINT_H
+#include <stdint.h>
+#endif
+#else
+typedef long intptr_t;
+#endif
+
 ${define HAVE_STDINT_H}
 ${define QTTEXMACS}
 ${define SANITY_CHECKS}

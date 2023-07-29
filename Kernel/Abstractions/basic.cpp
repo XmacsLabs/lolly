@@ -9,17 +9,6 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#ifdef HAVE_INTPTR_T
-#ifdef HAVE_INTTYPES_H
-#include <inttypes.h>
-#endif
-#ifdef HAVE_STDINT_H
-#include <stdint.h>
-#endif
-#else
-typedef long intptr_t;
-#endif
-
 #include "analyze.hpp"
 #include "string.hpp"
 
