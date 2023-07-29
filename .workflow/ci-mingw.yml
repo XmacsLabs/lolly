@@ -2,22 +2,19 @@ version: '1.0'
 name: ci-mingw
 displayName: ci-mingw
 triggers:
-  trigger: auto
-  pr:
-    branches:
-      precise:
-        - main
+  trigger: manual
   push:
     branches:
       precise:
         - main
-
+  pr:
+    branches:
+      precise:
+        - main
 variables:
-  XMAKE_MAIN_REPO: 'https://gitee.com/XmacsLabs/xmake-repo.git'
-  XMAKE_BINARY_REPO: 'https://gitee.com/xmake-mirror/build-artifacts.git'
-  XMAKE_ROOT: y
-          
-
+  XMAKE_MAIN_REPO: https://gitee.com/XmacsLabs/xmake-repo.git
+  XMAKE_BINARY_REPO: https://gitee.com/xmake-mirror/build-artifacts.git
+  XMAKE_ROOT: 'y'
 stages:
   - name: build_and_test
     displayName: build_and_test
@@ -31,7 +28,7 @@ stages:
         gccVersion: '9.4'
         commands:
           - apt-get update
-          - apt-get install -y software-properties-common 
+          - apt-get install -y software-properties-common
           - /usr/bin/add-apt-repository ppa:xmake-io/xmake
           - apt-get update
           - apt-get install -y xmake cmake g++-mingw-w64-x86-64
@@ -39,9 +36,8 @@ stages:
           - xmake repo -u
           - xmake config -vD --plat=mingw --yes
           - xmake build -vD
-        caches: [
-          build/.build_cache,
-        ]
+        caches:
+          - build/.build_cache
         notify: []
         strategy:
           retry: '0'
