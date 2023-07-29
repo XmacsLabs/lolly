@@ -15,6 +15,13 @@ TEST_CASE ("test is alpha") {
   }
 }
 
+TEST_CASE ("cjk_unified_ideographs") {
+  CHECK (is_cjk_unified_ideographs ("<#4E2D>"));
+  CHECK (has_cjk_unified_ideographs ("<#4E2D>"));
+  CHECK (has_cjk_unified_ideographs ("bib-<#4E2D>"));
+  CHECK (!is_cjk_unified_ideographs ("bib-<#4E2D>"));
+}
+
 TEST_CASE ("test locase all") {
   CHECK_EQ (locase_all (string ("true")) == string ("true"), true);
   CHECK_EQ (locase_all (string ("TRue")) == string ("true"), true);
