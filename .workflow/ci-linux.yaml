@@ -1,0 +1,44 @@
+version: '1.0'
+name: gitee-ci-linux
+displayName: gitee-ci-linux
+triggers:
+  trigger: auto
+  pr:
+    branches:
+      precise:
+        - main
+
+variables:
+  XMAKE_MAIN_REPO: 'https://gitee.com/XmacsLabs/xmake-repo.git'
+  XMAKE_BINARY_REPO: 'https://gitee.com/xmake-mirror/build-artifacts.git'
+  XMAKE_ROOT: y
+          
+
+stages:
+  - name: xmake
+    displayName: xmake
+    strategy: fast
+    trigger: auto
+    executor: []
+    steps:
+      - step: build@gcc
+        name: build
+        displayName: ci for lolly
+        gccVersion: '9.4'
+        commands:
+          - apt-get update
+          - apt-get install -y software-properties-common 
+          - /usr/bin/add-apt-repository ppa:xmake-io/xmake
+          - apt-get update
+          - apt-get install -y xmake
+          - xmake repo -u
+          - xmake config --yes
+          - xmake build -vD
+          - xmake run -vD
+        caches: [
+          build/.build_cache,
+        ]
+        notify: []
+        strategy:
+          retry: '0'
+          stepTimeout: 30
