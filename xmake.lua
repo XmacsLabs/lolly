@@ -8,6 +8,7 @@ configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
 includes("check_cxxincludes.lua")
 configvar_check_cxxincludes("HAVE_STDLIB_H", "stdlib.h")
 configvar_check_cxxincludes("HAVE_STDINT_H", "stdint.h")
+configvar_check_cxxincludes("HAVE_INTTYPES_H", "inttypes.h")
 
 includes("check_cxxfuncs.lua")
 includes("check_cxxsnippets.lua")
