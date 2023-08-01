@@ -4,9 +4,23 @@
 #include "iterator.hpp"
 #include "string.hpp"
 
-hashset<int> set;
+TEST_CASE ("iterate on empty object") {
+
+  SUBCASE ("test empty hashset") {
+    hashset<int>  set;
+    iterator<int> it= iterate (set);
+    CHECK (!it->busy ());
+  }
+
+  SUBCASE ("test empty hashmap") {
+    hashmap<int, int> map;
+    iterator<int>     it= iterate (map);
+    CHECK (!it->busy ());
+  }
+}
 
 TEST_CASE ("iterate on hashset") {
+  hashset<int> set;
   set->insert (1);
   set->insert (2);
   hashset<string> set1;
