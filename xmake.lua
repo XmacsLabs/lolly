@@ -2,6 +2,8 @@ set_project("lolly")
 
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
+set_languages("c++17")
+
 includes("check_cxxtypes.lua")
 configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
 
