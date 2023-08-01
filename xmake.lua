@@ -26,16 +26,15 @@ if is_plat("mingw", "windows") then
 end
 
 local l1_files = {
-    "Kernel/Abstractions/basic.cpp",
-    "Kernel/Types/**.cpp",
-    "System/IO/**.cpp",
-    "System/Memory/**.cpp",
+    "Kernel/**/*.cpp",
+    "System/**/*.cpp",
     "Data/String/**.cpp",
 }
 local l1_includedirs = {
-    "System/Memory",
     "System/IO",
+    "System/Memory",
     "Kernel/Abstractions",
+    "Kernel/Algorithms",
     "Kernel/Containers",
     "Kernel/Types",
     "Data/String",
@@ -68,6 +67,7 @@ target("liblolly") do
         add_cxxflags("-include $(buildir)/L1/config.h")
     end
     add_headerfiles("Kernel/Abstractions/(*hpp)")
+    add_headerfiles("Kernel/Algorithms/(*hpp)")
     add_headerfiles("Kernel/Containers/(*hpp)")
     add_headerfiles("Kernel/Containers/(*.ipp)")
     add_headerfiles("Kernel/Types/(*hpp)")
