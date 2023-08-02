@@ -14,7 +14,7 @@ includes("check_cxxfuncs.lua")
 includes("check_cxxsnippets.lua")
 configvar_check_cxxsnippets(
     "CONFIG_LARGE_POINTER", [[
-#include <stdlib.h>
+        #include <stdlib.h>
         static_assert(sizeof(void*) == 8, "");]])
 
 
@@ -48,7 +48,6 @@ target("liblolly") do
     set_basename("lolly")
 
     add_packages("jemalloc")
-    ---add_cxxflags("-include" .. path.join(pkg("jemalloc"):installdir(), "include/"))
 
     if is_plat("mingw", "windows") then
         add_packages("nowide_standalone")
