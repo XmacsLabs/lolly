@@ -21,7 +21,7 @@ configvar_check_cxxsnippets(
 
 
 add_requires("doctest 2.4.11", {system=false})
-add_requires("mimalloc")
+add_requires("mimalloc 2.1.2")
 if is_plat("mingw", "windows") then
     add_requires("nowide_standalone 11.2.0", {system=false})
 end
