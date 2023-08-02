@@ -12,10 +12,10 @@
 #ifndef FAST_ALLOC_H
 #define FAST_ALLOC_H
 
-#include "mimalloc-override.h"
-#include "tm_ostream.hpp"
 #include <stdlib.h>
 
+#include "mimalloc-override.h"
+#include "tm_ostream.hpp"
 #define WORD_LENGTH 8
 #define WORD_LENGTH_INC 7
 #define WORD_MASK 0xfffffffffffffff8
