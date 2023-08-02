@@ -13,6 +13,7 @@
 #define FAST_ALLOC_H
 
 #include <stdlib.h>
+#include <jemalloc/jemalloc.h>
 
 #include "tm_ostream.hpp"
 
