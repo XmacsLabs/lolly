@@ -13,7 +13,7 @@
 #define FAST_ALLOC_H
 
 #include <stdlib.h>
-
+#include "mimalloc-override.h"
 #include "tm_ostream.hpp"
 
 #define WORD_LENGTH 8
