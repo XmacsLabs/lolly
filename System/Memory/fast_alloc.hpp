@@ -12,8 +12,8 @@
 #ifndef FAST_ALLOC_H
 #define FAST_ALLOC_H
 
+#include "jemalloc/jemalloc.h"
 #include <stdlib.h>
-#include <jemalloc/jemalloc.h>
 
 #include "tm_ostream.hpp"
 
