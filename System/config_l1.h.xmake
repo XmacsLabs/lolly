@@ -16,3 +16,4 @@ typedef long intptr_t;
 ${define SANITY_CHECKS}
 ${define OS_MINGW}
 ${define OS_WIN32}
+${define MIMALLOC}

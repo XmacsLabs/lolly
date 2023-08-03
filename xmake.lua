@@ -21,7 +21,12 @@ configvar_check_cxxsnippets(
 
 
 add_requires("doctest 2.4.11", {system=false})
-add_requires("mimalloc 2.1.2")
+
+option("mimalloc", {default = false, showmenu = true, description = "Enable mimalloc library"})
+if has_config("mimalloc") then 
+    add_requires("mimalloc 2.1.2")
+end 
+
 if is_plat("mingw", "windows") then
     add_requires("nowide_standalone 11.2.0", {system=false})
 end
@@ -48,11 +53,15 @@ target("liblolly") do
 
     set_basename("lolly")
 
+    if has_config("mimalloc") then
+        add_defines("MIMALLOC")
+        add_packages("mimalloc")
+    end 
+
     if is_plat("mingw", "windows") then
         add_packages("nowide_standalone")
     end
 
-    add_packages("mimalloc")
     if is_plat("linux") then 
         add_runenvs("MIMALLOC_VERBOSE",1)
     end
@@ -104,6 +113,8 @@ for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
         add_files(filepath) 
 
         if is_plat("wasm") then
+            add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
+            add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
             on_run(function (target)
                 cmd = "node $(buildir)/wasm/wasm32/$(mode)/" .. testname .. ".js"
                 print("> " .. cmd)
