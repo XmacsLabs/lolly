@@ -95,7 +95,7 @@ for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
         add_files(filepath) 
 
         if is_plat("wasm") then
-            add_cxxflags("-s NO_DISABLE_EXCEPTION_CATCHING")
+            add_ldflags("-s DISABLE_EXCEPTION_CATCHING")
             on_run(function (target)
                 cmd = "node $(buildir)/wasm/wasm32/$(mode)/" .. testname .. ".js"
                 print("> " .. cmd)
