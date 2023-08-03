@@ -31,7 +31,7 @@ test_same (tm_ostream& a, tm_ostream& b) {
   return sa == sb;
 }
 
-TEST_CASE ("test eval") {
+TEST_CASE ("function eval") {
   promise<int> t1;
   t1.rep= tm_new<promise_rep_int_add> (1, 2);
   promise<int> t2;
@@ -41,13 +41,13 @@ TEST_CASE ("test eval") {
   CHECK (t2 () == 1);
 }
 
-TEST_CASE ("test print") {
+TEST_CASE ("function print") {
   promise<int> t;
   t.rep= tm_new<promise_rep_int_add> (1, 2);
   tm_ostream _ostream1;
   _ostream1.buffer ();
 
-  SUBCASE ("if empty") {
+  SUBCASE ("if tm_ostream empty") {
     tm_ostream _ostream2;
     _ostream2.buffer ();
     _ostream2 << "promise";
@@ -56,7 +56,7 @@ TEST_CASE ("test print") {
     CHECK (test_same (_ostream1, _ostream2));
   }
 
-  SUBCASE ("if not empty") {
+  SUBCASE ("if tm_ostream not empty") {
     tm_ostream _ostream2;
     _ostream2.buffer ();
     _ostream2 << "testpromise";
@@ -68,10 +68,10 @@ TEST_CASE ("test print") {
   }
 }
 
-TEST_CASE ("test <<") {
+TEST_CASE ("operator <<") {
   promise<int> t;
 
-  SUBCASE ("if empty") {
+  SUBCASE ("if promise null") {
     tm_ostream _ostream1;
     tm_ostream _ostream2;
     _ostream1.buffer ();
@@ -82,7 +82,7 @@ TEST_CASE ("test <<") {
     CHECK (test_same (_ostream1, _ostream2));
   }
 
-  SUBCASE ("if not empty") {
+  SUBCASE ("if promise not null") {
     t.rep= tm_new<promise_rep_int_add> (1, 2);
     tm_ostream _ostream1;
     tm_ostream _ostream2;
