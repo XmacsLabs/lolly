@@ -16,6 +16,9 @@
 #ifdef MIMALLOC
 #include "mimalloc-override.h"
 #endif
+#ifdef JEMALLOC
+#include "jemalloc/jemalloc.h"
+#endif
 #include "tm_ostream.hpp"
 #define WORD_LENGTH 8
 #define WORD_LENGTH_INC 7
