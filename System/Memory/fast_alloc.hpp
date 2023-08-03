@@ -13,9 +13,13 @@
 #define FAST_ALLOC_H
 
 #include <stdlib.h>
-
+#ifdef MIMALLOC
+#include "mimalloc-override.h"
+#endif
+#ifdef JEMALLOC
+#include "jemalloc/jemalloc.h"
+#endif
 #include "tm_ostream.hpp"
-
 #define WORD_LENGTH 8
 #define WORD_LENGTH_INC 7
 #define WORD_MASK 0xfffffffffffffff8
