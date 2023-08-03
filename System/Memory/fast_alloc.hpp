@@ -12,7 +12,9 @@
 #ifndef FAST_ALLOC_H
 #define FAST_ALLOC_H
 
+#ifdef JEMALLOC
 #include "jemalloc/jemalloc.h"
+#endif
 #include <stdlib.h>
 
 #include "tm_ostream.hpp"
