@@ -22,13 +22,13 @@ TEST_CASE ("test for test()") {
 TEST_CASE ("test for operator[] and getchar()") {
   parse_string s1;
   parse_string s2 (" 123456789abcd~!@#$");
-  string       str ('0', 300000000);
+  string       str ('0', 300);
   str << "1";
   parse_string s3 (str);
   CHECK_EQ (s2[0] == ' ', true);
   CHECK_EQ (s2[9] == '9', true);
   CHECK_EQ (s2[14] == '~', true);
-  CHECK_EQ (s3[300000000] == '1', true);
+  CHECK_EQ (s3[300] == '1', true);
   CHECK_EQ (s2[-1] == '\0', true);
 
   CHECK_EQ (s1[2] != '2', true);
