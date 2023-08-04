@@ -3,7 +3,7 @@
 Lolly is C++ standard library extracted from GNU TeXmacs. It is the foundation of GNU TeXmacs, and it provides the C++ standard string and containers alternative.
 
 ## Why
-For XmacsLabs, Lolly is extracted from GNU TeXmacs and becomes the C++ standard library of Mogan Editor for the following reasons:
+For XmacsLabs, Lolly is created for the following reasons:
 + it serves as the warm-up project for new Mogan Developers with
   - Documentation of Lolly in doxygen format and available online
   - Documentation of how to develop lolly which is the subset of how to develop Mogan Editor
