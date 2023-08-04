@@ -6,6 +6,7 @@ set_languages("c++17")
 
 includes("check_cxxtypes.lua")
 configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
+configvar_check_cxxtypes("HAVE_TIME_T", "time_t", {includes = {"memory"}})
 
 includes("check_cxxincludes.lua")
 configvar_check_cxxincludes("HAVE_STDLIB_H", "stdlib.h")
@@ -13,6 +14,8 @@ configvar_check_cxxincludes("HAVE_STDINT_H", "stdint.h")
 configvar_check_cxxincludes("HAVE_INTTYPES_H", "inttypes.h")
 
 includes("check_cxxfuncs.lua")
+configvar_check_cxxfuncs("HAVE_GETTIMEOFDAY", "gettimeofday", {includes={"sys/time.h"}})
+
 includes("check_cxxsnippets.lua")
 configvar_check_cxxsnippets(
     "CONFIG_LARGE_POINTER", [[
@@ -40,13 +43,14 @@ local l1_files = {
     "Data/String/**.cpp",
 }
 local l1_includedirs = {
-    "System/IO",
-    "System/Memory",
     "Kernel/Abstractions",
     "Kernel/Algorithms",
     "Kernel/Containers",
     "Kernel/Types",
     "Data/String",
+    "System/Classes",
+    "System/IO",
+    "System/Memory",
 }
 
 target("liblolly") do
@@ -90,6 +94,7 @@ target("liblolly") do
     add_headerfiles("Kernel/Containers/(*hpp)")
     add_headerfiles("Kernel/Containers/(*.ipp)")
     add_headerfiles("Kernel/Types/(*hpp)")
+    add_headerfiles("System/Classes/(*hpp)")
     add_headerfiles("System/IO/(*hpp)")
     add_headerfiles("System/Memory/(*hpp)")
     add_headerfiles("Data/String/(*.hpp)")
