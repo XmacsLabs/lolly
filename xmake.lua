@@ -1,4 +1,5 @@
 set_project("lolly")
+set_languages("c++17")
 
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
