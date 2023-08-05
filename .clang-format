@@ -1,3 +1,4 @@
+Standard: Cpp03
 SpaceBeforeAssignmentOperators: false
 SpaceBeforeParens: Always
 AlwaysBreakAfterReturnType: TopLevelDefinitions

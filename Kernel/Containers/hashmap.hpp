@@ -41,16 +41,16 @@ template <class T, class U> struct hashentry {
 };
 
 template <class T, class U> class hashmap_rep : concrete_struct {
-  int                    size; // size of hashmap (nr of entries)
-  int                    n;    // nr of keys (a power of two)
-  int                    max;  // mean number of entries per key
-  U                      init; // default entry
-  list<hashentry<T, U>>* a;    // the array of entries
+  int                     size; // size of hashmap (nr of entries)
+  int                     n;    // nr of keys (a power of two)
+  int                     max;  // mean number of entries per key
+  U                       init; // default entry
+  list<hashentry<T, U> >* a;    // the array of entries
 
 public:
   inline hashmap_rep<T, U> (U init2, int n2= 1, int max2= 1)
       : size (0), n (n2), max (max2), init (init2),
-        a (tm_new_array<list<hashentry<T, U>>> (n)) {}
+        a (tm_new_array<list<hashentry<T, U> > > (n)) {}
   inline ~hashmap_rep<T, U> () { tm_delete_array (a); }
   void resize (int n);
   void reset (T x);
@@ -88,9 +88,9 @@ template <class T, class U> class hashmap {
   CONCRETE_TEMPLATE_2 (hashmap, T, U);
   static hashmap<T, U> init;
   inline hashmap ()
-      : rep (tm_new<hashmap_rep<T, U>> (type_helper<U>::init_val (), 1, 1)) {}
+      : rep (tm_new<hashmap_rep<T, U> > (type_helper<U>::init_val (), 1, 1)) {}
   inline hashmap (U init, int n= 1, int max= 1)
-      : rep (tm_new<hashmap_rep<T, U>> (init, n, max)) {}
+      : rep (tm_new<hashmap_rep<T, U> > (init, n, max)) {}
   inline U  operator[] (T x) { return rep->bracket_ro (x); }
   inline U& operator() (T x) { return rep->bracket_rw (x); }
 };

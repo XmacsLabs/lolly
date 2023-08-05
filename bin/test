@@ -1,9 +1,14 @@
-set paths = [
-    C:/Windows/System32
-    $E:USERPROFILE/scoop/apps/mingw/current/bin
-    $E:USERPROFILE/scoop/shims 
-    C:/hostedtoolcache/windows/xmake/2.8.1/x64
-]
-echo $paths
+#!/usr/bin/env elvish
+
+use platform
+
+if (eq $platform:os windows) {
+    set paths = [
+        C:/Windows/System32
+        $E:USERPROFILE/scoop/apps/mingw/current/bin
+        $E:USERPROFILE/scoop/shims 
+        C:/hostedtoolcache/windows/xmake/2.8.1/x64
+    ]
+}
 
 xmake run --yes -vD --group=tests

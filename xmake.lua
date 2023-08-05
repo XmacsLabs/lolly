@@ -1,8 +1,7 @@
 set_project("lolly")
+set_languages("c++17")
 
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
-
-set_languages("c++17")
 
 includes("check_cxxtypes.lua")
 configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
@@ -55,7 +54,11 @@ local l1_includedirs = {
 
 target("liblolly") do
     set_kind("static")
-    set_languages("c++17")
+    if is_plat("mingw") then
+        set_languages("c++11")
+    else
+        set_languages("c++98")
+    end
     set_policy("check.auto_ignore_flags", false)
 
     set_basename("lolly")
