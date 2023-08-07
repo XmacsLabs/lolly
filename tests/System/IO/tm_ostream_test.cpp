@@ -1,11 +1,8 @@
-/**
- * @file tm_ostream_test.hpp
- * @author Paradisum
- * @date 2023-8-5
- *
- * Copyright (c) Year Company Name. All rights reserved.
- *
- * @brief A test for tm_ostream.
+/** \file tm_ostream_test.hpp
+ *  \copyright GPLv3
+ *  \details A unitest for tm_ostream.
+ *  \author Paradisuman
+ *  \date   2023
  */
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
