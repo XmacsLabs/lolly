@@ -16,3 +16,4 @@ if (eq $platform:os windows) {
 clang-format --version
 clang-format -i **/*cpp
 clang-format -i **/*hpp
+clang-format -i **/*ipp

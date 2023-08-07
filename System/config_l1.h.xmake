@@ -1,6 +1,8 @@
 ${define HAVE_INTPTR_T}
 ${define HAVE_STDINT_H}
 ${define HAVE_INTTYPES_H}
+${define HAVE_TIME_T}
+${define HAVE_GETTIMEOFDAY}
 
 #ifdef HAVE_INTPTR_T
 #ifdef HAVE_INTTYPES_H
@@ -16,3 +18,5 @@ typedef long intptr_t;
 ${define SANITY_CHECKS}
 ${define OS_MINGW}
 ${define OS_WIN32}
+${define MIMALLOC}
+${define JEMALLOC}
