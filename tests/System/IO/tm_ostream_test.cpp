@@ -52,15 +52,19 @@ TEST_CASE ("function write and unbuffer") {
 
 TEST_CASE ("function redirect") {
   tm_ostream t;
-  t.buffer ();
-  t->write ("abc");
 
-  tm_ostream t2;
-  t2.buffer ();
-  t2->write ("def");
+  SUBCASE ("redirect itself") {
+    auto tem= t;
+    t.redirect (t);
+    CHECK (t.rep == tem.rep);
+  }
 
-  t.redirect (t2);
-  CHECK (test_same (t2, "def"));
+  SUBCASE ("redirect others") {
+    tm_ostream t2;
+    t.redirect (t2);
+
+    CHECK (t.rep == t2.rep);
+  }
 }
 
 TEST_CASE ("operator <<") {
