@@ -1,4 +1,4 @@
-/** \file tm_ostream_test.hpp
+/** \file tm_ostream_test.cpp
  *  \copyright GPLv3
  *  \details A unitest for tm_ostream.
  *  \author Paradisuman
