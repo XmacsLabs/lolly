@@ -1,11 +1,8 @@
-/**
- * @file promise_test.cpp
- * @author Paradisum
- * @date 2023-8-3
- *
- * Copyright (c) Year Company Name. All rights reserved.
- *
- * @brief A test for promise.
+/** \file promise_test.cpp
+ *  \copyright GPLv3
+ *  \details A unitest for promise.
+ *  \author Paradisuman
+ *  \date   2023
  */
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
