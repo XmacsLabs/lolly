@@ -86,7 +86,7 @@ TEST_CASE ("function texmacs_time") {
 
   CHECK (t1 >= 0);
 
-  long t2= raw_time ();
+  long t2= texmacs_time ();
 
   CHECK (t2 >= t1);
 }
