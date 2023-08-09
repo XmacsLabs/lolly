@@ -76,7 +76,7 @@ bench_cumul (string task) {
 }
 
 void
-bench_end (tm_ostream ostream, string task) {
+bench_end (tm_ostream& ostream, string task) {
   // end timer for a given type of task, print result and reset timer
   bench_cumul (task);
   bench_print (ostream, task);
@@ -93,7 +93,7 @@ bench_reset (string task) {
 }
 
 void
-bench_print (tm_ostream ostream, string task) {
+bench_print (tm_ostream& ostream, string task) {
   // print timing for a given type of task
   if (DEBUG_BENCH) {
     int nr= timing_nr[task];
@@ -114,7 +114,7 @@ collect (hashmap<string, int> h) {
 }
 
 void
-bench_print (tm_ostream ostream) {
+bench_print (tm_ostream& ostream) {
   // print timings for all types of tasks
   array<string> a= collect (timing_cumul);
   int           i, n= N (a);

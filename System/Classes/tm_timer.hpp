@@ -15,38 +15,14 @@
 #include "string.hpp"
 #include "tm_ostream.hpp"
 
-#ifndef __FreeBSD__
-#ifndef HAVE_TIME_T
-#define HAVE_TIME_T
-typedef long time_t;
-#endif
-#else
-#include <time.h>
-#endif
-
-#ifdef OS_SUN
-#include <sys/types.h>
-#endif
-
-#ifdef HAVE_GETTIMEOFDAY
-#include <sys/time.h>
-#else
-#include <sys/timeb.h>
-#ifdef OS_SUN
-extern "C" {
-extern int ftime __P ((struct timeb * __timebuf));
-};
-#endif
-#endif
-
 time_t raw_time ();
 time_t texmacs_time ();
 
 void bench_start (string task);
 void bench_cumul (string task);
-void bench_end (tm_ostream ostream, string task);
+void bench_end (tm_ostream& ostream, string task);
 void bench_reset (string task);
-void bench_print (tm_ostream ostream, string task);
-void bench_print (tm_ostream ostream);
+void bench_print (tm_ostream& ostream, string task);
+void bench_print (tm_ostream& ostream);
 
 #endif // defined TIMER_H
