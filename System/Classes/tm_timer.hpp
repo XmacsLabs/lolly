@@ -44,9 +44,9 @@ time_t texmacs_time ();
 
 void bench_start (string task);
 void bench_cumul (string task);
-void bench_end (tm_ostream &ostream, string task);
+void bench_end (tm_ostream& ostream, string task);
 void bench_reset (string task);
-void bench_print (tm_ostream &ostream, string task);
-void bench_print (tm_ostream &ostream);
+void bench_print (tm_ostream& ostream, string task);
+void bench_print (tm_ostream& ostream);
 
 #endif // defined TIMER_H
