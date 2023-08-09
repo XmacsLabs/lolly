@@ -72,21 +72,21 @@ to_zero (tm_ostream& out) {
 }
 
 TEST_CASE ("function raw_time") {
-  unsigned int startTime= raw_time ();
+  time_t startTime= raw_time ();
 
   CHECK (startTime >= 0);
 
-  unsigned int endTime= raw_time ();
+  time_t endTime= raw_time ();
 
   CHECK (endTime >= startTime);
 }
 
 TEST_CASE ("function texmacs_time") {
-  long t1= texmacs_time ();
+  time_t t1= texmacs_time ();
 
   CHECK (t1 >= 0);
 
-  long t2= texmacs_time ();
+  time_t t2= texmacs_time ();
 
   CHECK (t2 >= t1);
 }
