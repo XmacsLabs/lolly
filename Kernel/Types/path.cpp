@@ -1,22 +1,22 @@
 
 /******************************************************************************
-* MODULE     : path.cpp
-* DESCRIPTION: paths are integer lists,
-*              which are for instance useful to select subtrees in trees
-* COPYRIGHT  : (C) 1999  Joris van der Hoeven
-*******************************************************************************
-* This software falls under the GNU general public license version 3 or later.
-* It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
-* in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
-******************************************************************************/
+ * MODULE     : path.cpp
+ * DESCRIPTION: paths are integer lists,
+ *              which are for instance useful to select subtrees in trees
+ * COPYRIGHT  : (C) 1999  Joris van der Hoeven
+ *******************************************************************************
+ * This software falls under the GNU general public license version 3 or later.
+ * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
+ * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
+ ******************************************************************************/
 
 #include "path.hpp"
 #include "analyze.hpp"
 #include "tree.hpp"
 
 /******************************************************************************
-* General routines on paths
-******************************************************************************/
+ * General routines on paths
+ ******************************************************************************/
 
 bool
 zero_path (path p) {
@@ -29,7 +29,7 @@ hash (path p) {
   if (is_nil (p)) return 0;
   else {
     int h= hash (p->next);
-    return p->item ^ ((h<<7) + (h>>25));
+    return p->item ^ ((h << 7) + (h >> 25));
   }
 }
 
@@ -42,11 +42,11 @@ as_string (path p) {
 
 path
 as_path (string s) {
-  int i, j, n= N(s);
-  for (i=0; i<n; i++)
+  int i, j, n= N (s);
+  for (i= 0; i < n; i++)
     if (is_digit (s[i])) break;
-  if (i==n) return path ();
-  for (j=i; j<n; j++)
+  if (i == n) return path ();
+  for (j= i; j < n; j++)
     if (!is_digit (s[j])) break;
   return path (as_int (s (i, j)), as_path (s (j, n)));
 }
@@ -64,19 +64,19 @@ version_inf (string v1, string v2) {
 }
 
 /******************************************************************************
-* Operations on paths
-******************************************************************************/
+ * Operations on paths
+ ******************************************************************************/
 
 path
 path_add (path p, int plus) {
-  if (is_atom (p)) return path (p->item+plus);
+  if (is_atom (p)) return path (p->item + plus);
   return path (p->item, path_add (p->next, plus));
 }
 
 path
 path_add (path p, int plus, int pos) {
   p= copy (p);
-  p[pos]+=plus;
+  p[pos]+= plus;
   return p;
 }
 
@@ -89,22 +89,22 @@ path_up (path p) {
 
 path
 path_up (path p, int times) {
-  return head (p, N(p)-times);
+  return head (p, N (p) - times);
 }
 
 bool
 path_inf (path p1, path p2) {
   if (is_nil (p1) || is_nil (p2)) return false;
-  if (p1->item<p2->item) return true;
-  if (p1->item>p2->item) return false;
+  if (p1->item < p2->item) return true;
+  if (p1->item > p2->item) return false;
   return path_inf (p1->next, p2->next);
 }
 
 bool
 path_inf_eq (path p1, path p2) {
   if (is_nil (p1) || is_nil (p2)) return (p1 == p2);
-  if (p1->item<p2->item) return true;
-  if (p1->item>p2->item) return false;
+  if (p1->item < p2->item) return true;
+  if (p1->item > p2->item) return false;
   return path_inf_eq (p1->next, p2->next);
 }
 
@@ -122,16 +122,17 @@ path_less_eq (path p1, path p2) {
     if ((p2->item == 1) && is_nil (p2->next)) return true;
     return false;
   }
-  if (p1->item<p2->item) return true;
-  if (p1->item>p2->item) return false;
+  if (p1->item < p2->item) return true;
+  if (p1->item > p2->item) return false;
   return path_less_eq (p1->next, p2->next);
 }
 
 path
-operator / (path p, path q) {
+operator/ (path p, path q) {
   if (is_nil (q)) return p;
   else if (is_nil (p) || (p->item != q->item)) {
-    TM_FAILED ("path did not start with required path"); }
+    TM_FAILED ("path did not start with required path");
+  }
   else return p->next / q->next;
   return path (); // NOT REACHED
 }
@@ -144,25 +145,24 @@ common (path start, path end) {
 }
 
 /******************************************************************************
-* Main modification routines
-******************************************************************************/
+ * Main modification routines
+ ******************************************************************************/
 
 bool
 has_subtree (tree t, path p) {
   if (is_nil (p)) return true;
   int i= p->item;
-  return is_compound (t) && i >= 0 && i < N(t) && has_subtree (t[i], p->next);
+  return is_compound (t) && i >= 0 && i < N (t) && has_subtree (t[i], p->next);
 }
 
 tree&
 subtree (tree& t, path p) {
   if (is_nil (p)) return t;
-  else
-    if (N(t) > p->item) return subtree (t[p->item], p->next);
-    else {
-      cout << "The required path does not exist\n";
-      return t;
-    }
+  else if (N (t) > p->item) return subtree (t[p->item], p->next);
+  else {
+    cout << "The required path does not exist\n";
+    return t;
+  }
 }
 
 tree&

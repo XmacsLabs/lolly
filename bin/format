@@ -9,6 +9,9 @@ if (eq $platform:os windows) {
     ~/scoop/apps/llvm/current/bin
   ]
 } elif (eq $platform:os linux) {
+  set paths = [
+    /usr/lib/llvm-16/bin
+  ]	
 } else {
 }
 
