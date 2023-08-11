@@ -31,7 +31,8 @@ end
 option("jemalloc", {default = false, showmenu = true, description = "Enable mimalloc library"})
 if has_config("jemalloc") then 
     add_requires("jemalloc 5.3.0", {system=false, configs={envs={LD_PRELOAD="`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision`" }}})
-end 
+end
+
 option("posix_thread")
     set_showmenu(false)
     add_cxxtypes("std::mutex")
