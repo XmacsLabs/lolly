@@ -30,7 +30,13 @@ end
 option("jemalloc", {default = false, showmenu = true, description = "Enable mimalloc library"})
 if has_config("jemalloc") then 
     add_requires("jemalloc 5.3.0", {system=false, configs={envs={LD_PRELOAD="`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision`" }}})
-end 
+end
+
+option("posix_thread")
+    set_showmenu(false)
+    add_cxxtypes("std::mutex")
+    add_cxxincludes("mutex")
+option_end()
 
 if is_plat("mingw", "windows") then
     add_requires("nowide_standalone 11.2.0", {system=false})
@@ -86,6 +92,10 @@ target("liblolly") do
             }
         }
     )
+
+    if is_plat("mingw") and (not has_config("posix_thread")) then
+        add_defines("DOCTEST_CONFIG_NO_MULTITHREADING")
+    end
 
     if is_plat("windows") then
         add_cxxflags("-FI " .. path.absolute("$(buildir)\\L1\\config.h"))
