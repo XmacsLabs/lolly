@@ -88,7 +88,8 @@ target("liblolly") do
             filename = "L1/config.h",
             variables = {
                 OS_MINGW = is_plat("mingw"),
-                OS_WIN32 = is_plat("windows")
+                OS_WIN32 = is_plat("windows"),
+                OS_MACOSX = is_plat("macosx"),
             }
         }
     )
