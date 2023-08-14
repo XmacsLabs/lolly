@@ -13,6 +13,7 @@
 #define GENERIC_TREE_H
 
 #include "blackbox.hpp"
+#include "tree.hpp"
 
 class generic_rep : public tree_rep {
 public:
