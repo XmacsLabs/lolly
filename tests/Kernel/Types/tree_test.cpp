@@ -67,9 +67,60 @@ TEST_CASE ("test_is_generic") {
   CHECK (is_generic (tree (-3, 1)));
 }
 
+TEST_CASE ("test N()") {
+  CHECK (N (tree ()) == 0);
+  CHECK (N (tree (0, tree ())) == 1);
+  CHECK (N (tree (0, tree (), tree ())) == 2);
+  CHECK (N (tree (0, tree (), tree (), tree ())) == 3);
+}
+
 TEST_CASE ("test_arity") {
   CHECK (!arity (tree (0, -1)));
   CHECK (!arity (tree (280, 0)));
   CHECK (arity (tree (9, 3)));
   CHECK (!arity (tree (0, 5)));
+}
+
+TEST_CASE ("test right_index") {
+  CHECK (right_index (tree (0)) == 0);
+  CHECK (right_index (tree ("string")) == 6);
+  CHECK (right_index (tree (280, tree ())) == 1);
+  CHECK (right_index (tree (9, tree ())) == 1);
+  CHECK (right_index (tree (0, 5)) == 5);
+}
+
+TEST_CASE ("test A()") {
+  CHECK (A (tree (0, 1, 2))[0] == 1);
+  CHECK (A (tree (0, 1, 2))[1] == 2);
+  CHECK (A (tree (0, 1, 2, 3))[0] == 1);
+  CHECK (A (tree (0, 1, 2, 3))[1] == 2);
+  CHECK (A (tree (0, 1, 2, 3))[2] == 3);
+}
+
+TEST_CASE ("test AR()") {
+  CHECK (AR (tree (0, 1, 2))[0] == 1);
+  CHECK (AR (tree (0, 1, 2))[1] == 2);
+  CHECK (AR (tree (0, 1, 2, 3))[0] == 1);
+  CHECK (AR (tree (0, 1, 2, 3))[1] == 2);
+  CHECK (AR (tree (0, 1, 2, 3))[2] == 3);
+}
+
+TEST_CASE ("test operator==") {
+  CHECK (tree (0, 1, 2) != 1);
+  CHECK (tree (0, 1, 2) != 2);
+  CHECK (tree (2) == 2);
+}
+
+TEST_CASE ("test inside") {
+  CHECK (inside (tree (0))->op == 0);
+  CHECK (inside (tree (0, tree (), tree ()))->op == 0);
+  CHECK (inside (tree (3, tree (), tree ()))->op == 3);
+}
+
+TEST_CASE ("test strong_equal") {
+  auto a= tree (0, tree ());
+  auto b= &a;
+  CHECK (strong_equal (a, *b));
+  CHECK (!strong_equal (tree (0, 1, 2), tree (3, tree ())));
+  CHECK (!strong_equal (tree (0, 1, 2), tree (4, tree ())));
 }
