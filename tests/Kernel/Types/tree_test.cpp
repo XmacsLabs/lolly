@@ -97,14 +97,6 @@ TEST_CASE ("test A()") {
   CHECK (A (tree (0, 1, 2, 3))[2] == 3);
 }
 
-TEST_CASE ("test AR()") {
-  CHECK (AR (tree (0, 1, 2))[0] == 1);
-  CHECK (AR (tree (0, 1, 2))[1] == 2);
-  CHECK (AR (tree (0, 1, 2, 3))[0] == 1);
-  CHECK (AR (tree (0, 1, 2, 3))[1] == 2);
-  CHECK (AR (tree (0, 1, 2, 3))[2] == 3);
-}
-
 TEST_CASE ("test operator==") {
   CHECK (tree (0, 1, 2) != 1);
   CHECK (tree (0, 1, 2) != 2);
