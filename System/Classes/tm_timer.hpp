@@ -23,6 +23,7 @@
 typedef long time_t;
 #endif
 #endif
+#endif
 #else
 #include <time.h>
 #endif
