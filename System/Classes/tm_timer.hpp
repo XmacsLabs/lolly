@@ -17,7 +17,7 @@
 #ifndef __FreeBSD__
 #ifndef HAVE_TIME_T
 #define HAVE_TIME_T
-#if (defined OS_SUN || defined OS_LINUX || defined OS_MAXOSX)
+#if (defined OS_SUN || defined OS_LINUX || defined OS_MACOSX)
 typedef long time_t;
 #endif
 #endif
