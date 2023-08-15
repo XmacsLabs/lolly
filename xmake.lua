@@ -23,12 +23,15 @@ configvar_check_cxxsnippets(
 
 
 add_requires("doctest 2.4.11", {system=false})
-option("mimalloc", {default = false, showmenu = true, description = "Enable mimalloc library"})
-if has_config("mimalloc") then 
+option("malloc")
+    set_default("standard")
+    set_showmenu(true)
+    set_description("Enable mimalloc or jemalloc library")
+    set_values("standard", "mimalloc", "jemalloc")
+option_end()
+if is_config("malloc", "mimalloc") then 
     add_requires("mimalloc 2.1.2")
-end
-option("jemalloc", {default = false, showmenu = true, description = "Enable mimalloc library"})
-if has_config("jemalloc") then 
+elseif is_config("malloc", "jemalloc") then 
     add_requires("jemalloc 5.3.0", {system=false, configs={envs={LD_PRELOAD="`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision`" }}})
 end
 
@@ -69,12 +72,10 @@ target("liblolly") do
 
     set_basename("lolly")
 
-    if has_config("mimalloc") then 
+    if is_config("malloc", "mimalloc") then 
         add_defines("MIMALLOC")
         add_packages("mimalloc")
-    end 
-
-    if has_config("jemalloc") then 
+    elseif is_config("malloc", "jemalloc") then 
         add_defines("JEMALLOC")
         add_packages("jemalloc")
     end 
