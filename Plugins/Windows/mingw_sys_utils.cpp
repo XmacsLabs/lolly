@@ -112,6 +112,7 @@ namespace sys_utils {
 #define SECURITY_WIN32
 #endif
 #include <basetsd.h>
+#include <windef.h>
 #include <ntsecapi.h>
 #include <secext.h>
 #include <wtypesbase.h>
