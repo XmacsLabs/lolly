@@ -84,6 +84,11 @@ target("liblolly") do
         add_packages("nowide_standalone")
     end
 
+    if is_plat("mingw") then 
+        add_includedirs("Plugins/Windows")
+        add_files("Plugins/Windows/**.cpp")
+    end 
+
     add_configfiles(
         "System/config_l1.h.xmake", {
             filename = "L1/config.h",
