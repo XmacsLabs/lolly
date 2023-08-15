@@ -118,6 +118,7 @@ target("liblolly") do
     add_headerfiles("System/IO/(*hpp)")
     add_headerfiles("System/Memory/(*hpp)")
     add_headerfiles("Data/String/(*.hpp)")
+    add_headerfiles("Plugins/Windows/(*.hpp)")
     add_includedirs(l1_includedirs)
     add_files(l1_files)
 end
