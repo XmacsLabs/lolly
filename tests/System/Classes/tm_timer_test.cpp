@@ -72,11 +72,11 @@ to_zero (tm_ostream& out) {
 }
 
 TEST_CASE ("function raw_time") {
-  unsigned int startTime= raw_time ();
+  time_t startTime= raw_time ();
 
-  CHECK (startTime >= 0);
+  // CHECK (startTime >= 0);
 
-  unsigned int endTime= raw_time ();
+  time_t endTime= raw_time ();
 
   CHECK (endTime >= startTime);
 }

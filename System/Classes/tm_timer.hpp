@@ -12,6 +12,35 @@
 #ifndef TIMER_H
 #define TIMER_H
 
+#ifndef OS_WIN32
+
+#ifndef __FreeBSD__
+#ifndef HAVE_TIME_T
+#define HAVE_TIME_T
+#if (defined OS_SUN || defined OS_LINUX || defined OS_MAXOSX)
+typedef long time_t;
+#endif
+#endif
+#endif
+#else
+#include <time.h>
+#endif
+
+#ifdef OS_SUN
+#include <sys/types.h>
+#endif
+
+#ifdef HAVE_GETTIMEOFDAY
+#include <sys/time.h>
+#else
+#include <sys/timeb.h>
+#ifdef OS_SUN
+extern "C" {
+extern int ftime __P ((struct timeb * __timebuf));
+};
+#endif
+#endif
+
 #include "string.hpp"
 #include "tm_ostream.hpp"
 
