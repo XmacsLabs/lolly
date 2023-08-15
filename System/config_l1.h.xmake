@@ -5,6 +5,7 @@ ${define HAVE_TIME_T}
 ${define HAVE_GETTIMEOFDAY} 
 ${define __FreeBSD__} 
 ${define OS_SUN}
+${define OS_MACOSX}
 
 #ifdef HAVE_INTPTR_T
 #ifdef HAVE_INTTYPES_H
