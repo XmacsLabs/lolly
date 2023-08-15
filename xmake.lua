@@ -81,6 +81,8 @@ target("liblolly") do
 
     if is_plat("mingw", "windows") then
         add_packages("nowide_standalone")
+        add_includedirs("Plugins/Windows")
+        add_files("Plugins/Windows/**.cpp")
     end
 
     add_configfiles(
