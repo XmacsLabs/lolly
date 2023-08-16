@@ -129,7 +129,7 @@ target("liblolly") do
     add_headerfiles("Plugins/Curl/(*.hpp)")
     add_includedirs(l1_includedirs)
     add_files(l1_files)
-    if not is_plat("wasm") then
+    if not is_plat("wasm") and (not is_plat("windows")) then
         add_includedirs("Plugins")
         add_files("Plugins/Curl/**.cpp")
     end
