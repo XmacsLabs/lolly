@@ -25,7 +25,7 @@ configvar_check_cxxsnippets(
 add_requires("doctest 2.4.11", {system=false})
 if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
     add_requires("apt::libcurl4-openssl-dev", {alias="libcurl"})
-else
+else if not is_plat("wasm") then
     add_requires("libcurl 7.84.0", {system=false})
 end 
 option("malloc")
@@ -54,7 +54,6 @@ local l1_files = {
     "Kernel/**/*.cpp",
     "System/**/*.cpp",
     "Data/String/**.cpp",
-    "Plugins/Curl/**.cpp",
 }
 local l1_includedirs = {
     "Kernel/Abstractions",
@@ -65,7 +64,7 @@ local l1_includedirs = {
     "System/Classes",
     "System/IO",
     "System/Memory",
-    "Plugins",
+    "Plugins"
 }
 
 target("liblolly") do
@@ -73,7 +72,7 @@ target("liblolly") do
     if is_plat("mingw") then
         set_languages("c++11")
     else
-        set_languages("c++98")
+        set_languages("c++17")
     end
     set_policy("check.auto_ignore_flags", false)
 
@@ -131,6 +130,10 @@ target("liblolly") do
     add_headerfiles("Plugins/Curl/(*.hpp)")
     add_includedirs(l1_includedirs)
     add_files(l1_files)
+    if not is_plat("wasm") then
+        add_includedirs("Plugins")
+        add_files("Plugins/Curl/**.cpp")
+    end
 end
 
 local mingw_copied = false 
