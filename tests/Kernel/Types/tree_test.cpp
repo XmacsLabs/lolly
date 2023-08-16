@@ -97,10 +97,24 @@ TEST_CASE ("test A()") {
   CHECK (A (tree (0, 1, 2, 3))[2] == 3);
 }
 
+TEST_CASE ("test AR()") {
+  tree a   = tree (2, tree (3), tree (4));
+  AR (a)[0]= tree (5);
+  CHECK (A (a)[0] == tree (5));
+
+  CHECK (N (A (a)) == 2);
+  AR (a)= append (tree (5), AR (a));
+  CHECK (N (A (a)) == 3);
+}
+
 TEST_CASE ("test operator==") {
   CHECK (tree (0, 1, 2) != 1);
   CHECK (tree (0, 1, 2) != 2);
   CHECK (tree (2) == 2);
+
+  tree a= tree (2);
+  tree b= tree (2, tree (3), tree (4, tree (5)));
+  CHECK (a == b);
 }
 
 TEST_CASE ("test inside") {
@@ -115,4 +129,43 @@ TEST_CASE ("test strong_equal") {
   CHECK (strong_equal (a, *b));
   CHECK (!strong_equal (tree (0, 1, 2), tree (3, tree ())));
   CHECK (!strong_equal (tree (0, 1, 2), tree (4, tree ())));
+}
+
+TEST_CASE ("test replace") {
+  tree la= tree (1, tree (2, tree (3), tree (3)));
+  tree ra= tree (1, tree (2, tree (4), tree (5)));
+  tree a = tree (1, la, ra);
+
+  tree lb= tree (1, tree (2, tree (6), tree (6)));
+  tree rb= tree (1, tree (2, tree (4), tree (5)));
+  tree b = tree (1, lb, rb);
+
+  a= replace (a, tree (3), tree (6));
+  CHECK (a == b);
+  b= replace (b, tree (4), tree (7));
+  CHECK (a != b);
+  b= replace (b, tree (7), tree (4));
+  CHECK (a == b);
+}
+
+TEST_CASE ("test operator=") {
+  tree a= tree (3, tree (2));
+
+  tree b= a;
+  CHECK (b == tree (3, tree (2)));
+
+  CHECK (a[0] == tree (2));
+  b[0]= tree (4);
+  CHECK (a[0] == tree (4));
+}
+
+TEST_CASE ("tree (const tree& x)") {
+  tree a= tree (3, tree (2));
+
+  tree b (a);
+  CHECK (b == tree (3, tree (2)));
+
+  CHECK (a[0] == tree (2));
+  b[0]= tree (4);
+  CHECK (a[0] == tree (4));
 }
