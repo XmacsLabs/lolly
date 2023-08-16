@@ -165,3 +165,14 @@ TEST_CASE ("tree (const tree& x)") {
   b[0]= tree (4);
   CHECK (a[0] == tree (4));
 }
+
+TEST_CASE ("copy") {
+  tree a= tree (3, tree (2));
+
+  tree b= copy (a);
+  CHECK (b == tree (3, tree (2)));
+
+  CHECK (a[0] == tree (2));
+  b[0]= tree (4);
+  CHECK (a[0] == tree (2));
+}
