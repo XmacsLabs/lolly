@@ -25,7 +25,7 @@ configvar_check_cxxsnippets(
 add_requires("doctest 2.4.11", {system=false})
 if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
     add_requires("apt::libcurl4-openssl-dev", {alias="libcurl"})
-else if not is_plat("wasm") then
+elseif not is_plat("wasm") then
     add_requires("libcurl 7.84.0", {system=false})
 end 
 option("malloc")
@@ -64,7 +64,6 @@ local l1_includedirs = {
     "System/Classes",
     "System/IO",
     "System/Memory",
-    "Plugins"
 }
 
 target("liblolly") do
