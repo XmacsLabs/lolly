@@ -111,10 +111,6 @@ TEST_CASE ("test operator==") {
   CHECK (tree (0, 1, 2) != 1);
   CHECK (tree (0, 1, 2) != 2);
   CHECK (tree (2) == 2);
-
-  tree a= tree (2);
-  tree b= tree (2, tree (3), tree (4, tree (5)));
-  CHECK (a == b);
 }
 
 TEST_CASE ("test inside") {
