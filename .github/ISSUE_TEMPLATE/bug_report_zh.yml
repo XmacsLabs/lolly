@@ -4,16 +4,14 @@ labels: 'bug'
 body:
 
 - type: input
-  id: xmake
   attributes:
     label: Lolly 版本
-    description: 你正在使用的 Xmake 版本是什么？请运行：`xmake --version`
+    description: 你正在使用的 Lolly 版本是什么？请运行：`xmake --version`
     placeholder: 0.0.0
   validations:
     required: true
 
 - type: input
-  id: os
   attributes:
     label: 操作系统版本和架构
     description: 你正在使用的操作系统版本和架构是什么? 在 Windows 上，请点击 开始按钮 > 设置 > 系统 > 关于。在 macOS 上，点击左上角苹果菜单 > 关于本机。在 Linux 上，使用 lsb_release 或者 uname -a 命令查看。
@@ -22,7 +20,6 @@ body:
     required: true
 
 - type: textarea
-  id: problem
   attributes:
     label: 描述问题
     description: 请尽量清晰精准地描述你碰到的问题。
@@ -30,25 +27,9 @@ body:
     required: true
 
 - type: textarea
-  id: expected
   attributes:
     label: 期待的结果
     description: 请尽量清晰精准地描述你所期待的结果。
   validations:
     required: true
 
-- type: textarea
-  id: configuration
-  attributes:
-    label: 工程配置
-    description: 请尽可能提供你工程的 xmake.lua 配置内容和关键片段。或者提供最小可复现的完整工程例子，作为附件上传。
-  validations:
-    required: true
-
-- type: textarea
-  id: additional
-  attributes:
-    label: 附加信息和错误日志
-    description: 如果是 Xmake 相关问题，请添加 `-vD` 命令参数，并且提供完整详细的输出和错误信息。如果你的问题还需要进一步描述，请在这里提供更多信息。
-  validations:
-    required: true
