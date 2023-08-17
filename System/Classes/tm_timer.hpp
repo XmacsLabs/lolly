@@ -12,12 +12,8 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#ifndef OS_WIN32
 
-typedef long time_t;
-#else
 #include <time.h>
-#endif
 
 #ifdef OS_SUN
 #include <sys/types.h>
