@@ -4,6 +4,7 @@
 * DESCRIPTION: A block of Scheme data
 * COPYRIGHT  : (C) 1999  Joris van der Hoeven
                    2023  Darcy Shen
+                   2023  Charonxin
 *******************************************************************************
 * This software falls under the GNU general public license version 3 or later.
 * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
@@ -17,12 +18,12 @@
  * Handling escape characters
  ******************************************************************************/
 
-static int UNKNOWN = 1;
-static int TUPLE = 245;
-static int EXPAND = 356;
+static int UNKNOWN        = 1;
+static int TUPLE          = 245;
+static int EXPAND         = 356;
 static int next_tree_label= 366; // START_EXTENSIONS
 
-extern hashmap<string,int> STD_CODE;
+extern hashmap<string, int> STD_CODE;
 extern hashmap<int, string> CONSTRUCTOR_NAME ("?");
 extern hashmap<string, int> CONSTRUCTOR_CODE (UNKNOWN);
 
@@ -237,7 +238,7 @@ make_tree_label (int l, string s) {
 static int
 make_tree_label (string s) {
   if (CONSTRUCTOR_CODE->contains (s)) return CONSTRUCTOR_CODE[s];
-  int l   = next_tree_label;
+  int l          = next_tree_label;
   next_tree_label= ((int) next_tree_label) + 1;
   make_tree_label (l, s);
   return l;
@@ -248,11 +249,12 @@ scheme_tree_to_tree (scheme_tree t, hashmap<string, int> codes, bool flag) {
   if (is_atomic (t)) return scm_unquote (t->label);
   else if ((N (t) == 0) || is_compound (t[0])) {
     // return compound (
-    //     "errput", concat ("The tree was ", as_string (L (t)), ": ", tree (t)));
-    return tree("error put");
+    //     "errput", concat ("The tree was ", as_string (L (t)), ": ", tree
+    //     (t)));
+    return tree ("error put");
   }
   else {
-    int        i, n= N (t);
+    int i, n= N (t);
     int code= codes[t[0]->label]; // code is tree_label
     if (flag) code= make_tree_label (t[0]->label);
     if (code == UNKNOWN) {
