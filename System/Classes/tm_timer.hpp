@@ -12,19 +12,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#ifndef OS_WIN32
-
-#ifndef __FreeBSD__
-#ifndef HAVE_TIME_T
-#define HAVE_TIME_T
-#if (defined OS_SUN || defined OS_LINUX || defined OS_MACOSX)
-typedef long time_t;
-#endif
-#endif
-#endif
-#else
 #include <time.h>
-#endif
 
 #ifdef OS_SUN
 #include <sys/types.h>
