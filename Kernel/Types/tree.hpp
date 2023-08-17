@@ -302,15 +302,7 @@ tree replace (tree t, tree w, tree b);
  * Miscellaneous
  ******************************************************************************/
 
-tree correct (tree t);
-int  hash (tree t);
-
-class formatted {
-public:
-  tree rep;
-  inline formatted (tree t) : rep (t) {}
-  inline formatted (const formatted& f) : rep (f.rep) {}
-};
+int hash (tree t);
 
 struct less_eq_associate {
   static inline bool leq (tree& a, tree& b) {
