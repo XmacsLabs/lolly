@@ -78,7 +78,9 @@ target("liblolly") do
     set_basename("lolly")
 
     --- dependent packages
-    add_packages("libcurl")
+    if not is_plat("wasm", "windows") then
+        add_packages("libcurl")
+    end
     if is_config("malloc", "mimalloc") then 
         add_defines("MIMALLOC")
         add_packages("mimalloc")
