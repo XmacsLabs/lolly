@@ -17,9 +17,14 @@
  * Handling escape characters
  ******************************************************************************/
 
-extern hashmap<string,int> STD_CODE;
-
+static int UNKNOWN = 1;
 static int TUPLE = 245;
+static int EXPAND = 356;
+static int next_tree_label= 366; // START_EXTENSIONS
+
+extern hashmap<string,int> STD_CODE;
+extern hashmap<int, string> CONSTRUCTOR_NAME ("?");
+extern hashmap<string, int> CONSTRUCTOR_CODE (UNKNOWN);
 
 string
 unslash (string s) {
@@ -173,6 +178,16 @@ slash (string s) {
  * Converting scheme trees to strings
  ******************************************************************************/
 
+inline bool
+is_tuple (tree t) {
+  return t->op == TUPLE;
+}
+
+inline bool
+is_tuple (tree t, const char* s, int n) {
+  return (t->op == TUPLE) && (N (t) == (n + 1)) && (t[0] == s);
+}
+
 static void
 scheme_tree_to_string (string& out, scheme_tree p) {
   if (!is_tuple (p)) {
@@ -213,16 +228,32 @@ scheme_tree_to_block (scheme_tree p) {
   return out;
 }
 
+static void
+make_tree_label (int l, string s) {
+  CONSTRUCTOR_NAME ((int) l)= s;
+  CONSTRUCTOR_CODE (s)      = (int) l;
+}
+
+static int
+make_tree_label (string s) {
+  if (CONSTRUCTOR_CODE->contains (s)) return CONSTRUCTOR_CODE[s];
+  int l   = next_tree_label;
+  next_tree_label= ((int) next_tree_label) + 1;
+  make_tree_label (l, s);
+  return l;
+}
+
 tree
 scheme_tree_to_tree (scheme_tree t, hashmap<string, int> codes, bool flag) {
   if (is_atomic (t)) return scm_unquote (t->label);
   else if ((N (t) == 0) || is_compound (t[0])) {
-    return compound (
-        "errput", concat ("The tree was ", as_string (L (t)), ": ", tree (t)));
+    // return compound (
+    //     "errput", concat ("The tree was ", as_string (L (t)), ": ", tree (t)));
+    return tree("error put");
   }
   else {
     int        i, n= N (t);
-    tree_label code= (tree_label) codes[t[0]->label];
+    int code= codes[t[0]->label]; // code is tree_label
     if (flag) code= make_tree_label (t[0]->label);
     if (code == UNKNOWN) {
       tree u (EXPAND, n);
@@ -254,6 +285,11 @@ scheme_to_tree (string s) {
  * Conversion from trees to scheme trees
  ******************************************************************************/
 
+string
+as_string (int l) {
+  return CONSTRUCTOR_NAME[(int) l];
+}
+
 scheme_tree
 tree_to_scheme_tree (tree t) {
   if (is_atomic (t)) return scm_quote (t->label);
@@ -268,7 +304,7 @@ tree_to_scheme_tree (tree t) {
   else {
     int    i, n= N (t);
     tree   u (TUPLE, n + 1);
-    string s= as_string (L (t));
+    string s= as_string (t->op);
     if (N (s) > 0 && is_digit (s[0]))
       if (is_int (s)) s= "'" * s;
     u[0]= copy (s);
