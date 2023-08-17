@@ -37,8 +37,7 @@ typedef long long int          DI;
 typedef unsigned long long int DN;
 typedef void*                  pointer;
 typedef unsigned int           color;
-#endif
-#ifdef OS_WIN32
+#elif defined OS_WIN32
 typedef int                SI;
 typedef unsigned int       SN;
 typedef short              HI;
