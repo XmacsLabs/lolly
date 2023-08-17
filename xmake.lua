@@ -71,7 +71,7 @@ target("liblolly") do
     if is_plat("mingw") then
         set_languages("c++11")
     else
-        set_languages("c++17")
+        set_languages("c++98")
     end
     set_policy("check.auto_ignore_flags", false)
 
