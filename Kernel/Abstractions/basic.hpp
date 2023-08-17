@@ -26,7 +26,6 @@
  */
 #define TM_DEBUG(x)
 
-#ifndef OS_WIN32
 typedef int                    SI;
 typedef unsigned int           SN;
 typedef short                  HI;
@@ -37,18 +36,6 @@ typedef long long int          DI;
 typedef unsigned long long int DN;
 typedef void*                  pointer;
 typedef unsigned int           color;
-#else
-typedef int                SI;
-typedef unsigned int       SN;
-typedef short              HI;
-typedef unsigned short     HN;
-typedef char               QI;
-typedef unsigned char      QN;
-typedef long long          DI;
-typedef unsigned long long DN;
-typedef void*              pointer;
-typedef unsigned int       color;
-#endif
 
 #define MAX_SI 0x7fffffff
 
