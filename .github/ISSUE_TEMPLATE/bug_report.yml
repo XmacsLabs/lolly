@@ -1,0 +1,48 @@
+name: Bug Report
+description: Create a report to help us improve
+labels: 'bug'
+body:
+
+- type: input
+  attributes:
+    label: Lolly Version
+    description: What version of Lolly are you using? Please run `xmake --version`
+    placeholder: 0.0.0
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: Operating System Version and Architecture
+    description: What operating system version and architecture are you using? On Windows, click Start button > Settings > System > About. On macOS, click the Apple Menu > About This Mac. On Linux, use lsb_release or uname -a.
+    placeholder: "e.g. Windows 10 version 1909, macOS Catalina 10.15.7, or Ubuntu 20.04"
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Describe Bug
+    description: A clear and concise description of what the bug is.
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: A clear and concise description of what you expected to happen.
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Project Configuration
+    description: Please provide your configuration in xmake.lua. Or provide a complete minimal reproducible example project and upload it as an attachment.
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Additional Information and Error Logs
+    description: If it is a xmake related compilation problem, please add the `-vD` parameter and give the detailed compilation output information. If your problem needs further explanation, please add more information here.
+  validations:
+    required: true
