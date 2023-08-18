@@ -8,7 +8,7 @@ on:
       - 'Data/**.hpp'
       - 'Kernel/**.hpp'
       - 'System/**.hpp'
-      - '.github/workflows/ci-docygen.yml'
+      - '.github/workflows/ci-doxygen.yml'
   workflow_dispatch:
 
 jobs:
