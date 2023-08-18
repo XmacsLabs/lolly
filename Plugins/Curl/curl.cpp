@@ -12,7 +12,7 @@
 #include <curl/curl.h>
 #include <string>
 
-#include "Curl/curl.hpp"
+#include "curl.hpp"
 
 static std::string readBuffer;
 
