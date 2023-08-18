@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: mattnotmitt/doxygen-action@v1.9.1
       with:
-        working-directory: '.'
+        working-directory: 'Kernel/ Data/ System/'
         doxyfile-path: '.'
 
     
