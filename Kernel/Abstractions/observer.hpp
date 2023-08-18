@@ -1,19 +1,19 @@
 
-/******************************************************************************
- * MODULE     : observer.hpp
- * DESCRIPTION: Observers of trees
- * COPYRIGHT  : (C) 2004  Joris van der Hoeven
- *******************************************************************************
- * This software falls under the GNU general public license version 3 or later.
- * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
- * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
- ******************************************************************************/
+/** \file observer.hpp
+ *  \copyright GPLv3
+ *  \details defines the observer class, which is used to monitor modifications
+ *  \author Joris van der Hoeven
+ *  \date   2004
+ */
 
 #ifndef OBSERVER_H
 #define OBSERVER_H
 
 #include "string.hpp"
 
+/**
+ * @brief Forward declarations.
+ */
 class tree;
 class observer;
 class modification;
@@ -22,6 +22,9 @@ template <class T> class list;
 template <class T> class array;
 typedef list<int> path;
 
+/**
+ * @brief define some observer types
+ */
 #define OBSERVER_UNKNOWN 0
 #define OBSERVER_LIST 1
 #define OBSERVER_IP 2
@@ -44,10 +47,23 @@ class observer_rep : public abstract_struct {
 public:
   inline observer_rep () { TM_DEBUG (observer_count++); }
   inline virtual ~observer_rep () { TM_DEBUG (observer_count--); }
-  inline virtual int         get_type () { return OBSERVER_UNKNOWN; }
+
+  /**
+   * @brief Get the type of the observer representation.
+   * @return The type of the observer representation.
+   */
+  inline virtual int get_type () { return OBSERVER_UNKNOWN; }
+
+  /**
+   * @brief Print the observer representation.
+   * @param out The output stream to print the observer representation.
+   * @return The output stream after printing the observer representation.
+   */
   inline virtual tm_ostream& print (tm_ostream& out) { return out; }
 
-  // Announcing modifications in subtrees
+  /**
+   * @brief Announcing modifications in subtrees
+   */
   virtual void announce (tree& ref, modification mod);
   virtual void announce_assign (tree& ref, path p, tree t);
   virtual void announce_insert (tree& ref, path p, tree ins);
@@ -61,7 +77,9 @@ public:
   virtual void done (tree& ref, modification mod);
   virtual void touched (tree& ref, path p);
 
-  // Call back routines for tree modifications
+  /**
+   * @brief Call back routines for tree modifications
+   */
   virtual void notify_assign (tree& ref, tree t);
   virtual void notify_insert (tree& ref, int pos, int nr);
   virtual void notify_remove (tree& ref, int pos, int nr);
@@ -75,7 +93,9 @@ public:
   virtual void notify_set_cursor (tree& ref, int pos, tree data);
   virtual void notify_detach (tree& ref, tree closest, bool right);
 
-  // Extra routines for particular types of observers
+  /**
+   * @brief Extra routines for particular types of observers
+   */
   virtual bool           get_ip (path& ip);
   virtual bool           set_ip (path ip);
   virtual bool           get_position (tree& t, int& index);
@@ -90,13 +110,36 @@ public:
 
 class observer {
 public:
+  /**
+   * @brief Default constructor.
+   */
   ABSTRACT_NULL (observer);
+
+  /**
+   * @brief Equality operator.
+   * @param o1 The first observer.
+   * @param o2 The second observer.
+   * @return True if the observers are equal, false otherwise.
+   */
   inline friend bool operator== (observer o1, observer o2) {
     return o1.rep == o2.rep;
   }
+
+  /**
+   * @brief Inequality operator.
+   * @param o1 The first observer.
+   * @param o2 The second observer.
+   * @return True if the observers are not equal, false otherwise.
+   */
   inline friend bool operator!= (observer o1, observer o2) {
     return o1.rep != o2.rep;
   }
+
+  /**
+   * @brief Hash function for observer.
+   * @param o1 The observer.
+   * @return The hash value for the observer.
+   */
   inline friend int hash (observer o1) { return hash ((pointer) o1.rep); }
 };
 ABSTRACT_NULL_CODE (observer);
@@ -105,10 +148,9 @@ tm_ostream& operator<< (tm_ostream& out, observer o);
 
 extern observer nil_observer;
 
-/******************************************************************************
- * Modification routines for trees and other observer-related facilities
- ******************************************************************************/
-
+/**
+ * @brief Modification routines for trees and other observer-related facilities
+ */
 void touch (tree& ref);
 
 #endif // defined OBSERVER_H
