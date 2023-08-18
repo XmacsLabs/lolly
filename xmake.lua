@@ -98,7 +98,7 @@ target("liblolly") do
         add_files("Plugins/Windows/**.cpp")
     end 
 
-    if not is_plat("wasm", "Windows") then
+    if not is_plat("wasm", "windows") then
         add_includedirs("Plugins/Curl")
         add_files("Plugins/Curl/**.cpp")
     end
