@@ -1,0 +1,24 @@
+
+name: Doxygen
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'Data/**.hpp'
+      - 'Kernel/**.hpp'
+      - 'System/**.hpp'
+      - '.github/workflows/ci-docygen.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: mattnotmitt/doxygen-action@v1.9.1
+      with:
+        working-directory: 'submodule/'
+        doxyfile-path: '.'
+
+    
