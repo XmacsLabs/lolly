@@ -21,8 +21,13 @@ configvar_check_cxxsnippets(
         #include <stdlib.h>
         static_assert(sizeof(void*) == 8, "");]])
 
-
+--- require packages
 add_requires("doctest 2.4.11", {system=false})
+if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
+    add_requires("apt::libcurl4-openssl-dev", {alias="libcurl"})
+elseif not is_plat("wasm") then
+    add_requires("libcurl 7.84.0", {system=false})
+end 
 option("malloc")
     set_default("standard")
     set_showmenu(true)
@@ -72,6 +77,10 @@ target("liblolly") do
 
     set_basename("lolly")
 
+    --- dependent packages
+    if not is_plat("wasm", "windows") then
+        add_packages("libcurl")
+    end
     if is_config("malloc", "mimalloc") then 
         add_defines("MIMALLOC")
         add_packages("mimalloc")
@@ -119,8 +128,13 @@ target("liblolly") do
     add_headerfiles("System/Memory/(*hpp)")
     add_headerfiles("Data/String/(*.hpp)")
     add_headerfiles("Plugins/Windows/(*.hpp)")
+    add_headerfiles("Plugins/Curl/(*.hpp)")
     add_includedirs(l1_includedirs)
     add_files(l1_files)
+    if not is_plat("wasm") and (not is_plat("windows")) then
+        add_includedirs("Plugins")
+        add_files("Plugins/Curl/**.cpp")
+    end
 end
 
 local mingw_copied = false 
@@ -133,6 +147,7 @@ for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
         add_packages("doctest")
+        add_packages("libcurl 7.84.0", {system=false})
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
         end

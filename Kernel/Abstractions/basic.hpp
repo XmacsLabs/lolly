@@ -26,59 +26,17 @@
  */
 #define TM_DEBUG(x)
 
-/**
- * @brief Typedef for a signed integer.
- */
-typedef int SI;
-
-/**
- * @brief Typedef for an unsigned integer.
- */
-typedef unsigned int SN;
-
-/**
- * @brief Typedef for a signed short integer.
- */
-typedef short HI;
-
-/**
- * @brief Typedef for an unsigned short integer.
- */
-typedef unsigned short HN;
-
-/**
- * @brief Typedef for a signed character.
- */
-typedef char QI;
-
-/**
- * @brief Typedef for an unsigned character.
- */
-typedef unsigned char QN;
-
-/**
- * @brief Typedef for a signed long long integer.
- */
-typedef long long int DI;
-
-/**
- * @brief Typedef for an unsigned long long integer.
- */
+typedef int                    SI;
+typedef unsigned int           SN;
+typedef short                  HI;
+typedef unsigned short         HN;
+typedef char                   QI;
+typedef unsigned char          QN;
+typedef long long int          DI;
 typedef unsigned long long int DN;
+typedef void*                  pointer;
+typedef unsigned int           color;
 
-/**
- * @brief Typedef for a void pointer.
- */
-typedef void* pointer;
-
-/**
- * @brief Typedef for an unsigned integer used for color representation.
- */
-typedef unsigned int color;
-
-/**
- * @brief Macro defining the maximum value of a signed integer.
- */
 #define MAX_SI 0x7fffffff
 
 /**
