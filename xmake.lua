@@ -98,6 +98,11 @@ target("liblolly") do
         add_files("Plugins/Windows/**.cpp")
     end 
 
+    if not is_plat("wasm", "Windows") then
+        add_includedirs("Plugins/Curl")
+        add_files("Plugins/Curl/**.cpp")
+    end
+
     add_configfiles(
         "System/config_l1.h.xmake", {
             filename = "L1/config.h",
@@ -131,10 +136,6 @@ target("liblolly") do
     add_headerfiles("Plugins/Curl/(*.hpp)")
     add_includedirs(l1_includedirs)
     add_files(l1_files)
-    if not is_plat("wasm") and (not is_plat("windows")) then
-        add_includedirs("Plugins")
-        add_files("Plugins/Curl/**.cpp")
-    end
 end
 
 local mingw_copied = false 
