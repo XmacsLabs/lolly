@@ -109,7 +109,7 @@ target("liblolly") do
             variables = {
                 OS_MINGW = is_plat("mingw"),
                 OS_WIN32 = is_plat("windows"),
-                OS_MACOSX = is_plat("macosx"),
+                OS_MACOS = is_plat("macosx"),
             }
         }
     )

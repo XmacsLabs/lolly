@@ -1,11 +1,9 @@
-${define HAVE_INTPTR_T} 
-${define HAVE_STDINT_H} 
-${define HAVE_INTTYPES_H} 
-${define HAVE_TIME_T} 
-${define HAVE_GETTIMEOFDAY} 
-${define __FreeBSD__} 
-${define OS_SUN}
-${define OS_MACOSX}
+${define HAVE_INTPTR_T}
+${define HAVE_STDINT_H}
+${define HAVE_INTTYPES_H}
+${define HAVE_TIME_T}
+${define HAVE_GETTIMEOFDAY}
+${define __FreeBSD__}
 
 #ifdef HAVE_INTPTR_T
 #ifdef HAVE_INTTYPES_H
@@ -18,8 +16,11 @@ ${define OS_MACOSX}
 typedef long intptr_t;
 #endif
 
-${define SANITY_CHECKS} 
-${define OS_MINGW} 
-${define OS_WIN32} 
-${define MIMALLOC} 
+${define SANITY_CHECKS}
+${define OS_MINGW}
+${define OS_WIN32}
+${define OS_SUN}
+${define OS_MACOS}
+
+${define MIMALLOC}
 ${define JEMALLOC}
