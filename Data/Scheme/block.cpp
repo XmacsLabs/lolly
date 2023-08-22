@@ -18,12 +18,8 @@
  * Handling escape characters
  ******************************************************************************/
 
-static int UNKNOWN        = 1;
-static int TUPLE          = 245;
-
-// extern hashmap<string, int> STD_CODE;
-// extern hashmap<int, string> CONSTRUCTOR_NAME ("?");
-// extern hashmap<string, int> CONSTRUCTOR_CODE (UNKNOWN);
+static int UNKNOWN= 1;
+static int TUPLE  = 245;
 
 string
 unslash (string s) {
