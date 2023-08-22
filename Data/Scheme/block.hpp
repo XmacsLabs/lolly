@@ -13,7 +13,6 @@
 #ifndef BLOCK_HPP
 #define BLOCK_HPP
 
-#include "hashmap.hpp"
 #include "tree.hpp"
 
 scheme_tree string_to_scheme_tree (string s);
