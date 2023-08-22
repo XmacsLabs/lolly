@@ -20,12 +20,10 @@
 
 static int UNKNOWN        = 1;
 static int TUPLE          = 245;
-static int EXPAND         = 356;
-static int next_tree_label= 366; // START_EXTENSIONS
 
-extern hashmap<string, int> STD_CODE;
-extern hashmap<int, string> CONSTRUCTOR_NAME ("?");
-extern hashmap<string, int> CONSTRUCTOR_CODE (UNKNOWN);
+// extern hashmap<string, int> STD_CODE;
+// extern hashmap<int, string> CONSTRUCTOR_NAME ("?");
+// extern hashmap<string, int> CONSTRUCTOR_CODE (UNKNOWN);
 
 string
 unslash (string s) {
@@ -227,19 +225,4 @@ scheme_tree_to_block (scheme_tree p) {
   for (i= 0; i < n; i++)
     out << scheme_tree_to_string (p[i]) << "\n";
   return out;
-}
-
-static void
-make_tree_label (int l, string s) {
-  CONSTRUCTOR_NAME ((int) l)= s;
-  CONSTRUCTOR_CODE (s)      = (int) l;
-}
-
-static int
-make_tree_label (string s) {
-  if (CONSTRUCTOR_CODE->contains (s)) return CONSTRUCTOR_CODE[s];
-  int l          = next_tree_label;
-  next_tree_label= ((int) next_tree_label) + 1;
-  make_tree_label (l, s);
-  return l;
 }
