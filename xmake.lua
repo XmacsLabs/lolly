@@ -79,7 +79,9 @@ target("liblolly") do
 
     --- dependent packages
     if not is_plat("wasm", "windows") then
-        add_packages("libcurl")
+        add_packages("libcurl", {public=true})
+        add_includedirs("Plugins/Curl")
+        add_files("Plugins/Curl/**.cpp")
     end
     if is_config("malloc", "mimalloc") then 
         add_defines("MIMALLOC")
@@ -97,11 +99,6 @@ target("liblolly") do
         add_includedirs("Plugins/Windows")
         add_files("Plugins/Windows/**.cpp")
     end 
-
-    if not is_plat("wasm", "windows") then
-        add_includedirs("Plugins/Curl")
-        add_files("Plugins/Curl/**.cpp")
-    end
 
     add_configfiles(
         "System/config_l1.h.xmake", {
