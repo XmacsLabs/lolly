@@ -14,7 +14,6 @@
 #include <curl/curl.h>
 #include <string>
 
-
 static std::string readBuffer;
 
 static size_t
