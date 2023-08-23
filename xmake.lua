@@ -71,6 +71,7 @@ local l1_includedirs = {
     "System/Classes",
     "System/IO",
     "System/Memory",
+    "Plugins/Curl",
 }
 
 target("liblolly") do

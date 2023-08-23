@@ -14,6 +14,9 @@
 
 #include "string.hpp"
 
+namespace lolly {
+string curl_version ();
 string curl_get (string source, string user_agent);
+} // namespace lolly
 
 #endif

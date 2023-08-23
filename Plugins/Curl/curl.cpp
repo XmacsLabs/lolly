@@ -14,7 +14,12 @@
 #include <curl/curl.h>
 #include <string>
 
-static std::string readBuffer;
+namespace lolly {
+string
+curl_version () {
+  curl_version_info_data* data= curl_version_info (CURLVERSION_NOW);
+  return string (data->version);
+}
 
 static size_t
 write_data (void* contents, size_t size, size_t nmemb, void* userp) {
@@ -48,3 +53,5 @@ curl_get (string source, string user_agent) {
     return string ();
   }
 }
+
+} // namespace lolly
