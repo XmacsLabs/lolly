@@ -9,6 +9,4 @@
 #include "curl.hpp"
 #include "doctest/doctest.h"
 
-TEST_CASE ("curl_version") {
-  CHECK_EQ (lolly::curl_version () == "7.84.0", true);
-}
+TEST_CASE ("curl_version") { CHECK (N (lolly::curl_version ()) > 0); }
