@@ -80,7 +80,7 @@ target("liblolly") do
     set_basename("lolly")
 
     --- dependent packages
-    if not is_plat("wasm", "windows") then
+    if not is_plat("wasm") then
         add_packages("libcurl")
     end
     if is_config("malloc", "mimalloc") then 
@@ -100,7 +100,7 @@ target("liblolly") do
         add_files("Plugins/Windows/**.cpp")
     end 
 
-    if not is_plat("wasm", "windows") then
+    if not is_plat("wasm") then
         add_includedirs("Plugins/Curl")
         add_files("Plugins/Curl/**.cpp")
     end
