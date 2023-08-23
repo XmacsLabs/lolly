@@ -6,10 +6,6 @@ if (eq $platform:os windows) {
     set paths = [
       C:/hostedtoolcache/windows/xmake/2.8.2/x64
     ]
-  } else {
-    set paths = [
-      ~/scoop/shims/
-    ]
   }
 }
 
