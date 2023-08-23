@@ -1,9 +1,16 @@
-set paths = [
-    C:/Windows/System32
-    $E:USERPROFILE/scoop/apps/mingw/current/bin
-    $E:USERPROFILE/scoop/shims 
-    C:/hostedtoolcache/windows/xmake/2.8.1/x64
-]
-echo $paths
+use platform
+
+if (eq $platform:os windows) {
+  if (eq $E:GITHUB_ACTIONS "true") {
+    echo "It is in Github Action"
+    set paths = [
+      C:/hostedtoolcache/windows/xmake/2.8.2/x64
+    ]
+  } else {
+    set paths = [
+      ~/scoop/shims/
+    ]
+  }
+}
 
 xmake build --yes -vD --all
