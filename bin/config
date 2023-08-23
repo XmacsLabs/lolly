@@ -1,6 +1,6 @@
 use platform
 
-xrepo install "mingw-w64 8.1.0"
+xrepo install -y "mingw-w64 8.1.0"
 
 var pkg_info = (xrepo fetch --json mingw-w64 | from-json)
 var mingw_path = $pkg_info[0][artifacts][installdir]

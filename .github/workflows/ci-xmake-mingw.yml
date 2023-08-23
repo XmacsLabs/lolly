@@ -9,6 +9,7 @@ on:
       - 'tests/**'
       - '.github/workflows/ci-xmake-mingw.yml'
       - 'xmake.lua' 
+      - 'bin/**'
   pull_request:
     branches: [ main ]
     paths:
@@ -17,6 +18,7 @@ on:
       - 'tests/**'
       - '.github/workflows/ci-xmake-mingw.yml'
       - 'xmake.lua' 
+      - 'bin/**'
   workflow_dispatch:
 
 jobs:
