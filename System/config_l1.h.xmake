@@ -21,6 +21,7 @@ ${define OS_MINGW}
 ${define OS_WIN32}
 ${define OS_SUN}
 ${define OS_MACOS}
+${define OS_WASM}
 
 ${define MIMALLOC}
 ${define JEMALLOC}

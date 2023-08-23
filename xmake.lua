@@ -118,6 +118,7 @@ target("liblolly") do
                 OS_MINGW = is_plat("mingw"),
                 OS_WIN32 = is_plat("windows"),
                 OS_MACOS = is_plat("macosx"),
+                OS_WASM = is_plat("wasm"),
             }
         }
     )
@@ -151,13 +152,23 @@ local mingw_copied = false
 
 for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
     local testname = path.basename(filepath)
+    if is_plat("wasm") and testname == "curl_test" then
+        break
+    end
     target(testname) do 
+        if testname == "curl_test" then
+            set_default(is_plat("wasm"))
+        end
         set_group("tests")
         add_deps("liblolly")
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
+
         add_packages("doctest")
-        add_packages("libcurl 7.84.0", {system=false})
+        if not is_plat("wasm") then
+            add_packages("libcurl", {system=false})
+        end
+
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
         end
