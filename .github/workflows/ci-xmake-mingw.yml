@@ -57,6 +57,9 @@ jobs:
         run: xmake run --yes -vD --diagnosis --group=tests
   windowsbuild:
     runs-on: windows-2019
+    env:
+      # Force xmake to a specific folder (for cache)
+      XMAKE_GLOBALDIR: "${{ github.workspace }}\\.xmake-global"
     steps:
       - name: Run the installer as administrator
         run: |
@@ -67,7 +70,6 @@ jobs:
       - name: Install dependencies
         run: |
           scoop install main/make
-          scoop install main/mingw
           scoop install main/uutils-coreutils
           scoop install main/elvish
       - uses: xmake-io/github-action-setup-xmake@v1
@@ -79,6 +81,12 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 1
+      - name: cache packages from xrepo
+        uses: actions/cache@v2
+        with:
+          path: |
+            ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
+          key: ${{ runner.os }}-xrepo-${{ hashFiles('**/xmake.lua') }}
       - name: config
         run: elvish bin/config
       - name: build
