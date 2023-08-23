@@ -3,6 +3,11 @@ set_languages("c++17")
 
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
+if is_plat("mingw") then
+    add_requires("mingw-w64 8.1.0")
+    set_toolchains("mingw@mingw-w64")
+end
+
 includes("check_cxxtypes.lua")
 configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
 configvar_check_cxxtypes("HAVE_TIME_T", "time_t", {includes = {"memory"}})
