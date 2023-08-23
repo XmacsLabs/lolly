@@ -166,7 +166,7 @@ for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
 
         add_packages("doctest")
         if not is_plat("wasm") then
-            add_packages("libcurl", {system=false})
+            add_packages("libcurl")
         end
 
         if is_plat("linux") then
