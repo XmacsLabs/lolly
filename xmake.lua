@@ -55,13 +55,13 @@ if is_plat("mingw", "windows") then
     add_requires("nowide_standalone 11.2.0", {system=false})
 end
 
-local l1_files = {
+local lolly_files = {
     "Kernel/**/*.cpp",
     "System/**/*.cpp",
     "Data/String/**.cpp",
     "Data/Scheme/**.cpp",
 }
-local l1_includedirs = {
+local lolly_includedirs = {
     "Kernel/Abstractions",
     "Kernel/Algorithms",
     "Kernel/Containers",
@@ -72,6 +72,7 @@ local l1_includedirs = {
     "System/IO",
     "System/Memory",
     "Plugins/Curl",
+    "Plugins/Unix",
 }
 
 target("liblolly") do
@@ -144,10 +145,11 @@ target("liblolly") do
     add_headerfiles("System/Memory/(*hpp)")
     add_headerfiles("Data/String/(*.hpp)")
     add_headerfiles("Data/Scheme/(*.hpp)")
-    add_headerfiles("Plugins/Windows/(*.hpp)")
-    add_headerfiles("Plugins/Curl/(*.hpp)")
-    add_includedirs(l1_includedirs)
-    add_files(l1_files)
+    add_headerfiles("Plugins/Curl/(*.hpp)", {prefixdir = "Curl"})
+    add_headerfiles("Plugins/Unix/(*.hpp)", {prefixdir = "Unix"})
+    add_headerfiles("Plugins/Windows/(*.hpp)", {prefixdir = "Windows"})
+    add_includedirs(lolly_includedirs)
+    add_files(lolly_files)
 end
 
 local mingw_copied = false 
@@ -176,7 +178,7 @@ for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
         end
 
         add_includedirs("$(buildir)/L1")
-        add_includedirs(l1_includedirs)
+        add_includedirs(lolly_includedirs)
         add_files(filepath) 
 
         if is_plat("wasm") then
