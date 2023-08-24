@@ -37,7 +37,8 @@ stages:
           - apt-get install -y xmake
           - xmake repo -u
           - xmake config --yes
-          - xmake build -vD
+          - xmake build -vD liblolly
+          - xmake --yes -vD --group=tests -j 1 build
           - xmake run -vD
         caches: [
           build/.build_cache,
