@@ -58,6 +58,7 @@ end
 local l1_files = {
     "Kernel/**/*.cpp",
     "System/**/*.cpp",
+    "System/Misc/**.cpp",
     "Data/String/**.cpp",
     "Data/Scheme/**.cpp",
 }
@@ -71,6 +72,7 @@ local l1_includedirs = {
     "System/Classes",
     "System/IO",
     "System/Memory",
+    "System/Misc",
     "Plugins/Curl",
 }
 
@@ -145,6 +147,7 @@ target("liblolly") do
     add_headerfiles("Data/String/(*.hpp)")
     add_headerfiles("Data/Scheme/(*.hpp)")
     add_headerfiles("Plugins/Windows/(*.hpp)")
+    add_headerfiles("Plugins/Unix/(*.hpp)")
     add_headerfiles("Plugins/Curl/(*.hpp)")
     add_includedirs(l1_includedirs)
     add_files(l1_files)

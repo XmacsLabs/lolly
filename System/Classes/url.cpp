@@ -59,7 +59,7 @@
 ******************************************************************************/
 
 #include "url.hpp"
-// #include "sys_utils.hpp"
+#include "sys_utils.hpp"
 // #include "web_files.hpp"
 // #include "file.hpp"
 #include "analyze.hpp"
@@ -79,12 +79,6 @@
 #endif
 
 
-url::url (): rep (tm_new<url_rep> (tuple ("none"))) {}
-url::url (const char* name): rep (tm_new<url_rep> (url_unix (name)->t)) {}
-url::url (string name): rep (tm_new<url_rep> (url_unix (name)->t)) {}
-url::url (string path_name, string name):
-  rep (tm_new<url_rep> (url_unix (path_name, name)->t)) {}
-
 static inline tree tuple () {
   return tree (URL_TUPLE); }
 static inline tree tuple (tree t1) {
@@ -97,6 +91,12 @@ static inline tree tuple (tree t1, tree t2, tree t3, tree t4) {
   return tree (URL_TUPLE, t1, t2, t3, t4); }
 static inline tree tuple (tree t1, tree t2, tree t3, tree t4, tree t5) {
   return tree (URL_TUPLE, t1, t2, t3, t4, t5); }
+
+url::url (): rep (tm_new<url_rep> (tuple ("none"))) {}
+url::url (const char* name): rep (tm_new<url_rep> (url_unix (name)->t)) {}
+url::url (string name): rep (tm_new<url_rep> (url_unix (name)->t)) {}
+url::url (string path_name, string name):
+  rep (tm_new<url_rep> (url_unix (path_name, name)->t)) {}
 
 static inline bool is_tuple (tree t) {
   return (t->op == URL_TUPLE); }
@@ -582,5 +582,13 @@ reroot (url u, string protocol) {
   if (is_concat (u)) return reroot (u[1], protocol) * u[2];
   if (is_or (u)) return reroot (u[1], protocol) | reroot (u[2], protocol);
   if (is_root (u)) return url_root (protocol);
+  return u;
+}
+
+url
+unblank (url u) {
+  if (is_concat (u) && (u[2]->t == "")) return u[1];
+  if (is_concat (u)) return u[1] * unblank (u[2]);
+  if (is_or (u)) return unblank (u[1]) | unblank (u[2]);
   return u;
 }

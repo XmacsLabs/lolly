@@ -58,6 +58,14 @@ inline string as_standard_string (url u) { return as_string (u,URL_STANDARD); }
 * url constructors
 ******************************************************************************/
 
+url url_general (string name, int type);
+url url_unix (string name);
+url url_unix (string dir, string name);
+url url_system (string name);
+url url_system (string dir, string name);
+url url_standard (string name);
+url url_standard (string dir, string name);
+
 url url_none (); 
 inline url url_here () { return as_url (tree (".")); }
 inline url url_parent () { return as_url (tree ("..")); }
@@ -115,5 +123,6 @@ bool is_ramdisc (url u);
 string get_root (url u);             // get root
 url    unroot (url u);               // remove root
 url    reroot (url u, string s);     // reroot using new protocol
+url    unblank (url u);              // a/b/ -> a/b
 
 #endif // defined URL_H
