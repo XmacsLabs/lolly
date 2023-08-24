@@ -88,6 +88,8 @@ target("liblolly") do
     --- dependent packages
     if not is_plat("wasm") then
         add_packages("libcurl")
+        add_includedirs("Plugins/Curl")
+        add_files("Plugins/Curl/**.cpp")
     end
     if is_config("malloc", "mimalloc") then 
         add_defines("MIMALLOC")
@@ -106,9 +108,9 @@ target("liblolly") do
         add_files("Plugins/Windows/**.cpp")
     end 
 
-    if not is_plat("wasm") then
-        add_includedirs("Plugins/Curl")
-        add_files("Plugins/Curl/**.cpp")
+    if is_plat("linux") or is_plat("macosx") then
+        add_includedirs("Plugins/Unix")
+        add_files("Plugins/Unix/**.cpp")
     end
 
     add_configfiles(
