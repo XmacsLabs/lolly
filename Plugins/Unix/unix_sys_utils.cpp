@@ -32,7 +32,7 @@ unix_system (string s) {
  * Evaluation via specified file descriptors
  ******************************************************************************/
 
-#if !defined(OS_MINGW) && !defined(X11TEXMACS)
+#if !defined(OS_MINGW)
 
 extern char** environ;
 
