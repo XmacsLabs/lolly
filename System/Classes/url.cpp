@@ -1,62 +1,62 @@
 
 /******************************************************************************
-* MODULE     : url.cpp
-* DESCRIPTION: unified resource location handling
-* COPYRIGHT  : (C) 1999  Joris van der Hoeven
-*******************************************************************************
-* The url class uses a tree representation for urls.
-* This allows us to generalize the concept of an url and allow paths and
-* patterns to be regarded as urls too. An url is either a string or a tuple
-* of one of the following types:
-*   "." -- here
-*   ".." -- parent
-*   none -- invalid url
-*   concat -- a/b/c is represented as (concat "a" (concat "b" "c"));
-*   or -- the path a:b/c is represented as (or "a" (concat "b" "c"));
-*   root -- the url http://gnu.org yields (concat (root "http") "gnu.org");
-*   wildcard -- (wildcard) corresponds to any url, (wildcard "*.tm")
-*     to all strings which end with .tm and (wildcard "*.tm" "file")
-*     to all TeXmacs files (i.e. discarding directories ending with .tm).
-*******************************************************************************
-* There are three main types of urls:
-*   - rootless urls, like a/b/c. These urls are mainly used in computations.
-*     For example, they can be appended to another url.
-*   - Standard rooted urls, like file:///usr or https://www.texmacs.org.
-*     These are the same as those used on the web.
-*   - System urls, characterized by a "default" root.
-*     These urls are similar to standard rooted urls, but they behave
-*     in a slightly different way with respect to concatenation.
-*     For instance https://www.texmacs.org/Web * file:///tmp would yield
-*     file:///tmp, where as https://www.texmacs.org/Web * /tmp yields
-*     https://www.texmacs.org/tmp
-*******************************************************************************
-* There are several formats for parsing (and printing) urls:
-*   - System format: the usual format on your operating system.
-*     On unix systems "/usr/bin:/usr/local/bin" would be a valid url
-*     representing a path and on windows systems "c:\windows;c:\TeXmacs"
-*     would be OK.
-*   - Unix format: this format forces unix-like notation even for
-*     other systems like Windows. This is convenient for url's in
-*     the source code. Unix environment variables like ~ and $TEXMACS_PATH
-*     can also be part of the url.
-*   - Standard format: the format which is used on the web.
-*     Notice that ftp://www.texmacs.org/pub and ftp://www.texmacs.org/pub/
-*     represent different urls. The second one is represented by concating
-*     on the right with an empty name.
-*******************************************************************************
-* When an explicit operation on urls need to be performed,
-* like reading a file, the url is first "resolved" into a simple url
-* with a unique name (modulo symbolic links) for the resource.
-* Next, the url is "concretized" as a file name which is understood
-* by the operating system. This may require searching the file from the web.
-* Concretized urls should be used quickly and not memorized,
-* since such names may be the names of temporary files,
-* which may be destroyed soon afterwards.
-*******************************************************************************
-* This software falls under the GNU general public license version 3 or later.
-* It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
-* in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
-******************************************************************************/
+ * MODULE     : url.cpp
+ * DESCRIPTION: unified resource location handling
+ * COPYRIGHT  : (C) 1999  Joris van der Hoeven
+ *******************************************************************************
+ * The url class uses a tree representation for urls.
+ * This allows us to generalize the concept of an url and allow paths and
+ * patterns to be regarded as urls too. An url is either a string or a tuple
+ * of one of the following types:
+ *   "." -- here
+ *   ".." -- parent
+ *   none -- invalid url
+ *   concat -- a/b/c is represented as (concat "a" (concat "b" "c"));
+ *   or -- the path a:b/c is represented as (or "a" (concat "b" "c"));
+ *   root -- the url http://gnu.org yields (concat (root "http") "gnu.org");
+ *   wildcard -- (wildcard) corresponds to any url, (wildcard "*.tm")
+ *     to all strings which end with .tm and (wildcard "*.tm" "file")
+ *     to all TeXmacs files (i.e. discarding directories ending with .tm).
+ *******************************************************************************
+ * There are three main types of urls:
+ *   - rootless urls, like a/b/c. These urls are mainly used in computations.
+ *     For example, they can be appended to another url.
+ *   - Standard rooted urls, like file:///usr or https://www.texmacs.org.
+ *     These are the same as those used on the web.
+ *   - System urls, characterized by a "default" root.
+ *     These urls are similar to standard rooted urls, but they behave
+ *     in a slightly different way with respect to concatenation.
+ *     For instance https://www.texmacs.org/Web * file:///tmp would yield
+ *     file:///tmp, where as https://www.texmacs.org/Web * /tmp yields
+ *     https://www.texmacs.org/tmp
+ *******************************************************************************
+ * There are several formats for parsing (and printing) urls:
+ *   - System format: the usual format on your operating system.
+ *     On unix systems "/usr/bin:/usr/local/bin" would be a valid url
+ *     representing a path and on windows systems "c:\windows;c:\TeXmacs"
+ *     would be OK.
+ *   - Unix format: this format forces unix-like notation even for
+ *     other systems like Windows. This is convenient for url's in
+ *     the source code. Unix environment variables like ~ and $TEXMACS_PATH
+ *     can also be part of the url.
+ *   - Standard format: the format which is used on the web.
+ *     Notice that ftp://www.texmacs.org/pub and ftp://www.texmacs.org/pub/
+ *     represent different urls. The second one is represented by concating
+ *     on the right with an empty name.
+ *******************************************************************************
+ * When an explicit operation on urls need to be performed,
+ * like reading a file, the url is first "resolved" into a simple url
+ * with a unique name (modulo symbolic links) for the resource.
+ * Next, the url is "concretized" as a file name which is understood
+ * by the operating system. This may require searching the file from the web.
+ * Concretized urls should be used quickly and not memorized,
+ * since such names may be the names of temporary files,
+ * which may be destroyed soon afterwards.
+ *******************************************************************************
+ * This software falls under the GNU general public license version 3 or later.
+ * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
+ * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
+ ******************************************************************************/
 
 #include "url.hpp"
 #include "sys_utils.hpp"
@@ -71,86 +71,149 @@
 #endif
 
 #ifdef WINPATHS
-#define URL_CONCATER  '\\'
+#define URL_CONCATER '\\'
 #define URL_SEPARATOR ';'
 #else
-#define URL_CONCATER  '/'
+#define URL_CONCATER '/'
 #define URL_SEPARATOR ':'
 #endif
 
+static inline tree
+tuple () {
+  return tree (URL_TUPLE);
+}
+static inline tree
+tuple (tree t1) {
+  return tree (URL_TUPLE, t1);
+}
+static inline tree
+tuple (tree t1, tree t2) {
+  return tree (URL_TUPLE, t1, t2);
+}
+static inline tree
+tuple (tree t1, tree t2, tree t3) {
+  return tree (URL_TUPLE, t1, t2, t3);
+}
+static inline tree
+tuple (tree t1, tree t2, tree t3, tree t4) {
+  return tree (URL_TUPLE, t1, t2, t3, t4);
+}
+static inline tree
+tuple (tree t1, tree t2, tree t3, tree t4, tree t5) {
+  return tree (URL_TUPLE, t1, t2, t3, t4, t5);
+}
 
-static inline tree tuple () {
-  return tree (URL_TUPLE); }
-static inline tree tuple (tree t1) {
-  return tree (URL_TUPLE, t1); }
-static inline tree tuple (tree t1, tree t2) {
-  return tree (URL_TUPLE, t1, t2); }
-static inline tree tuple (tree t1, tree t2, tree t3) {
-  return tree (URL_TUPLE, t1, t2, t3); }
-static inline tree tuple (tree t1, tree t2, tree t3, tree t4) {
-  return tree (URL_TUPLE, t1, t2, t3, t4); }
-static inline tree tuple (tree t1, tree t2, tree t3, tree t4, tree t5) {
-  return tree (URL_TUPLE, t1, t2, t3, t4, t5); }
+url::url () : rep (tm_new<url_rep> (tuple ("none"))) {}
+url::url (const char* name) : rep (tm_new<url_rep> (url_unix (name)->t)) {}
+url::url (string name) : rep (tm_new<url_rep> (url_unix (name)->t)) {}
+url::url (string path_name, string name)
+    : rep (tm_new<url_rep> (url_unix (path_name, name)->t)) {}
 
-url::url (): rep (tm_new<url_rep> (tuple ("none"))) {}
-url::url (const char* name): rep (tm_new<url_rep> (url_unix (name)->t)) {}
-url::url (string name): rep (tm_new<url_rep> (url_unix (name)->t)) {}
-url::url (string path_name, string name):
-  rep (tm_new<url_rep> (url_unix (path_name, name)->t)) {}
+static inline bool
+is_tuple (tree t) {
+  return (t->op == URL_TUPLE);
+}
+static inline bool
+is_tuple (tree t, string s) {
+  return (t->op == URL_TUPLE) && (N (t) >= 1) && (t[0] == s);
+}
+static inline bool
+is_tuple (tree t, const char* s) {
+  return (t->op == URL_TUPLE) && (N (t) >= 1) && (t[0] == s);
+}
+static inline bool
+is_tuple (tree t, string s, int n) {
+  return (t->op == URL_TUPLE) && (N (t) == (n + 1)) && (t[0] == s);
+}
+static inline bool
+is_tuple (tree t, const char* s, int n) {
+  return (t->op == URL_TUPLE) && (N (t) == (n + 1)) && (t[0] == s);
+}
 
-static inline bool is_tuple (tree t) {
-  return (t->op == URL_TUPLE); }
-static inline bool is_tuple (tree t, string s) {
-  return (t->op == URL_TUPLE) && (N(t) >= 1) && (t[0] == s); }
-static inline bool is_tuple (tree t, const char* s) {
-  return (t->op == URL_TUPLE) && (N(t) >= 1) && (t[0] == s); }
-static inline bool is_tuple (tree t, string s, int n) {
-  return (t->op == URL_TUPLE) && (N(t) == (n+1)) && (t[0] == s); }
-static inline bool is_tuple (tree t, const char* s, int n) {
-  return (t->op == URL_TUPLE) && (N(t) == (n+1)) && (t[0] == s); }
-
-url url_none () { return as_url (tuple ("none")); }
-bool is_none (url u) { return is_tuple (u->t, "none", 0); }
-bool is_here (url u) { return u->t == "."; }
-bool is_parent (url u) { return u->t == ".."; }
-bool is_ancestor (url u) { return u->t == "..."; }
-bool is_atomic (url u) { return is_atomic (u->t); }
-bool is_concat (url u) { return is_tuple (u->t, "concat", 2); }
-bool is_or (url u) { return is_tuple (u->t, "or", 2); }
-bool is_root (url u) {
-  return is_tuple (u->t, "root") && (N(u->t) >= 2); }
-bool is_root (url u, string s) {
-  return is_root (u) && (u[1]->t->label == s); }
-bool is_root_web (url u) {
+url
+url_none () {
+  return as_url (tuple ("none"));
+}
+bool
+is_none (url u) {
+  return is_tuple (u->t, "none", 0);
+}
+bool
+is_here (url u) {
+  return u->t == ".";
+}
+bool
+is_parent (url u) {
+  return u->t == "..";
+}
+bool
+is_ancestor (url u) {
+  return u->t == "...";
+}
+bool
+is_atomic (url u) {
+  return is_atomic (u->t);
+}
+bool
+is_concat (url u) {
+  return is_tuple (u->t, "concat", 2);
+}
+bool
+is_or (url u) {
+  return is_tuple (u->t, "or", 2);
+}
+bool
+is_root (url u) {
+  return is_tuple (u->t, "root") && (N (u->t) >= 2);
+}
+bool
+is_root (url u, string s) {
+  return is_root (u) && (u[1]->t->label == s);
+}
+bool
+is_root_web (url u) {
   return is_root (u, "http") || is_root (u, "https") || is_root (u, "ftp") ||
-         is_root (u, "blank"); }
-bool is_root_tmfs (url u) { return is_root (u, "tmfs"); }
-bool is_root_blank (url u) { return is_root (u, "blank"); }
-bool is_wildcard (url u) { return is_tuple (u->t, "wildcard"); }
-bool is_wildcard (url u, int n) {
-  return is_tuple (u->t, "wildcard", n); }
-bool is_pseudo_atomic (url u) {
-  return is_atomic (u->t) || is_tuple (u->t, "wildcard", 1); }
-
+         is_root (u, "blank");
+}
+bool
+is_root_tmfs (url u) {
+  return is_root (u, "tmfs");
+}
+bool
+is_root_blank (url u) {
+  return is_root (u, "blank");
+}
+bool
+is_wildcard (url u) {
+  return is_tuple (u->t, "wildcard");
+}
+bool
+is_wildcard (url u, int n) {
+  return is_tuple (u->t, "wildcard", n);
+}
+bool
+is_pseudo_atomic (url u) {
+  return is_atomic (u->t) || is_tuple (u->t, "wildcard", 1);
+}
 
 /******************************************************************************
-* Unrooted url constructors
-******************************************************************************/
+ * Unrooted url constructors
+ ******************************************************************************/
 
 static url
 url_get_atom (string s, int type) {
   if (type < URL_STANDARD) {
     if (s == "~") return url_system (get_env ("HOME"));
     if (starts (s, "$")) {
-      string val= get_env (s (1, N(s)));
+      string val= get_env (s (1, N (s)));
       if (val == "") return url_none ();
       return unblank (url_system (val));
     }
   }
   if (occurs ("*", s)) return url_wildcard (s);
 #ifdef WINPATHS
-  if (N(s)==2 && ends (s, ":"))
-    s->resize(1); // remove the ':' after unit letter
+  if (N (s) == 2 && ends (s, ":"))
+    s->resize (1); // remove the ':' after unit letter
 #endif
   return as_url (tree (s));
 }
@@ -158,42 +221,46 @@ url_get_atom (string s, int type) {
 static void
 skip_ipv6 (string s, int& i) {
   i++;
-  while (i<N(s) && (s[i] == ':' ||
-                    (s[i] >= '0' && s[i] <= '9') ||
-                    (s[i] >= 'a' && s[i] <= 'f') ||
-                    (s[i] >= 'A' && s[i] <= 'F'))) i++;
-  if (i<N(s) && s[i] == ']') i++;
+  while (i < N (s) &&
+         (s[i] == ':' || (s[i] >= '0' && s[i] <= '9') ||
+          (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F')))
+    i++;
+  if (i < N (s) && s[i] == ']') i++;
 }
 
 static url
-url_get_name (string s, int type= URL_STANDARD, int i=0) {
-  char sep= (type == URL_SYSTEM)? URL_CONCATER: '/';
-  int start= i, n= N(s);
-  while ((i<n) && (s[i] != sep) && (s[i] != '/')) {
-    if (s[i] == '[') skip_ipv6 (s, i); else i++; }
+url_get_name (string s, int type= URL_STANDARD, int i= 0) {
+  char sep  = (type == URL_SYSTEM) ? URL_CONCATER : '/';
+  int  start= i, n= N (s);
+  while ((i < n) && (s[i] != sep) && (s[i] != '/')) {
+    if (s[i] == '[') skip_ipv6 (s, i);
+    else i++;
+  }
   url u= url_get_atom (s (start, i), type);
   // url u= tree (s (start, i));
   if (i == n) return u;
-  if (start == i) return url_get_name (s, type, i+1);
-  return u * url_get_name (s, type, i+1);
+  if (start == i) return url_get_name (s, type, i + 1);
+  return u * url_get_name (s, type, i + 1);
 }
 
 static url
-url_get_path (string s, int type= URL_STANDARD, int i=0) {
-  char sep= (type == URL_SYSTEM)? URL_SEPARATOR: ':';
-  int start= i, n= N(s);
+url_get_path (string s, int type= URL_STANDARD, int i= 0) {
+  char sep  = (type == URL_SYSTEM) ? URL_SEPARATOR : ':';
+  int  start= i, n= N (s);
   if (i == n) return url_none ();
-  while ((i<n) && (s[i] != sep)) {
-    if (s[i] == '[') skip_ipv6 (s, i); else i++; }
+  while ((i < n) && (s[i] != sep)) {
+    if (s[i] == '[') skip_ipv6 (s, i);
+    else i++;
+  }
   url u= url_general (s (start, i), type);
   if (i == n) return u;
-  if (start == i) return url_get_path (s, type, i+1);
-  return u | url_get_path (s, type, i+1);
+  if (start == i) return url_get_path (s, type, i + 1);
+  return u | url_get_path (s, type, i + 1);
 }
 
 /******************************************************************************
-* Rooted url constructors
-******************************************************************************/
+ * Rooted url constructors
+ ******************************************************************************/
 
 url
 url_root (string protocol) {
@@ -221,8 +288,8 @@ url_default (string name, int type= URL_SYSTEM) {
 
 static url
 url_mingw_default (string name, int type) {
-  string s= name (0, 2) * ":" * name (2, N(name));
-  return url_root ("default") * url_get_name (s, type);  
+  string s= name (0, 2) * ":" * name (2, N (name));
+  return url_root ("default") * url_get_name (s, type);
 }
 
 static url
@@ -274,14 +341,14 @@ url_blank (string name) {
 }
 
 /******************************************************************************
-* Generic url constructor
-******************************************************************************/
+ * Generic url constructor
+ ******************************************************************************/
 
 static bool
 heuristic_is_path (string name, int type) {
-  char sep= (type==0)? URL_SEPARATOR: ':';
-  int i= 0, n= N(name);
-  while (i<n)
+  char sep= (type == 0) ? URL_SEPARATOR : ':';
+  int  i= 0, n= N (name);
+  while (i < n)
     if (name[i] == '[') skip_ipv6 (name, i);
     else if (name[i] == sep) return true;
     else i++;
@@ -292,13 +359,12 @@ static bool
 heuristic_is_default (string name, int type) {
 #ifdef WINPATHS
   // FIXME: we probably should take into account 'type' too
-  if (N(name) < 2) return false;
+  if (N (name) < 2) return false;
   if ((name[0] == '\\') && (name[1] == '\\')) return true;
-  return
-    isalpha (name[0]) && (name[1] == ':') &&
-    ((N(name)==2) || (name[2] == '\\') || (name[2] == '/'));
+  return isalpha (name[0]) && (name[1] == ':') &&
+         ((N (name) == 2) || (name[2] == '\\') || (name[2] == '/'));
 #else
-  char sep= (type==0)? URL_CONCATER: '/';
+  char sep= (type == 0) ? URL_CONCATER : '/';
   return (name != "") && (name[0] == sep);
 #endif
 }
@@ -317,12 +383,13 @@ heuristic_is_ftp (string name) {
 static bool
 heuristic_is_mingw_default (string name, int type) {
 #ifdef WINPATHS
-  return type != URL_SYSTEM && N(name) >= 2 &&
-         name[0] == '/' && is_alpha (name[1]) &&
-         (N(name) == 2 || name[2] == '/');
+  return type != URL_SYSTEM && N (name) >= 2 && name[0] == '/' &&
+         is_alpha (name[1]) && (N (name) == 2 || name[2] == '/');
 #else
-  (void) name; (void) type; return false;
-#endif         
+  (void) name;
+  (void) type;
+  return false;
+#endif
 }
 
 url
@@ -336,7 +403,8 @@ url_general (string name, int type= URL_SYSTEM) {
   if (starts (name, "//")) return url_blank (name (2, N (name)));
   if (heuristic_is_path (name, type)) return url_path (name, type);
   if (heuristic_is_default (name, type)) return url_default (name, type);
-  if (heuristic_is_mingw_default (name, type)) return url_mingw_default (name, type);
+  if (heuristic_is_mingw_default (name, type))
+    return url_mingw_default (name, type);
   if (type != URL_CLEAN_UNIX) {
     if (heuristic_is_http (name)) return url_http (name);
     if (heuristic_is_ftp (name)) return url_ftp (name);
@@ -375,8 +443,8 @@ url_standard (string dir, string name) {
 }
 
 /******************************************************************************
-* Computational url constructors
-******************************************************************************/
+ * Computational url constructors
+ ******************************************************************************/
 
 static bool
 is_special_root (url u) {
@@ -394,20 +462,19 @@ is_semi_root (url u) {
 }
 
 url
-operator * (url u1, url u2) {
-  //cout << "concat " << u1->t << " * " << u2->t << "\n";
+operator* (url u1, url u2) {
+  // cout << "concat " << u1->t << " * " << u2->t << "\n";
   if (is_root (u2) || (is_concat (u2) && is_root (u2[1]))) {
     if (is_concat (u1) && is_root_web (u1[1])) {
       if (is_root (u2, "default") ||
-          (is_concat (u2) && is_root (u2[1], "default")))
-        {
-          url v= u1[2];
-          while (is_concat (v)) v= v[1];
-          if (is_root (u2)) return u1[1] * v;
-          return u1[1] * v * u2[2];
-        }
-      if (is_root (u2, "blank") ||
-          (is_concat (u2) && is_root (u2[1], "blank")))
+          (is_concat (u2) && is_root (u2[1], "default"))) {
+        url v= u1[2];
+        while (is_concat (v))
+          v= v[1];
+        if (is_root (u2)) return u1[1] * v;
+        return u1[1] * v * u2[2];
+      }
+      if (is_root (u2, "blank") || (is_concat (u2) && is_root (u2[1], "blank")))
         return reroot (u2, u1[1][1]->t->label);
     }
     return u2;
@@ -431,12 +498,12 @@ operator * (url u1, url u2) {
 }
 
 url
-operator * (url u1, const char* name) {
+operator* (url u1, const char* name) {
   return u1 * url (name);
 }
 
 url
-operator * (url u1, string name) {
+operator* (url u1, string name) {
   return u1 * url (name);
 }
 
@@ -446,7 +513,7 @@ url_concat (url u1, url u2) {
 }
 
 url
-operator | (url u1, url u2) {
+operator| (url u1, url u2) {
   if (is_none (u1)) return u2;
   if (is_none (u2)) return u1;
   if (is_or (u1)) return u1[1] | (u1[2] | u2);
@@ -471,63 +538,53 @@ url_wildcard (string name) {
 }
 
 /******************************************************************************
-* url predicates
-******************************************************************************/
+ * url predicates
+ ******************************************************************************/
 
 bool
 is_rooted (url u) {
-  return
-    is_root (u) ||
-    (is_concat (u) && is_rooted (u[1])) ||
-    (is_or (u) && is_rooted (u[1]) && is_rooted (u[2]));
+  return is_root (u) || (is_concat (u) && is_rooted (u[1])) ||
+         (is_or (u) && is_rooted (u[1]) && is_rooted (u[2]));
 }
 
 bool
 is_rooted (url u, string protocol) {
-  return
-    is_root (u, protocol) ||
-    (is_concat (u) && is_rooted (u[1], protocol)) ||
-    (is_or (u) && is_rooted (u[1], protocol) && is_rooted (u[2], protocol));
+  return is_root (u, protocol) ||
+         (is_concat (u) && is_rooted (u[1], protocol)) ||
+         (is_or (u) && is_rooted (u[1], protocol) &&
+          is_rooted (u[2], protocol));
 }
 
 bool
 is_rooted_web (url u) {
-  return
-    is_root_web (u) ||
-    (is_concat (u) && is_rooted_web (u[1])) ||
-    (is_or (u) && is_rooted_web (u[1]) && is_rooted_web (u[2]));
+  return is_root_web (u) || (is_concat (u) && is_rooted_web (u[1])) ||
+         (is_or (u) && is_rooted_web (u[1]) && is_rooted_web (u[2]));
 }
 
 bool
 is_rooted_tmfs (url u) {
-  return
-    is_root_tmfs (u) ||
-    (is_concat (u) && is_rooted_tmfs (u[1])) ||
-    (is_or (u) && is_rooted_tmfs (u[1]) && is_rooted_tmfs (u[2]));
+  return is_root_tmfs (u) || (is_concat (u) && is_rooted_tmfs (u[1])) ||
+         (is_or (u) && is_rooted_tmfs (u[1]) && is_rooted_tmfs (u[2]));
 }
 
 bool
 is_tmfs_protocol (url u, string protocol) {
-  return
-    u->t == protocol ||
-    (is_concat (u) && is_tmfs_protocol (u[1], protocol));
+  return u->t == protocol ||
+         (is_concat (u) && is_tmfs_protocol (u[1], protocol));
 }
 
 bool
 is_rooted_tmfs (url u, string protocol) {
-  return
-    (is_concat (u) && is_root_tmfs (u[1]) &&
-                      is_tmfs_protocol (u[2], protocol)) ||
-    (is_or (u) && is_rooted_tmfs (u[1], protocol) &&
-                  is_rooted_tmfs (u[2], protocol));
+  return (is_concat (u) && is_root_tmfs (u[1]) &&
+          is_tmfs_protocol (u[2], protocol)) ||
+         (is_or (u) && is_rooted_tmfs (u[1], protocol) &&
+          is_rooted_tmfs (u[2], protocol));
 }
 
 bool
 is_rooted_blank (url u) {
-  return
-    is_root_blank (u) ||
-    (is_concat (u) && is_rooted_blank (u[1])) ||
-    (is_or (u) && is_rooted_blank (u[1]) && is_rooted_blank (u[2]));
+  return is_root_blank (u) || (is_concat (u) && is_rooted_blank (u[1])) ||
+         (is_or (u) && is_rooted_blank (u[1]) && is_rooted_blank (u[2]));
 }
 
 bool
@@ -554,8 +611,8 @@ is_ramdisc (url u) {
 }
 
 /******************************************************************************
-* Url resolution and wildcard expansion
-******************************************************************************/
+ * Url resolution and wildcard expansion
+ ******************************************************************************/
 
 string
 get_root (url u) {
@@ -563,7 +620,8 @@ get_root (url u) {
   if (is_or (u)) {
     string s1= get_root (u[1]);
     string s2= get_root (u[2]);
-    if (s1 == s2) return s1; else return "";
+    if (s1 == s2) return s1;
+    else return "";
   }
   if (is_root (u)) return u[1]->t->label;
   return "";
@@ -591,4 +649,195 @@ unblank (url u) {
   if (is_concat (u)) return u[1] * unblank (u[2]);
   if (is_or (u)) return unblank (u[1]) | unblank (u[2]);
   return u;
+}
+
+url
+head (url u) {
+  return u * url_parent ();
+}
+
+url
+tail (url u) {
+  if (is_concat (u)) {
+    if (is_root_web (u[1]) && is_atomic (u[2])) return url_here ();
+    return tail (u[2]);
+  }
+  if (is_or (u)) return tail (u[1]) | tail (u[2]);
+  if (is_root (u)) return url_here ();
+  return u;
+}
+
+string
+suffix (url u) {
+  u= tail (u);
+  if (!is_atomic (u)) return "";
+  string s= as_string (u);
+  int    i, n= N (s);
+  for (i= n - 1; i >= 0; i--)
+    if (s[i] == '.') break;
+  if ((i > 0) && (i < n - 1)) {
+    string r= s (i + 1, n);
+    while ((N (r) > 0) && (r[N (r) - 1] == '~' || r[N (r) - 1] == '#'))
+      r= r (0, N (r) - 1);
+    return locase_all (r);
+  }
+  return "";
+}
+
+string
+basename (url u, string suf) {
+  string s= as_string (tail (u));
+  if (suf != "" && N (s) > N (suf) && suf == s (N (s) - N (suf), N (s)))
+    return s (0, N (s) - N (suf));
+  return s;
+}
+
+string
+basename (url u) {
+  string s= suffix (u);
+  if (N (s) != 0) s= "." * s;
+  return basename (u, s);
+}
+
+url
+glue (url u, string s) {
+  if (is_atomic (u)) return as_url (tree (u->t->label * s));
+  if (is_concat (u)) return u[1] * glue (u[2], s);
+  if (is_or (u)) return glue (u[1], s) | glue (u[2], s);
+  if (is_none (u)) return u;
+  TM_FAILED ("can't glue string to url");
+  return u;
+}
+
+url
+unglue (url u, int nr) {
+  if (is_atomic (u))
+    return as_url (tree (u->t->label (0, max (N (u->t->label) - nr, 0))));
+  if (is_concat (u)) return u[1] * unglue (u[2], nr);
+  if (is_or (u)) return unglue (u[1], nr) | unglue (u[2], nr);
+  if (is_none (u)) return u;
+  TM_FAILED ("can't unglue from url");
+  return u;
+}
+
+url
+relative (url base, url u) {
+  return head (base) * u;
+}
+
+url
+delta_sub (url base, url u) {
+  if (is_atomic (base)) return u;
+  if (is_concat (base) && is_concat (u) && (base[1] == u[1])) {
+    if (is_special_root (base[1]) && is_concat (base[2]) && is_concat (u[2]) &&
+        base[2][1] != u[2][1])
+      return url_none ();
+    return delta_sub (base[2], u[2]);
+  }
+  if (is_concat (base) && !is_semi_root (base))
+    return url_parent () * delta_sub (head (base), u);
+  return url_none ();
+}
+
+url
+delta (url base, url u) {
+  if (is_or (u)) return delta (base, u[1]) | delta (base, u[2]);
+  url res= delta_sub (base, u);
+  if (is_none (res)) return u;
+  return res;
+}
+
+static url
+expand (url u1, url u2) {
+  if (is_or (u1)) return expand (u1[1], u2) | expand (u1[2], u2);
+  if (is_or (u2)) return expand (u1, u2[1]) | expand (u1, u2[2]);
+  if (is_ancestor (u2)) {
+    if (is_concat (u1)) return u1 | expand (u1[1], u2);
+    if (is_special_root (u1)) return u2;
+    return u1 | u2;
+  }
+  if (is_concat (u2) && is_ancestor (u2[1]))
+    return expand (expand (u1, u2[1]), u2[2]);
+  return u1 * u2;
+}
+
+url
+expand (url u) {
+  if (is_or (u)) return expand (u[1]) | expand (u[2]);
+  if (is_concat (u)) return expand (expand (u[1]), expand (u[2]));
+  return u;
+}
+
+bool
+descends (url u, url base) {
+  if (is_or (base)) return descends (u, base[1]) || descends (u, base[2]);
+  if (is_or (u)) return descends (u[1], base) && descends (u[2], base);
+  if (u == base) return true;
+  if (is_concat (u) && is_atomic (base)) return u[1] == base;
+  if (is_concat (u) && is_concat (base))
+    return u[1] == base[1] && descends (u[2], base[2]);
+  return false;
+}
+
+bool
+is_secure (url u) {
+  return descends (u, expand (url_path ("$TEXMACS_SECURE_PATH")));
+}
+
+/******************************************************************************
+ * Url sorting and factorization
+ ******************************************************************************/
+
+static bool
+operator<= (url u1, url u2) {
+  if (is_atomic (u1) && is_atomic (u2)) return u1->t->label <= u2->t->label;
+  if (is_atomic (u1)) return true;
+  if (is_atomic (u2)) return false;
+  if (is_concat (u1) && is_concat (u2)) {
+    if (u1[1] == u2[1]) return u1[2] <= u2[2];
+    else return u1[1] <= u2[1];
+  }
+  if (is_concat (u1)) return true;
+  if (is_concat (u2)) return false;
+  return true; // does not matter for sorting
+}
+
+static url
+sort_sub (url add, url to) {
+  if (is_or (to)) {
+    if (add <= to[1]) return add | to;
+    return to[1] | sort_sub (add, to[2]);
+  }
+  if (add <= to) return add | to;
+  else return to | add;
+}
+
+url
+sort (url u) {
+  if (is_or (u)) return sort_sub (u[1], sort (u[2]));
+  else return u;
+}
+
+static url
+factor_sorted (url u) {
+  if (!is_or (u)) return u;
+  url v= factor_sorted (u[2]);
+  if (is_concat (u[1])) {
+    if (is_concat (v) && (u[1][1] == v[1])) return u[1][1] * (u[1][2] | v[2]);
+    if (is_or (v) && is_concat (v[1]) && (u[1][1] == v[1][1]))
+      return (u[1][1] * (u[1][2] | v[1][2])) | v[2];
+  }
+  return u[1] | v;
+}
+
+static url
+factor_sub (url u) {
+  if (is_concat (u)) return u[1] * factor (u[2]);
+  if (is_or (u)) return factor_sub (u[1]) | factor_sub (u[2]);
+  return u;
+}
+
+url
+factor (url u) {
+  return factor_sub (factor_sorted (sort (u)));
 }

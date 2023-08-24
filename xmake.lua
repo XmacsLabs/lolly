@@ -110,7 +110,7 @@ target("liblolly") do
         add_files("Plugins/Windows/**.cpp")
     end 
 
-    if is_plat("linux") or is_plat("macosx") then
+    if is_plat("linux", "macosx") then
         add_includedirs("Plugins/Unix")
         add_files("Plugins/Unix/**.cpp")
     end
