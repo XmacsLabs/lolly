@@ -28,12 +28,19 @@ TEST_CASE ("test for memory leaks") {
 }
 
 TEST_CASE ("test basic data types") {
-  char*   ch[10000];
-  int*    in[10000];
-  long*   lo[10000];
-  double* dou[10000];
 
-  for (int i= 0; i < 10000; i++) { // for gprof
+#ifdef OS_WASM
+#define NUM 100
+#else
+#define NUM 10000
+#endif
+
+  char*   ch[NUM];
+  int*    in[NUM];
+  long*   lo[NUM];
+  double* dou[NUM];
+
+  for (int i= 0; i < NUM; i++) { // for gprof
     ch[i]= tm_new<char> ();
     tm_delete (ch[i]);
 
@@ -47,14 +54,14 @@ TEST_CASE ("test basic data types") {
     tm_delete (dou[i]);
   }
 
-  for (int i= 0; i < 10000; i++) {
+  for (int i= 0; i < NUM; i++) {
     ch[i] = tm_new<char> ();
     in[i] = tm_new<int> ();
     lo[i] = tm_new<long> ();
     dou[i]= tm_new<double> ();
   }
 
-  for (int i= 0; i < 10000; i++) {
+  for (int i= 0; i < NUM; i++) {
     tm_delete (ch[i]);
     tm_delete (in[i]);
     tm_delete (lo[i]);

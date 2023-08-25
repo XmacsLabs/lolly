@@ -154,15 +154,9 @@ end
 
 local mingw_copied = false 
 
-for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
+function add_test_target(filepath)
     local testname = path.basename(filepath)
-    if is_plat("wasm") and testname == "curl_test" then
-        break
-    end
     target(testname) do 
-        if testname == "curl_test" then
-            set_default(is_plat("wasm"))
-        end
         set_group("tests")
         add_deps("liblolly")
         set_languages("c++17")
@@ -180,6 +174,12 @@ for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
         add_includedirs("$(buildir)/L1")
         add_includedirs(lolly_includedirs)
         add_files(filepath) 
+
+        if is_plat("windows") then
+            add_cxxflags("-FI " .. path.absolute("$(buildir)\\L1\\config.h"))
+        else
+            add_cxxflags("-include $(buildir)/L1/config.h")
+        end
 
         if is_plat("wasm") then
             add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
@@ -204,6 +204,24 @@ for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
                 os.exec(cmd)
             end)
         end
+    end
+end
+
+for _, filepath in ipairs(os.files("tests/Data/**_test.cpp")) do
+    add_test_target(filepath)
+end
+
+for _, filepath in ipairs(os.files("tests/Kernel/**_test.cpp")) do
+    add_test_target(filepath)
+end
+
+for _, filepath in ipairs(os.files("tests/System/**_test.cpp")) do
+    add_test_target(filepath)
+end
+
+for _, filepath in ipairs(os.files("tests/Plugins/Curl/**_test.cpp")) do
+    if not is_plat("wasm") then
+        add_test_target(filepath)
     end
 end
 

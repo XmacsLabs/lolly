@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: | 
           sudo apt-get update
-          sudo apt-get install -y emscripten
+          sudo apt-get install -y elvish
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -52,8 +52,8 @@ jobs:
           key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
       # Force xmake to a specific folder (for cache)
       - name: config
-        run: xmake config --yes --verbose --plat=wasm
+        run: elvish bin/config_wasm
       - name: build
-        run: xmake build --yes --verbose
+        run: xmake build --yes -vD
       - name: test
-        run: xmake run --yes --verbose --diagnosis --group=tests
+        run: xmake run --yes -vD --group=tests
