@@ -71,7 +71,7 @@ jobs:
         run: |
           scoop install main/make
           scoop install main/uutils-coreutils
-          scoop install main/elvish
+          scoop install main/elvish@0.19.1
       - uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: v2.8.2
