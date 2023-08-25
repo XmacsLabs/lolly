@@ -175,6 +175,12 @@ function add_test_target(filepath)
         add_includedirs(lolly_includedirs)
         add_files(filepath) 
 
+        if is_plat("windows") then
+            add_cxxflags("-FI " .. path.absolute("$(buildir)\\L1\\config.h"))
+        else
+            add_cxxflags("-include $(buildir)/L1/config.h")
+        end
+
         if is_plat("wasm") then
             add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
             add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
