@@ -88,8 +88,8 @@ jobs:
             ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
           key: ${{ runner.os }}-xrepo-${{ hashFiles('**/xmake.lua') }}
       - name: config
-        run: elvish bin/config
+        run: elvish bin/config_mingw
       - name: build
-        run: elvish bin/build
+        run: xmake build --yes -vD --all
       - name: test
-        run: elvish bin/test
+        run: elvish bin/test_mingw
