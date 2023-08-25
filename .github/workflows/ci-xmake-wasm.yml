@@ -49,7 +49,7 @@ jobs:
           key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
       # Force xmake to a specific folder (for cache)
       - name: emscripten
-        run: xrepo install emscripten
+        run: xrepo install -y emscripten
       - name: config
         run: xmake config --yes -p wasm -vD
       - name: build
