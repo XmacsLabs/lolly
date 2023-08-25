@@ -6,4 +6,4 @@ var pkg_info = (xrepo fetch --json emscripten | from-json)
 var emsdk_path = $pkg_info[0][artifacts][installdir]
 set-env EMSDK $emsdk_path
 
-xmake config -p wasm -vD
+xmake config --yes -p wasm -vD
