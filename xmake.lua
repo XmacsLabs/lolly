@@ -185,7 +185,8 @@ function add_test_target(filepath)
             add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
             add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
             on_run(function (target)
-                cmd = "node $(buildir)/wasm/wasm32/$(mode)/" .. testname .. ".js"
+                node = os.getenv("EMSDK_NODE")
+                cmd = node .. " $(buildir)/wasm/wasm32/$(mode)/" .. testname .. ".js"
                 print("> " .. cmd)
                 os.exec(cmd)
             end)
