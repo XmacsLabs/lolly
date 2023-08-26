@@ -56,4 +56,5 @@ jobs:
       - name: build
         run: xmake build --yes -vD
       - name: test
-        run: xmake run --yes -vD --group=tests
+        run: elvish bin/test_wasm
+
