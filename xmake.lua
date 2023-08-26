@@ -8,6 +8,11 @@ if is_plat("mingw") and is_host("windows") then
     set_toolchains("mingw@mingw-w64")
 end
 
+if is_plat("wasm") then
+    add_requires("emscripten")
+    set_toolchains("emcc@emscripten")
+end
+
 includes("check_cxxtypes.lua")
 configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
 configvar_check_cxxtypes("HAVE_TIME_T", "time_t", {includes = {"memory"}})

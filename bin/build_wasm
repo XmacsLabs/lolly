@@ -1,8 +1,4 @@
-#!/usr/bin/env elvish
-
 use platform
-
-xrepo install -y "emscripten 3.1.42"
 
 var pkg_info = (xrepo fetch --json emscripten | from-json)
 var emsdk_path = $pkg_info[0][artifacts][installdir]
@@ -10,6 +6,13 @@ set-env EMSDK $emsdk_path
 
 if $platform:is-windows {
     set-env EMSDK_PYTHON $emsdk_path\python\3.9.2-nuget_64bit\python.exe
+    set paths = [
+        ~/scoop/shims/
+        $emsdk_path/upstream/emscripten
+        $emsdk_path\python\3.9.2-nuget_64bit\
+    ]
 }
 
-xmake config --yes -p wasm -vD
+emar.bat --version
+
+xmake build -vD
