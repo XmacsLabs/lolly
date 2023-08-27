@@ -20,11 +20,11 @@ namespace lolly {
 #define SECURITY_WIN32
 #endif
 
-#include <windows.h>
-#include <windef.h>
 #include <basetsd.h>
 #include <ntsecapi.h>
 #include <security.h>
+#include <windef.h>
+#include <windows.h>
 #include <wtypesbase.h>
 
 string

@@ -1,13 +1,13 @@
 
 /******************************************************************************
-* MODULE     : sys_utils.cpp
-* DESCRIPTION: file handling
-* COPYRIGHT  : (C) 1999-2016  Joris van der Hoeven, Denis Raux
-*******************************************************************************
-* This software falls under the GNU general public license version 3 or later.
-* It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
-* in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
-******************************************************************************/
+ * MODULE     : sys_utils.cpp
+ * DESCRIPTION: file handling
+ * COPYRIGHT  : (C) 1999-2016  Joris van der Hoeven, Denis Raux
+ *******************************************************************************
+ * This software falls under the GNU general public license version 3 or later.
+ * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
+ * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
+ ******************************************************************************/
 
 #include "sys_utils.hpp"
 
@@ -18,12 +18,11 @@
 #include "Unix/unix_sys_utils.hpp"
 #endif
 
-
 string
 get_env (string var) {
-  c_string _var (var);
+  c_string    _var (var);
   const char* _ret= getenv (_var);
-  if (_ret==NULL) {
+  if (_ret == NULL) {
     if (var == "PWD") return get_env ("HOME");
     return "";
   }
@@ -35,7 +34,7 @@ get_env (string var) {
 void
 set_env (string var, string with) {
 #if defined(STD_SETENV) && !defined(OS_MINGW)
-  c_string _var  (var);
+  c_string _var (var);
   c_string _with (with);
   setenv (_var, _with, 1);
 #else
@@ -46,7 +45,8 @@ set_env (string var, string with) {
 #endif
 }
 
-string get_user_login () {
+string
+get_user_login () {
 #if defined(OS_MINGW) || defined(OS_WIN)
   return getenv ("USERNAME");
 #else
@@ -54,7 +54,8 @@ string get_user_login () {
 #endif
 }
 
-string get_user_name () {
+string
+get_user_name () {
 #if OS_MINGW || defined(OS_WIN)
   return lolly::win_get_username ();
 #else // Linux and macOS
@@ -64,7 +65,7 @@ string get_user_name () {
 
 bool
 os_win () {
-#if defined (OS_WIN)
+#if defined(OS_WIN)
   return true;
 #else
   return false;
@@ -82,7 +83,7 @@ os_mingw () {
 
 bool
 os_macos () {
-#if defined (OS_MACOS)
+#if defined(OS_MACOS)
   return true;
 #else
   return false;

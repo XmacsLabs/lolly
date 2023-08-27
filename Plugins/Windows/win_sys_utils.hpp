@@ -16,7 +16,7 @@
 #include "string.hpp"
 
 namespace lolly {
-  string win_get_username ();
+string win_get_username ();
 }
 
 #endif // defined MINGW_SYS_UTILS_H
