@@ -71,8 +71,10 @@ local lolly_includedirs = {
     "System/Classes",
     "System/IO",
     "System/Memory",
+    "System/Misc",
     "Plugins/Curl",
     "Plugins/Unix",
+    "Plugins",
 }
 
 target("liblolly") do
@@ -104,7 +106,7 @@ target("liblolly") do
         add_packages("nowide_standalone")
     end
 
-    if is_plat("mingw") then 
+    if is_plat("mingw", "windows") then 
         add_includedirs("Plugins/Windows")
         add_files("Plugins/Windows/**.cpp")
     end 
@@ -135,14 +137,15 @@ target("liblolly") do
     else
         add_cxxflags("-include $(buildir)/L1/config.h")
     end
-    add_headerfiles("Kernel/Abstractions/(*hpp)")
-    add_headerfiles("Kernel/Algorithms/(*hpp)")
-    add_headerfiles("Kernel/Containers/(*hpp)")
+    add_headerfiles("Kernel/Abstractions/(*.hpp)")
+    add_headerfiles("Kernel/Algorithms/(*.hpp)")
+    add_headerfiles("Kernel/Containers/(*.hpp)")
     add_headerfiles("Kernel/Containers/(*.ipp)")
-    add_headerfiles("Kernel/Types/(*hpp)")
-    add_headerfiles("System/Classes/(*hpp)")
-    add_headerfiles("System/IO/(*hpp)")
-    add_headerfiles("System/Memory/(*hpp)")
+    add_headerfiles("Kernel/Types/(*.hpp)")
+    add_headerfiles("System/Classes/(*.hpp)")
+    add_headerfiles("System/IO/(*.hpp)")
+    add_headerfiles("System/Memory/(*.hpp)")
+    add_headerfiles("System/Misc/(*.hpp)")
     add_headerfiles("Data/String/(*.hpp)")
     add_headerfiles("Data/Scheme/(*.hpp)")
     add_headerfiles("Plugins/Curl/(*.hpp)", {prefixdir = "Curl"})
