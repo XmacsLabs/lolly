@@ -22,7 +22,7 @@ _unix_system_warn (pid_t pid, ::string which, ::string msg) {}
 
 int
 win_system (array< ::string> arg, array<int> fd_in, array< ::string> str_in,
-              array<int> fd_out, array< ::string*> str_out) {
+            array<int> fd_out, array< ::string*> str_out) {
   // Run command arg[0] with arguments arg[i], i >= 1.
   // str_in[i] is sent to the file descriptor fd_in[i].
   // str_out[i] is filled from the file descriptor fd_out[i].
