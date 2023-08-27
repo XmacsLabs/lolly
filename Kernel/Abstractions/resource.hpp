@@ -31,7 +31,7 @@ public:
   inline R*                       operator->() { return rep; }
 };
 
-#ifdef OS_WIN32
+#ifdef OS_WIN
 #define RESOURCE(PTR)                                                          \
   struct PTR##_rep;                                                            \
   struct PTR : public resource_ptr<PTR##_rep> {                                \
@@ -50,7 +50,7 @@ public:
   }
 #endif
 
-#ifdef OS_WIN32
+#ifdef OS_WIN
 #define RESOURCE_CODE(PTR)                                                     \
   hashmap<string, pointer> resource_ptr<PTR##_rep>::instances (NULL);
 #else
