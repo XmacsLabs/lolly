@@ -26,4 +26,8 @@ bool os_win ();
 bool os_mingw ();
 bool os_macos ();
 
+array<string> evaluate_system (array<string> arg,
+			       array<int> fd_in, array<string> in,
+			       array<int> fd_out);
+
 #endif // defined SYS_UTILS_H
