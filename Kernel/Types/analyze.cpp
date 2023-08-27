@@ -913,7 +913,7 @@ raw_unquote (string s) {
 
 string
 escape_sh (string s) {
-#if (defined OS_MINGW || defined OS_WIN32)
+#if (defined OS_MINGW || defined OS_WIN)
   return raw_quote (s);
 #else
   int    i, n= N (s);

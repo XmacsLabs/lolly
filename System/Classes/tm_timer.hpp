@@ -12,7 +12,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#ifndef OS_WIN32
+#ifndef OS_WIN
 
 #ifndef __FreeBSD__
 #ifndef HAVE_TIME_T

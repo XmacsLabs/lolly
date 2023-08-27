@@ -320,7 +320,7 @@ as_string (long int i) {
 string
 as_string (long long int i) {
   char buf[64];
-#if (defined OS_MINGW || defined OS_WIN32)
+#if (defined OS_MINGW || defined OS_WIN)
   sprintf (buf, "%I64d", i);
 #else
   sprintf (buf, "%lli", i);
