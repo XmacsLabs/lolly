@@ -20,16 +20,17 @@ namespace lolly {
 #define SECURITY_WIN32
 #endif
 
+#ifdef OS_WIN
+#include <windows.h>
+#endif
+#include <windef.h>
+
 #include <basetsd.h>
 #include <ntsecapi.h>
 #ifdef OS_WIN
 #include <security.h>
 #else
 #include <secext.h>
-#endif
-#include <windef.h>
-#ifdef OS_WIN
-#include <windows.h>
 #endif
 #include <wtypesbase.h>
 
