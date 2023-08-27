@@ -89,3 +89,22 @@ os_macos () {
   return false;
 #endif
 }
+
+array<string>
+evaluate_system (array<string> arg, array<int> fd_in, array<string> in,
+                 array<int> fd_out) {
+  array<string>  out (N (fd_out));
+  array<string*> ptr (N (fd_out));
+  for (int i= 0; i < N (fd_out); i++)
+    ptr[i]= &(out[i]);
+
+#if defined(OS_MINGW)
+  int ret= win_system (arg, fd_in, in, fd_out, ptr);
+#elif defined(OS_WIN)
+  int ret= -1;
+#else
+  int ret= unix_system (arg, fd_in, in, fd_out, ptr);
+#endif
+
+  return append (as_string (ret), out);
+}

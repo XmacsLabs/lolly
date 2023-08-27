@@ -108,8 +108,12 @@ target("liblolly") do
 
     if is_plat("mingw", "windows") then 
         add_includedirs("Plugins/Windows")
-        add_files("Plugins/Windows/**.cpp")
+        add_files("Plugins/Windows/win_*.cpp")
     end 
+
+    if is_plat("mingw") then
+        add_files("Plugins/Windows/spawn.cpp")
+    end
 
     if is_plat("linux") or is_plat("macosx") then
         add_includedirs("Plugins/Unix")
