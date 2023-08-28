@@ -72,7 +72,7 @@ jobs:
           scoop install main/elvish@0.19.1
       - uses: xmake-io/github-action-setup-xmake@v1
         with:
-          xmake-version: dev
+          xmake-version: branch@dev
       - name: update repo
         run: |
           xrepo update-repo
