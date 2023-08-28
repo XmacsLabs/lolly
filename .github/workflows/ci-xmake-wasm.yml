@@ -33,7 +33,7 @@ jobs:
           echo "XMAKE_GLOBALDIR=${{ runner.workspace }}/.xmake-global" >> "${{ github.env }}"
       - uses: xmake-io/github-action-setup-xmake@v1
         with:
-          xmake-version: v2.8.2
+          xmake-version: branch@dev
       - name: update repo
         run: |
           xmake repo -u
@@ -48,8 +48,10 @@ jobs:
             ${{ github.workspace }}/build/.build_cache
           key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
       # Force xmake to a specific folder (for cache)
+      - name: emscripten
+        run: xrepo install -y emscripten
       - name: config
-        run: elvish bin/config_wasm
+        run: xmake config --yes -p wasm -vD
       - name: build
         run: xmake build --yes -vD
       - name: test
