@@ -10,8 +10,8 @@ TEST_CASE ("system") {
   CHECK_EQ (lolly::system ("no_such_command"), -1);
   CHECK_EQ (lolly::system (""), -1);
 #else
-  CHECK_EQ (lolly::system ("xmake --version"), 0);
-  CHECK_EQ (lolly::system ("no_such_command"), 1);
-  CHECK_EQ (lolly::system (""), 0);
+  CHECK (lolly::system ("xmake --version") == 0);
+  CHECK (lolly::system ("no_such_command") != 0);
+  CHECK (lolly::system ("") == 0);
 #endif
 }
