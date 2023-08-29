@@ -176,6 +176,7 @@ function add_test_target(filepath)
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
 
+        add_packages("tbox")
         add_packages("doctest")
         if not is_plat("wasm") then
             add_packages("libcurl")

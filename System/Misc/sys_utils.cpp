@@ -118,8 +118,7 @@ system (string cmd) {
   return -1;
 #else
   tb_process_attr_t attr= {0};
-  tb_long_t         a   = tb_process_run_cmd ("echo hello world", &attr);
-  return (int) a;
+  return (int) tb_process_run_cmd (as_charp (cmd), &attr);
 #endif
 }
 } // namespace lolly

@@ -2,9 +2,10 @@
 
 #include "doctest/doctest.h"
 #include "sys_utils.hpp"
-#include <cstdlib>
+#include "tbox/tbox.h"
 
 TEST_CASE ("system") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
 #ifdef OS_WASM
   CHECK_EQ (lolly::system ("xmake --version"), -1);
   CHECK_EQ (lolly::system ("no_such_command"), -1);
@@ -12,6 +13,6 @@ TEST_CASE ("system") {
 #else
   CHECK (lolly::system ("xmake --version") == 0);
   CHECK (lolly::system ("no_such_command") != 0);
-  CHECK (lolly::system ("") == 0);
+  CHECK (lolly::system ("") != 0);
 #endif
 }
