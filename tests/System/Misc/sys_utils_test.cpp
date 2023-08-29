@@ -11,7 +11,9 @@ TEST_CASE ("system") {
   CHECK_EQ (lolly::system ("no_such_command"), -1);
   CHECK_EQ (lolly::system (""), -1);
 #else
+#ifndef OS_MINGW
   CHECK (lolly::system ("xmake --version") == 0);
+#endif
   CHECK (lolly::system ("no_such_command") != 0);
   CHECK (lolly::system ("") != 0);
 #endif
