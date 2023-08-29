@@ -183,10 +183,6 @@ function add_test_target(filepath)
             add_syslinks("stdc++", "m")
         end
 
-        if is_plat("windows") then
-            add_syslinks("secur32")
-        end
-
         add_includedirs("$(buildir)/L1")
         add_includedirs(lolly_includedirs)
         add_files(filepath) 
