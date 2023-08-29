@@ -108,3 +108,14 @@ evaluate_system (array<string> arg, array<int> fd_in, array<string> in,
 
   return append (as_string (ret), out);
 }
+
+namespace lolly {
+int
+system (string cmd) {
+#ifdef OS_WASM
+  return -1;
+#else
+  return std::system (as_charp (cmd));
+#endif
+}
+} // namespace lolly
