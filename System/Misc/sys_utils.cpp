@@ -18,6 +18,8 @@
 #include "Unix/unix_sys_utils.hpp"
 #endif
 
+#include "tbox/tbox.h"
+
 string
 get_env (string var) {
   c_string    _var (var);
@@ -115,7 +117,9 @@ system (string cmd) {
 #ifdef OS_WASM
   return -1;
 #else
-  return std::system (as_charp (cmd));
+  tb_process_attr_t attr = {0};
+  tb_long_t a = tb_process_run_cmd("echo hello world", &attr);
+  return (int) a;
 #endif
 }
 } // namespace lolly
