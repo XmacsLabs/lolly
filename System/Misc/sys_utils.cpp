@@ -103,7 +103,7 @@ evaluate_system (array<string> arg, array<int> fd_in, array<string> in,
 #if defined(OS_MINGW)
   int ret= win_system (arg, fd_in, in, fd_out, ptr);
 #elif defined(OS_WIN)
-  int ret= -1;
+  int               ret = -1;
 #else
   int ret= unix_system (arg, fd_in, in, fd_out, ptr);
 #endif
@@ -117,8 +117,8 @@ system (string cmd) {
 #ifdef OS_WASM
   return -1;
 #else
-  tb_process_attr_t attr = {0};
-  tb_long_t a = tb_process_run_cmd("echo hello world", &attr);
+  tb_process_attr_t attr= {0};
+  tb_long_t         a   = tb_process_run_cmd ("echo hello world", &attr);
   return (int) a;
 #endif
 }
