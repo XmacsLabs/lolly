@@ -32,6 +32,7 @@ configvar_check_cxxsnippets(
         static_assert(sizeof(void*) == 8, "");]])
 
 --- require packages
+add_requires("tbox dev", {system=false, micro=true})
 add_requires("doctest 2.4.11", {system=false})
 if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
     add_requires("apt::libcurl4-openssl-dev", {alias="libcurl"})
@@ -94,6 +95,7 @@ target("liblolly") do
     set_basename("lolly")
 
     --- dependent packages
+    add_packages("tbox")
     if not is_plat("wasm") then
         add_packages("libcurl")
         add_includedirs("Plugins/Curl")
@@ -174,6 +176,7 @@ function add_test_target(filepath)
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
 
+        add_packages("tbox")
         add_packages("doctest")
         if not is_plat("wasm") then
             add_packages("libcurl")
@@ -181,6 +184,10 @@ function add_test_target(filepath)
 
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
+        end
+
+        if is_plat("windows") or is_plat("mingw") then
+            add_syslinks("secur32")
         end
 
         add_includedirs("$(buildir)/L1")
