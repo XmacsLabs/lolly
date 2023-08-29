@@ -32,7 +32,7 @@ configvar_check_cxxsnippets(
         static_assert(sizeof(void*) == 8, "");]])
 
 --- require packages
-add_requires("tbox v1.7.4")
+add_requires("tbox v1.7.4", {system=false, micro=true})
 add_requires("doctest 2.4.11", {system=false})
 if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
     add_requires("apt::libcurl4-openssl-dev", {alias="libcurl"})
