@@ -185,6 +185,10 @@ function add_test_target(filepath)
             add_syslinks("stdc++", "m")
         end
 
+        if is_plat("windows") then
+            add_ldflags("/LTCG")
+        end
+
         if is_plat("windows") or is_plat("mingw") then
             add_syslinks("secur32")
         end
