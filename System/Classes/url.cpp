@@ -11,7 +11,7 @@
 #include "sys_utils.hpp"
 #include <ctype.h>
 
-#ifdef OS_MINGW
+#if defined(OS_MINGW)
 #define WINPATHS
 #endif
 
@@ -154,8 +154,8 @@ url_get_atom (string s, int type) {
   return as_url (tree (s));
 }
 
-static url
-url_get_name (string s, int type= URL_STANDARD, int i= 0) {
+url
+url_get_name (string s, int type, int i) {
   char sep  = (type == URL_SYSTEM) ? URL_CONCATER : '/';
   int  start= i, n= N (s);
   while ((i < n) && (s[i] != sep) && (s[i] != '/')) {
@@ -194,12 +194,6 @@ static url
 url_local (string name) {
   url u= url_get_name (name, URL_SYSTEM);
   return reroot (u, "file");
-}
-
-static url
-url_file (string name) {
-  url u= url_get_name (name);
-  return url_root ("file") * u;
 }
 
 static url
@@ -255,7 +249,7 @@ url_default (string name, int type= URL_SYSTEM) {
 url
 url_general (string name, int type= URL_SYSTEM) {
   if (starts (name, "local:")) return url_local (name (6, N (name)));
-  if (starts (name, "file://")) return url_file (name (7, N (name)));
+  if (starts (name, "file://")) return file_url (name (7, N (name)));
   if (starts (name, "http://")) return url_http (name (7, N (name)));
   if (starts (name, "https://")) return url_https (name (8, N (name)));
   if (starts (name, "ftp://")) return url_ftp (name (6, N (name)));

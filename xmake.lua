@@ -75,6 +75,7 @@ local lolly_includedirs = {
     "Data/String",
     "Data/Scheme",
     "System/Classes",
+    "System/Files",
     "System/IO",
     "System/Memory",
     "System/Misc",
