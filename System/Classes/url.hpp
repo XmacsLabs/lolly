@@ -62,6 +62,12 @@ public:
   ftp_url (string name);
 };
 
+class blank_url : public url {
+public:
+  blank_url (const char* name);
+  blank_url (string name);
+};
+
 inline url
 as_url (tree t) {
   return url (t);

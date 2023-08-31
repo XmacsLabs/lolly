@@ -207,12 +207,6 @@ url_https (string name) {
 }
 
 static url
-url_blank (string name) {
-  url u= url_get_name (name);
-  return url_root ("blank") * u;
-}
-
-static url
 url_mingw_default (string name, int type) {
   string s= name (0, 2) * ":" * name (2, N (name));
   return url_root ("default") * url_get_name (s, type);
@@ -240,7 +234,7 @@ url_general (string name, int type= URL_SYSTEM) {
   if (starts (name, "https://")) return url_https (name (8, N (name)));
   if (starts (name, "ftp://")) return ftp_url (name (6, N (name)));
   if (starts (name, "tmfs://")) return tmfs_url (name (7, N (name)));
-  if (starts (name, "//")) return url_blank (name (2, N (name)));
+  if (starts (name, "//")) return blank_url (name (2, N (name)));
   if (heuristic_is_path (name, type)) return url_path (name, type);
   if (heuristic_is_default (name, type)) return url_default (name, type);
   if (heuristic_is_mingw_default (name, type))
