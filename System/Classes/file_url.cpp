@@ -13,4 +13,3 @@ file_url::concretize () {
   if (is_wildcard (*this, 1)) return (*this)->t[1]->label;
   TM_FAILED ("failed to concretize file_url");
 }
-
