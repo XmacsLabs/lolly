@@ -195,18 +195,6 @@ url_path (string s, int type) {
 }
 
 static url
-url_http (string name) {
-  url u= url_get_name (name);
-  return url_root ("http") * u;
-}
-
-static url
-url_https (string name) {
-  url u= url_get_name (name);
-  return url_root ("https") * u;
-}
-
-static url
 url_mingw_default (string name, int type) {
   string s= name (0, 2) * ":" * name (2, N (name));
   return url_root ("default") * url_get_name (s, type);
@@ -230,8 +218,8 @@ url
 url_general (string name, int type= URL_SYSTEM) {
   if (starts (name, "local:")) return file_url (name (6, N (name)));
   if (starts (name, "file://")) return file_url (name (7, N (name)));
-  if (starts (name, "http://")) return url_http (name (7, N (name)));
-  if (starts (name, "https://")) return url_https (name (8, N (name)));
+  if (starts (name, "http://")) return http_url (name (7, N (name)));
+  if (starts (name, "https://")) return https_url (name (8, N (name)));
   if (starts (name, "ftp://")) return ftp_url (name (6, N (name)));
   if (starts (name, "tmfs://")) return tmfs_url (name (7, N (name)));
   if (starts (name, "//")) return blank_url (name (2, N (name)));
@@ -240,7 +228,7 @@ url_general (string name, int type= URL_SYSTEM) {
   if (heuristic_is_mingw_default (name, type))
     return url_mingw_default (name, type);
   if (type != URL_CLEAN_UNIX) {
-    if (heuristic_is_http (name)) return url_http (name);
+    if (heuristic_is_http (name)) return http_url (name);
     if (heuristic_is_ftp (name)) return ftp_url (name);
   }
   return url_get_name (name, type);

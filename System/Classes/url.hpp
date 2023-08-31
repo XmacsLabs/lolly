@@ -68,6 +68,18 @@ public:
   blank_url (string name);
 };
 
+class http_url : public url {
+public:
+  http_url (const char* name);
+  http_url (string name);
+};
+
+class https_url : public url {
+public:
+  https_url (const char* name);
+  https_url (string name);
+};
+
 inline url
 as_url (tree t) {
   return url (t);
