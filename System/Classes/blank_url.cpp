@@ -17,3 +17,8 @@ blank_url::blank_url (string name)
 
 blank_url::blank_url (const char* name)
     : url (url_root ("blank") * url_get_name (string (name))) {}
+
+bool
+is_root_blank (url u) {
+  return is_root (u, "blank");
+}

@@ -43,14 +43,6 @@ static inline tree
 tuple (tree t1, tree t2, tree t3) {
   return tree (URL_TUPLE, t1, t2, t3);
 }
-static inline tree
-tuple (tree t1, tree t2, tree t3, tree t4) {
-  return tree (URL_TUPLE, t1, t2, t3, t4);
-}
-static inline tree
-tuple (tree t1, tree t2, tree t3, tree t4, tree t5) {
-  return tree (URL_TUPLE, t1, t2, t3, t4, t5);
-}
 
 static inline bool
 is_tuple (tree t) {
@@ -636,10 +628,6 @@ bool
 is_root_web (url u) {
   return is_root (u, "http") || is_root (u, "https") || is_root (u, "ftp") ||
          is_root (u, "blank");
-}
-bool
-is_root_blank (url u) {
-  return is_root (u, "blank");
 }
 bool
 is_wildcard (url u) {
