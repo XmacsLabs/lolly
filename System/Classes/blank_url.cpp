@@ -1,7 +1,7 @@
 
 /******************************************************************************
- * MODULE     : file_url.cpp
- * DESCRIPTION: url rooted with file://
+ * MODULE     : blank_url.cpp
+ * DESCRIPTION: url rooted with //
  * COPYRIGHT  : (C) 1999  Joris van der Hoeven
  *                  2023  Darcy Shen
  *******************************************************************************
@@ -12,16 +12,13 @@
 
 #include "url.hpp"
 
-file_url::file_url (string name)
-    : url (url_root ("file") * url_get_name (name)) {}
+blank_url::blank_url (string name)
+    : url (url_root ("blank") * url_get_name (name)) {}
 
-file_url::file_url (const char* name)
-    : url (url_root ("file") * url_get_name (string (name))) {}
+blank_url::blank_url (const char* name)
+    : url (url_root ("blank") * url_get_name (string (name))) {}
 
-string
-file_url::concretize () {
-  url c= reroot (*this, "default");
-  if (!is_none (c)) return as_string (c);
-  if (is_wildcard (*this, 1)) return (*this)->t[1]->label;
-  TM_FAILED ("failed to concretize file_url");
+bool
+is_root_blank (url u) {
+  return is_root (u, "blank");
 }

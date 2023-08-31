@@ -12,6 +12,7 @@
 #include "url.hpp"
 #include "analyze.hpp"
 #include "sys_utils.hpp"
+#include "tmfs_url.hpp"
 #include <ctype.h>
 
 #if defined(OS_MINGW)
@@ -41,14 +42,6 @@ tuple (tree t1, tree t2) {
 static inline tree
 tuple (tree t1, tree t2, tree t3) {
   return tree (URL_TUPLE, t1, t2, t3);
-}
-static inline tree
-tuple (tree t1, tree t2, tree t3, tree t4) {
-  return tree (URL_TUPLE, t1, t2, t3, t4);
-}
-static inline tree
-tuple (tree t1, tree t2, tree t3, tree t4, tree t5) {
-  return tree (URL_TUPLE, t1, t2, t3, t4, t5);
 }
 
 static inline bool
@@ -194,42 +187,6 @@ url_path (string s, int type) {
 }
 
 static url
-url_local (string name) {
-  url u= url_get_name (name, URL_SYSTEM);
-  return reroot (u, "file");
-}
-
-static url
-url_http (string name) {
-  url u= url_get_name (name);
-  return url_root ("http") * u;
-}
-
-static url
-url_https (string name) {
-  url u= url_get_name (name);
-  return url_root ("https") * u;
-}
-
-static url
-url_ftp (string name) {
-  url u= url_get_name (name);
-  return url_root ("ftp") * u;
-}
-
-static url
-url_tmfs (string name) {
-  url u= url_get_name (name);
-  return url_root ("tmfs") * u;
-}
-
-static url
-url_blank (string name) {
-  url u= url_get_name (name);
-  return url_root ("blank") * u;
-}
-
-static url
 url_mingw_default (string name, int type) {
   string s= name (0, 2) * ":" * name (2, N (name));
   return url_root ("default") * url_get_name (s, type);
@@ -251,20 +208,20 @@ url_default (string name, int type= URL_SYSTEM) {
 
 url
 url_general (string name, int type= URL_SYSTEM) {
-  if (starts (name, "local:")) return url_local (name (6, N (name)));
+  if (starts (name, "local:")) return file_url (name (6, N (name)));
   if (starts (name, "file://")) return file_url (name (7, N (name)));
-  if (starts (name, "http://")) return url_http (name (7, N (name)));
-  if (starts (name, "https://")) return url_https (name (8, N (name)));
-  if (starts (name, "ftp://")) return url_ftp (name (6, N (name)));
-  if (starts (name, "tmfs://")) return url_tmfs (name (7, N (name)));
-  if (starts (name, "//")) return url_blank (name (2, N (name)));
+  if (starts (name, "http://")) return http_url (name (7, N (name)));
+  if (starts (name, "https://")) return https_url (name (8, N (name)));
+  if (starts (name, "ftp://")) return ftp_url (name (6, N (name)));
+  if (starts (name, "tmfs://")) return tmfs_url (name (7, N (name)));
+  if (starts (name, "//")) return blank_url (name (2, N (name)));
   if (heuristic_is_path (name, type)) return url_path (name, type);
   if (heuristic_is_default (name, type)) return url_default (name, type);
   if (heuristic_is_mingw_default (name, type))
     return url_mingw_default (name, type);
   if (type != URL_CLEAN_UNIX) {
-    if (heuristic_is_http (name)) return url_http (name);
-    if (heuristic_is_ftp (name)) return url_ftp (name);
+    if (heuristic_is_http (name)) return http_url (name);
+    if (heuristic_is_ftp (name)) return ftp_url (name);
   }
   return url_get_name (name, type);
 }
@@ -673,14 +630,6 @@ is_root_web (url u) {
          is_root (u, "blank");
 }
 bool
-is_root_tmfs (url u) {
-  return is_root (u, "tmfs");
-}
-bool
-is_root_blank (url u) {
-  return is_root (u, "blank");
-}
-bool
 is_wildcard (url u) {
   return is_tuple (u->t, "wildcard");
 }
@@ -711,26 +660,6 @@ bool
 is_rooted_web (url u) {
   return is_root_web (u) || (is_concat (u) && is_rooted_web (u[1])) ||
          (is_or (u) && is_rooted_web (u[1]) && is_rooted_web (u[2]));
-}
-
-bool
-is_rooted_tmfs (url u) {
-  return is_root_tmfs (u) || (is_concat (u) && is_rooted_tmfs (u[1])) ||
-         (is_or (u) && is_rooted_tmfs (u[1]) && is_rooted_tmfs (u[2]));
-}
-
-bool
-is_tmfs_protocol (url u, string protocol) {
-  return u->t == protocol ||
-         (is_concat (u) && is_tmfs_protocol (u[1], protocol));
-}
-
-bool
-is_rooted_tmfs (url u, string protocol) {
-  return (is_concat (u) && is_root_tmfs (u[1]) &&
-          is_tmfs_protocol (u[2], protocol)) ||
-         (is_or (u) && is_rooted_tmfs (u[1], protocol) &&
-          is_rooted_tmfs (u[2], protocol));
 }
 
 bool
