@@ -13,7 +13,7 @@ url ustc_edu   = url_system ("https://ustc.edu.cn");
 url texmacs_org= url_system ("https://texmacs.org");
 url none_url   = url_none ();
 url file_root  = url_root ("file");
-url wsl_ubuntu = url_system ("\\wsl.localhost\Ubuntu");
+url wsl_ubuntu = url_system ("\\\\wsl.localhost\\Ubuntu");
 
 #if defined(OS_MINGW) || defined(OS_WIN)
 TEST_CASE ("as_string on windows") {
