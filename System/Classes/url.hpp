@@ -49,6 +49,13 @@ public:
 };
 CONCRETE_CODE (url);
 
+class file_url : public url {
+public:
+  file_url (const char* name);
+  file_url (string name);
+  string concretize ();
+};
+
 inline url
 as_url (tree t) {
   return url (t);
@@ -172,5 +179,7 @@ inline string
 as_standard_string (url u) {
   return as_string (u, URL_STANDARD);
 }
+
+url url_get_name (string s, int type= URL_STANDARD, int i= 0);
 
 #endif
