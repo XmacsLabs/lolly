@@ -2,7 +2,8 @@
 /******************************************************************************
  * MODULE     : tmfs_url.cpp
  * DESCRIPTION: url rooted with tmfs://
- * COPYRIGHT  : (C) 2023  Darcy Shen
+ * COPYRIGHT  : (C) 1999  Joris van der Hoeven
+ *                  2023  Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
  * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
