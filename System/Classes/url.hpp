@@ -56,6 +56,12 @@ public:
   string concretize ();
 };
 
+class ftp_url : public url {
+public:
+  ftp_url (const char* name);
+  ftp_url (string name);
+};
+
 inline url
 as_url (tree t) {
   return url (t);
@@ -142,7 +148,6 @@ bool is_or (url u);
 bool is_root (url u);
 bool is_root (url u, string s);
 bool is_root_web (url u);
-bool is_root_tmfs (url u);
 bool is_root_blank (url u);
 bool is_wildcard (url u);
 bool is_wildcard (url u, int n);
@@ -151,8 +156,6 @@ bool is_pseudo_atomic (url u);
 bool is_rooted (url u);
 bool is_rooted (url u, string protocol);
 bool is_rooted_web (url u);
-bool is_rooted_tmfs (url u);
-bool is_rooted_tmfs (url u, string sub_protocol);
 bool is_rooted_blank (url u);
 bool is_name (url u);
 bool is_rooted_name (url u);
