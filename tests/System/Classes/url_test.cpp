@@ -21,8 +21,16 @@ TEST_CASE ("as_string on windows") {
   url win_c        = url_system ("C:/");
   url system_root  = url_system ("%SystemRoot%");
   url windir       = url_system ("%windir%");
+#ifdef OS_WIN
   CHECK_EQ (as_string (win_c) == string ("C:{/}"), true);
+#else
+  CHECK_EQ (as_string (win_c) == string ("C:\\"), true);
+#endif
+#ifdef OS_WIN
   CHECK_EQ (as_string (win_c_windows) == string ("C:/Windows"), true);
+#else
+  CHECK_EQ (as_string (win_c_windows) == string ("C:\\Windows"), true);
+#endif
   CHECK_EQ (as_string (system_root) == string ("%SystemRoot%"), true);
   CHECK_EQ (as_string (windir) == string ("%windir%"), true);
 }
