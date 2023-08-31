@@ -10,7 +10,9 @@
 #include "file.hpp"
 #include "tbox/tbox.h"
 
-TEST_CASE ("is_directory") {
+#if defined(OS_WIN) || defined(OS_MINGW)
+TEST_CASE ("is_directory on Windows") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (is_directory (string ("C:/Windows")));
 }
+#endif
