@@ -116,7 +116,10 @@ bool is_rooted_blank (url u);
  *   - to all strings which end with .tm and (wildcard "*.tm" "file")
  *   - to all TeXmacs files (i.e. discarding directories ending with .tm).
  ******************************************************************************/
-url url_none ();
+inline url
+url_none () {
+  return as_url (tuple ("none"));
+}
 
 inline url
 url_here () {
@@ -133,7 +136,10 @@ url_ancestor () {
   return as_url (tree ("..."));
 }
 
-url url_root (string protocol); // root url
+inline url
+url_root (string protocol) {
+  return as_url (tuple ("root", protocol));
+}
 
 url operator* (url u1, url u2); // concatenation of url with rootless url
 url operator* (url u1, const char* name);
@@ -147,13 +153,16 @@ url_parent (url u) {
 url operator| (url u1, url u2); // disjunction of urls like in file paths
 url url_or (url u1, url u2);
 
-url url_wildcard ();            // any url
-url url_wildcard (string name); // string with * wildcards
+inline url
+url_wildcard () { // any url
+  return as_url (tuple ("wildcard"));
+}
 
-inline bool
-is_none (url u) {
-  return u.label () == "none";
-};
+inline url
+url_wildcard (string name) { // string with * wildcards
+  return as_url (tuple ("wildcard", name));
+}
+
 inline bool
 is_here (url u) {
   return u->t == ".";
@@ -165,6 +174,10 @@ is_parent (url u) {
 inline bool
 is_ancestor (url u) {
   return u->t == "...";
+};
+inline bool
+is_none (url u) {
+  return u.label () == "none";
 };
 inline bool
 is_root (url u) {

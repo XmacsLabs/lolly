@@ -246,19 +246,9 @@ url_standard (string dir, string name) {
   return url_standard (dir) * url_standard (name);
 }
 
-url
-url_none () {
-  return as_url (tuple ("none"));
-}
-
 /******************************************************************************
  * Rooted url constructors
  ******************************************************************************/
-url
-url_root (string protocol) {
-  return as_url (tuple ("root", protocol));
-}
-
 url
 url_ramdisc (string contents) {
   return as_url (tuple ("root", "ramdisc", contents));
@@ -566,16 +556,6 @@ operator| (url u1, url u2) {
 url
 url_or (url u1, url u2) {
   return u1 | u2;
-}
-
-url
-url_wildcard () {
-  return as_url (tuple ("wildcard"));
-}
-
-url
-url_wildcard (string name) {
-  return as_url (tuple ("wildcard", name));
 }
 
 bool
