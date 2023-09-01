@@ -22,6 +22,15 @@
 #include "string.hpp"
 #include "tree.hpp"
 
+static inline tree
+tuple (tree t1) {
+  return tree (URL_TUPLE, t1);
+}
+static inline tree
+tuple (tree t1, tree t2) {
+  return tree (URL_TUPLE, t1, t2);
+}
+
 /******************************************************************************
  * The url data type
  ******************************************************************************/

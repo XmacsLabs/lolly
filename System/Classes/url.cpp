@@ -28,18 +28,6 @@
 #endif
 
 static inline tree
-tuple () {
-  return tree (URL_TUPLE);
-}
-static inline tree
-tuple (tree t1) {
-  return tree (URL_TUPLE, t1);
-}
-static inline tree
-tuple (tree t1, tree t2) {
-  return tree (URL_TUPLE, t1, t2);
-}
-static inline tree
 tuple (tree t1, tree t2, tree t3) {
   return tree (URL_TUPLE, t1, t2, t3);
 }
