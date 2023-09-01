@@ -34,7 +34,7 @@ url_tuple (string label, string value) {
 
 inline tree
 url_tuple (string label, string value, string content) {
-  return tree (URL_TUPLE, tree (label), string (value), string (content));
+  return tree (URL_TUPLE, tree (label), tree (value), tree (content));
 }
 
 inline tree
