@@ -9,17 +9,19 @@
 #include "doctest/doctest.h"
 #include "url.hpp"
 
+#if defined(OS_MINGW) || defined(OS_WIN)
 url win_c_windows= url_system ("C:/Windows");
 url win_c        = url_system ("C:/");
 url system_root  = url_system ("%SystemRoot%");
 url windir       = url_system ("%windir%");
-url unix_root    = url_system ("/");
 
-#if defined(OS_MINGW) || defined(OS_WIN)
 TEST_CASE ("as_string on windows") {
   CHECK_EQ (as_string (win_c) == string ("C:\\"), true);
   CHECK_EQ (as_string (win_c_windows) == string ("C:\\Windows"), true);
   CHECK_EQ (as_string (system_root) == string ("%SystemRoot%"), true);
   CHECK_EQ (as_string (windir) == string ("%windir%"), true);
 }
+#else
+url unix_root= url_system ("/");
+TEST_CASE ("as_string on nix") { CHECK_EQ (as_string (unix_root) == "/", true) }
 #endif

@@ -45,7 +45,7 @@ public:
   inline bool operator== (url u) { return rep->t == u->t; }
   inline bool operator!= (url u) { return rep->t != u->t; }
   inline url  operator[] (int i) { return url (rep->t[i]); }
-  string label () { return as_string (rep->t[0]);};
+  string      label () { return as_string (rep->t[0]); };
   friend url  as_url (tree t);
 };
 CONCRETE_CODE (url);
@@ -54,7 +54,6 @@ inline url
 as_url (tree t) {
   return url (t);
 }
-
 
 /******************************************************************************
  * url subclasses by protocal
@@ -98,7 +97,6 @@ bool is_rooted (url u, string protocol);
 bool is_rooted_web (url u);
 bool is_rooted_blank (url u);
 
-
 /******************************************************************************
  * url routines by label
  ******************************************************************************/
@@ -119,7 +117,7 @@ url_ancestor () {
   return as_url (tree ("..."));
 }
 
-url url_root (string protocol);    // root url
+url url_root (string protocol); // root url
 
 url operator* (url u1, url u2); // concatenation of url with rootless url
 url operator* (url u1, const char* name);
@@ -136,18 +134,41 @@ url url_or (url u1, url u2);
 url url_wildcard ();            // any url
 url url_wildcard (string name); // string with * wildcards
 
-inline bool is_none (url u) { return u.label() == "none"; };
-inline bool is_here (url u) { return u.label() == "."; };
-inline bool is_parent (url u) {return u.label() == "..";};
-inline bool is_ancestor (url u) {return u.label() == "..."; };
-inline bool is_root (url u) { return u.label() == "root"; };
-inline bool is_concat (url u) {return u.label() == "concat"; };
-inline bool is_or (url u) { return u.label() == "or"; };
-inline bool is_wildcard (url u) { return u.label() == "wildcard"; };
-
+inline bool
+is_none (url u) {
+  return u.label () == "none";
+};
+inline bool
+is_here (url u) {
+  return u.label () == ".";
+};
+inline bool
+is_parent (url u) {
+  return u.label () == "..";
+};
+inline bool
+is_ancestor (url u) {
+  return u.label () == "...";
+};
+inline bool
+is_root (url u) {
+  return u.label () == "root";
+};
+inline bool
+is_concat (url u) {
+  return u.label () == "concat";
+};
+inline bool
+is_or (url u) {
+  return u.label () == "or";
+};
+inline bool
+is_wildcard (url u) {
+  return u.label () == "wildcard";
+};
 
 /******************************************************************************
- * url routines by type 
+ * url routines by type
  ******************************************************************************/
 url url_path (string s, int type= URL_SYSTEM);
 url url_general (string name, int type);
@@ -200,7 +221,6 @@ bool is_ramdisc (url u);
 
 void skip_ipv6 (string s, int& i);
 
-
 /******************************************************************************
  * conversions
  ******************************************************************************/
@@ -223,7 +243,6 @@ inline string
 as_standard_string (url u) {
   return as_string (u, URL_STANDARD);
 }
-
 
 /******************************************************************************
  * utilities
