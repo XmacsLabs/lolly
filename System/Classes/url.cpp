@@ -28,18 +28,6 @@
 #endif
 
 static inline tree
-tuple () {
-  return tree (URL_TUPLE);
-}
-static inline tree
-tuple (tree t1) {
-  return tree (URL_TUPLE, t1);
-}
-static inline tree
-tuple (tree t1, tree t2) {
-  return tree (URL_TUPLE, t1, t2);
-}
-static inline tree
 tuple (tree t1, tree t2, tree t3) {
   return tree (URL_TUPLE, t1, t2, t3);
 }
@@ -246,19 +234,9 @@ url_standard (string dir, string name) {
   return url_standard (dir) * url_standard (name);
 }
 
-url
-url_none () {
-  return as_url (tuple ("none"));
-}
-
 /******************************************************************************
  * Rooted url constructors
  ******************************************************************************/
-url
-url_root (string protocol) {
-  return as_url (tuple ("root", protocol));
-}
-
 url
 url_ramdisc (string contents) {
   return as_url (tuple ("root", "ramdisc", contents));
@@ -568,47 +546,9 @@ url_or (url u1, url u2) {
   return u1 | u2;
 }
 
-url
-url_wildcard () {
-  return as_url (tuple ("wildcard"));
-}
-
-url
-url_wildcard (string name) {
-  return as_url (tuple ("wildcard", name));
-}
-
-bool
-is_none (url u) {
-  return is_tuple (u->t, "none", 0);
-}
-bool
-is_here (url u) {
-  return u->t == ".";
-}
-bool
-is_parent (url u) {
-  return u->t == "..";
-}
-bool
-is_ancestor (url u) {
-  return u->t == "...";
-}
 bool
 is_atomic (url u) {
   return is_atomic (u->t);
-}
-bool
-is_concat (url u) {
-  return is_tuple (u->t, "concat", 2);
-}
-bool
-is_or (url u) {
-  return is_tuple (u->t, "or", 2);
-}
-bool
-is_root (url u) {
-  return is_tuple (u->t, "root") && (N (u->t) >= 2);
 }
 bool
 is_root (url u, string s) {
@@ -618,10 +558,6 @@ bool
 is_root_web (url u) {
   return is_root (u, "http") || is_root (u, "https") || is_root (u, "ftp") ||
          is_root (u, "blank");
-}
-bool
-is_wildcard (url u) {
-  return is_tuple (u->t, "wildcard");
 }
 bool
 is_wildcard (url u, int n) {
