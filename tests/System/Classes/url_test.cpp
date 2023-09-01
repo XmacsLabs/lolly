@@ -73,7 +73,7 @@ TEST_CASE ("get_root") {
   CHECK_EQ (get_root (file_root) == "file", true);
   CHECK_EQ (get_root (ftp_root) == "ftp", true);
 #ifdef OS_MINGW
-  CHECK_EQ (get_root (wsl_ubuntu) == "default", true)
+  CHECK_EQ (get_root (wsl_ubuntu) == "default", true);
 #else
   CHECK_EQ (get_root (wsl_ubuntu) == "", true);
 #endif
