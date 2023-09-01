@@ -72,7 +72,11 @@ TEST_CASE ("get_root") {
   CHECK_EQ (get_root (texmacs_org) == "http", true);
   CHECK_EQ (get_root (file_root) == "file", true);
   CHECK_EQ (get_root (ftp_root) == "ftp", true);
-  CHECK_EQ (get_root (wsl_ubuntu) == "default", true);
+#ifdef OS_MINGW
+  CHECK_EQ (get_root (wsl_ubuntu) == "default", true)
+#else
+  CHECK_EQ (get_root (wsl_ubuntu) == "", true);
+#endif
   CHECK_EQ (get_root (none_url) == "", true);
   CHECK_EQ (get_root (file_root | texmacs_org) == "", true);
 }
