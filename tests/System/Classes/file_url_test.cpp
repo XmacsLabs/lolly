@@ -23,5 +23,10 @@ TEST_CASE ("as_string on windows") {
 }
 #else
 url unix_root= url_system ("/");
-TEST_CASE ("as_string on nix") { CHECK_EQ (as_string (unix_root) == "/", true) }
+url unix_tmp = url_system ("/tmp");
+
+TEST_CASE ("as_string on nix") {
+  CHECK_EQ (as_string (unix_root) == "/", true);
+  CHECK_EQ (as_string (unix_tmp) == "/tmp", true);
+}
 #endif
