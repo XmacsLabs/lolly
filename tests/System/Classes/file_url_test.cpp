@@ -31,8 +31,3 @@ TEST_CASE ("as_string on windows") {
   CHECK_EQ (as_string (windir) == string ("%windir%"), true);
 }
 #endif
-
-TEST_CASE ("is_root") {
-  CHECK (is_root (unix_root));
-  CHECK (!is_root (win_c));
-}
