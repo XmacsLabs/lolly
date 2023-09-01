@@ -22,26 +22,6 @@
 #include "string.hpp"
 #include "tree.hpp"
 
-inline tree
-url_tuple (string label) {
-  return tree (URL_TUPLE, tree (label));
-}
-
-inline tree
-url_tuple (string label, string value) {
-  return tree (URL_TUPLE, tree (label), tree (value));
-}
-
-inline tree
-url_tuple (string label, string value, string content) {
-  return tree (URL_TUPLE, tree (label), tree (value), tree (content));
-}
-
-inline tree
-url_tuple (string label, tree t1, tree t2) {
-  return tree (URL_TUPLE, tree (label), t1, t2);
-}
-
 /******************************************************************************
  * The url data type
  ******************************************************************************/
@@ -133,10 +113,7 @@ bool is_rooted_blank (url u);
  *   - to all strings which end with .tm and (wildcard "*.tm" "file")
  *   - to all TeXmacs files (i.e. discarding directories ending with .tm).
  ******************************************************************************/
-inline url
-url_none () {
-  return as_url (url_tuple ("none"));
-}
+url url_none ();
 
 inline url
 url_here () {
@@ -153,10 +130,7 @@ url_ancestor () {
   return as_url (tree ("..."));
 }
 
-inline url
-url_root (string protocol) {
-  return as_url (url_tuple ("root", protocol));
-}
+url url_root (string protocol);
 
 url operator* (url u1, url u2); // concatenation of url with rootless url
 url operator* (url u1, const char* name);
@@ -170,15 +144,8 @@ url_parent (url u) {
 url operator| (url u1, url u2); // disjunction of urls like in file paths
 url url_or (url u1, url u2);
 
-inline url
-url_wildcard () { // any url
-  return as_url (url_tuple ("wildcard"));
-}
-
-inline url
-url_wildcard (string name) { // string with * wildcards
-  return as_url (url_tuple ("wildcard", name));
-}
+url url_wildcard ();
+url url_wildcard (string name);
 
 inline bool
 is_here (url u) {
