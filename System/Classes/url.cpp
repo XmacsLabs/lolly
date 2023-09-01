@@ -63,18 +63,18 @@ string
 url::protocol () {
   string url_label= this->label ();
   if (url_label == "root") {
-    return this[1] -> t -> label;
+    return rep->t[1]->label;
   }
   else if (url_label == "concat") {
-    return this[1].protocol ();
+    return as_url (rep->t[1]).protocol ();
   }
   else if (url_label == "or") {
     // For mutiple urls, the protocol must be consistent
     // otherwise, it is in empty protocol
-    string p1= this[1].protocol ();
+    string p1= as_url (rep->t[1]).protocol ();
     if (p1 == "") return ""; // if empty protocol, return empty protocol fast
 
-    string p2= this[2].protocol ();
+    string p2= as_url (rep->t[2]).protocol ();
     if (p1 == p2) return p1;
     else return ""; // if the protocol does not match, return empty protocol
   }
