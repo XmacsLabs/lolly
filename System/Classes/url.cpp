@@ -579,36 +579,8 @@ url_wildcard (string name) {
 }
 
 bool
-is_none (url u) {
-  return is_tuple (u->t, "none", 0);
-}
-bool
-is_here (url u) {
-  return u->t == ".";
-}
-bool
-is_parent (url u) {
-  return u->t == "..";
-}
-bool
-is_ancestor (url u) {
-  return u->t == "...";
-}
-bool
 is_atomic (url u) {
   return is_atomic (u->t);
-}
-bool
-is_concat (url u) {
-  return is_tuple (u->t, "concat", 2);
-}
-bool
-is_or (url u) {
-  return is_tuple (u->t, "or", 2);
-}
-bool
-is_root (url u) {
-  return is_tuple (u->t, "root") && (N (u->t) >= 2);
 }
 bool
 is_root (url u, string s) {
@@ -618,10 +590,6 @@ bool
 is_root_web (url u) {
   return is_root (u, "http") || is_root (u, "https") || is_root (u, "ftp") ||
          is_root (u, "blank");
-}
-bool
-is_wildcard (url u) {
-  return is_tuple (u->t, "wildcard");
 }
 bool
 is_wildcard (url u, int n) {

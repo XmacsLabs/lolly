@@ -45,10 +45,20 @@ public:
   inline bool operator== (url u) { return rep->t == u->t; }
   inline bool operator!= (url u) { return rep->t != u->t; }
   inline url  operator[] (int i) { return url (rep->t[i]); }
+  string label () { return as_string (rep->t[0]);};
   friend url  as_url (tree t);
 };
 CONCRETE_CODE (url);
 
+inline url
+as_url (tree t) {
+  return url (t);
+}
+
+
+/******************************************************************************
+ * url subclasses by protocal
+ ******************************************************************************/
 class file_url : public url {
 public:
   file_url (const char* name);
@@ -80,13 +90,64 @@ public:
   https_url (string name);
 };
 
-inline url
-as_url (tree t) {
-  return url (t);
-}
+bool is_root (url u, string s);
+bool is_root_web (url u);
+bool is_root_blank (url u);
+
+bool is_rooted (url u, string protocol);
+bool is_rooted_web (url u);
+bool is_rooted_blank (url u);
+
 
 /******************************************************************************
- * url constructors
+ * url routines by label
+ ******************************************************************************/
+url url_none ();
+
+inline url
+url_here () {
+  return as_url (tree ("."));
+}
+
+inline url
+url_parent () {
+  return as_url (tree (".."));
+}
+
+inline url
+url_ancestor () {
+  return as_url (tree ("..."));
+}
+
+url url_root (string protocol);    // root url
+
+url operator* (url u1, url u2); // concatenation of url with rootless url
+url operator* (url u1, const char* name);
+url operator* (url u1, string name);
+url url_concat (url u1, url u2);
+inline url
+url_parent (url u) {
+  return u * url_parent ();
+}
+
+url operator| (url u1, url u2); // disjunction of urls like in file paths
+url url_or (url u1, url u2);
+
+url url_wildcard ();            // any url
+url url_wildcard (string name); // string with * wildcards
+
+inline bool is_none (url u) { return u.label() == "none"; };
+inline bool is_here (url u) { return u.label() == "."; };
+inline bool is_parent (url u) {return u.label() == "..";};
+inline bool is_ancestor (url u) {return u.label() == "..."; };
+inline bool is_root (url u) { return u.label() == "root"; };
+inline bool is_concat (url u) {return u.label() == "concat"; };
+inline bool is_or (url u) { return u.label() == "or"; };
+inline bool is_wildcard (url u) { return u.label() == "wildcard"; };
+
+
+/******************************************************************************
+ * url routines by type 
  ******************************************************************************/
 url url_path (string s, int type= URL_SYSTEM);
 url url_general (string name, int type);
@@ -97,25 +158,11 @@ url url_system (string dir, string name);
 url url_standard (string name);
 url url_standard (string dir, string name);
 
-url url_none ();
-inline url
-url_here () {
-  return as_url (tree ("."));
-}
-inline url
-url_parent () {
-  return as_url (tree (".."));
-}
-inline url
-url_ancestor () {
-  return as_url (tree ("..."));
-}
 inline url
 url_pwd () {
   return url_system ("$PWD");
 }
 
-url url_root (string protocol);    // root url
 url url_ramdisc (string contents); // ramdisc with contents contents
 
 /******************************************************************************
@@ -139,48 +186,24 @@ url    sort (url u);                 // order items in ors
 url    factor (url u);               // inverse of expand; also sorts
 bool   descends (url u, url base);   // does u descend from base?
 
-url operator* (url u1, url u2); // concatenation of url with rootless url
-url operator* (url u1, const char* name);
-url operator* (url u1, string name);
-url url_concat (url u1, url u2);
-url operator| (url u1, url u2); // disjunction of urls like in file paths
-url url_or (url u1, url u2);
-url url_wildcard ();            // any url
-url url_wildcard (string name); // string with * wildcards
-
-inline url
-url_parent (url u) {
-  return u * url_parent ();
-}
-
 /******************************************************************************
  * predicates
  ******************************************************************************/
-bool is_none (url u);
-bool is_here (url u);
-bool is_parent (url u);
-bool is_ancestor (url u);
 bool is_atomic (url u);
-bool is_concat (url u);
-bool is_or (url u);
-bool is_root (url u);
-bool is_root (url u, string s);
-bool is_root_web (url u);
-bool is_root_blank (url u);
-bool is_wildcard (url u);
 bool is_wildcard (url u, int n);
 bool is_pseudo_atomic (url u);
 
 bool is_rooted (url u);
-bool is_rooted (url u, string protocol);
-bool is_rooted_web (url u);
-bool is_rooted_blank (url u);
 bool is_name (url u);
 bool is_rooted_name (url u);
 bool is_ramdisc (url u);
 
 void skip_ipv6 (string s, int& i);
 
+
+/******************************************************************************
+ * conversions
+ ******************************************************************************/
 string      as_string (url u, int type= URL_SYSTEM);
 tm_ostream& operator<< (tm_ostream& out, url u);
 
@@ -201,6 +224,10 @@ as_standard_string (url u) {
   return as_string (u, URL_STANDARD);
 }
 
+
+/******************************************************************************
+ * utilities
+ ******************************************************************************/
 url url_get_name (string s, int type= URL_STANDARD, int i= 0);
 
 #endif
