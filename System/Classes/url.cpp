@@ -27,6 +27,26 @@
 #define URL_SEPARATOR ':'
 #endif
 
+static tree
+url_tuple (string label) {
+  return tree (URL_TUPLE, tree (label));
+}
+
+static tree
+url_tuple (string label, string value) {
+  return tree (URL_TUPLE, tree (label), tree (value));
+}
+
+static tree
+url_tuple (string label, string value, string content) {
+  return tree (URL_TUPLE, tree (label), tree (value), tree (content));
+}
+
+static tree
+url_tuple (string label, tree t1, tree t2) {
+  return tree (URL_TUPLE, tree (label), t1, t2);
+}
+
 static inline bool
 is_tuple (tree t, string s) {
   return (t->op == URL_TUPLE) && (N (t) >= 1) && (t[0] == s);
@@ -72,6 +92,26 @@ url::protocol () {
   else {
     return "";
   }
+}
+
+url
+url_none () {
+  return as_url (url_tuple ("none"));
+}
+
+url
+url_root (string protocol) {
+  return as_url (url_tuple ("root", protocol));
+}
+
+url
+url_wildcard () { // any url
+  return as_url (url_tuple ("wildcard"));
+}
+
+url
+url_wildcard (string name) { // string with * wildcards
+  return as_url (url_tuple ("wildcard", name));
 }
 
 /******************************************************************************
