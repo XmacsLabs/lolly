@@ -25,3 +25,13 @@ file_url::concretize () {
   if (is_wildcard (*this, 1)) return (*this)->t[1]->label;
   TM_FAILED ("failed to concretize file_url");
 }
+
+url
+url_unix (string name) {
+  return url_general (name, URL_UNIX);
+}
+
+url
+url_unix (string dir, string name) {
+  return url_unix (dir) * url_unix (name);
+}
