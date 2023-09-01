@@ -10,9 +10,10 @@
 #include "url.hpp"
 
 url ustc_edu   = url_system ("https://ustc.edu.cn");
-url texmacs_org= url_system ("https://texmacs.org");
+url texmacs_org= url_system ("http://texmacs.org");
 url none_url   = url_none ();
 url file_root  = url_root ("file");
+url ftp_root   = url_root ("ftp");
 url wsl_ubuntu = url_system ("\\\\wsl.localhost\\Ubuntu");
 
 #if defined(OS_MINGW) || defined(OS_WIN)
@@ -64,4 +65,18 @@ TEST_CASE ("suffix") {
   CHECK_EQ (suffix (png) == string ("png"), true);
   url png2= url ("/a/b.c/d.png");
   CHECK_EQ (suffix (png2) == string ("png"), true);
+}
+
+TEST_CASE ("get_root") {
+  CHECK_EQ (get_root (ustc_edu) == "https", true);
+  CHECK_EQ (get_root (texmacs_org) == "http", true);
+  CHECK_EQ (get_root (file_root) == "file", true);
+  CHECK_EQ (get_root (ftp_root) == "ftp", true);
+#ifdef OS_MINGW
+  CHECK_EQ (get_root (wsl_ubuntu) == "default", true);
+#else
+  CHECK_EQ (get_root (wsl_ubuntu) == "", true);
+#endif
+  CHECK_EQ (get_root (none_url) == "", true);
+  CHECK_EQ (get_root (file_root | texmacs_org) == "", true);
 }
