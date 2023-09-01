@@ -15,7 +15,7 @@
 #include "tmfs_url.hpp"
 #include <ctype.h>
 
-#if defined(OS_MINGW)
+#if defined(OS_MINGW) || defined(OS_WIN)
 #define WINPATHS
 #endif
 
