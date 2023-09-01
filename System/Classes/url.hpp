@@ -9,8 +9,8 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#ifndef URL_H
-#define URL_H
+#ifndef LOLLY_URL_H
+#define LOLLY_URL_H
 
 #define URL_SYSTEM 0
 #define URL_UNIX 1
@@ -22,13 +22,24 @@
 #include "string.hpp"
 #include "tree.hpp"
 
-static inline tree
-tuple (tree t1) {
-  return tree (URL_TUPLE, t1);
+inline tree
+url_tuple (string label) {
+  return tree (URL_TUPLE, tree (label));
 }
-static inline tree
-tuple (tree t1, tree t2) {
-  return tree (URL_TUPLE, t1, t2);
+
+inline tree
+url_tuple (string label, string value) {
+  return tree (URL_TUPLE, tree (label), tree (value));
+}
+
+inline tree
+url_tuple (string label, string value, string content) {
+  return tree (URL_TUPLE, tree (label), string (value), string (content));
+}
+
+inline tree
+url_tuple (string label, tree t1, tree t2) {
+  return tree (URL_TUPLE, tree (label), t1, t2);
 }
 
 /******************************************************************************
@@ -124,7 +135,7 @@ bool is_rooted_blank (url u);
  ******************************************************************************/
 inline url
 url_none () {
-  return as_url (tuple ("none"));
+  return as_url (url_tuple ("none"));
 }
 
 inline url
@@ -144,7 +155,7 @@ url_ancestor () {
 
 inline url
 url_root (string protocol) {
-  return as_url (tuple ("root", protocol));
+  return as_url (url_tuple ("root", protocol));
 }
 
 url operator* (url u1, url u2); // concatenation of url with rootless url
@@ -161,12 +172,12 @@ url url_or (url u1, url u2);
 
 inline url
 url_wildcard () { // any url
-  return as_url (tuple ("wildcard"));
+  return as_url (url_tuple ("wildcard"));
 }
 
 inline url
 url_wildcard (string name) { // string with * wildcards
-  return as_url (tuple ("wildcard", name));
+  return as_url (url_tuple ("wildcard", name));
 }
 
 inline bool

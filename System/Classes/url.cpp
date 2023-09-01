@@ -27,15 +27,6 @@
 #define URL_SEPARATOR ':'
 #endif
 
-static inline tree
-tuple (tree t1, tree t2, tree t3) {
-  return tree (URL_TUPLE, t1, t2, t3);
-}
-
-static inline bool
-is_tuple (tree t) {
-  return (t->op == URL_TUPLE);
-}
 static inline bool
 is_tuple (tree t, string s) {
   return (t->op == URL_TUPLE) && (N (t) >= 1) && (t[0] == s);
@@ -53,7 +44,7 @@ is_tuple (tree t, const char* s, int n) {
   return (t->op == URL_TUPLE) && (N (t) == (n + 1)) && (t[0] == s);
 }
 
-url::url () : rep (tm_new<url_rep> (tuple ("none"))) {}
+url::url () : rep (tm_new<url_rep> (url_tuple ("none"))) {}
 url::url (const char* name) : rep (tm_new<url_rep> (url_unix (name)->t)) {}
 url::url (string name) : rep (tm_new<url_rep> (url_unix (name)->t)) {}
 url::url (string path_name, string name)
@@ -263,7 +254,7 @@ url_standard (string dir, string name) {
  ******************************************************************************/
 url
 url_ramdisc (string contents) {
-  return as_url (tuple ("root", "ramdisc", contents));
+  return as_url (url_tuple ("root", "ramdisc", contents));
 }
 
 /******************************************************************************
@@ -529,7 +520,7 @@ operator* (url u1, url u2) {
     if (is_semi_root (u1)) return u1 * u2[2];
   }
   if (is_concat (u1)) return u1[1] * (u1[2] * u2);
-  return as_url (tuple ("concat", u1->t, u2->t));
+  return as_url (url_tuple ("concat", u1->t, u2->t));
 }
 
 url
@@ -554,7 +545,7 @@ operator| (url u1, url u2) {
   if (is_or (u1)) return u1[1] | (u1[2] | u2);
   if (u1 == u2) return u2;
   if (is_or (u2) && (u1 == u2[1])) return u2;
-  return as_url (tuple ("or", u1->t, u2->t));
+  return as_url (url_tuple ("or", u1->t, u2->t));
 }
 
 url
