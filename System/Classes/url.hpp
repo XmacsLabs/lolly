@@ -55,13 +55,10 @@ public:
   inline bool   operator!= (url u) { return rep->t != u->t; }
   inline url    operator[] (int i) { return url (rep->t[i]); }
   inline string label () {
-    if (is_atomic (rep->t)) {
-      return string ("");
-    }
-    else {
-      return as_string (rep->t[0]);
-    }
+    if (is_atomic (rep->t)) return string ("");
+    else return as_string (rep->t[0]);
   };
+  string     protocol ();
   friend url as_url (tree t);
 };
 CONCRETE_CODE (url);

@@ -59,6 +59,30 @@ url::url (string name) : rep (tm_new<url_rep> (url_unix (name)->t)) {}
 url::url (string path_name, string name)
     : rep (tm_new<url_rep> (url_unix (path_name, name)->t)) {}
 
+string
+url::protocol () {
+  string url_label= this->label ();
+  if (url_label == "root") {
+    return this[1] -> t -> label;
+  }
+  else if (url_label == "concat") {
+    return this[1].protocol ();
+  }
+  else if (url_label == "or") {
+    // For mutiple urls, the protocol must be consistent
+    // otherwise, it is in empty protocol
+    string p1= this[1].protocol ();
+    if (p1 == "") return ""; // if empty protocol, return empty protocol fast
+
+    string p2= this[2].protocol ();
+    if (p1 == p2) return p1;
+    else return ""; // if the protocol does not match, return empty protocol
+  }
+  else {
+    return "";
+  }
+}
+
 /******************************************************************************
  * Generic url constructor
  ******************************************************************************/
@@ -367,15 +391,7 @@ delta (url base, url u) {
 
 string
 get_root (url u) {
-  if (is_concat (u)) return get_root (u[1]);
-  if (is_or (u)) {
-    string s1= get_root (u[1]);
-    string s2= get_root (u[2]);
-    if (s1 == s2) return s1;
-    else return "";
-  }
-  if (is_root (u)) return u[1]->t->label;
-  return "";
+  return u.protocol ();
 }
 
 url
