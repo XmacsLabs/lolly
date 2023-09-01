@@ -227,16 +227,6 @@ url_general (string name, int type= URL_SYSTEM) {
 }
 
 url
-url_unix (string name) {
-  return url_general (name, URL_UNIX);
-}
-
-url
-url_unix (string dir, string name) {
-  return url_unix (dir) * url_unix (name);
-}
-
-url
 url_system (string name) {
   return url_general (name, URL_SYSTEM);
 }
@@ -660,12 +650,6 @@ bool
 is_rooted_web (url u) {
   return is_root_web (u) || (is_concat (u) && is_rooted_web (u[1])) ||
          (is_or (u) && is_rooted_web (u[1]) && is_rooted_web (u[2]));
-}
-
-bool
-is_rooted_blank (url u) {
-  return is_root_blank (u) || (is_concat (u) && is_rooted_blank (u[1])) ||
-         (is_or (u) && is_rooted_blank (u[1]) && is_rooted_blank (u[2]));
 }
 
 bool

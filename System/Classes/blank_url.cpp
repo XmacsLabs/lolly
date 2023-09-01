@@ -22,3 +22,9 @@ bool
 is_root_blank (url u) {
   return is_root (u, "blank");
 }
+
+bool
+is_rooted_blank (url u) {
+  return is_root_blank (u) || (is_concat (u) && is_rooted_blank (u[1])) ||
+         (is_or (u) && is_rooted_blank (u[1]) && is_rooted_blank (u[2]));
+}
