@@ -14,5 +14,6 @@
 TEST_CASE ("is_directory on Windows") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (is_directory (string ("C:/Windows")));
+  CHECK (is_directory (file_url ("C:/Windows")));
 }
 #endif
