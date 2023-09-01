@@ -17,16 +17,8 @@ url unix_root    = url_system ("/");
 
 #if defined(OS_MINGW) || defined(OS_WIN)
 TEST_CASE ("as_string on windows") {
-#ifdef OS_WIN
-  CHECK_EQ (as_string (win_c) == string ("C:{/}"), true);
-#else
   CHECK_EQ (as_string (win_c) == string ("C:\\"), true);
-#endif
-#ifdef OS_WIN
-  CHECK_EQ (as_string (win_c_windows) == string ("C:/Windows"), true);
-#else
   CHECK_EQ (as_string (win_c_windows) == string ("C:\\Windows"), true);
-#endif
   CHECK_EQ (as_string (system_root) == string ("%SystemRoot%"), true);
   CHECK_EQ (as_string (windir) == string ("%windir%"), true);
 }
