@@ -16,6 +16,8 @@ url file_root  = url_root ("file");
 url ftp_root   = url_root ("ftp");
 url wsl_ubuntu = url_system ("\\\\wsl.localhost\\Ubuntu");
 
+TEST_CASE ("is here/parent/ancestor") { CHECK (is_here (url_here ())); }
+
 TEST_CASE ("is_none") {
   CHECK (!is_none (ustc_edu));
   CHECK (!is_none (texmacs_org));

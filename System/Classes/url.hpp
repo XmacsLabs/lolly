@@ -42,11 +42,18 @@ public:
   url (const char* name);
   url (string name);
   url (string dir, string name);
-  inline bool operator== (url u) { return rep->t == u->t; }
-  inline bool operator!= (url u) { return rep->t != u->t; }
-  inline url  operator[] (int i) { return url (rep->t[i]); }
-  string      label () { return as_string (rep->t[0]); };
-  friend url  as_url (tree t);
+  inline bool   operator== (url u) { return rep->t == u->t; }
+  inline bool   operator!= (url u) { return rep->t != u->t; }
+  inline url    operator[] (int i) { return url (rep->t[i]); }
+  inline string label () {
+    if (is_atomic (rep->t)) {
+      return string ("");
+    }
+    else {
+      return as_string (rep->t[0]);
+    }
+  };
+  friend url as_url (tree t);
 };
 CONCRETE_CODE (url);
 
@@ -99,6 +106,15 @@ bool is_rooted_blank (url u);
 
 /******************************************************************************
  * url routines by label
+ * + "" (empty string): ./../...
+ * + none: invalid url
+ * + root: the url http://gnu.org yields (concat (root "http") "gnu.org");
+ * + concat: a/b/c is represented as (concat "a" (concat "b" "c"));
+ * + or: the path a:b/c is represented as (or "a" (concat "b" "c"));
+ * + wildcard: (wildcard) corresponds to any url
+ *   (wildcard "*.tm") is
+ *   - to all strings which end with .tm and (wildcard "*.tm" "file")
+ *   - to all TeXmacs files (i.e. discarding directories ending with .tm).
  ******************************************************************************/
 url url_none ();
 
@@ -140,15 +156,15 @@ is_none (url u) {
 };
 inline bool
 is_here (url u) {
-  return u.label () == ".";
+  return u->t == ".";
 };
 inline bool
 is_parent (url u) {
-  return u.label () == "..";
+  return u->t == "..";
 };
 inline bool
 is_ancestor (url u) {
-  return u.label () == "...";
+  return u->t == "...";
 };
 inline bool
 is_root (url u) {
