@@ -28,6 +28,10 @@ jobs:
         xmake-version: v2.8.2
         actions-cache-folder: '.xmake-cache'
 
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+
     - name: xmake repo --update
       run: xmake repo --update
 
@@ -35,15 +39,12 @@ jobs:
       run: |
         xrepo install -y doxygen
 
-    - name: Delete cache
-      run: xmake f -c
-
-    # - name: cache xmake
-    #   uses: actions/cache@v2
-    #   with:
-    #     path: |
-    #       ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
-    #     key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
+    - name: cache xmake
+      uses: actions/cache@v2
+      with:
+        path: |
+          ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
+        key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
 
     - name: config xmake
       run: xmake config --yes -vD
