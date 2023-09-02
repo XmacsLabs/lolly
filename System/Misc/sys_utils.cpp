@@ -22,15 +22,25 @@
 
 string
 get_env (string var) {
-  c_string    _var (var);
-  const char* _ret= getenv (_var);
-  if (_ret == NULL) {
-    if (var == "PWD") return get_env ("HOME");
-    return "";
+  tb_size_t            size       = 0;
+  string               ret        = string ("");
+  tb_environment_ref_t environment= tb_environment_init ();
+  if (environment) {
+    size= tb_environment_load (environment, as_charp (var));
+    if (size >= 1) {
+      tb_for_all_if (tb_char_t const*, value, environment, value) {
+        ret= ret * string (value) * ";";
+      }
+    }
   }
-  string ret (_ret);
-  return ret;
-  // do not delete _ret !
+  tb_environment_exit (environment);
+
+  if (size <= 0) {
+    return ret;
+  }
+  else {
+    return ret (0, N (ret) - 1);
+  }
 }
 
 void

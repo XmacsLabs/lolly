@@ -18,3 +18,14 @@ TEST_CASE ("system") {
   CHECK (lolly::system ("") != 0);
 #endif
 }
+
+TEST_CASE ("get_env/set_env") {
+#if defined(OS_MINGW) || defined(OS_WIN)
+  CHECK_EQ (get_env ("SystemRoot") == "C:\\WINDOWS", true);
+  CHECK_EQ (get_env ("ProgramFiles") == "C:\\Program Files", true);
+#endif
+
+#if defined(OS_LINUX)
+  CHECK_EQ (get_env ("SHELL") == "/bin/bash", true);
+#endif
+}
