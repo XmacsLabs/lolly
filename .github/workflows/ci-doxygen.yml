@@ -50,7 +50,7 @@ jobs:
       run: xmake config --yes -vD
 
     - name: BUILD
-      run: xmake doxygen -y -v build
+      run: xmake doxygen -y -v
 
     - name: Push
       uses: s0/git-publish-subdir-action@develop
