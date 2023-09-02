@@ -45,16 +45,15 @@ get_env (string var) {
 
 void
 set_env (string var, string with) {
-#if defined(STD_SETENV) && !defined(OS_MINGW)
-  c_string _var (var);
-  c_string _with (with);
-  setenv (_var, _with, 1);
-#else
-  char* _varw= as_charp (var * "=" * with);
-  (void) putenv (_varw);
-  // do not delete _varw !!!
-  // -> known memory leak, but solution more complex than it is worth
-#endif
+  if (is_empty (with)) {
+    return ;
+  }
+  tb_environment_ref_t environment = tb_environment_init();
+  if (environment) {
+    tb_environment_insert (environment, as_charp(with), tb_true);
+    tb_environment_save(environment, as_charp(var));
+    tb_environment_exit (environment);
+  }
 }
 
 string
