@@ -14,7 +14,9 @@
 
 #include "url.hpp"
 
-bool is_directory (string path);
-bool is_directory (file_url u);
+bool is_directory (url u);
+
+void mkdir (url u);
+void rmdir (url u);
 
 #endif

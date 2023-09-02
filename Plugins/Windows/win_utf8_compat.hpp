@@ -45,16 +45,6 @@ typedef struct _stat32 struct_stat;
 #endif
 #define fopen(a, b) nowide::fopen (a, b)
 
-inline int
-mkdir (char const* name, int const mode) {
-  nowide::basic_stackstring<> wname;
-  if (wname.convert (name) == nullptr) {
-    errno= EINVAL;
-    return -1;
-  }
-  return _wmkdir (wname.get ());
-}
-
 #ifdef stat
 #undef stat
 #endif
@@ -80,18 +70,3 @@ chmod (char const* name, int const mode) {
   }
   return _wchmod (wname.get (), mode);
 }
-
-#ifdef getenv
-#undef getenv
-#endif
-#define getenv nowide::getenv
-
-#ifdef setenv
-#undef setenv
-#endif
-#define setenv nowide::setenv
-
-#ifdef putenv
-#undef putenv
-#endif
-#define putenv nowide::putenv

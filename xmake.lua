@@ -239,7 +239,25 @@ for _, filepath in ipairs(os.files("tests/Kernel/**_test.cpp")) do
     add_test_target(filepath)
 end
 
-for _, filepath in ipairs(os.files("tests/System/**_test.cpp")) do
+for _, filepath in ipairs(os.files("tests/System/Classes/**_test.cpp")) do
+    add_test_target(filepath)
+end
+
+for _, filepath in ipairs(os.files("tests/System/Files/**_test.cpp")) do
+    if not is_plat("wasm") then
+        add_test_target(filepath)
+    end
+end
+
+for _, filepath in ipairs(os.files("tests/System/IO/**_test.cpp")) do
+    add_test_target(filepath)
+end
+
+for _, filepath in ipairs(os.files("tests/System/Memory/**_test.cpp")) do
+    add_test_target(filepath)
+end
+
+for _, filepath in ipairs(os.files("tests/System/Misc/**_test.cpp")) do
     add_test_target(filepath)
 end
 

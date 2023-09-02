@@ -22,35 +22,44 @@
 
 string
 get_env (string var) {
-  c_string    _var (var);
-  const char* _ret= getenv (_var);
-  if (_ret == NULL) {
-    if (var == "PWD") return get_env ("HOME");
-    return "";
+  tb_size_t            size       = 0;
+  string               ret        = string ("");
+  tb_environment_ref_t environment= tb_environment_init ();
+  if (environment) {
+    size= tb_environment_load (environment, as_charp (var));
+    if (size >= 1) {
+      tb_for_all_if (tb_char_t const*, value, environment, value) {
+        ret= ret * string (value) * ";";
+      }
+    }
   }
-  string ret (_ret);
-  return ret;
-  // do not delete _ret !
+  tb_environment_exit (environment);
+
+  if (size <= 0) {
+    return ret;
+  }
+  else {
+    return ret (0, N (ret) - 1);
+  }
 }
 
 void
 set_env (string var, string with) {
-#if defined(STD_SETENV) && !defined(OS_MINGW)
-  c_string _var (var);
-  c_string _with (with);
-  setenv (_var, _with, 1);
-#else
-  char* _varw= as_charp (var * "=" * with);
-  (void) putenv (_varw);
-  // do not delete _varw !!!
-  // -> known memory leak, but solution more complex than it is worth
-#endif
+  if (is_empty (with)) {
+    return;
+  }
+  tb_environment_ref_t environment= tb_environment_init ();
+  if (environment) {
+    tb_environment_insert (environment, as_charp (with), tb_true);
+    tb_environment_save (environment, as_charp (var));
+    tb_environment_exit (environment);
+  }
 }
 
 string
 get_user_login () {
 #if defined(OS_MINGW) || defined(OS_WIN)
-  return getenv ("USERNAME");
+  return get_env ("USERNAME");
 #else
   return unix_get_login ();
 #endif
