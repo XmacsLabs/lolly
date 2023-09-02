@@ -14,7 +14,7 @@
 #include "string.hpp"
 #include "tbox/tbox.h"
 
-bool
+static bool
 is_directory (string path) {
   tb_file_info_t info;
   if (tb_file_info (as_charp (path), &info)) {
@@ -26,12 +26,42 @@ is_directory (string path) {
     }
   }
   else {
-    TM_FAILED ("is_directory failed")
+    return false;
   }
 }
 
 bool
-is_directory (file_url name) {
-  string path= name.concretize ();
+is_directory (url name) {
+  string path= as_string (name);
   return is_directory (path);
+}
+
+void
+mkdir (url u) {
+  string label= u.label ();
+  if (label == "" || label == "none" || label == "root" || label == "wildcard")
+    return;
+  else if (label == "concat") {
+    string path= as_string (u);
+    tb_directory_create (as_charp (path));
+  }
+  else { // label == "or"
+    mkdir (u[1]);
+    mkdir (u[2]);
+  }
+}
+
+void
+rmdir (url u) {
+  string label= u.label ();
+  if (label == "" || label == "none" || label == "root" || label == "wildcard")
+    return;
+  else if (label == "concat") {
+    string path= as_string (u);
+    tb_directory_remove (as_charp (path));
+  }
+  else { // label == "or"
+    rmdir (u[1]);
+    rmdir (u[2]);
+  }
 }
