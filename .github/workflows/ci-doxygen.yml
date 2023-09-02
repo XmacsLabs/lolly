@@ -35,6 +35,9 @@ jobs:
       run: |
         xrepo install -y doxygen
 
+    - name: Delete cache
+      run: xmake f -c
+
     # - name: cache xmake
     #   uses: actions/cache@v2
     #   with:
