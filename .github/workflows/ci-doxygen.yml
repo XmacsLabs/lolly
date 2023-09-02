@@ -35,18 +35,18 @@ jobs:
       run: |
         xrepo install -y doxygen
 
-    - name: cache xmake
-      uses: actions/cache@v2
-      with:
-        path: |
-          ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
-        key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
+    # - name: cache xmake
+    #   uses: actions/cache@v2
+    #   with:
+    #     path: |
+    #       ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
+    #     key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
 
     - name: config xmake
-      run: xmake config -vD --yes
+      run: xmake config --yes -vD
 
     - name: BUILD
-      run: xmake doxygen -y build
+      run: xmake doxygen -y -v build
 
     - name: Push
       uses: s0/git-publish-subdir-action@develop
