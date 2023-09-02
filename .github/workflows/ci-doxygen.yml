@@ -20,6 +20,10 @@ jobs:
       fail-fast: true
 
     steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+    
     - name: set XMAKE_GLOBALDIR
       run: echo "XMAKE_GLOBALDIR=${{ runner.workspace }}/xmake-global" >> $GITHUB_ENV
 
@@ -42,10 +46,6 @@ jobs:
           ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
         key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
 
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 1
-    
     - name: config xmake
       run: xmake config --yes -vD
 
