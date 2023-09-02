@@ -80,18 +80,3 @@ chmod (char const* name, int const mode) {
   }
   return _wchmod (wname.get (), mode);
 }
-
-#ifdef getenv
-#undef getenv
-#endif
-#define getenv nowide::getenv
-
-#ifdef setenv
-#undef setenv
-#endif
-#define setenv nowide::setenv
-
-#ifdef putenv
-#undef putenv
-#endif
-#define putenv nowide::putenv

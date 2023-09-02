@@ -17,7 +17,6 @@
 
 string get_env (string var);
 void   set_env (string var, string with);
-string get_stacktrace (unsigned int max_frames= 127);
 
 string get_user_login ();
 string get_user_name ();
