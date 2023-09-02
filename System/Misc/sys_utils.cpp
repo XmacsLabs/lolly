@@ -59,7 +59,7 @@ set_env (string var, string with) {
 string
 get_user_login () {
 #if defined(OS_MINGW) || defined(OS_WIN)
-  return getenv ("USERNAME");
+  return get_env ("USERNAME");
 #else
   return unix_get_login ();
 #endif

@@ -31,6 +31,6 @@ TEST_CASE ("get_env/set_env") {
   CHECK_EQ (get_env ("SHELL") == "/bin/bash", true);
 #endif
 
-  set_env ("SHELL", "/bin/zsh")
-      CHECK_EQ (get_env ("SHELL") == "/bin/zsh", true);
+  set_env ("SHELL", "/bin/zsh");
+  CHECK_EQ (get_env ("SHELL") == "/bin/zsh", true);
 }
