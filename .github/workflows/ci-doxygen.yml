@@ -39,12 +39,15 @@ jobs:
       run: |
         xrepo install -y doxygen
 
-    - name: cache xmake
-      uses: actions/cache@v2
-      with:
-        path: |
-          ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
-        key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
+    - name: Disable cache
+      run: xmake f -c
+
+    # - name: cache xmake
+    #   uses: actions/cache@v2
+    #   with:
+    #     path: |
+    #       ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
+    #     key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
 
     - name: config xmake
       run: xmake config --yes -vD
