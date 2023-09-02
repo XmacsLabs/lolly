@@ -17,7 +17,7 @@ TEST_CASE ("is_directory on Windows") {
 }
 #endif
 
-TEST_CASE ("mkdir/rmdir on Windows") {
+TEST_CASE ("mkdir/rmdir") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
 #if defined(OS_WIN) || defined(OS_MINGW)
   url test_mkdir= url_system ("$TMP") * url ("lolly_tmp_dir");

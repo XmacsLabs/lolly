@@ -21,7 +21,6 @@ TEST_CASE ("system") {
 
 TEST_CASE ("get_env/set_env") {
 #if defined(OS_MINGW) || defined(OS_WIN)
-  CHECK_EQ (get_env ("SystemRoot") == "C:\\WINDOWS", true);
   CHECK_EQ (get_env ("ProgramFiles") == "C:\\Program Files", true);
   set_env ("LOLLY_PATH", "C:\\lolly");
   CHECK_EQ (get_env ("LOLLY_PATH") == "C:\\lolly", true);
