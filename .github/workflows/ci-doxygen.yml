@@ -32,7 +32,7 @@ jobs:
       run: xmake repo --update
 
     - name: Install dependencies
-      run: xrepo install doxygen -vD -y
+      run: xrepo install doxygen -y
 
     - name: config xmake
       run: xmake config -vD --yes
