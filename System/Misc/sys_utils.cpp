@@ -46,12 +46,12 @@ get_env (string var) {
 void
 set_env (string var, string with) {
   if (is_empty (with)) {
-    return ;
+    return;
   }
-  tb_environment_ref_t environment = tb_environment_init();
+  tb_environment_ref_t environment= tb_environment_init ();
   if (environment) {
-    tb_environment_insert (environment, as_charp(with), tb_true);
-    tb_environment_save(environment, as_charp(var));
+    tb_environment_insert (environment, as_charp (with), tb_true);
+    tb_environment_save (environment, as_charp (var));
     tb_environment_exit (environment);
   }
 }
