@@ -2,12 +2,12 @@
 name: Doxygen
 
 on:
+  push:
+    tags:
+      - '*'
   pull_request:
     branches: [ main ]
     paths:
-      - 'Data/**.hpp'
-      - 'Kernel/**.hpp'
-      - 'System/**.hpp'
       - '.github/workflows/ci-doxygen.yml'
   workflow_dispatch:
 
@@ -39,12 +39,12 @@ jobs:
       run: |
         xrepo install -y doxygen
 
-    # - name: cache xmake
-    #   uses: actions/cache@v2
-    #   with:
-    #     path: |
-    #       ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
-    #     key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
+    - name: cache xmake
+      uses: actions/cache@v2
+      with:
+        path: |
+          ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
+        key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
 
     - name: config xmake
       run: xmake config --yes -vD
