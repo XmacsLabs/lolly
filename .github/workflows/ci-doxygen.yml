@@ -42,8 +42,8 @@ jobs:
           ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
         key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
 
-    # - name: config xmake
-    #   run: xmake config -vD --yes
+    - name: config xmake
+      run: xmake config -vD --yes
 
     - name: BUILD
       run: xmake doxygen -y build
