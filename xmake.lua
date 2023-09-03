@@ -217,6 +217,22 @@ function add_test_target(filepath)
             end)
         end
 
+        if is_plat("linux", "macosx") then
+            on_run(function (target)
+                cmd = "$(buildir)/$(plat)/$(arch)/$(mode)/" .. testname
+                print("> " .. cmd)
+                os.exec(cmd)
+            end)
+        end
+
+        if is_plat("windows") then
+            on_run(function (target)
+                cmd = "$(buildir)/$(plat)/$(arch)/$(mode)/" .. testname .. ".exe"
+                print("> " .. cmd)
+                os.exec(cmd)
+            end)
+        end
+
         if is_plat("mingw") and is_host("linux") then
             on_run(function (target)
                 cmd = "wine $(buildir)/mingw/x86_64/$(mode)/" .. testname .. ".exe"
