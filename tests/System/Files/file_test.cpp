@@ -28,9 +28,12 @@ TEST_CASE ("is_directory/is_regular") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (is_directory (url_pwd ()));
   CHECK (!is_regular (url_pwd ()));
+  CHECK (!is_symbolic_link (url_pwd ()));
 
-  CHECK (!is_directory (url_pwd () * url ("xmake.lua")));
-  CHECK (is_regular (url_pwd () * url ("xmake.lua")));
+  url xmake_lua= url_pwd () * url ("xmake.lua");
+  CHECK (!is_directory (xmake_lua));
+  CHECK (is_regular (xmake_lua));
+  CHECK (!is_symbolic_link (xmake_lua));
 }
 
 TEST_CASE ("mkdir/rmdir") {

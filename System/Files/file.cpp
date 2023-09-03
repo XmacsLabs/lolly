@@ -65,7 +65,7 @@ is_symbolic_link (url u) {
   string         path= as_string (u);
   tb_file_info_t info;
   if (tb_file_info (as_charp (path), &info)) {
-    return (info.flags | TB_FILE_FLAG_LINK) != 0;
+    return (info.flags & TB_FILE_FLAG_LINK) != 0;
   }
   else {
     return false;
