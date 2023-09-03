@@ -17,6 +17,13 @@ TEST_CASE ("is_directory on Windows") {
 }
 #endif
 
+#if defined(OS_LINUX)
+TEST_CASE ("is_symbolic_link on linux") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+  CHECK (is_symbolic_link (url_system ("/usr/bin/python")));
+}
+#endif
+
 TEST_CASE ("is_directory/is_regular") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (is_directory (url_pwd ()));

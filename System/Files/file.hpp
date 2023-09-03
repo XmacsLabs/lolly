@@ -16,6 +16,7 @@
 
 bool is_directory (url u);
 bool is_regular (url u);
+bool is_symbolic_link (url u);
 
 int file_size (url u);
 
