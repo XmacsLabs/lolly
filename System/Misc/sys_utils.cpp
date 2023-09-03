@@ -13,7 +13,6 @@
 
 #if defined(OS_MINGW) || defined(OS_WIN)
 #include "Windows/win_sys_utils.hpp"
-#include "Windows/win_utf8_compat.hpp"
 #else
 #include "Unix/unix_sys_utils.hpp"
 #endif
