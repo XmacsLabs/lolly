@@ -33,3 +33,8 @@ TEST_CASE ("get_env/set_env") {
   set_env ("SHELL", "/bin/zsh");
   CHECK_EQ (get_env ("SHELL") == "/bin/zsh", true);
 }
+
+TEST_CASE ("get_user_name") {
+  CHECK (N (get_user_name ()) >= 0);
+  // cout << get_user_name () << LF;
+}

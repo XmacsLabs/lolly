@@ -13,7 +13,6 @@
 
 #if defined(OS_MINGW) || defined(OS_WIN)
 #include "Windows/win_sys_utils.hpp"
-#include "Windows/win_utf8_compat.hpp"
 #else
 #include "Unix/unix_sys_utils.hpp"
 #endif
@@ -67,9 +66,15 @@ get_user_login () {
 
 string
 get_user_name () {
-#if OS_MINGW || defined(OS_WIN)
+#if defined(OS_MINGW) || defined(OS_WIN)
   return lolly::win_get_username ();
-#else // Linux and macOS
+#endif
+
+#if defined(OS_WASM)
+  return "wasm_user_name";
+#endif
+
+#if defined(OS_LINUX) || defined(OS_MACOS)
   return unix_get_username ();
 #endif
 }
