@@ -225,7 +225,7 @@ function add_test_target(filepath)
             end)
         end
 
-        if is_plat("windows") then
+        if is_plat("windows") or (is_plat ("mingw") and is_host ("windows")) then
             on_run(function (target)
                 cmd = "$(buildir)/$(plat)/$(arch)/$(mode)/" .. testname .. ".exe"
                 print("> " .. cmd)
