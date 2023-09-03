@@ -16,6 +16,8 @@
 
 bool is_directory (url u);
 
+int file_size (url u);
+
 void mkdir (url u);
 void rmdir (url u);
 

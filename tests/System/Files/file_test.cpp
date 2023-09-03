@@ -29,3 +29,7 @@ TEST_CASE ("mkdir/rmdir") {
   rmdir (test_mkdir);
   CHECK (!is_directory (test_mkdir));
 }
+
+TEST_CASE ("file_size") {
+  CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
+}

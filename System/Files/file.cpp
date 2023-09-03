@@ -14,8 +14,9 @@
 #include "string.hpp"
 #include "tbox/tbox.h"
 
-static bool
-is_directory (string path) {
+bool
+is_directory (url u) {
+  string         path= as_string (u);
   tb_file_info_t info;
   if (tb_file_info (as_charp (path), &info)) {
     switch (info.type) {
@@ -30,10 +31,16 @@ is_directory (string path) {
   }
 }
 
-bool
-is_directory (url name) {
-  string path= as_string (name);
-  return is_directory (path);
+int
+file_size (url u) {
+  string         path= as_string (u);
+  tb_file_info_t info;
+  if (tb_file_info (as_charp (path), &info)) {
+    return info.size;
+  }
+  else {
+    return -1;
+  }
 }
 
 void
