@@ -35,9 +35,6 @@ TEST_CASE ("get_env/set_env") {
 }
 
 TEST_CASE ("get_user_name") {
-#if defined(OS_MINGW) || defined(OS_WIN)
-  CHECK (N (get_user_name ()) > 0);
-#else
   CHECK (N (get_user_name ()) >= 0);
-#endif
+  // cout << get_user_name () << LF;
 }

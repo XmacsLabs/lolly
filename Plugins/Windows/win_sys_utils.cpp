@@ -131,7 +131,7 @@ namespace lolly {
 string
 win_get_username () {
   const int MAX_LEN= 100;
-  char      buffer[MAX_LEN];
+  char      buffer[MAX_LEN]; // it is in UTF-16
   ULONG     len;
   GetUserNameExA (NameDisplay, buffer, &len);
   if (len == 0) return string ("");
