@@ -53,6 +53,35 @@ file_size (url u) {
   }
 }
 
+static tb_long_t
+tb_directory_walk_func (tb_char_t const* path, tb_file_info_t const* info,
+                        tb_cpointer_t priv) {
+  // check
+  tb_assert_and_check_return_val (path && info, TB_DIRECTORY_WALK_CODE_END);
+
+  array<string>* p_arr_result= (array<string>*) priv;
+  (*p_arr_result) << as_string (tail (url_system (string (path))));
+  return TB_DIRECTORY_WALK_CODE_CONTINUE;
+}
+
+array<string>
+read_directory (url u, bool& error_flag) {
+  if (!is_single_path (u)) {
+    error_flag= false;
+    return array<string> ();
+  }
+
+  string        path      = as_string (u);
+  array<string> arr_result= array<string> ();
+  error_flag              = !is_directory (u);
+  if (error_flag) {
+    return arr_result;
+  }
+  tb_directory_walk (as_charp (path), 0, tb_false, tb_directory_walk_func,
+                     &arr_result);
+  return arr_result;
+}
+
 void
 mkdir (url u) {
   string label= u.label ();
