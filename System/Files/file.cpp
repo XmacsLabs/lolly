@@ -14,8 +14,16 @@
 #include "string.hpp"
 #include "tbox/tbox.h"
 
+static bool
+is_single_path (url u) {
+  string label= u.label ();
+  return (label == "") || (label == "concat");
+}
+
 bool
 is_directory (url u) {
+  if (!is_single_path (u)) return false;
+
   string         path= as_string (u);
   tb_file_info_t info;
   if (tb_file_info (as_charp (path), &info)) {
@@ -33,6 +41,8 @@ is_directory (url u) {
 
 int
 file_size (url u) {
+  if (!is_single_path (u)) return -1;
+
   string         path= as_string (u);
   tb_file_info_t info;
   if (tb_file_info (as_charp (path), &info)) {
@@ -46,9 +56,8 @@ file_size (url u) {
 void
 mkdir (url u) {
   string label= u.label ();
-  if (label == "" || label == "none" || label == "root" || label == "wildcard")
-    return;
-  else if (label == "concat") {
+  if (label == "none" || label == "root" || label == "wildcard") return;
+  else if (is_single_path (u)) { // label == "" or label == "concat"
     string path= as_string (u);
     tb_directory_create (as_charp (path));
   }
@@ -61,9 +70,8 @@ mkdir (url u) {
 void
 rmdir (url u) {
   string label= u.label ();
-  if (label == "" || label == "none" || label == "root" || label == "wildcard")
-    return;
-  else if (label == "concat") {
+  if (label == "none" || label == "root" || label == "wildcard") return;
+  else if (is_single_path (u)) {
     string path= as_string (u);
     tb_directory_remove (as_charp (path));
   }
