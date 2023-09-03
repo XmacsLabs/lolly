@@ -15,6 +15,10 @@ url none_url   = url_none ();
 url file_root  = url_root ("file");
 url ftp_root   = url_root ("ftp");
 url wsl_ubuntu = url_system ("\\\\wsl.localhost\\Ubuntu");
+url unix_root  = url_system ("/");
+url unix_tmp   = url_system ("/tmp");
+url unix_tmp_a = url_system ("/tmp/a");
+url abc_url    = url_system ("abc");
 
 TEST_CASE ("is here/parent/ancestor") { CHECK (is_here (url_here ())); }
 
@@ -32,7 +36,24 @@ TEST_CASE ("is_root") {
   CHECK (!is_root (wsl_ubuntu));
   CHECK (is_root (file_root));
   CHECK (!is_root (none_url));
+#if defined(OS_MACOS) || defined(OS_LINUX)
+  CHECK (is_root (unix_root));
+#endif
+  CHECK (!is_root (abc_url));
 }
+
+TEST_CASE ("is_concat") {
+  CHECK (!is_concat (abc_url));
+  CHECK (!is_concat (none_url));
+}
+
+#if defined(OS_MACOS) || defined(OS_LINUX) || defined(OS_WASM)
+TEST_CASE ("is_concat on unix and wasm") {
+  CHECK (!is_concat (unix_root));
+  CHECK (is_concat (unix_tmp));
+  CHECK (is_concat (unix_tmp_a));
+}
+#endif
 
 TEST_CASE ("suffix") {
   // empty suffix should work
