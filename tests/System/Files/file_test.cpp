@@ -17,6 +17,15 @@ TEST_CASE ("is_directory on Windows") {
 }
 #endif
 
+TEST_CASE ("is_directory/is_regular") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+  CHECK (is_directory (url_pwd ()));
+  CHECK (!is_regular (url_pwd ()));
+
+  CHECK (!is_directory (url_pwd () * url ("xmake.lua")));
+  CHECK (is_regular (url_pwd () * url ("xmake.lua")));
+}
+
 TEST_CASE ("mkdir/rmdir") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
 #if defined(OS_WIN) || defined(OS_MINGW)
