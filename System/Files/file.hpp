@@ -18,6 +18,8 @@ bool is_directory (url u);
 
 int file_size (url u);
 
+array<string> read_directory (url u, bool& error_flag);
+
 void mkdir (url u);
 void rmdir (url u);
 

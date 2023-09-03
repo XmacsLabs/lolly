@@ -34,3 +34,9 @@ TEST_CASE ("file_size") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
 }
+
+TEST_CASE ("read_directory") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+  bool flag;
+  CHECK (N (read_directory (url_pwd (), flag)) > 0);
+}
