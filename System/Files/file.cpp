@@ -39,6 +39,25 @@ is_directory (url u) {
   }
 }
 
+bool
+is_regular (url u) {
+  if (!is_single_path (u)) return false;
+
+  string         path= as_string (u);
+  tb_file_info_t info;
+  if (tb_file_info (as_charp (path), &info)) {
+    switch (info.type) {
+    case TB_FILE_TYPE_FILE:
+      return true;
+    default:
+      return false;
+    }
+  }
+  else {
+    return false;
+  }
+}
+
 int
 file_size (url u) {
   if (!is_single_path (u)) return -1;

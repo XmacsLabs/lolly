@@ -15,6 +15,7 @@
 #include "url.hpp"
 
 bool is_directory (url u);
+bool is_regular (url u);
 
 int file_size (url u);
 
