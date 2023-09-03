@@ -73,6 +73,10 @@ read_directory (url u, bool& error_flag) {
 
   string        path      = as_string (u);
   array<string> arr_result= array<string> ();
+  error_flag              = !is_directory (u);
+  if (error_flag) {
+    return arr_result;
+  }
   tb_directory_walk (as_charp (path), 0, tb_false, tb_directory_walk_func,
                      &arr_result);
   return arr_result;

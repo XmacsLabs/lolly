@@ -37,6 +37,10 @@ TEST_CASE ("file_size") {
 
 TEST_CASE ("read_directory") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
-  bool flag;
-  CHECK (N (read_directory (url_pwd (), flag)) > 0);
+  bool flag1= false;
+  CHECK (N (read_directory (url_pwd (), flag1)) > 0);
+  CHECK (!flag1); // no error
+  bool flag2= false;
+  CHECK (N (read_directory (url_system ("no_such_dir"), flag2)) == 0);
+  CHECK (flag2); // error
 }
