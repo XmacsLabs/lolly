@@ -192,10 +192,7 @@ url url_system (string dir, string name);
 url url_standard (string name);
 url url_standard (string dir, string name);
 
-inline url
-url_pwd () {
-  return url_system ("$PWD");
-}
+url url_pwd ();
 
 url url_ramdisc (string contents); // ramdisc with contents contents
 
