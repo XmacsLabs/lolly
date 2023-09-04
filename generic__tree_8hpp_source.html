@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: Kernel/Types/generic_tree.hpp Source File</title>
+<title>Lolly: generic_tree.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -76,7 +77,7 @@ $(function() {
   <div class="headertitle"><div class="title">generic_tree.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="generic__tree_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/******************************************************************************</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * MODULE     : generic_tree.hpp</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * DESCRIPTION: generic objects as trees</span></div>
@@ -91,50 +92,61 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define GENERIC_TREE_H</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="blackbox_8hpp.html">blackbox.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;tree.hpp&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="tree_8hpp.html">tree.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classgeneric__rep.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classgeneric__rep.html">generic_rep</a> : <span class="keyword">public</span> <a class="code hl_class" href="classtree__rep.html">tree_rep</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_class" href="classblackbox.html">blackbox</a> data;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classgeneric__rep.html#a48b8d3153a69f544cd50b1f05178eb02">   20</a></span>  <a class="code hl_class" href="classblackbox.html">blackbox</a> <a class="code hl_variable" href="classgeneric__rep.html#a48b8d3153a69f544cd50b1f05178eb02">data</a>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">inline</span> <a class="code hl_class" href="classgeneric__rep.html">generic_rep</a> (<span class="keyword">const</span> T&amp; x)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      : <a class="code hl_class" href="classtree__rep.html">tree_rep</a> (<a class="code hl_struct" href="structtype__helper.html">type_helper&lt;T&gt;::id</a>), data (close_box&lt;T&gt; (x)) {}</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classtree.html">tree</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classgeneric__rep.html#a1d94ce967ae849e26456c565946c8aff">   22</a></span>  <span class="keyword">inline</span> <a class="code hl_function" href="classgeneric__rep.html#a1d94ce967ae849e26456c565946c8aff">generic_rep</a> (<span class="keyword">const</span> T&amp; x)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      : <a class="code hl_class" href="classtree__rep.html">tree_rep</a> (<a class="code hl_struct" href="structtype__helper.html">type_helper</a>&lt;T&gt;::id), <a class="code hl_variable" href="classgeneric__rep.html#a48b8d3153a69f544cd50b1f05178eb02">data</a> (<a class="code hl_function" href="blackbox_8hpp.html#aa5f996d688958b647fc677dacbca6c0b">close_box</a>&lt;T&gt; (x)) {}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classgeneric__rep.html#a274b977404a53ceb91af64dfd96c9641">   24</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classtree.html">tree</a>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">inline</span> <a class="code hl_class" href="classblackbox.html">blackbox</a></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>as_blackbox (<span class="keyword">const</span> <a class="code hl_class" href="classtree.html">tree</a>&amp; t) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keywordflow">return</span> ((<a class="code hl_class" href="classgeneric__rep.html">generic_rep</a>*) t.rep)-&gt;data;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classtree.html#abf0acee02d192650d69f0856d43e1730">   28</a></span><a class="code hl_function" href="generic__tree_8hpp.html#abf0acee02d192650d69f0856d43e1730">as_blackbox</a> (<span class="keyword">const</span> <a class="code hl_class" href="classtree.html">tree</a>&amp; <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keywordflow">return</span> ((<a class="code hl_class" href="classgeneric__rep.html">generic_rep</a>*) <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a>)-&gt;data;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structconvert__helper.html">   32</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> F&gt; <span class="keyword">struct </span><a class="code hl_struct" href="structconvert__helper.html">convert_helper</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">static</span> <span class="keyword">inline</span> T op (<span class="keyword">const</span> F&amp; x) { <span class="keywordflow">return</span> (T) x; }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structconvert__helper.html#a6a5c281c3aa5120ebb10162b099dd945">   33</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> T <a class="code hl_function" href="structconvert__helper.html#a6a5c281c3aa5120ebb10162b099dd945">op</a> (<span class="keyword">const</span> F&amp; x) { <span class="keywordflow">return</span> (T) x; }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structconvert__helper_3_01tree_00_01F_01_4.html">   36</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> F&gt; <span class="keyword">struct </span><a class="code hl_struct" href="structconvert__helper.html">convert_helper</a>&lt;<a class="code hl_class" href="classtree.html">tree</a>, F&gt; {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="classtree.html">tree</a> op (<span class="keyword">const</span> F&amp; data) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structconvert__helper_3_01tree_00_01F_01_4.html#ada06e47f18768dd31a9105cb8eae2085">   37</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="classtree.html">tree</a> <a class="code hl_function" href="structconvert__helper_3_01tree_00_01F_01_4.html#ada06e47f18768dd31a9105cb8eae2085">op</a> (<span class="keyword">const</span> F&amp; data) {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classtree.html">tree</a> ((<a class="code hl_class" href="classtree__rep.html">tree_rep</a>*) tm_new&lt;generic_rep&gt; (data));</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structconvert__helper_3_01T_00_01tree_01_4.html">   42</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code hl_struct" href="structconvert__helper.html">convert_helper</a>&lt;T, <a class="code hl_class" href="classtree.html">tree</a>&gt; {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">static</span> <span class="keyword">inline</span> T op (<span class="keyword">const</span> <a class="code hl_class" href="classtree.html">tree</a>&amp; t) { <span class="keywordflow">return</span> open_box&lt;T&gt; (as_blackbox (t)); }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structconvert__helper_3_01T_00_01tree_01_4.html#a73de3199051b085a6967eb1c4d1db296">   43</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> T <a class="code hl_function" href="structconvert__helper_3_01T_00_01tree_01_4.html#a73de3199051b085a6967eb1c4d1db296">op</a> (<span class="keyword">const</span> <a class="code hl_class" href="classtree.html">tree</a>&amp; <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>) { <span class="keywordflow">return</span> open_box&lt;T&gt; (<a class="code hl_function" href="generic__tree_8hpp.html#abf0acee02d192650d69f0856d43e1730">as_blackbox</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>)); }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> F&gt;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">inline</span> T</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>as (<span class="keyword">const</span> F&amp; t) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">return</span> <a class="code hl_struct" href="structconvert__helper.html">convert_helper&lt;F, T&gt;::op</a> (t);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="generic__tree_8hpp.html#ae325c8ae4158ad9bfe722b509ff1237c">   48</a></span><a class="code hl_function" href="generic__tree_8hpp.html#ae325c8ae4158ad9bfe722b509ff1237c">as</a> (<span class="keyword">const</span> F&amp; <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="structconvert__helper.html#a6a5c281c3aa5120ebb10162b099dd945">convert_helper&lt;F, T&gt;::op</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">// defined GENERIC_TREE_H</span></div>
 <div class="ttc" id="ablackbox_8hpp_html"><div class="ttname"><a href="blackbox_8hpp.html">blackbox.hpp</a></div></div>
-<div class="ttc" id="aclassblackbox_html"><div class="ttname"><a href="classblackbox.html">blackbox</a></div><div class="ttdef"><b>Definition:</b> blackbox.hpp:25</div></div>
-<div class="ttc" id="aclassgeneric__rep_html"><div class="ttname"><a href="classgeneric__rep.html">generic_rep</a></div><div class="ttdef"><b>Definition:</b> generic_tree.hpp:18</div></div>
-<div class="ttc" id="aclasstree__rep_html"><div class="ttname"><a href="classtree__rep.html">tree_rep</a></div><div class="ttdef"><b>Definition:</b> tree.hpp:95</div></div>
-<div class="ttc" id="aclasstree_html"><div class="ttname"><a href="classtree.html">tree</a></div><div class="ttdef"><b>Definition:</b> tree.hpp:38</div></div>
-<div class="ttc" id="astructconvert__helper_html"><div class="ttname"><a href="structconvert__helper.html">convert_helper</a></div><div class="ttdef"><b>Definition:</b> generic_tree.hpp:32</div></div>
-<div class="ttc" id="astructtype__helper_html"><div class="ttname"><a href="structtype__helper.html">type_helper</a></div><div class="ttdoc">Helper struct for type identification and initialization.</div><div class="ttdef"><b>Definition:</b> basic.hpp:560</div></div>
+<div class="ttc" id="ablackbox_8hpp_html_aa5f996d688958b647fc677dacbca6c0b"><div class="ttname"><a href="blackbox_8hpp.html#aa5f996d688958b647fc677dacbca6c0b">close_box</a></div><div class="ttdeci">blackbox close_box(const T &amp;data)</div><div class="ttdoc">Create a blackbox instance with the given data.</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00123">blackbox.hpp:123</a></div></div>
+<div class="ttc" id="ablackbox__test_8cpp_html_ae6d631320ed189a50f11ed922bc06d7e"><div class="ttname"><a href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a></div><div class="ttdeci">blackbox t[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00042">blackbox_test.cpp:42</a></div></div>
+<div class="ttc" id="aclassblackbox_html"><div class="ttname"><a href="classblackbox.html">blackbox</a></div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00025">blackbox.hpp:25</a></div></div>
+<div class="ttc" id="aclassblackbox_html_a0a468f2364d3a19c145abff297529a64"><div class="ttname"><a href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">blackbox::rep</a></div><div class="ttdeci">blackbox_rep * rep</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00027">blackbox.hpp:27</a></div></div>
+<div class="ttc" id="aclassgeneric__rep_html"><div class="ttname"><a href="classgeneric__rep.html">generic_rep</a></div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00018">generic_tree.hpp:18</a></div></div>
+<div class="ttc" id="aclassgeneric__rep_html_a1d94ce967ae849e26456c565946c8aff"><div class="ttname"><a href="classgeneric__rep.html#a1d94ce967ae849e26456c565946c8aff">generic_rep::generic_rep</a></div><div class="ttdeci">generic_rep(const T &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00022">generic_tree.hpp:22</a></div></div>
+<div class="ttc" id="aclassgeneric__rep_html_a48b8d3153a69f544cd50b1f05178eb02"><div class="ttname"><a href="classgeneric__rep.html#a48b8d3153a69f544cd50b1f05178eb02">generic_rep::data</a></div><div class="ttdeci">blackbox data</div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00020">generic_tree.hpp:20</a></div></div>
+<div class="ttc" id="aclasstree__rep_html"><div class="ttname"><a href="classtree__rep.html">tree_rep</a></div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00095">tree.hpp:95</a></div></div>
+<div class="ttc" id="aclasstree_html"><div class="ttname"><a href="classtree.html">tree</a></div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00038">tree.hpp:38</a></div></div>
+<div class="ttc" id="ageneric__tree_8hpp_html_abf0acee02d192650d69f0856d43e1730"><div class="ttname"><a href="generic__tree_8hpp.html#abf0acee02d192650d69f0856d43e1730">as_blackbox</a></div><div class="ttdeci">blackbox as_blackbox(const tree &amp;t)</div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00028">generic_tree.hpp:28</a></div></div>
+<div class="ttc" id="ageneric__tree_8hpp_html_ae325c8ae4158ad9bfe722b509ff1237c"><div class="ttname"><a href="generic__tree_8hpp.html#ae325c8ae4158ad9bfe722b509ff1237c">as</a></div><div class="ttdeci">T as(const F &amp;t)</div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00048">generic_tree.hpp:48</a></div></div>
+<div class="ttc" id="astructconvert__helper_3_01T_00_01tree_01_4_html_a73de3199051b085a6967eb1c4d1db296"><div class="ttname"><a href="structconvert__helper_3_01T_00_01tree_01_4.html#a73de3199051b085a6967eb1c4d1db296">convert_helper&lt; T, tree &gt;::op</a></div><div class="ttdeci">static T op(const tree &amp;t)</div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00043">generic_tree.hpp:43</a></div></div>
+<div class="ttc" id="astructconvert__helper_3_01tree_00_01F_01_4_html_ada06e47f18768dd31a9105cb8eae2085"><div class="ttname"><a href="structconvert__helper_3_01tree_00_01F_01_4.html#ada06e47f18768dd31a9105cb8eae2085">convert_helper&lt; tree, F &gt;::op</a></div><div class="ttdeci">static tree op(const F &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00037">generic_tree.hpp:37</a></div></div>
+<div class="ttc" id="astructconvert__helper_html"><div class="ttname"><a href="structconvert__helper.html">convert_helper</a></div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00032">generic_tree.hpp:32</a></div></div>
+<div class="ttc" id="astructconvert__helper_html_a6a5c281c3aa5120ebb10162b099dd945"><div class="ttname"><a href="structconvert__helper.html#a6a5c281c3aa5120ebb10162b099dd945">convert_helper::op</a></div><div class="ttdeci">static T op(const F &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00033">generic_tree.hpp:33</a></div></div>
+<div class="ttc" id="astructtype__helper_html"><div class="ttname"><a href="structtype__helper.html">type_helper</a></div><div class="ttdoc">Helper struct for type identification and initialization.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00560">basic.hpp:560</a></div></div>
+<div class="ttc" id="atree_8hpp_html"><div class="ttname"><a href="tree_8hpp.html">tree.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

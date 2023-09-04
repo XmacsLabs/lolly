@@ -1,0 +1,21 @@
+digraph "hashtree_rep&lt; K, V &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="hashtree_rep\< K, V \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="firebrick4",style="solid"];
+  Node2 [label="concrete_struct",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structconcrete__struct.html",tooltip="Structure representing a concrete object with a reference count."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" ref_count" ];
+  Node3 [label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" children" ];
+  Node4 [label="hashmap\< K, hashtree\l\< K, V \> \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" init" ];
+  Node5 -> Node4 [dir="back",color="orange",style="dashed",label=" \< K, hashtree\< K, V \> \>" ];
+  Node5 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" init" ];
+  Node6 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" label" ];
+  Node7 [label="V",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+}

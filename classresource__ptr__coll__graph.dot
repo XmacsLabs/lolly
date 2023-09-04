@@ -1,0 +1,17 @@
+digraph "resource_ptr&lt; R &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="resource_ptr\< R \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" rep" ];
+  Node2 [label="R *",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" instances" ];
+  Node3 [label="hashmap\< string, pointer \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" init" ];
+  Node4 -> Node3 [dir="back",color="orange",style="dashed",label=" \< string, pointer \>" ];
+  Node4 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" init" ];
+  Node5 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+}

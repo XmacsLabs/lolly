@@ -1,0 +1,18 @@
+digraph "promise_rep_int_add"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="promise_rep_int_add",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="promise_rep\< int \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classpromise__rep.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="abstract_struct",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structabstract__struct.html",tooltip="Structure representing an abstract object with a reference count."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" ref_count" ];
+  Node4 [label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="orange",style="dashed",label=" \< int \>" ];
+  Node5 [label="promise_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classpromise__rep.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" x\ny" ];
+}

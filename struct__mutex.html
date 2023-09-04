@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: _mutex Struct Reference</title>
+<title>Lolly: _mutex Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -70,20 +71,110 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct__mutex-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">_mutex Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for _mutex:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct__mutex__coll__graph.png" border="0" usemap="#a__mutex_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a430a5e73b21d70e4f484679bd4646ba1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__mutex.html#a430a5e73b21d70e4f484679bd4646ba1">_mutex</a> ()</td></tr>
+<tr class="separator:a430a5e73b21d70e4f484679bd4646ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ea69f96c74a4a2c83e7ec7fb473c9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__mutex.html#a67ea69f96c74a4a2c83e7ec7fb473c9f">~_mutex</a> ()</td></tr>
+<tr class="separator:a67ea69f96c74a4a2c83e7ec7fb473c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:adf02e1d44a3584105423831f8ae1ee68"><td class="memItemLeft" align="right" valign="top"><a id="adf02e1d44a3584105423831f8ae1ee68" name="adf02e1d44a3584105423831f8ae1ee68"></a>
-pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>rep</b></td></tr>
+<tr class="memitem:adf02e1d44a3584105423831f8ae1ee68"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__mutex.html#adf02e1d44a3584105423831f8ae1ee68">rep</a></td></tr>
 <tr class="separator:adf02e1d44a3584105423831f8ae1ee68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00033">33</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a430a5e73b21d70e4f484679bd4646ba1" name="a430a5e73b21d70e4f484679bd4646ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430a5e73b21d70e4f484679bd4646ba1">&#9670;&#160;</a></span>_mutex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">_mutex::_mutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00035">35</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{ pthread_mutex_init (&amp;<a class="code hl_struct" href="structrep.html">rep</a>, NULL); }</div>
+<div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition:</b> <a href="resource_8hpp_source.html#l00016">resource.hpp:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a67ea69f96c74a4a2c83e7ec7fb473c9f" name="a67ea69f96c74a4a2c83e7ec7fb473c9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ea69f96c74a4a2c83e7ec7fb473c9f">&#9670;&#160;</a></span>~_mutex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">_mutex::~_mutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00036">36</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>{ pthread_mutex_destroy (&amp;<a class="code hl_struct" href="structrep.html">rep</a>); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adf02e1d44a3584105423831f8ae1ee68" name="adf02e1d44a3584105423831f8ae1ee68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf02e1d44a3584105423831f8ae1ee68">&#9670;&#160;</a></span>rep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t _mutex::rep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00034">34</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>Plugins/Unix/unix_sys_utils.cpp</li>
+<li><a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

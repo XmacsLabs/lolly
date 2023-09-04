@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: less_eq_associate Struct Reference</title>
+<title>Lolly: less_eq_associate Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -75,15 +76,63 @@ $(function() {
   <div class="headertitle"><div class="title">less_eq_associate Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="tree_8hpp_source.html">tree.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4bee576f91d98cbc5c74cf17fe0a8ac9"><td class="memItemLeft" align="right" valign="top"><a id="a4bee576f91d98cbc5c74cf17fe0a8ac9" name="a4bee576f91d98cbc5c74cf17fe0a8ac9"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>leq</b> (<a class="el" href="classtree.html">tree</a> &amp;a, <a class="el" href="classtree.html">tree</a> &amp;b)</td></tr>
+<tr class="memitem:a4bee576f91d98cbc5c74cf17fe0a8ac9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structless__eq__associate.html#a4bee576f91d98cbc5c74cf17fe0a8ac9">leq</a> (<a class="el" href="classtree.html">tree</a> &amp;a, <a class="el" href="classtree.html">tree</a> &amp;<a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
 <tr class="separator:a4bee576f91d98cbc5c74cf17fe0a8ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="tree_8hpp_source.html#l00307">307</a> of file <a class="el" href="tree_8hpp_source.html">tree.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4bee576f91d98cbc5c74cf17fe0a8ac9" name="a4bee576f91d98cbc5c74cf17fe0a8ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bee576f91d98cbc5c74cf17fe0a8ac9">&#9670;&#160;</a></span>leq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool less_eq_associate::leq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tree_8hpp_source.html#l00308">308</a> of file <a class="el" href="tree_8hpp_source.html">tree.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  308</span>                                            {</div>
+<div class="line"><span class="lineno">  309</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="tree_8hpp.html#a117f06a1b9eb96b88c2ba8cb47c0cc80">as_string</a> (a[0]) &lt;= <a class="code hl_function" href="tree_8hpp.html#a117f06a1b9eb96b88c2ba8cb47c0cc80">as_string</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[0]);</div>
+<div class="line"><span class="lineno">  310</span>  }</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a8d44fd90fb43432ab6b2957b83f6c486"><div class="ttname"><a href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a></div><div class="ttdeci">blackbox b[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00043">blackbox_test.cpp:43</a></div></div>
+<div class="ttc" id="atree_8hpp_html_a117f06a1b9eb96b88c2ba8cb47c0cc80"><div class="ttname"><a href="tree_8hpp.html#a117f06a1b9eb96b88c2ba8cb47c0cc80">as_string</a></div><div class="ttdeci">string as_string(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00295">tree.hpp:295</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>Kernel/Types/<a class="el" href="tree_8hpp_source.html">tree.hpp</a></li>
+<li><a class="el" href="tree_8hpp_source.html">tree.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

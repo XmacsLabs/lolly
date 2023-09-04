@@ -1,0 +1,12 @@
+digraph "iterator_rep&lt; T &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="iterator_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="An abstract base class for iterator implementation."];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="abstract_struct",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structabstract__struct.html",tooltip="Structure representing an abstract object with a reference count."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" ref_count" ];
+  Node3 [label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+}

@@ -1,0 +1,15 @@
+digraph "hashset_rep&lt; T &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="hashset_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="The hashset_rep class represents an entry in a hash set."];
+  Node2 -> Node1 [dir="back",color="firebrick4",style="solid"];
+  Node2 [label="concrete_struct",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structconcrete__struct.html",tooltip="Structure representing a concrete object with a reference count."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" ref_count" ];
+  Node3 [label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" max\nn\nsize" ];
+  Node4 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" a" ];
+  Node4 [label="list\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+}

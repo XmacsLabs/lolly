@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: observer Class Reference</title>
+<title>Lolly: observer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -76,12 +77,13 @@ $(function() {
   <div class="headertitle"><div class="title">observer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="observer_8hpp_source.html">observer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a378f0d022671adf2bf73ebe925ad6952"><td class="memItemLeft" align="right" valign="top"><a id="a378f0d022671adf2bf73ebe925ad6952" name="a378f0d022671adf2bf73ebe925ad6952"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ABSTRACT_NULL</b> (<a class="el" href="classobserver.html">observer</a>)</td></tr>
-<tr class="memdesc:a378f0d022671adf2bf73ebe925ad6952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="memitem:a378f0d022671adf2bf73ebe925ad6952"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver.html#a378f0d022671adf2bf73ebe925ad6952">ABSTRACT_NULL</a> (<a class="el" href="classobserver.html">observer</a>)</td></tr>
+<tr class="memdesc:a378f0d022671adf2bf73ebe925ad6952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="separator:a378f0d022671adf2bf73ebe925ad6952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
@@ -96,9 +98,33 @@ Friends</h2></td></tr>
 <tr class="memdesc:a398942dd0cdb35bd52556696b9054987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash function for observer.  <br /></td></tr>
 <tr class="separator:a398942dd0cdb35bd52556696b9054987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00111">111</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a378f0d022671adf2bf73ebe925ad6952" name="a378f0d022671adf2bf73ebe925ad6952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378f0d022671adf2bf73ebe925ad6952">&#9670;&#160;</a></span>ABSTRACT_NULL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">observer::ABSTRACT_NULL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classobserver.html">observer</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a398942dd0cdb35bd52556696b9054987" name="a398942dd0cdb35bd52556696b9054987"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a398942dd0cdb35bd52556696b9054987">&#9670;&#160;</a></span>hash</h2>
+<a id="ab484eaefddc92302c3dcebd1e502fb72" name="ab484eaefddc92302c3dcebd1e502fb72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab484eaefddc92302c3dcebd1e502fb72">&#9670;&#160;</a></span>operator==</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,11 +133,21 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int hash </td>
+          <td class="memname">bool operator== </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classobserver.html">observer</a>&#160;</td>
-          <td class="paramname"><em>o1</em></td><td>)</td>
+          <td class="paramname"><em>o1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classobserver.html">observer</a>&#160;</td>
+          <td class="paramname"><em>o2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -121,15 +157,21 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hash function for observer. </p>
+<p>Equality operator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">o1</td><td>The observer. </td></tr>
+    <tr><td class="paramname">o1</td><td>The first observer. </td></tr>
+    <tr><td class="paramname">o2</td><td>The second observer. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The hash value for the observer. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the observers are equal, false otherwise. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00124">124</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                           {</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span> o1.rep == o2.rep;</div>
+<div class="line"><span class="lineno">  126</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a30f9295681614139522e2966c620e17e" name="a30f9295681614139522e2966c620e17e"></a>
@@ -176,10 +218,15 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the observers are not equal, false otherwise. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00134">134</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                                                           {</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">return</span> o1.rep != o2.rep;</div>
+<div class="line"><span class="lineno">  136</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ab484eaefddc92302c3dcebd1e502fb72" name="ab484eaefddc92302c3dcebd1e502fb72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab484eaefddc92302c3dcebd1e502fb72">&#9670;&#160;</a></span>operator==</h2>
+<a id="a398942dd0cdb35bd52556696b9054987" name="a398942dd0cdb35bd52556696b9054987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398942dd0cdb35bd52556696b9054987">&#9670;&#160;</a></span>hash</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,21 +235,11 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool operator== </td>
+          <td class="memname">int hash </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classobserver.html">observer</a>&#160;</td>
-          <td class="paramname"><em>o1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>o1</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classobserver.html">observer</a>&#160;</td>
-          <td class="paramname"><em>o2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -212,20 +249,24 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Equality operator. </p>
+<p>Hash function for observer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">o1</td><td>The first observer. </td></tr>
-    <tr><td class="paramname">o2</td><td>The second observer. </td></tr>
+    <tr><td class="paramname">o1</td><td>The observer. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the observers are equal, false otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The hash value for the observer. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00143">143</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>{ <span class="keywordflow">return</span> <a class="code hl_friend" href="classobserver.html#a398942dd0cdb35bd52556696b9054987">hash</a> ((<a class="code hl_typedef" href="basic_8hpp.html#a4f8e3c8dc03b1c750da13bd49ce4c439">pointer</a>) o1.rep); }</div>
+<div class="ttc" id="abasic_8hpp_html_a4f8e3c8dc03b1c750da13bd49ce4c439"><div class="ttname"><a href="basic_8hpp.html#a4f8e3c8dc03b1c750da13bd49ce4c439">pointer</a></div><div class="ttdeci">void * pointer</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00034">basic.hpp:34</a></div></div>
+<div class="ttc" id="aclassobserver_html_a398942dd0cdb35bd52556696b9054987"><div class="ttname"><a href="classobserver.html#a398942dd0cdb35bd52556696b9054987">observer::hash</a></div><div class="ttdeci">friend int hash(observer o1)</div><div class="ttdoc">Hash function for observer.</div><div class="ttdef"><b>Definition:</b> <a href="observer_8hpp_source.html#l00143">observer.hpp:143</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Kernel/Abstractions/<a class="el" href="observer_8hpp_source.html">observer.hpp</a></li>
+<li><a class="el" href="observer_8hpp_source.html">observer.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

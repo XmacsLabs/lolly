@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['developing_20on_20gnu_2flinux_0',['Developing on GNU/Linux',['../md_docs_guide_Develop_on_Linux.html',1,'']]]
+  ['contributing_0',['Contributing',['../md_CONTRIBUTING.html',1,'']]],
+  ['customization_1',['Customization',['../md_doxygen_awesome_css_docs_customization.html',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: tests/System/IO/tm_ostream_test.cpp File Reference</title>
+<title>Lolly: tm_ostream_test.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,35 +81,371 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;doctest/doctest.h&quot;</code><br />
-<code>#include &quot;string.hpp&quot;</code><br />
-<code>#include &quot;tm_ostream.hpp&quot;</code><br />
-</div><table class="memberdecls">
+<code>#include &quot;<a class="el" href="string_8hpp_source.html">string.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tm__ostream_8hpp_source.html">tm_ostream.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for tm_ostream_test.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="tm__ostream__test_8cpp__incl.png" border="0" usemap="#atm__ostream__test_8cpp" alt=""/></div>
+</div>
+</div>
+<p><a href="tm__ostream__test_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a623b8690a262536536a43eab2d7df03d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tm__ostream__test_8cpp.html#a623b8690a262536536a43eab2d7df03d">DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</a></td></tr>
+<tr class="separator:a623b8690a262536536a43eab2d7df03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae7492926e19f6321efb6977a846c87e6"><td class="memItemLeft" align="right" valign="top"><a id="ae7492926e19f6321efb6977a846c87e6" name="ae7492926e19f6321efb6977a846c87e6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>test_same</b> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;a, <a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;b)</td></tr>
+<tr class="memitem:ae7492926e19f6321efb6977a846c87e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;a, <a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;<a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
 <tr class="separator:ae7492926e19f6321efb6977a846c87e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1a5dd539916969a59455add6b23c3a2"><td class="memItemLeft" align="right" valign="top"><a id="ab1a5dd539916969a59455add6b23c3a2" name="ab1a5dd539916969a59455add6b23c3a2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>test_same</b> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;a, <a class="el" href="classstring.html">string</a> b)</td></tr>
+<tr class="memitem:ab1a5dd539916969a59455add6b23c3a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tm__ostream__test_8cpp.html#ab1a5dd539916969a59455add6b23c3a2">test_same</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;a, <a class="el" href="classstring.html">string</a> <a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
 <tr class="separator:ab1a5dd539916969a59455add6b23c3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a704343fc672aeb929ddf299a6c6f671b"><td class="memItemLeft" align="right" valign="top"><a id="a704343fc672aeb929ddf299a6c6f671b" name="a704343fc672aeb929ddf299a6c6f671b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;function is_writable&quot;)</td></tr>
+<tr class="memitem:a704343fc672aeb929ddf299a6c6f671b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tm__ostream__test_8cpp.html#a704343fc672aeb929ddf299a6c6f671b">TEST_CASE</a> (&quot;function is_writable&quot;)</td></tr>
 <tr class="separator:a704343fc672aeb929ddf299a6c6f671b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f6cfcbb3873c889dda1339ac3295b0f"><td class="memItemLeft" align="right" valign="top"><a id="a9f6cfcbb3873c889dda1339ac3295b0f" name="a9f6cfcbb3873c889dda1339ac3295b0f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;function write and unbuffer&quot;)</td></tr>
+<tr class="memitem:a9f6cfcbb3873c889dda1339ac3295b0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tm__ostream__test_8cpp.html#a9f6cfcbb3873c889dda1339ac3295b0f">TEST_CASE</a> (&quot;function write and unbuffer&quot;)</td></tr>
 <tr class="separator:a9f6cfcbb3873c889dda1339ac3295b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a101559efe7dd78f82546cbfd669ef5e2"><td class="memItemLeft" align="right" valign="top"><a id="a101559efe7dd78f82546cbfd669ef5e2" name="a101559efe7dd78f82546cbfd669ef5e2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;function redirect&quot;)</td></tr>
+<tr class="memitem:a101559efe7dd78f82546cbfd669ef5e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tm__ostream__test_8cpp.html#a101559efe7dd78f82546cbfd669ef5e2">TEST_CASE</a> (&quot;function redirect&quot;)</td></tr>
 <tr class="separator:a101559efe7dd78f82546cbfd669ef5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d0584694ad854925936741458132d26"><td class="memItemLeft" align="right" valign="top"><a id="a3d0584694ad854925936741458132d26" name="a3d0584694ad854925936741458132d26"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;operator &lt;&lt;&quot;)</td></tr>
+<tr class="memitem:a3d0584694ad854925936741458132d26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tm__ostream__test_8cpp.html#a3d0584694ad854925936741458132d26">TEST_CASE</a> (&quot;operator &lt;&lt;&quot;)</td></tr>
 <tr class="separator:a3d0584694ad854925936741458132d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>GPLv3</dd></dl>
 <p>A unitest for <a class="el" href="classtm__ostream.html">tm_ostream</a>. </p><dl class="section author"><dt>Author</dt><dd>Paradisuman </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023 </dd></dl>
-</div></div><!-- contents -->
+
+<p class="definition">Definition in file <a class="el" href="tm__ostream__test_8cpp_source.html">tm_ostream_test.cpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a623b8690a262536536a43eab2d7df03d" name="a623b8690a262536536a43eab2d7df03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a623b8690a262536536a43eab2d7df03d">&#9670;&#160;</a></span>DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tm__ostream__test_8cpp_source.html#l00008">8</a> of file <a class="el" href="tm__ostream__test_8cpp_source.html">tm_ostream_test.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ae7492926e19f6321efb6977a846c87e6" name="ae7492926e19f6321efb6977a846c87e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7492926e19f6321efb6977a846c87e6">&#9670;&#160;</a></span>test_same() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_same </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tm__ostream__test_8cpp_source.html#l00015">15</a> of file <a class="el" href="tm__ostream__test_8cpp_source.html">tm_ostream_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                                         {</div>
+<div class="line"><span class="lineno">   16</span>  <span class="keywordtype">string</span> sa= a.<a class="code hl_function" href="classtm__ostream.html#a08f04640d59166f3d3715248d83bb1c5">unbuffer</a> ();</div>
+<div class="line"><span class="lineno">   17</span>  <span class="keywordtype">string</span> sb= <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>.unbuffer ();</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>  <span class="keywordflow">return</span> sa == sb;</div>
+<div class="line"><span class="lineno">   20</span>}</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a8d44fd90fb43432ab6b2957b83f6c486"><div class="ttname"><a href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a></div><div class="ttdeci">blackbox b[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00043">blackbox_test.cpp:43</a></div></div>
+<div class="ttc" id="aclasstm__ostream_html_a08f04640d59166f3d3715248d83bb1c5"><div class="ttname"><a href="classtm__ostream.html#a08f04640d59166f3d3715248d83bb1c5">tm_ostream::unbuffer</a></div><div class="ttdeci">string unbuffer()</div><div class="ttdef"><b>Definition:</b> <a href="tm__ostream_8cpp_source.html#l00213">tm_ostream.cpp:213</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab1a5dd539916969a59455add6b23c3a2" name="ab1a5dd539916969a59455add6b23c3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a5dd539916969a59455add6b23c3a2">&#9670;&#160;</a></span>test_same() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool test_same </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tm__ostream__test_8cpp_source.html#l00023">23</a> of file <a class="el" href="tm__ostream__test_8cpp_source.html">tm_ostream_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                                    {</div>
+<div class="line"><span class="lineno">   24</span>  <span class="keywordtype">string</span> sa= a.<a class="code hl_function" href="classtm__ostream.html#a08f04640d59166f3d3715248d83bb1c5">unbuffer</a> ();</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>  <span class="keywordflow">return</span> sa == <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>;</div>
+<div class="line"><span class="lineno">   27</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a704343fc672aeb929ddf299a6c6f671b" name="a704343fc672aeb929ddf299a6c6f671b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704343fc672aeb929ddf299a6c6f671b">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;function is_writable&quot;           &#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tm__ostream__test_8cpp_source.html#l00029">29</a> of file <a class="el" href="tm__ostream__test_8cpp_source.html">tm_ostream_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                   {</div>
+<div class="line"><span class="lineno">   30</span>  <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">   31</span>  CHECK (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>-&gt;is_writable () == <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>.buffer ();</div>
+<div class="line"><span class="lineno">   34</span>  CHECK (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>-&gt;is_writable () == <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   35</span>}</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_ae6d631320ed189a50f11ed922bc06d7e"><div class="ttname"><a href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a></div><div class="ttdeci">blackbox t[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00042">blackbox_test.cpp:42</a></div></div>
+<div class="ttc" id="aclasstm__ostream_html"><div class="ttname"><a href="classtm__ostream.html">tm_ostream</a></div><div class="ttdef"><b>Definition:</b> <a href="tm__ostream_8hpp_source.html#l00035">tm_ostream.hpp:35</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9f6cfcbb3873c889dda1339ac3295b0f" name="a9f6cfcbb3873c889dda1339ac3295b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f6cfcbb3873c889dda1339ac3295b0f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;function write and unbuffer&quot;          &#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tm__ostream__test_8cpp_source.html#l00037">37</a> of file <a class="el" href="tm__ostream__test_8cpp_source.html">tm_ostream_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                                          {</div>
+<div class="line"><span class="lineno">   38</span>  <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>.buffer ();</div>
+<div class="line"><span class="lineno">   41</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>-&gt;write (<span class="stringliteral">&quot;abc&quot;</span>);</div>
+<div class="line"><span class="lineno">   42</span>  CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>, <span class="stringliteral">&quot;abc&quot;</span>));</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>.buffer ();</div>
+<div class="line"><span class="lineno">   45</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>-&gt;write (<span class="stringliteral">&quot;abc&quot;</span>);</div>
+<div class="line"><span class="lineno">   46</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>-&gt;write (<span class="stringliteral">&quot;1234&quot;</span>);</div>
+<div class="line"><span class="lineno">   47</span>  CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>, <span class="stringliteral">&quot;abc1234&quot;</span>));</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+<div class="ttc" id="atm__ostream__test_8cpp_html_ae7492926e19f6321efb6977a846c87e6"><div class="ttname"><a href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a></div><div class="ttdeci">bool test_same(tm_ostream &amp;a, tm_ostream &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="tm__ostream__test_8cpp_source.html#l00015">tm_ostream_test.cpp:15</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a101559efe7dd78f82546cbfd669ef5e2" name="a101559efe7dd78f82546cbfd669ef5e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a101559efe7dd78f82546cbfd669ef5e2">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;function redirect&quot;         &#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tm__ostream__test_8cpp_source.html#l00050">50</a> of file <a class="el" href="tm__ostream__test_8cpp_source.html">tm_ostream_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                {</div>
+<div class="line"><span class="lineno">   51</span>  <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>  SUBCASE (<span class="stringliteral">&quot;redirect itself&quot;</span>) {</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keyword">auto</span> tem= <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">   55</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>.redirect (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>);</div>
+<div class="line"><span class="lineno">   56</span>    CHECK (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a> == tem.rep);</div>
+<div class="line"><span class="lineno">   57</span>  }</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  SUBCASE (<span class="stringliteral">&quot;redirect others&quot;</span>) {</div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>;</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>.redirect (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    CHECK (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a> == <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a>);</div>
+<div class="line"><span class="lineno">   64</span>  }</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a5e32bde843553ec52acf98706369244a"><div class="ttname"><a href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a></div><div class="ttdeci">blackbox t2</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00030">blackbox_test.cpp:30</a></div></div>
+<div class="ttc" id="aclassblackbox_html_a0a468f2364d3a19c145abff297529a64"><div class="ttname"><a href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">blackbox::rep</a></div><div class="ttdeci">blackbox_rep * rep</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00027">blackbox.hpp:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3d0584694ad854925936741458132d26" name="a3d0584694ad854925936741458132d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0584694ad854925936741458132d26">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;operator &lt;&lt;&quot;        &#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tm__ostream__test_8cpp_source.html#l00067">67</a> of file <a class="el" href="tm__ostream__test_8cpp_source.html">tm_ostream_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                          {</div>
+<div class="line"><span class="lineno">   68</span>  <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>;</div>
+<div class="line"><span class="lineno">   69</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>.buffer ();</div>
+<div class="line"><span class="lineno">   70</span>  <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>;</div>
+<div class="line"><span class="lineno">   71</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>.buffer ();</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>  SUBCASE (<span class="stringliteral">&quot;test bool&quot;</span>) {</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   75</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   76</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;true&quot;</span>));</div>
+<div class="line"><span class="lineno">   77</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;false&quot;</span>));</div>
+<div class="line"><span class="lineno">   78</span>  }</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>  SUBCASE (<span class="stringliteral">&quot;test char&quot;</span>) {</div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordtype">char</span> val = <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordtype">char</span> val2= <span class="charliteral">&#39;1&#39;</span>;</div>
+<div class="line"><span class="lineno">   83</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; val2;</div>
+<div class="line"><span class="lineno">   85</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;A&quot;</span>));</div>
+<div class="line"><span class="lineno">   86</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;1&quot;</span>));</div>
+<div class="line"><span class="lineno">   87</span>  }</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  SUBCASE (<span class="stringliteral">&quot;test short&quot;</span>) {</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordtype">short</span> val= 123;</div>
+<div class="line"><span class="lineno">   91</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">   92</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;123&quot;</span>));</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordtype">short</span> val_neg= -123;</div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; val_neg;</div>
+<div class="line"><span class="lineno">   96</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;-123&quot;</span>));</div>
+<div class="line"><span class="lineno">   97</span>  }</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>  SUBCASE (<span class="stringliteral">&quot;test float&quot;</span>) {</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordtype">float</span> val= 3.14f;</div>
+<div class="line"><span class="lineno">  101</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  102</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;3.14&quot;</span>));</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordtype">float</span> val_neg= -3.14f;</div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; val_neg;</div>
+<div class="line"><span class="lineno">  106</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;-3.14&quot;</span>));</div>
+<div class="line"><span class="lineno">  107</span>  }</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>  SUBCASE (<span class="stringliteral">&quot;test double&quot;</span>) {</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordtype">double</span> val= 3.14159265;</div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  112</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;3.14159&quot;</span>));</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordtype">double</span> val_neg= -3.14159265;</div>
+<div class="line"><span class="lineno">  115</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; val_neg;</div>
+<div class="line"><span class="lineno">  116</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;-3.14159&quot;</span>));</div>
+<div class="line"><span class="lineno">  117</span>  }</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>  SUBCASE (<span class="stringliteral">&quot;test int&quot;</span>) {</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordtype">int</span> val= 1000;</div>
+<div class="line"><span class="lineno">  121</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  122</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;1000&quot;</span>));</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordtype">int</span> val_neg= -1000;</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; val_neg;</div>
+<div class="line"><span class="lineno">  126</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;-1000&quot;</span>));</div>
+<div class="line"><span class="lineno">  127</span>  }</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>  SUBCASE (<span class="stringliteral">&quot;test unsigned int&quot;</span>) {</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> val= 2000;</div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  132</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;2000&quot;</span>));</div>
+<div class="line"><span class="lineno">  133</span>  }</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>  SUBCASE (<span class="stringliteral">&quot;test long&quot;</span>) {</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordtype">long</span> val= 3000000L;</div>
+<div class="line"><span class="lineno">  137</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  138</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;3000000&quot;</span>));</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordtype">long</span> val_neg= -3000000L;</div>
+<div class="line"><span class="lineno">  141</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; val_neg;</div>
+<div class="line"><span class="lineno">  142</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;-3000000&quot;</span>));</div>
+<div class="line"><span class="lineno">  143</span>  }</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>  SUBCASE (<span class="stringliteral">&quot;test unsigned long&quot;</span>) {</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> val= 4000000UL;</div>
+<div class="line"><span class="lineno">  147</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  148</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;4000000&quot;</span>));</div>
+<div class="line"><span class="lineno">  149</span>  }</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>  SUBCASE (<span class="stringliteral">&quot;test long long int&quot;</span>) {</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> val= 50000000000LL;</div>
+<div class="line"><span class="lineno">  153</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  154</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;50000000000&quot;</span>));</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> val_neg= -50000000000LL;</div>
+<div class="line"><span class="lineno">  157</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; val_neg;</div>
+<div class="line"><span class="lineno">  158</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;-50000000000&quot;</span>));</div>
+<div class="line"><span class="lineno">  159</span>  }</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>  SUBCASE (<span class="stringliteral">&quot;test unsigned long long int&quot;</span>) {</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> val= 60000000000ULL;</div>
+<div class="line"><span class="lineno">  163</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  164</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;60000000000&quot;</span>));</div>
+<div class="line"><span class="lineno">  165</span>  }</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>  SUBCASE (<span class="stringliteral">&quot;test long double&quot;</span>) {</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordtype">long</span> <span class="keywordtype">double</span> val= 3.141592653589793238L;</div>
+<div class="line"><span class="lineno">  169</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  170</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;3.14159&quot;</span>));</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordtype">long</span> <span class="keywordtype">double</span> val_neg= -3.141592653589793238L;</div>
+<div class="line"><span class="lineno">  173</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a> &lt;&lt; val_neg;</div>
+<div class="line"><span class="lineno">  174</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>, <span class="stringliteral">&quot;-3.14159&quot;</span>));</div>
+<div class="line"><span class="lineno">  175</span>  }</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>  SUBCASE (<span class="stringliteral">&quot;test const char*&quot;</span>) {</div>
+<div class="line"><span class="lineno">  178</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* val= <span class="stringliteral">&quot;Hello, world!&quot;</span>;</div>
+<div class="line"><span class="lineno">  179</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  180</span>    CHECK (<a class="code hl_function" href="tm__ostream__test_8cpp.html#ae7492926e19f6321efb6977a846c87e6">test_same</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <span class="stringliteral">&quot;Hello, world!&quot;</span>));</div>
+<div class="line"><span class="lineno">  181</span>  }</div>
+<div class="line"><span class="lineno">  182</span>}</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a18b5f54faeb11f10fb26a4c937c07319"><div class="ttname"><a href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a></div><div class="ttdeci">blackbox t1</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00029">blackbox_test.cpp:29</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: hashfunc&lt; T, U &gt; Class Template Reference</title>
+<title>Lolly: hashfunc&lt; T, U &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -70,6 +71,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classhashfunc-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">hashfunc&lt; T, U &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -79,6 +81,18 @@ $(function() {
  <a href="classhashfunc.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="hashfunc_8hpp_source.html">hashfunc.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aacc605afbe4588d5a29e202f207c33e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashfunc.html#aacc605afbe4588d5a29e202f207c33e8">CONCRETE_TEMPLATE_2</a> (<a class="el" href="classhashfunc.html">hashfunc</a>, T, U)</td></tr>
+<tr class="separator:aacc605afbe4588d5a29e202f207c33e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3596b6acb0c930b476e8e09c2c46b711"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashfunc.html#a3596b6acb0c930b476e8e09c2c46b711">hashfunc</a> (U(*func)(T), U init)</td></tr>
+<tr class="memdesc:a3596b6acb0c930b476e8e09c2c46b711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for hashfunc.  <br /></td></tr>
+<tr class="separator:a3596b6acb0c930b476e8e09c2c46b711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35538491209ccb6cdaa1b45c66ae92ec"><td class="memItemLeft" align="right" valign="top">U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashfunc.html#a35538491209ccb6cdaa1b45c66ae92ec">operator[]</a> (T x)</td></tr>
+<tr class="memdesc:a35538491209ccb6cdaa1b45c66ae92ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the hash function to the given input.  <br /></td></tr>
+<tr class="separator:a35538491209ccb6cdaa1b45c66ae92ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T, class U&gt;<br />
 class hashfunc&lt; T, U &gt;</div><p>A generic hash function class that uses a concrete implementation of a hash function. </p>
@@ -89,8 +103,149 @@ class hashfunc&lt; T, U &gt;</div><p>A generic hash function class that uses a c
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>Kernel/Containers/<a class="el" href="hashfunc_8hpp_source.html">hashfunc.hpp</a></li>
+
+<p class="definition">Definition at line <a class="el" href="hashfunc_8hpp_source.html#l00044">44</a> of file <a class="el" href="hashfunc_8hpp_source.html">hashfunc.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3596b6acb0c930b476e8e09c2c46b711" name="a3596b6acb0c930b476e8e09c2c46b711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3596b6acb0c930b476e8e09c2c46b711">&#9670;&#160;</a></span>hashfunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhashfunc.html">hashfunc</a>&lt; T, U &gt;<a class="el" href="classhashfunc.html">::hashfunc</a> </td>
+          <td>(</td>
+          <td class="paramtype">U(*)(T)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">U&#160;</td>
+          <td class="paramname"><em>init</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for hashfunc. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>A pointer to the hash function to be used. </td></tr>
+    <tr><td class="paramname">init</td><td>The initial value for the hash map. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="hashfunc_8hpp_source.html#l00052">52</a> of file <a class="el" href="hashfunc_8hpp_source.html">hashfunc.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>      : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a>&lt;<a class="code hl_class" href="classhashfunc__rep.html">hashfunc_rep&lt;T, U&gt;</a> &gt; (func, init)) {}</div>
+<div class="ttc" id="aclasshashfunc__rep_html"><div class="ttname"><a href="classhashfunc__rep.html">hashfunc_rep</a></div><div class="ttdoc">A concrete implementation of a hash function for a given type.</div><div class="ttdef"><b>Definition:</b> <a href="hashfunc_8hpp_source.html#l00018">hashfunc.hpp:18</a></div></div>
+<div class="ttc" id="afast__alloc_8hpp_html_a8c09c4a1ed33efc95abda66d3b5a7231"><div class="ttname"><a href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a></div><div class="ttdeci">C * tm_new()</div><div class="ttdef"><b>Definition:</b> <a href="fast__alloc_8hpp_source.html#l00085">fast_alloc.hpp:85</a></div></div>
+<div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition:</b> <a href="resource_8hpp_source.html#l00016">resource.hpp:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aacc605afbe4588d5a29e202f207c33e8" name="aacc605afbe4588d5a29e202f207c33e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc605afbe4588d5a29e202f207c33e8">&#9670;&#160;</a></span>CONCRETE_TEMPLATE_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhashfunc.html">hashfunc</a>&lt; T, U &gt;::CONCRETE_TEMPLATE_2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhashfunc.html">hashfunc</a>&lt; T, U &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">U&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35538491209ccb6cdaa1b45c66ae92ec" name="a35538491209ccb6cdaa1b45c66ae92ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35538491209ccb6cdaa1b45c66ae92ec">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">U <a class="el" href="classhashfunc.html">hashfunc</a>&lt; T, U &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies the hash function to the given input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The input value to be hashed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The output of the hash function for the given input. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="hashfunc_8hpp_source.html#l00060">60</a> of file <a class="el" href="hashfunc_8hpp_source.html">hashfunc.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>-&gt;apply (x); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="hashfunc_8hpp_source.html">hashfunc.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

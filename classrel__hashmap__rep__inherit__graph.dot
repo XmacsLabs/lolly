@@ -1,0 +1,10 @@
+digraph "rel_hashmap_rep&lt; T, U &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="rel_hashmap_rep\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="firebrick4",style="solid"];
+  Node2 [label="concrete_struct",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structconcrete__struct.html",tooltip="Structure representing a concrete object with a reference count."];
+}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: Kernel/Containers/array.hpp File Reference</title>
+<title>Lolly: array.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -81,7 +82,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="basic_8hpp_source.html">basic.hpp</a>&quot;</code><br />
-<code>#include &quot;array.ipp&quot;</code><br />
+<code>#include &quot;<a class="el" href="array_8ipp_source.html">array.ipp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for array.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="array_8hpp__incl.png" border="0" usemap="#aarray_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="array_8hpp__dep__incl.png" border="0" usemap="#aarray_8hppdep" alt=""/></div>
+</div>
 </div>
 <p><a href="array_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -96,8 +107,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ae651af7bb4896e16cad3623826bb0ee4"><td class="memItemLeft" align="right" valign="top"><a id="ae651af7bb4896e16cad3623826bb0ee4" name="ae651af7bb4896e16cad3623826bb0ee4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TMPL</b>&#160;&#160;&#160;template &lt;class T&gt;</td></tr>
+<tr class="memitem:ae651af7bb4896e16cad3623826bb0ee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4">TMPL</a>&#160;&#160;&#160;template &lt;class T&gt;</td></tr>
 <tr class="separator:ae651af7bb4896e16cad3623826bb0ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -114,63 +124,133 @@ Functions</h2></td></tr>
 <tr class="memitem:ac2e421cbe345379a86882b1a804a8391"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#ac2e421cbe345379a86882b1a804a8391">copy</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; x)</td></tr>
 <tr class="memdesc:ac2e421cbe345379a86882b1a804a8391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of an array.  <br /></td></tr>
 <tr class="separator:ac2e421cbe345379a86882b1a804a8391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5604cc0fc2670e83608377c263f305f4"><td class="memItemLeft" align="right" valign="top"><a id="a5604cc0fc2670e83608377c263f305f4" name="a5604cc0fc2670e83608377c263f305f4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CONCRETE_TEMPLATE_CODE</b> (<a class="el" href="classarray.html">array</a>, class, T)</td></tr>
+<tr class="memitem:a5604cc0fc2670e83608377c263f305f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a5604cc0fc2670e83608377c263f305f4">CONCRETE_TEMPLATE_CODE</a> (<a class="el" href="classarray.html">array</a>, class, T)</td></tr>
 <tr class="separator:a5604cc0fc2670e83608377c263f305f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac55a9d98bb99af05d9ab3b8a684284a6"><td class="memItemLeft" align="right" valign="top"><a id="ac55a9d98bb99af05d9ab3b8a684284a6" name="ac55a9d98bb99af05d9ab3b8a684284a6"></a>
-TMPL int&#160;</td><td class="memItemRight" valign="bottom"><b>N</b> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
-<tr class="separator:ac55a9d98bb99af05d9ab3b8a684284a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63ef095a8a2694bc40f4a00e29e58933"><td class="memItemLeft" align="right" valign="top"><a id="a63ef095a8a2694bc40f4a00e29e58933" name="a63ef095a8a2694bc40f4a00e29e58933"></a>
-TMPL T *&#160;</td><td class="memItemRight" valign="bottom"><b>A</b> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
-<tr class="separator:a63ef095a8a2694bc40f4a00e29e58933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18bfc6a79e466d226ab38f8cc8052371"><td class="memItemLeft" align="right" valign="top"><a id="a18bfc6a79e466d226ab38f8cc8052371" name="a18bfc6a79e466d226ab38f8cc8052371"></a>
-TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>copy</b> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
-<tr class="separator:a18bfc6a79e466d226ab38f8cc8052371"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf103672d07e0b9994b174f902180f0f"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#adf103672d07e0b9994b174f902180f0f">operator&lt;&lt;</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
-<tr class="memdesc:adf103672d07e0b9994b174f902180f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the array to an output stream.  <br /></td></tr>
-<tr class="separator:adf103672d07e0b9994b174f902180f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a437c9430e2ed2a81a94ede3e3a826f29"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a437c9430e2ed2a81a94ede3e3a826f29">operator&lt;&lt;</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;a, T x)</td></tr>
-<tr class="memdesc:a437c9430e2ed2a81a94ede3e3a826f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an element to the end of the array.  <br /></td></tr>
-<tr class="separator:a437c9430e2ed2a81a94ede3e3a826f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eb1d8c0787f8c0f585a04412f7d3bb3"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a5eb1d8c0787f8c0f585a04412f7d3bb3">operator&lt;&lt;</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;a, <a class="el" href="classarray.html">array</a>&lt; T &gt; b)</td></tr>
-<tr class="memdesc:a5eb1d8c0787f8c0f585a04412f7d3bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an array to the end of another array.  <br /></td></tr>
-<tr class="separator:a5eb1d8c0787f8c0f585a04412f7d3bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdfc39dafecd916735366f931ce5bc64"><td class="memItemLeft" align="right" valign="top">TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#abdfc39dafecd916735366f931ce5bc64">contains</a> (T a, <a class="el" href="classarray.html">array</a>&lt; T &gt; b)</td></tr>
-<tr class="memdesc:abdfc39dafecd916735366f931ce5bc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if an array contains a specified element.  <br /></td></tr>
-<tr class="separator:abdfc39dafecd916735366f931ce5bc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dc1e3adca2b56d48e93f45a0c8d1fda"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a9dc1e3adca2b56d48e93f45a0c8d1fda">append</a> (T a, <a class="el" href="classarray.html">array</a>&lt; T &gt; b)</td></tr>
-<tr class="memdesc:a9dc1e3adca2b56d48e93f45a0c8d1fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an element to the beginning of an array.  <br /></td></tr>
-<tr class="separator:a9dc1e3adca2b56d48e93f45a0c8d1fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05779cc916afaf493f369d5fee24ba9b"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a05779cc916afaf493f369d5fee24ba9b">append</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, <a class="el" href="classarray.html">array</a>&lt; T &gt; b)</td></tr>
-<tr class="memdesc:a05779cc916afaf493f369d5fee24ba9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an array to the end of another array.  <br /></td></tr>
-<tr class="separator:a05779cc916afaf493f369d5fee24ba9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05b218afaa32a90075eb7384b50de223"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a05b218afaa32a90075eb7384b50de223">range</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, int i, int j)</td></tr>
-<tr class="memdesc:a05b218afaa32a90075eb7384b50de223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a subarray of an array.  <br /></td></tr>
-<tr class="separator:a05b218afaa32a90075eb7384b50de223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8e0bed511c1acf8e9c4564eba2698bf"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#ad8e0bed511c1acf8e9c4564eba2698bf">reverse</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
-<tr class="memdesc:ad8e0bed511c1acf8e9c4564eba2698bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse an array.  <br /></td></tr>
-<tr class="separator:ad8e0bed511c1acf8e9c4564eba2698bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1772556f9128e09f6f49bc63f7813d3c"><td class="memItemLeft" align="right" valign="top">TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a1772556f9128e09f6f49bc63f7813d3c">operator==</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, <a class="el" href="classarray.html">array</a>&lt; T &gt; b)</td></tr>
-<tr class="memdesc:a1772556f9128e09f6f49bc63f7813d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two arrays are equal.  <br /></td></tr>
-<tr class="separator:a1772556f9128e09f6f49bc63f7813d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af64d27db7f89477204bca4b521124258"><td class="memItemLeft" align="right" valign="top">TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#af64d27db7f89477204bca4b521124258">operator!=</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, <a class="el" href="classarray.html">array</a>&lt; T &gt; b)</td></tr>
-<tr class="memdesc:af64d27db7f89477204bca4b521124258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two arrays are not equal.  <br /></td></tr>
-<tr class="separator:af64d27db7f89477204bca4b521124258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8a57c6458369ee3b8f40bb250213af5"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#af8a57c6458369ee3b8f40bb250213af5">operator*</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, T c)</td></tr>
-<tr class="memdesc:af8a57c6458369ee3b8f40bb250213af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply an array object by a scalar value of type T.  <br /></td></tr>
-<tr class="separator:af8a57c6458369ee3b8f40bb250213af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea5efa9f6e99574cb4dd2623faff798"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#adea5efa9f6e99574cb4dd2623faff798">operator/</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, T c)</td></tr>
-<tr class="memdesc:adea5efa9f6e99574cb4dd2623faff798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide an array object by a scalar value of type T.  <br /></td></tr>
-<tr class="separator:adea5efa9f6e99574cb4dd2623faff798"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7b37d6d665a4cefa43b7209c1a30fb2"><td class="memItemLeft" align="right" valign="top">TMPL int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8hpp.html#af7b37d6d665a4cefa43b7209c1a30fb2">hash</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
-<tr class="memdesc:af7b37d6d665a4cefa43b7209c1a30fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function computes the hash of an array object a.  <br /></td></tr>
-<tr class="separator:af7b37d6d665a4cefa43b7209c1a30fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7bb40a0fc6756f65cc416d47539b7a0"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae7bb40a0fc6756f65cc416d47539b7a0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#ae7bb40a0fc6756f65cc416d47539b7a0">operator&lt;&lt;</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
+<tr class="memdesc:ae7bb40a0fc6756f65cc416d47539b7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the array to an output stream.  <br /></td></tr>
+<tr class="separator:ae7bb40a0fc6756f65cc416d47539b7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73fe8af9ebd65e4d31a78930acc1e73a"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a73fe8af9ebd65e4d31a78930acc1e73a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a73fe8af9ebd65e4d31a78930acc1e73a">operator&lt;&lt;</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;a, T x)</td></tr>
+<tr class="memdesc:a73fe8af9ebd65e4d31a78930acc1e73a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an element to the end of the array.  <br /></td></tr>
+<tr class="separator:a73fe8af9ebd65e4d31a78930acc1e73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046c2d375a65e0fa156956876bf4adee"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a046c2d375a65e0fa156956876bf4adee"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a046c2d375a65e0fa156956876bf4adee">operator&lt;&lt;</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;a, <a class="el" href="classarray.html">array</a>&lt; T &gt; <a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
+<tr class="memdesc:a046c2d375a65e0fa156956876bf4adee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an array to the end of another array.  <br /></td></tr>
+<tr class="separator:a046c2d375a65e0fa156956876bf4adee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa068ba9b72448f1ebfb05738e5e1250d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa068ba9b72448f1ebfb05738e5e1250d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#aa068ba9b72448f1ebfb05738e5e1250d">contains</a> (T a, <a class="el" href="classarray.html">array</a>&lt; T &gt; <a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
+<tr class="memdesc:aa068ba9b72448f1ebfb05738e5e1250d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if an array contains a specified element.  <br /></td></tr>
+<tr class="separator:aa068ba9b72448f1ebfb05738e5e1250d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48c5156c227d75eb7479c0f12f07508"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:af48c5156c227d75eb7479c0f12f07508"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#af48c5156c227d75eb7479c0f12f07508">append</a> (T a, <a class="el" href="classarray.html">array</a>&lt; T &gt; <a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
+<tr class="memdesc:af48c5156c227d75eb7479c0f12f07508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an element to the beginning of an array.  <br /></td></tr>
+<tr class="separator:af48c5156c227d75eb7479c0f12f07508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2407a7ed82357c98e01214a32289bdef"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a2407a7ed82357c98e01214a32289bdef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a2407a7ed82357c98e01214a32289bdef">append</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, <a class="el" href="classarray.html">array</a>&lt; T &gt; <a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
+<tr class="memdesc:a2407a7ed82357c98e01214a32289bdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an array to the end of another array.  <br /></td></tr>
+<tr class="separator:a2407a7ed82357c98e01214a32289bdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aac94bc8f6faa2004fd82b2dd853fc3"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7aac94bc8f6faa2004fd82b2dd853fc3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a7aac94bc8f6faa2004fd82b2dd853fc3">range</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, int i, int j)</td></tr>
+<tr class="memdesc:a7aac94bc8f6faa2004fd82b2dd853fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a subarray of an array.  <br /></td></tr>
+<tr class="separator:a7aac94bc8f6faa2004fd82b2dd853fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51322ab3ef3f86891dc0c29729de9daf"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a51322ab3ef3f86891dc0c29729de9daf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a51322ab3ef3f86891dc0c29729de9daf">reverse</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
+<tr class="memdesc:a51322ab3ef3f86891dc0c29729de9daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse an array.  <br /></td></tr>
+<tr class="separator:a51322ab3ef3f86891dc0c29729de9daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2bc2062981ac637fd46d2694da94ea3"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac2bc2062981ac637fd46d2694da94ea3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#ac2bc2062981ac637fd46d2694da94ea3">operator==</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, <a class="el" href="classarray.html">array</a>&lt; T &gt; <a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
+<tr class="memdesc:ac2bc2062981ac637fd46d2694da94ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two arrays are equal.  <br /></td></tr>
+<tr class="separator:ac2bc2062981ac637fd46d2694da94ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3cddc432b9ee9fc78df5bb96d7c442"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:abb3cddc432b9ee9fc78df5bb96d7c442"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#abb3cddc432b9ee9fc78df5bb96d7c442">operator!=</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, <a class="el" href="classarray.html">array</a>&lt; T &gt; <a class="el" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)</td></tr>
+<tr class="memdesc:abb3cddc432b9ee9fc78df5bb96d7c442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two arrays are not equal.  <br /></td></tr>
+<tr class="separator:abb3cddc432b9ee9fc78df5bb96d7c442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741a03de0de1a07c210b2bcc12fdb778"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a741a03de0de1a07c210b2bcc12fdb778"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a741a03de0de1a07c210b2bcc12fdb778">operator*</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, T c)</td></tr>
+<tr class="memdesc:a741a03de0de1a07c210b2bcc12fdb778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply an array object by a scalar value of type T.  <br /></td></tr>
+<tr class="separator:a741a03de0de1a07c210b2bcc12fdb778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc024fb241ccabd67accb5381e2e45af"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:afc024fb241ccabd67accb5381e2e45af"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#afc024fb241ccabd67accb5381e2e45af">operator/</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a, T c)</td></tr>
+<tr class="memdesc:afc024fb241ccabd67accb5381e2e45af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide an array object by a scalar value of type T.  <br /></td></tr>
+<tr class="separator:afc024fb241ccabd67accb5381e2e45af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cb7637a01c4941941c69e187b2d4ac"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a77cb7637a01c4941941c69e187b2d4ac"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="array_8hpp.html#a77cb7637a01c4941941c69e187b2d4ac">hash</a> (<a class="el" href="classarray.html">array</a>&lt; T &gt; a)</td></tr>
+<tr class="memdesc:a77cb7637a01c4941941c69e187b2d4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function computes the hash of an array object a.  <br /></td></tr>
+<tr class="separator:a77cb7637a01c4941941c69e187b2d4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>GPLv3</dd></dl>
 <p>defines a templated array class representing a fixed-size array of elements. </p><dl class="section author"><dt>Author</dt><dd>Joris van der Hoeven </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>1999 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+
+<p class="definition">Definition in file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ae651af7bb4896e16cad3623826bb0ee4" name="ae651af7bb4896e16cad3623826bb0ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae651af7bb4896e16cad3623826bb0ee4">&#9670;&#160;</a></span>TMPL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TMPL&#160;&#160;&#160;template &lt;class T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="array_8hpp_source.html#l00165">165</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a40abcdd4c9b510168a207ac09bf7f222" name="a40abcdd4c9b510168a207ac09bf7f222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40abcdd4c9b510168a207ac09bf7f222">&#9670;&#160;</a></span>N()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int N </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the length of the array. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The length of the array. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8hpp_source.html#l00167">167</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>               {</div>
+<div class="line"><span class="lineno">  168</span>  <span class="keywordflow">return</span> a-&gt;n;</div>
+<div class="line"><span class="lineno">  169</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a104e332b2ad67c0ec3ff5b1d3f57d11a" name="a104e332b2ad67c0ec3ff5b1d3f57d11a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a104e332b2ad67c0ec3ff5b1d3f57d11a">&#9670;&#160;</a></span>A()</h2>
 
@@ -178,6 +258,9 @@ TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td><td cla
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">T * A </td>
@@ -187,6 +270,11 @@ template&lt;class T &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get a pointer to the first element of the array. </p>
@@ -204,18 +292,221 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the first element of the array. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="array_8hpp_source.html#l00171">171</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>               {</div>
+<div class="line"><span class="lineno">  172</span>  <span class="keywordflow">return</span> a-&gt;a;</div>
+<div class="line"><span class="lineno">  173</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a05779cc916afaf493f369d5fee24ba9b" name="a05779cc916afaf493f369d5fee24ba9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05779cc916afaf493f369d5fee24ba9b">&#9670;&#160;</a></span>append() <span class="overload">[1/2]</span></h2>
+<a id="ac2e421cbe345379a86882b1a804a8391" name="ac2e421cbe345379a86882b1a804a8391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e421cbe345379a86882b1a804a8391">&#9670;&#160;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make a copy of an array. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The array to be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of the array. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8hpp_source.html#l00175">175</a> of file <a class="el" href="array_8hpp_source.html">array.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>                  {</div>
+<div class="line"><span class="lineno">  176</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">array&lt;T&gt;</a> (a-&gt;a, a-&gt;n);</div>
+<div class="line"><span class="lineno">  177</span>}</div>
+<div class="ttc" id="aclassarray_html"><div class="ttname"><a href="classarray.html">array</a></div><div class="ttdoc">A template class representing an array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00095">array.hpp:95</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5604cc0fc2670e83608377c263f305f4" name="a5604cc0fc2670e83608377c263f305f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5604cc0fc2670e83608377c263f305f4">&#9670;&#160;</a></span>CONCRETE_TEMPLATE_CODE()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; append </td>
+          <td class="memname">CONCRETE_TEMPLATE_CODE </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7bb40a0fc6756f65cc416d47539b7a0" name="ae7bb40a0fc6756f65cc416d47539b7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7bb40a0fc6756f65cc416d47539b7a0">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output the array to an output stream. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>The output stream. </td></tr>
+    <tr><td class="paramname">a</td><td>The array to be output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The output stream. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00119">119</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>                                         {</div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a) == 0) <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;[ ]&quot;</span>;</div>
+<div class="line"><span class="lineno">  124</span>  out &lt;&lt; <span class="stringliteral">&quot;[ &quot;</span>;</div>
+<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">for</span> (i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a) - 1; i++)</div>
+<div class="line"><span class="lineno">  126</span>    out &lt;&lt; a[i] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a) != 0) out &lt;&lt; a[i];</div>
+<div class="line"><span class="lineno">  128</span>  out &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">return</span> out;</div>
+<div class="line"><span class="lineno">  130</span>}</div>
+<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a73fe8af9ebd65e4d31a78930acc1e73a" name="a73fe8af9ebd65e4d31a78930acc1e73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73fe8af9ebd65e4d31a78930acc1e73a">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append an element to the end of the array. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The array. </td></tr>
+    <tr><td class="paramname">x</td><td>The element to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The updated array. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00119">119</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                              {</div>
+<div class="line"><span class="lineno">  135</span>  a-&gt;resize (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a) + 1);</div>
+<div class="line"><span class="lineno">  136</span>  a[<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a) - 1]= x;</div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  138</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a046c2d375a65e0fa156956876bf4adee" name="a046c2d375a65e0fa156956876bf4adee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046c2d375a65e0fa156956876bf4adee">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
@@ -248,60 +539,28 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The updated array. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00119">119</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>                                     {</div>
+<div class="line"><span class="lineno">  143</span>  <span class="keywordtype">int</span> i, k= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a);</div>
+<div class="line"><span class="lineno">  144</span>  a-&gt;resize (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a) + <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>));</div>
+<div class="line"><span class="lineno">  145</span>  <span class="keywordflow">for</span> (i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>); i++)</div>
+<div class="line"><span class="lineno">  146</span>    a[i + k]= <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[i];</div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  148</span>}</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a8d44fd90fb43432ab6b2957b83f6c486"><div class="ttname"><a href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a></div><div class="ttdeci">blackbox b[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00043">blackbox_test.cpp:43</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a9dc1e3adca2b56d48e93f45a0c8d1fda" name="a9dc1e3adca2b56d48e93f45a0c8d1fda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dc1e3adca2b56d48e93f45a0c8d1fda">&#9670;&#160;</a></span>append() <span class="overload">[2/2]</span></h2>
+<a id="aa068ba9b72448f1ebfb05738e5e1250d" name="aa068ba9b72448f1ebfb05738e5e1250d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa068ba9b72448f1ebfb05738e5e1250d">&#9670;&#160;</a></span>contains()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; append </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Append an element to the beginning of an array. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The array. </td></tr>
-    <tr><td class="paramname">b</td><td>The element to be appended. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The updated array. </dd></dl>
-
-</div>
-</div>
-<a id="abdfc39dafecd916735366f931ce5bc64" name="abdfc39dafecd916735366f931ce5bc64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdfc39dafecd916735366f931ce5bc64">&#9670;&#160;</a></span>contains()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL bool contains </td>
+          <td class="memname">bool contains </td>
           <td>(</td>
           <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -338,8 +597,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="ac2e421cbe345379a86882b1a804a8391" name="ac2e421cbe345379a86882b1a804a8391"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2e421cbe345379a86882b1a804a8391">&#9670;&#160;</a></span>copy()</h2>
+<a id="af48c5156c227d75eb7479c0f12f07508" name="af48c5156c227d75eb7479c0f12f07508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48c5156c227d75eb7479c0f12f07508">&#9670;&#160;</a></span>append() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,104 +606,9 @@ template&lt;class T &gt; </div>
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; copy </td>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; append </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Make a copy of an array. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The array to be copied. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the array. </dd></dl>
-
-</div>
-</div>
-<a id="af7b37d6d665a4cefa43b7209c1a30fb2" name="af7b37d6d665a4cefa43b7209c1a30fb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7b37d6d665a4cefa43b7209c1a30fb2">&#9670;&#160;</a></span>hash()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL int hash </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This function computes the hash of an array object a. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The array object. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Return an integer hash value. </dd></dl>
-
-</div>
-</div>
-<a id="a40abcdd4c9b510168a207ac09bf7f222" name="a40abcdd4c9b510168a207ac09bf7f222"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40abcdd4c9b510168a207ac09bf7f222">&#9670;&#160;</a></span>N()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int N </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the length of the array. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The length of the array. </dd></dl>
-
-</div>
-</div>
-<a id="af64d27db7f89477204bca4b521124258" name="af64d27db7f89477204bca4b521124258"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af64d27db7f89477204bca4b521124258">&#9670;&#160;</a></span>operator!=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL bool operator!= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
@@ -461,110 +625,36 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Check if two arrays are not equal. </p>
+<p>Append an element to the beginning of an array. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements in the arrays. </td></tr>
+    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>The first array. </td></tr>
-    <tr><td class="paramname">b</td><td>The second array. </td></tr>
+    <tr><td class="paramname">a</td><td>The array. </td></tr>
+    <tr><td class="paramname">b</td><td>The element to be appended. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the two arrays are not equal, false otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The updated array. </dd></dl>
 
 </div>
 </div>
-<a id="af8a57c6458369ee3b8f40bb250213af5" name="af8a57c6458369ee3b8f40bb250213af5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8a57c6458369ee3b8f40bb250213af5">&#9670;&#160;</a></span>operator*()</h2>
+<a id="a2407a7ed82357c98e01214a32289bdef" name="a2407a7ed82357c98e01214a32289bdef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2407a7ed82357c98e01214a32289bdef">&#9670;&#160;</a></span>append() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; operator* </td>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; append </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Multiply an array object by a scalar value of type T. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The target array. </td></tr>
-    <tr><td class="paramname">c</td><td>The scalar value. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Return a new array object whose elements are the elements of a multiplied by c. </dd></dl>
-
-</div>
-</div>
-<a id="adea5efa9f6e99574cb4dd2623faff798" name="adea5efa9f6e99574cb4dd2623faff798"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adea5efa9f6e99574cb4dd2623faff798">&#9670;&#160;</a></span>operator/()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; operator/ </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Divide an array object by a scalar value of type T. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The target array. </td></tr>
-    <tr><td class="paramname">c</td><td>The scalar value. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Return a new array object whose elements are the elements of a divided by c. </dd></dl>
-
-</div>
-</div>
-<a id="a5eb1d8c0787f8c0f585a04412f7d3bb3" name="a5eb1d8c0787f8c0f585a04412f7d3bb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5eb1d8c0787f8c0f585a04412f7d3bb3">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
@@ -597,148 +687,29 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The updated array. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00172">172</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>                                {</div>
+<div class="line"><span class="lineno">  173</span>  <span class="keywordtype">int</span>      i, k= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a), l= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>);</div>
+<div class="line"><span class="lineno">  174</span>  <a class="code hl_class" href="classarray.html">array&lt;T&gt;</a> c (k + l);</div>
+<div class="line"><span class="lineno">  175</span>  <span class="keywordflow">for</span> (i= 0; i &lt; k; i++)</div>
+<div class="line"><span class="lineno">  176</span>    c[i]= a[i];</div>
+<div class="line"><span class="lineno">  177</span>  <span class="keywordflow">for</span> (i= 0; i &lt; l; i++)</div>
+<div class="line"><span class="lineno">  178</span>    c[i + k]= <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[i];</div>
+<div class="line"><span class="lineno">  179</span>  <span class="keywordflow">return</span> c;</div>
+<div class="line"><span class="lineno">  180</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a437c9430e2ed2a81a94ede3e3a826f29" name="a437c9430e2ed2a81a94ede3e3a826f29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a437c9430e2ed2a81a94ede3e3a826f29">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/3]</span></h2>
+<a id="a7aac94bc8f6faa2004fd82b2dd853fc3" name="a7aac94bc8f6faa2004fd82b2dd853fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aac94bc8f6faa2004fd82b2dd853fc3">&#9670;&#160;</a></span>range()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Append an element to the end of the array. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The array. </td></tr>
-    <tr><td class="paramname">x</td><td>The element to be appended. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The updated array. </dd></dl>
-
-</div>
-</div>
-<a id="adf103672d07e0b9994b174f902180f0f" name="adf103672d07e0b9994b174f902180f0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf103672d07e0b9994b174f902180f0f">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classtm__ostream.html">tm_ostream</a> &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Output the array to an output stream. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements in the array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>The output stream. </td></tr>
-    <tr><td class="paramname">a</td><td>The array to be output. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The output stream. </dd></dl>
-
-</div>
-</div>
-<a id="a1772556f9128e09f6f49bc63f7813d3c" name="a1772556f9128e09f6f49bc63f7813d3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1772556f9128e09f6f49bc63f7813d3c">&#9670;&#160;</a></span>operator==()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL bool operator== </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if two arrays are equal. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements in the arrays. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The first array. </td></tr>
-    <tr><td class="paramname">b</td><td>The second array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the two arrays are equal, false otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="a05b218afaa32a90075eb7384b50de223" name="a05b218afaa32a90075eb7384b50de223"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05b218afaa32a90075eb7384b50de223">&#9670;&#160;</a></span>range()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; range </td>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; range </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -780,16 +751,29 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The subarray. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00184">184</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>                                 {</div>
+<div class="line"><span class="lineno">  185</span>  <span class="keywordtype">int</span> k;</div>
+<div class="line"><span class="lineno">  186</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (i &gt;= 0 &amp;&amp; j &lt;= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a), <span class="stringliteral">&quot;out of range&quot;</span>);</div>
+<div class="line"><span class="lineno">  187</span>  <a class="code hl_class" href="classarray.html">array&lt;T&gt;</a> r (j - i);</div>
+<div class="line"><span class="lineno">  188</span>  <span class="keywordflow">for</span> (k= i; k &lt; j; k++)</div>
+<div class="line"><span class="lineno">  189</span>    r[k - i]= a[k];</div>
+<div class="line"><span class="lineno">  190</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  191</span>}</div>
+<div class="ttc" id="abasic_8hpp_html_ac6c818ab7aca2e521c97eee817f99f91"><div class="ttname"><a href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a></div><div class="ttdeci">#define ASSERT(cond, msg)</div><div class="ttdoc">Macro used to assert that a condition is true, and throw an exception with an error message if the co...</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00264">basic.hpp:264</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ad8e0bed511c1acf8e9c4564eba2698bf" name="ad8e0bed511c1acf8e9c4564eba2698bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8e0bed511c1acf8e9c4564eba2698bf">&#9670;&#160;</a></span>reverse()</h2>
+<a id="a51322ab3ef3f86891dc0c29729de9daf" name="a51322ab3ef3f86891dc0c29729de9daf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51322ab3ef3f86891dc0c29729de9daf">&#9670;&#160;</a></span>reverse()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">TMPL <a class="el" href="classarray.html">array</a>&lt; T &gt; reverse </td>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; reverse </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>a</em></td><td>)</td>
@@ -813,6 +797,261 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The reversed array. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00195">195</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>                     {</div>
+<div class="line"><span class="lineno">  196</span>  <span class="keywordtype">int</span>      i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a);</div>
+<div class="line"><span class="lineno">  197</span>  <a class="code hl_class" href="classarray.html">array&lt;T&gt;</a> r (n);</div>
+<div class="line"><span class="lineno">  198</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  199</span>    r[i]= a[n - 1 - i];</div>
+<div class="line"><span class="lineno">  200</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  201</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac2bc2062981ac637fd46d2694da94ea3" name="ac2bc2062981ac637fd46d2694da94ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2bc2062981ac637fd46d2694da94ea3">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if two arrays are equal. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of elements in the arrays. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The first array. </td></tr>
+    <tr><td class="paramname">b</td><td>The second array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the two arrays are equal, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00100">100</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                                    {</div>
+<div class="line"><span class="lineno">  101</span>  <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a) != <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">for</span> (i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a); i++)</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> (a[i] != <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[i]) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abb3cddc432b9ee9fc78df5bb96d7c442" name="abb3cddc432b9ee9fc78df5bb96d7c442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3cddc432b9ee9fc78df5bb96d7c442">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if two arrays are not equal. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of elements in the arrays. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The first array. </td></tr>
+    <tr><td class="paramname">b</td><td>The second array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the two arrays are not equal, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00110">110</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                                    {</div>
+<div class="line"><span class="lineno">  111</span>  <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a) != <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">for</span> (i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a); i++)</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (a[i] != <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[i]) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  116</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a741a03de0de1a07c210b2bcc12fdb778" name="a741a03de0de1a07c210b2bcc12fdb778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741a03de0de1a07c210b2bcc12fdb778">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiply an array object by a scalar value of type T. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The target array. </td></tr>
+    <tr><td class="paramname">c</td><td>The scalar value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a new array object whose elements are the elements of a multiplied by c. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00214">214</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  214</span>                            {</div>
+<div class="line"><span class="lineno">  215</span>  <span class="keywordtype">int</span>      i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a);</div>
+<div class="line"><span class="lineno">  216</span>  <a class="code hl_class" href="classarray.html">array&lt;T&gt;</a> r (n);</div>
+<div class="line"><span class="lineno">  217</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  218</span>    r[i]= a[i] * c;</div>
+<div class="line"><span class="lineno">  219</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  220</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afc024fb241ccabd67accb5381e2e45af" name="afc024fb241ccabd67accb5381e2e45af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc024fb241ccabd67accb5381e2e45af">&#9670;&#160;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; T &gt; operator/ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Divide an array object by a scalar value of type T. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The target array. </td></tr>
+    <tr><td class="paramname">c</td><td>The scalar value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a new array object whose elements are the elements of a divided by c. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00224">224</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>                            {</div>
+<div class="line"><span class="lineno">  225</span>  <span class="keywordtype">int</span>      i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a);</div>
+<div class="line"><span class="lineno">  226</span>  <a class="code hl_class" href="classarray.html">array&lt;T&gt;</a> r (n);</div>
+<div class="line"><span class="lineno">  227</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  228</span>    r[i]= a[i] / c;</div>
+<div class="line"><span class="lineno">  229</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  230</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a77cb7637a01c4941941c69e187b2d4ac" name="a77cb7637a01c4941941c69e187b2d4ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cb7637a01c4941941c69e187b2d4ac">&#9670;&#160;</a></span>hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int hash </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function computes the hash of an array object a. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The array object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return an integer hash value. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8ipp_source.html#l00205">205</a> of file <a class="el" href="array_8ipp_source.html">array.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>                  {</div>
+<div class="line"><span class="lineno">  206</span>  <span class="keywordtype">int</span> i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a), h= 0;</div>
+<div class="line"><span class="lineno">  207</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  208</span>    h= <a class="code hl_function" href="array_8ipp.html#a77cb7637a01c4941941c69e187b2d4ac">hash</a> (a[i]) ^ ((h &lt;&lt; 7) + (h &gt;&gt; 25));</div>
+<div class="line"><span class="lineno">  209</span>  <span class="keywordflow">return</span> h;</div>
+<div class="line"><span class="lineno">  210</span>}</div>
+<div class="ttc" id="aarray_8ipp_html_a77cb7637a01c4941941c69e187b2d4ac"><div class="ttname"><a href="array_8ipp.html#a77cb7637a01c4941941c69e187b2d4ac">hash</a></div><div class="ttdeci">int hash(array&lt; T &gt; a)</div><div class="ttdoc">This function computes the hash of an array object a.</div><div class="ttdef"><b>Definition:</b> <a href="array_8ipp_source.html#l00205">array.ipp:205</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

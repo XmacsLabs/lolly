@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['use_5fexceptions_0',['USE_EXCEPTIONS',['../basic_8hpp.html#a5412ce5cb8464f98cd6f37294c65a3bf',1,'basic.hpp']]]
+  ['num_0',['NUM',['../fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a',1,'fast_alloc_test.cpp']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: hashset&lt; T &gt; Class Template Reference</title>
+<title>Lolly: hashset&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -70,6 +71,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classhashset-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">hashset&lt; T &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -79,6 +81,15 @@ $(function() {
  <a href="classhashset.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="hashset_8hpp_source.html">hashset.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1a09b1ab87315de54161d4bb090e7404"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashset.html#a1a09b1ab87315de54161d4bb090e7404">CONCRETE_TEMPLATE</a> (<a class="el" href="classhashset.html">hashset</a>, T)</td></tr>
+<tr class="separator:a1a09b1ab87315de54161d4bb090e7404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63cbe7828f59cbf41861e79704e70d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashset.html#ac63cbe7828f59cbf41861e79704e70d9">hashset</a> (int n=1, int <a class="el" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>=1)</td></tr>
+<tr class="memdesc:ac63cbe7828f59cbf41861e79704e70d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new hashset object with specified values.  <br /></td></tr>
+<tr class="separator:ac63cbe7828f59cbf41861e79704e70d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
 class hashset&lt; T &gt;</div><p>The hashset class represents a hash set. </p>
@@ -88,8 +99,104 @@ class hashset&lt; T &gt;</div><p>The hashset class represents a hash set. </p>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>Kernel/Containers/<a class="el" href="hashset_8hpp_source.html">hashset.hpp</a></li>
+
+<p class="definition">Definition at line <a class="el" href="hashset_8hpp_source.html#l00072">72</a> of file <a class="el" href="hashset_8hpp_source.html">hashset.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac63cbe7828f59cbf41861e79704e70d9" name="ac63cbe7828f59cbf41861e79704e70d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac63cbe7828f59cbf41861e79704e70d9">&#9670;&#160;</a></span>hashset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhashset.html">hashset</a>&lt; T &gt;<a class="el" href="classhashset.html">::hashset</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new hashset object with specified values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The number of keys (a power of two). </td></tr>
+    <tr><td class="paramname">max</td><td>The mean number of entries per key. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="hashset_8hpp_source.html#l00081">81</a> of file <a class="el" href="hashset_8hpp_source.html">hashset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>      : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a>&lt;<a class="code hl_class" href="classhashset__rep.html">hashset_rep&lt;T&gt;</a> &gt; (n, <a class="code hl_function" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>)) {}</div>
+<div class="ttc" id="abasic_8hpp_html_a722bf3cd3acddf15e6bca8135bad679d"><div class="ttname"><a href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a></div><div class="ttdeci">SI max(SI i, SI j)</div><div class="ttdoc">Returns the maximum of two signed integers.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00344">basic.hpp:344</a></div></div>
+<div class="ttc" id="aclasshashset__rep_html"><div class="ttname"><a href="classhashset__rep.html">hashset_rep</a></div><div class="ttdoc">The hashset_rep class represents an entry in a hash set.</div><div class="ttdef"><b>Definition:</b> <a href="hashset_8hpp_source.html#l00026">hashset.hpp:26</a></div></div>
+<div class="ttc" id="afast__alloc_8hpp_html_a8c09c4a1ed33efc95abda66d3b5a7231"><div class="ttname"><a href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a></div><div class="ttdeci">C * tm_new()</div><div class="ttdef"><b>Definition:</b> <a href="fast__alloc_8hpp_source.html#l00085">fast_alloc.hpp:85</a></div></div>
+<div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition:</b> <a href="resource_8hpp_source.html#l00016">resource.hpp:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1a09b1ab87315de54161d4bb090e7404" name="a1a09b1ab87315de54161d4bb090e7404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a09b1ab87315de54161d4bb090e7404">&#9670;&#160;</a></span>CONCRETE_TEMPLATE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhashset.html">hashset</a>&lt; T &gt;::CONCRETE_TEMPLATE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhashset.html">hashset</a>&lt; T &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="hashset_8hpp_source.html">hashset.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

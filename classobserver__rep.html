@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: observer_rep Class Reference</title>
+<title>Lolly: observer_rep Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -75,147 +76,179 @@ $(function() {
   <div class="headertitle"><div class="title">observer_rep Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="observer_8hpp_source.html">observer.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for observer_rep:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classobserver__rep.png" usemap="#observer_5Frep_map" alt=""/>
-  <map id="observer_5Frep_map" name="observer_5Frep_map">
-<area href="structabstract__struct.html" title="Structure representing an abstract object with a reference count." alt="abstract_struct" shape="rect" coords="0,0,95,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="classobserver__rep__inherit__graph.png" border="0" usemap="#aobserver__rep_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for observer_rep:</div>
+<div class="dyncontent">
+<div class="center"><img src="classobserver__rep__coll__graph.png" border="0" usemap="#aobserver__rep_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa27a0d51c593e51708c83330468bafd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#aa27a0d51c593e51708c83330468bafd0">observer_rep</a> ()</td></tr>
+<tr class="separator:aa27a0d51c593e51708c83330468bafd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0d2ef44ed3021978132675219af2f7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#aac0d2ef44ed3021978132675219af2f7">~observer_rep</a> ()</td></tr>
+<tr class="separator:aac0d2ef44ed3021978132675219af2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85859bb4c951a51a08b2b610a33062c9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a85859bb4c951a51a08b2b610a33062c9">get_type</a> ()</td></tr>
 <tr class="memdesc:a85859bb4c951a51a08b2b610a33062c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the observer representation.  <br /></td></tr>
 <tr class="separator:a85859bb4c951a51a08b2b610a33062c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc3a5c96b2f9c588ddf87aac4f66639"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a3bc3a5c96b2f9c588ddf87aac4f66639">print</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out)</td></tr>
 <tr class="memdesc:a3bc3a5c96b2f9c588ddf87aac4f66639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the observer representation.  <br /></td></tr>
 <tr class="separator:a3bc3a5c96b2f9c588ddf87aac4f66639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8572ccfea8a5a7a14216bc73c79621f"><td class="memItemLeft" align="right" valign="top"><a id="ae8572ccfea8a5a7a14216bc73c79621f" name="ae8572ccfea8a5a7a14216bc73c79621f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classmodification.html">modification</a> mod)</td></tr>
-<tr class="memdesc:ae8572ccfea8a5a7a14216bc73c79621f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Announcing modifications in subtrees. <br /></td></tr>
+<tr class="memitem:ae8572ccfea8a5a7a14216bc73c79621f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#ae8572ccfea8a5a7a14216bc73c79621f">announce</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classmodification.html">modification</a> mod)</td></tr>
+<tr class="memdesc:ae8572ccfea8a5a7a14216bc73c79621f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Announcing modifications in subtrees.  <br /></td></tr>
 <tr class="separator:ae8572ccfea8a5a7a14216bc73c79621f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86c7e08b1e11e6941adddc5c997b4f5b"><td class="memItemLeft" align="right" valign="top"><a id="a86c7e08b1e11e6941adddc5c997b4f5b" name="a86c7e08b1e11e6941adddc5c997b4f5b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_assign</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p, <a class="el" href="classtree.html">tree</a> t)</td></tr>
+<tr class="memitem:a86c7e08b1e11e6941adddc5c997b4f5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a86c7e08b1e11e6941adddc5c997b4f5b">announce_assign</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p, <a class="el" href="classtree.html">tree</a> <a class="el" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>)</td></tr>
 <tr class="separator:a86c7e08b1e11e6941adddc5c997b4f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d907abc4a9588710977e00e3f0e6e22"><td class="memItemLeft" align="right" valign="top"><a id="a3d907abc4a9588710977e00e3f0e6e22" name="a3d907abc4a9588710977e00e3f0e6e22"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_insert</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p, <a class="el" href="classtree.html">tree</a> ins)</td></tr>
+<tr class="memitem:a3d907abc4a9588710977e00e3f0e6e22"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a3d907abc4a9588710977e00e3f0e6e22">announce_insert</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p, <a class="el" href="classtree.html">tree</a> ins)</td></tr>
 <tr class="separator:a3d907abc4a9588710977e00e3f0e6e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ca061455941305f64579d418be0b14f"><td class="memItemLeft" align="right" valign="top"><a id="a0ca061455941305f64579d418be0b14f" name="a0ca061455941305f64579d418be0b14f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_remove</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p, int nr)</td></tr>
+<tr class="memitem:a0ca061455941305f64579d418be0b14f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a0ca061455941305f64579d418be0b14f">announce_remove</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p, int nr)</td></tr>
 <tr class="separator:a0ca061455941305f64579d418be0b14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9462a187128991852d92987b99336f87"><td class="memItemLeft" align="right" valign="top"><a id="a9462a187128991852d92987b99336f87" name="a9462a187128991852d92987b99336f87"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_split</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p)</td></tr>
+<tr class="memitem:a9462a187128991852d92987b99336f87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a9462a187128991852d92987b99336f87">announce_split</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p)</td></tr>
 <tr class="separator:a9462a187128991852d92987b99336f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74ac5455efad243c2847d5850e1d58e9"><td class="memItemLeft" align="right" valign="top"><a id="a74ac5455efad243c2847d5850e1d58e9" name="a74ac5455efad243c2847d5850e1d58e9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_join</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p)</td></tr>
+<tr class="memitem:a74ac5455efad243c2847d5850e1d58e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a74ac5455efad243c2847d5850e1d58e9">announce_join</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p)</td></tr>
 <tr class="separator:a74ac5455efad243c2847d5850e1d58e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31d11608f11089fff74c7c986640088c"><td class="memItemLeft" align="right" valign="top"><a id="a31d11608f11089fff74c7c986640088c" name="a31d11608f11089fff74c7c986640088c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_assign_node</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p, int op)</td></tr>
+<tr class="memitem:a31d11608f11089fff74c7c986640088c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a31d11608f11089fff74c7c986640088c">announce_assign_node</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p, int op)</td></tr>
 <tr class="separator:a31d11608f11089fff74c7c986640088c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec0ef105390f547f34ac90981ebc8fb8"><td class="memItemLeft" align="right" valign="top"><a id="aec0ef105390f547f34ac90981ebc8fb8" name="aec0ef105390f547f34ac90981ebc8fb8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_insert_node</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p, <a class="el" href="classtree.html">tree</a> ins)</td></tr>
+<tr class="memitem:aec0ef105390f547f34ac90981ebc8fb8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#aec0ef105390f547f34ac90981ebc8fb8">announce_insert_node</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p, <a class="el" href="classtree.html">tree</a> ins)</td></tr>
 <tr class="separator:aec0ef105390f547f34ac90981ebc8fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52187dd2c78a7f5480a6ae3c8331f39d"><td class="memItemLeft" align="right" valign="top"><a id="a52187dd2c78a7f5480a6ae3c8331f39d" name="a52187dd2c78a7f5480a6ae3c8331f39d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_remove_node</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p)</td></tr>
+<tr class="memitem:a52187dd2c78a7f5480a6ae3c8331f39d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a52187dd2c78a7f5480a6ae3c8331f39d">announce_remove_node</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p)</td></tr>
 <tr class="separator:a52187dd2c78a7f5480a6ae3c8331f39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b91e0a5c819f1b6be981f4e9e1d0227"><td class="memItemLeft" align="right" valign="top"><a id="a2b91e0a5c819f1b6be981f4e9e1d0227" name="a2b91e0a5c819f1b6be981f4e9e1d0227"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>announce_set_cursor</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p, <a class="el" href="classtree.html">tree</a> data)</td></tr>
+<tr class="memitem:a2b91e0a5c819f1b6be981f4e9e1d0227"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a2b91e0a5c819f1b6be981f4e9e1d0227">announce_set_cursor</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p, <a class="el" href="classtree.html">tree</a> data)</td></tr>
 <tr class="separator:a2b91e0a5c819f1b6be981f4e9e1d0227"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cb2ff85da104bf1e5d9b766185acf77"><td class="memItemLeft" align="right" valign="top"><a id="a9cb2ff85da104bf1e5d9b766185acf77" name="a9cb2ff85da104bf1e5d9b766185acf77"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>done</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classmodification.html">modification</a> mod)</td></tr>
+<tr class="memitem:a9cb2ff85da104bf1e5d9b766185acf77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a9cb2ff85da104bf1e5d9b766185acf77">done</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classmodification.html">modification</a> mod)</td></tr>
 <tr class="separator:a9cb2ff85da104bf1e5d9b766185acf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a781d6df45e24f00ff7ded613c0bf1adb"><td class="memItemLeft" align="right" valign="top"><a id="a781d6df45e24f00ff7ded613c0bf1adb" name="a781d6df45e24f00ff7ded613c0bf1adb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>touched</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classlist.html">path</a> p)</td></tr>
+<tr class="memitem:a781d6df45e24f00ff7ded613c0bf1adb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a781d6df45e24f00ff7ded613c0bf1adb">touched</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> p)</td></tr>
 <tr class="separator:a781d6df45e24f00ff7ded613c0bf1adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f7964cf5dfc887bd5b935b6124172ed"><td class="memItemLeft" align="right" valign="top"><a id="a0f7964cf5dfc887bd5b935b6124172ed" name="a0f7964cf5dfc887bd5b935b6124172ed"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_assign</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classtree.html">tree</a> t)</td></tr>
-<tr class="memdesc:a0f7964cf5dfc887bd5b935b6124172ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call back routines for tree modifications. <br /></td></tr>
+<tr class="memitem:a0f7964cf5dfc887bd5b935b6124172ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a0f7964cf5dfc887bd5b935b6124172ed">notify_assign</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classtree.html">tree</a> <a class="el" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>)</td></tr>
+<tr class="memdesc:a0f7964cf5dfc887bd5b935b6124172ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call back routines for tree modifications.  <br /></td></tr>
 <tr class="separator:a0f7964cf5dfc887bd5b935b6124172ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee8220ac141d9ccd4288835bc767dbe"><td class="memItemLeft" align="right" valign="top"><a id="a5ee8220ac141d9ccd4288835bc767dbe" name="a5ee8220ac141d9ccd4288835bc767dbe"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_insert</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, int nr)</td></tr>
+<tr class="memitem:a5ee8220ac141d9ccd4288835bc767dbe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a5ee8220ac141d9ccd4288835bc767dbe">notify_insert</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, int nr)</td></tr>
 <tr class="separator:a5ee8220ac141d9ccd4288835bc767dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb33fc0d22cabab52bb5ae5df206ce6f"><td class="memItemLeft" align="right" valign="top"><a id="aeb33fc0d22cabab52bb5ae5df206ce6f" name="aeb33fc0d22cabab52bb5ae5df206ce6f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_remove</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, int nr)</td></tr>
+<tr class="memitem:aeb33fc0d22cabab52bb5ae5df206ce6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#aeb33fc0d22cabab52bb5ae5df206ce6f">notify_remove</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, int nr)</td></tr>
 <tr class="separator:aeb33fc0d22cabab52bb5ae5df206ce6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af91c73190b56aaff86d2499e0b01b3ff"><td class="memItemLeft" align="right" valign="top"><a id="af91c73190b56aaff86d2499e0b01b3ff" name="af91c73190b56aaff86d2499e0b01b3ff"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_split</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, <a class="el" href="classtree.html">tree</a> prev)</td></tr>
+<tr class="memitem:af91c73190b56aaff86d2499e0b01b3ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#af91c73190b56aaff86d2499e0b01b3ff">notify_split</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, <a class="el" href="classtree.html">tree</a> prev)</td></tr>
 <tr class="separator:af91c73190b56aaff86d2499e0b01b3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadc5047c1635a025c8aa14b7bb8367c1"><td class="memItemLeft" align="right" valign="top"><a id="aadc5047c1635a025c8aa14b7bb8367c1" name="aadc5047c1635a025c8aa14b7bb8367c1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_var_split</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classtree.html">tree</a> t1, <a class="el" href="classtree.html">tree</a> t2)</td></tr>
+<tr class="memitem:aadc5047c1635a025c8aa14b7bb8367c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#aadc5047c1635a025c8aa14b7bb8367c1">notify_var_split</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classtree.html">tree</a> <a class="el" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>, <a class="el" href="classtree.html">tree</a> <a class="el" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>)</td></tr>
 <tr class="separator:aadc5047c1635a025c8aa14b7bb8367c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0283f135f1224b1fd1fca865bd6031f"><td class="memItemLeft" align="right" valign="top"><a id="ac0283f135f1224b1fd1fca865bd6031f" name="ac0283f135f1224b1fd1fca865bd6031f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_join</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, <a class="el" href="classtree.html">tree</a> next)</td></tr>
+<tr class="memitem:ac0283f135f1224b1fd1fca865bd6031f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#ac0283f135f1224b1fd1fca865bd6031f">notify_join</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, <a class="el" href="classtree.html">tree</a> next)</td></tr>
 <tr class="separator:ac0283f135f1224b1fd1fca865bd6031f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a201568138e118ba44988f5c1f0a3b296"><td class="memItemLeft" align="right" valign="top"><a id="a201568138e118ba44988f5c1f0a3b296" name="a201568138e118ba44988f5c1f0a3b296"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_var_join</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classtree.html">tree</a> t, int offset)</td></tr>
+<tr class="memitem:a201568138e118ba44988f5c1f0a3b296"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a201568138e118ba44988f5c1f0a3b296">notify_var_join</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classtree.html">tree</a> <a class="el" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>, int offset)</td></tr>
 <tr class="separator:a201568138e118ba44988f5c1f0a3b296"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf0dee83d6556cc97b8eb3d764badf66"><td class="memItemLeft" align="right" valign="top"><a id="acf0dee83d6556cc97b8eb3d764badf66" name="acf0dee83d6556cc97b8eb3d764badf66"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_assign_node</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, int op)</td></tr>
+<tr class="memitem:acf0dee83d6556cc97b8eb3d764badf66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#acf0dee83d6556cc97b8eb3d764badf66">notify_assign_node</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, int op)</td></tr>
 <tr class="separator:acf0dee83d6556cc97b8eb3d764badf66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6305c6ae6142461f37c59c15dbe110a7"><td class="memItemLeft" align="right" valign="top"><a id="a6305c6ae6142461f37c59c15dbe110a7" name="a6305c6ae6142461f37c59c15dbe110a7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_insert_node</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos)</td></tr>
+<tr class="memitem:a6305c6ae6142461f37c59c15dbe110a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a6305c6ae6142461f37c59c15dbe110a7">notify_insert_node</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos)</td></tr>
 <tr class="separator:a6305c6ae6142461f37c59c15dbe110a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a406dc18dfa9e336fe0062462ce5652d6"><td class="memItemLeft" align="right" valign="top"><a id="a406dc18dfa9e336fe0062462ce5652d6" name="a406dc18dfa9e336fe0062462ce5652d6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_remove_node</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos)</td></tr>
+<tr class="memitem:a406dc18dfa9e336fe0062462ce5652d6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a406dc18dfa9e336fe0062462ce5652d6">notify_remove_node</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos)</td></tr>
 <tr class="separator:a406dc18dfa9e336fe0062462ce5652d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a976b11568d571f6eda4a4be6bd78fc7b"><td class="memItemLeft" align="right" valign="top"><a id="a976b11568d571f6eda4a4be6bd78fc7b" name="a976b11568d571f6eda4a4be6bd78fc7b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_set_cursor</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, <a class="el" href="classtree.html">tree</a> data)</td></tr>
+<tr class="memitem:a976b11568d571f6eda4a4be6bd78fc7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a976b11568d571f6eda4a4be6bd78fc7b">notify_set_cursor</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, int pos, <a class="el" href="classtree.html">tree</a> data)</td></tr>
 <tr class="separator:a976b11568d571f6eda4a4be6bd78fc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa43c65dc5c0afba467083332e669bf5d"><td class="memItemLeft" align="right" valign="top"><a id="aa43c65dc5c0afba467083332e669bf5d" name="aa43c65dc5c0afba467083332e669bf5d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify_detach</b> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classtree.html">tree</a> closest, bool right)</td></tr>
+<tr class="memitem:aa43c65dc5c0afba467083332e669bf5d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#aa43c65dc5c0afba467083332e669bf5d">notify_detach</a> (<a class="el" href="classtree.html">tree</a> &amp;ref, <a class="el" href="classtree.html">tree</a> closest, bool right)</td></tr>
 <tr class="separator:aa43c65dc5c0afba467083332e669bf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d67cd183f8ac12c6541d815d62c3c62"><td class="memItemLeft" align="right" valign="top"><a id="a6d67cd183f8ac12c6541d815d62c3c62" name="a6d67cd183f8ac12c6541d815d62c3c62"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_ip</b> (<a class="el" href="classlist.html">path</a> &amp;ip)</td></tr>
-<tr class="memdesc:a6d67cd183f8ac12c6541d815d62c3c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extra routines for particular types of observers. <br /></td></tr>
+<tr class="memitem:a6d67cd183f8ac12c6541d815d62c3c62"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a6d67cd183f8ac12c6541d815d62c3c62">get_ip</a> (<a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> &amp;ip)</td></tr>
+<tr class="memdesc:a6d67cd183f8ac12c6541d815d62c3c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extra routines for particular types of observers.  <br /></td></tr>
 <tr class="separator:a6d67cd183f8ac12c6541d815d62c3c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8153e55db56d64d729f4e6e4a3b9b0f"><td class="memItemLeft" align="right" valign="top"><a id="af8153e55db56d64d729f4e6e4a3b9b0f" name="af8153e55db56d64d729f4e6e4a3b9b0f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>set_ip</b> (<a class="el" href="classlist.html">path</a> ip)</td></tr>
+<tr class="memitem:af8153e55db56d64d729f4e6e4a3b9b0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#af8153e55db56d64d729f4e6e4a3b9b0f">set_ip</a> (<a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> ip)</td></tr>
 <tr class="separator:af8153e55db56d64d729f4e6e4a3b9b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86c003b5ad15c8b749dca8f018e0cb5b"><td class="memItemLeft" align="right" valign="top"><a id="a86c003b5ad15c8b749dca8f018e0cb5b" name="a86c003b5ad15c8b749dca8f018e0cb5b"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_position</b> (<a class="el" href="classtree.html">tree</a> &amp;t, int &amp;index)</td></tr>
+<tr class="memitem:a86c003b5ad15c8b749dca8f018e0cb5b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a86c003b5ad15c8b749dca8f018e0cb5b">get_position</a> (<a class="el" href="classtree.html">tree</a> &amp;<a class="el" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>, int &amp;<a class="el" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a>)</td></tr>
 <tr class="separator:a86c003b5ad15c8b749dca8f018e0cb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada0dc7f3a12620fd9a50a14790bbabc9"><td class="memItemLeft" align="right" valign="top"><a id="ada0dc7f3a12620fd9a50a14790bbabc9" name="ada0dc7f3a12620fd9a50a14790bbabc9"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>set_position</b> (<a class="el" href="classtree.html">tree</a> t, int index)</td></tr>
+<tr class="memitem:ada0dc7f3a12620fd9a50a14790bbabc9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#ada0dc7f3a12620fd9a50a14790bbabc9">set_position</a> (<a class="el" href="classtree.html">tree</a> <a class="el" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>, int <a class="el" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a>)</td></tr>
 <tr class="separator:ada0dc7f3a12620fd9a50a14790bbabc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9df36ef13b0b2ec067d4d38c40f6c4fb"><td class="memItemLeft" align="right" valign="top"><a id="a9df36ef13b0b2ec067d4d38c40f6c4fb" name="a9df36ef13b0b2ec067d4d38c40f6c4fb"></a>
-virtual <a class="el" href="classobserver.html">observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_child</b> (int which)</td></tr>
+<tr class="memitem:a9df36ef13b0b2ec067d4d38c40f6c4fb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classobserver.html">observer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a9df36ef13b0b2ec067d4d38c40f6c4fb">get_child</a> (int which)</td></tr>
 <tr class="separator:a9df36ef13b0b2ec067d4d38c40f6c4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaef5da5c9590ad7fe6b7d88659d4f58"><td class="memItemLeft" align="right" valign="top"><a id="afaef5da5c9590ad7fe6b7d88659d4f58" name="afaef5da5c9590ad7fe6b7d88659d4f58"></a>
-virtual <a class="el" href="classlist.html">list</a>&lt; <a class="el" href="classobserver.html">observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_tree_pointers</b> ()</td></tr>
+<tr class="memitem:afaef5da5c9590ad7fe6b7d88659d4f58"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classlist.html">list</a>&lt; <a class="el" href="classobserver.html">observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#afaef5da5c9590ad7fe6b7d88659d4f58">get_tree_pointers</a> ()</td></tr>
 <tr class="separator:afaef5da5c9590ad7fe6b7d88659d4f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d13a334b6903984fde3f8831827fafc"><td class="memItemLeft" align="right" valign="top"><a id="a7d13a334b6903984fde3f8831827fafc" name="a7d13a334b6903984fde3f8831827fafc"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_tree</b> (<a class="el" href="classtree.html">tree</a> &amp;t)</td></tr>
+<tr class="memitem:a7d13a334b6903984fde3f8831827fafc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a7d13a334b6903984fde3f8831827fafc">get_tree</a> (<a class="el" href="classtree.html">tree</a> &amp;<a class="el" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>)</td></tr>
 <tr class="separator:a7d13a334b6903984fde3f8831827fafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abba6e6337023d291b326612b797fa77f"><td class="memItemLeft" align="right" valign="top"><a id="abba6e6337023d291b326612b797fa77f" name="abba6e6337023d291b326612b797fa77f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_contents</b> (int kind, <a class="el" href="classblackbox.html">blackbox</a> &amp;bb)</td></tr>
+<tr class="memitem:abba6e6337023d291b326612b797fa77f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#abba6e6337023d291b326612b797fa77f">get_contents</a> (int kind, <a class="el" href="classblackbox.html">blackbox</a> &amp;bb)</td></tr>
 <tr class="separator:abba6e6337023d291b326612b797fa77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3519e01be5ed8b12cdd21b93bf0ddc87"><td class="memItemLeft" align="right" valign="top"><a id="a3519e01be5ed8b12cdd21b93bf0ddc87" name="a3519e01be5ed8b12cdd21b93bf0ddc87"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>set_highlight</b> (int lan, int col, int start, int end)</td></tr>
+<tr class="memitem:a3519e01be5ed8b12cdd21b93bf0ddc87"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a3519e01be5ed8b12cdd21b93bf0ddc87">set_highlight</a> (int lan, int col, int start, int end)</td></tr>
 <tr class="separator:a3519e01be5ed8b12cdd21b93bf0ddc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94e10e8016b1a29e4bcd5f38e9019841"><td class="memItemLeft" align="right" valign="top"><a id="a94e10e8016b1a29e4bcd5f38e9019841" name="a94e10e8016b1a29e4bcd5f38e9019841"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_highlight</b> (int lan, <a class="el" href="classarray.html">array</a>&lt; int &gt; &amp;cols)</td></tr>
+<tr class="memitem:a94e10e8016b1a29e4bcd5f38e9019841"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver__rep.html#a94e10e8016b1a29e4bcd5f38e9019841">get_highlight</a> (int lan, <a class="el" href="classarray.html">array</a>&lt; int &gt; &amp;cols)</td></tr>
 <tr class="separator:a94e10e8016b1a29e4bcd5f38e9019841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structabstract__struct"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structabstract__struct')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structabstract__struct.html">abstract_struct</a></td></tr>
-<tr class="memitem:a92e124f5a8095cbe52e62b3324ff28d7 inherit pub_methods_structabstract__struct"><td class="memItemLeft" align="right" valign="top"><a id="a92e124f5a8095cbe52e62b3324ff28d7" name="a92e124f5a8095cbe52e62b3324ff28d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>abstract_struct</b> ()</td></tr>
-<tr class="memdesc:a92e124f5a8095cbe52e62b3324ff28d7 inherit pub_methods_structabstract__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the abstract object. Sets the reference count to 0. <br /></td></tr>
+<tr class="memitem:a92e124f5a8095cbe52e62b3324ff28d7 inherit pub_methods_structabstract__struct"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structabstract__struct.html#a92e124f5a8095cbe52e62b3324ff28d7">abstract_struct</a> ()</td></tr>
+<tr class="memdesc:a92e124f5a8095cbe52e62b3324ff28d7 inherit pub_methods_structabstract__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the abstract object. Sets the reference count to 0.  <br /></td></tr>
 <tr class="separator:a92e124f5a8095cbe52e62b3324ff28d7 inherit pub_methods_structabstract__struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49e1e831435ec09b08e272b54010a398 inherit pub_methods_structabstract__struct"><td class="memItemLeft" align="right" valign="top"><a id="a49e1e831435ec09b08e272b54010a398" name="a49e1e831435ec09b08e272b54010a398"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~abstract_struct</b> ()</td></tr>
-<tr class="memdesc:a49e1e831435ec09b08e272b54010a398 inherit pub_methods_structabstract__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the abstract object. Decrements the reference count. <br /></td></tr>
+<tr class="memitem:a49e1e831435ec09b08e272b54010a398 inherit pub_methods_structabstract__struct"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structabstract__struct.html#a49e1e831435ec09b08e272b54010a398">~abstract_struct</a> ()</td></tr>
+<tr class="memdesc:a49e1e831435ec09b08e272b54010a398 inherit pub_methods_structabstract__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the abstract object. Decrements the reference count.  <br /></td></tr>
 <tr class="separator:a49e1e831435ec09b08e272b54010a398 inherit pub_methods_structabstract__struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_structabstract__struct"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structabstract__struct')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structabstract__struct.html">abstract_struct</a></td></tr>
-<tr class="memitem:ae8c2d63325c539d21d614db5da9f42d9 inherit pub_attribs_structabstract__struct"><td class="memItemLeft" align="right" valign="top"><a id="ae8c2d63325c539d21d614db5da9f42d9" name="ae8c2d63325c539d21d614db5da9f42d9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>ref_count</b></td></tr>
-<tr class="memdesc:ae8c2d63325c539d21d614db5da9f42d9 inherit pub_attribs_structabstract__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reference count for the abstract object. <br /></td></tr>
+<tr class="memitem:ae8c2d63325c539d21d614db5da9f42d9 inherit pub_attribs_structabstract__struct"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structabstract__struct.html#ae8c2d63325c539d21d614db5da9f42d9">ref_count</a></td></tr>
+<tr class="memdesc:ae8c2d63325c539d21d614db5da9f42d9 inherit pub_attribs_structabstract__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reference count for the abstract object.  <br /></td></tr>
 <tr class="separator:ae8c2d63325c539d21d614db5da9f42d9 inherit pub_attribs_structabstract__struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00046">46</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa27a0d51c593e51708c83330468bafd0" name="aa27a0d51c593e51708c83330468bafd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27a0d51c593e51708c83330468bafd0">&#9670;&#160;</a></span>observer_rep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">observer_rep::observer_rep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00048">48</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{ <a class="code hl_define" href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="observer_8hpp.html#a3a070ecbccc5c8b58a59fd7bc0b3a1dd">observer_count</a>++); }</div>
+<div class="ttc" id="abasic_8hpp_html_a6bf49670f3546977b9ec55e86fc2e72b"><div class="ttname"><a href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a></div><div class="ttdeci">#define TM_DEBUG(x)</div><div class="ttdoc">Debugging macro used to disable debugging output.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00024">basic.hpp:24</a></div></div>
+<div class="ttc" id="aobserver_8hpp_html_a3a070ecbccc5c8b58a59fd7bc0b3a1dd"><div class="ttname"><a href="observer_8hpp.html#a3a070ecbccc5c8b58a59fd7bc0b3a1dd">observer_count</a></div><div class="ttdeci">int observer_count</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac0d2ef44ed3021978132675219af2f7" name="aac0d2ef44ed3021978132675219af2f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0d2ef44ed3021978132675219af2f7">&#9670;&#160;</a></span>~observer_rep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual observer_rep::~observer_rep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00049">49</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>{ <a class="code hl_define" href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="observer_8hpp.html#a3a070ecbccc5c8b58a59fd7bc0b3a1dd">observer_count</a>--); }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a85859bb4c951a51a08b2b610a33062c9" name="a85859bb4c951a51a08b2b610a33062c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85859bb4c951a51a08b2b610a33062c9">&#9670;&#160;</a></span>get_type()</h2>
@@ -243,6 +276,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>ref_count</b></td></tr
 <p>Get the type of the observer representation. </p>
 <dl class="section return"><dt>Returns</dt><dd>The type of the observer representation. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00055">55</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>{ <span class="keywordflow">return</span> <a class="code hl_define" href="observer_8hpp.html#a34b9a0bb7f97243000005d7310d5d3fe">OBSERVER_UNKNOWN</a>; }</div>
+<div class="ttc" id="aobserver_8hpp_html_a34b9a0bb7f97243000005d7310d5d3fe"><div class="ttname"><a href="observer_8hpp.html#a34b9a0bb7f97243000005d7310d5d3fe">OBSERVER_UNKNOWN</a></div><div class="ttdeci">#define OBSERVER_UNKNOWN</div><div class="ttdoc">define some observer types</div><div class="ttdef"><b>Definition:</b> <a href="observer_8hpp_source.html#l00028">observer.hpp:28</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3bc3a5c96b2f9c588ddf87aac4f66639" name="a3bc3a5c96b2f9c588ddf87aac4f66639"></a>
@@ -278,11 +315,1567 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>ref_count</b></td></tr
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The output stream after printing the observer representation. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00062">62</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{ <span class="keywordflow">return</span> out; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae8572ccfea8a5a7a14216bc73c79621f" name="ae8572ccfea8a5a7a14216bc73c79621f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8572ccfea8a5a7a14216bc73c79621f">&#9670;&#160;</a></span>announce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmodification.html">modification</a>&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Announcing modifications in subtrees. </p>
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00038">38</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                   {</div>
+<div class="line"><span class="lineno">   39</span>  <span class="comment">// cout &lt;&lt; &quot;Modify: &quot; &lt;&lt; mod &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordflow">switch</span> (mod-&gt;k) {</div>
+<div class="line"><span class="lineno">   41</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>:</div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_function" href="classobserver__rep.html#a86c7e08b1e11e6941adddc5c997b4f5b">announce_assign</a> (ref, mod-&gt;p, mod-&gt;t);</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   44</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#a6538fd904000be1a026945a4afb28849">MOD_INSERT</a>:</div>
+<div class="line"><span class="lineno">   45</span>    <a class="code hl_function" href="classobserver__rep.html#a3d907abc4a9588710977e00e3f0e6e22">announce_insert</a> (ref, mod-&gt;p, mod-&gt;t);</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   47</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#acb60cb829fe8ee16587b8fa2de4fb653">MOD_REMOVE</a>:</div>
+<div class="line"><span class="lineno">   48</span>    <a class="code hl_function" href="classobserver__rep.html#a0ca061455941305f64579d418be0b14f">announce_remove</a> (ref, <a class="code hl_function" href="path_8cpp.html#ac1e1d1b1fef7c244470a46faeed08a05">path_up</a> (mod-&gt;p), <a class="code hl_function" href="list_8hpp.html#a955915cd54bac6a90a18613c1d0d0fe7">last_item</a> (mod-&gt;p));</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#ae1e29c18fd597fcf928c70a5aa063de8">MOD_SPLIT</a>:</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_function" href="classobserver__rep.html#a9462a187128991852d92987b99336f87">announce_split</a> (ref, mod-&gt;p);</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a>:</div>
+<div class="line"><span class="lineno">   54</span>    <a class="code hl_function" href="classobserver__rep.html#a74ac5455efad243c2847d5850e1d58e9">announce_join</a> (ref, mod-&gt;p);</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#a2fa1bc9725526e8f90a70b2fea94f6d6">MOD_ASSIGN_NODE</a>:</div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_function" href="classobserver__rep.html#a31d11608f11089fff74c7c986640088c">announce_assign_node</a> (ref, mod-&gt;p, mod-&gt;t-&gt;op);</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a>:</div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_function" href="classobserver__rep.html#aec0ef105390f547f34ac90981ebc8fb8">announce_insert_node</a> (ref, mod-&gt;p, mod-&gt;t);</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#a2ce1a2ec817c2b43245f6a6287ecba6e">MOD_REMOVE_NODE</a>:</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_function" href="classobserver__rep.html#a52187dd2c78a7f5480a6ae3c8331f39d">announce_remove_node</a> (ref, mod-&gt;p);</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">case</span> <a class="code hl_define" href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a>:</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_function" href="classobserver__rep.html#a2b91e0a5c819f1b6be981f4e9e1d0227">announce_set_cursor</a> (ref, mod-&gt;p, mod-&gt;t);</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   68</span>  }</div>
+<div class="line"><span class="lineno">   69</span>}</div>
+<div class="ttc" id="aclassobserver__rep_html_a0ca061455941305f64579d418be0b14f"><div class="ttname"><a href="classobserver__rep.html#a0ca061455941305f64579d418be0b14f">observer_rep::announce_remove</a></div><div class="ttdeci">virtual void announce_remove(tree &amp;ref, path p, int nr)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00098">observer.cpp:98</a></div></div>
+<div class="ttc" id="aclassobserver__rep_html_a2b91e0a5c819f1b6be981f4e9e1d0227"><div class="ttname"><a href="classobserver__rep.html#a2b91e0a5c819f1b6be981f4e9e1d0227">observer_rep::announce_set_cursor</a></div><div class="ttdeci">virtual void announce_set_cursor(tree &amp;ref, path p, tree data)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00137">observer.cpp:137</a></div></div>
+<div class="ttc" id="aclassobserver__rep_html_a31d11608f11089fff74c7c986640088c"><div class="ttname"><a href="classobserver__rep.html#a31d11608f11089fff74c7c986640088c">observer_rep::announce_assign_node</a></div><div class="ttdeci">virtual void announce_assign_node(tree &amp;ref, path p, int op)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00117">observer.cpp:117</a></div></div>
+<div class="ttc" id="aclassobserver__rep_html_a3d907abc4a9588710977e00e3f0e6e22"><div class="ttname"><a href="classobserver__rep.html#a3d907abc4a9588710977e00e3f0e6e22">observer_rep::announce_insert</a></div><div class="ttdeci">virtual void announce_insert(tree &amp;ref, path p, tree ins)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00091">observer.cpp:91</a></div></div>
+<div class="ttc" id="aclassobserver__rep_html_a52187dd2c78a7f5480a6ae3c8331f39d"><div class="ttname"><a href="classobserver__rep.html#a52187dd2c78a7f5480a6ae3c8331f39d">observer_rep::announce_remove_node</a></div><div class="ttdeci">virtual void announce_remove_node(tree &amp;ref, path p)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00131">observer.cpp:131</a></div></div>
+<div class="ttc" id="aclassobserver__rep_html_a74ac5455efad243c2847d5850e1d58e9"><div class="ttname"><a href="classobserver__rep.html#a74ac5455efad243c2847d5850e1d58e9">observer_rep::announce_join</a></div><div class="ttdeci">virtual void announce_join(tree &amp;ref, path p)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00111">observer.cpp:111</a></div></div>
+<div class="ttc" id="aclassobserver__rep_html_a86c7e08b1e11e6941adddc5c997b4f5b"><div class="ttname"><a href="classobserver__rep.html#a86c7e08b1e11e6941adddc5c997b4f5b">observer_rep::announce_assign</a></div><div class="ttdeci">virtual void announce_assign(tree &amp;ref, path p, tree t)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00084">observer.cpp:84</a></div></div>
+<div class="ttc" id="aclassobserver__rep_html_a9462a187128991852d92987b99336f87"><div class="ttname"><a href="classobserver__rep.html#a9462a187128991852d92987b99336f87">observer_rep::announce_split</a></div><div class="ttdeci">virtual void announce_split(tree &amp;ref, path p)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00105">observer.cpp:105</a></div></div>
+<div class="ttc" id="aclassobserver__rep_html_aec0ef105390f547f34ac90981ebc8fb8"><div class="ttname"><a href="classobserver__rep.html#aec0ef105390f547f34ac90981ebc8fb8">observer_rep::announce_insert_node</a></div><div class="ttdeci">virtual void announce_insert_node(tree &amp;ref, path p, tree ins)</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00124">observer.cpp:124</a></div></div>
+<div class="ttc" id="alist_8hpp_html_a955915cd54bac6a90a18613c1d0d0fe7"><div class="ttname"><a href="list_8hpp.html#a955915cd54bac6a90a18613c1d0d0fe7">last_item</a></div><div class="ttdeci">T last_item(list&lt; T &gt; l)</div><div class="ttdoc">Return the last item of the list. The input list must not be an empty list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00079">list.ipp:79</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_a2ce1a2ec817c2b43245f6a6287ecba6e"><div class="ttname"><a href="modification_8hpp.html#a2ce1a2ec817c2b43245f6a6287ecba6e">MOD_REMOVE_NODE</a></div><div class="ttdeci">#define MOD_REMOVE_NODE</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00028">modification.hpp:28</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_a2fa1bc9725526e8f90a70b2fea94f6d6"><div class="ttname"><a href="modification_8hpp.html#a2fa1bc9725526e8f90a70b2fea94f6d6">MOD_ASSIGN_NODE</a></div><div class="ttdeci">#define MOD_ASSIGN_NODE</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00026">modification.hpp:26</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_a426981bec84e4b170a5b51dccb40a0cf"><div class="ttname"><a href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a></div><div class="ttdeci">#define MOD_ASSIGN</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00021">modification.hpp:21</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_a6538fd904000be1a026945a4afb28849"><div class="ttname"><a href="modification_8hpp.html#a6538fd904000be1a026945a4afb28849">MOD_INSERT</a></div><div class="ttdeci">#define MOD_INSERT</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00022">modification.hpp:22</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_a826a5835a7521b7ce04e492cf46f65da"><div class="ttname"><a href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a></div><div class="ttdeci">#define MOD_INSERT_NODE</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00027">modification.hpp:27</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_a989bce21c798798f61a016d886f0f1ca"><div class="ttname"><a href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a></div><div class="ttdeci">#define MOD_SET_CURSOR</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00029">modification.hpp:29</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_acb60cb829fe8ee16587b8fa2de4fb653"><div class="ttname"><a href="modification_8hpp.html#acb60cb829fe8ee16587b8fa2de4fb653">MOD_REMOVE</a></div><div class="ttdeci">#define MOD_REMOVE</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00023">modification.hpp:23</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_add6653f686ba3854a574587e07975b5d"><div class="ttname"><a href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a></div><div class="ttdeci">#define MOD_JOIN</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00025">modification.hpp:25</a></div></div>
+<div class="ttc" id="amodification_8hpp_html_ae1e29c18fd597fcf928c70a5aa063de8"><div class="ttname"><a href="modification_8hpp.html#ae1e29c18fd597fcf928c70a5aa063de8">MOD_SPLIT</a></div><div class="ttdeci">#define MOD_SPLIT</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00024">modification.hpp:24</a></div></div>
+<div class="ttc" id="apath_8cpp_html_ac1e1d1b1fef7c244470a46faeed08a05"><div class="ttname"><a href="path_8cpp.html#ac1e1d1b1fef7c244470a46faeed08a05">path_up</a></div><div class="ttdeci">path path_up(path p)</div><div class="ttdef"><b>Definition:</b> <a href="path_8cpp_source.html#l00084">path.cpp:84</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86c7e08b1e11e6941adddc5c997b4f5b" name="a86c7e08b1e11e6941adddc5c997b4f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c7e08b1e11e6941adddc5c997b4f5b">&#9670;&#160;</a></span>announce_assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00084">84</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                        {</div>
+<div class="line"><span class="lineno">   85</span>  (void) ref;</div>
+<div class="line"><span class="lineno">   86</span>  (void) p;</div>
+<div class="line"><span class="lineno">   87</span>  (void) <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">   88</span>}</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_ae6d631320ed189a50f11ed922bc06d7e"><div class="ttname"><a href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a></div><div class="ttdeci">blackbox t[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00042">blackbox_test.cpp:42</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3d907abc4a9588710977e00e3f0e6e22" name="a3d907abc4a9588710977e00e3f0e6e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d907abc4a9588710977e00e3f0e6e22">&#9670;&#160;</a></span>announce_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>ins</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00091">91</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                          {</div>
+<div class="line"><span class="lineno">   92</span>  (void) ref;</div>
+<div class="line"><span class="lineno">   93</span>  (void) p;</div>
+<div class="line"><span class="lineno">   94</span>  (void) ins;</div>
+<div class="line"><span class="lineno">   95</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0ca061455941305f64579d418be0b14f" name="a0ca061455941305f64579d418be0b14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ca061455941305f64579d418be0b14f">&#9670;&#160;</a></span>announce_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00098">98</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>                                                        {</div>
+<div class="line"><span class="lineno">   99</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  100</span>  (void) p;</div>
+<div class="line"><span class="lineno">  101</span>  (void) nr;</div>
+<div class="line"><span class="lineno">  102</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9462a187128991852d92987b99336f87" name="a9462a187128991852d92987b99336f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9462a187128991852d92987b99336f87">&#9670;&#160;</a></span>announce_split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_split </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00105">105</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                                               {</div>
+<div class="line"><span class="lineno">  106</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  107</span>  (void) p;</div>
+<div class="line"><span class="lineno">  108</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74ac5455efad243c2847d5850e1d58e9" name="a74ac5455efad243c2847d5850e1d58e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ac5455efad243c2847d5850e1d58e9">&#9670;&#160;</a></span>announce_join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_join </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00111">111</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                              {</div>
+<div class="line"><span class="lineno">  112</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  113</span>  (void) p;</div>
+<div class="line"><span class="lineno">  114</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a31d11608f11089fff74c7c986640088c" name="a31d11608f11089fff74c7c986640088c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d11608f11089fff74c7c986640088c">&#9670;&#160;</a></span>announce_assign_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_assign_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00117">117</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                             {</div>
+<div class="line"><span class="lineno">  118</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  119</span>  (void) p;</div>
+<div class="line"><span class="lineno">  120</span>  (void) op;</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aec0ef105390f547f34ac90981ebc8fb8" name="aec0ef105390f547f34ac90981ebc8fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0ef105390f547f34ac90981ebc8fb8">&#9670;&#160;</a></span>announce_insert_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_insert_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>ins</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00124">124</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                               {</div>
+<div class="line"><span class="lineno">  125</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  126</span>  (void) p;</div>
+<div class="line"><span class="lineno">  127</span>  (void) ins;</div>
+<div class="line"><span class="lineno">  128</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a52187dd2c78a7f5480a6ae3c8331f39d" name="a52187dd2c78a7f5480a6ae3c8331f39d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52187dd2c78a7f5480a6ae3c8331f39d">&#9670;&#160;</a></span>announce_remove_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_remove_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00131">131</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                                     {</div>
+<div class="line"><span class="lineno">  132</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  133</span>  (void) p;</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2b91e0a5c819f1b6be981f4e9e1d0227" name="a2b91e0a5c819f1b6be981f4e9e1d0227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b91e0a5c819f1b6be981f4e9e1d0227">&#9670;&#160;</a></span>announce_set_cursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::announce_set_cursor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00137">137</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>                                                               {</div>
+<div class="line"><span class="lineno">  138</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  139</span>  (void) p;</div>
+<div class="line"><span class="lineno">  140</span>  (void) data;</div>
+<div class="line"><span class="lineno">  141</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9cb2ff85da104bf1e5d9b766185acf77" name="a9cb2ff85da104bf1e5d9b766185acf77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb2ff85da104bf1e5d9b766185acf77">&#9670;&#160;</a></span>done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmodification.html">modification</a>&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00072">72</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                               {</div>
+<div class="line"><span class="lineno">   73</span>  (void) ref;</div>
+<div class="line"><span class="lineno">   74</span>  (void) mod;</div>
+<div class="line"><span class="lineno">   75</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a781d6df45e24f00ff7ded613c0bf1adb" name="a781d6df45e24f00ff7ded613c0bf1adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781d6df45e24f00ff7ded613c0bf1adb">&#9670;&#160;</a></span>touched()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::touched </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00078">78</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                                        {</div>
+<div class="line"><span class="lineno">   79</span>  (void) ref;</div>
+<div class="line"><span class="lineno">   80</span>  (void) p;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0f7964cf5dfc887bd5b935b6124172ed" name="a0f7964cf5dfc887bd5b935b6124172ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7964cf5dfc887bd5b935b6124172ed">&#9670;&#160;</a></span>notify_assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Call back routines for tree modifications. </p>
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00144">144</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>                                              {</div>
+<div class="line"><span class="lineno">  145</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  146</span>  (void) <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">  147</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5ee8220ac141d9ccd4288835bc767dbe" name="a5ee8220ac141d9ccd4288835bc767dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee8220ac141d9ccd4288835bc767dbe">&#9670;&#160;</a></span>notify_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00150">150</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>                                                       {</div>
+<div class="line"><span class="lineno">  151</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  152</span>  (void) pos;</div>
+<div class="line"><span class="lineno">  153</span>  (void) nr;</div>
+<div class="line"><span class="lineno">  154</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeb33fc0d22cabab52bb5ae5df206ce6f" name="aeb33fc0d22cabab52bb5ae5df206ce6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb33fc0d22cabab52bb5ae5df206ce6f">&#9670;&#160;</a></span>notify_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00157">157</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>                                                       {</div>
+<div class="line"><span class="lineno">  158</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  159</span>  (void) pos;</div>
+<div class="line"><span class="lineno">  160</span>  (void) nr;</div>
+<div class="line"><span class="lineno">  161</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af91c73190b56aaff86d2499e0b01b3ff" name="af91c73190b56aaff86d2499e0b01b3ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91c73190b56aaff86d2499e0b01b3ff">&#9670;&#160;</a></span>notify_split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_split </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>prev</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00164">164</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  164</span>                                                         {</div>
+<div class="line"><span class="lineno">  165</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  166</span>  (void) pos;</div>
+<div class="line"><span class="lineno">  167</span>  (void) prev;</div>
+<div class="line"><span class="lineno">  168</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aadc5047c1635a025c8aa14b7bb8367c1" name="aadc5047c1635a025c8aa14b7bb8367c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc5047c1635a025c8aa14b7bb8367c1">&#9670;&#160;</a></span>notify_var_split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_var_split </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>t2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00171">171</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                           {</div>
+<div class="line"><span class="lineno">  172</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  173</span>  (void) <a class="code hl_variable" href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a>;</div>
+<div class="line"><span class="lineno">  174</span>  (void) <a class="code hl_variable" href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a>;</div>
+<div class="line"><span class="lineno">  175</span>}</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a18b5f54faeb11f10fb26a4c937c07319"><div class="ttname"><a href="blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319">t1</a></div><div class="ttdeci">blackbox t1</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00029">blackbox_test.cpp:29</a></div></div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a5e32bde843553ec52acf98706369244a"><div class="ttname"><a href="blackbox__test_8cpp.html#a5e32bde843553ec52acf98706369244a">t2</a></div><div class="ttdeci">blackbox t2</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00030">blackbox_test.cpp:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac0283f135f1224b1fd1fca865bd6031f" name="ac0283f135f1224b1fd1fca865bd6031f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0283f135f1224b1fd1fca865bd6031f">&#9670;&#160;</a></span>notify_join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_join </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>next</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00178">178</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                        {</div>
+<div class="line"><span class="lineno">  179</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  180</span>  (void) pos;</div>
+<div class="line"><span class="lineno">  181</span>  (void) next;</div>
+<div class="line"><span class="lineno">  182</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a201568138e118ba44988f5c1f0a3b296" name="a201568138e118ba44988f5c1f0a3b296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201568138e118ba44988f5c1f0a3b296">&#9670;&#160;</a></span>notify_var_join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_var_join </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00185">185</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>                                                            {</div>
+<div class="line"><span class="lineno">  186</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  187</span>  (void) <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">  188</span>  (void) offset;</div>
+<div class="line"><span class="lineno">  189</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acf0dee83d6556cc97b8eb3d764badf66" name="acf0dee83d6556cc97b8eb3d764badf66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0dee83d6556cc97b8eb3d764badf66">&#9670;&#160;</a></span>notify_assign_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_assign_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00192">192</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>                                                   {</div>
+<div class="line"><span class="lineno">  193</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  194</span>  (void) op;</div>
+<div class="line"><span class="lineno">  195</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6305c6ae6142461f37c59c15dbe110a7" name="a6305c6ae6142461f37c59c15dbe110a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6305c6ae6142461f37c59c15dbe110a7">&#9670;&#160;</a></span>notify_insert_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_insert_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00198">198</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>                                                    {</div>
+<div class="line"><span class="lineno">  199</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  200</span>  (void) pos;</div>
+<div class="line"><span class="lineno">  201</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a406dc18dfa9e336fe0062462ce5652d6" name="a406dc18dfa9e336fe0062462ce5652d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a406dc18dfa9e336fe0062462ce5652d6">&#9670;&#160;</a></span>notify_remove_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_remove_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00204">204</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>                                                    {</div>
+<div class="line"><span class="lineno">  205</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  206</span>  (void) pos;</div>
+<div class="line"><span class="lineno">  207</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a976b11568d571f6eda4a4be6bd78fc7b" name="a976b11568d571f6eda4a4be6bd78fc7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a976b11568d571f6eda4a4be6bd78fc7b">&#9670;&#160;</a></span>notify_set_cursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_set_cursor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00210">210</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                              {</div>
+<div class="line"><span class="lineno">  211</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  212</span>  (void) pos;</div>
+<div class="line"><span class="lineno">  213</span>  (void) data;</div>
+<div class="line"><span class="lineno">  214</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa43c65dc5c0afba467083332e669bf5d" name="aa43c65dc5c0afba467083332e669bf5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43c65dc5c0afba467083332e669bf5d">&#9670;&#160;</a></span>notify_detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void observer_rep::notify_detach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>closest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00217">217</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                                {</div>
+<div class="line"><span class="lineno">  218</span>  (void) ref;</div>
+<div class="line"><span class="lineno">  219</span>  (void) closest;</div>
+<div class="line"><span class="lineno">  220</span>  (void) right;</div>
+<div class="line"><span class="lineno">  221</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d67cd183f8ac12c6541d815d62c3c62" name="a6d67cd183f8ac12c6541d815d62c3c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d67cd183f8ac12c6541d815d62c3c62">&#9670;&#160;</a></span>get_ip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool observer_rep::get_ip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> &amp;&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extra routines for particular types of observers. </p>
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00224">224</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>                              {</div>
+<div class="line"><span class="lineno">  225</span>  (void) ip;</div>
+<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  227</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af8153e55db56d64d729f4e6e4a3b9b0f" name="af8153e55db56d64d729f4e6e4a3b9b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8153e55db56d64d729f4e6e4a3b9b0f">&#9670;&#160;</a></span>set_ip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool observer_rep::set_ip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00230">230</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>                             {</div>
+<div class="line"><span class="lineno">  231</span>  (void) ip;</div>
+<div class="line"><span class="lineno">  232</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  233</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86c003b5ad15c8b749dca8f018e0cb5b" name="a86c003b5ad15c8b749dca8f018e0cb5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c003b5ad15c8b749dca8f018e0cb5b">&#9670;&#160;</a></span>get_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool observer_rep::get_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00236">236</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>                                               {</div>
+<div class="line"><span class="lineno">  237</span>  (void) <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">  238</span>  (void) <a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a>;</div>
+<div class="line"><span class="lineno">  239</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  240</span>}</div>
+<div class="ttc" id="amodification_8cpp_html_aec27b977ec4cae3388e34fcadb6ccf8e"><div class="ttname"><a href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a></div><div class="ttdeci">int index(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00103">modification.cpp:103</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ada0dc7f3a12620fd9a50a14790bbabc9" name="ada0dc7f3a12620fd9a50a14790bbabc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada0dc7f3a12620fd9a50a14790bbabc9">&#9670;&#160;</a></span>set_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool observer_rep::set_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a>&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00243">243</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  243</span>                                             {</div>
+<div class="line"><span class="lineno">  244</span>  (void) <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">  245</span>  (void) <a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a>;</div>
+<div class="line"><span class="lineno">  246</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  247</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9df36ef13b0b2ec067d4d38c40f6c4fb" name="a9df36ef13b0b2ec067d4d38c40f6c4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df36ef13b0b2ec067d4d38c40f6c4fb">&#9670;&#160;</a></span>get_child()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classobserver.html">observer</a> &amp; observer_rep::get_child </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>which</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00250">250</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  250</span>                                  {</div>
+<div class="line"><span class="lineno">  251</span>  (void) which;</div>
+<div class="line"><span class="lineno">  252</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="observer_8hpp.html#a0f8dc82c07400d6cb29cbdbca589d62f">nil_observer</a>;</div>
+<div class="line"><span class="lineno">  253</span>}</div>
+<div class="ttc" id="aobserver_8hpp_html_a0f8dc82c07400d6cb29cbdbca589d62f"><div class="ttname"><a href="observer_8hpp.html#a0f8dc82c07400d6cb29cbdbca589d62f">nil_observer</a></div><div class="ttdeci">observer nil_observer</div><div class="ttdef"><b>Definition:</b> <a href="observer_8cpp_source.html#l00016">observer.cpp:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afaef5da5c9590ad7fe6b7d88659d4f58" name="afaef5da5c9590ad7fe6b7d88659d4f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaef5da5c9590ad7fe6b7d88659d4f58">&#9670;&#160;</a></span>get_tree_pointers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; <a class="el" href="classobserver.html">observer</a> &gt; observer_rep::get_tree_pointers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00256">256</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>                                 {</div>
+<div class="line"><span class="lineno">  257</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;observer&gt;</a> ();</div>
+<div class="line"><span class="lineno">  258</span>}</div>
+<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7d13a334b6903984fde3f8831827fafc" name="a7d13a334b6903984fde3f8831827fafc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d13a334b6903984fde3f8831827fafc">&#9670;&#160;</a></span>get_tree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool observer_rep::get_tree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00261">261</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  261</span>                               {</div>
+<div class="line"><span class="lineno">  262</span>  (void) <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno">  263</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  264</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abba6e6337023d291b326612b797fa77f" name="abba6e6337023d291b326612b797fa77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba6e6337023d291b326612b797fa77f">&#9670;&#160;</a></span>get_contents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool observer_rep::get_contents </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a> &amp;&#160;</td>
+          <td class="paramname"><em>bb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00267">267</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  267</span>                                                  {</div>
+<div class="line"><span class="lineno">  268</span>  (void) kind;</div>
+<div class="line"><span class="lineno">  269</span>  (void) bb;</div>
+<div class="line"><span class="lineno">  270</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  271</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3519e01be5ed8b12cdd21b93bf0ddc87" name="a3519e01be5ed8b12cdd21b93bf0ddc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3519e01be5ed8b12cdd21b93bf0ddc87">&#9670;&#160;</a></span>set_highlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool observer_rep::set_highlight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00274">274</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  274</span>                                                                 {</div>
+<div class="line"><span class="lineno">  275</span>  (void) col;</div>
+<div class="line"><span class="lineno">  276</span>  (void) start;</div>
+<div class="line"><span class="lineno">  277</span>  (void) end;</div>
+<div class="line"><span class="lineno">  278</span>  (void) lan;</div>
+<div class="line"><span class="lineno">  279</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  280</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a94e10e8016b1a29e4bcd5f38e9019841" name="a94e10e8016b1a29e4bcd5f38e9019841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e10e8016b1a29e4bcd5f38e9019841">&#9670;&#160;</a></span>get_highlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool observer_rep::get_highlight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classarray.html">array</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00283">283</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  283</span>                                                      {</div>
+<div class="line"><span class="lineno">  284</span>  (void) lan;</div>
+<div class="line"><span class="lineno">  285</span>  (void) cols;</div>
+<div class="line"><span class="lineno">  286</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  287</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Kernel/Abstractions/<a class="el" href="observer_8hpp_source.html">observer.hpp</a></li>
-<li>Kernel/Abstractions/observer.cpp</li>
+<li><a class="el" href="observer_8hpp_source.html">observer.hpp</a></li>
+<li><a class="el" href="observer_8cpp_source.html">observer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

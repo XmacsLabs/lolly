@@ -1,0 +1,21 @@
+digraph "compound_rep"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="compound_rep",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="tree_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classtree__rep.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="firebrick4",style="solid"];
+  Node3 [label="concrete_struct",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structconcrete__struct.html",tooltip="Structure representing a concrete object with a reference count."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" ref_count" ];
+  Node4 [label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" op" ];
+  Node5 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" obs" ];
+  Node5 [label="observer",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classobserver.html",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" a" ];
+  Node6 [label="array\< tree \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classarray.html",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="orange",style="dashed",label=" \< tree \>" ];
+  Node7 [label="array\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classarray.html",tooltip="A template class representing an array."];
+}

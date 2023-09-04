@@ -1,0 +1,30 @@
+digraph "abstract_struct"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="abstract_struct",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Structure representing an abstract object with a reference count."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="promise_rep\< int \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classpromise__rep.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="promise_rep_int_add",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classpromise__rep__int__add.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="blackbox_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classblackbox__rep.html",tooltip="A template class representing an opaque pointer."];
+  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="whitebox_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classwhitebox__rep.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="iterator_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classiterator__rep.html",tooltip="An abstract base class for iterator implementation."];
+  Node6 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="hashmap_iterator_rep\l\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap__iterator__rep.html",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="hashset_iterator_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashset__iterator__rep.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="observer_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classobserver__rep.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="promise_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classpromise__rep.html",tooltip=" "];
+  Node10 -> Node2 [dir="back",color="orange",style="dashed",label=" \< int \>" ];
+  Node1 -> Node11 [dir="back",color="steelblue1",style="solid"];
+  Node11 [label="unary_function_rep\l\< T, S \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classunary__function__rep.html",tooltip=" "];
+}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: Kernel/Containers/iterator.hpp File Reference</title>
+<title>Lolly: iterator.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,9 +81,19 @@ $(function() {
   <div class="headertitle"><div class="title">iterator.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;hashmap.hpp&quot;</code><br />
-<code>#include &quot;hashset.hpp&quot;</code><br />
-<code>#include &quot;iterator.ipp&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hashset_8hpp_source.html">hashset.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="iterator_8ipp_source.html">iterator.ipp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for iterator.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="iterator_8hpp__incl.png" border="0" usemap="#aiterator_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="iterator_8hpp__dep__incl.png" border="0" usemap="#aiterator_8hppdep" alt=""/></div>
+</div>
 </div>
 <p><a href="iterator_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -97,8 +108,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4fc1f898dccb0fc5aefb2e3e8bd96ede"><td class="memItemLeft" align="right" valign="top"><a id="a4fc1f898dccb0fc5aefb2e3e8bd96ede" name="a4fc1f898dccb0fc5aefb2e3e8bd96ede"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ABSTRACT_TEMPLATE_CODE</b> (<a class="el" href="structiterator.html">iterator</a>, class, T)</td></tr>
+<tr class="memitem:a4fc1f898dccb0fc5aefb2e3e8bd96ede"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="iterator_8hpp.html#a4fc1f898dccb0fc5aefb2e3e8bd96ede">ABSTRACT_TEMPLATE_CODE</a> (<a class="el" href="structiterator.html">iterator</a>, class, T)</td></tr>
 <tr class="separator:a4fc1f898dccb0fc5aefb2e3e8bd96ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79cc7424b0f48879f19ae9647e0d42a1"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a79cc7424b0f48879f19ae9647e0d42a1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="iterator_8hpp.html#a79cc7424b0f48879f19ae9647e0d42a1">operator&lt;&lt;</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="structiterator.html">iterator</a>&lt; T &gt; it)</td></tr>
@@ -115,83 +125,47 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a49aa69e6cf0bf0655101eac0610d19c4"><td class="memItemLeft" align="right" valign="top"><a id="a49aa69e6cf0bf0655101eac0610d19c4" name="a49aa69e6cf0bf0655101eac0610d19c4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iterator_count</b></td></tr>
+<tr class="memitem:a49aa69e6cf0bf0655101eac0610d19c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="iterator_8hpp.html#a49aa69e6cf0bf0655101eac0610d19c4">iterator_count</a></td></tr>
 <tr class="separator:a49aa69e6cf0bf0655101eac0610d19c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>GPLv3</dd></dl>
 <p>dynamic iterators </p><dl class="section author"><dt>Author</dt><dd>Joris van der Hoeven </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>1999 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="ac57c236a9a461ba5c5c414e3d70c0348" name="ac57c236a9a461ba5c5c414e3d70c0348"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac57c236a9a461ba5c5c414e3d70c0348">&#9670;&#160;</a></span>iterate() <span class="overload">[1/2]</span></h2>
+<a id="a4fc1f898dccb0fc5aefb2e3e8bd96ede" name="a4fc1f898dccb0fc5aefb2e3e8bd96ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc1f898dccb0fc5aefb2e3e8bd96ede">&#9670;&#160;</a></span>ABSTRACT_TEMPLATE_CODE()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structiterator.html">iterator</a>&lt; T &gt; iterate </td>
+          <td class="memname">ABSTRACT_TEMPLATE_CODE </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classhashmap.html">hashmap</a>&lt; T, U &gt;&#160;</td>
-          <td class="paramname"><em>h</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structiterator.html">iterator</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">class&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Generates an iterator for a container of type hashmap&lt;T, U&gt;. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the elements in the container. </td></tr>
-    <tr><td class="paramname">U</td><td>The type of the values in the hashmap. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">h</td><td>The hashmap container. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An iterator object for the hashmap container. </dd></dl>
-
-</div>
-</div>
-<a id="a2d35416c563888683261ad1497e736ad" name="a2d35416c563888683261ad1497e736ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d35416c563888683261ad1497e736ad">&#9670;&#160;</a></span>iterate() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structiterator.html">iterator</a>&lt; T &gt; iterate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classhashset.html">hashset</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>h</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Generates an iterator for a container of type hashset&lt;T&gt;. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the elements in the container. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">h</td><td>The hashset container. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An iterator object for the hashset container. </dd></dl>
 
 </div>
 </div>
@@ -238,6 +212,122 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The output stream. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="iterator_8ipp_source.html#l00026">26</a> of file <a class="el" href="iterator_8ipp_source.html">iterator.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                                             {</div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordtype">bool</span> flag= <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   29</span>  out &lt;&lt; <span class="stringliteral">&quot;[ &quot;</span>;</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">while</span> (it-&gt;busy ()) {</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">if</span> (flag) out &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">else</span> flag= <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   33</span>    out &lt;&lt; it-&gt;next ();</div>
+<div class="line"><span class="lineno">   34</span>  }</div>
+<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line"><span class="lineno">   36</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac57c236a9a461ba5c5c414e3d70c0348" name="ac57c236a9a461ba5c5c414e3d70c0348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57c236a9a461ba5c5c414e3d70c0348">&#9670;&#160;</a></span>iterate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structiterator.html">iterator</a>&lt; T &gt; iterate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhashmap.html">hashmap</a>&lt; T, U &gt;&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates an iterator for a container of type hashmap&lt;T, U&gt;. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the elements in the container. </td></tr>
+    <tr><td class="paramname">U</td><td>The type of the values in the hashmap. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>The hashmap container. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An iterator object for the hashmap container. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="iterator_8ipp_source.html#l00134">134</a> of file <a class="el" href="iterator_8ipp_source.html">iterator.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                          {</div>
+<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">return</span> tm_new&lt;hashmap_iterator_rep&lt;T, U&gt; &gt; (h);</div>
+<div class="line"><span class="lineno">  136</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2d35416c563888683261ad1497e736ad" name="a2d35416c563888683261ad1497e736ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d35416c563888683261ad1497e736ad">&#9670;&#160;</a></span>iterate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structiterator.html">iterator</a>&lt; T &gt; iterate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhashset.html">hashset</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates an iterator for a container of type hashset&lt;T&gt;. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the elements in the container. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>The hashset container. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An iterator object for the hashset container. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="iterator_8ipp_source.html#l00083">83</a> of file <a class="el" href="iterator_8ipp_source.html">iterator.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                       {</div>
+<div class="line"><span class="lineno">   84</span>  <span class="keywordflow">return</span> tm_new&lt;hashset_iterator_rep&lt;T&gt; &gt; (h);</div>
+<div class="line"><span class="lineno">   85</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a49aa69e6cf0bf0655101eac0610d19c4" name="a49aa69e6cf0bf0655101eac0610d19c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49aa69e6cf0bf0655101eac0610d19c4">&#9670;&#160;</a></span>iterator_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iterator_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

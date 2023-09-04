@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: Kernel/Abstractions/blackbox.hpp File Reference</title>
+<title>Lolly: blackbox.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -80,6 +81,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="basic_8hpp_source.html">basic.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for blackbox.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="blackbox_8hpp__incl.png" border="0" usemap="#ablackbox_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="blackbox_8hpp__dep__incl.png" border="0" usemap="#ablackbox_8hppdep" alt=""/></div>
+</div>
 </div>
 <p><a href="blackbox_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -95,9 +106,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a90bb69aa2ef96355160a6e2b48b6b9dd"><td class="memItemLeft" align="right" valign="top"><a id="a90bb69aa2ef96355160a6e2b48b6b9dd" name="a90bb69aa2ef96355160a6e2b48b6b9dd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ABSTRACT_NULL_CODE</b> (<a class="el" href="classblackbox.html">blackbox</a>)</td></tr>
-<tr class="separator:a90bb69aa2ef96355160a6e2b48b6b9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa062545d808e38d833dcb529924000a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (<a class="el" href="classblackbox.html">blackbox</a> x)</td></tr>
+<tr class="separator:aa062545d808e38d833dcb529924000a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240867e70f01dba659ab706460a7a449"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="blackbox_8hpp.html#a240867e70f01dba659ab706460a7a449">operator==</a> (<a class="el" href="classblackbox.html">blackbox</a> bb1, <a class="el" href="classblackbox.html">blackbox</a> bb2)</td></tr>
 <tr class="memdesc:a240867e70f01dba659ab706460a7a449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator for blackbox instances.  <br /></td></tr>
 <tr class="separator:a240867e70f01dba659ab706460a7a449"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,79 +133,11 @@ Functions</h2></td></tr>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>GPLv3</dd></dl>
 <p>defines a templated blackbox class representing an opaque pointer </p><dl class="section author"><dt>Author</dt><dd>Joris van der Hoeven </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2005 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="blackbox_8hpp_source.html">blackbox.hpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aa5f996d688958b647fc677dacbca6c0b" name="aa5f996d688958b647fc677dacbca6c0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5f996d688958b647fc677dacbca6c0b">&#9670;&#160;</a></span>close_box()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classblackbox.html">blackbox</a> close_box </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a blackbox instance with the given data. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of data to be stored in the whitebox. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>The data to be stored in the whitebox. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The blackbox instance. </dd></dl>
-
-</div>
-</div>
-<a id="a9a2d8a0efc001ce8743bc34ff40723b4" name="a9a2d8a0efc001ce8743bc34ff40723b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a2d8a0efc001ce8743bc34ff40723b4">&#9670;&#160;</a></span>open_box()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T open_box </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td>
-          <td class="paramname"><em>bb</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Open the blackbox instance and retrieve the stored data. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of data stored in the whitebox. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bb</td><td>The blackbox instance. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The stored data. </dd></dl>
-
-</div>
-</div>
-<a id="a83bb8ea2897b8785fed1efe0d67901b4" name="a83bb8ea2897b8785fed1efe0d67901b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83bb8ea2897b8785fed1efe0d67901b4">&#9670;&#160;</a></span>operator!=()</h2>
+<a id="aa062545d808e38d833dcb529924000a0" name="aa062545d808e38d833dcb529924000a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa062545d808e38d833dcb529924000a0">&#9670;&#160;</a></span>is_nil()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,21 +146,11 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool operator!= </td>
+          <td class="memname">bool is_nil </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td>
-          <td class="paramname"><em>bb1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td>
-          <td class="paramname"><em>bb2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -228,62 +160,136 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Inequality operator for blackbox instances. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bb1</td><td>The first blackbox instance. </td></tr>
-    <tr><td class="paramname">bb2</td><td>The second blackbox instance. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the blackbox instances are not equal, false otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="a1d5098bebc6306997fe93ed213efe001" name="a1d5098bebc6306997fe93ed213efe001"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d5098bebc6306997fe93ed213efe001">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td>
-          <td class="paramname"><em>bb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Output stream operator for blackbox instances. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>The output stream. </td></tr>
-    <tr><td class="paramname">bb</td><td>The blackbox instance. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The output stream after displaying the blackbox instance. </dd></dl>
-
+<p class="definition">Definition at line <a class="el" href="blackbox_8hpp_source.html#l00029">29</a> of file <a class="el" href="blackbox_8hpp_source.html">blackbox.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>: <span class="keyword">public</span> <a class="code hl_class" href="classblackbox__rep.html">blackbox_rep</a> {</div>
+<div class="line"><span class="lineno">   31</span><span class="keyword">public</span>:</div>
+<div class="line"><span class="lineno">   32</span>  T data; <span class="comment">/**&lt; The data stored in the whitebox. */</span></div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span><span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><span class="lineno">   35</span><span class="comment">  /**</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment">   * @brief Constructor.</span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment">   * @param data2 The data to be stored in the whitebox.</span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment">   */</span></div>
+<div class="line"><span class="lineno">   39</span>  <span class="keyword">inline</span> <a class="code hl_class" href="classwhitebox__rep.html">whitebox_rep</a> (<span class="keyword">const</span> T&amp; data2) : data (data2) {}</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keyword">inline</span> <a class="code hl_class" href="classwhitebox__rep.html">~whitebox_rep</a> () {}</div>
+<div class="line"><span class="lineno">   41</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   42</span><span class="comment">  /**</span></div>
+<div class="line"><span class="lineno">   43</span><span class="comment">   * @brief Get the type of the whitebox representation.</span></div>
+<div class="line"><span class="lineno">   44</span><span class="comment">   * @return The type of the whitebox representation.</span></div>
+<div class="line"><span class="lineno">   45</span><span class="comment">   */</span></div>
+<div class="line"><span class="lineno">   46</span>  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> () { <span class="keywordflow">return</span> <a class="code hl_struct" href="structtype__helper.html">type_helper&lt;T&gt;::id</a>; }</div>
+<div class="line"><span class="lineno">   47</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   48</span><span class="comment">  /**</span></div>
+<div class="line"><span class="lineno">   49</span><span class="comment">   * @brief Check if the whitebox representation is equal to another</span></div>
+<div class="line"><span class="lineno">   50</span><span class="comment">   * blackbox_rep pointer.</span></div>
+<div class="line"><span class="lineno">   51</span><span class="comment">   * @param ptr A pointer to another blackbox_rep.</span></div>
+<div class="line"><span class="lineno">   52</span><span class="comment">   * @return True if the whitebox representation is equal to the other</span></div>
+<div class="line"><span class="lineno">   53</span><span class="comment">   * blackbox_rep, false otherwise.</span></div>
+<div class="line"><span class="lineno">   54</span><span class="comment">   */</span></div>
+<div class="line"><span class="lineno">   55</span>  <span class="keyword">inline</span> <span class="keywordtype">bool</span> equal (<a class="code hl_class" href="classblackbox__rep.html">blackbox_rep</a>* ptr) {</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> ptr != NULL &amp;&amp; ptr-&gt;<a class="code hl_function" href="classblackbox__rep.html#a872246434456e23a63da4a23ca9137f7">get_type</a> () == <a class="code hl_struct" href="structtype__helper.html">type_helper&lt;T&gt;::id</a> &amp;&amp;</div>
+<div class="line"><span class="lineno">   57</span>           ((<a class="code hl_class" href="classwhitebox__rep.html">whitebox_rep&lt;T&gt;</a>*) ptr)-&gt;data == data;</div>
+<div class="line"><span class="lineno">   58</span>  }</div>
+<div class="line"><span class="lineno">   59</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   60</span><span class="comment">  /**</span></div>
+<div class="line"><span class="lineno">   61</span><span class="comment">   * @brief Display the whitebox representation.</span></div>
+<div class="line"><span class="lineno">   62</span><span class="comment">   * @param out The output stream to display the whitebox representation.</span></div>
+<div class="line"><span class="lineno">   63</span><span class="comment">   * @return The output stream after displaying the whitebox representation.</span></div>
+<div class="line"><span class="lineno">   64</span><span class="comment">   */</span></div>
+<div class="line"><span class="lineno">   65</span>  <span class="keyword">inline</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; display (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out) { <span class="keywordflow">return</span> out &lt;&lt; data; }</div>
+<div class="line"><span class="lineno">   66</span>};</div>
+<div class="line"><span class="lineno">   67</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   68</span><span class="comment">/**</span></div>
+<div class="line"><span class="lineno">   69</span><span class="comment"> * @brief Equality operator for blackbox instances.</span></div>
+<div class="line"><span class="lineno">   70</span><span class="comment"> * @param bb1 The first blackbox instance.</span></div>
+<div class="line"><span class="lineno">   71</span><span class="comment"> * @param bb2 The second blackbox instance.</span></div>
+<div class="line"><span class="lineno">   72</span><span class="comment"> * @return True if the blackbox instances are equal, false otherwise.</span></div>
+<div class="line"><span class="lineno">   73</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">   74</span><span class="keyword">inline</span> <span class="keywordtype">bool</span></div>
+<div class="line"><span class="lineno">   75</span><a class="code hl_function" href="blackbox_8hpp.html#a240867e70f01dba659ab706460a7a449">operator== </a>(<a class="code hl_class" href="classblackbox.html">blackbox</a> bb1, <a class="code hl_class" href="classblackbox.html">blackbox</a> bb2) {</div>
+<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb1)) <span class="keywordflow">return</span> <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb2);</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> bb1-&gt;<a class="code hl_function" href="classblackbox__rep.html#adbe011bf7259e2c3fcf23301c70cca42">equal</a> (bb2.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a>);</div>
+<div class="line"><span class="lineno">   78</span>}</div>
+<div class="line"><span class="lineno">   79</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   80</span><span class="comment">/**</span></div>
+<div class="line"><span class="lineno">   81</span><span class="comment"> * @brief Inequality operator for blackbox instances.</span></div>
+<div class="line"><span class="lineno">   82</span><span class="comment"> * @param bb1 The first blackbox instance.</span></div>
+<div class="line"><span class="lineno">   83</span><span class="comment"> * @param bb2 The second blackbox instance.</span></div>
+<div class="line"><span class="lineno">   84</span><span class="comment"> * @return True if the blackbox instances are not equal, false otherwise.</span></div>
+<div class="line"><span class="lineno">   85</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">   86</span><span class="keyword">inline</span> <span class="keywordtype">bool</span></div>
+<div class="line"><span class="lineno">   87</span><a class="code hl_function" href="blackbox_8hpp.html#a83bb8ea2897b8785fed1efe0d67901b4">operator!= </a>(<a class="code hl_class" href="classblackbox.html">blackbox</a> bb1, <a class="code hl_class" href="classblackbox.html">blackbox</a> bb2) {</div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb1)) <span class="keywordflow">return</span> !<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb2);</div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> !bb1-&gt;<a class="code hl_function" href="classblackbox__rep.html#adbe011bf7259e2c3fcf23301c70cca42">equal</a> (bb2.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a>);</div>
+<div class="line"><span class="lineno">   90</span>}</div>
+<div class="line"><span class="lineno">   91</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">   92</span><span class="comment">/**</span></div>
+<div class="line"><span class="lineno">   93</span><span class="comment"> * @brief Output stream operator for blackbox instances.</span></div>
+<div class="line"><span class="lineno">   94</span><span class="comment"> * @param out The output stream.</span></div>
+<div class="line"><span class="lineno">   95</span><span class="comment"> * @param bb The blackbox instance.</span></div>
+<div class="line"><span class="lineno">   96</span><span class="comment"> * @return The output stream after displaying the blackbox instance.</span></div>
+<div class="line"><span class="lineno">   97</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">   98</span><span class="keyword">inline</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp;</div>
+<div class="line"><span class="lineno">   99</span><a class="code hl_function" href="blackbox_8hpp.html#a1d5098bebc6306997fe93ed213efe001">operator&lt;&lt; </a>(<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out, <a class="code hl_class" href="classblackbox.html">blackbox</a> bb) {</div>
+<div class="line"><span class="lineno">  100</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb)) <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;nil&quot;</span>;</div>
+<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> bb-&gt;<a class="code hl_function" href="classblackbox__rep.html#a4d690d9461c38670be88b31240895192">display</a> (out);</div>
+<div class="line"><span class="lineno">  102</span>}</div>
+<div class="line"><span class="lineno">  103</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  104</span><span class="comment">/**</span></div>
+<div class="line"><span class="lineno">  105</span><span class="comment"> * @brief Get the type of the blackbox instance.</span></div>
+<div class="line"><span class="lineno">  106</span><span class="comment"> * @param bb The blackbox instance.</span></div>
+<div class="line"><span class="lineno">  107</span><span class="comment"> * @return The type of the blackbox instance.</span></div>
+<div class="line"><span class="lineno">  108</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">  109</span><span class="keyword">inline</span> <span class="keywordtype">int</span></div>
+<div class="line"><span class="lineno">  110</span><a class="code hl_function" href="blackbox_8hpp.html#aef3cc21b18f2546383b4c795affb2d90">type_box</a> (<a class="code hl_class" href="classblackbox.html">blackbox</a> bb) {</div>
+<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb) ? 0 : bb-&gt;<a class="code hl_function" href="classblackbox__rep.html#a872246434456e23a63da4a23ca9137f7">get_type</a> ();</div>
+<div class="line"><span class="lineno">  112</span>}</div>
+<div class="line"><span class="lineno">  113</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  114</span><span class="comment">/**</span></div>
+<div class="line"><span class="lineno">  115</span><span class="comment"> * @brief Create a blackbox instance with the given data.</span></div>
+<div class="line"><span class="lineno">  116</span><span class="comment"> * @tparam T The type of data to be stored in the whitebox.</span></div>
+<div class="line"><span class="lineno">  117</span><span class="comment"> * @param data The data to be stored in the whitebox.</span></div>
+<div class="line"><span class="lineno">  118</span><span class="comment"> * @return The blackbox instance.</span></div>
+<div class="line"><span class="lineno">  119</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">  120</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><span class="lineno">  121</span><a class="code hl_class" href="classblackbox.html">blackbox</a></div>
+<div class="line"><span class="lineno">  122</span><a class="code hl_function" href="blackbox_8hpp.html#aa5f996d688958b647fc677dacbca6c0b">close_box</a> (<span class="keyword">const</span> T&amp; data) {</div>
+<div class="line"><span class="lineno">  123</span>  <span class="keywordflow">return</span> tm_new&lt;whitebox_rep&lt;T&gt; &gt; (data);</div>
+<div class="line"><span class="lineno">  124</span>}</div>
+<div class="line"><span class="lineno">  125</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  126</span><span class="comment">/**</span></div>
+<div class="line"><span class="lineno">  127</span><span class="comment"> * @brief Open the blackbox instance and retrieve the stored data.</span></div>
+<div class="line"><span class="lineno">  128</span><span class="comment"> * @tparam T The type of data stored in the whitebox.</span></div>
+<div class="line"><span class="lineno">  129</span><span class="comment"> * @param bb The blackbox instance.</span></div>
+<div class="line"><span class="lineno">  130</span><span class="comment"> * @return The stored data.</span></div>
+<div class="line"><span class="lineno">  131</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">  132</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><span class="lineno">  133</span>T</div>
+<div class="line"><span class="lineno">  134</span><a class="code hl_function" href="blackbox_8hpp.html#a9a2d8a0efc001ce8743bc34ff40723b4">open_box</a> (<a class="code hl_class" href="classblackbox.html">blackbox</a> bb) {</div>
+<div class="line"><span class="lineno">  135</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (<a class="code hl_function" href="blackbox_8hpp.html#aef3cc21b18f2546383b4c795affb2d90">type_box</a> (bb) == <a class="code hl_struct" href="structtype__helper.html">type_helper&lt;T&gt;::id</a>, <span class="stringliteral">&quot;type mismatch&quot;</span>);</div>
+<div class="line"><span class="lineno">  136</span>  <span class="keywordflow">return</span> ((<a class="code hl_class" href="classwhitebox__rep.html">whitebox_rep&lt;T&gt;</a>*) bb.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a>)-&gt;data;</div>
+<div class="line"><span class="lineno">  137</span>}</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span><span class="preprocessor">#endif </span><span class="comment">// BLACKBOX_H</span></div>
+<div class="ttc" id="abasic_8hpp_html_ac6c818ab7aca2e521c97eee817f99f91"><div class="ttname"><a href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a></div><div class="ttdeci">#define ASSERT(cond, msg)</div><div class="ttdoc">Macro used to assert that a condition is true, and throw an exception with an error message if the co...</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00264">basic.hpp:264</a></div></div>
+<div class="ttc" id="ablackbox_8hpp_html_a1d5098bebc6306997fe93ed213efe001"><div class="ttname"><a href="blackbox_8hpp.html#a1d5098bebc6306997fe93ed213efe001">operator&lt;&lt;</a></div><div class="ttdeci">tm_ostream &amp; operator&lt;&lt;(tm_ostream &amp;out, blackbox bb)</div><div class="ttdoc">Output stream operator for blackbox instances.</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00099">blackbox.hpp:100</a></div></div>
+<div class="ttc" id="ablackbox_8hpp_html_a240867e70f01dba659ab706460a7a449"><div class="ttname"><a href="blackbox_8hpp.html#a240867e70f01dba659ab706460a7a449">operator==</a></div><div class="ttdeci">bool operator==(blackbox bb1, blackbox bb2)</div><div class="ttdoc">Equality operator for blackbox instances.</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00076">blackbox.hpp:76</a></div></div>
+<div class="ttc" id="ablackbox_8hpp_html_a83bb8ea2897b8785fed1efe0d67901b4"><div class="ttname"><a href="blackbox_8hpp.html#a83bb8ea2897b8785fed1efe0d67901b4">operator!=</a></div><div class="ttdeci">bool operator!=(blackbox bb1, blackbox bb2)</div><div class="ttdoc">Inequality operator for blackbox instances.</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00088">blackbox.hpp:88</a></div></div>
+<div class="ttc" id="ablackbox_8hpp_html_a9a2d8a0efc001ce8743bc34ff40723b4"><div class="ttname"><a href="blackbox_8hpp.html#a9a2d8a0efc001ce8743bc34ff40723b4">open_box</a></div><div class="ttdeci">T open_box(blackbox bb)</div><div class="ttdoc">Open the blackbox instance and retrieve the stored data.</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00135">blackbox.hpp:135</a></div></div>
+<div class="ttc" id="ablackbox_8hpp_html_aa062545d808e38d833dcb529924000a0"><div class="ttname"><a href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a></div><div class="ttdeci">bool is_nil(blackbox x)</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00029">blackbox.hpp:29</a></div></div>
+<div class="ttc" id="ablackbox_8hpp_html_aa5f996d688958b647fc677dacbca6c0b"><div class="ttname"><a href="blackbox_8hpp.html#aa5f996d688958b647fc677dacbca6c0b">close_box</a></div><div class="ttdeci">blackbox close_box(const T &amp;data)</div><div class="ttdoc">Create a blackbox instance with the given data.</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00123">blackbox.hpp:123</a></div></div>
+<div class="ttc" id="ablackbox_8hpp_html_aef3cc21b18f2546383b4c795affb2d90"><div class="ttname"><a href="blackbox_8hpp.html#aef3cc21b18f2546383b4c795affb2d90">type_box</a></div><div class="ttdeci">int type_box(blackbox bb)</div><div class="ttdoc">Get the type of the blackbox instance.</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00111">blackbox.hpp:111</a></div></div>
+<div class="ttc" id="aclassblackbox__rep_html"><div class="ttname"><a href="classblackbox__rep.html">blackbox_rep</a></div><div class="ttdoc">A template class representing an opaque pointer.</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00016">blackbox.hpp:16</a></div></div>
+<div class="ttc" id="aclassblackbox__rep_html_a4d690d9461c38670be88b31240895192"><div class="ttname"><a href="classblackbox__rep.html#a4d690d9461c38670be88b31240895192">blackbox_rep::display</a></div><div class="ttdeci">virtual tm_ostream &amp; display(tm_ostream &amp;out)=0</div></div>
+<div class="ttc" id="aclassblackbox__rep_html_a872246434456e23a63da4a23ca9137f7"><div class="ttname"><a href="classblackbox__rep.html#a872246434456e23a63da4a23ca9137f7">blackbox_rep::get_type</a></div><div class="ttdeci">virtual int get_type()=0</div></div>
+<div class="ttc" id="aclassblackbox__rep_html_adbe011bf7259e2c3fcf23301c70cca42"><div class="ttname"><a href="classblackbox__rep.html#adbe011bf7259e2c3fcf23301c70cca42">blackbox_rep::equal</a></div><div class="ttdeci">virtual bool equal(blackbox_rep *ptr)=0</div></div>
+<div class="ttc" id="aclassblackbox_html"><div class="ttname"><a href="classblackbox.html">blackbox</a></div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00025">blackbox.hpp:25</a></div></div>
+<div class="ttc" id="aclassblackbox_html_a0a468f2364d3a19c145abff297529a64"><div class="ttname"><a href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">blackbox::rep</a></div><div class="ttdeci">blackbox_rep * rep</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00027">blackbox.hpp:27</a></div></div>
+<div class="ttc" id="aclasstm__ostream_html"><div class="ttname"><a href="classtm__ostream.html">tm_ostream</a></div><div class="ttdef"><b>Definition:</b> <a href="tm__ostream_8hpp_source.html#l00035">tm_ostream.hpp:35</a></div></div>
+<div class="ttc" id="aclasswhitebox__rep_html"><div class="ttname"><a href="classwhitebox__rep.html">whitebox_rep</a></div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00031">blackbox.hpp:31</a></div></div>
+<div class="ttc" id="amodification_8cpp_html_a51312a342b50e1bc2ea8e1addde53769"><div class="ttname"><a href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a></div><div class="ttdeci">string get_type(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00158">modification.cpp:158</a></div></div>
+<div class="ttc" id="astructtype__helper_html"><div class="ttname"><a href="structtype__helper.html">type_helper</a></div><div class="ttdoc">Helper struct for type identification and initialization.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00560">basic.hpp:560</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a240867e70f01dba659ab706460a7a449" name="a240867e70f01dba659ab706460a7a449"></a>
@@ -330,6 +336,116 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the blackbox instances are equal, false otherwise. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="blackbox_8hpp_source.html#l00076">76</a> of file <a class="el" href="blackbox_8hpp_source.html">blackbox.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>                                        {</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb1)) <span class="keywordflow">return</span> <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb2);</div>
+<div class="line"><span class="lineno">   78</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> bb1-&gt;<a class="code hl_function" href="classblackbox__rep.html#adbe011bf7259e2c3fcf23301c70cca42">equal</a> (bb2.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a>);</div>
+<div class="line"><span class="lineno">   79</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a83bb8ea2897b8785fed1efe0d67901b4" name="a83bb8ea2897b8785fed1efe0d67901b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83bb8ea2897b8785fed1efe0d67901b4">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td>
+          <td class="paramname"><em>bb1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td>
+          <td class="paramname"><em>bb2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inequality operator for blackbox instances. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bb1</td><td>The first blackbox instance. </td></tr>
+    <tr><td class="paramname">bb2</td><td>The second blackbox instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the blackbox instances are not equal, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="blackbox_8hpp_source.html#l00088">88</a> of file <a class="el" href="blackbox_8hpp_source.html">blackbox.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                        {</div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb1)) <span class="keywordflow">return</span> !<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb2);</div>
+<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> !bb1-&gt;<a class="code hl_function" href="classblackbox__rep.html#adbe011bf7259e2c3fcf23301c70cca42">equal</a> (bb2.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a>);</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1d5098bebc6306997fe93ed213efe001" name="a1d5098bebc6306997fe93ed213efe001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d5098bebc6306997fe93ed213efe001">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td>
+          <td class="paramname"><em>bb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Output stream operator for blackbox instances. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>The output stream. </td></tr>
+    <tr><td class="paramname">bb</td><td>The blackbox instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The output stream after displaying the blackbox instance. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="blackbox_8hpp_source.html#l00099">99</a> of file <a class="el" href="blackbox_8hpp_source.html">blackbox.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                                          {</div>
+<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb)) <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;nil&quot;</span>;</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> bb-&gt;<a class="code hl_function" href="classblackbox__rep.html#a4d690d9461c38670be88b31240895192">display</a> (out);</div>
+<div class="line"><span class="lineno">  103</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aef3cc21b18f2546383b4c795affb2d90" name="aef3cc21b18f2546383b4c795affb2d90"></a>
@@ -365,6 +481,92 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The type of the blackbox instance. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="blackbox_8hpp_source.html#l00111">111</a> of file <a class="el" href="blackbox_8hpp_source.html">blackbox.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                       {</div>
+<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (bb) ? 0 : bb-&gt;<a class="code hl_function" href="classblackbox__rep.html#a872246434456e23a63da4a23ca9137f7">get_type</a> ();</div>
+<div class="line"><span class="lineno">  113</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa5f996d688958b647fc677dacbca6c0b" name="aa5f996d688958b647fc677dacbca6c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f996d688958b647fc677dacbca6c0b">&#9670;&#160;</a></span>close_box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classblackbox.html">blackbox</a> close_box </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a blackbox instance with the given data. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of data to be stored in the whitebox. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to be stored in the whitebox. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The blackbox instance. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="blackbox_8hpp_source.html#l00123">123</a> of file <a class="el" href="blackbox_8hpp_source.html">blackbox.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                          {</div>
+<div class="line"><span class="lineno">  124</span>  <span class="keywordflow">return</span> tm_new&lt;whitebox_rep&lt;T&gt; &gt; (data);</div>
+<div class="line"><span class="lineno">  125</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9a2d8a0efc001ce8743bc34ff40723b4" name="a9a2d8a0efc001ce8743bc34ff40723b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a2d8a0efc001ce8743bc34ff40723b4">&#9670;&#160;</a></span>open_box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T open_box </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td>
+          <td class="paramname"><em>bb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open the blackbox instance and retrieve the stored data. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of data stored in the whitebox. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bb</td><td>The blackbox instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stored data. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="blackbox_8hpp_source.html#l00135">135</a> of file <a class="el" href="blackbox_8hpp_source.html">blackbox.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                       {</div>
+<div class="line"><span class="lineno">  136</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (<a class="code hl_function" href="blackbox_8hpp.html#aef3cc21b18f2546383b4c795affb2d90">type_box</a> (bb) == <a class="code hl_struct" href="structtype__helper.html">type_helper&lt;T&gt;::id</a>, <span class="stringliteral">&quot;type mismatch&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">return</span> ((<a class="code hl_class" href="classwhitebox__rep.html">whitebox_rep&lt;T&gt;</a>*) bb.<a class="code hl_variable" href="classblackbox.html#a0a468f2364d3a19c145abff297529a64">rep</a>)-&gt;data;</div>
+<div class="line"><span class="lineno">  138</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

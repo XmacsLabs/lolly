@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['generic_5frep_0',['generic_rep',['../classgeneric__rep.html',1,'']]]
+  ['file_5furl_0',['file_url',['../classfile__url.html',1,'']]],
+  ['ftp_5furl_1',['ftp_url',['../classftp__url.html',1,'']]]
 ];

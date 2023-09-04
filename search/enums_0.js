@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['display_5fcontrol_0',['display_control',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242',1,'basic.hpp']]]
+  ['color_0',['Color',['../namespaceMyLibrary.html#a79a9f4bbb675f6c082b09249c5a95ced',1,'MyLibrary']]]
 ];

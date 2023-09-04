@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['contributing_0',['Contributing',['../md_CONTRIBUTING.html',1,'']]]
+  ['bug_20list_0',['Bug List',['../bug.html',1,'']]]
 ];

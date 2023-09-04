@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: Kernel/Containers/promise.hpp Source File</title>
+<title>Lolly: promise.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -76,7 +77,7 @@ $(function() {
   <div class="headertitle"><div class="title">promise.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="promise_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/******************************************************************************</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * MODULE     : promise.hpp</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * DESCRIPTION: promises</span></div>
@@ -91,59 +92,69 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define PROMISE_H</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="basic_8hpp.html">basic.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;tm_ostream.hpp&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="tm__ostream_8hpp.html">tm_ostream.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classpromise__rep.html">promise_rep</a>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classpromise.html">promise</a>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; operator&lt;&lt; (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out, <a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> cmd);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">bool</span>        is_nil (<a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> l);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; <a class="code hl_function" href="promise_8hpp.html#aec8aa01231911c650dc9504652a08f7a">operator&lt;&lt; </a>(<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out, <a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> cmd);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="promise_8hpp.html#a27d61ed9fd87b8d684fd57fad3a9df21">   21</a></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">bool</span>        <a class="code hl_function" href="promise_8hpp.html#a27d61ed9fd87b8d684fd57fad3a9df21">is_nil</a> (<a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> l);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classpromise__rep.html">   23</a></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classpromise__rep.html">promise_rep</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structabstract__struct.html">abstract_struct</a> {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">inline</span> <a class="code hl_class" href="classpromise__rep.html">promise_rep</a> () {}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classpromise__rep.html">~promise_rep</a> () {}</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; print (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keyword">virtual</span> T                  eval ()= 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classpromise__rep.html#a0b94e8b3d00b9da59e5ded8bb9016f94">   25</a></span>  <span class="keyword">inline</span> <a class="code hl_function" href="classpromise__rep.html#a0b94e8b3d00b9da59e5ded8bb9016f94">promise_rep</a> () {}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classpromise__rep.html#a8f5f88f346295c6557a0ef49e11fad32">   26</a></span>  <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code hl_function" href="classpromise__rep.html#a8f5f88f346295c6557a0ef49e11fad32">~promise_rep</a> () {}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classpromise__rep.html#ab608a25f850d69c1d77bd149810ccd86">   27</a></span>  <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; <a class="code hl_function" href="classpromise__rep.html#ab608a25f850d69c1d77bd149810ccd86">print</a> (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classpromise__rep.html#a7c276aaba8be7a9abff83284f6b12836">   28</a></span>  <span class="keyword">virtual</span> T                  <a class="code hl_function" href="classpromise__rep.html#a7c276aaba8be7a9abff83284f6b12836">eval</a> ()= 0;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classpromise.html">   31</a></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classpromise.html">promise</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_define" href="basic_8hpp.html#a65a861c88afd58f673a45f92fc4add6a">ABSTRACT_NULL_TEMPLATE</a> (<a class="code hl_class" href="classpromise.html">promise</a>, T);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keyword">inline</span> T operator() ();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">friend</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; <span class="keyword">operator</span>&lt;&lt; <a class="code hl_define" href="basic_8hpp.html#a00a60464f1b8c2b44f883ed269dffc7d">LESSGTR</a> (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out, <a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> cmd);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classpromise.html#ac98c94399d721a1825e6e0d8f6e36b2e">   33</a></span>  <a class="code hl_function" href="classpromise.html#ac98c94399d721a1825e6e0d8f6e36b2e">ABSTRACT_NULL_TEMPLATE</a> (<a class="code hl_class" href="classpromise.html">promise</a>, T);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keyword">inline</span> T <a class="code hl_function" href="classpromise.html#ac59340ed134f0bc839b5c2ff246decf9">operator() </a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classpromise.html#a30fe3cb1a7bcd4503d1eb1706d1762b5">   35</a></span>  <span class="keyword">friend</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; <span class="keyword">operator</span>&lt;&lt; <a class="code hl_define" href="basic_8hpp.html#a00a60464f1b8c2b44f883ed269dffc7d">LESSGTR</a> (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out, <a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> cmd);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><a class="code hl_define" href="basic_8hpp.html#a912366d06c0cac1fdff35139c0664190">ABSTRACT_NULL_TEMPLATE_CODE</a> (<a class="code hl_class" href="classpromise.html">promise</a>, <span class="keyword">class</span>, T);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="promise_8hpp.html#a78c909df6179a5b58a33db081faa3d26">   37</a></span><a class="code hl_define" href="basic_8hpp.html#a912366d06c0cac1fdff35139c0664190">ABSTRACT_NULL_TEMPLATE_CODE</a> (<a class="code hl_class" href="classpromise.html">promise</a>, <span class="keyword">class</span>, T);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define TMPL template &lt;class T&gt;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>TMPL <span class="keyword">inline</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_class" href="classpromise__rep.html">promise_rep&lt;T&gt;::print</a> (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="promise_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4">   39</a></span><span class="preprocessor">#define TMPL template &lt;class T&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><a class="code hl_define" href="promise_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4">TMPL</a> <span class="keyword">inline</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classpromise__rep.html#ab608a25f850d69c1d77bd149810ccd86">   41</a></span><a class="code hl_function" href="classpromise__rep.html#ab608a25f850d69c1d77bd149810ccd86">promise_rep&lt;T&gt;::print</a> (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out) {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;promise&quot;</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>TMPL <span class="keyword">inline</span> T</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><a class="code hl_class" href="classpromise.html">promise&lt;T&gt;::operator() </a>() {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><a class="code hl_define" href="promise_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4">TMPL</a> <span class="keyword">inline</span> T</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classpromise.html#ac59340ed134f0bc839b5c2ff246decf9">   45</a></span><a class="code hl_function" href="classpromise.html#ac59340ed134f0bc839b5c2ff246decf9">promise&lt;T&gt;::operator() </a>() {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>-&gt;eval ();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>TMPL <span class="keyword">inline</span> <span class="keywordtype">bool</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>operator== (<a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> mw1, <a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> mw2) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><a class="code hl_define" href="promise_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4">TMPL</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="promise_8hpp.html#a05ae1ba1c6d0646ed526cdbe6364ffb6">   49</a></span><a class="code hl_function" href="promise_8hpp.html#a05ae1ba1c6d0646ed526cdbe6364ffb6">operator== </a>(<a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> mw1, <a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> mw2) {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordflow">return</span> mw1.rep == mw2.rep;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>TMPL <span class="keyword">inline</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>operator&lt;&lt; (<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out, <a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> cmd) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">if</span> (is_nil (cmd)) <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;(null)&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="promise_8hpp.html#aec8aa01231911c650dc9504652a08f7a">   52</a></span><a class="code hl_define" href="promise_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4">TMPL</a> <span class="keyword">inline</span> <a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><a class="code hl_function" href="promise_8hpp.html#aec8aa01231911c650dc9504652a08f7a">operator&lt;&lt; </a>(<a class="code hl_class" href="classtm__ostream.html">tm_ostream</a>&amp; out, <a class="code hl_class" href="classpromise.html">promise&lt;T&gt;</a> cmd) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="promise_8hpp.html#a27d61ed9fd87b8d684fd57fad3a9df21">is_nil</a> (cmd)) <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot;(null)&quot;</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> cmd-&gt;print (out);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#undef TMPL</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// defined PROMISE_H</span></div>
 <div class="ttc" id="abasic_8hpp_html"><div class="ttname"><a href="basic_8hpp.html">basic.hpp</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_a00a60464f1b8c2b44f883ed269dffc7d"><div class="ttname"><a href="basic_8hpp.html#a00a60464f1b8c2b44f883ed269dffc7d">LESSGTR</a></div><div class="ttdeci">#define LESSGTR</div><div class="ttdoc">Macro used for template specialization of less than and greater than operators.</div><div class="ttdef"><b>Definition:</b> basic.hpp:19</div></div>
-<div class="ttc" id="abasic_8hpp_html_a65a861c88afd58f673a45f92fc4add6a"><div class="ttname"><a href="basic_8hpp.html#a65a861c88afd58f673a45f92fc4add6a">ABSTRACT_NULL_TEMPLATE</a></div><div class="ttdeci">#define ABSTRACT_NULL_TEMPLATE(PTR, T)</div><div class="ttdoc">Macro for abstract null indirect structure template definition.</div><div class="ttdef"><b>Definition:</b> basic.hpp:1058</div></div>
-<div class="ttc" id="abasic_8hpp_html_a912366d06c0cac1fdff35139c0664190"><div class="ttname"><a href="basic_8hpp.html#a912366d06c0cac1fdff35139c0664190">ABSTRACT_NULL_TEMPLATE_CODE</a></div><div class="ttdeci">#define ABSTRACT_NULL_TEMPLATE_CODE(PTR, TT, T)</div><div class="ttdoc">Macro for abstract null indirect structure template code definition.</div><div class="ttdef"><b>Definition:</b> basic.hpp:1068</div></div>
-<div class="ttc" id="aclasspromise__rep_html"><div class="ttname"><a href="classpromise__rep.html">promise_rep</a></div><div class="ttdef"><b>Definition:</b> promise.hpp:23</div></div>
-<div class="ttc" id="aclasspromise_html"><div class="ttname"><a href="classpromise.html">promise</a></div><div class="ttdef"><b>Definition:</b> promise.hpp:31</div></div>
-<div class="ttc" id="aclasstm__ostream_html"><div class="ttname"><a href="classtm__ostream.html">tm_ostream</a></div><div class="ttdef"><b>Definition:</b> tm_ostream.hpp:35</div></div>
-<div class="ttc" id="astructabstract__struct_html"><div class="ttname"><a href="structabstract__struct.html">abstract_struct</a></div><div class="ttdoc">Structure representing an abstract object with a reference count.</div><div class="ttdef"><b>Definition:</b> basic.hpp:624</div></div>
-<div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition:</b> resource.hpp:16</div></div>
+<div class="ttc" id="abasic_8hpp_html_a00a60464f1b8c2b44f883ed269dffc7d"><div class="ttname"><a href="basic_8hpp.html#a00a60464f1b8c2b44f883ed269dffc7d">LESSGTR</a></div><div class="ttdeci">#define LESSGTR</div><div class="ttdoc">Macro used for template specialization of less than and greater than operators.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00019">basic.hpp:19</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a912366d06c0cac1fdff35139c0664190"><div class="ttname"><a href="basic_8hpp.html#a912366d06c0cac1fdff35139c0664190">ABSTRACT_NULL_TEMPLATE_CODE</a></div><div class="ttdeci">#define ABSTRACT_NULL_TEMPLATE_CODE(PTR, TT, T)</div><div class="ttdoc">Macro for abstract null indirect structure template code definition.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l01068">basic.hpp:1068</a></div></div>
+<div class="ttc" id="aclasspromise__rep_html"><div class="ttname"><a href="classpromise__rep.html">promise_rep</a></div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00023">promise.hpp:23</a></div></div>
+<div class="ttc" id="aclasspromise__rep_html_a0b94e8b3d00b9da59e5ded8bb9016f94"><div class="ttname"><a href="classpromise__rep.html#a0b94e8b3d00b9da59e5ded8bb9016f94">promise_rep::promise_rep</a></div><div class="ttdeci">promise_rep()</div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00025">promise.hpp:25</a></div></div>
+<div class="ttc" id="aclasspromise__rep_html_a7c276aaba8be7a9abff83284f6b12836"><div class="ttname"><a href="classpromise__rep.html#a7c276aaba8be7a9abff83284f6b12836">promise_rep::eval</a></div><div class="ttdeci">virtual T eval()=0</div></div>
+<div class="ttc" id="aclasspromise__rep_html_a8f5f88f346295c6557a0ef49e11fad32"><div class="ttname"><a href="classpromise__rep.html#a8f5f88f346295c6557a0ef49e11fad32">promise_rep::~promise_rep</a></div><div class="ttdeci">virtual ~promise_rep()</div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00026">promise.hpp:26</a></div></div>
+<div class="ttc" id="aclasspromise__rep_html_ab608a25f850d69c1d77bd149810ccd86"><div class="ttname"><a href="classpromise__rep.html#ab608a25f850d69c1d77bd149810ccd86">promise_rep::print</a></div><div class="ttdeci">virtual tm_ostream &amp; print(tm_ostream &amp;out)</div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00041">promise.hpp:41</a></div></div>
+<div class="ttc" id="aclasspromise_html"><div class="ttname"><a href="classpromise.html">promise</a></div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00031">promise.hpp:31</a></div></div>
+<div class="ttc" id="aclasspromise_html_ac59340ed134f0bc839b5c2ff246decf9"><div class="ttname"><a href="classpromise.html#ac59340ed134f0bc839b5c2ff246decf9">promise::operator()</a></div><div class="ttdeci">T operator()()</div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00045">promise.hpp:45</a></div></div>
+<div class="ttc" id="aclasspromise_html_ac98c94399d721a1825e6e0d8f6e36b2e"><div class="ttname"><a href="classpromise.html#ac98c94399d721a1825e6e0d8f6e36b2e">promise::ABSTRACT_NULL_TEMPLATE</a></div><div class="ttdeci">ABSTRACT_NULL_TEMPLATE(promise, T)</div></div>
+<div class="ttc" id="aclasstm__ostream_html"><div class="ttname"><a href="classtm__ostream.html">tm_ostream</a></div><div class="ttdef"><b>Definition:</b> <a href="tm__ostream_8hpp_source.html#l00035">tm_ostream.hpp:35</a></div></div>
+<div class="ttc" id="apromise_8hpp_html_a05ae1ba1c6d0646ed526cdbe6364ffb6"><div class="ttname"><a href="promise_8hpp.html#a05ae1ba1c6d0646ed526cdbe6364ffb6">operator==</a></div><div class="ttdeci">bool operator==(promise&lt; T &gt; mw1, promise&lt; T &gt; mw2)</div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00049">promise.hpp:49</a></div></div>
+<div class="ttc" id="apromise_8hpp_html_a27d61ed9fd87b8d684fd57fad3a9df21"><div class="ttname"><a href="promise_8hpp.html#a27d61ed9fd87b8d684fd57fad3a9df21">is_nil</a></div><div class="ttdeci">bool is_nil(promise&lt; T &gt; l)</div></div>
+<div class="ttc" id="apromise_8hpp_html_ae651af7bb4896e16cad3623826bb0ee4"><div class="ttname"><a href="promise_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4">TMPL</a></div><div class="ttdeci">#define TMPL</div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00039">promise.hpp:39</a></div></div>
+<div class="ttc" id="apromise_8hpp_html_aec8aa01231911c650dc9504652a08f7a"><div class="ttname"><a href="promise_8hpp.html#aec8aa01231911c650dc9504652a08f7a">operator&lt;&lt;</a></div><div class="ttdeci">tm_ostream &amp; operator&lt;&lt;(tm_ostream &amp;out, promise&lt; T &gt; cmd)</div><div class="ttdef"><b>Definition:</b> <a href="promise_8hpp_source.html#l00052">promise.hpp:53</a></div></div>
+<div class="ttc" id="astructabstract__struct_html"><div class="ttname"><a href="structabstract__struct.html">abstract_struct</a></div><div class="ttdoc">Structure representing an abstract object with a reference count.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00624">basic.hpp:624</a></div></div>
+<div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition:</b> <a href="resource_8hpp_source.html#l00016">resource.hpp:16</a></div></div>
+<div class="ttc" id="atm__ostream_8hpp_html"><div class="ttname"><a href="tm__ostream_8hpp.html">tm_ostream.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

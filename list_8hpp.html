@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: Kernel/Containers/list.hpp File Reference</title>
+<title>Lolly: list.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -82,7 +83,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="basic_8hpp_source.html">basic.hpp</a>&quot;</code><br />
-<code>#include &quot;list.ipp&quot;</code><br />
+<code>#include &quot;<a class="el" href="list_8ipp_source.html">list.ipp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for list.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="list_8hpp__incl.png" border="0" usemap="#alist_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="list_8hpp__dep__incl.png" border="0" usemap="#alist_8hppdep" alt=""/></div>
+</div>
 </div>
 <p><a href="list_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -97,8 +108,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ae651af7bb4896e16cad3623826bb0ee4"><td class="memItemLeft" align="right" valign="top"><a id="ae651af7bb4896e16cad3623826bb0ee4" name="ae651af7bb4896e16cad3623826bb0ee4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TMPL</b>&#160;&#160;&#160;template &lt;class T&gt;</td></tr>
+<tr class="memitem:ae651af7bb4896e16cad3623826bb0ee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4">TMPL</a>&#160;&#160;&#160;template &lt;class T&gt;</td></tr>
 <tr class="separator:ae651af7bb4896e16cad3623826bb0ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -115,273 +125,113 @@ Functions</h2></td></tr>
 <tr class="memitem:a462d483ee52c449435852927e12514f1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a462d483ee52c449435852927e12514f1">strong_equal</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
 <tr class="memdesc:a462d483ee52c449435852927e12514f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two lists are strongly equal (i.e., have the same items in the same order).  <br /></td></tr>
 <tr class="separator:a462d483ee52c449435852927e12514f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07347ef7fc72cb7b4e09f411a5a76218"><td class="memItemLeft" align="right" valign="top"><a id="a07347ef7fc72cb7b4e09f411a5a76218" name="a07347ef7fc72cb7b4e09f411a5a76218"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CONCRETE_NULL_TEMPLATE_CODE</b> (<a class="el" href="classlist.html">list</a>, class, T)</td></tr>
+<tr class="memitem:a07347ef7fc72cb7b4e09f411a5a76218"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a07347ef7fc72cb7b4e09f411a5a76218">CONCRETE_NULL_TEMPLATE_CODE</a> (<a class="el" href="classlist.html">list</a>, class, T)</td></tr>
 <tr class="separator:a07347ef7fc72cb7b4e09f411a5a76218"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a13c87ba79d5546fcf71a4a3ae7efb5"><td class="memItemLeft" align="right" valign="top"><a id="a7a13c87ba79d5546fcf71a4a3ae7efb5" name="a7a13c87ba79d5546fcf71a4a3ae7efb5"></a>
-TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_atom</b> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
-<tr class="separator:a7a13c87ba79d5546fcf71a4a3ae7efb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed41e03437e4ab607c684bb0c311695b"><td class="memItemLeft" align="right" valign="top">TMPL int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#aed41e03437e4ab607c684bb0c311695b">N</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
-<tr class="memdesc:aed41e03437e4ab607c684bb0c311695b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of items in a list.  <br /></td></tr>
-<tr class="separator:aed41e03437e4ab607c684bb0c311695b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca96c0bc65832ddc84e985769ffa9e62"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#aca96c0bc65832ddc84e985769ffa9e62">copy</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
-<tr class="memdesc:aca96c0bc65832ddc84e985769ffa9e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of a list.  <br /></td></tr>
-<tr class="separator:aca96c0bc65832ddc84e985769ffa9e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a1a1479f9792f1f712d9d5ff72a56ba"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a7a1a1479f9792f1f712d9d5ff72a56ba">operator*</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, T x)</td></tr>
-<tr class="memdesc:a7a1a1479f9792f1f712d9d5ff72a56ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new list by appending an item to the end of an existing list.  <br /></td></tr>
-<tr class="separator:a7a1a1479f9792f1f712d9d5ff72a56ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5438e16fb970e94479a08602719150e"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#aa5438e16fb970e94479a08602719150e">operator*</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
-<tr class="memdesc:aa5438e16fb970e94479a08602719150e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new list by concatenating two existing lists.  <br /></td></tr>
-<tr class="separator:aa5438e16fb970e94479a08602719150e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f6bcd5d131a090ebbebafb9b0c2f6ff"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a7f6bcd5d131a090ebbebafb9b0c2f6ff">head</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l, int n=1)</td></tr>
-<tr class="memdesc:a7f6bcd5d131a090ebbebafb9b0c2f6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first n items of a list.  <br /></td></tr>
-<tr class="separator:a7f6bcd5d131a090ebbebafb9b0c2f6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28d416b8e65b97cf5d2be0c33497b8f1"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a28d416b8e65b97cf5d2be0c33497b8f1">tail</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l, int n=1)</td></tr>
-<tr class="memdesc:a28d416b8e65b97cf5d2be0c33497b8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all but the first n items of a list.  <br /></td></tr>
-<tr class="separator:a28d416b8e65b97cf5d2be0c33497b8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aaca706d992826f1837864b3b39524a"><td class="memItemLeft" align="right" valign="top">TMPL T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a1aaca706d992826f1837864b3b39524a">last_item</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
-<tr class="memdesc:a1aaca706d992826f1837864b3b39524a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the last item of the list. The input list must not be an empty list.  <br /></td></tr>
-<tr class="separator:a1aaca706d992826f1837864b3b39524a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24764bcb5e42149895bcd956e91196a9"><td class="memItemLeft" align="right" valign="top">TMPL T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a24764bcb5e42149895bcd956e91196a9">access_last</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l)</td></tr>
-<tr class="memdesc:a24764bcb5e42149895bcd956e91196a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the last item in a list.  <br /></td></tr>
-<tr class="separator:a24764bcb5e42149895bcd956e91196a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7faafc7f0c87c5897ba0678a01d377fa"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a7faafc7f0c87c5897ba0678a01d377fa">suppress_last</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l)</td></tr>
-<tr class="memdesc:a7faafc7f0c87c5897ba0678a01d377fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the last item from a list.  <br /></td></tr>
-<tr class="separator:a7faafc7f0c87c5897ba0678a01d377fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab906605d534b5fd87247f533f4c6465f"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#ab906605d534b5fd87247f533f4c6465f">reverse</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
-<tr class="memdesc:ab906605d534b5fd87247f533f4c6465f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new list with the items in reverse order.  <br /></td></tr>
-<tr class="separator:ab906605d534b5fd87247f533f4c6465f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bfbed02ec665953bf5dd245ffad9aba"><td class="memItemLeft" align="right" valign="top">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a4bfbed02ec665953bf5dd245ffad9aba">remove</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l, T what)</td></tr>
-<tr class="memdesc:a4bfbed02ec665953bf5dd245ffad9aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new list with a specific item removed.  <br /></td></tr>
-<tr class="separator:a4bfbed02ec665953bf5dd245ffad9aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf539b068c6f84c764e42b03c80c1dc"><td class="memItemLeft" align="right" valign="top">TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a7cf539b068c6f84c764e42b03c80c1dc">contains</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l, T what)</td></tr>
-<tr class="memdesc:a7cf539b068c6f84c764e42b03c80c1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a list contains a specific item.  <br /></td></tr>
-<tr class="separator:a7cf539b068c6f84c764e42b03c80c1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a317fa06e674ebd5b24cd77b5c7169078"><td class="memItemLeft" align="right" valign="top"><a id="a317fa06e674ebd5b24cd77b5c7169078" name="a317fa06e674ebd5b24cd77b5c7169078"></a>
-TMPL <a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
-<tr class="separator:a317fa06e674ebd5b24cd77b5c7169078"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa258cfe067977bd6e4c13856199221d2"><td class="memItemLeft" align="right" valign="top"><a id="aa258cfe067977bd6e4c13856199221d2" name="aa258cfe067977bd6e4c13856199221d2"></a>
-TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l, T item)</td></tr>
-<tr class="separator:aa258cfe067977bd6e4c13856199221d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c71670c8c92a5fd288eda72cb4bd3d6"><td class="memItemLeft" align="right" valign="top"><a id="a3c71670c8c92a5fd288eda72cb4bd3d6" name="a3c71670c8c92a5fd288eda72cb4bd3d6"></a>
-TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
-<tr class="separator:a3c71670c8c92a5fd288eda72cb4bd3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542c7080519454528180ce9fe6217f90"><td class="memItemLeft" align="right" valign="top"><a id="a542c7080519454528180ce9fe6217f90" name="a542c7080519454528180ce9fe6217f90"></a>
-TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (T item, <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l)</td></tr>
-<tr class="separator:a542c7080519454528180ce9fe6217f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aeb8458583886be51394fa81ea02ce6"><td class="memItemLeft" align="right" valign="top"><a id="a5aeb8458583886be51394fa81ea02ce6" name="a5aeb8458583886be51394fa81ea02ce6"></a>
-TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (T &amp;item, <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l)</td></tr>
-<tr class="separator:a5aeb8458583886be51394fa81ea02ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0818066b3196b0c2d2d376a691518d8a"><td class="memItemLeft" align="right" valign="top"><a id="a0818066b3196b0c2d2d376a691518d8a" name="a0818066b3196b0c2d2d376a691518d8a"></a>
-TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
-<tr class="separator:a0818066b3196b0c2d2d376a691518d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae19caef819df38e82d0bf98207ca7c17"><td class="memItemLeft" align="right" valign="top"><a id="ae19caef819df38e82d0bf98207ca7c17" name="ae19caef819df38e82d0bf98207ca7c17"></a>
-TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
-<tr class="separator:ae19caef819df38e82d0bf98207ca7c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad7dc20945fae7d3ef4eed520c21f137"><td class="memItemLeft" align="right" valign="top"><a id="aad7dc20945fae7d3ef4eed520c21f137" name="aad7dc20945fae7d3ef4eed520c21f137"></a>
-TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
-<tr class="separator:aad7dc20945fae7d3ef4eed520c21f137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae353e8800c9d3a288054074da2833f65"><td class="memItemLeft" align="right" valign="top"><a id="ae353e8800c9d3a288054074da2833f65" name="ae353e8800c9d3a288054074da2833f65"></a>
-TMPL bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=</b> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
-<tr class="separator:ae353e8800c9d3a288054074da2833f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d176fa8ddf38a95f41b3c5196f5222"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad1d176fa8ddf38a95f41b3c5196f5222"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#ad1d176fa8ddf38a95f41b3c5196f5222">N</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
+<tr class="memdesc:ad1d176fa8ddf38a95f41b3c5196f5222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of items in a list.  <br /></td></tr>
+<tr class="separator:ad1d176fa8ddf38a95f41b3c5196f5222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a055027c8af0fbb1da0d4a724225ad9"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a6a055027c8af0fbb1da0d4a724225ad9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a6a055027c8af0fbb1da0d4a724225ad9">copy</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
+<tr class="memdesc:a6a055027c8af0fbb1da0d4a724225ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of a list.  <br /></td></tr>
+<tr class="separator:a6a055027c8af0fbb1da0d4a724225ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6a6935b76954919f89686c844dd294"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7b6a6935b76954919f89686c844dd294"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a7b6a6935b76954919f89686c844dd294">operator*</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, T x)</td></tr>
+<tr class="memdesc:a7b6a6935b76954919f89686c844dd294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new list by appending an item to the end of an existing list.  <br /></td></tr>
+<tr class="separator:a7b6a6935b76954919f89686c844dd294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2629aed7fa1c43a823af38968d3a113e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a2629aed7fa1c43a823af38968d3a113e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a2629aed7fa1c43a823af38968d3a113e">operator*</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
+<tr class="memdesc:a2629aed7fa1c43a823af38968d3a113e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new list by concatenating two existing lists.  <br /></td></tr>
+<tr class="separator:a2629aed7fa1c43a823af38968d3a113e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2671409010adbca03b4aa25042d3b2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8e2671409010adbca03b4aa25042d3b2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a8e2671409010adbca03b4aa25042d3b2">head</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l, int n=1)</td></tr>
+<tr class="memdesc:a8e2671409010adbca03b4aa25042d3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first n items of a list.  <br /></td></tr>
+<tr class="separator:a8e2671409010adbca03b4aa25042d3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7044e45df6847fd56282fb143fc128b9"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7044e45df6847fd56282fb143fc128b9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a7044e45df6847fd56282fb143fc128b9">tail</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l, int n=1)</td></tr>
+<tr class="memdesc:a7044e45df6847fd56282fb143fc128b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all but the first n items of a list.  <br /></td></tr>
+<tr class="separator:a7044e45df6847fd56282fb143fc128b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955915cd54bac6a90a18613c1d0d0fe7"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a955915cd54bac6a90a18613c1d0d0fe7"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a955915cd54bac6a90a18613c1d0d0fe7">last_item</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
+<tr class="memdesc:a955915cd54bac6a90a18613c1d0d0fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the last item of the list. The input list must not be an empty list.  <br /></td></tr>
+<tr class="separator:a955915cd54bac6a90a18613c1d0d0fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad639ac8216b7992f849258af7aae5d1e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad639ac8216b7992f849258af7aae5d1e"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#ad639ac8216b7992f849258af7aae5d1e">access_last</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l)</td></tr>
+<tr class="memdesc:ad639ac8216b7992f849258af7aae5d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the last item in a list.  <br /></td></tr>
+<tr class="separator:ad639ac8216b7992f849258af7aae5d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae644fa030f543076ffd07b8d06aaab48"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae644fa030f543076ffd07b8d06aaab48"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#ae644fa030f543076ffd07b8d06aaab48">suppress_last</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l)</td></tr>
+<tr class="memdesc:ae644fa030f543076ffd07b8d06aaab48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the last item from a list.  <br /></td></tr>
+<tr class="separator:ae644fa030f543076ffd07b8d06aaab48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e55797894c6a78dff226ac29faa3ec8"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7e55797894c6a78dff226ac29faa3ec8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a7e55797894c6a78dff226ac29faa3ec8">reverse</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
+<tr class="memdesc:a7e55797894c6a78dff226ac29faa3ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new list with the items in reverse order.  <br /></td></tr>
+<tr class="separator:a7e55797894c6a78dff226ac29faa3ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42eb6f916ba8f2e3e1d1266d11e18583"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a42eb6f916ba8f2e3e1d1266d11e18583"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l, T what)</td></tr>
+<tr class="memdesc:a42eb6f916ba8f2e3e1d1266d11e18583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new list with a specific item removed.  <br /></td></tr>
+<tr class="separator:a42eb6f916ba8f2e3e1d1266d11e18583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af645b09adeb7ee69f2c0722cc17aa5e5"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:af645b09adeb7ee69f2c0722cc17aa5e5"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#af645b09adeb7ee69f2c0722cc17aa5e5">contains</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l, T what)</td></tr>
+<tr class="memdesc:af645b09adeb7ee69f2c0722cc17aa5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a list contains a specific item.  <br /></td></tr>
+<tr class="separator:af645b09adeb7ee69f2c0722cc17aa5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c97209b3fe9629aebefa3bc979a589"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad9c97209b3fe9629aebefa3bc979a589"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#ad9c97209b3fe9629aebefa3bc979a589">operator&lt;&lt;</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="classlist.html">list</a>&lt; T &gt; l)</td></tr>
+<tr class="separator:ad9c97209b3fe9629aebefa3bc979a589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae160fb736b3de620a904d28d12ca5d2b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae160fb736b3de620a904d28d12ca5d2b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#ae160fb736b3de620a904d28d12ca5d2b">operator&lt;&lt;</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l, T item)</td></tr>
+<tr class="separator:ae160fb736b3de620a904d28d12ca5d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d07ecdb1f5b94d9fcfd5171c7c5f97b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a4d07ecdb1f5b94d9fcfd5171c7c5f97b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a4d07ecdb1f5b94d9fcfd5171c7c5f97b">operator&lt;&lt;</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
+<tr class="separator:a4d07ecdb1f5b94d9fcfd5171c7c5f97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f26096204bbf8d20390add24388c991"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8f26096204bbf8d20390add24388c991"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a8f26096204bbf8d20390add24388c991">operator&gt;&gt;</a> (T item, <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l)</td></tr>
+<tr class="separator:a8f26096204bbf8d20390add24388c991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c24275478bb517a16bc3f465303de59"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a1c24275478bb517a16bc3f465303de59"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a1c24275478bb517a16bc3f465303de59">operator&lt;&lt;</a> (T &amp;item, <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;l)</td></tr>
+<tr class="separator:a1c24275478bb517a16bc3f465303de59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5836b5fe615aaccbb7ae120d40decd56"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5836b5fe615aaccbb7ae120d40decd56"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a5836b5fe615aaccbb7ae120d40decd56">operator==</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
+<tr class="separator:a5836b5fe615aaccbb7ae120d40decd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d162f2ef0a8dacb9dc8b9dcd33e90a1"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3d162f2ef0a8dacb9dc8b9dcd33e90a1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a3d162f2ef0a8dacb9dc8b9dcd33e90a1">operator!=</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
+<tr class="separator:a3d162f2ef0a8dacb9dc8b9dcd33e90a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53980a773270d397d3ce5960a8f0ead3"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a53980a773270d397d3ce5960a8f0ead3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a53980a773270d397d3ce5960a8f0ead3">operator&lt;</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
+<tr class="separator:a53980a773270d397d3ce5960a8f0ead3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2b03d2d7e01e130dd6ba620c8036e2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aac2b03d2d7e01e130dd6ba620c8036e2"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="list_8hpp.html#aac2b03d2d7e01e130dd6ba620c8036e2">operator&lt;=</a> (<a class="el" href="classlist.html">list</a>&lt; T &gt; l1, <a class="el" href="classlist.html">list</a>&lt; T &gt; l2)</td></tr>
+<tr class="separator:aac2b03d2d7e01e130dd6ba620c8036e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0a09ef65c49ae2dfc620a8a3a350ce1d"><td class="memItemLeft" align="right" valign="top"><a id="a0a09ef65c49ae2dfc620a8a3a350ce1d" name="a0a09ef65c49ae2dfc620a8a3a350ce1d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>list_count</b></td></tr>
+<tr class="memitem:a0a09ef65c49ae2dfc620a8a3a350ce1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8hpp.html#a0a09ef65c49ae2dfc620a8a3a350ce1d">list_count</a></td></tr>
 <tr class="separator:a0a09ef65c49ae2dfc620a8a3a350ce1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>GPLv3</dd></dl>
 <p>linked lists with reference counting </p><dl class="section author"><dt>Author</dt><dd>Joris van der Hoeven </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>1999 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a24764bcb5e42149895bcd956e91196a9" name="a24764bcb5e42149895bcd956e91196a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24764bcb5e42149895bcd956e91196a9">&#9670;&#160;</a></span>access_last()</h2>
+
+<p class="definition">Definition in file <a class="el" href="list_8hpp_source.html">list.hpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ae651af7bb4896e16cad3623826bb0ee4" name="ae651af7bb4896e16cad3623826bb0ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae651af7bb4896e16cad3623826bb0ee4">&#9670;&#160;</a></span>TMPL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TMPL T &amp; access_last </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>l</em></td><td>)</td>
-          <td></td>
+          <td class="memname">#define TMPL&#160;&#160;&#160;template &lt;class T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get a reference to the last item in a list. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>The list whose last item is to be accessed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>T&amp; A reference to the last item in the list. </dd></dl>
+<p class="definition">Definition at line <a class="el" href="list_8hpp_source.html#l00136">136</a> of file <a class="el" href="list_8hpp_source.html">list.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a7cf539b068c6f84c764e42b03c80c1dc" name="a7cf539b068c6f84c764e42b03c80c1dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cf539b068c6f84c764e42b03c80c1dc">&#9670;&#160;</a></span>contains()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL bool contains </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>what</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if a list contains a specific item. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>The list to be searched.<ul>
-<li></li>
-</ul>
-</td></tr>
-    <tr><td class="paramname">what</td><td>The item to search for. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the item is found in the list, false otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="aca96c0bc65832ddc84e985769ffa9e62" name="aca96c0bc65832ddc84e985769ffa9e62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca96c0bc65832ddc84e985769ffa9e62">&#9670;&#160;</a></span>copy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; copy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a copy of a list. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>The list to be copied. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A copy of the input list. </dd></dl>
-
-</div>
-</div>
-<a id="a7f6bcd5d131a090ebbebafb9b0c2f6ff" name="a7f6bcd5d131a090ebbebafb9b0c2f6ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f6bcd5d131a090ebbebafb9b0c2f6ff">&#9670;&#160;</a></span>head()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; head </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the first n items of a list. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>The list whose items are to be retrieved. </td></tr>
-    <tr><td class="paramname">n</td><td>The number of items to retrieve (default is 1). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list consisting of the first n items of the input list. </dd></dl>
-
-</div>
-</div>
-<a id="a90b7c5865038d01f7e5cecad130b78cf" name="a90b7c5865038d01f7e5cecad130b78cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90b7c5865038d01f7e5cecad130b78cf">&#9670;&#160;</a></span>is_atom()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_atom </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if a list is an atom (i.e., a single item). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>The list to be checked. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the list is an atom, false otherwise. </dd></dl>
-
-</div>
-</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a59e2873221d61701a13da6829ea15626" name="a59e2873221d61701a13da6829ea15626"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59e2873221d61701a13da6829ea15626">&#9670;&#160;</a></span>is_nil()</h2>
 
@@ -417,235 +267,47 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a1aaca706d992826f1837864b3b39524a" name="a1aaca706d992826f1837864b3b39524a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aaca706d992826f1837864b3b39524a">&#9670;&#160;</a></span>last_item()</h2>
+<a id="a90b7c5865038d01f7e5cecad130b78cf" name="a90b7c5865038d01f7e5cecad130b78cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b7c5865038d01f7e5cecad130b78cf">&#9670;&#160;</a></span>is_atom()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TMPL T last_item </td>
+          <td class="memname">bool is_atom </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>l</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Return the last item of the list. The input list must not be an empty list. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Check if a list is an atom (i.e., a single item). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">l</td><td>the list </td></tr>
+    <tr><td class="paramname">l</td><td>The list to be checked. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>T </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the list is an atom, false otherwise. </dd></dl>
 
-</div>
-</div>
-<a id="aed41e03437e4ab607c684bb0c311695b" name="aed41e03437e4ab607c684bb0c311695b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed41e03437e4ab607c684bb0c311695b">&#9670;&#160;</a></span>N()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL int N </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the number of items in a list. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>The list whose length is to be calculated. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int The number of items in the list. </dd></dl>
-
-</div>
-</div>
-<a id="aa5438e16fb970e94479a08602719150e" name="aa5438e16fb970e94479a08602719150e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5438e16fb970e94479a08602719150e">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; operator* </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a new list by concatenating two existing lists. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the lists. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l1</td><td>The first list to be concatenated. </td></tr>
-    <tr><td class="paramname">l2</td><td>The second list to be concatenated. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list consisting of the items in the input lists in order. </dd></dl>
-
-</div>
-</div>
-<a id="a7a1a1479f9792f1f712d9d5ff72a56ba" name="a7a1a1479f9792f1f712d9d5ff72a56ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a1a1479f9792f1f712d9d5ff72a56ba">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; operator* </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a new list by appending an item to the end of an existing list. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the lists. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l1</td><td>The list to which the item will be appended. </td></tr>
-    <tr><td class="paramname">x</td><td>The item to be appended. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list consisting of the input list with the item appended. </dd></dl>
-
-</div>
-</div>
-<a id="a4bfbed02ec665953bf5dd245ffad9aba" name="a4bfbed02ec665953bf5dd245ffad9aba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bfbed02ec665953bf5dd245ffad9aba">&#9670;&#160;</a></span>remove()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; remove </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>what</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a new list with a specific item removed. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>The list from which the item is to be removed. </td></tr>
-    <tr><td class="paramname">what</td><td>The item to be removed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list with the specified item removed. </dd></dl>
-
-</div>
-</div>
-<a id="ab906605d534b5fd87247f533f4c6465f" name="ab906605d534b5fd87247f533f4c6465f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab906605d534b5fd87247f533f4c6465f">&#9670;&#160;</a></span>reverse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; reverse </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>l</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a new list with the items in reverse order. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td>The list to be reversed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list with the items in reverse order. </dd></dl>
-
+<p class="definition">Definition at line <a class="el" href="list_8hpp_source.html#l00146">146</a> of file <a class="el" href="list_8hpp_source.html">list.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                    {</div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">return</span> (!<a class="code hl_function" href="list_8hpp.html#a59e2873221d61701a13da6829ea15626">is_nil</a> (l)) &amp;&amp; <a class="code hl_function" href="list_8hpp.html#a59e2873221d61701a13da6829ea15626">is_nil</a> (l-&gt;next);</div>
+<div class="line"><span class="lineno">  148</span>}</div>
+<div class="ttc" id="alist_8hpp_html_a59e2873221d61701a13da6829ea15626"><div class="ttname"><a href="list_8hpp.html#a59e2873221d61701a13da6829ea15626">is_nil</a></div><div class="ttdeci">bool is_nil(list&lt; T &gt; l)</div><div class="ttdoc">Check if a list is nil (i.e., an empty list).</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a462d483ee52c449435852927e12514f1" name="a462d483ee52c449435852927e12514f1"></a>
@@ -686,25 +348,66 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the lists are strongly equal, false otherwise. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00108">108</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                                      {</div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">return</span> l1.rep == l2.rep;</div>
+<div class="line"><span class="lineno">  110</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a7faafc7f0c87c5897ba0678a01d377fa" name="a7faafc7f0c87c5897ba0678a01d377fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7faafc7f0c87c5897ba0678a01d377fa">&#9670;&#160;</a></span>suppress_last()</h2>
+<a id="a07347ef7fc72cb7b4e09f411a5a76218" name="a07347ef7fc72cb7b4e09f411a5a76218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07347ef7fc72cb7b4e09f411a5a76218">&#9670;&#160;</a></span>CONCRETE_NULL_TEMPLATE_CODE()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; &amp; suppress_last </td>
+          <td class="memname">CONCRETE_NULL_TEMPLATE_CODE </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1d176fa8ddf38a95f41b3c5196f5222" name="ad1d176fa8ddf38a95f41b3c5196f5222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d176fa8ddf38a95f41b3c5196f5222">&#9670;&#160;</a></span>N()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int N </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>l</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Remove the last item from a list. </p>
+<p>Get the number of items in a list. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
@@ -713,22 +416,234 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">l</td><td>The list from which the last item is to be removed. </td></tr>
+    <tr><td class="paramname">l</td><td>The list whose length is to be calculated. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt;&amp; A reference to the modified list. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int The number of items in the list. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00146">146</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>              {</div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_function" href="list_8ipp.html#ad1d176fa8ddf38a95f41b3c5196f5222">N</a> (l-&gt;next) + 1;</div>
+<div class="line"><span class="lineno">  149</span>}</div>
+<div class="ttc" id="ablackbox_8hpp_html_aa062545d808e38d833dcb529924000a0"><div class="ttname"><a href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a></div><div class="ttdeci">bool is_nil(blackbox x)</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00029">blackbox.hpp:29</a></div></div>
+<div class="ttc" id="alist_8ipp_html_ad1d176fa8ddf38a95f41b3c5196f5222"><div class="ttname"><a href="list_8ipp.html#ad1d176fa8ddf38a95f41b3c5196f5222">N</a></div><div class="ttdeci">int N(list&lt; T &gt; l)</div><div class="ttdoc">Get the number of items in a list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00146">list.ipp:146</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a28d416b8e65b97cf5d2be0c33497b8f1" name="a28d416b8e65b97cf5d2be0c33497b8f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28d416b8e65b97cf5d2be0c33497b8f1">&#9670;&#160;</a></span>tail()</h2>
+<a id="a6a055027c8af0fbb1da0d4a724225ad9" name="a6a055027c8af0fbb1da0d4a724225ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a055027c8af0fbb1da0d4a724225ad9">&#9670;&#160;</a></span>copy()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">TMPL <a class="el" href="classlist.html">list</a>&lt; T &gt; tail </td>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a copy of a list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The list to be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A copy of the input list. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00153">153</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>                 {</div>
+<div class="line"><span class="lineno">  154</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> ();</div>
+<div class="line"><span class="lineno">  155</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> (l-&gt;item, <a class="code hl_function" href="list_8ipp.html#a6a055027c8af0fbb1da0d4a724225ad9">copy</a> (l-&gt;next));</div>
+<div class="line"><span class="lineno">  156</span>}</div>
+<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
+<div class="ttc" id="alist_8ipp_html_a6a055027c8af0fbb1da0d4a724225ad9"><div class="ttname"><a href="list_8ipp.html#a6a055027c8af0fbb1da0d4a724225ad9">copy</a></div><div class="ttdeci">list&lt; T &gt; copy(list&lt; T &gt; l)</div><div class="ttdoc">Create a copy of a list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00153">list.ipp:153</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7b6a6935b76954919f89686c844dd294" name="a7b6a6935b76954919f89686c844dd294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6a6935b76954919f89686c844dd294">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new list by appending an item to the end of an existing list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the lists. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l1</td><td>The list to which the item will be appended. </td></tr>
+    <tr><td class="paramname">x</td><td>The item to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list consisting of the input list with the item appended. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00160">160</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>                            {</div>
+<div class="line"><span class="lineno">  161</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1)) <span class="keywordflow">return</span> x;</div>
+<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> (l1-&gt;item, l1-&gt;next * x);</div>
+<div class="line"><span class="lineno">  163</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2629aed7fa1c43a823af38968d3a113e" name="a2629aed7fa1c43a823af38968d3a113e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2629aed7fa1c43a823af38968d3a113e">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new list by concatenating two existing lists. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the lists. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l1</td><td>The first list to be concatenated. </td></tr>
+    <tr><td class="paramname">l2</td><td>The second list to be concatenated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list consisting of the items in the input lists in order. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00167">167</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>                                   {</div>
+<div class="line"><span class="lineno">  168</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1)) <span class="keywordflow">return</span> <a class="code hl_function" href="list_8ipp.html#a6a055027c8af0fbb1da0d4a724225ad9">copy</a> (l2);</div>
+<div class="line"><span class="lineno">  169</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> (l1-&gt;item, l1-&gt;next * l2);</div>
+<div class="line"><span class="lineno">  170</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8e2671409010adbca03b4aa25042d3b2" name="a8e2671409010adbca03b4aa25042d3b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2671409010adbca03b4aa25042d3b2">&#9670;&#160;</a></span>head()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; head </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the first n items of a list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The list whose items are to be retrieved. </td></tr>
+    <tr><td class="paramname">n</td><td>The number of items to retrieve (default is 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list consisting of the first n items of the input list. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00174">174</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>                        {</div>
+<div class="line"><span class="lineno">  175</span>  <span class="keywordflow">if</span> (n == 0) <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> ();</div>
+<div class="line"><span class="lineno">  176</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l), <span class="stringliteral">&quot;list too short to get the head&quot;</span>);</div>
+<div class="line"><span class="lineno">  177</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> (l-&gt;item, <a class="code hl_function" href="list_8ipp.html#ab0b4d6152194ab43b9c4aba63eb0aba4">head</a> (l-&gt;next, n - 1));</div>
+<div class="line"><span class="lineno">  178</span>}</div>
+<div class="ttc" id="abasic_8hpp_html_ac6c818ab7aca2e521c97eee817f99f91"><div class="ttname"><a href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a></div><div class="ttdeci">#define ASSERT(cond, msg)</div><div class="ttdoc">Macro used to assert that a condition is true, and throw an exception with an error message if the co...</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00264">basic.hpp:264</a></div></div>
+<div class="ttc" id="alist_8ipp_html_ab0b4d6152194ab43b9c4aba63eb0aba4"><div class="ttname"><a href="list_8ipp.html#ab0b4d6152194ab43b9c4aba63eb0aba4">head</a></div><div class="ttdeci">list&lt; T &gt; head(list&lt; T &gt; l, int n)</div><div class="ttdoc">Get the first n items of a list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00174">list.ipp:174</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7044e45df6847fd56282fb143fc128b9" name="a7044e45df6847fd56282fb143fc128b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7044e45df6847fd56282fb143fc128b9">&#9670;&#160;</a></span>tail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; tail </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
           <td class="paramname"><em>l</em>, </td>
@@ -762,6 +677,655 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list consisting of all but the first n items of the input list. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00182">182</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>                        {</div>
+<div class="line"><span class="lineno">  183</span>  <span class="keywordflow">for</span> (; n &gt; 0; n--) {</div>
+<div class="line"><span class="lineno">  184</span>    <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l), <span class="stringliteral">&quot;list too short to get the tail&quot;</span>);</div>
+<div class="line"><span class="lineno">  185</span>    l= l-&gt;next;</div>
+<div class="line"><span class="lineno">  186</span>  }</div>
+<div class="line"><span class="lineno">  187</span>  <span class="keywordflow">return</span> l;</div>
+<div class="line"><span class="lineno">  188</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a955915cd54bac6a90a18613c1d0d0fe7" name="a955915cd54bac6a90a18613c1d0d0fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955915cd54bac6a90a18613c1d0d0fe7">&#9670;&#160;</a></span>last_item()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T last_item </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the last item of the list. The input list must not be an empty list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>T </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00079">79</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                      {</div>
+<div class="line"><span class="lineno">   80</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l), <span class="stringliteral">&quot;empty path&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l-&gt;next)) <span class="keywordflow">return</span> l-&gt;item;</div>
+<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="list_8ipp.html#a955915cd54bac6a90a18613c1d0d0fe7">last_item</a> (l-&gt;next);</div>
+<div class="line"><span class="lineno">   83</span>}</div>
+<div class="ttc" id="alist_8ipp_html_a955915cd54bac6a90a18613c1d0d0fe7"><div class="ttname"><a href="list_8ipp.html#a955915cd54bac6a90a18613c1d0d0fe7">last_item</a></div><div class="ttdeci">T last_item(list&lt; T &gt; l)</div><div class="ttdoc">Return the last item of the list. The input list must not be an empty list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00079">list.ipp:79</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad639ac8216b7992f849258af7aae5d1e" name="ad639ac8216b7992f849258af7aae5d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad639ac8216b7992f849258af7aae5d1e">&#9670;&#160;</a></span>access_last()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; access_last </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a reference to the last item in a list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The list whose last item is to be accessed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>T&amp; A reference to the last item in the list. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00087">87</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                         {</div>
+<div class="line"><span class="lineno">   88</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l), <span class="stringliteral">&quot;empty path&quot;</span>);</div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l-&gt;next)) <span class="keywordflow">return</span> l-&gt;item;</div>
+<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="list_8ipp.html#ad639ac8216b7992f849258af7aae5d1e">access_last</a> (l-&gt;next);</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+<div class="ttc" id="alist_8ipp_html_ad639ac8216b7992f849258af7aae5d1e"><div class="ttname"><a href="list_8ipp.html#ad639ac8216b7992f849258af7aae5d1e">access_last</a></div><div class="ttdeci">T &amp; access_last(list&lt; T &gt; &amp;l)</div><div class="ttdoc">Get a reference to the last item in a list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00087">list.ipp:87</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae644fa030f543076ffd07b8d06aaab48" name="ae644fa030f543076ffd07b8d06aaab48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae644fa030f543076ffd07b8d06aaab48">&#9670;&#160;</a></span>suppress_last()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp; suppress_last </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the last item from a list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The list from which the last item is to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt;&amp; A reference to the modified list. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00095">95</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                           {</div>
+<div class="line"><span class="lineno">   96</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l), <span class="stringliteral">&quot;empty path&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l-&gt;next)) l= <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> ();</div>
+<div class="line"><span class="lineno">   98</span>  <span class="keywordflow">else</span> <a class="code hl_function" href="list_8ipp.html#ae644fa030f543076ffd07b8d06aaab48">suppress_last</a> (l-&gt;next);</div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">return</span> l;</div>
+<div class="line"><span class="lineno">  100</span>}</div>
+<div class="ttc" id="alist_8ipp_html_ae644fa030f543076ffd07b8d06aaab48"><div class="ttname"><a href="list_8ipp.html#ae644fa030f543076ffd07b8d06aaab48">suppress_last</a></div><div class="ttdeci">list&lt; T &gt; &amp; suppress_last(list&lt; T &gt; &amp;l)</div><div class="ttdoc">Remove the last item from a list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00095">list.ipp:95</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7e55797894c6a78dff226ac29faa3ec8" name="a7e55797894c6a78dff226ac29faa3ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e55797894c6a78dff226ac29faa3ec8">&#9670;&#160;</a></span>reverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; reverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new list with the items in reverse order. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The list to be reversed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list with the items in reverse order. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00192">192</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>                    {</div>
+<div class="line"><span class="lineno">  193</span>  <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> r;</div>
+<div class="line"><span class="lineno">  194</span>  <span class="keywordflow">while</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) {</div>
+<div class="line"><span class="lineno">  195</span>    r= <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> (l-&gt;item, r);</div>
+<div class="line"><span class="lineno">  196</span>    l= l-&gt;next;</div>
+<div class="line"><span class="lineno">  197</span>  }</div>
+<div class="line"><span class="lineno">  198</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  199</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a42eb6f916ba8f2e3e1d1266d11e18583" name="a42eb6f916ba8f2e3e1d1266d11e18583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42eb6f916ba8f2e3e1d1266d11e18583">&#9670;&#160;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>what</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new list with a specific item removed. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The list from which the item is to be removed. </td></tr>
+    <tr><td class="paramname">what</td><td>The item to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>list&lt;T&gt; A new list with the specified item removed. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00203">203</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  203</span>                           {</div>
+<div class="line"><span class="lineno">  204</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) <span class="keywordflow">return</span> l;</div>
+<div class="line"><span class="lineno">  205</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l-&gt;item == what) <span class="keywordflow">return</span> remove&lt;T&gt; (l-&gt;next, what);</div>
+<div class="line"><span class="lineno">  206</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> (l-&gt;item, remove&lt;T&gt; (l-&gt;next, what));</div>
+<div class="line"><span class="lineno">  207</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af645b09adeb7ee69f2c0722cc17aa5e5" name="af645b09adeb7ee69f2c0722cc17aa5e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af645b09adeb7ee69f2c0722cc17aa5e5">&#9670;&#160;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>what</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if a list contains a specific item. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the data stored in the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>The list to be searched.<ul>
+<li></li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">what</td><td>The item to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the item is found in the list, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00211">211</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>                             {</div>
+<div class="line"><span class="lineno">  212</span>  <span class="keywordflow">return</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l) &amp;&amp; (l-&gt;item == what || <a class="code hl_function" href="list_8ipp.html#af645b09adeb7ee69f2c0722cc17aa5e5">contains</a> (l-&gt;next, what)));</div>
+<div class="line"><span class="lineno">  213</span>}</div>
+<div class="ttc" id="alist_8ipp_html_af645b09adeb7ee69f2c0722cc17aa5e5"><div class="ttname"><a href="list_8ipp.html#af645b09adeb7ee69f2c0722cc17aa5e5">contains</a></div><div class="ttdeci">bool contains(list&lt; T &gt; l, T what)</div><div class="ttdoc">Check if a list contains a specific item.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00211">list.ipp:211</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad9c97209b3fe9629aebefa3bc979a589" name="ad9c97209b3fe9629aebefa3bc979a589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c97209b3fe9629aebefa3bc979a589">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00021">21</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                                        {</div>
+<div class="line"><span class="lineno">   23</span>  out &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><span class="lineno">   24</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) {</div>
+<div class="line"><span class="lineno">   25</span>    out &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; l-&gt;item;</div>
+<div class="line"><span class="lineno">   26</span>    l= l-&gt;next;</div>
+<div class="line"><span class="lineno">   27</span>  }</div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordflow">while</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) {</div>
+<div class="line"><span class="lineno">   29</span>    out &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; l-&gt;item;</div>
+<div class="line"><span class="lineno">   30</span>    l= l-&gt;next;</div>
+<div class="line"><span class="lineno">   31</span>  }</div>
+<div class="line"><span class="lineno">   32</span>  <span class="keywordflow">return</span> out &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line"><span class="lineno">   33</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae160fb736b3de620a904d28d12ca5d2b" name="ae160fb736b3de620a904d28d12ca5d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae160fb736b3de620a904d28d12ca5d2b">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>item</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00037">37</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                {</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) l= <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> (item, <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> ());</div>
+<div class="line"><span class="lineno">   51</span>  <span class="keywordflow">else</span> l-&gt;next &lt;&lt; item;</div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">return</span> l;</div>
+<div class="line"><span class="lineno">   53</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4d07ecdb1f5b94d9fcfd5171c7c5f97b" name="a4d07ecdb1f5b94d9fcfd5171c7c5f97b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d07ecdb1f5b94d9fcfd5171c7c5f97b">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00037">37</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                     {</div>
+<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1)) l1= l2;</div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">else</span> l1-&gt;next &lt;&lt; l2;</div>
+<div class="line"><span class="lineno">   60</span>  <span class="keywordflow">return</span> l1;</div>
+<div class="line"><span class="lineno">   61</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8f26096204bbf8d20390add24388c991" name="a8f26096204bbf8d20390add24388c991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f26096204bbf8d20390add24388c991">&#9670;&#160;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00065">65</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                                {</div>
+<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">return</span> (l= <a class="code hl_class" href="classlist.html">list&lt;T&gt;</a> (item, l));</div>
+<div class="line"><span class="lineno">   67</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1c24275478bb517a16bc3f465303de59" name="a1c24275478bb517a16bc3f465303de59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c24275478bb517a16bc3f465303de59">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00065">65</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                                 {</div>
+<div class="line"><span class="lineno">   72</span>  item= l-&gt;item;</div>
+<div class="line"><span class="lineno">   73</span>  l   = l-&gt;next;</div>
+<div class="line"><span class="lineno">   74</span>  <span class="keywordflow">return</span> l;</div>
+<div class="line"><span class="lineno">   75</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5836b5fe615aaccbb7ae120d40decd56" name="a5836b5fe615aaccbb7ae120d40decd56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5836b5fe615aaccbb7ae120d40decd56">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00114">114</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                    {</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1) || <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l2)) <span class="keywordflow">return</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1) == <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l2));</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">return</span> (l1-&gt;item == l2-&gt;item) &amp;&amp; (l1-&gt;next == l2-&gt;next);</div>
+<div class="line"><span class="lineno">  117</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3d162f2ef0a8dacb9dc8b9dcd33e90a1" name="a3d162f2ef0a8dacb9dc8b9dcd33e90a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d162f2ef0a8dacb9dc8b9dcd33e90a1">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00121">121</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                                    {</div>
+<div class="line"><span class="lineno">  122</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1) || <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l2)) <span class="keywordflow">return</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1) != <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l2));</div>
+<div class="line"><span class="lineno">  123</span>  <span class="keywordflow">return</span> (l1-&gt;item != l2-&gt;item) || (l1-&gt;next != l2-&gt;next);</div>
+<div class="line"><span class="lineno">  124</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a53980a773270d397d3ce5960a8f0ead3" name="a53980a773270d397d3ce5960a8f0ead3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53980a773270d397d3ce5960a8f0ead3">&#9670;&#160;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00127">127</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>                                   {</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1) || <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l2)) <span class="keywordflow">return</span> !<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l2);</div>
+<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">return</span> (l1-&gt;item == l2-&gt;item) &amp;&amp; (l1-&gt;next &lt; l2-&gt;next);</div>
+<div class="line"><span class="lineno">  131</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac2b03d2d7e01e130dd6ba620c8036e2" name="aac2b03d2d7e01e130dd6ba620c8036e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2b03d2d7e01e130dd6ba620c8036e2">&#9670;&#160;</a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlist.html">list</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>l2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="list_8ipp_source.html#l00134">134</a> of file <a class="el" href="list_8ipp_source.html">list.ipp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                    {</div>
+<div class="line"><span class="lineno">  136</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1) || <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l2)) <span class="keywordflow">return</span> <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l1);</div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">return</span> (l1-&gt;item == l2-&gt;item) &amp;&amp; (l1-&gt;next &lt;= l2-&gt;next);</div>
+<div class="line"><span class="lineno">  138</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a0a09ef65c49ae2dfc620a8a3a350ce1d" name="a0a09ef65c49ae2dfc620a8a3a350ce1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a09ef65c49ae2dfc620a8a3a350ce1d">&#9670;&#160;</a></span>list_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int list_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

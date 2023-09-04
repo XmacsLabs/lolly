@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: string_searcher_rep Class Reference</title>
+<title>Lolly: string_searcher_rep Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -71,48 +72,446 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classstring__searcher__rep-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">string_searcher_rep Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="fast__search_8hpp_source.html">fast_search.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for string_searcher_rep:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classstring__searcher__rep.png" usemap="#string_5Fsearcher_5Frep_map" alt=""/>
-  <map id="string_5Fsearcher_5Frep_map" name="string_5Fsearcher_5Frep_map">
-<area href="structconcrete__struct.html" title="Structure representing a concrete object with a reference count." alt="concrete_struct" shape="rect" coords="0,0,127,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="classstring__searcher__rep__inherit__graph.png" border="0" usemap="#astring__searcher__rep_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for string_searcher_rep:</div>
+<div class="dyncontent">
+<div class="center"><img src="classstring__searcher__rep__coll__graph.png" border="0" usemap="#astring__searcher__rep_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acfba89b26daf8c659dd1be02d773d6a7"><td class="memItemLeft" align="right" valign="top"><a id="acfba89b26daf8c659dd1be02d773d6a7" name="acfba89b26daf8c659dd1be02d773d6a7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>string_searcher_rep</b> (<a class="el" href="classstring.html">string</a> s)</td></tr>
+<tr class="memitem:acfba89b26daf8c659dd1be02d773d6a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#acfba89b26daf8c659dd1be02d773d6a7">string_searcher_rep</a> (<a class="el" href="classstring.html">string</a> <a class="el" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a>)</td></tr>
 <tr class="separator:acfba89b26daf8c659dd1be02d773d6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18c47c087c28743bd5d703ee7b3a28ab"><td class="memItemLeft" align="right" valign="top"><a id="a18c47c087c28743bd5d703ee7b3a28ab" name="a18c47c087c28743bd5d703ee7b3a28ab"></a>
-<a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_string</b> ()</td></tr>
+<tr class="memitem:a18c47c087c28743bd5d703ee7b3a28ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#a18c47c087c28743bd5d703ee7b3a28ab">get_string</a> ()</td></tr>
 <tr class="separator:a18c47c087c28743bd5d703ee7b3a28ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17099950f25b444e254a3da0c3282e4d"><td class="memItemLeft" align="right" valign="top"><a id="a17099950f25b444e254a3da0c3282e4d" name="a17099950f25b444e254a3da0c3282e4d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>search_next</b> (<a class="el" href="classstring.html">string</a> what, int pos)</td></tr>
+<tr class="memitem:a17099950f25b444e254a3da0c3282e4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#a17099950f25b444e254a3da0c3282e4d">search_next</a> (<a class="el" href="classstring.html">string</a> what, int pos)</td></tr>
 <tr class="separator:a17099950f25b444e254a3da0c3282e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fc02f01ddb5393c880c58e1cd9d6b64"><td class="memItemLeft" align="right" valign="top"><a id="a7fc02f01ddb5393c880c58e1cd9d6b64" name="a7fc02f01ddb5393c880c58e1cd9d6b64"></a>
-<a class="el" href="classarray.html">array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>search_all</b> (<a class="el" href="classstring.html">string</a> what)</td></tr>
+<tr class="memitem:a7fc02f01ddb5393c880c58e1cd9d6b64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#a7fc02f01ddb5393c880c58e1cd9d6b64">search_all</a> (<a class="el" href="classstring.html">string</a> what)</td></tr>
 <tr class="separator:a7fc02f01ddb5393c880c58e1cd9d6b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab4f7d983018f1a4f9fbb7465c8981a21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#ab4f7d983018f1a4f9fbb7465c8981a21">search_sub</a> (<a class="el" href="classstring.html">string</a> what)</td></tr>
+<tr class="separator:ab4f7d983018f1a4f9fbb7465c8981a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structconcrete__struct"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structconcrete__struct')"><img src="closed.png" alt="-"/>&#160;Private Member Functions inherited from <a class="el" href="structconcrete__struct.html">concrete_struct</a></td></tr>
+<tr class="memitem:ad1296bdd43fd3f176513a736d2057dab inherit pub_methods_structconcrete__struct"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structconcrete__struct.html#ad1296bdd43fd3f176513a736d2057dab">concrete_struct</a> ()</td></tr>
+<tr class="memdesc:ad1296bdd43fd3f176513a736d2057dab inherit pub_methods_structconcrete__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the concrete object. Increments the reference count.  <br /></td></tr>
+<tr class="separator:ad1296bdd43fd3f176513a736d2057dab inherit pub_methods_structconcrete__struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544eff63c43f268e4ac0c2ae257bab0a inherit pub_methods_structconcrete__struct"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structconcrete__struct.html#a544eff63c43f268e4ac0c2ae257bab0a">~concrete_struct</a> ()</td></tr>
+<tr class="memdesc:a544eff63c43f268e4ac0c2ae257bab0a inherit pub_methods_structconcrete__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the concrete object. Decrements the reference count.  <br /></td></tr>
+<tr class="separator:a544eff63c43f268e4ac0c2ae257bab0a inherit pub_methods_structconcrete__struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a70aa0b2b5be6ccbedebb607b34436c94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a></td></tr>
+<tr class="separator:a70aa0b2b5be6ccbedebb607b34436c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc89588e17c835f004c42ba35656c7c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; <a class="el" href="classhashmap.html">hashmap</a>&lt; int, <a class="el" href="classarray.html">array</a>&lt; int &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#acc89588e17c835f004c42ba35656c7c2">a</a></td></tr>
+<tr class="separator:acc89588e17c835f004c42ba35656c7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structconcrete__struct"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structconcrete__struct')"><img src="closed.png" alt="-"/>&#160;Private Attributes inherited from <a class="el" href="structconcrete__struct.html">concrete_struct</a></td></tr>
+<tr class="memitem:afc5338943439e46e06de35833de1105a inherit pub_attribs_structconcrete__struct"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structconcrete__struct.html#afc5338943439e46e06de35833de1105a">ref_count</a></td></tr>
+<tr class="memdesc:afc5338943439e46e06de35833de1105a inherit pub_attribs_structconcrete__struct"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reference count for the concrete object.  <br /></td></tr>
+<tr class="separator:afc5338943439e46e06de35833de1105a inherit pub_attribs_structconcrete__struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a00f76a4139e99004ef8a1b368189aefb"><td class="memItemLeft" align="right" valign="top"><a id="a00f76a4139e99004ef8a1b368189aefb" name="a00f76a4139e99004ef8a1b368189aefb"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>string_searcher</b></td></tr>
+<tr class="memitem:a00f76a4139e99004ef8a1b368189aefb"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#a00f76a4139e99004ef8a1b368189aefb">string_searcher</a></td></tr>
 <tr class="separator:a00f76a4139e99004ef8a1b368189aefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a00bcc18782a4ea254e87975b50147b"><td class="memItemLeft" align="right" valign="top"><a id="a0a00bcc18782a4ea254e87975b50147b" name="a0a00bcc18782a4ea254e87975b50147b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_longest_common</b> (<a class="el" href="classstring.html">string</a> s1, <a class="el" href="classstring.html">string</a> s2, int &amp;b1, int &amp;e1, int &amp;b2, int &amp;e2)</td></tr>
+<tr class="memitem:a0a00bcc18782a4ea254e87975b50147b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstring__searcher__rep.html#a0a00bcc18782a4ea254e87975b50147b">get_longest_common</a> (<a class="el" href="classstring.html">string</a> s1, <a class="el" href="classstring.html">string</a> s2, int &amp;<a class="el" href="blackbox__test_8cpp.html#a26481d96a85cda1f555504796eeacac1">b1</a>, int &amp;e1, int &amp;<a class="el" href="blackbox__test_8cpp.html#a793d7e030be71070cb649bb8f7b4c0bc">b2</a>, int &amp;e2)</td></tr>
 <tr class="separator:a0a00bcc18782a4ea254e87975b50147b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="fast__search_8hpp_source.html#l00020">20</a> of file <a class="el" href="fast__search_8hpp_source.html">fast_search.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="acfba89b26daf8c659dd1be02d773d6a7" name="acfba89b26daf8c659dd1be02d773d6a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfba89b26daf8c659dd1be02d773d6a7">&#9670;&#160;</a></span>string_searcher_rep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string_searcher_rep::string_searcher_rep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8cpp_source.html#l00047">47</a> of file <a class="el" href="fast__search_8cpp_source.html">fast_search.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                   : <a class="code hl_variable" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a> (s2), <a class="code hl_variable" href="classstring__searcher__rep.html#acc89588e17c835f004c42ba35656c7c2">a</a> () {</div>
+<div class="line"><span class="lineno">   48</span>  <span class="comment">// NOTE: a[i] contains a hashmap with all associations c :-&gt; j,</span></div>
+<div class="line"><span class="lineno">   49</span>  <span class="comment">// where c is the hash code of the substring s (j, j + 2^i).</span></div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordtype">int</span>        i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_variable" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a>);</div>
+<div class="line"><span class="lineno">   51</span>  <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> codes (n);</div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">   53</span>    codes[i]= (<span class="keywordtype">int</span>) (<span class="keywordtype">unsigned</span> int) (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>) <a class="code hl_variable" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a>[i];</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordtype">int</span> l= 1;</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">while</span> (l &lt;= n) {</div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_class" href="classhashmap.html">hashmap&lt;int, array&lt;int&gt;</a> &gt; h;</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">for</span> (i= 0; i + l &lt;= n; i++) {</div>
+<div class="line"><span class="lineno">   58</span>      <span class="keywordtype">int</span> c= codes[i];</div>
+<div class="line"><span class="lineno">   59</span>      <span class="keywordflow">if</span> (!h-&gt;contains (c)) h (c)= <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> ();</div>
+<div class="line"><span class="lineno">   60</span>      h (c) &lt;&lt; i;</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="line"><span class="lineno">   62</span>    <a class="code hl_variable" href="classstring__searcher__rep.html#acc89588e17c835f004c42ba35656c7c2">a</a> &lt;&lt; h;</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordtype">int</span> d= 2 * l;</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">for</span> (i= 0; i + d &lt;= n; i++)</div>
+<div class="line"><span class="lineno">   65</span>      codes[i]= <a class="code hl_function" href="fast__search_8cpp.html#a732a6e3b300d84397a7ee853e76d3753">hash_combine</a> (codes[i], codes[i + l], l);</div>
+<div class="line"><span class="lineno">   66</span>    l= d;</div>
+<div class="line"><span class="lineno">   67</span>  }</div>
+<div class="line"><span class="lineno">   68</span>}</div>
+<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
+<div class="ttc" id="aclassarray_html"><div class="ttname"><a href="classarray.html">array</a></div><div class="ttdoc">A template class representing an array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00095">array.hpp:95</a></div></div>
+<div class="ttc" id="aclasshashmap_html"><div class="ttname"><a href="classhashmap.html">hashmap</a></div><div class="ttdef"><b>Definition:</b> <a href="hashmap_8hpp_source.html#l00087">hashmap.hpp:87</a></div></div>
+<div class="ttc" id="aclassstring__searcher__rep_html_a70aa0b2b5be6ccbedebb607b34436c94"><div class="ttname"><a href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">string_searcher_rep::s</a></div><div class="ttdeci">string s</div><div class="ttdef"><b>Definition:</b> <a href="fast__search_8hpp_source.html#l00021">fast_search.hpp:21</a></div></div>
+<div class="ttc" id="aclassstring__searcher__rep_html_acc89588e17c835f004c42ba35656c7c2"><div class="ttname"><a href="classstring__searcher__rep.html#acc89588e17c835f004c42ba35656c7c2">string_searcher_rep::a</a></div><div class="ttdeci">array&lt; hashmap&lt; int, array&lt; int &gt; &gt; &gt; a</div><div class="ttdef"><b>Definition:</b> <a href="fast__search_8hpp_source.html#l00022">fast_search.hpp:22</a></div></div>
+<div class="ttc" id="afast__search_8cpp_html_a732a6e3b300d84397a7ee853e76d3753"><div class="ttname"><a href="fast__search_8cpp.html#a732a6e3b300d84397a7ee853e76d3753">hash_combine</a></div><div class="ttdeci">static int hash_combine(int c1, int c2, int l)</div><div class="ttdef"><b>Definition:</b> <a href="fast__search_8cpp_source.html#l00021">fast_search.cpp:21</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab4f7d983018f1a4f9fbb7465c8981a21" name="ab4f7d983018f1a4f9fbb7465c8981a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f7d983018f1a4f9fbb7465c8981a21">&#9670;&#160;</a></span>search_sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; int &gt; string_searcher_rep::search_sub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>what</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8cpp_source.html#l00080">80</a> of file <a class="el" href="fast__search_8cpp_source.html">fast_search.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                                            {</div>
+<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (what) == 0) {</div>
+<div class="line"><span class="lineno">   82</span>    <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r;</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt;= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_variable" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a>); i++)</div>
+<div class="line"><span class="lineno">   84</span>      r &lt;&lt; i;</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">   86</span>  }</div>
+<div class="line"><span class="lineno">   87</span>  <span class="keywordtype">int</span> k= 1, l= 0;</div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">while</span> ((k &lt;&lt; 1) &lt;= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (what)) {</div>
+<div class="line"><span class="lineno">   89</span>    k&lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">   90</span>    l++;</div>
+<div class="line"><span class="lineno">   91</span>  }</div>
+<div class="line"><span class="lineno">   92</span>  <span class="keywordtype">int</span> code= <a class="code hl_function" href="fast__search_8cpp.html#af97df6bf8b7661ac71f9573fa6bb7c0b">fast_hash</a> (what (0, k));</div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classstring__searcher__rep.html#acc89588e17c835f004c42ba35656c7c2">a</a>[l]-&gt;<a class="code hl_function" href="array_8hpp.html#aa068ba9b72448f1ebfb05738e5e1250d">contains</a> (code)) <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> ();</div>
+<div class="line"><span class="lineno">   94</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_variable" href="classstring__searcher__rep.html#acc89588e17c835f004c42ba35656c7c2">a</a>[l][code];</div>
+<div class="line"><span class="lineno">   95</span>}</div>
+<div class="ttc" id="aarray_8hpp_html_aa068ba9b72448f1ebfb05738e5e1250d"><div class="ttname"><a href="array_8hpp.html#aa068ba9b72448f1ebfb05738e5e1250d">contains</a></div><div class="ttdeci">bool contains(T a, array&lt; T &gt; b)</div><div class="ttdoc">Check if an array contains a specified element.</div></div>
+<div class="ttc" id="afast__search_8cpp_html_af97df6bf8b7661ac71f9573fa6bb7c0b"><div class="ttname"><a href="fast__search_8cpp.html#af97df6bf8b7661ac71f9573fa6bb7c0b">fast_hash</a></div><div class="ttdeci">static int fast_hash(string s)</div><div class="ttdef"><b>Definition:</b> <a href="fast__search_8cpp_source.html#l00034">fast_search.cpp:34</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a18c47c087c28743bd5d703ee7b3a28ab" name="a18c47c087c28743bd5d703ee7b3a28ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c47c087c28743bd5d703ee7b3a28ab">&#9670;&#160;</a></span>get_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstring.html">string</a> string_searcher_rep::get_string </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8cpp_source.html#l00071">71</a> of file <a class="el" href="fast__search_8cpp_source.html">fast_search.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                                 {</div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a>;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a17099950f25b444e254a3da0c3282e4d" name="a17099950f25b444e254a3da0c3282e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17099950f25b444e254a3da0c3282e4d">&#9670;&#160;</a></span>search_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int string_searcher_rep::search_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>what</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8cpp_source.html#l00098">98</a> of file <a class="el" href="fast__search_8cpp_source.html">fast_search.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>                                                      {</div>
+<div class="line"><span class="lineno">   99</span>  <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> ps= <a class="code hl_function" href="classstring__searcher__rep.html#ab4f7d983018f1a4f9fbb7465c8981a21">search_sub</a> (what);</div>
+<div class="line"><span class="lineno">  100</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (ps); i++) {</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordtype">int</span> next= ps[i];</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (next &gt;= pos &amp;&amp; <a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (<a class="code hl_variable" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a>, next, what)) <span class="keywordflow">return</span> next;</div>
+<div class="line"><span class="lineno">  103</span>  }</div>
+<div class="line"><span class="lineno">  104</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  105</span>}</div>
+<div class="ttc" id="aanalyze_8cpp_html_aabda45e3c166f919ffd8850cc2d17169"><div class="ttname"><a href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a></div><div class="ttdeci">bool test(string s, int i, const char *test)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01020">analyze.cpp:1020</a></div></div>
+<div class="ttc" id="aclassstring__searcher__rep_html_ab4f7d983018f1a4f9fbb7465c8981a21"><div class="ttname"><a href="classstring__searcher__rep.html#ab4f7d983018f1a4f9fbb7465c8981a21">string_searcher_rep::search_sub</a></div><div class="ttdeci">array&lt; int &gt; search_sub(string what)</div><div class="ttdef"><b>Definition:</b> <a href="fast__search_8cpp_source.html#l00080">fast_search.cpp:80</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7fc02f01ddb5393c880c58e1cd9d6b64" name="a7fc02f01ddb5393c880c58e1cd9d6b64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc02f01ddb5393c880c58e1cd9d6b64">&#9670;&#160;</a></span>search_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt; int &gt; string_searcher_rep::search_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>what</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8cpp_source.html#l00108">108</a> of file <a class="el" href="fast__search_8cpp_source.html">fast_search.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                                            {</div>
+<div class="line"><span class="lineno">  109</span>  <span class="comment">// NOTE: There are better algorithms based on generalized suffix trees.</span></div>
+<div class="line"><span class="lineno">  110</span>  <span class="comment">// However, in practice, our approach based on hashtables might be faster</span></div>
+<div class="line"><span class="lineno">  111</span>  <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r;</div>
+<div class="line"><span class="lineno">  112</span>  <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> ps= <a class="code hl_function" href="classstring__searcher__rep.html#ab4f7d983018f1a4f9fbb7465c8981a21">search_sub</a> (what);</div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (ps); i++) {</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordtype">int</span> pos= ps[i];</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (<a class="code hl_variable" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a>, pos, what)) r &lt;&lt; pos;</div>
+<div class="line"><span class="lineno">  116</span>  }</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  118</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a00f76a4139e99004ef8a1b368189aefb" name="a00f76a4139e99004ef8a1b368189aefb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00f76a4139e99004ef8a1b368189aefb">&#9670;&#160;</a></span>string_searcher</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classstring__searcher.html">string_searcher</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8hpp_source.html#l00030">30</a> of file <a class="el" href="fast__search_8hpp_source.html">fast_search.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a00bcc18782a4ea254e87975b50147b" name="a0a00bcc18782a4ea254e87975b50147b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a00bcc18782a4ea254e87975b50147b">&#9670;&#160;</a></span>get_longest_common</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void get_longest_common </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>s2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>b1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>b2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8cpp_source.html#l00125">125</a> of file <a class="el" href="fast__search_8cpp_source.html">fast_search.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                                              {</div>
+<div class="line"><span class="lineno">  126</span>  <span class="comment">// NOTE: There are better algorithms based on generalized suffix trees.</span></div>
+<div class="line"><span class="lineno">  127</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a26481d96a85cda1f555504796eeacac1">b1</a>= e1= <a class="code hl_variable" href="blackbox__test_8cpp.html#a793d7e030be71070cb649bb8f7b4c0bc">b2</a>= e2       = 0;</div>
+<div class="line"><span class="lineno">  128</span>  <span class="keywordtype">int</span>             bestl= 0;</div>
+<div class="line"><span class="lineno">  129</span>  <a class="code hl_class" href="classstring__searcher.html">string_searcher</a> ss1 (s1);</div>
+<div class="line"><span class="lineno">  130</span>  <a class="code hl_class" href="classstring__searcher.html">string_searcher</a> ss2 (s2);</div>
+<div class="line"><span class="lineno">  131</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= <a class="code hl_function" href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (ss1-&gt;a), <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (ss2-&gt;a)) - 1; i &gt;= 0; i--) {</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_class" href="classhashmap.html">hashmap&lt;int, array&lt;int&gt;</a> &gt; a1= ss1-&gt;a[i];</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_class" href="classhashmap.html">hashmap&lt;int, array&lt;int&gt;</a> &gt; a2= ss2-&gt;a[i];</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_class" href="structiterator.html">iterator&lt;int&gt;</a>             it= <a class="code hl_function" href="iterator_8hpp.html#ac57c236a9a461ba5c5c414e3d70c0348">iterate</a> (a1);</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">while</span> (it-&gt;busy ()) {</div>
+<div class="line"><span class="lineno">  136</span>      <span class="keywordtype">int</span>        h  = it-&gt;next ();</div>
+<div class="line"><span class="lineno">  137</span>      <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> ps1= a1[h];</div>
+<div class="line"><span class="lineno">  138</span>      <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> ps2= a2[h];</div>
+<div class="line"><span class="lineno">  139</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (ps1) == 0 || <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (ps2) == 0) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  140</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j1= 0; j1 &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (ps1); j1++) {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">int</span> pos1= ps1[j1];</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a26481d96a85cda1f555504796eeacac1">b1</a> &lt;= pos1 &amp;&amp; pos1 &lt; e1) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j2= 0; j2 &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (ps2); j2++) {</div>
+<div class="line"><span class="lineno">  144</span>          <span class="keywordtype">int</span> pos2= ps2[j2];</div>
+<div class="line"><span class="lineno">  145</span>          <span class="keywordtype">int</span> bb1= pos1, ee1= pos1, bb2= pos2, ee2= pos2;</div>
+<div class="line"><span class="lineno">  146</span>          <span class="keywordflow">while</span> (bb1 &gt; 0 &amp;&amp; bb2 &gt; 0 &amp;&amp; s1[bb1 - 1] == s2[bb2 - 1]) {</div>
+<div class="line"><span class="lineno">  147</span>            bb1--;</div>
+<div class="line"><span class="lineno">  148</span>            bb2--;</div>
+<div class="line"><span class="lineno">  149</span>          }</div>
+<div class="line"><span class="lineno">  150</span>          <span class="keywordflow">while</span> (ee1 &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1) &amp;&amp; ee2 &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2) &amp;&amp; s1[ee1] == s2[ee2]) {</div>
+<div class="line"><span class="lineno">  151</span>            ee1++;</div>
+<div class="line"><span class="lineno">  152</span>            ee2++;</div>
+<div class="line"><span class="lineno">  153</span>          }</div>
+<div class="line"><span class="lineno">  154</span>          <span class="keywordflow">if</span> (ee1 - bb1 &gt; bestl ||</div>
+<div class="line"><span class="lineno">  155</span>              (ee1 - bb1 == bestl &amp;&amp; (bb1 &lt; <a class="code hl_variable" href="blackbox__test_8cpp.html#a26481d96a85cda1f555504796eeacac1">b1</a> || (bb1 == <a class="code hl_variable" href="blackbox__test_8cpp.html#a26481d96a85cda1f555504796eeacac1">b1</a> &amp;&amp; bb2 &lt; <a class="code hl_variable" href="blackbox__test_8cpp.html#a793d7e030be71070cb649bb8f7b4c0bc">b2</a>)))) {</div>
+<div class="line"><span class="lineno">  156</span>            <a class="code hl_variable" href="blackbox__test_8cpp.html#a26481d96a85cda1f555504796eeacac1">b1</a>   = bb1;</div>
+<div class="line"><span class="lineno">  157</span>            e1   = ee1;</div>
+<div class="line"><span class="lineno">  158</span>            <a class="code hl_variable" href="blackbox__test_8cpp.html#a793d7e030be71070cb649bb8f7b4c0bc">b2</a>   = bb2;</div>
+<div class="line"><span class="lineno">  159</span>            e2   = ee2;</div>
+<div class="line"><span class="lineno">  160</span>            bestl= e1 - <a class="code hl_variable" href="blackbox__test_8cpp.html#a26481d96a85cda1f555504796eeacac1">b1</a>;</div>
+<div class="line"><span class="lineno">  161</span>          }</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>      }</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="line"><span class="lineno">  165</span>  }</div>
+<div class="line"><span class="lineno">  166</span>}</div>
+<div class="ttc" id="abasic_8hpp_html_a3f87cd2d262ac14391344cfe9d268c03"><div class="ttname"><a href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a></div><div class="ttdeci">SI min(SI i, SI j)</div><div class="ttdoc">Returns the minimum of two signed integers.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00331">basic.hpp:331</a></div></div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a26481d96a85cda1f555504796eeacac1"><div class="ttname"><a href="blackbox__test_8cpp.html#a26481d96a85cda1f555504796eeacac1">b1</a></div><div class="ttdeci">blackbox b1</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00015">blackbox_test.cpp:15</a></div></div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a793d7e030be71070cb649bb8f7b4c0bc"><div class="ttname"><a href="blackbox__test_8cpp.html#a793d7e030be71070cb649bb8f7b4c0bc">b2</a></div><div class="ttdeci">blackbox b2</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00016">blackbox_test.cpp:16</a></div></div>
+<div class="ttc" id="aclassstring__searcher_html"><div class="ttname"><a href="classstring__searcher.html">string_searcher</a></div><div class="ttdef"><b>Definition:</b> <a href="fast__search_8hpp_source.html#l00035">fast_search.hpp:35</a></div></div>
+<div class="ttc" id="aiterator_8hpp_html_ac57c236a9a461ba5c5c414e3d70c0348"><div class="ttname"><a href="iterator_8hpp.html#ac57c236a9a461ba5c5c414e3d70c0348">iterate</a></div><div class="ttdeci">iterator&lt; T &gt; iterate(hashmap&lt; T, U &gt; h)</div><div class="ttdoc">Generates an iterator for a container of type hashmap&lt;T, U&gt;.</div><div class="ttdef"><b>Definition:</b> <a href="iterator_8ipp_source.html#l00134">iterator.ipp:134</a></div></div>
+<div class="ttc" id="astructiterator_html"><div class="ttname"><a href="structiterator.html">iterator</a></div><div class="ttdoc">A template class for iterators.</div><div class="ttdef"><b>Definition:</b> <a href="iterator_8hpp_source.html#l00057">iterator.hpp:57</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a70aa0b2b5be6ccbedebb607b34436c94" name="a70aa0b2b5be6ccbedebb607b34436c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70aa0b2b5be6ccbedebb607b34436c94">&#9670;&#160;</a></span>s</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstring.html">string</a> string_searcher_rep::s</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8hpp_source.html#l00021">21</a> of file <a class="el" href="fast__search_8hpp_source.html">fast_search.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acc89588e17c835f004c42ba35656c7c2" name="acc89588e17c835f004c42ba35656c7c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc89588e17c835f004c42ba35656c7c2">&#9670;&#160;</a></span>a</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarray.html">array</a>&lt;<a class="el" href="classhashmap.html">hashmap</a>&lt;int, <a class="el" href="classarray.html">array</a>&lt;int&gt; &gt; &gt; string_searcher_rep::a</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__search_8hpp_source.html#l00022">22</a> of file <a class="el" href="fast__search_8hpp_source.html">fast_search.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Data/String/<a class="el" href="fast__search_8hpp_source.html">fast_search.hpp</a></li>
-<li>Data/String/fast_search.cpp</li>
+<li><a class="el" href="fast__search_8hpp_source.html">fast_search.hpp</a></li>
+<li><a class="el" href="fast__search_8cpp_source.html">fast_search.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

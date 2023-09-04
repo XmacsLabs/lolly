@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['sextuple_0',['sextuple',['../classsextuple.html',1,'']]],
-  ['spawn_5fsystem_1',['spawn_system',['../classspawn__system.html',1,'']]],
-  ['std_5fostream_5frep_2',['std_ostream_rep',['../classstd__ostream__rep.html',1,'']]],
-  ['string_3',['string',['../classstring.html',1,'']]],
-  ['string_5frep_4',['string_rep',['../classstring__rep.html',1,'']]],
-  ['string_5fsearcher_5',['string_searcher',['../classstring__searcher.html',1,'']]],
-  ['string_5fsearcher_5frep_6',['string_searcher_rep',['../classstring__searcher__rep.html',1,'']]],
-  ['strong_5fequal_7',['strong_equal',['../list_8hpp.html#a462d483ee52c449435852927e12514f1',1,'list.ipp']]],
-  ['suppress_5flast_8',['suppress_last',['../list_8hpp.html#a7faafc7f0c87c5897ba0678a01d377fa',1,'list.hpp']]]
+  ['qi_0',['QI',['../basic_8hpp.html#aa70c90a0b3d85989a40a2155da9ddc10',1,'basic.hpp']]],
+  ['qn_1',['QN',['../basic_8hpp.html#ae689e762a32dd85f7f8c7f4073d6c521',1,'basic.hpp']]],
+  ['quartet_2',['quartet',['../classquartet.html',1,'quartet&lt; T1, T2, T3, T4 &gt;'],['../classquartet.html#ad98b53d444b44730ec2f20cea35620a7',1,'quartet::quartet(const quartet &amp;q)'],['../classquartet.html#afe088ccdba331332b18f0fe7ce7967fc',1,'quartet::quartet(const T1 &amp;y1, const T2 &amp;y2, const T3 &amp;y3, const T4 &amp;y4)']]],
+  ['quintuple_3',['quintuple',['../classquintuple.html',1,'quintuple&lt; T1, T2, T3, T4, T5 &gt;'],['../classquintuple.html#a55653cf90cb5f2a4575f670a6dde8a84',1,'quintuple::quintuple(const quintuple &amp;q)'],['../classquintuple.html#af90aa05811cc197dd30909c76d5a38ac',1,'quintuple::quintuple(const T1 &amp;y1, const T2 &amp;y2, const T3 &amp;y3, const T4 &amp;y4, const T5 &amp;y5)']]]
 ];

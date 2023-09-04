@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>lolly: Kernel/Abstractions/observer.hpp File Reference</title>
+<title>Lolly: observer.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -21,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">lolly
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.2.0</span>
    </div>
   </td>
  </tr>
@@ -82,7 +83,17 @@ $(function() {
   <div class="headertitle"><div class="title">observer.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;string.hpp&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="string_8hpp_source.html">string.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for observer.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="observer_8hpp__incl.png" border="0" usemap="#aobserver_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="observer_8hpp__dep__incl.png" border="0" usemap="#aobserver_8hppdep" alt=""/></div>
+</div>
 </div>
 <p><a href="observer_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -95,74 +106,387 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a34b9a0bb7f97243000005d7310d5d3fe"><td class="memItemLeft" align="right" valign="top"><a id="a34b9a0bb7f97243000005d7310d5d3fe" name="a34b9a0bb7f97243000005d7310d5d3fe"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_UNKNOWN</b>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:a34b9a0bb7f97243000005d7310d5d3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">define some observer types <br /></td></tr>
+<tr class="memitem:a34b9a0bb7f97243000005d7310d5d3fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a34b9a0bb7f97243000005d7310d5d3fe">OBSERVER_UNKNOWN</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a34b9a0bb7f97243000005d7310d5d3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">define some observer types  <br /></td></tr>
 <tr class="separator:a34b9a0bb7f97243000005d7310d5d3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae02bf7bfa31d19bbdc7250457b92d370"><td class="memItemLeft" align="right" valign="top"><a id="ae02bf7bfa31d19bbdc7250457b92d370" name="ae02bf7bfa31d19bbdc7250457b92d370"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_LIST</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ae02bf7bfa31d19bbdc7250457b92d370"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#ae02bf7bfa31d19bbdc7250457b92d370">OBSERVER_LIST</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ae02bf7bfa31d19bbdc7250457b92d370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a7513465615abb8439feca8954bf4b4"><td class="memItemLeft" align="right" valign="top"><a id="a9a7513465615abb8439feca8954bf4b4" name="a9a7513465615abb8439feca8954bf4b4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_IP</b>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:a9a7513465615abb8439feca8954bf4b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a9a7513465615abb8439feca8954bf4b4">OBSERVER_IP</a>&#160;&#160;&#160;2</td></tr>
 <tr class="separator:a9a7513465615abb8439feca8954bf4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13c83992b8487ef43ac98d6c6d8c5ff5"><td class="memItemLeft" align="right" valign="top"><a id="a13c83992b8487ef43ac98d6c6d8c5ff5" name="a13c83992b8487ef43ac98d6c6d8c5ff5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_POINTER</b>&#160;&#160;&#160;3</td></tr>
+<tr class="memitem:a13c83992b8487ef43ac98d6c6d8c5ff5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a13c83992b8487ef43ac98d6c6d8c5ff5">OBSERVER_POINTER</a>&#160;&#160;&#160;3</td></tr>
 <tr class="separator:a13c83992b8487ef43ac98d6c6d8c5ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a3ba06e6ba28a78dd709fc74449cc62"><td class="memItemLeft" align="right" valign="top"><a id="a0a3ba06e6ba28a78dd709fc74449cc62" name="a0a3ba06e6ba28a78dd709fc74449cc62"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_POSITION</b>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:a0a3ba06e6ba28a78dd709fc74449cc62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a0a3ba06e6ba28a78dd709fc74449cc62">OBSERVER_POSITION</a>&#160;&#160;&#160;4</td></tr>
 <tr class="separator:a0a3ba06e6ba28a78dd709fc74449cc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aa853dfeda73b61d759fd0aa6d23472"><td class="memItemLeft" align="right" valign="top"><a id="a4aa853dfeda73b61d759fd0aa6d23472" name="a4aa853dfeda73b61d759fd0aa6d23472"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_ADDENDUM</b>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:a4aa853dfeda73b61d759fd0aa6d23472"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a4aa853dfeda73b61d759fd0aa6d23472">OBSERVER_ADDENDUM</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:a4aa853dfeda73b61d759fd0aa6d23472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b57c74fd85be90e5e8d519fc83a452"><td class="memItemLeft" align="right" valign="top"><a id="a26b57c74fd85be90e5e8d519fc83a452" name="a26b57c74fd85be90e5e8d519fc83a452"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_EDIT</b>&#160;&#160;&#160;6</td></tr>
+<tr class="memitem:a26b57c74fd85be90e5e8d519fc83a452"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a26b57c74fd85be90e5e8d519fc83a452">OBSERVER_EDIT</a>&#160;&#160;&#160;6</td></tr>
 <tr class="separator:a26b57c74fd85be90e5e8d519fc83a452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab456d99895a6a517209125d38f8baf80"><td class="memItemLeft" align="right" valign="top"><a id="ab456d99895a6a517209125d38f8baf80" name="ab456d99895a6a517209125d38f8baf80"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_UNDO</b>&#160;&#160;&#160;7</td></tr>
+<tr class="memitem:ab456d99895a6a517209125d38f8baf80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#ab456d99895a6a517209125d38f8baf80">OBSERVER_UNDO</a>&#160;&#160;&#160;7</td></tr>
 <tr class="separator:ab456d99895a6a517209125d38f8baf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f387f5f8fddee4602f9b0261f84b752"><td class="memItemLeft" align="right" valign="top"><a id="a5f387f5f8fddee4602f9b0261f84b752" name="a5f387f5f8fddee4602f9b0261f84b752"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_HIGHLIGHT</b>&#160;&#160;&#160;8</td></tr>
+<tr class="memitem:a5f387f5f8fddee4602f9b0261f84b752"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a5f387f5f8fddee4602f9b0261f84b752">OBSERVER_HIGHLIGHT</a>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:a5f387f5f8fddee4602f9b0261f84b752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74e2c01e670da46c4004c184c2213eda"><td class="memItemLeft" align="right" valign="top"><a id="a74e2c01e670da46c4004c184c2213eda" name="a74e2c01e670da46c4004c184c2213eda"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OBSERVER_WIDGET</b>&#160;&#160;&#160;9</td></tr>
+<tr class="memitem:a74e2c01e670da46c4004c184c2213eda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a74e2c01e670da46c4004c184c2213eda">OBSERVER_WIDGET</a>&#160;&#160;&#160;9</td></tr>
 <tr class="separator:a74e2c01e670da46c4004c184c2213eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a573ca2d06db4f4da4fa0f4a4c315ff4b"><td class="memItemLeft" align="right" valign="top"><a id="a573ca2d06db4f4da4fa0f4a4c315ff4b" name="a573ca2d06db4f4da4fa0f4a4c315ff4b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADDENDUM_PLAYER</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a573ca2d06db4f4da4fa0f4a4c315ff4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a573ca2d06db4f4da4fa0f4a4c315ff4b">ADDENDUM_PLAYER</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a573ca2d06db4f4da4fa0f4a4c315ff4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a2f77c2b4585ee7ef2cf1a73d306f38b4"><td class="memItemLeft" align="right" valign="top"><a id="a2f77c2b4585ee7ef2cf1a73d306f38b4" name="a2f77c2b4585ee7ef2cf1a73d306f38b4"></a>
-typedef <a class="el" href="classlist.html">list</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>path</b></td></tr>
+<tr class="memitem:a2f77c2b4585ee7ef2cf1a73d306f38b4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classlist.html">list</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a></td></tr>
 <tr class="separator:a2f77c2b4585ee7ef2cf1a73d306f38b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acecf4566306f44cbb97e9f94e46d43f6"><td class="memItemLeft" align="right" valign="top"><a id="acecf4566306f44cbb97e9f94e46d43f6" name="acecf4566306f44cbb97e9f94e46d43f6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ABSTRACT_NULL_CODE</b> (<a class="el" href="classobserver.html">observer</a>)</td></tr>
+<tr class="memitem:acecf4566306f44cbb97e9f94e46d43f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#acecf4566306f44cbb97e9f94e46d43f6">ABSTRACT_NULL_CODE</a> (<a class="el" href="classobserver.html">observer</a>)</td></tr>
 <tr class="separator:acecf4566306f44cbb97e9f94e46d43f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb219024b15804fdd910692e94d6d64b"><td class="memItemLeft" align="right" valign="top"><a id="aeb219024b15804fdd910692e94d6d64b" name="aeb219024b15804fdd910692e94d6d64b"></a>
-<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="classobserver.html">observer</a> o)</td></tr>
+<tr class="memitem:aeb219024b15804fdd910692e94d6d64b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#aeb219024b15804fdd910692e94d6d64b">operator&lt;&lt;</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="classobserver.html">observer</a> o)</td></tr>
 <tr class="separator:aeb219024b15804fdd910692e94d6d64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a194934586c73e2a57345274a85f241e2"><td class="memItemLeft" align="right" valign="top"><a id="a194934586c73e2a57345274a85f241e2" name="a194934586c73e2a57345274a85f241e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>touch</b> (<a class="el" href="classtree.html">tree</a> &amp;ref)</td></tr>
-<tr class="memdesc:a194934586c73e2a57345274a85f241e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modification routines for trees and other observer-related facilities. <br /></td></tr>
+<tr class="memitem:a194934586c73e2a57345274a85f241e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a194934586c73e2a57345274a85f241e2">touch</a> (<a class="el" href="classtree.html">tree</a> &amp;ref)</td></tr>
+<tr class="memdesc:a194934586c73e2a57345274a85f241e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modification routines for trees and other observer-related facilities.  <br /></td></tr>
 <tr class="separator:a194934586c73e2a57345274a85f241e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a3a070ecbccc5c8b58a59fd7bc0b3a1dd"><td class="memItemLeft" align="right" valign="top"><a id="a3a070ecbccc5c8b58a59fd7bc0b3a1dd" name="a3a070ecbccc5c8b58a59fd7bc0b3a1dd"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>observer_count</b></td></tr>
+<tr class="memitem:a3a070ecbccc5c8b58a59fd7bc0b3a1dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a3a070ecbccc5c8b58a59fd7bc0b3a1dd">observer_count</a></td></tr>
 <tr class="separator:a3a070ecbccc5c8b58a59fd7bc0b3a1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f8dc82c07400d6cb29cbdbca589d62f"><td class="memItemLeft" align="right" valign="top"><a id="a0f8dc82c07400d6cb29cbdbca589d62f" name="a0f8dc82c07400d6cb29cbdbca589d62f"></a>
-<a class="el" href="classobserver.html">observer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nil_observer</b></td></tr>
+<tr class="memitem:a0f8dc82c07400d6cb29cbdbca589d62f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classobserver.html">observer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="observer_8hpp.html#a0f8dc82c07400d6cb29cbdbca589d62f">nil_observer</a></td></tr>
 <tr class="separator:a0f8dc82c07400d6cb29cbdbca589d62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>GPLv3</dd></dl>
 <p>defines the observer class, which is used to monitor modifications </p><dl class="section author"><dt>Author</dt><dd>Joris van der Hoeven </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2004 </dd></dl>
-</div></div><!-- contents -->
+
+<p class="definition">Definition in file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a34b9a0bb7f97243000005d7310d5d3fe" name="a34b9a0bb7f97243000005d7310d5d3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b9a0bb7f97243000005d7310d5d3fe">&#9670;&#160;</a></span>OBSERVER_UNKNOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_UNKNOWN&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>define some observer types </p>
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00028">28</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae02bf7bfa31d19bbdc7250457b92d370" name="ae02bf7bfa31d19bbdc7250457b92d370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae02bf7bfa31d19bbdc7250457b92d370">&#9670;&#160;</a></span>OBSERVER_LIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_LIST&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00029">29</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9a7513465615abb8439feca8954bf4b4" name="a9a7513465615abb8439feca8954bf4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7513465615abb8439feca8954bf4b4">&#9670;&#160;</a></span>OBSERVER_IP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_IP&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00030">30</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a13c83992b8487ef43ac98d6c6d8c5ff5" name="a13c83992b8487ef43ac98d6c6d8c5ff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13c83992b8487ef43ac98d6c6d8c5ff5">&#9670;&#160;</a></span>OBSERVER_POINTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_POINTER&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00031">31</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a3ba06e6ba28a78dd709fc74449cc62" name="a0a3ba06e6ba28a78dd709fc74449cc62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3ba06e6ba28a78dd709fc74449cc62">&#9670;&#160;</a></span>OBSERVER_POSITION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_POSITION&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00032">32</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4aa853dfeda73b61d759fd0aa6d23472" name="a4aa853dfeda73b61d759fd0aa6d23472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa853dfeda73b61d759fd0aa6d23472">&#9670;&#160;</a></span>OBSERVER_ADDENDUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_ADDENDUM&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00033">33</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a26b57c74fd85be90e5e8d519fc83a452" name="a26b57c74fd85be90e5e8d519fc83a452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b57c74fd85be90e5e8d519fc83a452">&#9670;&#160;</a></span>OBSERVER_EDIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_EDIT&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00034">34</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab456d99895a6a517209125d38f8baf80" name="ab456d99895a6a517209125d38f8baf80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab456d99895a6a517209125d38f8baf80">&#9670;&#160;</a></span>OBSERVER_UNDO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_UNDO&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00035">35</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5f387f5f8fddee4602f9b0261f84b752" name="a5f387f5f8fddee4602f9b0261f84b752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f387f5f8fddee4602f9b0261f84b752">&#9670;&#160;</a></span>OBSERVER_HIGHLIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_HIGHLIGHT&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00036">36</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a74e2c01e670da46c4004c184c2213eda" name="a74e2c01e670da46c4004c184c2213eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e2c01e670da46c4004c184c2213eda">&#9670;&#160;</a></span>OBSERVER_WIDGET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBSERVER_WIDGET&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00037">37</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a573ca2d06db4f4da4fa0f4a4c315ff4b" name="a573ca2d06db4f4da4fa0f4a4c315ff4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573ca2d06db4f4da4fa0f4a4c315ff4b">&#9670;&#160;</a></span>ADDENDUM_PLAYER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADDENDUM_PLAYER&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00039">39</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a2f77c2b4585ee7ef2cf1a73d306f38b4" name="a2f77c2b4585ee7ef2cf1a73d306f38b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f77c2b4585ee7ef2cf1a73d306f38b4">&#9670;&#160;</a></span>path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classlist.html">list</a>&lt;int&gt; <a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8hpp_source.html#l00023">23</a> of file <a class="el" href="observer_8hpp_source.html">observer.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="acecf4566306f44cbb97e9f94e46d43f6" name="acecf4566306f44cbb97e9f94e46d43f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acecf4566306f44cbb97e9f94e46d43f6">&#9670;&#160;</a></span>ABSTRACT_NULL_CODE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSTRACT_NULL_CODE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classobserver.html">observer</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb219024b15804fdd910692e94d6d64b" name="aeb219024b15804fdd910692e94d6d64b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb219024b15804fdd910692e94d6d64b">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classobserver.html">observer</a>&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00018">18</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                                         {</div>
+<div class="line"><span class="lineno">   20</span>  out &lt;&lt; <span class="stringliteral">&quot;&lt;observer&quot;</span>;</div>
+<div class="line"><span class="lineno">   21</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (o)) out &lt;&lt; <span class="stringliteral">&quot; null&quot;</span>;</div>
+<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">else</span> o-&gt;print (out);</div>
+<div class="line"><span class="lineno">   23</span>  out &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">   24</span>  <span class="keywordflow">return</span> out;</div>
+<div class="line"><span class="lineno">   25</span>}</div>
+<div class="ttc" id="ablackbox_8hpp_html_aa062545d808e38d833dcb529924000a0"><div class="ttname"><a href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a></div><div class="ttdeci">bool is_nil(blackbox x)</div><div class="ttdef"><b>Definition:</b> <a href="blackbox_8hpp_source.html#l00029">blackbox.hpp:29</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a194934586c73e2a57345274a85f241e2" name="a194934586c73e2a57345274a85f241e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194934586c73e2a57345274a85f241e2">&#9670;&#160;</a></span>touch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void touch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modification routines for trees and other observer-related facilities. </p>
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00028">28</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>                  {</div>
+<div class="line"><span class="lineno">   29</span>  <span class="comment">// cout &lt;&lt; &quot;Touch &quot; &lt;&lt; ref &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (ref-&gt;<a class="code hl_variable" href="classtree__rep.html#ab44df8f1a34b2607d3d9b97481622372">obs</a>)) ref-&gt;<a class="code hl_variable" href="classtree__rep.html#ab44df8f1a34b2607d3d9b97481622372">obs</a>-&gt;touched (ref, <a class="code hl_class" href="classlist.html">path</a> ());</div>
+<div class="line"><span class="lineno">   31</span>}</div>
+<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list&lt; int &gt;</a></div></div>
+<div class="ttc" id="aclasstree__rep_html_ab44df8f1a34b2607d3d9b97481622372"><div class="ttname"><a href="classtree__rep.html#ab44df8f1a34b2607d3d9b97481622372">tree_rep::obs</a></div><div class="ttdeci">observer obs</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00098">tree.hpp:98</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a3a070ecbccc5c8b58a59fd7bc0b3a1dd" name="a3a070ecbccc5c8b58a59fd7bc0b3a1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a070ecbccc5c8b58a59fd7bc0b3a1dd">&#9670;&#160;</a></span>observer_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int observer_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f8dc82c07400d6cb29cbdbca589d62f" name="a0f8dc82c07400d6cb29cbdbca589d62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8dc82c07400d6cb29cbdbca589d62f">&#9670;&#160;</a></span>nil_observer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classobserver.html">observer</a> nil_observer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00016">16</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
