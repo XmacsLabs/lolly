@@ -4,6 +4,8 @@
 #include "sys_utils.hpp"
 #include "tbox/tbox.h"
 
+TEST_CASE ("get_process_id") { CHECK (get_process_id () >= 1); }
+
 TEST_CASE ("system") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
 #ifdef OS_WASM
