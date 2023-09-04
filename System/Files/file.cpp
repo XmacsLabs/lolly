@@ -11,7 +11,10 @@
 ******************************************************************************/
 
 #include "file.hpp"
+#include "analyze.hpp"
 #include "string.hpp"
+#include "sys_utils.hpp"
+
 #include "tbox/tbox.h"
 
 static bool
@@ -145,19 +148,12 @@ mkdir (url u) {
 }
 
 void
-move (url u1, url u2) {
-  string p1= as_string (u1);
-  string p2= as_string (u2);
-
-  tb_file_rename (as_charp (p1), as_charp (p2));
-}
-
-void
-copy (url u1, url u2) {
-  string p1= as_string (u1);
-  string p2= as_string (u2);
-
-  tb_file_copy (as_charp (p1), as_charp (p2), TB_FILE_COPY_LINK);
+make_dir (url which) {
+  if (is_none (which)) return;
+  if (!is_directory (which)) {
+    make_dir (head (which));
+    mkdir (which);
+  }
 }
 
 void
@@ -172,6 +168,61 @@ rmdir (url u) {
     rmdir (u[1]);
     rmdir (u[2]);
   }
+}
+
+url
+url_temp (string suffix) {
+  tb_char_t        uuid[37];
+  const tb_char_t* ret= tb_uuid4_make_cstr (uuid, tb_null);
+  if (ret == NULL) {
+    TM_FAILED ("Failed to generate UUID");
+  }
+  string file_name=
+      replace (ret, string ("-"), string ("")) * string ("_") * suffix;
+  url u= url_temp_dir () * url (file_name);
+  if (file_size (u) == -1) {
+    return u;
+  }
+  else {
+    return url_temp (suffix);
+  }
+}
+
+url
+url_temp_dir_sub () {
+#if defined(OS_WIN) || defined(OS_MINGW)
+  url main_tmp_dir= url_system ("$TMP") * url (".lolly");
+#else
+  url main_tmp_dir= url_system ("/tmp") * url (".lolly");
+#endif
+  static url tmp_dir= main_tmp_dir * url (as_string (get_process_id ()));
+  return (tmp_dir);
+}
+
+url
+url_temp_dir () {
+  static url u;
+  if (u == url_none ()) {
+    u= url_temp_dir_sub ();
+    make_dir (u);
+  }
+  return u;
+}
+
+void
+move (url u1, url u2) {
+  string p1= as_string (u1);
+  string p2= as_string (u2);
+
+  tb_file_rename (as_charp (p1), as_charp (p2));
+}
+
+void
+copy (url u1, url u2) {
+  string p1= as_string (u1);
+  string p2= as_string (u2);
+
+  tb_file_copy (as_charp (p1), as_charp (p2), TB_FILE_COPY_LINK);
 }
 
 void

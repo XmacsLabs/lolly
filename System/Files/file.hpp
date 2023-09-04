@@ -24,7 +24,11 @@ int file_size (url u);
 array<string> read_directory (url u, bool& error_flag);
 
 void mkdir (url u);
+void make_dir (url which);
 void rmdir (url u);
+
+url url_temp_dir ();
+url url_temp (string suffix= "");
 
 void remove (url u);
 void move (url u1, url u2);
