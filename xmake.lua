@@ -59,10 +59,6 @@ option("posix_thread")
     add_cxxincludes("mutex")
 option_end()
 
-if is_plat("mingw", "windows") then
-    add_requires("nowide_standalone 11.2.0", {system=false})
-end
-
 local lolly_files = {
     "Kernel/**/*.cpp",
     "System/**/*.cpp",
@@ -111,10 +107,6 @@ target("liblolly") do
         add_defines("JEMALLOC")
         add_packages("jemalloc")
     end 
-
-    if is_plat("mingw", "windows") then
-        add_packages("nowide_standalone")
-    end
 
     if is_plat("mingw", "windows") then 
         add_includedirs("Plugins/Windows")
@@ -189,6 +181,7 @@ function add_test_target(filepath)
         end
 
         if is_plat("windows") then
+            add_cxxflags("/utf-8")
             add_ldflags("/LTCG")
         end
 
