@@ -145,6 +145,14 @@ mkdir (url u) {
 }
 
 void
+move (url u1, url u2) {
+  string p1= as_string (u1);
+  string p2= as_string (u2);
+
+  tb_file_rename (as_charp (p1), as_charp (p2));
+}
+
+void
 rmdir (url u) {
   string label= u.label ();
   if (label == "none" || label == "root" || label == "wildcard") return;

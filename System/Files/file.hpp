@@ -27,5 +27,6 @@ void mkdir (url u);
 void rmdir (url u);
 
 void remove (url u);
+void move (url u1, url u2);
 
 #endif
