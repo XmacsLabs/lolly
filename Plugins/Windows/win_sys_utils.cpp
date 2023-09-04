@@ -12,6 +12,12 @@
 #include "win_sys_utils.hpp"
 #include "analyze.hpp"
 #include "tm_timer.hpp"
+#include <windows.h>
+
+SN
+win_get_process_id () {
+  return GetCurrentProcessId ();
+}
 
 #ifdef OS_MINGW
 #include "spawn.hpp"
