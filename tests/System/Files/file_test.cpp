@@ -58,6 +58,11 @@ TEST_CASE ("is_newer") {
   rmdir (old_dir | new_dir);
 }
 
+TEST_CASE ("file_size") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+  CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
+}
+
 TEST_CASE ("mkdir/rmdir") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   url lolly_tmp = get_lolly_tmp ();
@@ -126,9 +131,15 @@ TEST_CASE ("copy") {
   remove (c2);
 }
 
-TEST_CASE ("file_size") {
+TEST_CASE ("url_temp") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
-  CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
+  url tmp1= url_temp ("test");
+  cout << tmp1 << LF;
+  tb_hong_t time= tb_time ();
+  tb_file_touch (as_charp (as_string (tmp1)), time, time);
+  url tmp2= url_temp ("test");
+  CHECK_EQ (tmp1 == tmp2, false);
+  CHECK (is_directory (url_temp_dir ()));
 }
 
 TEST_CASE ("read_directory") {

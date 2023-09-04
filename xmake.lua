@@ -32,8 +32,7 @@ configvar_check_cxxsnippets(
         static_assert(sizeof(void*) == 8, "");]])
 
 --- require packages
-tbox_configs = {}
-tbox_configs["force-utf8"] = true
+tbox_configs = {hash=true, ["force-utf8"]=true}
 add_requires("tbox dev", {system=false, configs=tbox_configs})
 add_requires("doctest 2.4.11", {system=false})
 if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
