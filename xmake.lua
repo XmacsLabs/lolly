@@ -285,6 +285,21 @@ for _, filepath in ipairs(os.files("tests/Plugins/Curl/**_test.cpp")) do
     end
 end
 
+-- xmake plugin
+add_configfiles(
+    "Doxyfile.in", {
+        filename = "../doxyfile",
+        pattern = "@(.-)@",
+        variables = {
+            PACKAGE = "Lolly",
+            LOLLY_VERSION = "1.2.0",
+            DOXYGEN_DIR = get_config("buildir"),
+            DEVEL_VERSION = DEVEL_VERSION,
+            HTML_EXTRA_STYLESHEET = "doxygen-awesome-css/doxygen-awesome.css",
+        }
+    }
+)
+
 --- debug mode
 if is_mode("profile") then
     set_symbols("debug")
