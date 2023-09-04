@@ -26,4 +26,6 @@ array<string> read_directory (url u, bool& error_flag);
 void mkdir (url u);
 void rmdir (url u);
 
+void remove (url u);
+
 #endif

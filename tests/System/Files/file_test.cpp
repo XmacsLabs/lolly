@@ -10,6 +10,15 @@
 #include "file.hpp"
 #include "tbox/tbox.h"
 
+url
+get_lolly_tmp () {
+#if defined(OS_WIN) || defined(OS_MINGW)
+  return url_system ("$TMP") * url (".lolly");
+#else
+  return url_system ("/tmp") * url (".lolly");
+#endif
+}
+
 #if defined(OS_WIN) || defined(OS_MINGW)
 TEST_CASE ("is_directory on Windows") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
@@ -38,13 +47,10 @@ TEST_CASE ("is_directory/is_regular") {
 
 TEST_CASE ("is_newer") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
-#if defined(OS_WIN) || defined(OS_MINGW)
-  url tmp= url_system ("$TMP");
-#else
-  url tmp       = url_system ("/tmp");
-#endif
-  url old_dir= tmp * url (".lolly/old");
-  url new_dir= tmp * url (".lolly/new");
+  url lolly_tmp= get_lolly_tmp ();
+  mkdir (lolly_tmp);
+  url old_dir= lolly_tmp * url ("old");
+  url new_dir= lolly_tmp * url ("new");
   mkdir (old_dir);
   tb_sleep (1);
   mkdir (new_dir);
@@ -54,15 +60,42 @@ TEST_CASE ("is_newer") {
 
 TEST_CASE ("mkdir/rmdir") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
-#if defined(OS_WIN) || defined(OS_MINGW)
-  url test_mkdir= url_system ("$TMP") * url ("lolly_tmp_dir");
-#else
-  url test_mkdir= url_system ("/tmp") * url ("lolly_tmp_dir");
-#endif
+  url lolly_tmp = get_lolly_tmp ();
+  url test_mkdir= lolly_tmp * url ("tmp_dir");
   mkdir (test_mkdir);
   CHECK (is_directory (test_mkdir));
   rmdir (test_mkdir);
   CHECK (!is_directory (test_mkdir));
+}
+
+TEST_CASE ("remove") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+  url       lolly_tmp= get_lolly_tmp ();
+  tb_hong_t time     = tb_time ();
+
+  SUBCASE ("single file") {
+    url xyz_txt= lolly_tmp * url ("xyz.txt");
+    tb_file_touch (as_charp (as_string (xyz_txt)), time, time);
+    CHECK (file_size (xyz_txt) == 0);
+    remove (xyz_txt);
+    CHECK (file_size (xyz_txt) == -1);
+  }
+
+  SUBCASE ("multiple files") {
+    url xyz1_txt= lolly_tmp * url ("xyz1.txt");
+    url xyz2_txt= lolly_tmp * url ("xyz2.txt");
+    url xyz3_txt= lolly_tmp * url ("xyz3.txt");
+    tb_file_touch (as_charp (as_string (xyz1_txt)), time, time);
+    tb_file_touch (as_charp (as_string (xyz2_txt)), time, time);
+    tb_file_touch (as_charp (as_string (xyz3_txt)), time, time);
+    CHECK (file_size (xyz1_txt) == 0);
+    CHECK (file_size (xyz2_txt) == 0);
+    CHECK (file_size (xyz3_txt) == 0);
+    remove (xyz1_txt | xyz2_txt | xyz3_txt);
+    CHECK (file_size (xyz1_txt) == -1);
+    CHECK (file_size (xyz2_txt) == -1);
+    CHECK (file_size (xyz3_txt) == -1);
+  }
 }
 
 TEST_CASE ("file_size") {
