@@ -36,6 +36,22 @@ TEST_CASE ("is_directory/is_regular") {
   CHECK (!is_symbolic_link (xmake_lua));
 }
 
+TEST_CASE ("is_newer") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+#if defined(OS_WIN) || defined(OS_MINGW)
+  url tmp= url_system ("$TMP");
+#else
+  url tmp       = url_system ("/tmp");
+#endif
+  url old_dir= tmp * url (".lolly/old");
+  url new_dir= tmp * url (".lolly/new");
+  mkdir (old_dir);
+  tb_sleep (1);
+  mkdir (new_dir);
+  CHECK (is_newer (new_dir, old_dir));
+  rmdir (old_dir | new_dir);
+}
+
 TEST_CASE ("mkdir/rmdir") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
 #if defined(OS_WIN) || defined(OS_MINGW)

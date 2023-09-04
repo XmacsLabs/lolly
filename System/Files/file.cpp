@@ -72,6 +72,21 @@ is_symbolic_link (url u) {
   }
 }
 
+bool
+is_newer (url which, url than) {
+  if (!is_single_path (which)) return false;
+  if (!is_single_path (than)) return false;
+
+  tb_file_info_t info1, info2;
+  if (tb_file_info (as_charp (as_string (which)), &info1) &
+      tb_file_info (as_charp (as_string (than)), &info2)) {
+    return info1.mtime > info2.mtime;
+  }
+  else {
+    return false;
+  }
+}
+
 int
 file_size (url u) {
   if (!is_single_path (u)) return -1;
