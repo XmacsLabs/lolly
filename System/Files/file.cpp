@@ -157,3 +157,17 @@ rmdir (url u) {
     rmdir (u[2]);
   }
 }
+
+void
+remove (url u) {
+  string label= u.label ();
+  if (label == "none" || label == "root" || label == "wildcard") return;
+  else if (is_single_path (u)) {
+    string path= as_string (u);
+    tb_file_remove (as_charp (path));
+  }
+  else { // label == "or"
+    remove (u[1]);
+    remove (u[2]);
+  }
+}
