@@ -153,6 +153,14 @@ move (url u1, url u2) {
 }
 
 void
+copy (url u1, url u2) {
+  string p1= as_string (u1);
+  string p2= as_string (u2);
+
+  tb_file_copy (as_charp (p1), as_charp (p2), TB_FILE_COPY_LINK);
+}
+
+void
 rmdir (url u) {
   string label= u.label ();
   if (label == "none" || label == "root" || label == "wildcard") return;

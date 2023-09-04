@@ -111,6 +111,21 @@ TEST_CASE ("move") {
   remove (m2);
 }
 
+TEST_CASE ("copy") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+  url       lolly_tmp= get_lolly_tmp ();
+  tb_hong_t time     = tb_time ();
+  url       c1       = lolly_tmp * url ("copy_1.txt");
+  url       c2       = lolly_tmp * url ("copy_2.txt");
+  tb_file_touch (as_charp (as_string (c1)), time, time);
+  CHECK (file_size (c2) == -1);
+  copy (c1, c2);
+  CHECK (file_size (c1) == 0);
+  CHECK (file_size (c2) == 0);
+  remove (c1);
+  remove (c2);
+}
+
 TEST_CASE ("file_size") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
