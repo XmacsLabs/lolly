@@ -1,6 +1,6 @@
 
 /**
- * \file      hashset.h
+ * \file      hashset.hpp
  * \details   A simple implementation of a hash set.
  * \copyright GPLv3
  * \author    Joris van der Hoeven

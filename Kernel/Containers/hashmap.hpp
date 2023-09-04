@@ -1,6 +1,6 @@
 
 /**
- * \file      hashmap.h
+ * \file      hashmap.hpp
  * \details   fixed size hashmaps with reference counting
  * \copyright GPLv3
  * \author    Joris van der Hoeven
@@ -44,6 +44,12 @@ template <class T, class U> struct hashentry {
   hashentry<T, U> (int code, T key2, U im2);
 };
 
+/**
+ * @brief The hashmap_rep class represents an entry in a hash map.
+ *
+ * @tparam T The type of the KEY stored in the hash map.
+ * @tparam U The type of the VALUE stored in the hash map.
+ */
 template <class T, class U> class hashmap_rep : concrete_struct {
   int                     size; // size of hashmap (nr of entries)
   int                     n;    // nr of keys (a power of two)
@@ -52,6 +58,7 @@ template <class T, class U> class hashmap_rep : concrete_struct {
   list<hashentry<T, U> >* a;    // the array of entries
 
 public:
+
   /**
    * @brief Constructor for the hashmap_rep class.
    *
@@ -170,6 +177,7 @@ public:
 
 /**
  * @brief A simple hashmap class implementation.
+ * 
  * @tparam T The type of the key in the hashmap.
  * @tparam U The type of the value in the hashmap.
  */
