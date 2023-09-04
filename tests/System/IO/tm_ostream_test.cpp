@@ -180,3 +180,10 @@ TEST_CASE ("operator <<") {
     CHECK (test_same (t1, "Hello, world!"));
   }
 }
+
+TEST_CASE ("cout/cerr") {
+  cout << "Lolly" << LF;
+  cout << "棒棒糖" << LF;
+  cerr << "Lolly" << LF;
+  cerr << "棒棒糖" << LF;
+}
