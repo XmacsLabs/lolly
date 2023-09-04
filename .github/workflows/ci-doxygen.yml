@@ -35,9 +35,18 @@ jobs:
     - name: xmake repo --update
       run: xmake repo --update
 
-    - name: Install dependencies
+    - name: Install doxygen
       run: |
         xrepo install -y doxygen
+    
+    - name: Install npm
+      run: sudo apt-get update && sudo apt-get install npm
+
+    - name: Add submodule
+      run: git submodule add https://github.com/jothepro/doxygen-awesome-css.git && cd doxygen-awesome-css && git checkout v2.2.1 && cd ..
+
+    - name: Install doxygen-awesome-css
+      run: npm install https://github.com/jothepro/doxygen-awesome-css#v2.2.1 --save-dev
 
     - name: cache xmake
       uses: actions/cache@v2
