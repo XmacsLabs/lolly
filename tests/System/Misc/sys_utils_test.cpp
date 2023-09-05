@@ -7,7 +7,7 @@
 TEST_CASE ("get_process_id") { CHECK (get_process_id () >= 1); }
 
 TEST_CASE ("system") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
+  lolly::init_tbox ();
 #ifdef OS_WASM
   CHECK_EQ (lolly::system ("xmake --version"), -1);
   CHECK_EQ (lolly::system ("no_such_command"), -1);
