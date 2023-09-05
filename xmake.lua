@@ -148,6 +148,7 @@ target("liblolly") do
     add_headerfiles("Kernel/Containers/(*.ipp)")
     add_headerfiles("Kernel/Types/(*.hpp)")
     add_headerfiles("System/Classes/(*.hpp)")
+    add_headerfiles("System/Files/(*.hpp)")
     add_headerfiles("System/IO/(*.hpp)")
     add_headerfiles("System/Memory/(*.hpp)")
     add_headerfiles("System/Misc/(*.hpp)")
