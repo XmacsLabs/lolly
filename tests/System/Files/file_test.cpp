@@ -63,6 +63,9 @@ TEST_CASE ("is_of_type") {
   CHECK (is_of_type (url_pwd (), "d"));
   CHECK (!is_of_type (url_pwd (), "f"));
   CHECK (is_of_type (url_pwd () * url ("xmake.lua"), "fr"));
+#if defined(OS_MINGW) || defined(OS_WIN)
+  CHECK (is_of_type (url_pwd () * url ("bin/format.bat"), "x"));
+#endif
 }
 
 TEST_CASE ("file_size") {

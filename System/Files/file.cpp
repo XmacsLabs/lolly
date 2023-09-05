@@ -100,7 +100,7 @@ is_of_type (url name, string filter) {
   int i, n= N (filter);
 
   // Normal files
-#ifdef OS_MINGW
+#if defined(OS_MINGW) || defined(OS_WIN)
   string suf;
   if (filter == "x") {
     suf= suffix (name);
