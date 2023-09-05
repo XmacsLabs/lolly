@@ -32,8 +32,7 @@ configvar_check_cxxsnippets(
         static_assert(sizeof(void*) == 8, "");]])
 
 --- require packages
-tbox_configs = {}
-tbox_configs["force-utf8"] = true
+tbox_configs = {hash=true, ["force-utf8"]=true}
 add_requires("tbox dev", {system=false, configs=tbox_configs})
 add_requires("doctest 2.4.11", {system=false})
 if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
@@ -58,10 +57,6 @@ option("posix_thread")
     add_cxxtypes("std::mutex")
     add_cxxincludes("mutex")
 option_end()
-
-if is_plat("mingw", "windows") then
-    add_requires("nowide_standalone 11.2.0", {system=false})
-end
 
 local lolly_files = {
     "Kernel/**/*.cpp",
@@ -112,10 +107,6 @@ target("liblolly") do
         add_packages("jemalloc")
     end 
 
-    if is_plat("mingw", "windows") then
-        add_packages("nowide_standalone")
-    end
-
     if is_plat("mingw", "windows") then 
         add_includedirs("Plugins/Windows")
         add_files("Plugins/Windows/win_*.cpp")
@@ -157,6 +148,7 @@ target("liblolly") do
     add_headerfiles("Kernel/Containers/(*.ipp)")
     add_headerfiles("Kernel/Types/(*.hpp)")
     add_headerfiles("System/Classes/(*.hpp)")
+    add_headerfiles("System/Files/(*.hpp)")
     add_headerfiles("System/IO/(*.hpp)")
     add_headerfiles("System/Memory/(*.hpp)")
     add_headerfiles("System/Misc/(*.hpp)")
@@ -189,6 +181,7 @@ function add_test_target(filepath)
         end
 
         if is_plat("windows") then
+            add_cxxflags("/utf-8")
             add_ldflags("/LTCG")
         end
 
@@ -284,6 +277,71 @@ for _, filepath in ipairs(os.files("tests/Plugins/Curl/**_test.cpp")) do
         add_test_target(filepath)
     end
 end
+
+-- xmake plugin
+add_configfiles(
+    "Doxyfile.in", {
+        filename = "../doxyfile",
+        pattern = "@(.-)@",
+        variables = {
+            PACKAGE = "Lolly",
+            LOLLY_VERSION = "1.2.0",
+            DOXYGEN_DIR = get_config("buildir"),
+            DEVEL_VERSION = DEVEL_VERSION,
+            HTML_EXTRA_STYLESHEET = "doxygen-awesome-css/doxygen-awesome.css",
+        }
+    }
+)
+
+---
+--- coverage:
+--- use `xmake f -m coverage` to enable coverage
+--- first `rm -rf build/` to clean build cache
+--- then `xmake build` to build
+--- then `xmake run --group=test_cov` to run tests for coverage
+--- run `lcov --directory . --capture --output-file coverage.info`
+--- run `genhtml coverage.info --output-directory coverage`
+--- open `coverage/index.html` in browser
+--- 
+
+function add_test_cov(filepath)
+    local testname = path.basename(filepath)
+    target(testname) do
+        set_group("test_cov")
+        add_deps("liblolly")
+        set_languages("c++17")
+        set_policy("check.auto_ignore_flags", false)
+
+        add_packages("tbox")
+        add_packages("doctest")
+        add_packages("libcurl")
+        add_syslinks("stdc++", "m")
+        add_includedirs("$(buildir)/L1")
+        add_includedirs(lolly_includedirs)
+        add_files(filepath) 
+        add_cxxflags("-include $(buildir)/L1/config.h")
+        add_cxxflags("-O0")
+        add_cxxflags("-fprofile-arcs")
+        add_cxxflags("-ftest-coverage")
+        add_ldflags("-coverage")
+        on_run(function (target)
+            cmd = "$(buildir)/$(plat)/$(arch)/$(mode)/" .. testname
+            print("> " .. cmd)
+            os.exec(cmd)
+        end)
+        
+    end
+end
+
+for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
+    if is_mode("coverage") then
+        add_test_cov(filepath)
+    end
+end
+
+---
+--- coverage end
+---
 
 --- debug mode
 if is_mode("profile") then

@@ -106,6 +106,17 @@ os_macos () {
 #endif
 }
 
+SN
+get_process_id () {
+#if defined(OS_MINGW) || defined(OS_WIN)
+  return win_get_process_id ();
+#elif defined(OS_WASM)
+  return 1;
+#else
+  return unix_get_process_id ();
+#endif
+}
+
 array<string>
 evaluate_system (array<string> arg, array<int> fd_in, array<string> in,
                  array<int> fd_out) {
