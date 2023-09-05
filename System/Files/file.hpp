@@ -20,6 +20,7 @@ bool is_symbolic_link (url u);
 bool is_newer (url which, url than);
 
 int file_size (url u);
+int last_modified (url u);
 
 array<string> read_directory (url u, bool& error_flag);
 

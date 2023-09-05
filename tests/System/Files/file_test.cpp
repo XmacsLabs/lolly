@@ -63,6 +63,11 @@ TEST_CASE ("file_size") {
   CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
 }
 
+TEST_CASE ("last_modified") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+  CHECK (last_modified (url_pwd () * url ("xmake.lua")) > 0);
+}
+
 TEST_CASE ("mkdir/rmdir") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   url lolly_tmp = get_lolly_tmp ();

@@ -104,6 +104,20 @@ file_size (url u) {
   }
 }
 
+int
+last_modified (url u) {
+  if (!is_single_path (u)) return -1;
+
+  string         path= as_string (u);
+  tb_file_info_t info;
+  if (tb_file_info (as_charp (path), &info)) {
+    return info.mtime;
+  }
+  else {
+    return -1;
+  }
+}
+
 static tb_long_t
 tb_directory_walk_func (tb_char_t const* path, tb_file_info_t const* info,
                         tb_cpointer_t priv) {
