@@ -10,5 +10,5 @@ digraph "Curl"
   dir_81074d4e45b8ae0a8f11695606d450a6 [label="Curl", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_81074d4e45b8ae0a8f11695606d450a6.html",tooltip=""];
   }
   dir_52bed8acfaac088d5968cb2c84d7645d [label="Kernel", fillcolor="#edf0f7", color="red", style="filled", URL="dir_52bed8acfaac088d5968cb2c84d7645d.html",tooltip=""];
-  dir_81074d4e45b8ae0a8f11695606d450a6->dir_52bed8acfaac088d5968cb2c84d7645d [headlabel="1", labeldistance=1.5 headhref="dir_000009_000024.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_81074d4e45b8ae0a8f11695606d450a6->dir_52bed8acfaac088d5968cb2c84d7645d [headlabel="1", labeldistance=1.5 headhref="dir_000007_000018.html" color="steelblue1" fontcolor="steelblue1"];
 }

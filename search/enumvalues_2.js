@@ -1,20 +1,4 @@
 var searchData=
 [
-  ['debug_5fflag_5fauto_0',['DEBUG_FLAG_AUTO',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba8a0bc2486075d4539988c7c820211c4c',1,'basic.hpp']]],
-  ['debug_5fflag_5fbench_1',['DEBUG_FLAG_BENCH',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bafb63e3bf633db566e6966bed3354f072',1,'basic.hpp']]],
-  ['debug_5fflag_5fconvert_2',['DEBUG_FLAG_CONVERT',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bacbb633f9fc8b068631eb7711e5a2c888',1,'basic.hpp']]],
-  ['debug_5fflag_5fcorrect_3',['DEBUG_FLAG_CORRECT',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba9b7bd3a9e216debd0a31b4d135f6472c',1,'basic.hpp']]],
-  ['debug_5fflag_5fevents_4',['DEBUG_FLAG_EVENTS',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba244c316ec2a8d3bf288c2d23f443e683',1,'basic.hpp']]],
-  ['debug_5fflag_5fflatten_5',['DEBUG_FLAG_FLATTEN',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba5db345ea1e72738c59442c0def6ad3a4',1,'basic.hpp']]],
-  ['debug_5fflag_5fhistory_6',['DEBUG_FLAG_HISTORY',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55baa578af810652aa7be275f7469ed044e9',1,'basic.hpp']]],
-  ['debug_5fflag_5fio_7',['DEBUG_FLAG_IO',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba70620e4fc7a14e7f9742102f338c6232',1,'basic.hpp']]],
-  ['debug_5fflag_5fkeyboard_8',['DEBUG_FLAG_KEYBOARD',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba5e198e1ba8b0bb751fe04da155be3cb4',1,'basic.hpp']]],
-  ['debug_5fflag_5flive_9',['DEBUG_FLAG_LIVE',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba13d82c4f09694aca824ca7b9efbeacdd',1,'basic.hpp']]],
-  ['debug_5fflag_5fpackrat_10',['DEBUG_FLAG_PACKRAT',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bab5a66311a2cc6cc3f5c3999e3acdb69d',1,'basic.hpp']]],
-  ['debug_5fflag_5fparser_11',['DEBUG_FLAG_PARSER',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba641291d11f7a4149186e6b8f3a0781cb',1,'basic.hpp']]],
-  ['debug_5fflag_5fqt_12',['DEBUG_FLAG_QT',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba154427c97df13b41863659b5be0d1c61',1,'basic.hpp']]],
-  ['debug_5fflag_5fqt_5fwidgets_13',['DEBUG_FLAG_QT_WIDGETS',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba6dcd0e8772eae54da31655d8ba667088',1,'basic.hpp']]],
-  ['debug_5fflag_5fremote_14',['DEBUG_FLAG_REMOTE',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba3964f74cf1e2eb5c523606c75878afc4',1,'basic.hpp']]],
-  ['debug_5fflag_5fstd_15',['DEBUG_FLAG_STD',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba225311a70f9774424b140212debb51f7',1,'basic.hpp']]],
-  ['debug_5fflag_5fverbose_16',['DEBUG_FLAG_VERBOSE',['../basic_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55bab7bc081e7eca47e9a57530a6de2d2d59',1,'basic.hpp']]]
+  ['hrule_0',['HRULE',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a88d425b54c630fffd0e35379e037c38f',1,'basic.hpp']]]
 ];

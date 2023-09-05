@@ -105,7 +105,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00094">94</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00096">96</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aba44829e2ffe259c66689172b819525b" name="aba44829e2ffe259c66689172b819525b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba44829e2ffe259c66689172b819525b">&#9670;&#160;</a></span>_pipe_t()</h2>
@@ -130,17 +130,17 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00097">97</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                    {</div>
-<div class="line"><span class="lineno">   98</span>    <a class="code hl_variable" href="struct__pipe__t.html#a373bc3d3fc7a0d5bf46bba1c0a2e699c">st</a>    = pipe (<a class="code hl_struct" href="structrep.html">rep</a>);</div>
-<div class="line"><span class="lineno">   99</span>    <span class="keywordtype">int</span> fl= fcntl (<a class="code hl_struct" href="structrep.html">rep</a>[0], F_GETFL);</div>
-<div class="line"><span class="lineno">  100</span>    fl    = fl &amp; (~(int) O_NONBLOCK);</div>
-<div class="line"><span class="lineno">  101</span>    fcntl (<a class="code hl_struct" href="structrep.html">rep</a>[0], F_SETFL, fl);</div>
-<div class="line"><span class="lineno">  102</span>    fl= fcntl (<a class="code hl_struct" href="structrep.html">rep</a>[1], F_GETFL);</div>
-<div class="line"><span class="lineno">  103</span>    fl= fl &amp; (~(int) O_NONBLOCK);</div>
-<div class="line"><span class="lineno">  104</span>    fcntl (<a class="code hl_struct" href="structrep.html">rep</a>[1], F_SETFL, fl);</div>
-<div class="line"><span class="lineno">  105</span>  }</div>
-<div class="ttc" id="astruct__pipe__t_html_a373bc3d3fc7a0d5bf46bba1c0a2e699c"><div class="ttname"><a href="struct__pipe__t.html#a373bc3d3fc7a0d5bf46bba1c0a2e699c">_pipe_t::st</a></div><div class="ttdeci">int st</div><div class="ttdef"><b>Definition:</b> <a href="unix__sys__utils_8cpp_source.html#l00096">unix_sys_utils.cpp:96</a></div></div>
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00099">99</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                    {</div>
+<div class="line"><span class="lineno">  100</span>    <a class="code hl_variable" href="struct__pipe__t.html#a373bc3d3fc7a0d5bf46bba1c0a2e699c">st</a>    = pipe (<a class="code hl_struct" href="structrep.html">rep</a>);</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordtype">int</span> fl= fcntl (<a class="code hl_struct" href="structrep.html">rep</a>[0], F_GETFL);</div>
+<div class="line"><span class="lineno">  102</span>    fl    = fl &amp; (~(int) O_NONBLOCK);</div>
+<div class="line"><span class="lineno">  103</span>    fcntl (<a class="code hl_struct" href="structrep.html">rep</a>[0], F_SETFL, fl);</div>
+<div class="line"><span class="lineno">  104</span>    fl= fcntl (<a class="code hl_struct" href="structrep.html">rep</a>[1], F_GETFL);</div>
+<div class="line"><span class="lineno">  105</span>    fl= fl &amp; (~(int) O_NONBLOCK);</div>
+<div class="line"><span class="lineno">  106</span>    fcntl (<a class="code hl_struct" href="structrep.html">rep</a>[1], F_SETFL, fl);</div>
+<div class="line"><span class="lineno">  107</span>  }</div>
+<div class="ttc" id="astruct__pipe__t_html_a373bc3d3fc7a0d5bf46bba1c0a2e699c"><div class="ttname"><a href="struct__pipe__t.html#a373bc3d3fc7a0d5bf46bba1c0a2e699c">_pipe_t::st</a></div><div class="ttdeci">int st</div><div class="ttdef"><b>Definition:</b> <a href="unix__sys__utils_8cpp_source.html#l00098">unix_sys_utils.cpp:98</a></div></div>
 <div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition:</b> <a href="resource_8hpp_source.html#l00016">resource.hpp:16</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -168,11 +168,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00106">106</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                     {</div>
-<div class="line"><span class="lineno">  107</span>    close (<a class="code hl_struct" href="structrep.html">rep</a>[0]);</div>
-<div class="line"><span class="lineno">  108</span>    close (<a class="code hl_struct" href="structrep.html">rep</a>[1]);</div>
-<div class="line"><span class="lineno">  109</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00108">108</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                     {</div>
+<div class="line"><span class="lineno">  109</span>    close (<a class="code hl_struct" href="structrep.html">rep</a>[0]);</div>
+<div class="line"><span class="lineno">  110</span>    close (<a class="code hl_struct" href="structrep.html">rep</a>[1]);</div>
+<div class="line"><span class="lineno">  111</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -200,8 +200,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00110">110</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>[0]; }</div>
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00112">112</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>[0]; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -228,8 +228,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00111">111</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>[1]; }</div>
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00113">113</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>[1]; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -256,8 +256,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00112">112</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="struct__pipe__t.html#a373bc3d3fc7a0d5bf46bba1c0a2e699c">st</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00114">114</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="struct__pipe__t.html#a373bc3d3fc7a0d5bf46bba1c0a2e699c">st</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -274,7 +274,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00095">95</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00097">97</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
 
 </div>
 </div>
@@ -290,7 +290,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00096">96</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00098">98</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
 
 </div>
 </div>

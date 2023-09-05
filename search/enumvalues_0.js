@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['blue_0',['blue',['../namespaceMyLibrary.html#a79a9f4bbb675f6c082b09249c5a95ceda3d4a113e58853e5d81725d92fbfceb4d',1,'MyLibrary']]]
+  ['chin_0',['CHIN',['../classChannel.html#a941cb2b0b77dc8feb02a708207e4a7c9a410a6c98ada11a11b09289fd88c90a9c',1,'Channel']]],
+  ['chout_1',['CHOUT',['../classChannel.html#a941cb2b0b77dc8feb02a708207e4a7c9ab57e406d9a27a6e48bb73fbf42423959',1,'Channel']]]
 ];

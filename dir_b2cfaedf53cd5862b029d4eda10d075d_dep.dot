@@ -11,6 +11,6 @@ digraph "Misc"
   }
   dir_0b4eaef40a1fe20bedafe9e8e719ce66 [label="Plugins", fillcolor="#edf0f7", color="red", style="filled", URL="dir_0b4eaef40a1fe20bedafe9e8e719ce66.html",tooltip=""];
   dir_52bed8acfaac088d5968cb2c84d7645d [label="Kernel", fillcolor="#edf0f7", color="red", style="filled", URL="dir_52bed8acfaac088d5968cb2c84d7645d.html",tooltip=""];
-  dir_b2cfaedf53cd5862b029d4eda10d075d->dir_0b4eaef40a1fe20bedafe9e8e719ce66 [headlabel="1", labeldistance=1.5 headhref="dir_000029_000033.html" color="steelblue1" fontcolor="steelblue1"];
-  dir_b2cfaedf53cd5862b029d4eda10d075d->dir_52bed8acfaac088d5968cb2c84d7645d [headlabel="2", labeldistance=1.5 headhref="dir_000029_000024.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_b2cfaedf53cd5862b029d4eda10d075d->dir_0b4eaef40a1fe20bedafe9e8e719ce66 [headlabel="1", labeldistance=1.5 headhref="dir_000022_000024.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_b2cfaedf53cd5862b029d4eda10d075d->dir_52bed8acfaac088d5968cb2c84d7645d [headlabel="2", labeldistance=1.5 headhref="dir_000022_000018.html" color="steelblue1" fontcolor="steelblue1"];
 }

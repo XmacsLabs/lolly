@@ -3,14 +3,14 @@ var searchData=
   ['factor_0',['factor',['../url_8hpp.html#a8ac5b3be9b985e3bd1eed88efdcfb4e5',1,'factor(url u):&#160;url.cpp'],['../url_8cpp.html#a8ac5b3be9b985e3bd1eed88efdcfb4e5',1,'factor(url u):&#160;url.cpp']]],
   ['factor_5fsorted_1',['factor_sorted',['../url_8cpp.html#a3e45bb16555773d9da2c5d6594fc9375',1,'url.cpp']]],
   ['factor_5fsub_2',['factor_sub',['../url_8cpp.html#aaab0a6ce189e5c54cbbc4936220e3d60',1,'url.cpp']]],
-  ['fast_5falloc_3',['fast_alloc',['../fast__alloc_8hpp.html#ad059bd8c2a000860cb14de07ec78010d',1,'fast_alloc(size_t s):&#160;fast_alloc.cpp'],['../fast__alloc_8cpp.html#a9b0727406a35e692d84b23542694cf41',1,'fast_alloc(size_t sz):&#160;fast_alloc.cpp']]],
+  ['fast_5falloc_3',['fast_alloc',['../fast__alloc_8cpp.html#a9b0727406a35e692d84b23542694cf41',1,'fast_alloc(size_t sz):&#160;fast_alloc.cpp'],['../fast__alloc_8hpp.html#ad059bd8c2a000860cb14de07ec78010d',1,'fast_alloc(size_t s):&#160;fast_alloc.cpp']]],
   ['fast_5falloc_2ecpp_4',['fast_alloc.cpp',['../fast__alloc_8cpp.html',1,'']]],
   ['fast_5falloc_2ehpp_5',['fast_alloc.hpp',['../fast__alloc_8hpp.html',1,'']]],
   ['fast_5falloc_5fmw_6',['fast_alloc_mw',['../fast__alloc_8cpp.html#a7a139953b5a90b802016d77ab4cb5c91',1,'fast_alloc.cpp']]],
   ['fast_5falloc_5ftest_2ecpp_7',['fast_alloc_test.cpp',['../fast__alloc__test_8cpp.html',1,'']]],
   ['fast_5fchunks_8',['fast_chunks',['../fast__alloc_8cpp.html#a64481d845d339802738c7cc984ac576b',1,'fast_alloc.cpp']]],
-  ['fast_5fdelete_9',['fast_delete',['../fast__alloc_8cpp.html#a2972888e3e766c07c1842fd506818686',1,'fast_delete(void *ptr):&#160;fast_alloc.cpp'],['../fast__alloc_8hpp.html#a2972888e3e766c07c1842fd506818686',1,'fast_delete(void *ptr):&#160;fast_alloc.cpp']]],
-  ['fast_5ffree_10',['fast_free',['../fast__alloc_8hpp.html#a2765369f53d3b32485a2255a294654ab',1,'fast_free(void *ptr, size_t s):&#160;fast_alloc.cpp'],['../fast__alloc_8cpp.html#a2f0da830980b741e5d30452b85c3336b',1,'fast_free(void *ptr, size_t sz):&#160;fast_alloc.cpp']]],
+  ['fast_5fdelete_9',['fast_delete',['../fast__alloc_8hpp.html#a2972888e3e766c07c1842fd506818686',1,'fast_delete(void *ptr):&#160;fast_alloc.cpp'],['../fast__alloc_8cpp.html#a2972888e3e766c07c1842fd506818686',1,'fast_delete(void *ptr):&#160;fast_alloc.cpp']]],
+  ['fast_5ffree_10',['fast_free',['../fast__alloc_8cpp.html#a2f0da830980b741e5d30452b85c3336b',1,'fast_free(void *ptr, size_t sz):&#160;fast_alloc.cpp'],['../fast__alloc_8hpp.html#a2765369f53d3b32485a2255a294654ab',1,'fast_free(void *ptr, size_t s):&#160;fast_alloc.cpp']]],
   ['fast_5ffree_5fmw_11',['fast_free_mw',['../fast__alloc_8cpp.html#a5154ab52e1b65cf0b1e67fdb43222d3d',1,'fast_alloc.cpp']]],
   ['fast_5fhash_12',['fast_hash',['../fast__search_8cpp.html#af97df6bf8b7661ac71f9573fa6bb7c0b',1,'fast_search.cpp']]],
   ['fast_5fnew_13',['fast_new',['../fast__alloc_8hpp.html#a89a41290067cc8bb0c8c59b6320e0551',1,'fast_new(size_t s):&#160;fast_alloc.cpp'],['../fast__alloc_8cpp.html#a89a41290067cc8bb0c8c59b6320e0551',1,'fast_new(size_t s):&#160;fast_alloc.cpp']]],
@@ -40,6 +40,5 @@ var searchData=
   ['ftp_5froot_37',['ftp_root',['../url__test_8cpp.html#a83f4a3bdf8e39afd956aa7aeb5aad6cb',1,'url_test.cpp']]],
   ['ftp_5furl_38',['ftp_url',['../classftp__url.html#a17a204191f677a66cfc7db0700852b33',1,'ftp_url::ftp_url(string name)'],['../classftp__url.html#a54205f407b9260d82555690f1b013c47',1,'ftp_url::ftp_url(const char *name)'],['../classftp__url.html',1,'ftp_url']]],
   ['ftp_5furl_2ecpp_39',['ftp_url.cpp',['../ftp__url_8cpp.html',1,'']]],
-  ['func_40',['func',['../classhashfunc__rep.html#a8f0f4e5da5def06318700107c2bdbd82',1,'hashfunc_rep']]],
-  ['function_5ftemplate_5ftest_41',['function_template_test',['../classMyLibrary_1_1SubclassExample.html#ad2432fe3b060789f6f7052c515d515f4',1,'MyLibrary::SubclassExample']]]
+  ['func_40',['func',['../classhashfunc__rep.html#a8f0f4e5da5def06318700107c2bdbd82',1,'hashfunc_rep']]]
 ];

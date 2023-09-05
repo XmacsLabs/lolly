@@ -78,6 +78,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A simple hashmap class implementation.  
+ <a href="classhashmap.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for hashmap&lt; T, U &gt;:</div>
@@ -95,12 +98,16 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a76f18f7c47186c3f64141d6ade76c174"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashmap.html#a76f18f7c47186c3f64141d6ade76c174">CONCRETE_TEMPLATE_2</a> (<a class="el" href="classhashmap.html">hashmap</a>, T, U)</td></tr>
 <tr class="separator:a76f18f7c47186c3f64141d6ade76c174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4b70529a260976d3b1e5cdd9746d5ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashmap.html#aa4b70529a260976d3b1e5cdd9746d5ee">hashmap</a> ()</td></tr>
+<tr class="memdesc:aa4b70529a260976d3b1e5cdd9746d5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor that initializes the hashmap with default parameters.  <br /></td></tr>
 <tr class="separator:aa4b70529a260976d3b1e5cdd9746d5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a307ba15f4c336a22d8448280b23de423"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashmap.html#a307ba15f4c336a22d8448280b23de423">hashmap</a> (U <a class="el" href="classhashmap.html#af0b67185a0c23e5d47dcde0508bfa0cc">init</a>, int n=1, int <a class="el" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>=1)</td></tr>
+<tr class="memdesc:a307ba15f4c336a22d8448280b23de423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that allows custom initial value, size, and maximum load factor.  <br /></td></tr>
 <tr class="separator:a307ba15f4c336a22d8448280b23de423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d00ef2533d8d98c2f623bb0151026cc"><td class="memItemLeft" align="right" valign="top">U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashmap.html#a0d00ef2533d8d98c2f623bb0151026cc">operator[]</a> (T x)</td></tr>
+<tr class="memdesc:a0d00ef2533d8d98c2f623bb0151026cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only access operator.  <br /></td></tr>
 <tr class="separator:a0d00ef2533d8d98c2f623bb0151026cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa132e00ceaf061474ac76e2aa0f222"><td class="memItemLeft" align="right" valign="top">U &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhashmap.html#a3aa132e00ceaf061474ac76e2aa0f222">operator()</a> (T x)</td></tr>
+<tr class="memdesc:a3aa132e00ceaf061474ac76e2aa0f222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-write access to the value mapped by the key x.  <br /></td></tr>
 <tr class="separator:a3aa132e00ceaf061474ac76e2aa0f222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
@@ -110,8 +117,16 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T, class U&gt;<br />
-class hashmap&lt; T, U &gt;</div>
-<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00087">87</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
+class hashmap&lt; T, U &gt;</div><p>A simple hashmap class implementation. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the key in the hashmap. </td></tr>
+    <tr><td class="paramname">U</td><td>The type of the value in the hashmap. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00176">176</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa4b70529a260976d3b1e5cdd9746d5ee" name="aa4b70529a260976d3b1e5cdd9746d5ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4b70529a260976d3b1e5cdd9746d5ee">&#9670;&#160;</a></span>hashmap() <span class="overload">[1/2]</span></h2>
@@ -138,9 +153,11 @@ template&lt;class T , class U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00090">90</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>      : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a>&lt;<a class="code hl_class" href="classhashmap__rep.html">hashmap_rep&lt;T, U&gt;</a> &gt; (<a class="code hl_struct" href="structtype__helper.html">type_helper&lt;U&gt;::init_val</a> (), 1, 1)) {}</div>
-<div class="ttc" id="aclasshashmap__rep_html"><div class="ttname"><a href="classhashmap__rep.html">hashmap_rep</a></div><div class="ttdef"><b>Definition:</b> <a href="hashmap_8hpp_source.html#l00043">hashmap.hpp:43</a></div></div>
+<p>Default constructor that initializes the hashmap with default parameters. </p>
+
+<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00184">184</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>      : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a>&lt;<a class="code hl_class" href="classhashmap__rep.html">hashmap_rep&lt;T, U&gt;</a> &gt; (<a class="code hl_struct" href="structtype__helper.html">type_helper&lt;U&gt;::init_val</a> (), 1, 1)) {}</div>
+<div class="ttc" id="aclasshashmap__rep_html"><div class="ttname"><a href="classhashmap__rep.html">hashmap_rep</a></div><div class="ttdef"><b>Definition:</b> <a href="hashmap_8hpp_source.html#l00047">hashmap.hpp:47</a></div></div>
 <div class="ttc" id="afast__alloc_8hpp_html_a8c09c4a1ed33efc95abda66d3b5a7231"><div class="ttname"><a href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a></div><div class="ttdeci">C * tm_new()</div><div class="ttdef"><b>Definition:</b> <a href="fast__alloc_8hpp_source.html#l00085">fast_alloc.hpp:85</a></div></div>
 <div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition:</b> <a href="resource_8hpp_source.html#l00016">resource.hpp:16</a></div></div>
 <div class="ttc" id="astructtype__helper_html"><div class="ttname"><a href="structtype__helper.html">type_helper</a></div><div class="ttdoc">Helper struct for type identification and initialization.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00560">basic.hpp:560</a></div></div>
@@ -189,10 +206,20 @@ template&lt;class T , class U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00092">92</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>      : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a>&lt;<a class="code hl_class" href="classhashmap__rep.html">hashmap_rep&lt;T, U&gt;</a> &gt; (<a class="code hl_variable" href="classhashmap.html#af0b67185a0c23e5d47dcde0508bfa0cc">init</a>, n, <a class="code hl_function" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>)) {}</div>
+<p>Constructor that allows custom initial value, size, and maximum load factor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">init</td><td>The initial value for the type U. </td></tr>
+    <tr><td class="paramname">n</td><td>The initial size of the hashmap. </td></tr>
+    <tr><td class="paramname">max</td><td>The maximum load factor of the hashmap. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00195">195</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>      : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a>&lt;<a class="code hl_class" href="classhashmap__rep.html">hashmap_rep&lt;T, U&gt;</a> &gt; (<a class="code hl_variable" href="classhashmap.html#af0b67185a0c23e5d47dcde0508bfa0cc">init</a>, n, <a class="code hl_function" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>)) {}</div>
 <div class="ttc" id="abasic_8hpp_html_a722bf3cd3acddf15e6bca8135bad679d"><div class="ttname"><a href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a></div><div class="ttdeci">SI max(SI i, SI j)</div><div class="ttdoc">Returns the maximum of two signed integers.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00344">basic.hpp:344</a></div></div>
-<div class="ttc" id="aclasshashmap_html_af0b67185a0c23e5d47dcde0508bfa0cc"><div class="ttname"><a href="classhashmap.html#af0b67185a0c23e5d47dcde0508bfa0cc">hashmap::init</a></div><div class="ttdeci">static hashmap&lt; T, U &gt; init</div><div class="ttdef"><b>Definition:</b> <a href="hashmap_8hpp_source.html#l00089">hashmap.hpp:89</a></div></div>
+<div class="ttc" id="aclasshashmap_html_af0b67185a0c23e5d47dcde0508bfa0cc"><div class="ttname"><a href="classhashmap.html#af0b67185a0c23e5d47dcde0508bfa0cc">hashmap::init</a></div><div class="ttdeci">static hashmap&lt; T, U &gt; init</div><div class="ttdef"><b>Definition:</b> <a href="hashmap_8hpp_source.html#l00178">hashmap.hpp:178</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -267,8 +294,17 @@ template&lt;class T , class U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00094">94</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>-&gt;bracket_ro (x); }</div>
+<p>Read-only access operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The key whose value is to be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value corresponding to the provided key. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00204">204</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>-&gt;bracket_ro (x); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -298,8 +334,17 @@ template&lt;class T , class U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00095">95</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>-&gt;bracket_rw (x); }</div>
+<p>Read-write access to the value mapped by the key x. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The key to look up in the hashmap. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the value associated with the key x. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00212">212</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>-&gt;bracket_rw (x); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -326,7 +371,7 @@ template&lt;class T , class U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00089">89</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hashmap_8hpp_source.html#l00178">178</a> of file <a class="el" href="hashmap_8hpp_source.html">hashmap.hpp</a>.</p>
 
 </div>
 </div>

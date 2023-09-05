@@ -10,7 +10,7 @@ var searchData=
   ['less_5feq_5foperator_7',['less_eq_operator',['../structless__eq__operator.html',1,'']]],
   ['lessgtr_8',['LESSGTR',['../classlist.html#a8152b292a0a9a6ff78a8fc60fdce48b5',1,'list::LESSGTR()'],['../classlist.html#acd1f9f45ab7b8a1ee7ec4ba356d17941',1,'list::LESSGTR()'],['../basic_8hpp.html#a00a60464f1b8c2b44f883ed269dffc7d',1,'LESSGTR():&#160;basic.hpp'],['../classhashset__rep.html#ad89c459a5ac2b35dd0e8f0bfd582c115',1,'hashset_rep::LESSGTR()'],['../classhashset__rep.html#a4d4f8751de414b7962771744ede9cdbd',1,'hashset_rep::LESSGTR()'],['../classhashmap__rep.html#aee5f89277c719ed9f7df9c981b292687',1,'hashmap_rep::LESSGTR()'],['../classhashmap__rep.html#a53245d830c638195ec58fc60fe82b8c8',1,'hashmap_rep::LESSGTR()'],['../classhashmap__rep.html#a8c2c53a56a54e9d7ed62c20acc36adad',1,'hashmap_rep::LESSGTR()'],['../classarray__rep.html#a094f3911b072f4cb02c726d05c4c5e9f',1,'array_rep::LESSGTR()'],['../classarray__rep.html#a685ebb3703ee3cfdf040f391b6f6b6f0',1,'array_rep::LESSGTR()'],['../classarray__rep.html#ad578bc39a9b3d8e7cb5e84b5c33d2518',1,'array_rep::LESSGTR()'],['../classhashmap__rep.html#a4cf4ff62e72a7e01e303138e6cc00457',1,'hashmap_rep::LESSGTR()']]],
   ['lf_9',['LF',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4',1,'basic.hpp']]],
-  ['list_10',['list',['../classlist.html',1,'list&lt; T &gt;'],['../classlist.html#a6134d52315f57bcb808223559c8a4760',1,'list::list(T item)'],['../classlist.html#a66b9774b808d0d3b48b8fff83a6ddf7a',1,'list::list(T item, list&lt; T &gt; next)'],['../classlist.html#a0fa8bf4a07aa916278c1e3ffdac3f000',1,'list::list(T item1, T item2, list&lt; T &gt; next)'],['../classlist.html#a2755e7316c28cd865dd2aca9042523c5',1,'list::list(T item1, T item2, T item3, list&lt; T &gt; next)']]],
+  ['list_10',['list',['../classlist.html',1,'list&lt; T &gt;'],['../classlist.html#a2755e7316c28cd865dd2aca9042523c5',1,'list::list(T item1, T item2, T item3, list&lt; T &gt; next)'],['../classlist.html#a0fa8bf4a07aa916278c1e3ffdac3f000',1,'list::list(T item1, T item2, list&lt; T &gt; next)'],['../classlist.html#a66b9774b808d0d3b48b8fff83a6ddf7a',1,'list::list(T item, list&lt; T &gt; next)'],['../classlist.html#a6134d52315f57bcb808223559c8a4760',1,'list::list(T item)']]],
   ['list_2ehpp_11',['list.hpp',['../list_8hpp.html',1,'']]],
   ['list_2eipp_12',['list.ipp',['../list_8ipp.html',1,'']]],
   ['list_3c_20hashentry_3c_20t_2c_20u_20_3e_20_3e_13',['list&lt; hashentry&lt; T, U &gt; &gt;',['../classlist.html',1,'']]],
@@ -19,12 +19,11 @@ var searchData=
   ['list_3c_20t_20_3e_16',['list&lt; T &gt;',['../classlist__rep.html#ab6cf03d50c50087700b0fb872accfa7b',1,'list_rep']]],
   ['list_5fcc_17',['LIST_CC',['../list_8ipp.html#aff152def53ea6d9f972f54161d753382',1,'list.ipp']]],
   ['list_5fcount_18',['list_count',['../list_8hpp.html#a0a09ef65c49ae2dfc620a8a3a350ce1d',1,'list.hpp']]],
-  ['list_5frep_19',['list_rep',['../classlist__rep.html#a6c1f8f1e3ee06fa7a744d08aab8e90f0',1,'list_rep::list_rep()'],['../classlist__rep.html',1,'list_rep&lt; T &gt;']]],
+  ['list_5frep_19',['list_rep',['../classlist__rep.html',1,'list_rep&lt; T &gt;'],['../classlist__rep.html#a6c1f8f1e3ee06fa7a744d08aab8e90f0',1,'list_rep::list_rep()']]],
   ['list_5ftest_2ecpp_20',['list_test.cpp',['../list__test_8cpp.html',1,'']]],
   ['locase_21',['locase',['../analyze_8cpp.html#a8f16f9e4a24c4b4c0abd7b4ab00d084f',1,'locase(char c):&#160;analyze.cpp'],['../analyze_8hpp.html#acfcb1e585ea9e8b28eb659287ef0a6fe',1,'locase(char s):&#160;analyze.cpp']]],
-  ['locase_5fall_22',['locase_all',['../analyze_8hpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp'],['../analyze_8cpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp']]],
+  ['locase_5fall_22',['locase_all',['../analyze_8cpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp']]],
   ['locase_5ffirst_23',['locase_first',['../analyze_8cpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp']]],
   ['lolly_24',['lolly',['../namespacelolly.html',1,'']]],
-  ['lolly_3a_20a_20user_2dfriendly_20c_2b_2b_20standard_20library_20alternative_25',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]],
-  ['long_5ffunction_5fwith_5fmany_5fparameters_26',['long_function_with_many_parameters',['../classMyLibrary_1_1SubclassExample.html#a92227fff4f72a11be0e21d88914ba63e',1,'MyLibrary::SubclassExample']]]
+  ['lolly_3a_20a_20user_2dfriendly_20c_2b_2b_20standard_20library_20alternative_25',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]]
 ];

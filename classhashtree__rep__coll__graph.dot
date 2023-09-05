@@ -13,7 +13,7 @@ digraph "hashtree_rep&lt; K, V &gt;"
   Node4 [label="hashmap\< K, hashtree\l\< K, V \> \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip=" "];
   Node4 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" init" ];
   Node5 -> Node4 [dir="back",color="orange",style="dashed",label=" \< K, hashtree\< K, V \> \>" ];
-  Node5 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip=" "];
+  Node5 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip="A simple hashmap class implementation."];
   Node6 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" init" ];
   Node6 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node7 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" label" ];

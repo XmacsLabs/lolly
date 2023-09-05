@@ -11,7 +11,7 @@ digraph "resource_ptr&lt; R &gt;"
   Node3 [label="hashmap\< string, pointer \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip=" "];
   Node3 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" init" ];
   Node4 -> Node3 [dir="back",color="orange",style="dashed",label=" \< string, pointer \>" ];
-  Node4 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip=" "];
+  Node4 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashmap.html",tooltip="A simple hashmap class implementation."];
   Node5 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" init" ];
   Node5 [label="hashmap\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
 }

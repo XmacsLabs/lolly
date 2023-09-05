@@ -55,9 +55,6 @@ digraph "list.ipp"
   Node22 [label="block.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$block_8hpp.html",tooltip=" "];
   Node22 -> Node23 [dir="back",color="steelblue1",style="solid"];
   Node23 [label="block.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$block_8cpp.html",tooltip=" "];
-  Node21 -> Node24 [dir="back",color="steelblue1",style="solid"];
-  Node24 [label="generic_tree.hpp",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$generic__tree_8hpp.html",tooltip=" "];
-  Node24 -> Node20 [dir="back",color="steelblue1",style="solid"];
   Node21 -> Node26 [dir="back",color="steelblue1",style="solid"];
   Node26 [label="path.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$path_8cpp.html",tooltip=" "];
   Node21 -> Node27 [dir="back",color="steelblue1",style="solid"];
@@ -101,6 +98,8 @@ digraph "list.ipp"
   Node57 [label="basic.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$basic_8cpp.html",tooltip=" "];
   Node54 -> Node23 [dir="back",color="steelblue1",style="solid"];
   Node54 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node54 -> Node37 [dir="back",color="steelblue1",style="solid"];
+  Node37 [label="file.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$file_8cpp.html",tooltip=" "];
   Node54 -> Node58 [dir="back",color="steelblue1",style="solid"];
   Node58 [label="parse_string.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$parse__string_8cpp.html",tooltip=" "];
   Node54 -> Node26 [dir="back",color="steelblue1",style="solid"];

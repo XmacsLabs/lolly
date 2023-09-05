@@ -8,6 +8,5 @@ var searchData=
   ['list_5frep_5',['list_rep',['../classlist__rep.html#a6c1f8f1e3ee06fa7a744d08aab8e90f0',1,'list_rep']]],
   ['locase_6',['locase',['../analyze_8cpp.html#a8f16f9e4a24c4b4c0abd7b4ab00d084f',1,'locase(char c):&#160;analyze.cpp'],['../analyze_8hpp.html#acfcb1e585ea9e8b28eb659287ef0a6fe',1,'locase(char s):&#160;analyze.cpp']]],
   ['locase_5fall_7',['locase_all',['../analyze_8cpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp']]],
-  ['locase_5ffirst_8',['locase_first',['../analyze_8cpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp']]],
-  ['long_5ffunction_5fwith_5fmany_5fparameters_9',['long_function_with_many_parameters',['../classMyLibrary_1_1SubclassExample.html#a92227fff4f72a11be0e21d88914ba63e',1,'MyLibrary::SubclassExample']]]
+  ['locase_5ffirst_8',['locase_first',['../analyze_8cpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp']]]
 ];

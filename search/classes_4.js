@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['example_0',['Example',['../classMyLibrary_1_1Example.html',1,'MyLibrary']]]
+  ['file_5furl_0',['file_url',['../classfile__url.html',1,'']]],
+  ['ftp_5furl_1',['ftp_url',['../classftp__url.html',1,'']]]
 ];
