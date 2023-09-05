@@ -293,6 +293,56 @@ add_configfiles(
     }
 )
 
+---
+--- coverage:
+--- use `xmake f -m coverage` to enable coverage
+--- first `rm -rf build/` to clean build cache
+--- then `xmake build` to build
+--- then `xmake run --group=test_cov` to run tests for coverage
+--- run `lcov --directory . --capture --output-file coverage.info`
+--- run `genhtml coverage.info --output-directory coverage`
+--- open `coverage/index.html` in browser
+--- 
+
+function add_test_cov(filepath)
+    local testname = path.basename(filepath)
+    target(testname) do
+        set_group("test_cov")
+        add_deps("liblolly")
+        set_languages("c++17")
+        set_policy("check.auto_ignore_flags", false)
+
+        add_packages("tbox")
+        add_packages("doctest")
+        add_packages("libcurl")
+        add_syslinks("stdc++", "m")
+        add_includedirs("$(buildir)/L1")
+        add_includedirs(lolly_includedirs)
+        add_files(filepath) 
+        add_cxxflags("-include $(buildir)/L1/config.h")
+        add_cxxflags("-O0")
+        add_cxxflags("-fprofile-arcs")
+        add_cxxflags("-ftest-coverage")
+        add_ldflags("-coverage")
+        on_run(function (target)
+            cmd = "$(buildir)/$(plat)/$(arch)/$(mode)/" .. testname
+            print("> " .. cmd)
+            os.exec(cmd)
+        end)
+        
+    end
+end
+
+for _, filepath in ipairs(os.files("tests/**_test.cpp")) do
+    if is_mode("coverage") then
+        add_test_cov(filepath)
+    end
+end
+
+---
+--- coverage end
+---
+
 --- debug mode
 if is_mode("profile") then
     set_symbols("debug")
