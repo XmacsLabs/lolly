@@ -137,6 +137,11 @@ evaluate_system (array<string> arg, array<int> fd_in, array<string> in,
 }
 
 namespace lolly {
+void
+init_tbox () {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+}
+
 int
 system (string cmd) {
 #ifdef OS_WASM

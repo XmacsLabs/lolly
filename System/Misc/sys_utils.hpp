@@ -30,7 +30,8 @@ SN get_process_id ();
 array<string> evaluate_system (array<string> arg, array<int> fd_in,
                                array<string> in, array<int> fd_out);
 namespace lolly {
-int system (string s);
-}
+void init_tbox ();
+int  system (string s);
+} // namespace lolly
 
 #endif // defined SYS_UTILS_H
