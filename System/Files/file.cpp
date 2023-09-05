@@ -89,6 +89,55 @@ is_newer (url which, url than) {
     return false;
   }
 }
+bool
+is_of_type (url name, string filter) {
+  if (is_ramdisc (name)) return true;
+
+  if (!is_single_path (name)) return false;
+
+  if (filter == "") return true;
+  int i, n= N (filter);
+
+  // Normal files
+#ifdef OS_MINGW
+  string suf;
+  if (filter == "x") {
+    suf= suffix (name);
+    if ((suf != "exe") && (suf != "bat") && (suf != "com")) {
+      name= glue (name, ".exe");
+      suf = "exe";
+    }
+  }
+#endif
+  string         path= as_string (name);
+  tb_file_info_t info;
+  if (!tb_file_info (as_charp (path), &info)) {
+    return false;
+  }
+  for (i= 0; i < n; i++)
+    switch (filter[i]) {
+      // FIXME: should check user id and group id for r, w and x
+    case 'f':
+      if (info.type != TB_FILE_TYPE_REGULAR) return false;
+      break;
+    case 'd':
+      if (info.type != TB_FILE_TYPE_DIRECTORY) return false;
+      break;
+    case 'l':
+      if (info.type != TB_FILE_TYPE_LINK) return false;
+      break;
+    case 'r':
+      if (!tb_file_access (as_charp (path), TB_FILE_MODE_RO)) return false;
+      break;
+    case 'w':
+      if (!tb_file_access (as_charp (path), TB_FILE_MODE_WO)) return false;
+      break;
+    case 'x':
+      if (!tb_file_access (as_charp (path), TB_FILE_MODE_EXEC)) return false;
+      break;
+    }
+  return true;
+}
 
 int
 file_size (url u) {
