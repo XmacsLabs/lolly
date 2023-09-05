@@ -292,6 +292,46 @@ add_configfiles(
     }
 )
 
+function add_test_cov(filepath)
+    local testname = path.basename(filepath)
+    target(testname) do
+        set_toolchains("clang")
+        set_group("test_cov")
+        add_deps("liblolly")
+        set_languages("c++17")
+        set_policy("check.auto_ignore_flags", false)
+
+        add_packages("tbox")
+        add_packages("doctest")
+        add_packages("libcurl")
+        add_syslinks("stdc++", "m")
+        add_includedirs("$(buildir)/L1")
+        add_includedirs(lolly_includedirs)
+        add_files(filepath) 
+        add_cxxflags("-include $(buildir)/L1/config.h")
+        add_cxflags("-o0")
+        add_cxflags("coverage")
+        add_mxflags("coverage")
+        add_ldflags("coverage")
+        on_run(function (target)
+            cmd = "$(buildir)/$(plat)/$(arch)/$(mode)/" .. testname
+            print("> " .. cmd)
+            os.exec(cmd)
+        end)
+        
+    end
+end
+
+for _, filepath in ipairs(os.files("tests/Data/**_test.cpp")) do
+    add_test_cov(filepath)
+end
+
+
+-- test coverage
+-- target ("coverage") do
+
+-- end
+
 --- debug mode
 if is_mode("profile") then
     set_symbols("debug")
