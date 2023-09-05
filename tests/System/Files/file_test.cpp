@@ -58,6 +58,16 @@ TEST_CASE ("is_newer") {
   rmdir (old_dir | new_dir);
 }
 
+TEST_CASE ("is_of_type") {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+  CHECK (is_of_type (url_pwd (), "d"));
+  CHECK (!is_of_type (url_pwd (), "f"));
+  CHECK (is_of_type (url_pwd () * url ("xmake.lua"), "fr"));
+#if defined(OS_MINGW) || defined(OS_WIN)
+  CHECK (is_of_type (url_pwd () * url ("bin/format.bat"), "x"));
+#endif
+}
+
 TEST_CASE ("file_size") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
@@ -138,8 +148,7 @@ TEST_CASE ("copy") {
 
 TEST_CASE ("url_temp") {
   if (!tb_init (tb_null, tb_null)) exit (-1);
-  url tmp1= url_temp ("test");
-  cout << tmp1 << LF;
+  url       tmp1= url_temp ("test");
   tb_hong_t time= tb_time ();
   tb_file_touch (as_charp (as_string (tmp1)), time, time);
   url tmp2= url_temp ("test");
