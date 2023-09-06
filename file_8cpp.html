@@ -104,8 +104,12 @@ Functions</h2></td></tr>
 <tr class="separator:a91924c509aa15e1d5b58d1acbb8d97d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4011b7c5aa74db3e7c98a476168cd1e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8cpp.html#a4011b7c5aa74db3e7c98a476168cd1e6">is_newer</a> (<a class="el" href="classurl.html">url</a> which, <a class="el" href="classurl.html">url</a> than)</td></tr>
 <tr class="separator:a4011b7c5aa74db3e7c98a476168cd1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb8ec4f9a36d5be5eaeea4e8334bcc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="el" href="classurl.html">url</a> name, <a class="el" href="classstring.html">string</a> filter)</td></tr>
+<tr class="separator:afbb8ec4f9a36d5be5eaeea4e8334bcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2785cb5277458f95607537f48a2a8c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (<a class="el" href="classurl.html">url</a> u)</td></tr>
 <tr class="separator:aa2785cb5277458f95607537f48a2a8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01792b80592120b32acc7165f73f4dff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8cpp.html#a01792b80592120b32acc7165f73f4dff">last_modified</a> (<a class="el" href="classurl.html">url</a> u)</td></tr>
+<tr class="separator:a01792b80592120b32acc7165f73f4dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b0228e50141c33815260f73cfdb849d"><td class="memItemLeft" align="right" valign="top">static tb_long_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8cpp.html#a9b0228e50141c33815260f73cfdb849d">tb_directory_walk_func</a> (tb_char_t const *<a class="el" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a>, tb_file_info_t const *info, tb_cpointer_t priv)</td></tr>
 <tr class="separator:a9b0228e50141c33815260f73cfdb849d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe0d356c2831adbd2efb2a30b6f2e4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">array</a>&lt; <a class="el" href="classstring.html">string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8cpp.html#affe0d356c2831adbd2efb2a30b6f2e4c">read_directory</a> (<a class="el" href="classurl.html">url</a> u, bool &amp;error_flag)</td></tr>
@@ -322,6 +326,88 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="afbb8ec4f9a36d5be5eaeea4e8334bcc3" name="afbb8ec4f9a36d5be5eaeea4e8334bcc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb8ec4f9a36d5be5eaeea4e8334bcc3">&#9670;&#160;</a></span>is_of_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_of_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classurl.html">url</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00094">94</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>                                     {</div>
+<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="url_8cpp.html#a7fcd085b956112eb9ff14d534491d89f">is_ramdisc</a> (name)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (name)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">if</span> (filter == <span class="stringliteral">&quot;&quot;</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  100</span>  <span class="keywordtype">int</span> i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (filter);</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>  <span class="comment">// Normal files</span></div>
+<div class="line"><span class="lineno">  103</span><span class="preprocessor">#if defined(OS_MINGW) || defined(OS_WIN)</span></div>
+<div class="line"><span class="lineno">  104</span>  <span class="keywordtype">string</span> suf;</div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">if</span> (filter == <span class="stringliteral">&quot;x&quot;</span>) {</div>
+<div class="line"><span class="lineno">  106</span>    suf= <a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a> (name);</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span> ((suf != <span class="stringliteral">&quot;exe&quot;</span>) &amp;&amp; (suf != <span class="stringliteral">&quot;bat&quot;</span>) &amp;&amp; (suf != <span class="stringliteral">&quot;com&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  108</span>      name= <a class="code hl_function" href="url_8cpp.html#addd29930e7fb72555219d5e90bdaec42">glue</a> (name, <span class="stringliteral">&quot;.exe&quot;</span>);</div>
+<div class="line"><span class="lineno">  109</span>      suf = <span class="stringliteral">&quot;exe&quot;</span>;</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  111</span>  }</div>
+<div class="line"><span class="lineno">  112</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordtype">string</span>         <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (name);</div>
+<div class="line"><span class="lineno">  114</span>  tb_file_info_t info;</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">if</span> (!tb_file_info (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), &amp;info)) {</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  117</span>  }</div>
+<div class="line"><span class="lineno">  118</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">switch</span> (filter[i]) {</div>
+<div class="line"><span class="lineno">  120</span>      <span class="comment">// FIXME: should check user id and group id for r, w and x</span></div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>:</div>
+<div class="line"><span class="lineno">  122</span>      <span class="keywordflow">if</span> (info.type != TB_FILE_TYPE_FILE) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  123</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
+<div class="line"><span class="lineno">  125</span>      <span class="keywordflow">if</span> (info.type != TB_FILE_TYPE_DIRECTORY) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  126</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;l&#39;</span>:</div>
+<div class="line"><span class="lineno">  128</span>      <span class="keywordflow">if</span> (info.flags != TB_FILE_FLAG_LINK) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  129</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;r&#39;</span>:</div>
+<div class="line"><span class="lineno">  131</span>      <span class="keywordflow">if</span> (!tb_file_access (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), TB_FILE_MODE_RO)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  132</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;w&#39;</span>:</div>
+<div class="line"><span class="lineno">  134</span>      <span class="keywordflow">if</span> (!tb_file_access (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), TB_FILE_MODE_WO)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  135</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:</div>
+<div class="line"><span class="lineno">  137</span>      <span class="keywordflow">if</span> (!tb_file_access (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), TB_FILE_MODE_EXEC)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  138</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
+<div class="line"><span class="lineno">  140</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  141</span>}</div>
+<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
+<div class="ttc" id="aurl_8cpp_html_a152ca4c508950740cb850f82d3049cf6"><div class="ttname"><a href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a></div><div class="ttdeci">string suffix(url u)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00348">url.cpp:348</a></div></div>
+<div class="ttc" id="aurl_8cpp_html_a7fcd085b956112eb9ff14d534491d89f"><div class="ttname"><a href="url_8cpp.html#a7fcd085b956112eb9ff14d534491d89f">is_ramdisc</a></div><div class="ttdeci">bool is_ramdisc(url u)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00669">url.cpp:669</a></div></div>
+<div class="ttc" id="aurl_8cpp_html_addd29930e7fb72555219d5e90bdaec42"><div class="ttname"><a href="url_8cpp.html#addd29930e7fb72555219d5e90bdaec42">glue</a></div><div class="ttdeci">url glue(url u, string s)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00380">url.cpp:380</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aa2785cb5277458f95607537f48a2a8c2" name="aa2785cb5277458f95607537f48a2a8c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2785cb5277458f95607537f48a2a8c2">&#9670;&#160;</a></span>file_size()</h2>
 
@@ -338,19 +424,51 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00094">94</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                  {</div>
-<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>  <span class="keywordtype">string</span>         <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
-<div class="line"><span class="lineno">   98</span>  tb_file_info_t info;</div>
-<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">if</span> (tb_file_info (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), &amp;info)) {</div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">return</span> info.size;</div>
-<div class="line"><span class="lineno">  101</span>  }</div>
-<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  104</span>  }</div>
-<div class="line"><span class="lineno">  105</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00144">144</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>                  {</div>
+<div class="line"><span class="lineno">  145</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordtype">string</span>         <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
+<div class="line"><span class="lineno">  148</span>  tb_file_info_t info;</div>
+<div class="line"><span class="lineno">  149</span>  <span class="keywordflow">if</span> (tb_file_info (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), &amp;info)) {</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">return</span> info.size;</div>
+<div class="line"><span class="lineno">  151</span>  }</div>
+<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  154</span>  }</div>
+<div class="line"><span class="lineno">  155</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a01792b80592120b32acc7165f73f4dff" name="a01792b80592120b32acc7165f73f4dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01792b80592120b32acc7165f73f4dff">&#9670;&#160;</a></span>last_modified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int last_modified </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classurl.html">url</a>&#160;</td>
+          <td class="paramname"><em>u</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00158">158</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>                      {</div>
+<div class="line"><span class="lineno">  159</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>  <span class="keywordtype">string</span>         <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
+<div class="line"><span class="lineno">  162</span>  tb_file_info_t info;</div>
+<div class="line"><span class="lineno">  163</span>  <span class="keywordflow">if</span> (tb_file_info (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), &amp;info)) {</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">return</span> info.mtime;</div>
+<div class="line"><span class="lineno">  165</span>  }</div>
+<div class="line"><span class="lineno">  166</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  168</span>  }</div>
+<div class="line"><span class="lineno">  169</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -394,15 +512,15 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00108">108</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                            {</div>
-<div class="line"><span class="lineno">  110</span>  <span class="comment">// check</span></div>
-<div class="line"><span class="lineno">  111</span>  tb_assert_and_check_return_val (<a class="code hl_class" href="classlist.html">path</a> &amp;&amp; info, TB_DIRECTORY_WALK_CODE_END);</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a>* p_arr_result= (<a class="code hl_class" href="classarray.html">array&lt;string&gt;</a>*) priv;</div>
-<div class="line"><span class="lineno">  114</span>  (*p_arr_result) &lt;&lt; <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (<a class="code hl_function" href="list_8hpp.html#a7044e45df6847fd56282fb143fc128b9">tail</a> (<a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="keywordtype">string</span> (<a class="code hl_class" href="classlist.html">path</a>))));</div>
-<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">return</span> TB_DIRECTORY_WALK_CODE_CONTINUE;</div>
-<div class="line"><span class="lineno">  116</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00172">172</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>                                            {</div>
+<div class="line"><span class="lineno">  174</span>  <span class="comment">// check</span></div>
+<div class="line"><span class="lineno">  175</span>  tb_assert_and_check_return_val (<a class="code hl_class" href="classlist.html">path</a> &amp;&amp; info, TB_DIRECTORY_WALK_CODE_END);</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a>* p_arr_result= (<a class="code hl_class" href="classarray.html">array&lt;string&gt;</a>*) priv;</div>
+<div class="line"><span class="lineno">  178</span>  (*p_arr_result) &lt;&lt; <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (<a class="code hl_function" href="list_8hpp.html#a7044e45df6847fd56282fb143fc128b9">tail</a> (<a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="keywordtype">string</span> (<a class="code hl_class" href="classlist.html">path</a>))));</div>
+<div class="line"><span class="lineno">  179</span>  <span class="keywordflow">return</span> TB_DIRECTORY_WALK_CODE_CONTINUE;</div>
+<div class="line"><span class="lineno">  180</span>}</div>
 <div class="ttc" id="aclassarray_html"><div class="ttname"><a href="classarray.html">array</a></div><div class="ttdoc">A template class representing an array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00095">array.hpp:95</a></div></div>
 <div class="ttc" id="alist_8hpp_html_a7044e45df6847fd56282fb143fc128b9"><div class="ttname"><a href="list_8hpp.html#a7044e45df6847fd56282fb143fc128b9">tail</a></div><div class="ttdeci">list&lt; T &gt; tail(list&lt; T &gt; l, int n=1)</div><div class="ttdoc">Get all but the first n items of a list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00182">list.ipp:182</a></div></div>
 <div class="ttc" id="aurl_8cpp_html_a21edc551c14cb93b849eb86c4cf582e4"><div class="ttname"><a href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a></div><div class="ttdeci">url url_system(string name)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00274">url.cpp:274</a></div></div>
@@ -435,25 +553,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00119">119</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                         {</div>
-<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) {</div>
-<div class="line"><span class="lineno">  121</span>    error_flag= <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> ();</div>
-<div class="line"><span class="lineno">  123</span>  }</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>  <span class="keywordtype">string</span>        <a class="code hl_class" href="classlist.html">path</a>      = <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
-<div class="line"><span class="lineno">  126</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> arr_result= <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> ();</div>
-<div class="line"><span class="lineno">  127</span>  error_flag              = !<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (u);</div>
-<div class="line"><span class="lineno">  128</span>  <span class="keywordflow">if</span> (error_flag) {</div>
-<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">return</span> arr_result;</div>
-<div class="line"><span class="lineno">  130</span>  }</div>
-<div class="line"><span class="lineno">  131</span>  tb_directory_walk (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), 0, tb_false, <a class="code hl_function" href="file_8cpp.html#a9b0228e50141c33815260f73cfdb849d">tb_directory_walk_func</a>,</div>
-<div class="line"><span class="lineno">  132</span>                     &amp;arr_result);</div>
-<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">return</span> arr_result;</div>
-<div class="line"><span class="lineno">  134</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00183">183</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>                                         {</div>
+<div class="line"><span class="lineno">  184</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) {</div>
+<div class="line"><span class="lineno">  185</span>    error_flag= <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> ();</div>
+<div class="line"><span class="lineno">  187</span>  }</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>  <span class="keywordtype">string</span>        <a class="code hl_class" href="classlist.html">path</a>      = <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
+<div class="line"><span class="lineno">  190</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> arr_result= <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> ();</div>
+<div class="line"><span class="lineno">  191</span>  error_flag              = !<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (u);</div>
+<div class="line"><span class="lineno">  192</span>  <span class="keywordflow">if</span> (error_flag) {</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">return</span> arr_result;</div>
+<div class="line"><span class="lineno">  194</span>  }</div>
+<div class="line"><span class="lineno">  195</span>  tb_directory_walk (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>), 0, tb_false, <a class="code hl_function" href="file_8cpp.html#a9b0228e50141c33815260f73cfdb849d">tb_directory_walk_func</a>,</div>
+<div class="line"><span class="lineno">  196</span>                     &amp;arr_result);</div>
+<div class="line"><span class="lineno">  197</span>  <span class="keywordflow">return</span> arr_result;</div>
+<div class="line"><span class="lineno">  198</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a1f38de5e1ae10c13d94b20717a2156f9"><div class="ttname"><a href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a></div><div class="ttdeci">bool is_directory(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00027">file.cpp:27</a></div></div>
-<div class="ttc" id="afile_8cpp_html_a9b0228e50141c33815260f73cfdb849d"><div class="ttname"><a href="file_8cpp.html#a9b0228e50141c33815260f73cfdb849d">tb_directory_walk_func</a></div><div class="ttdeci">static tb_long_t tb_directory_walk_func(tb_char_t const *path, tb_file_info_t const *info, tb_cpointer_t priv)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00108">file.cpp:108</a></div></div>
+<div class="ttc" id="afile_8cpp_html_a9b0228e50141c33815260f73cfdb849d"><div class="ttname"><a href="file_8cpp.html#a9b0228e50141c33815260f73cfdb849d">tb_directory_walk_func</a></div><div class="ttdeci">static tb_long_t tb_directory_walk_func(tb_char_t const *path, tb_file_info_t const *info, tb_cpointer_t priv)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00172">file.cpp:172</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -473,20 +591,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00137">137</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>              {</div>
-<div class="line"><span class="lineno">  138</span>  <span class="keywordtype">string</span> label= u.<a class="code hl_function" href="classurl.html#a059d19059852ec20dbe89380220f4ec8">label</a> ();</div>
-<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">if</span> (label == <span class="stringliteral">&quot;none&quot;</span> || label == <span class="stringliteral">&quot;root&quot;</span> || label == <span class="stringliteral">&quot;wildcard&quot;</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  140</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) { <span class="comment">// label == &quot;&quot; or label == &quot;concat&quot;</span></div>
-<div class="line"><span class="lineno">  141</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
-<div class="line"><span class="lineno">  142</span>    tb_directory_create (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>));</div>
-<div class="line"><span class="lineno">  143</span>  }</div>
-<div class="line"><span class="lineno">  144</span>  <span class="keywordflow">else</span> { <span class="comment">// label == &quot;or&quot;</span></div>
-<div class="line"><span class="lineno">  145</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (u[1]);</div>
-<div class="line"><span class="lineno">  146</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (u[2]);</div>
-<div class="line"><span class="lineno">  147</span>  }</div>
-<div class="line"><span class="lineno">  148</span>}</div>
-<div class="ttc" id="afile_8cpp_html_ae1088448c5be27e69ebaffe110214798"><div class="ttname"><a href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a></div><div class="ttdeci">void mkdir(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00137">file.cpp:137</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00201">201</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>              {</div>
+<div class="line"><span class="lineno">  202</span>  <span class="keywordtype">string</span> label= u.<a class="code hl_function" href="classurl.html#a059d19059852ec20dbe89380220f4ec8">label</a> ();</div>
+<div class="line"><span class="lineno">  203</span>  <span class="keywordflow">if</span> (label == <span class="stringliteral">&quot;none&quot;</span> || label == <span class="stringliteral">&quot;root&quot;</span> || label == <span class="stringliteral">&quot;wildcard&quot;</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  204</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) { <span class="comment">// label == &quot;&quot; or label == &quot;concat&quot;</span></div>
+<div class="line"><span class="lineno">  205</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
+<div class="line"><span class="lineno">  206</span>    tb_directory_create (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>));</div>
+<div class="line"><span class="lineno">  207</span>  }</div>
+<div class="line"><span class="lineno">  208</span>  <span class="keywordflow">else</span> { <span class="comment">// label == &quot;or&quot;</span></div>
+<div class="line"><span class="lineno">  209</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (u[1]);</div>
+<div class="line"><span class="lineno">  210</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (u[2]);</div>
+<div class="line"><span class="lineno">  211</span>  }</div>
+<div class="line"><span class="lineno">  212</span>}</div>
+<div class="ttc" id="afile_8cpp_html_ae1088448c5be27e69ebaffe110214798"><div class="ttname"><a href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a></div><div class="ttdeci">void mkdir(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00201">file.cpp:201</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -506,15 +624,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00151">151</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>                     {</div>
-<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="url_8hpp.html#a8652b46e24fa6ba4d3a7af0d664e0fb3">is_none</a> (which)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (which)) {</div>
-<div class="line"><span class="lineno">  154</span>    <a class="code hl_function" href="file_8cpp.html#a9b47297017609372e293c21f9c5764b9">make_dir</a> (<a class="code hl_function" href="list_8hpp.html#a8e2671409010adbca03b4aa25042d3b2">head</a> (which));</div>
-<div class="line"><span class="lineno">  155</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (which);</div>
-<div class="line"><span class="lineno">  156</span>  }</div>
-<div class="line"><span class="lineno">  157</span>}</div>
-<div class="ttc" id="afile_8cpp_html_a9b47297017609372e293c21f9c5764b9"><div class="ttname"><a href="file_8cpp.html#a9b47297017609372e293c21f9c5764b9">make_dir</a></div><div class="ttdeci">void make_dir(url which)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00151">file.cpp:151</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00215">215</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>                     {</div>
+<div class="line"><span class="lineno">  216</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="url_8hpp.html#a8652b46e24fa6ba4d3a7af0d664e0fb3">is_none</a> (which)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  217</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (which)) {</div>
+<div class="line"><span class="lineno">  218</span>    <a class="code hl_function" href="file_8cpp.html#a9b47297017609372e293c21f9c5764b9">make_dir</a> (<a class="code hl_function" href="list_8hpp.html#a8e2671409010adbca03b4aa25042d3b2">head</a> (which));</div>
+<div class="line"><span class="lineno">  219</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (which);</div>
+<div class="line"><span class="lineno">  220</span>  }</div>
+<div class="line"><span class="lineno">  221</span>}</div>
+<div class="ttc" id="afile_8cpp_html_a9b47297017609372e293c21f9c5764b9"><div class="ttname"><a href="file_8cpp.html#a9b47297017609372e293c21f9c5764b9">make_dir</a></div><div class="ttdeci">void make_dir(url which)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00215">file.cpp:215</a></div></div>
 <div class="ttc" id="alist_8hpp_html_a8e2671409010adbca03b4aa25042d3b2"><div class="ttname"><a href="list_8hpp.html#a8e2671409010adbca03b4aa25042d3b2">head</a></div><div class="ttdeci">list&lt; T &gt; head(list&lt; T &gt; l, int n=1)</div><div class="ttdoc">Get the first n items of a list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00174">list.ipp:174</a></div></div>
 <div class="ttc" id="aurl_8hpp_html_a8652b46e24fa6ba4d3a7af0d664e0fb3"><div class="ttname"><a href="url_8hpp.html#a8652b46e24fa6ba4d3a7af0d664e0fb3">is_none</a></div><div class="ttdeci">bool is_none(url u)</div><div class="ttdef"><b>Definition:</b> <a href="url_8hpp_source.html#l00163">url.hpp:163</a></div></div>
 </div><!-- fragment -->
@@ -536,20 +654,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00160">160</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>              {</div>
-<div class="line"><span class="lineno">  161</span>  <span class="keywordtype">string</span> label= u.<a class="code hl_function" href="classurl.html#a059d19059852ec20dbe89380220f4ec8">label</a> ();</div>
-<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">if</span> (label == <span class="stringliteral">&quot;none&quot;</span> || label == <span class="stringliteral">&quot;root&quot;</span> || label == <span class="stringliteral">&quot;wildcard&quot;</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  163</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) {</div>
-<div class="line"><span class="lineno">  164</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
-<div class="line"><span class="lineno">  165</span>    tb_directory_remove (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>));</div>
-<div class="line"><span class="lineno">  166</span>  }</div>
-<div class="line"><span class="lineno">  167</span>  <span class="keywordflow">else</span> { <span class="comment">// label == &quot;or&quot;</span></div>
-<div class="line"><span class="lineno">  168</span>    <a class="code hl_function" href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a> (u[1]);</div>
-<div class="line"><span class="lineno">  169</span>    <a class="code hl_function" href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a> (u[2]);</div>
-<div class="line"><span class="lineno">  170</span>  }</div>
-<div class="line"><span class="lineno">  171</span>}</div>
-<div class="ttc" id="afile_8cpp_html_a55cd0c0a7563e91f3ae1fd7722b4d80c"><div class="ttname"><a href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a></div><div class="ttdeci">void rmdir(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00160">file.cpp:160</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00224">224</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>              {</div>
+<div class="line"><span class="lineno">  225</span>  <span class="keywordtype">string</span> label= u.<a class="code hl_function" href="classurl.html#a059d19059852ec20dbe89380220f4ec8">label</a> ();</div>
+<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">if</span> (label == <span class="stringliteral">&quot;none&quot;</span> || label == <span class="stringliteral">&quot;root&quot;</span> || label == <span class="stringliteral">&quot;wildcard&quot;</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  227</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) {</div>
+<div class="line"><span class="lineno">  228</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
+<div class="line"><span class="lineno">  229</span>    tb_directory_remove (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>));</div>
+<div class="line"><span class="lineno">  230</span>  }</div>
+<div class="line"><span class="lineno">  231</span>  <span class="keywordflow">else</span> { <span class="comment">// label == &quot;or&quot;</span></div>
+<div class="line"><span class="lineno">  232</span>    <a class="code hl_function" href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a> (u[1]);</div>
+<div class="line"><span class="lineno">  233</span>    <a class="code hl_function" href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a> (u[2]);</div>
+<div class="line"><span class="lineno">  234</span>  }</div>
+<div class="line"><span class="lineno">  235</span>}</div>
+<div class="ttc" id="afile_8cpp_html_a55cd0c0a7563e91f3ae1fd7722b4d80c"><div class="ttname"><a href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a></div><div class="ttdeci">void rmdir(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00224">file.cpp:224</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -569,31 +687,30 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00174">174</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                         {</div>
-<div class="line"><span class="lineno">  175</span>  tb_char_t        uuid[37];</div>
-<div class="line"><span class="lineno">  176</span>  <span class="keyword">const</span> tb_char_t* ret= tb_uuid4_make_cstr (uuid, tb_null);</div>
-<div class="line"><span class="lineno">  177</span>  <span class="keywordflow">if</span> (ret == NULL) {</div>
-<div class="line"><span class="lineno">  178</span>    <a class="code hl_define" href="basic_8hpp.html#a5838c83edf0c6a6cad864112a60415b9">TM_FAILED</a> (<span class="stringliteral">&quot;Failed to generate UUID&quot;</span>);</div>
-<div class="line"><span class="lineno">  179</span>  }</div>
-<div class="line"><span class="lineno">  180</span>  <span class="keywordtype">string</span> file_name=</div>
-<div class="line"><span class="lineno">  181</span>      <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (ret, <span class="keywordtype">string</span> (<span class="stringliteral">&quot;-&quot;</span>), <span class="keywordtype">string</span> (<span class="stringliteral">&quot;&quot;</span>)) * <a class="code hl_class" href="classstring.html">string</a> (<span class="stringliteral">&quot;_&quot;</span>) * <a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a>;</div>
-<div class="line"><span class="lineno">  182</span>  <a class="code hl_class" href="classurl.html">url</a> u= <a class="code hl_function" href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a> () * <a class="code hl_class" href="classurl.html">url</a> (file_name);</div>
-<div class="line"><span class="lineno">  183</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (u) == -1) {</div>
-<div class="line"><span class="lineno">  184</span>    <span class="keywordflow">return</span> u;</div>
-<div class="line"><span class="lineno">  185</span>  }</div>
-<div class="line"><span class="lineno">  186</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> (<a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a>);</div>
-<div class="line"><span class="lineno">  188</span>  }</div>
-<div class="line"><span class="lineno">  189</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00238">238</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  238</span>                         {</div>
+<div class="line"><span class="lineno">  239</span>  tb_char_t        uuid[37];</div>
+<div class="line"><span class="lineno">  240</span>  <span class="keyword">const</span> tb_char_t* ret= tb_uuid4_make_cstr (uuid, tb_null);</div>
+<div class="line"><span class="lineno">  241</span>  <span class="keywordflow">if</span> (ret == NULL) {</div>
+<div class="line"><span class="lineno">  242</span>    <a class="code hl_define" href="basic_8hpp.html#a5838c83edf0c6a6cad864112a60415b9">TM_FAILED</a> (<span class="stringliteral">&quot;Failed to generate UUID&quot;</span>);</div>
+<div class="line"><span class="lineno">  243</span>  }</div>
+<div class="line"><span class="lineno">  244</span>  <span class="keywordtype">string</span> file_name=</div>
+<div class="line"><span class="lineno">  245</span>      <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (ret, <span class="keywordtype">string</span> (<span class="stringliteral">&quot;-&quot;</span>), <span class="keywordtype">string</span> (<span class="stringliteral">&quot;&quot;</span>)) * <a class="code hl_class" href="classstring.html">string</a> (<span class="stringliteral">&quot;_&quot;</span>) * <a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a>;</div>
+<div class="line"><span class="lineno">  246</span>  <a class="code hl_class" href="classurl.html">url</a> u= <a class="code hl_function" href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a> () * <a class="code hl_class" href="classurl.html">url</a> (file_name);</div>
+<div class="line"><span class="lineno">  247</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (u) == -1) {</div>
+<div class="line"><span class="lineno">  248</span>    <span class="keywordflow">return</span> u;</div>
+<div class="line"><span class="lineno">  249</span>  }</div>
+<div class="line"><span class="lineno">  250</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> (<a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a>);</div>
+<div class="line"><span class="lineno">  252</span>  }</div>
+<div class="line"><span class="lineno">  253</span>}</div>
 <div class="ttc" id="aanalyze_8cpp_html_abf51647f03d162c0ab951cacee80e57c"><div class="ttname"><a href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a></div><div class="ttdeci">string replace(string s, string what, string by)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01371">analyze.cpp:1371</a></div></div>
 <div class="ttc" id="abasic_8hpp_html_a5838c83edf0c6a6cad864112a60415b9"><div class="ttname"><a href="basic_8hpp.html#a5838c83edf0c6a6cad864112a60415b9">TM_FAILED</a></div><div class="ttdeci">#define TM_FAILED(msg)</div><div class="ttdoc">Macro used to throw an exception with a specified error message.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00272">basic.hpp:272</a></div></div>
 <div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00034">string.hpp:34</a></div></div>
 <div class="ttc" id="aclassurl_html"><div class="ttname"><a href="classurl.html">url</a></div><div class="ttdef"><b>Definition:</b> <a href="url_8hpp_source.html#l00034">url.hpp:34</a></div></div>
-<div class="ttc" id="afile_8cpp_html_a284b643bc17714f25f658d3cb84527e2"><div class="ttname"><a href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a></div><div class="ttdeci">url url_temp(string suffix)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00174">file.cpp:174</a></div></div>
-<div class="ttc" id="afile_8cpp_html_a999af6855a9702e7b8164a9041ccb875"><div class="ttname"><a href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a></div><div class="ttdeci">url url_temp_dir()</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00203">file.cpp:203</a></div></div>
-<div class="ttc" id="afile_8cpp_html_aa2785cb5277458f95607537f48a2a8c2"><div class="ttname"><a href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a></div><div class="ttdeci">int file_size(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00094">file.cpp:94</a></div></div>
-<div class="ttc" id="aurl_8cpp_html_a152ca4c508950740cb850f82d3049cf6"><div class="ttname"><a href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a></div><div class="ttdeci">string suffix(url u)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00348">url.cpp:348</a></div></div>
+<div class="ttc" id="afile_8cpp_html_a284b643bc17714f25f658d3cb84527e2"><div class="ttname"><a href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a></div><div class="ttdeci">url url_temp(string suffix)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00238">file.cpp:238</a></div></div>
+<div class="ttc" id="afile_8cpp_html_a999af6855a9702e7b8164a9041ccb875"><div class="ttname"><a href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a></div><div class="ttdeci">url url_temp_dir()</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00267">file.cpp:267</a></div></div>
+<div class="ttc" id="afile_8cpp_html_aa2785cb5277458f95607537f48a2a8c2"><div class="ttname"><a href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a></div><div class="ttdeci">int file_size(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00144">file.cpp:144</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -612,16 +729,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00192">192</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                    {</div>
-<div class="line"><span class="lineno">  193</span><span class="preprocessor">#if defined(OS_WIN) || defined(OS_MINGW)</span></div>
-<div class="line"><span class="lineno">  194</span>  <a class="code hl_class" href="classurl.html">url</a> main_tmp_dir= <a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;$TMP&quot;</span>) * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;.lolly&quot;</span>);</div>
-<div class="line"><span class="lineno">  195</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  196</span>  <a class="code hl_class" href="classurl.html">url</a> main_tmp_dir= <a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;/tmp&quot;</span>) * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;.lolly&quot;</span>);</div>
-<div class="line"><span class="lineno">  197</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  198</span>  <span class="keyword">static</span> <a class="code hl_class" href="classurl.html">url</a> tmp_dir= main_tmp_dir * <a class="code hl_class" href="classurl.html">url</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (<a class="code hl_function" href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a> ()));</div>
-<div class="line"><span class="lineno">  199</span>  <span class="keywordflow">return</span> (tmp_dir);</div>
-<div class="line"><span class="lineno">  200</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00256">256</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>                    {</div>
+<div class="line"><span class="lineno">  257</span><span class="preprocessor">#if defined(OS_WIN) || defined(OS_MINGW)</span></div>
+<div class="line"><span class="lineno">  258</span>  <a class="code hl_class" href="classurl.html">url</a> main_tmp_dir= <a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;$TMP&quot;</span>) * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;.lolly&quot;</span>);</div>
+<div class="line"><span class="lineno">  259</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  260</span>  <a class="code hl_class" href="classurl.html">url</a> main_tmp_dir= <a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;/tmp&quot;</span>) * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;.lolly&quot;</span>);</div>
+<div class="line"><span class="lineno">  261</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  262</span>  <span class="keyword">static</span> <a class="code hl_class" href="classurl.html">url</a> tmp_dir= main_tmp_dir * <a class="code hl_class" href="classurl.html">url</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (<a class="code hl_function" href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a> ()));</div>
+<div class="line"><span class="lineno">  263</span>  <span class="keywordflow">return</span> (tmp_dir);</div>
+<div class="line"><span class="lineno">  264</span>}</div>
 <div class="ttc" id="asys__utils_8cpp_html_a920a0c8786d1b42eeccbfcf3bdce2663"><div class="ttname"><a href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a></div><div class="ttdeci">SN get_process_id()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00110">sys_utils.cpp:110</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -641,16 +758,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00203">203</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>                {</div>
-<div class="line"><span class="lineno">  204</span>  <span class="keyword">static</span> <a class="code hl_class" href="classurl.html">url</a> u;</div>
-<div class="line"><span class="lineno">  205</span>  <span class="keywordflow">if</span> (u == <a class="code hl_function" href="url_8cpp.html#a0ba69d9b80575e25098cb5e70cfa62b6">url_none</a> ()) {</div>
-<div class="line"><span class="lineno">  206</span>    u= <a class="code hl_function" href="file_8cpp.html#aa2bca2baaee512078ccefd923c6fcc91">url_temp_dir_sub</a> ();</div>
-<div class="line"><span class="lineno">  207</span>    <a class="code hl_function" href="file_8cpp.html#a9b47297017609372e293c21f9c5764b9">make_dir</a> (u);</div>
-<div class="line"><span class="lineno">  208</span>  }</div>
-<div class="line"><span class="lineno">  209</span>  <span class="keywordflow">return</span> u;</div>
-<div class="line"><span class="lineno">  210</span>}</div>
-<div class="ttc" id="afile_8cpp_html_aa2bca2baaee512078ccefd923c6fcc91"><div class="ttname"><a href="file_8cpp.html#aa2bca2baaee512078ccefd923c6fcc91">url_temp_dir_sub</a></div><div class="ttdeci">url url_temp_dir_sub()</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00192">file.cpp:192</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00267">267</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  267</span>                {</div>
+<div class="line"><span class="lineno">  268</span>  <span class="keyword">static</span> <a class="code hl_class" href="classurl.html">url</a> u;</div>
+<div class="line"><span class="lineno">  269</span>  <span class="keywordflow">if</span> (u == <a class="code hl_function" href="url_8cpp.html#a0ba69d9b80575e25098cb5e70cfa62b6">url_none</a> ()) {</div>
+<div class="line"><span class="lineno">  270</span>    u= <a class="code hl_function" href="file_8cpp.html#aa2bca2baaee512078ccefd923c6fcc91">url_temp_dir_sub</a> ();</div>
+<div class="line"><span class="lineno">  271</span>    <a class="code hl_function" href="file_8cpp.html#a9b47297017609372e293c21f9c5764b9">make_dir</a> (u);</div>
+<div class="line"><span class="lineno">  272</span>  }</div>
+<div class="line"><span class="lineno">  273</span>  <span class="keywordflow">return</span> u;</div>
+<div class="line"><span class="lineno">  274</span>}</div>
+<div class="ttc" id="afile_8cpp_html_aa2bca2baaee512078ccefd923c6fcc91"><div class="ttname"><a href="file_8cpp.html#aa2bca2baaee512078ccefd923c6fcc91">url_temp_dir_sub</a></div><div class="ttdeci">url url_temp_dir_sub()</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00256">file.cpp:256</a></div></div>
 <div class="ttc" id="aurl_8cpp_html_a0ba69d9b80575e25098cb5e70cfa62b6"><div class="ttname"><a href="url_8cpp.html#a0ba69d9b80575e25098cb5e70cfa62b6">url_none</a></div><div class="ttdeci">url url_none()</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00099">url.cpp:99</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -681,15 +798,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00213">213</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  213</span>                      {</div>
-<div class="line"><span class="lineno">  214</span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1);</div>
-<div class="line"><span class="lineno">  215</span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u2);</div>
-<div class="line"><span class="lineno">  216</span> </div>
-<div class="line"><span class="lineno">  217</span>  tb_file_rename (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_variable" href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a>), <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_variable" href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a>));</div>
-<div class="line"><span class="lineno">  218</span>}</div>
-<div class="ttc" id="apath__test_8cpp_html_a2122283659ae5a9b4a67d11a13ef9ed8"><div class="ttname"><a href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a></div><div class="ttdeci">static const list&lt; int &gt; p2</div><div class="ttdef"><b>Definition:</b> <a href="path__test_8cpp_source.html#l00007">path_test.cpp:7</a></div></div>
-<div class="ttc" id="apath__test_8cpp_html_a28ae84a5eff19bbbe0bce9e726635b6a"><div class="ttname"><a href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a></div><div class="ttdeci">static const list&lt; int &gt; p1</div><div class="ttdef"><b>Definition:</b> <a href="path__test_8cpp_source.html#l00006">path_test.cpp:6</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00277">277</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>                      {</div>
+<div class="line"><span class="lineno">  278</span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1);</div>
+<div class="line"><span class="lineno">  279</span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u2);</div>
+<div class="line"><span class="lineno">  280</span> </div>
+<div class="line"><span class="lineno">  281</span>  tb_file_rename (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_variable" href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a>), <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_variable" href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a>));</div>
+<div class="line"><span class="lineno">  282</span>}</div>
+<div class="ttc" id="apath__test_8cpp_html_a2122283659ae5a9b4a67d11a13ef9ed8"><div class="ttname"><a href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a></div><div class="ttdeci">static const list&lt; int &gt; p2</div><div class="ttdef"><b>Definition:</b> <a href="path__test_8cpp_source.html#l00005">path_test.cpp:5</a></div></div>
+<div class="ttc" id="apath__test_8cpp_html_a28ae84a5eff19bbbe0bce9e726635b6a"><div class="ttname"><a href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a></div><div class="ttdeci">static const list&lt; int &gt; p1</div><div class="ttdef"><b>Definition:</b> <a href="path__test_8cpp_source.html#l00004">path_test.cpp:4</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -719,13 +836,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00221">221</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                      {</div>
-<div class="line"><span class="lineno">  222</span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1);</div>
-<div class="line"><span class="lineno">  223</span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u2);</div>
-<div class="line"><span class="lineno">  224</span> </div>
-<div class="line"><span class="lineno">  225</span>  tb_file_copy (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_variable" href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a>), <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_variable" href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a>), TB_FILE_COPY_LINK);</div>
-<div class="line"><span class="lineno">  226</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00285">285</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>                      {</div>
+<div class="line"><span class="lineno">  286</span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1);</div>
+<div class="line"><span class="lineno">  287</span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u2);</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>  tb_file_copy (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_variable" href="path__test_8cpp.html#a28ae84a5eff19bbbe0bce9e726635b6a">p1</a>), <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_variable" href="path__test_8cpp.html#a2122283659ae5a9b4a67d11a13ef9ed8">p2</a>), TB_FILE_COPY_LINK);</div>
+<div class="line"><span class="lineno">  290</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -745,20 +862,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00229">229</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  229</span>               {</div>
-<div class="line"><span class="lineno">  230</span>  <span class="keywordtype">string</span> label= u.<a class="code hl_function" href="classurl.html#a059d19059852ec20dbe89380220f4ec8">label</a> ();</div>
-<div class="line"><span class="lineno">  231</span>  <span class="keywordflow">if</span> (label == <span class="stringliteral">&quot;none&quot;</span> || label == <span class="stringliteral">&quot;root&quot;</span> || label == <span class="stringliteral">&quot;wildcard&quot;</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  232</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) {</div>
-<div class="line"><span class="lineno">  233</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
-<div class="line"><span class="lineno">  234</span>    tb_file_remove (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>));</div>
-<div class="line"><span class="lineno">  235</span>  }</div>
-<div class="line"><span class="lineno">  236</span>  <span class="keywordflow">else</span> { <span class="comment">// label == &quot;or&quot;</span></div>
-<div class="line"><span class="lineno">  237</span>    <a class="code hl_function" href="file_8cpp.html#ad729646733b307b9416adf696595ff1b">remove</a> (u[1]);</div>
-<div class="line"><span class="lineno">  238</span>    <a class="code hl_function" href="file_8cpp.html#ad729646733b307b9416adf696595ff1b">remove</a> (u[2]);</div>
-<div class="line"><span class="lineno">  239</span>  }</div>
-<div class="line"><span class="lineno">  240</span>}</div>
-<div class="ttc" id="afile_8cpp_html_ad729646733b307b9416adf696595ff1b"><div class="ttname"><a href="file_8cpp.html#ad729646733b307b9416adf696595ff1b">remove</a></div><div class="ttdeci">void remove(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00229">file.cpp:229</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00293">293</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  293</span>               {</div>
+<div class="line"><span class="lineno">  294</span>  <span class="keywordtype">string</span> label= u.<a class="code hl_function" href="classurl.html#a059d19059852ec20dbe89380220f4ec8">label</a> ();</div>
+<div class="line"><span class="lineno">  295</span>  <span class="keywordflow">if</span> (label == <span class="stringliteral">&quot;none&quot;</span> || label == <span class="stringliteral">&quot;root&quot;</span> || label == <span class="stringliteral">&quot;wildcard&quot;</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  296</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#ad809c53f8b8d1003f7cebd495b31cf21">is_single_path</a> (u)) {</div>
+<div class="line"><span class="lineno">  297</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u);</div>
+<div class="line"><span class="lineno">  298</span>    tb_file_remove (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">path</a>));</div>
+<div class="line"><span class="lineno">  299</span>  }</div>
+<div class="line"><span class="lineno">  300</span>  <span class="keywordflow">else</span> { <span class="comment">// label == &quot;or&quot;</span></div>
+<div class="line"><span class="lineno">  301</span>    <a class="code hl_function" href="file_8cpp.html#ad729646733b307b9416adf696595ff1b">remove</a> (u[1]);</div>
+<div class="line"><span class="lineno">  302</span>    <a class="code hl_function" href="file_8cpp.html#ad729646733b307b9416adf696595ff1b">remove</a> (u[2]);</div>
+<div class="line"><span class="lineno">  303</span>  }</div>
+<div class="line"><span class="lineno">  304</span>}</div>
+<div class="ttc" id="afile_8cpp_html_ad729646733b307b9416adf696595ff1b"><div class="ttname"><a href="file_8cpp.html#ad729646733b307b9416adf696595ff1b">remove</a></div><div class="ttdeci">void remove(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00293">file.cpp:293</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

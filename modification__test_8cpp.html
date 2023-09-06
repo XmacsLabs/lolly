@@ -75,12 +75,11 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">modification_test.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;doctest/doctest.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a__lolly__test_8hpp_source.html">a_lolly_test.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="modification_8hpp_source.html">modification.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for modification_test.cpp:</div>
@@ -90,11 +89,6 @@ Include dependency graph for modification_test.cpp:</div>
 </div>
 <p><a href="modification__test_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a623b8690a262536536a43eab2d7df03d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modification__test_8cpp.html#a623b8690a262536536a43eab2d7df03d">DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</a></td></tr>
-<tr class="separator:a623b8690a262536536a43eab2d7df03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2754af2706bad990d5f32037d59e8a8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modification__test_8cpp.html#a2754af2706bad990d5f32037d59e8a8e">TEST_CASE</a> (&quot;test construct func&quot;)</td></tr>
@@ -140,23 +134,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a184b1e73b936e0c9d706c78f722555e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modification__test_8cpp.html#a184b1e73b936e0c9d706c78f722555e2">TEST_CASE</a> (&quot;test is_applicable&quot;)</td></tr>
 <tr class="separator:a184b1e73b936e0c9d706c78f722555e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a623b8690a262536536a43eab2d7df03d" name="a623b8690a262536536a43eab2d7df03d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a623b8690a262536536a43eab2d7df03d">&#9670;&#160;</a></span>DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00001">1</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2754af2706bad990d5f32037d59e8a8e" name="a2754af2706bad990d5f32037d59e8a8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2754af2706bad990d5f32037d59e8a8e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/21]</span></h2>
@@ -167,26 +144,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test construct func&quot;                                                                                                        &#160;</td>
+          <td class="paramtype">&quot;test construct func&quot;                                                                                                          &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00006">6</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>                                  {</div>
-<div class="line"><span class="lineno">    7</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1 (<a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">    8</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2 (<a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">    9</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   10</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   11</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   12</span>  CHECK_EQ (m1-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   13</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   14</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   15</span>  CHECK_EQ (m2-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   16</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   17</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00004">4</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>                                  {</div>
+<div class="line"><span class="lineno">    5</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1 (<a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">    6</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2 (<a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">    7</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">    8</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">    9</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   10</span>  CHECK_EQ (m1-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   11</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   12</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   13</span>  CHECK_EQ (m2-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   14</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   15</span>}</div>
 <div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list&lt; int &gt;</a></div></div>
 <div class="ttc" id="aclassmodification_html"><div class="ttname"><a href="classmodification.html">modification</a></div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00052">modification.hpp:52</a></div></div>
 <div class="ttc" id="aclasstree_html"><div class="ttname"><a href="classtree.html">tree</a></div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00038">tree.hpp:38</a></div></div>
@@ -203,26 +180,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_assign&quot;                                                                                                       &#160;</td>
+          <td class="paramtype">&quot;test mod_assign&quot;                                                                                                         &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00019">19</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                              {</div>
-<div class="line"><span class="lineno">   20</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">   21</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">   22</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   23</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   24</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   25</span>  CHECK_EQ (m1-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   26</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   27</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   28</span>  CHECK_EQ (m2-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   29</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   30</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00017">17</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                              {</div>
+<div class="line"><span class="lineno">   18</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">   19</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">   20</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   21</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   22</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   23</span>  CHECK_EQ (m1-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   24</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   25</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   26</span>  CHECK_EQ (m2-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   27</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   28</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a3ef20230a98eaee1720ac9619f46e478"><div class="ttname"><a href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a></div><div class="ttdeci">modification mod_assign(path p, tree t)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00070">modification.hpp:70</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -236,24 +213,24 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_insert&quot;                                                                                                      &#160;</td>
+          <td class="paramtype">&quot;test mod_insert&quot;                                                                                                        &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00032">32</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                              {</div>
-<div class="line"><span class="lineno">   33</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#af7bee1a2ac38872286d26883d99da789">mod_insert</a> (<a class="code hl_class" href="classlist.html">path</a> (), 0, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">   34</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#af7bee1a2ac38872286d26883d99da789">mod_insert</a> (<a class="code hl_class" href="classlist.html">path</a> (), 0, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">   35</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   36</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   37</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a6538fd904000be1a026945a4afb28849">MOD_INSERT</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   38</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   39</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a6538fd904000be1a026945a4afb28849">MOD_INSERT</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   40</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   41</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00030">30</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                              {</div>
+<div class="line"><span class="lineno">   31</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#af7bee1a2ac38872286d26883d99da789">mod_insert</a> (<a class="code hl_class" href="classlist.html">path</a> (), 0, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">   32</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#af7bee1a2ac38872286d26883d99da789">mod_insert</a> (<a class="code hl_class" href="classlist.html">path</a> (), 0, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">   33</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   34</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   35</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a6538fd904000be1a026945a4afb28849">MOD_INSERT</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   36</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   37</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a6538fd904000be1a026945a4afb28849">MOD_INSERT</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   38</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   39</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a6538fd904000be1a026945a4afb28849"><div class="ttname"><a href="modification_8hpp.html#a6538fd904000be1a026945a4afb28849">MOD_INSERT</a></div><div class="ttdeci">#define MOD_INSERT</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00022">modification.hpp:22</a></div></div>
 <div class="ttc" id="amodification_8hpp_html_af7bee1a2ac38872286d26883d99da789"><div class="ttname"><a href="modification_8hpp.html#af7bee1a2ac38872286d26883d99da789">mod_insert</a></div><div class="ttdeci">modification mod_insert(path p, int pos, tree t)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00074">modification.hpp:74</a></div></div>
 </div><!-- fragment -->
@@ -268,26 +245,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_remove&quot;                                                                                                     &#160;</td>
+          <td class="paramtype">&quot;test mod_remove&quot;                                                                                                       &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00043">43</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                              {</div>
-<div class="line"><span class="lineno">   44</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, 2);</div>
-<div class="line"><span class="lineno">   45</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, 2);</div>
-<div class="line"><span class="lineno">   46</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   47</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   48</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#acb60cb829fe8ee16587b8fa2de4fb653">MOD_REMOVE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   49</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   50</span>  CHECK_EQ (m1-&gt;p[1] == 2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   51</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   52</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#acb60cb829fe8ee16587b8fa2de4fb653">MOD_REMOVE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   53</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   54</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00041">41</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                              {</div>
+<div class="line"><span class="lineno">   42</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, 2);</div>
+<div class="line"><span class="lineno">   43</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, 2);</div>
+<div class="line"><span class="lineno">   44</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   45</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   46</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#acb60cb829fe8ee16587b8fa2de4fb653">MOD_REMOVE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   47</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   48</span>  CHECK_EQ (m1-&gt;p[1] == 2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   49</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   50</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#acb60cb829fe8ee16587b8fa2de4fb653">MOD_REMOVE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   51</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   52</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a2a046c48e971a01490979796ab48907b"><div class="ttname"><a href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a></div><div class="ttdeci">modification mod_remove(path p, int pos, int nr)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00078">modification.hpp:78</a></div></div>
 <div class="ttc" id="amodification_8hpp_html_acb60cb829fe8ee16587b8fa2de4fb653"><div class="ttname"><a href="modification_8hpp.html#acb60cb829fe8ee16587b8fa2de4fb653">MOD_REMOVE</a></div><div class="ttdeci">#define MOD_REMOVE</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00023">modification.hpp:23</a></div></div>
 </div><!-- fragment -->
@@ -302,26 +279,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_split&quot;                                                                                                    &#160;</td>
+          <td class="paramtype">&quot;test mod_split&quot;                                                                                                      &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00056">56</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                             {</div>
-<div class="line"><span class="lineno">   57</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, 2);</div>
-<div class="line"><span class="lineno">   58</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, 2);</div>
-<div class="line"><span class="lineno">   59</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   60</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   61</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#ae1e29c18fd597fcf928c70a5aa063de8">MOD_SPLIT</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   62</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   63</span>  CHECK_EQ (m1-&gt;p[1] == 2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   64</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   65</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#ae1e29c18fd597fcf928c70a5aa063de8">MOD_SPLIT</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   66</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   67</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00054">54</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                             {</div>
+<div class="line"><span class="lineno">   55</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, 2);</div>
+<div class="line"><span class="lineno">   56</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, 2);</div>
+<div class="line"><span class="lineno">   57</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   58</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   59</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#ae1e29c18fd597fcf928c70a5aa063de8">MOD_SPLIT</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   60</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   61</span>  CHECK_EQ (m1-&gt;p[1] == 2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   62</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   63</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#ae1e29c18fd597fcf928c70a5aa063de8">MOD_SPLIT</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   64</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   65</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a3694ff803b4c5ebc05bf7a48e563def0"><div class="ttname"><a href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a></div><div class="ttdeci">modification mod_split(path p, int pos, int at)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00082">modification.hpp:82</a></div></div>
 <div class="ttc" id="amodification_8hpp_html_ae1e29c18fd597fcf928c70a5aa063de8"><div class="ttname"><a href="modification_8hpp.html#ae1e29c18fd597fcf928c70a5aa063de8">MOD_SPLIT</a></div><div class="ttdeci">#define MOD_SPLIT</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00024">modification.hpp:24</a></div></div>
 </div><!-- fragment -->
@@ -336,29 +313,29 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_join&quot;                                                                                                   &#160;</td>
+          <td class="paramtype">&quot;test mod_join&quot;                                                                                                     &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00069">69</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                            {</div>
-<div class="line"><span class="lineno">   70</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
-<div class="line"><span class="lineno">   71</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
-<div class="line"><span class="lineno">   72</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   73</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   74</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   75</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   76</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   77</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   78</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   79</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a> (<a class="code hl_class" href="classlist.html">path</a> (1), 2);</div>
-<div class="line"><span class="lineno">   80</span>  CHECK_EQ (m3-&gt;k == <a class="code hl_define" href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   81</span>  CHECK_EQ (m3-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   82</span>  CHECK_EQ (m3-&gt;p[1] == 2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   83</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00067">67</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                            {</div>
+<div class="line"><span class="lineno">   68</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
+<div class="line"><span class="lineno">   69</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
+<div class="line"><span class="lineno">   70</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   71</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   72</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   73</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   74</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   75</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   76</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   77</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a> (<a class="code hl_class" href="classlist.html">path</a> (1), 2);</div>
+<div class="line"><span class="lineno">   78</span>  CHECK_EQ (m3-&gt;k == <a class="code hl_define" href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   79</span>  CHECK_EQ (m3-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   80</span>  CHECK_EQ (m3-&gt;p[1] == 2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   81</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a5f4ec3e79513c1b74a9d739c1879c4a6"><div class="ttname"><a href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a></div><div class="ttdeci">modification mod_join(path p, int pos)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00086">modification.hpp:86</a></div></div>
 <div class="ttc" id="amodification_8hpp_html_add6653f686ba3854a574587e07975b5d"><div class="ttname"><a href="modification_8hpp.html#add6653f686ba3854a574587e07975b5d">MOD_JOIN</a></div><div class="ttdeci">#define MOD_JOIN</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00025">modification.hpp:25</a></div></div>
 </div><!-- fragment -->
@@ -373,26 +350,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_assign_node&quot;                                                                                                  &#160;</td>
+          <td class="paramtype">&quot;test mod_assign_node&quot;                                                                                                    &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00085">85</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                   {</div>
-<div class="line"><span class="lineno">   86</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#adad88f387c2aa3debc40d9ab6df4deb0">mod_assign_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
-<div class="line"><span class="lineno">   87</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#adad88f387c2aa3debc40d9ab6df4deb0">mod_assign_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
-<div class="line"><span class="lineno">   88</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   89</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   90</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a2fa1bc9725526e8f90a70b2fea94f6d6">MOD_ASSIGN_NODE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   91</span>  CHECK_EQ (m1-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   92</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (1), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   93</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a2fa1bc9725526e8f90a70b2fea94f6d6">MOD_ASSIGN_NODE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   94</span>  CHECK_EQ (m2-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   95</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (1), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   96</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00083">83</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                   {</div>
+<div class="line"><span class="lineno">   84</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#adad88f387c2aa3debc40d9ab6df4deb0">mod_assign_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
+<div class="line"><span class="lineno">   85</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#adad88f387c2aa3debc40d9ab6df4deb0">mod_assign_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
+<div class="line"><span class="lineno">   86</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   87</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   88</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a2fa1bc9725526e8f90a70b2fea94f6d6">MOD_ASSIGN_NODE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   89</span>  CHECK_EQ (m1-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   90</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (1), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   91</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a2fa1bc9725526e8f90a70b2fea94f6d6">MOD_ASSIGN_NODE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   92</span>  CHECK_EQ (m2-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   93</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (1), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   94</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a2fa1bc9725526e8f90a70b2fea94f6d6"><div class="ttname"><a href="modification_8hpp.html#a2fa1bc9725526e8f90a70b2fea94f6d6">MOD_ASSIGN_NODE</a></div><div class="ttdeci">#define MOD_ASSIGN_NODE</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00026">modification.hpp:26</a></div></div>
 <div class="ttc" id="amodification_8hpp_html_adad88f387c2aa3debc40d9ab6df4deb0"><div class="ttname"><a href="modification_8hpp.html#adad88f387c2aa3debc40d9ab6df4deb0">mod_assign_node</a></div><div class="ttdeci">modification mod_assign_node(path p, int lab)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00090">modification.hpp:90</a></div></div>
 </div><!-- fragment -->
@@ -407,30 +384,30 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_insert_node&quot;                                                                                                 &#160;</td>
+          <td class="paramtype">&quot;test mod_insert_node&quot;                                                                                                   &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00098">98</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                                   {</div>
-<div class="line"><span class="lineno">   99</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  100</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  101</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  102</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  103</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  104</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  105</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  106</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  107</span>  CHECK_EQ (m2-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  108</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  109</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 2, <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>));</div>
-<div class="line"><span class="lineno">  110</span>  CHECK_EQ (m3-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  111</span>  CHECK_EQ (m3-&gt;p[0] == 2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  112</span>  CHECK_EQ (m3-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  113</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00096">96</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                                   {</div>
+<div class="line"><span class="lineno">   97</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">   98</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">   99</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  100</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  101</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  102</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  103</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  104</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  105</span>  CHECK_EQ (m2-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  106</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  107</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 2, <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>));</div>
+<div class="line"><span class="lineno">  108</span>  CHECK_EQ (m3-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  109</span>  CHECK_EQ (m3-&gt;p[0] == 2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  110</span>  CHECK_EQ (m3-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  111</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a0adb30f5d3f1c0699d0886a822176748"><div class="ttname"><a href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a></div><div class="ttdeci">modification mod_insert_node(path p, int pos, tree t)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00094">modification.hpp:94</a></div></div>
 <div class="ttc" id="amodification_8hpp_html_a826a5835a7521b7ce04e492cf46f65da"><div class="ttname"><a href="modification_8hpp.html#a826a5835a7521b7ce04e492cf46f65da">MOD_INSERT_NODE</a></div><div class="ttdeci">#define MOD_INSERT_NODE</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00027">modification.hpp:27</a></div></div>
 </div><!-- fragment -->
@@ -445,26 +422,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_remove_node&quot;                                                                                                &#160;</td>
+          <td class="paramtype">&quot;test mod_remove_node&quot;                                                                                                  &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00115">115</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                   {</div>
-<div class="line"><span class="lineno">  116</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#ad4d562261baaf457965207d91f7fb9c6">mod_remove_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
-<div class="line"><span class="lineno">  117</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#ad4d562261baaf457965207d91f7fb9c6">mod_remove_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
-<div class="line"><span class="lineno">  118</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  119</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  120</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a2ce1a2ec817c2b43245f6a6287ecba6e">MOD_REMOVE_NODE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  121</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  122</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  123</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a2ce1a2ec817c2b43245f6a6287ecba6e">MOD_REMOVE_NODE</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  124</span>  CHECK_EQ (m2-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  125</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  126</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00113">113</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>                                   {</div>
+<div class="line"><span class="lineno">  114</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#ad4d562261baaf457965207d91f7fb9c6">mod_remove_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
+<div class="line"><span class="lineno">  115</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#ad4d562261baaf457965207d91f7fb9c6">mod_remove_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1);</div>
+<div class="line"><span class="lineno">  116</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  117</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  118</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a2ce1a2ec817c2b43245f6a6287ecba6e">MOD_REMOVE_NODE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  119</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  120</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  121</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a2ce1a2ec817c2b43245f6a6287ecba6e">MOD_REMOVE_NODE</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  122</span>  CHECK_EQ (m2-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  123</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  124</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a2ce1a2ec817c2b43245f6a6287ecba6e"><div class="ttname"><a href="modification_8hpp.html#a2ce1a2ec817c2b43245f6a6287ecba6e">MOD_REMOVE_NODE</a></div><div class="ttdeci">#define MOD_REMOVE_NODE</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00028">modification.hpp:28</a></div></div>
 <div class="ttc" id="amodification_8hpp_html_ad4d562261baaf457965207d91f7fb9c6"><div class="ttname"><a href="modification_8hpp.html#ad4d562261baaf457965207d91f7fb9c6">mod_remove_node</a></div><div class="ttdeci">modification mod_remove_node(path p, int pos)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00098">modification.hpp:98</a></div></div>
 </div><!-- fragment -->
@@ -479,30 +456,30 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test mod_set_cursor&quot;                                                                                               &#160;</td>
+          <td class="paramtype">&quot;test mod_set_cursor&quot;                                                                                                 &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00128">128</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                                  {</div>
-<div class="line"><span class="lineno">  129</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  130</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  131</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  132</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  133</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  134</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  135</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  136</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  137</span>  CHECK_EQ (m2-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  138</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  139</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a> (<a class="code hl_class" href="classlist.html">path</a> (), 2, <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>));</div>
-<div class="line"><span class="lineno">  140</span>  CHECK_EQ (m3-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  141</span>  CHECK_EQ (m3-&gt;p[0] == 2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  142</span>  CHECK_EQ (m3-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  143</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00126">126</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                                  {</div>
+<div class="line"><span class="lineno">  127</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  128</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a> (<a class="code hl_class" href="classlist.html">path</a> (), 1, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  129</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  130</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  131</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  132</span>  CHECK_EQ (m1-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  133</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  134</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  135</span>  CHECK_EQ (m2-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  136</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  137</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a> (<a class="code hl_class" href="classlist.html">path</a> (), 2, <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>));</div>
+<div class="line"><span class="lineno">  138</span>  CHECK_EQ (m3-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  139</span>  CHECK_EQ (m3-&gt;p[0] == 2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  140</span>  CHECK_EQ (m3-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  141</span>}</div>
 <div class="ttc" id="amodification_8hpp_html_a989bce21c798798f61a016d886f0f1ca"><div class="ttname"><a href="modification_8hpp.html#a989bce21c798798f61a016d886f0f1ca">MOD_SET_CURSOR</a></div><div class="ttdeci">#define MOD_SET_CURSOR</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00029">modification.hpp:29</a></div></div>
 <div class="ttc" id="amodification_8hpp_html_abb2b2fcb8044339ec75a896a21445e5b"><div class="ttname"><a href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a></div><div class="ttdeci">modification mod_set_cursor(path p, int pos, tree data)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8hpp_source.html#l00102">modification.hpp:102</a></div></div>
 </div><!-- fragment -->
@@ -517,33 +494,33 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test operator*/&quot;                                                                                              &#160;</td>
+          <td class="paramtype">&quot;test operator*/&quot;                                                                                                &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00145">145</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                              {</div>
-<div class="line"><span class="lineno">  146</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  147</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= 1 * m1;</div>
-<div class="line"><span class="lineno">  148</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_typedef" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> (1) * m1;</div>
-<div class="line"><span class="lineno">  149</span>  <a class="code hl_class" href="classmodification.html">modification</a> m4= m1 * 1;</div>
-<div class="line"><span class="lineno">  150</span>  <a class="code hl_class" href="classmodification.html">modification</a> m5= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2, 3), <a class="code hl_class" href="classtree.html">tree</a> ()) / <a class="code hl_typedef" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> (1);</div>
-<div class="line"><span class="lineno">  151</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  152</span>  CHECK_EQ (m2-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  153</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  154</span>  CHECK_EQ (m3-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  155</span>  CHECK_EQ (m3-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  156</span>  CHECK_EQ (m3-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  157</span>  CHECK_EQ (m4-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  158</span>  CHECK_EQ (m4-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  159</span>  CHECK_EQ (m4-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  160</span>  CHECK_EQ (m5-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  161</span>  CHECK_EQ (m5-&gt;p[0] == 2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  162</span>  CHECK_EQ (m5-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  163</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00143">143</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>                              {</div>
+<div class="line"><span class="lineno">  144</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  145</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= 1 * m1;</div>
+<div class="line"><span class="lineno">  146</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_typedef" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> (1) * m1;</div>
+<div class="line"><span class="lineno">  147</span>  <a class="code hl_class" href="classmodification.html">modification</a> m4= m1 * 1;</div>
+<div class="line"><span class="lineno">  148</span>  <a class="code hl_class" href="classmodification.html">modification</a> m5= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2, 3), <a class="code hl_class" href="classtree.html">tree</a> ()) / <a class="code hl_typedef" href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a> (1);</div>
+<div class="line"><span class="lineno">  149</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  150</span>  CHECK_EQ (m2-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  151</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  152</span>  CHECK_EQ (m3-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  153</span>  CHECK_EQ (m3-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  154</span>  CHECK_EQ (m3-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  155</span>  CHECK_EQ (m4-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  156</span>  CHECK_EQ (m4-&gt;p[0] == 1, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  157</span>  CHECK_EQ (m4-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  158</span>  CHECK_EQ (m5-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  159</span>  CHECK_EQ (m5-&gt;p[0] == 2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  160</span>  CHECK_EQ (m5-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  161</span>}</div>
 <div class="ttc" id="aobserver_8hpp_html_a2f77c2b4585ee7ef2cf1a73d306f38b4"><div class="ttname"><a href="observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4">path</a></div><div class="ttdeci">list&lt; int &gt; path</div><div class="ttdef"><b>Definition:</b> <a href="observer_8hpp_source.html#l00023">observer.hpp:23</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -563,16 +540,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00165">165</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                              {</div>
-<div class="line"><span class="lineno">  166</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  167</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  168</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  169</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  170</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>));</div>
-<div class="line"><span class="lineno">  171</span>  CHECK_EQ (m1 == m3, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  172</span>  CHECK_EQ (m1 != m3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  173</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00163">163</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>                              {</div>
+<div class="line"><span class="lineno">  164</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  165</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  166</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  167</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  168</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>));</div>
+<div class="line"><span class="lineno">  169</span>  CHECK_EQ (m1 == m3, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  170</span>  CHECK_EQ (m1 != m3, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  171</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -585,26 +562,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test copy&quot;                                                                                             &#160;</td>
+          <td class="paramtype">&quot;test copy&quot;                                                                                               &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00175">175</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                        {</div>
-<div class="line"><span class="lineno">  176</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  177</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a> (m1);</div>
-<div class="line"><span class="lineno">  178</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  179</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  180</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  181</span>  CHECK_EQ (m1-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  182</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  183</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  184</span>  CHECK_EQ (m2-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  185</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  186</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00173">173</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>                        {</div>
+<div class="line"><span class="lineno">  174</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  175</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a> (m1);</div>
+<div class="line"><span class="lineno">  176</span>  CHECK_EQ (m1 == m2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  177</span>  CHECK_EQ (m1 != m2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  178</span>  CHECK_EQ (m1-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  179</span>  CHECK_EQ (m1-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  180</span>  CHECK_EQ (m1-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  181</span>  CHECK_EQ (m2-&gt;k == <a class="code hl_define" href="modification_8hpp.html#a426981bec84e4b170a5b51dccb40a0cf">MOD_ASSIGN</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  182</span>  CHECK_EQ (m2-&gt;p == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  183</span>  CHECK_EQ (m2-&gt;t == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  184</span>}</div>
 <div class="ttc" id="abasic_8hpp_html_a2ef6020a582fc3399a7f7af2334655b9"><div class="ttname"><a href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a></div><div class="ttdeci">int copy(int x)</div><div class="ttdoc">Returns a copy of an integer.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00506">basic.hpp:506</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -618,22 +595,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test root&quot;                                                                                            &#160;</td>
+          <td class="paramtype">&quot;test root&quot;                                                                                              &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00188">188</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                        {</div>
-<div class="line"><span class="lineno">  189</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  190</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  191</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  192</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b">root</a> (m1) == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  193</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b">root</a> (m2) == <a class="code hl_class" href="classlist.html">path</a> (1), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  194</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b">root</a> (m3) == <a class="code hl_class" href="classlist.html">path</a> (1, 2), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  195</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00186">186</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>                        {</div>
+<div class="line"><span class="lineno">  187</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  188</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  189</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  190</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b">root</a> (m1) == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  191</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b">root</a> (m2) == <a class="code hl_class" href="classlist.html">path</a> (1), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  192</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b">root</a> (m3) == <a class="code hl_class" href="classlist.html">path</a> (1, 2), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  193</span>}</div>
 <div class="ttc" id="amodification_8cpp_html_aee1ba49fa11cd53b71eb22a8f9a2a88b"><div class="ttname"><a href="modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b">root</a></div><div class="ttdeci">path root(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00076">modification.cpp:76</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -647,28 +624,28 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test index&quot;                                                                                           &#160;</td>
+          <td class="paramtype">&quot;test index&quot;                                                                                             &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00197">197</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                         {</div>
-<div class="line"><span class="lineno">  198</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#af7bee1a2ac38872286d26883d99da789">mod_insert</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2), 3, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  199</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, 4);</div>
-<div class="line"><span class="lineno">  200</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, 4);</div>
-<div class="line"><span class="lineno">  201</span>  <a class="code hl_class" href="classmodification.html">modification</a> m4= <a class="code hl_function" href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3);</div>
-<div class="line"><span class="lineno">  202</span>  <a class="code hl_class" href="classmodification.html">modification</a> m5= <a class="code hl_function" href="modification_8hpp.html#ad4d562261baaf457965207d91f7fb9c6">mod_remove_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3);</div>
-<div class="line"><span class="lineno">  203</span>  <a class="code hl_class" href="classmodification.html">modification</a> m6= <a class="code hl_function" href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  204</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m1) == 3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  205</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m2) == 3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  206</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m3) == 3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  207</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m4) == 3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  208</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m5) == 3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  209</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m6) == 3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  210</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00195">195</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>                         {</div>
+<div class="line"><span class="lineno">  196</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#af7bee1a2ac38872286d26883d99da789">mod_insert</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2), 3, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  197</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, 4);</div>
+<div class="line"><span class="lineno">  198</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, 4);</div>
+<div class="line"><span class="lineno">  199</span>  <a class="code hl_class" href="classmodification.html">modification</a> m4= <a class="code hl_function" href="modification_8hpp.html#a5f4ec3e79513c1b74a9d739c1879c4a6">mod_join</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3);</div>
+<div class="line"><span class="lineno">  200</span>  <a class="code hl_class" href="classmodification.html">modification</a> m5= <a class="code hl_function" href="modification_8hpp.html#ad4d562261baaf457965207d91f7fb9c6">mod_remove_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3);</div>
+<div class="line"><span class="lineno">  201</span>  <a class="code hl_class" href="classmodification.html">modification</a> m6= <a class="code hl_function" href="modification_8hpp.html#abb2b2fcb8044339ec75a896a21445e5b">mod_set_cursor</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  202</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m1) == 3, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  203</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m2) == 3, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  204</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m3) == 3, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  205</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m4) == 3, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  206</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m5) == 3, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  207</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a> (m6) == 3, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  208</span>}</div>
 <div class="ttc" id="amodification_8cpp_html_aec27b977ec4cae3388e34fcadb6ccf8e"><div class="ttname"><a href="modification_8cpp.html#aec27b977ec4cae3388e34fcadb6ccf8e">index</a></div><div class="ttdeci">int index(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00103">modification.cpp:103</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -682,22 +659,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test argument&quot;                                                                                          &#160;</td>
+          <td class="paramtype">&quot;test argument&quot;                                                                                            &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00212">212</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  212</span>                            {</div>
-<div class="line"><span class="lineno">  213</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, 4);</div>
-<div class="line"><span class="lineno">  214</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, 4);</div>
-<div class="line"><span class="lineno">  215</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  216</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a> (m1) == 4, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  217</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a> (m2) == 4, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  218</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a> (m3) == 3, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  219</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00210">210</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>                            {</div>
+<div class="line"><span class="lineno">  211</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a2a046c48e971a01490979796ab48907b">mod_remove</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, 4);</div>
+<div class="line"><span class="lineno">  212</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3694ff803b4c5ebc05bf7a48e563def0">mod_split</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, 4);</div>
+<div class="line"><span class="lineno">  213</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a0adb30f5d3f1c0699d0886a822176748">mod_insert_node</a> (<a class="code hl_class" href="classlist.html">path</a> (), 3, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  214</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a> (m1) == 4, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  215</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a> (m2) == 4, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  216</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a> (m3) == 3, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  217</span>}</div>
 <div class="ttc" id="amodification_8cpp_html_adf3bb6bfe2e7278c7d503ec0496e6bee"><div class="ttname"><a href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a></div><div class="ttdeci">int argument(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00124">modification.cpp:124</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -711,25 +688,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test make_modification&quot;                                                                                         &#160;</td>
+          <td class="paramtype">&quot;test make_modification&quot;                                                                                           &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00221">221</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                     {</div>
-<div class="line"><span class="lineno">  222</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;assign&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  223</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;insert&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  224</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;remove&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  225</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;split&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  226</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;join&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  227</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;assign-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  228</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;insert-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  229</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;remove-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  230</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;set-cursor&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  231</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00219">219</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>                                     {</div>
+<div class="line"><span class="lineno">  220</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;assign&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  221</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;insert&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  222</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;remove&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  223</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;split&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  224</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;join&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  225</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;assign-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  226</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;insert-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  227</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;remove-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  228</span>  <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;set-cursor&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  229</span>}</div>
 <div class="ttc" id="amodification_8cpp_html_a696d8ecfbce920b4d31ab6af5f0c505e"><div class="ttname"><a href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a></div><div class="ttdeci">modification make_modification(string s, path p, tree t)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00143">modification.cpp:143</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -743,34 +720,34 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test get_type&quot;                                                                                        &#160;</td>
+          <td class="paramtype">&quot;test get_type&quot;                                                                                          &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00233">233</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  233</span>                            {</div>
-<div class="line"><span class="lineno">  234</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;assign&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  235</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;insert&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  236</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;remove&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  237</span>  <a class="code hl_class" href="classmodification.html">modification</a> m4= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;split&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  238</span>  <a class="code hl_class" href="classmodification.html">modification</a> m5= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;join&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  239</span>  <a class="code hl_class" href="classmodification.html">modification</a> m6= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;assign-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  240</span>  <a class="code hl_class" href="classmodification.html">modification</a> m7= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;insert-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  241</span>  <a class="code hl_class" href="classmodification.html">modification</a> m8= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;remove-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  242</span>  <a class="code hl_class" href="classmodification.html">modification</a> m9= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;set-cursor&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  243</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m1) == <span class="stringliteral">&quot;assign&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  244</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m2) == <span class="stringliteral">&quot;insert&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  245</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m3) == <span class="stringliteral">&quot;remove&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  246</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m4) == <span class="stringliteral">&quot;split&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  247</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m5) == <span class="stringliteral">&quot;join&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  248</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m6) == <span class="stringliteral">&quot;assign-node&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  249</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m7) == <span class="stringliteral">&quot;insert-node&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  250</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m8) == <span class="stringliteral">&quot;remove-node&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  251</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m9) == <span class="stringliteral">&quot;set-cursor&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  252</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00231">231</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  231</span>                            {</div>
+<div class="line"><span class="lineno">  232</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;assign&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  233</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;insert&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  234</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;remove&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  235</span>  <a class="code hl_class" href="classmodification.html">modification</a> m4= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;split&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  236</span>  <a class="code hl_class" href="classmodification.html">modification</a> m5= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;join&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  237</span>  <a class="code hl_class" href="classmodification.html">modification</a> m6= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;assign-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  238</span>  <a class="code hl_class" href="classmodification.html">modification</a> m7= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;insert-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  239</span>  <a class="code hl_class" href="classmodification.html">modification</a> m8= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;remove-node&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  240</span>  <a class="code hl_class" href="classmodification.html">modification</a> m9= <a class="code hl_function" href="modification_8cpp.html#a696d8ecfbce920b4d31ab6af5f0c505e">make_modification</a> (<span class="stringliteral">&quot;set-cursor&quot;</span>, <a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  241</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m1) == <span class="stringliteral">&quot;assign&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  242</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m2) == <span class="stringliteral">&quot;insert&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  243</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m3) == <span class="stringliteral">&quot;remove&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  244</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m4) == <span class="stringliteral">&quot;split&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  245</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m5) == <span class="stringliteral">&quot;join&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  246</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m6) == <span class="stringliteral">&quot;assign-node&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  247</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m7) == <span class="stringliteral">&quot;insert-node&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  248</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m8) == <span class="stringliteral">&quot;remove-node&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  249</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a> (m9) == <span class="stringliteral">&quot;set-cursor&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  250</span>}</div>
 <div class="ttc" id="amodification_8cpp_html_a51312a342b50e1bc2ea8e1addde53769"><div class="ttname"><a href="modification_8cpp.html#a51312a342b50e1bc2ea8e1addde53769">get_type</a></div><div class="ttdeci">string get_type(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00158">modification.cpp:158</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -784,22 +761,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test get_path&quot;                                                                                       &#160;</td>
+          <td class="paramtype">&quot;test get_path&quot;                                                                                         &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00254">254</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  254</span>                            {</div>
-<div class="line"><span class="lineno">  255</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  256</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  257</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  258</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a8da3617608e9a9174f00ca4576231861">get_path</a> (m1) == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  259</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a8da3617608e9a9174f00ca4576231861">get_path</a> (m2) == <a class="code hl_class" href="classlist.html">path</a> (1), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  260</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a8da3617608e9a9174f00ca4576231861">get_path</a> (m3) == <a class="code hl_class" href="classlist.html">path</a> (1, 2), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  261</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00252">252</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  252</span>                            {</div>
+<div class="line"><span class="lineno">  253</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  254</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  255</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  256</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a8da3617608e9a9174f00ca4576231861">get_path</a> (m1) == <a class="code hl_class" href="classlist.html">path</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  257</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a8da3617608e9a9174f00ca4576231861">get_path</a> (m2) == <a class="code hl_class" href="classlist.html">path</a> (1), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  258</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a8da3617608e9a9174f00ca4576231861">get_path</a> (m3) == <a class="code hl_class" href="classlist.html">path</a> (1, 2), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  259</span>}</div>
 <div class="ttc" id="amodification_8cpp_html_a8da3617608e9a9174f00ca4576231861"><div class="ttname"><a href="modification_8cpp.html#a8da3617608e9a9174f00ca4576231861">get_path</a></div><div class="ttdeci">path get_path(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00185">modification.cpp:185</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -813,22 +790,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test get_tree&quot;                                                                                      &#160;</td>
+          <td class="paramtype">&quot;test get_tree&quot;                                                                                        &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00263">263</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  263</span>                            {</div>
-<div class="line"><span class="lineno">  264</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  265</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>));</div>
-<div class="line"><span class="lineno">  266</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> (1));</div>
-<div class="line"><span class="lineno">  267</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a0aa66610e9e9280e029032fbba5f03c6">get_tree</a> (m1) == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  268</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a0aa66610e9e9280e029032fbba5f03c6">get_tree</a> (m2) == <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  269</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a0aa66610e9e9280e029032fbba5f03c6">get_tree</a> (m3) == <a class="code hl_class" href="classtree.html">tree</a> (1), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  270</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00261">261</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  261</span>                            {</div>
+<div class="line"><span class="lineno">  262</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  263</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>));</div>
+<div class="line"><span class="lineno">  264</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> (1));</div>
+<div class="line"><span class="lineno">  265</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a0aa66610e9e9280e029032fbba5f03c6">get_tree</a> (m1) == <a class="code hl_class" href="classtree.html">tree</a> (), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  266</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a0aa66610e9e9280e029032fbba5f03c6">get_tree</a> (m2) == <a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  267</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#a0aa66610e9e9280e029032fbba5f03c6">get_tree</a> (m3) == <a class="code hl_class" href="classtree.html">tree</a> (1), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  268</span>}</div>
 <div class="ttc" id="amodification_8cpp_html_a0aa66610e9e9280e029032fbba5f03c6"><div class="ttname"><a href="modification_8cpp.html#a0aa66610e9e9280e029032fbba5f03c6">get_tree</a></div><div class="ttdeci">tree get_tree(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00190">modification.cpp:190</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -842,28 +819,28 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test is_applicable&quot;                                                                                     &#160;</td>
+          <td class="paramtype">&quot;test is_applicable&quot;                                                                                       &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00272">272</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  272</span>                                 {</div>
-<div class="line"><span class="lineno">  273</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  274</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  275</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  276</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (), m1), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  277</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (), m2), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  278</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (), m3), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  279</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1), m1), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  280</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1), m2), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  281</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1), m3), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  282</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, 2), m1), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  283</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, 2), m2), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  284</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, 2), m3), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  285</span>}</div>
+<p class="definition">Definition at line <a class="el" href="modification__test_8cpp_source.html#l00270">270</a> of file <a class="el" href="modification__test_8cpp_source.html">modification_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                 {</div>
+<div class="line"><span class="lineno">  271</span>  <a class="code hl_class" href="classmodification.html">modification</a> m1= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  272</span>  <a class="code hl_class" href="classmodification.html">modification</a> m2= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  273</span>  <a class="code hl_class" href="classmodification.html">modification</a> m3= <a class="code hl_function" href="modification_8hpp.html#a3ef20230a98eaee1720ac9619f46e478">mod_assign</a> (<a class="code hl_class" href="classlist.html">path</a> (1, 2), <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  274</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (), m1), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  275</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (), m2), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  276</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (), m3), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  277</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1), m1), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  278</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1), m2), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  279</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1), m3), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  280</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, 2), m1), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  281</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, 2), m2), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  282</span>  CHECK_EQ (<a class="code hl_function" href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, 2), m3), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  283</span>}</div>
 <div class="ttc" id="amodification_8cpp_html_aee1ae9a4c3d3650e18cd7242e55e060c"><div class="ttname"><a href="modification_8cpp.html#aee1ae9a4c3d3650e18cd7242e55e060c">is_applicable</a></div><div class="ttdeci">bool is_applicable(tree t, modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00262">modification.cpp:262</a></div></div>
 </div><!-- fragment -->
 </div>

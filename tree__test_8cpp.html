@@ -75,12 +75,11 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">tree_test.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;doctest/doctest.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a__lolly__test_8hpp_source.html">a_lolly_test.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="tree_8hpp_source.html">tree.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for tree_test.cpp:</div>
@@ -90,11 +89,6 @@ Include dependency graph for tree_test.cpp:</div>
 </div>
 <p><a href="tree__test_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a623b8690a262536536a43eab2d7df03d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree__test_8cpp.html#a623b8690a262536536a43eab2d7df03d">DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</a></td></tr>
-<tr class="separator:a623b8690a262536536a43eab2d7df03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a98de6505754188f5327f7c968c9a2d19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree__test_8cpp.html#a98de6505754188f5327f7c968c9a2d19">TEST_CASE</a> (&quot;test_is_atomic&quot;)</td></tr>
@@ -136,23 +130,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a03658e7950753e6c8419268bdf3200be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tree__test_8cpp.html#a03658e7950753e6c8419268bdf3200be">TEST_CASE</a> (&quot;copy&quot;)</td></tr>
 <tr class="separator:a03658e7950753e6c8419268bdf3200be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a623b8690a262536536a43eab2d7df03d" name="a623b8690a262536536a43eab2d7df03d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a623b8690a262536536a43eab2d7df03d">&#9670;&#160;</a></span>DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00001">1</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a98de6505754188f5327f7c968c9a2d19" name="a98de6505754188f5327f7c968c9a2d19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98de6505754188f5327f7c968c9a2d19">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/19]</span></h2>
@@ -163,20 +140,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_is_atomic&quot;                                                     &#160;</td>
+          <td class="paramtype">&quot;test_is_atomic&quot;                                                       &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00006">6</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>                             {</div>
-<div class="line"><span class="lineno">    7</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
-<div class="line"><span class="lineno">    8</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
-<div class="line"><span class="lineno">    9</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
-<div class="line"><span class="lineno">   10</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a> (<a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
-<div class="line"><span class="lineno">   11</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00004">4</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>                             {</div>
+<div class="line"><span class="lineno">    5</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
+<div class="line"><span class="lineno">    6</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
+<div class="line"><span class="lineno">    7</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
+<div class="line"><span class="lineno">    8</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a> (<a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
+<div class="line"><span class="lineno">    9</span>}</div>
 <div class="ttc" id="aclasstree_html"><div class="ttname"><a href="classtree.html">tree</a></div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00038">tree.hpp:38</a></div></div>
 <div class="ttc" id="atree_8hpp_html_ac0de1eb7090de5a2d0f60a7bbc9c5ecd"><div class="ttname"><a href="tree_8hpp.html#ac0de1eb7090de5a2d0f60a7bbc9c5ecd">is_atomic</a></div><div class="ttdeci">bool is_atomic(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00205">tree.hpp:205</a></div></div>
 </div><!-- fragment -->
@@ -191,20 +168,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_is_compound&quot;                                                    &#160;</td>
+          <td class="paramtype">&quot;test_is_compound&quot;                                                      &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00013">13</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                               {</div>
-<div class="line"><span class="lineno">   14</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a> (<a class="code hl_class" href="classtree.html">tree</a> (70, 3)));</div>
-<div class="line"><span class="lineno">   15</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
-<div class="line"><span class="lineno">   16</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
-<div class="line"><span class="lineno">   17</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
-<div class="line"><span class="lineno">   18</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00011">11</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>                               {</div>
+<div class="line"><span class="lineno">   12</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a> (<a class="code hl_class" href="classtree.html">tree</a> (70, 3)));</div>
+<div class="line"><span class="lineno">   13</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a> (<a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
+<div class="line"><span class="lineno">   14</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
+<div class="line"><span class="lineno">   15</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
+<div class="line"><span class="lineno">   16</span>}</div>
 <div class="ttc" id="atree_8hpp_html_a8366e7beb2d3c79dbf2409d17311d47d"><div class="ttname"><a href="tree_8hpp.html#a8366e7beb2d3c79dbf2409d17311d47d">is_compound</a></div><div class="ttdeci">bool is_compound(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00209">tree.hpp:209</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -218,19 +195,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_is_bool&quot;                                                   &#160;</td>
+          <td class="paramtype">&quot;test_is_bool&quot;                                                     &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00020">20</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                           {</div>
-<div class="line"><span class="lineno">   21</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#ab3fab6afb0a03a318199c7b260ad2453">is_bool</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;true&quot;</span>)));</div>
-<div class="line"><span class="lineno">   22</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#ab3fab6afb0a03a318199c7b260ad2453">is_bool</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;false&quot;</span>)));</div>
-<div class="line"><span class="lineno">   23</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#ab3fab6afb0a03a318199c7b260ad2453">is_bool</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;other&quot;</span>)));</div>
-<div class="line"><span class="lineno">   24</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00018">18</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>                           {</div>
+<div class="line"><span class="lineno">   19</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#ab3fab6afb0a03a318199c7b260ad2453">is_bool</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;true&quot;</span>)));</div>
+<div class="line"><span class="lineno">   20</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#ab3fab6afb0a03a318199c7b260ad2453">is_bool</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;false&quot;</span>)));</div>
+<div class="line"><span class="lineno">   21</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#ab3fab6afb0a03a318199c7b260ad2453">is_bool</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;other&quot;</span>)));</div>
+<div class="line"><span class="lineno">   22</span>}</div>
 <div class="ttc" id="astring_8cpp_html_ab3fab6afb0a03a318199c7b260ad2453"><div class="ttname"><a href="string_8cpp.html#ab3fab6afb0a03a318199c7b260ad2453">is_bool</a></div><div class="ttdeci">bool is_bool(string s)</div><div class="ttdef"><b>Definition:</b> <a href="string_8cpp_source.html#l00359">string.cpp:359</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -244,21 +221,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_is_int&quot;                                                  &#160;</td>
+          <td class="paramtype">&quot;test_is_int&quot;                                                    &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00026">26</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                          {</div>
-<div class="line"><span class="lineno">   27</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
-<div class="line"><span class="lineno">   28</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;+12&quot;</span>)));</div>
-<div class="line"><span class="lineno">   29</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;-12&quot;</span>)));</div>
-<div class="line"><span class="lineno">   30</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;-+12&quot;</span>)));</div>
-<div class="line"><span class="lineno">   31</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;one&quot;</span>)));</div>
-<div class="line"><span class="lineno">   32</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00024">24</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                          {</div>
+<div class="line"><span class="lineno">   25</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
+<div class="line"><span class="lineno">   26</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;+12&quot;</span>)));</div>
+<div class="line"><span class="lineno">   27</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;-12&quot;</span>)));</div>
+<div class="line"><span class="lineno">   28</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;-+12&quot;</span>)));</div>
+<div class="line"><span class="lineno">   29</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;one&quot;</span>)));</div>
+<div class="line"><span class="lineno">   30</span>}</div>
 <div class="ttc" id="astring_8cpp_html_aab477f734a8e08c957a480dbd7923eaa"><div class="ttname"><a href="string_8cpp.html#aab477f734a8e08c957a480dbd7923eaa">is_int</a></div><div class="ttdeci">bool is_int(string s)</div><div class="ttdef"><b>Definition:</b> <a href="string_8cpp_source.html#l00364">string.cpp:364</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -272,19 +249,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_is_func&quot;                                                 &#160;</td>
+          <td class="paramtype">&quot;test_is_func&quot;                                                   &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00034">34</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                           {</div>
-<div class="line"><span class="lineno">   35</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ad97f052f92c591d8abbd506aa186b08d">is_func</a> (<a class="code hl_class" href="classtree.html">tree</a> (70, 3), 5));</div>
-<div class="line"><span class="lineno">   36</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ad97f052f92c591d8abbd506aa186b08d">is_func</a> (<a class="code hl_class" href="classtree.html">tree</a> (), 0));</div>
-<div class="line"><span class="lineno">   37</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ad97f052f92c591d8abbd506aa186b08d">is_func</a> (<a class="code hl_class" href="classtree.html">tree</a> (67, 4), 67));</div>
-<div class="line"><span class="lineno">   38</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00032">32</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                           {</div>
+<div class="line"><span class="lineno">   33</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ad97f052f92c591d8abbd506aa186b08d">is_func</a> (<a class="code hl_class" href="classtree.html">tree</a> (70, 3), 5));</div>
+<div class="line"><span class="lineno">   34</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ad97f052f92c591d8abbd506aa186b08d">is_func</a> (<a class="code hl_class" href="classtree.html">tree</a> (), 0));</div>
+<div class="line"><span class="lineno">   35</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ad97f052f92c591d8abbd506aa186b08d">is_func</a> (<a class="code hl_class" href="classtree.html">tree</a> (67, 4), 67));</div>
+<div class="line"><span class="lineno">   36</span>}</div>
 <div class="ttc" id="atree_8hpp_html_ad97f052f92c591d8abbd506aa186b08d"><div class="ttname"><a href="tree_8hpp.html#ad97f052f92c591d8abbd506aa186b08d">is_func</a></div><div class="ttdeci">bool is_func(tree t, int l)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00250">tree.hpp:250</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -298,23 +275,23 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_is_double&quot;                                                &#160;</td>
+          <td class="paramtype">&quot;test_is_double&quot;                                                  &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00040">40</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                             {</div>
-<div class="line"><span class="lineno">   41</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
-<div class="line"><span class="lineno">   42</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;3.15&quot;</span>)));</div>
-<div class="line"><span class="lineno">   43</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;0&quot;</span>)));</div>
-<div class="line"><span class="lineno">   44</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;0.0&quot;</span>)));</div>
-<div class="line"><span class="lineno">   45</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;3.1415926&quot;</span>)));</div>
-<div class="line"><span class="lineno">   46</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;-3.1415926&quot;</span>)));</div>
-<div class="line"><span class="lineno">   47</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;nothing&quot;</span>)));</div>
-<div class="line"><span class="lineno">   48</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00038">38</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                             {</div>
+<div class="line"><span class="lineno">   39</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
+<div class="line"><span class="lineno">   40</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;3.15&quot;</span>)));</div>
+<div class="line"><span class="lineno">   41</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;0&quot;</span>)));</div>
+<div class="line"><span class="lineno">   42</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;0.0&quot;</span>)));</div>
+<div class="line"><span class="lineno">   43</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;3.1415926&quot;</span>)));</div>
+<div class="line"><span class="lineno">   44</span>  CHECK (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;-3.1415926&quot;</span>)));</div>
+<div class="line"><span class="lineno">   45</span>  CHECK (!<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;nothing&quot;</span>)));</div>
+<div class="line"><span class="lineno">   46</span>}</div>
 <div class="ttc" id="astring_8cpp_html_a81edf84e403e5fbd83c130dacb5c6bdd"><div class="ttname"><a href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a></div><div class="ttdeci">bool is_double(string s)</div><div class="ttdef"><b>Definition:</b> <a href="string_8cpp_source.html#l00376">string.cpp:376</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -328,22 +305,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_is_string&quot;                                               &#160;</td>
+          <td class="paramtype">&quot;test_is_string&quot;                                                 &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00050">50</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                             {</div>
-<div class="line"><span class="lineno">   51</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
-<div class="line"><span class="lineno">   52</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;0&quot;</span>)));</div>
-<div class="line"><span class="lineno">   53</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;+121234&quot;</span>)));</div>
-<div class="line"><span class="lineno">   54</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;seigj&quot;</span>)));</div>
-<div class="line"><span class="lineno">   55</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;!@#$$!&quot;</span>)));</div>
-<div class="line"><span class="lineno">   56</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (70, 3)));</div>
-<div class="line"><span class="lineno">   57</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00048">48</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                             {</div>
+<div class="line"><span class="lineno">   49</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> ()));</div>
+<div class="line"><span class="lineno">   50</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;0&quot;</span>)));</div>
+<div class="line"><span class="lineno">   51</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;+121234&quot;</span>)));</div>
+<div class="line"><span class="lineno">   52</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;seigj&quot;</span>)));</div>
+<div class="line"><span class="lineno">   53</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;!@#$$!&quot;</span>)));</div>
+<div class="line"><span class="lineno">   54</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a> (<a class="code hl_class" href="classtree.html">tree</a> (70, 3)));</div>
+<div class="line"><span class="lineno">   55</span>}</div>
 <div class="ttc" id="atree_8hpp_html_a5546ef58a9d640fa4b52f0e92d4cf831"><div class="ttname"><a href="tree_8hpp.html#a5546ef58a9d640fa4b52f0e92d4cf831">is_string</a></div><div class="ttdeci">bool is_string(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00271">tree.hpp:271</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -357,24 +334,24 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_is_generic&quot;                                              &#160;</td>
+          <td class="paramtype">&quot;test_is_generic&quot;                                                &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00059">59</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                              {</div>
-<div class="line"><span class="lineno">   60</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (9, 0)));</div>
-<div class="line"><span class="lineno">   61</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (10, -1)));</div>
-<div class="line"><span class="lineno">   62</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (11, 1234)));</div>
-<div class="line"><span class="lineno">   63</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (11, 4)));</div>
-<div class="line"><span class="lineno">   64</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (12, 2)));</div>
-<div class="line"><span class="lineno">   65</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (-1, 1)));</div>
-<div class="line"><span class="lineno">   66</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (-2, 1)));</div>
-<div class="line"><span class="lineno">   67</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (-3, 1)));</div>
-<div class="line"><span class="lineno">   68</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00057">57</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                              {</div>
+<div class="line"><span class="lineno">   58</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (9, 0)));</div>
+<div class="line"><span class="lineno">   59</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (10, -1)));</div>
+<div class="line"><span class="lineno">   60</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (11, 1234)));</div>
+<div class="line"><span class="lineno">   61</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (11, 4)));</div>
+<div class="line"><span class="lineno">   62</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (12, 2)));</div>
+<div class="line"><span class="lineno">   63</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (-1, 1)));</div>
+<div class="line"><span class="lineno">   64</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (-2, 1)));</div>
+<div class="line"><span class="lineno">   65</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a> (<a class="code hl_class" href="classtree.html">tree</a> (-3, 1)));</div>
+<div class="line"><span class="lineno">   66</span>}</div>
 <div class="ttc" id="atree_8hpp_html_ab05d51c9ab9da17439c9e1e886af292a"><div class="ttname"><a href="tree_8hpp.html#ab05d51c9ab9da17439c9e1e886af292a">is_generic</a></div><div class="ttdeci">bool is_generic(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00213">tree.hpp:213</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -388,20 +365,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test <a class="el" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a>()&quot;                                             &#160;</td>
+          <td class="paramtype">&quot;test <a class="el" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a>()&quot;                                               &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00070">70</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                       {</div>
-<div class="line"><span class="lineno">   71</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classtree.html">tree</a> ()) == 0);</div>
-<div class="line"><span class="lineno">   72</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> ())) == 1);</div>
-<div class="line"><span class="lineno">   73</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ())) == 2);</div>
-<div class="line"><span class="lineno">   74</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ())) == 3);</div>
-<div class="line"><span class="lineno">   75</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00068">68</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                       {</div>
+<div class="line"><span class="lineno">   69</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classtree.html">tree</a> ()) == 0);</div>
+<div class="line"><span class="lineno">   70</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> ())) == 1);</div>
+<div class="line"><span class="lineno">   71</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ())) == 2);</div>
+<div class="line"><span class="lineno">   72</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ())) == 3);</div>
+<div class="line"><span class="lineno">   73</span>}</div>
 <div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -415,20 +392,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test_arity&quot;                                            &#160;</td>
+          <td class="paramtype">&quot;test_arity&quot;                                              &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00077">77</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                         {</div>
-<div class="line"><span class="lineno">   78</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, -1)));</div>
-<div class="line"><span class="lineno">   79</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a> (<a class="code hl_class" href="classtree.html">tree</a> (280, 0)));</div>
-<div class="line"><span class="lineno">   80</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a> (<a class="code hl_class" href="classtree.html">tree</a> (9, 3)));</div>
-<div class="line"><span class="lineno">   81</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 5)));</div>
-<div class="line"><span class="lineno">   82</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00075">75</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                         {</div>
+<div class="line"><span class="lineno">   76</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, -1)));</div>
+<div class="line"><span class="lineno">   77</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a> (<a class="code hl_class" href="classtree.html">tree</a> (280, 0)));</div>
+<div class="line"><span class="lineno">   78</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a> (<a class="code hl_class" href="classtree.html">tree</a> (9, 3)));</div>
+<div class="line"><span class="lineno">   79</span>  CHECK (!<a class="code hl_function" href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 5)));</div>
+<div class="line"><span class="lineno">   80</span>}</div>
 <div class="ttc" id="atree_8hpp_html_a886a4e51c4a41b4d50b943f02fc4ba34"><div class="ttname"><a href="tree_8hpp.html#a886a4e51c4a41b4d50b943f02fc4ba34">arity</a></div><div class="ttdeci">int arity(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00185">tree.hpp:185</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -442,21 +419,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test right_index&quot;                                           &#160;</td>
+          <td class="paramtype">&quot;test right_index&quot;                                             &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00084">84</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                               {</div>
-<div class="line"><span class="lineno">   85</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (0)) == 0);</div>
-<div class="line"><span class="lineno">   86</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>)) == 6);</div>
-<div class="line"><span class="lineno">   87</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (280, <a class="code hl_class" href="classtree.html">tree</a> ())) == 1);</div>
-<div class="line"><span class="lineno">   88</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (9, <a class="code hl_class" href="classtree.html">tree</a> ())) == 1);</div>
-<div class="line"><span class="lineno">   89</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 5)) == 5);</div>
-<div class="line"><span class="lineno">   90</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00082">82</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                               {</div>
+<div class="line"><span class="lineno">   83</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (0)) == 0);</div>
+<div class="line"><span class="lineno">   84</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (<span class="stringliteral">&quot;string&quot;</span>)) == 6);</div>
+<div class="line"><span class="lineno">   85</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (280, <a class="code hl_class" href="classtree.html">tree</a> ())) == 1);</div>
+<div class="line"><span class="lineno">   86</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (9, <a class="code hl_class" href="classtree.html">tree</a> ())) == 1);</div>
+<div class="line"><span class="lineno">   87</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 5)) == 5);</div>
+<div class="line"><span class="lineno">   88</span>}</div>
 <div class="ttc" id="atree_8hpp_html_a4063fca25ac586ddfb68853334b6d58e"><div class="ttname"><a href="tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e">right_index</a></div><div class="ttdeci">int right_index(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00190">tree.hpp:190</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -470,21 +447,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test <a class="el" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a>()&quot;                                          &#160;</td>
+          <td class="paramtype">&quot;test <a class="el" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a>()&quot;                                            &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00092">92</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                       {</div>
-<div class="line"><span class="lineno">   93</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2))[0] == 1);</div>
-<div class="line"><span class="lineno">   94</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2))[1] == 2);</div>
-<div class="line"><span class="lineno">   95</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2, 3))[0] == 1);</div>
-<div class="line"><span class="lineno">   96</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2, 3))[1] == 2);</div>
-<div class="line"><span class="lineno">   97</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2, 3))[2] == 3);</div>
-<div class="line"><span class="lineno">   98</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00090">90</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>                       {</div>
+<div class="line"><span class="lineno">   91</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2))[0] == 1);</div>
+<div class="line"><span class="lineno">   92</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2))[1] == 2);</div>
+<div class="line"><span class="lineno">   93</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2, 3))[0] == 1);</div>
+<div class="line"><span class="lineno">   94</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2, 3))[1] == 2);</div>
+<div class="line"><span class="lineno">   95</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2, 3))[2] == 3);</div>
+<div class="line"><span class="lineno">   96</span>}</div>
 <div class="ttc" id="aarray_8hpp_html_a104e332b2ad67c0ec3ff5b1d3f57d11a"><div class="ttname"><a href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a></div><div class="ttdeci">T * A(array&lt; T &gt; a)</div><div class="ttdoc">Get a pointer to the first element of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00171">array.hpp:171</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -498,23 +475,23 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test <a class="el" href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a>()&quot;                                         &#160;</td>
+          <td class="paramtype">&quot;test <a class="el" href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a>()&quot;                                           &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00100">100</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                        {</div>
-<div class="line"><span class="lineno">  101</span>  <a class="code hl_class" href="classtree.html">tree</a> a   = <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (3), <a class="code hl_class" href="classtree.html">tree</a> (4));</div>
-<div class="line"><span class="lineno">  102</span>  <a class="code hl_function" href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a> (a)[0]= <a class="code hl_class" href="classtree.html">tree</a> (5);</div>
-<div class="line"><span class="lineno">  103</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (a)[0] == <a class="code hl_class" href="classtree.html">tree</a> (5));</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (a)) == 2);</div>
-<div class="line"><span class="lineno">  106</span>  <a class="code hl_function" href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a> (a)= <a class="code hl_function" href="array_8hpp.html#af48c5156c227d75eb7479c0f12f07508">append</a> (<a class="code hl_class" href="classtree.html">tree</a> (5), <a class="code hl_function" href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a> (a));</div>
-<div class="line"><span class="lineno">  107</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (a)) == 3);</div>
-<div class="line"><span class="lineno">  108</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00098">98</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>                        {</div>
+<div class="line"><span class="lineno">   99</span>  <a class="code hl_class" href="classtree.html">tree</a> a   = <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (3), <a class="code hl_class" href="classtree.html">tree</a> (4));</div>
+<div class="line"><span class="lineno">  100</span>  <a class="code hl_function" href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a> (a)[0]= <a class="code hl_class" href="classtree.html">tree</a> (5);</div>
+<div class="line"><span class="lineno">  101</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (a)[0] == <a class="code hl_class" href="classtree.html">tree</a> (5));</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (a)) == 2);</div>
+<div class="line"><span class="lineno">  104</span>  <a class="code hl_function" href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a> (a)= <a class="code hl_function" href="array_8hpp.html#af48c5156c227d75eb7479c0f12f07508">append</a> (<a class="code hl_class" href="classtree.html">tree</a> (5), <a class="code hl_function" href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a> (a));</div>
+<div class="line"><span class="lineno">  105</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a">A</a> (a)) == 3);</div>
+<div class="line"><span class="lineno">  106</span>}</div>
 <div class="ttc" id="aarray_8hpp_html_af48c5156c227d75eb7479c0f12f07508"><div class="ttname"><a href="array_8hpp.html#af48c5156c227d75eb7479c0f12f07508">append</a></div><div class="ttdeci">array&lt; T &gt; append(T a, array&lt; T &gt; b)</div><div class="ttdoc">Append an element to the beginning of an array.</div></div>
 <div class="ttc" id="atree_8hpp_html_a3c7df24559b22df240690135c674f6e2"><div class="ttname"><a href="tree_8hpp.html#a3c7df24559b22df240690135c674f6e2">AR</a></div><div class="ttdeci">array&lt; tree &gt; &amp; AR(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00199">tree.hpp:199</a></div></div>
 </div><!-- fragment -->
@@ -535,12 +512,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00110">110</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                              {</div>
-<div class="line"><span class="lineno">  111</span>  CHECK (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2) != 1);</div>
-<div class="line"><span class="lineno">  112</span>  CHECK (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2) != 2);</div>
-<div class="line"><span class="lineno">  113</span>  CHECK (<a class="code hl_class" href="classtree.html">tree</a> (2) == 2);</div>
-<div class="line"><span class="lineno">  114</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00108">108</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                              {</div>
+<div class="line"><span class="lineno">  109</span>  CHECK (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2) != 1);</div>
+<div class="line"><span class="lineno">  110</span>  CHECK (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2) != 2);</div>
+<div class="line"><span class="lineno">  111</span>  CHECK (<a class="code hl_class" href="classtree.html">tree</a> (2) == 2);</div>
+<div class="line"><span class="lineno">  112</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -553,19 +530,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test inside&quot;                                        &#160;</td>
+          <td class="paramtype">&quot;test inside&quot;                                          &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00116">116</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                          {</div>
-<div class="line"><span class="lineno">  117</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a53928b7ba230c8d50515d71dfe266703">inside</a> (<a class="code hl_class" href="classtree.html">tree</a> (0))-&gt;op == 0);</div>
-<div class="line"><span class="lineno">  118</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a53928b7ba230c8d50515d71dfe266703">inside</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ()))-&gt;op == 0);</div>
-<div class="line"><span class="lineno">  119</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a53928b7ba230c8d50515d71dfe266703">inside</a> (<a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ()))-&gt;op == 3);</div>
-<div class="line"><span class="lineno">  120</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00114">114</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                          {</div>
+<div class="line"><span class="lineno">  115</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a53928b7ba230c8d50515d71dfe266703">inside</a> (<a class="code hl_class" href="classtree.html">tree</a> (0))-&gt;op == 0);</div>
+<div class="line"><span class="lineno">  116</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a53928b7ba230c8d50515d71dfe266703">inside</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ()))-&gt;op == 0);</div>
+<div class="line"><span class="lineno">  117</span>  CHECK (<a class="code hl_function" href="tree_8hpp.html#a53928b7ba230c8d50515d71dfe266703">inside</a> (<a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (), <a class="code hl_class" href="classtree.html">tree</a> ()))-&gt;op == 3);</div>
+<div class="line"><span class="lineno">  118</span>}</div>
 <div class="ttc" id="atree_8hpp_html_a53928b7ba230c8d50515d71dfe266703"><div class="ttname"><a href="tree_8hpp.html#a53928b7ba230c8d50515d71dfe266703">inside</a></div><div class="ttdeci">tree_rep * inside(tree t)</div><div class="ttdef"><b>Definition:</b> <a href="tree_8hpp_source.html#l00241">tree.hpp:241</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -579,22 +556,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test strong_equal&quot;                                       &#160;</td>
+          <td class="paramtype">&quot;test strong_equal&quot;                                         &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00122">122</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                {</div>
-<div class="line"><span class="lineno">  123</span>  <span class="keyword">auto</span> a= <a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
-<div class="line"><span class="lineno">  124</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>= &amp;a;</div>
-<div class="line"><span class="lineno">  125</span>  CHECK (<a class="code hl_function" href="list_8hpp.html#a462d483ee52c449435852927e12514f1">strong_equal</a> (a, *<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>));</div>
-<div class="line"><span class="lineno">  126</span>  CHECK (!<a class="code hl_function" href="list_8hpp.html#a462d483ee52c449435852927e12514f1">strong_equal</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2), <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
-<div class="line"><span class="lineno">  127</span>  CHECK (!<a class="code hl_function" href="list_8hpp.html#a462d483ee52c449435852927e12514f1">strong_equal</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2), <a class="code hl_class" href="classtree.html">tree</a> (4, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
-<div class="line"><span class="lineno">  128</span>}</div>
-<div class="ttc" id="ablackbox__test_8cpp_html_a8d44fd90fb43432ab6b2957b83f6c486"><div class="ttname"><a href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a></div><div class="ttdeci">blackbox b[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00043">blackbox_test.cpp:43</a></div></div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00120">120</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>                                {</div>
+<div class="line"><span class="lineno">  121</span>  <span class="keyword">auto</span> a= <a class="code hl_class" href="classtree.html">tree</a> (0, <a class="code hl_class" href="classtree.html">tree</a> ());</div>
+<div class="line"><span class="lineno">  122</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>= &amp;a;</div>
+<div class="line"><span class="lineno">  123</span>  CHECK (<a class="code hl_function" href="list_8hpp.html#a462d483ee52c449435852927e12514f1">strong_equal</a> (a, *<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>));</div>
+<div class="line"><span class="lineno">  124</span>  CHECK (!<a class="code hl_function" href="list_8hpp.html#a462d483ee52c449435852927e12514f1">strong_equal</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2), <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
+<div class="line"><span class="lineno">  125</span>  CHECK (!<a class="code hl_function" href="list_8hpp.html#a462d483ee52c449435852927e12514f1">strong_equal</a> (<a class="code hl_class" href="classtree.html">tree</a> (0, 1, 2), <a class="code hl_class" href="classtree.html">tree</a> (4, <a class="code hl_class" href="classtree.html">tree</a> ())));</div>
+<div class="line"><span class="lineno">  126</span>}</div>
+<div class="ttc" id="ablackbox__test_8cpp_html_a8d44fd90fb43432ab6b2957b83f6c486"><div class="ttname"><a href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a></div><div class="ttdeci">blackbox b[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00040">blackbox_test.cpp:40</a></div></div>
 <div class="ttc" id="alist_8hpp_html_a462d483ee52c449435852927e12514f1"><div class="ttname"><a href="list_8hpp.html#a462d483ee52c449435852927e12514f1">strong_equal</a></div><div class="ttdeci">bool strong_equal(list&lt; T &gt; l1, list&lt; T &gt; l2)</div><div class="ttdoc">Check if two lists are strongly equal (i.e., have the same items in the same order).</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00108">list.ipp:108</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -608,30 +585,30 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;test replace&quot;                                      &#160;</td>
+          <td class="paramtype">&quot;test replace&quot;                                        &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00130">130</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                           {</div>
-<div class="line"><span class="lineno">  131</span>  <a class="code hl_class" href="classtree.html">tree</a> la= <a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (3), <a class="code hl_class" href="classtree.html">tree</a> (3)));</div>
-<div class="line"><span class="lineno">  132</span>  <a class="code hl_class" href="classtree.html">tree</a> ra= <a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (4), <a class="code hl_class" href="classtree.html">tree</a> (5)));</div>
-<div class="line"><span class="lineno">  133</span>  <a class="code hl_class" href="classtree.html">tree</a> a = <a class="code hl_class" href="classtree.html">tree</a> (1, la, ra);</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>  <a class="code hl_class" href="classtree.html">tree</a> lb= <a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (6), <a class="code hl_class" href="classtree.html">tree</a> (6)));</div>
-<div class="line"><span class="lineno">  136</span>  <a class="code hl_class" href="classtree.html">tree</a> rb= <a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (4), <a class="code hl_class" href="classtree.html">tree</a> (5)));</div>
-<div class="line"><span class="lineno">  137</span>  <a class="code hl_class" href="classtree.html">tree</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> = <a class="code hl_class" href="classtree.html">tree</a> (1, lb, rb);</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>  a= <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (a, <a class="code hl_class" href="classtree.html">tree</a> (3), <a class="code hl_class" href="classtree.html">tree</a> (6));</div>
-<div class="line"><span class="lineno">  140</span>  CHECK (a == <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>);</div>
-<div class="line"><span class="lineno">  141</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>= <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>, <a class="code hl_class" href="classtree.html">tree</a> (4), <a class="code hl_class" href="classtree.html">tree</a> (7));</div>
-<div class="line"><span class="lineno">  142</span>  CHECK (a != <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>);</div>
-<div class="line"><span class="lineno">  143</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>= <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>, <a class="code hl_class" href="classtree.html">tree</a> (7), <a class="code hl_class" href="classtree.html">tree</a> (4));</div>
-<div class="line"><span class="lineno">  144</span>  CHECK (a == <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>);</div>
-<div class="line"><span class="lineno">  145</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00128">128</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>                           {</div>
+<div class="line"><span class="lineno">  129</span>  <a class="code hl_class" href="classtree.html">tree</a> la= <a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (3), <a class="code hl_class" href="classtree.html">tree</a> (3)));</div>
+<div class="line"><span class="lineno">  130</span>  <a class="code hl_class" href="classtree.html">tree</a> ra= <a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (4), <a class="code hl_class" href="classtree.html">tree</a> (5)));</div>
+<div class="line"><span class="lineno">  131</span>  <a class="code hl_class" href="classtree.html">tree</a> a = <a class="code hl_class" href="classtree.html">tree</a> (1, la, ra);</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>  <a class="code hl_class" href="classtree.html">tree</a> lb= <a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (6), <a class="code hl_class" href="classtree.html">tree</a> (6)));</div>
+<div class="line"><span class="lineno">  134</span>  <a class="code hl_class" href="classtree.html">tree</a> rb= <a class="code hl_class" href="classtree.html">tree</a> (1, <a class="code hl_class" href="classtree.html">tree</a> (2, <a class="code hl_class" href="classtree.html">tree</a> (4), <a class="code hl_class" href="classtree.html">tree</a> (5)));</div>
+<div class="line"><span class="lineno">  135</span>  <a class="code hl_class" href="classtree.html">tree</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> = <a class="code hl_class" href="classtree.html">tree</a> (1, lb, rb);</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>  a= <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (a, <a class="code hl_class" href="classtree.html">tree</a> (3), <a class="code hl_class" href="classtree.html">tree</a> (6));</div>
+<div class="line"><span class="lineno">  138</span>  CHECK (a == <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>);</div>
+<div class="line"><span class="lineno">  139</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>= <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>, <a class="code hl_class" href="classtree.html">tree</a> (4), <a class="code hl_class" href="classtree.html">tree</a> (7));</div>
+<div class="line"><span class="lineno">  140</span>  CHECK (a != <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>);</div>
+<div class="line"><span class="lineno">  141</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>= <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>, <a class="code hl_class" href="classtree.html">tree</a> (7), <a class="code hl_class" href="classtree.html">tree</a> (4));</div>
+<div class="line"><span class="lineno">  142</span>  CHECK (a == <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>);</div>
+<div class="line"><span class="lineno">  143</span>}</div>
 <div class="ttc" id="aanalyze_8cpp_html_abf51647f03d162c0ab951cacee80e57c"><div class="ttname"><a href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a></div><div class="ttdeci">string replace(string s, string what, string by)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01371">analyze.cpp:1371</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -645,24 +622,24 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;tree (const <a class="el" href="classtree.html">tree</a>&amp; x)&quot;                                                                                                                                                                                                   &#160;</td>
+          <td class="paramtype">&quot;tree (const <a class="el" href="classtree.html">tree</a>&amp; x)&quot;                                                                                                                                                                                                     &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00158">158</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>                                   {</div>
-<div class="line"><span class="lineno">  159</span>  <a class="code hl_class" href="classtree.html">tree</a> a= <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>  <a class="code hl_class" href="classtree.html">tree</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> (a);</div>
-<div class="line"><span class="lineno">  162</span>  CHECK (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> == <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (2)));</div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>  CHECK (a[0] == <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
-<div class="line"><span class="lineno">  165</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[0]= <a class="code hl_class" href="classtree.html">tree</a> (4);</div>
-<div class="line"><span class="lineno">  166</span>  CHECK (a[0] == <a class="code hl_class" href="classtree.html">tree</a> (4));</div>
-<div class="line"><span class="lineno">  167</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00156">156</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>                                   {</div>
+<div class="line"><span class="lineno">  157</span>  <a class="code hl_class" href="classtree.html">tree</a> a= <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>  <a class="code hl_class" href="classtree.html">tree</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> (a);</div>
+<div class="line"><span class="lineno">  160</span>  CHECK (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> == <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (2)));</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>  CHECK (a[0] == <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
+<div class="line"><span class="lineno">  163</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[0]= <a class="code hl_class" href="classtree.html">tree</a> (4);</div>
+<div class="line"><span class="lineno">  164</span>  CHECK (a[0] == <a class="code hl_class" href="classtree.html">tree</a> (4));</div>
+<div class="line"><span class="lineno">  165</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -675,24 +652,24 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;copy&quot;                                     &#160;</td>
+          <td class="paramtype">&quot;copy&quot;                                       &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00169">169</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                   {</div>
-<div class="line"><span class="lineno">  170</span>  <a class="code hl_class" href="classtree.html">tree</a> a= <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
-<div class="line"><span class="lineno">  171</span> </div>
-<div class="line"><span class="lineno">  172</span>  <a class="code hl_class" href="classtree.html">tree</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>= <a class="code hl_function" href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a> (a);</div>
-<div class="line"><span class="lineno">  173</span>  CHECK (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> == <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (2)));</div>
-<div class="line"><span class="lineno">  174</span> </div>
+<p class="definition">Definition at line <a class="el" href="tree__test_8cpp_source.html#l00167">167</a> of file <a class="el" href="tree__test_8cpp_source.html">tree_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>                   {</div>
+<div class="line"><span class="lineno">  168</span>  <a class="code hl_class" href="classtree.html">tree</a> a= <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>  <a class="code hl_class" href="classtree.html">tree</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>= <a class="code hl_function" href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a> (a);</div>
+<div class="line"><span class="lineno">  171</span>  CHECK (<a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> == <a class="code hl_class" href="classtree.html">tree</a> (3, <a class="code hl_class" href="classtree.html">tree</a> (2)));</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>  CHECK (a[0] == <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
+<div class="line"><span class="lineno">  174</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[0]= <a class="code hl_class" href="classtree.html">tree</a> (4);</div>
 <div class="line"><span class="lineno">  175</span>  CHECK (a[0] == <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
-<div class="line"><span class="lineno">  176</span>  <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[0]= <a class="code hl_class" href="classtree.html">tree</a> (4);</div>
-<div class="line"><span class="lineno">  177</span>  CHECK (a[0] == <a class="code hl_class" href="classtree.html">tree</a> (2));</div>
-<div class="line"><span class="lineno">  178</span>}</div>
+<div class="line"><span class="lineno">  176</span>}</div>
 <div class="ttc" id="abasic_8hpp_html_a2ef6020a582fc3399a7f7af2334655b9"><div class="ttname"><a href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a></div><div class="ttdeci">int copy(int x)</div><div class="ttdoc">Returns a copy of an integer.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00506">basic.hpp:506</a></div></div>
 </div><!-- fragment -->
 </div>

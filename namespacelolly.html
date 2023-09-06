@@ -86,6 +86,8 @@ Functions</h2></td></tr>
 <tr class="separator:af6fe7b4912333fe12bbef5d8a6ef81f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7372c421169d7c0d10cf4a810ecdbde1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#a7372c421169d7c0d10cf4a810ecdbde1">win_get_username</a> ()</td></tr>
 <tr class="separator:a7372c421169d7c0d10cf4a810ecdbde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5676a9b980b91430d04a8dd4e469cc19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#a5676a9b980b91430d04a8dd4e469cc19">init_tbox</a> ()</td></tr>
+<tr class="separator:a5676a9b980b91430d04a8dd4e469cc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7c8230fccf51fc5c61bf22b06f4b99d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">system</a> (<a class="el" href="classstring.html">string</a> cmd)</td></tr>
 <tr class="separator:aa7c8230fccf51fc5c61bf22b06f4b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -254,6 +256,28 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a5676a9b980b91430d04a8dd4e469cc19" name="a5676a9b980b91430d04a8dd4e469cc19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5676a9b980b91430d04a8dd4e469cc19">&#9670;&#160;</a></span>init_tbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lolly::init_tbox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00141">141</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>             {</div>
+<div class="line"><span class="lineno">  142</span>  <span class="keywordflow">if</span> (!tb_init (tb_null, tb_null)) exit (-1);</div>
+<div class="line"><span class="lineno">  143</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aa7c8230fccf51fc5c61bf22b06f4b99d" name="aa7c8230fccf51fc5c61bf22b06f4b99d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7c8230fccf51fc5c61bf22b06f4b99d">&#9670;&#160;</a></span>system()</h2>
 
@@ -270,15 +294,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00141">141</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                    {</div>
-<div class="line"><span class="lineno">  142</span><span class="preprocessor">#ifdef OS_WASM</span></div>
-<div class="line"><span class="lineno">  143</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  144</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  145</span>  tb_process_attr_t attr= {0};</div>
-<div class="line"><span class="lineno">  146</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) tb_process_run_cmd (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (cmd), &amp;attr);</div>
-<div class="line"><span class="lineno">  147</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  148</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00146">146</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                    {</div>
+<div class="line"><span class="lineno">  147</span><span class="preprocessor">#ifdef OS_WASM</span></div>
+<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  149</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  150</span>  tb_process_attr_t attr= {0};</div>
+<div class="line"><span class="lineno">  151</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) tb_process_run_cmd (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (cmd), &amp;attr);</div>
+<div class="line"><span class="lineno">  152</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  153</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
