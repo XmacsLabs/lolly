@@ -28,7 +28,7 @@ get_env (string var) {
     size= tb_environment_load (environment, as_charp (var));
     if (size >= 1) {
       tb_for_all_if (tb_char_t const*, value, environment, value) {
-        ret= ret * string (value) * ";";
+        ret= ret * string (value) * URL_SEPARATOR;
       }
     }
   }

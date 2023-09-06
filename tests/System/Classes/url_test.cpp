@@ -98,5 +98,6 @@ TEST_CASE ("get_root") {
 
 TEST_CASE ("as_string") {
   url dirs= url ("Data") | url ("Kernel") | url ("Plugins");
-  string_eq (as_string (dirs), "Data;Kernel;Plugins");
+  string_eq (as_string (dirs), string ("Data") * URL_SEPARATOR * "Kernel" *
+                                   URL_SEPARATOR * "Plugins");
 }

@@ -20,14 +20,6 @@
 #define WINPATHS
 #endif
 
-#ifdef WINPATHS
-#define URL_CONCATER '\\'
-#define URL_SEPARATOR ';'
-#else
-#define URL_CONCATER '/'
-#define URL_SEPARATOR ':'
-#endif
-
 static tree
 url_tuple (string label) {
   return tree (URL_TUPLE, tree (label));
