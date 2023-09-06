@@ -76,6 +76,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">sys_utils.hpp File Reference</div></div>
 </div><!--header-->
@@ -99,6 +100,13 @@ This graph shows which files directly or indirectly include this file:</div>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacelolly"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html">lolly</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:abe41c985c10c1bb87632b6a9a40094fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__utils_8hpp.html#abe41c985c10c1bb87632b6a9a40094fa">URL_CONCATER</a>&#160;&#160;&#160;'/'</td></tr>
+<tr class="separator:abe41c985c10c1bb87632b6a9a40094fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a802fa41ff455dbced9c5696b81406a95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__utils_8hpp.html#a802fa41ff455dbced9c5696b81406a95">URL_SEPARATOR</a>&#160;&#160;&#160;':'</td></tr>
+<tr class="separator:a802fa41ff455dbced9c5696b81406a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -125,6 +133,39 @@ Functions</h2></td></tr>
 <tr class="memitem:aa7c8230fccf51fc5c61bf22b06f4b99d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<a class="el" href="classstring.html">string</a> cmd)</td></tr>
 <tr class="separator:aa7c8230fccf51fc5c61bf22b06f4b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="abe41c985c10c1bb87632b6a9a40094fa" name="abe41c985c10c1bb87632b6a9a40094fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe41c985c10c1bb87632b6a9a40094fa">&#9670;&#160;</a></span>URL_CONCATER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define URL_CONCATER&#160;&#160;&#160;'/'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sys__utils_8hpp_source.html#l00022">22</a> of file <a class="el" href="sys__utils_8hpp_source.html">sys_utils.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a802fa41ff455dbced9c5696b81406a95" name="a802fa41ff455dbced9c5696b81406a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a802fa41ff455dbced9c5696b81406a95">&#9670;&#160;</a></span>URL_SEPARATOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define URL_SEPARATOR&#160;&#160;&#160;':'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sys__utils_8hpp_source.html#l00023">23</a> of file <a class="el" href="sys__utils_8hpp_source.html">sys_utils.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="adafe88317c2838dd7505ba786e93277d" name="adafe88317c2838dd7505ba786e93277d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adafe88317c2838dd7505ba786e93277d">&#9670;&#160;</a></span>get_env()</h2>
@@ -151,7 +192,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   28</span>    size= tb_environment_load (environment, <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (var));</div>
 <div class="line"><span class="lineno">   29</span>    <span class="keywordflow">if</span> (size &gt;= 1) {</div>
 <div class="line"><span class="lineno">   30</span>      tb_for_all_if (tb_char_t <span class="keyword">const</span>*, value, environment, value) {</div>
-<div class="line"><span class="lineno">   31</span>        ret= ret * <a class="code hl_class" href="classstring.html">string</a> (value) * <span class="stringliteral">&quot;;&quot;</span>;</div>
+<div class="line"><span class="lineno">   31</span>        ret= ret * <a class="code hl_class" href="classstring.html">string</a> (value) * <a class="code hl_define" href="sys__utils_8hpp.html#a802fa41ff455dbced9c5696b81406a95">URL_SEPARATOR</a>;</div>
 <div class="line"><span class="lineno">   32</span>      }</div>
 <div class="line"><span class="lineno">   33</span>    }</div>
 <div class="line"><span class="lineno">   34</span>  }</div>
@@ -167,6 +208,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
 <div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00034">string.hpp:34</a></div></div>
 <div class="ttc" id="astring_8cpp_html_a6a5cc26a2db9765c14853b9cfd7335b4"><div class="ttname"><a href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a></div><div class="ttdeci">char * as_charp(string s)</div><div class="ttdef"><b>Definition:</b> <a href="string_8cpp_source.html#l00281">string.cpp:281</a></div></div>
+<div class="ttc" id="asys__utils_8hpp_html_a802fa41ff455dbced9c5696b81406a95"><div class="ttname"><a href="sys__utils_8hpp.html#a802fa41ff455dbced9c5696b81406a95">URL_SEPARATOR</a></div><div class="ttdeci">#define URL_SEPARATOR</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8hpp_source.html#l00023">sys_utils.hpp:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
