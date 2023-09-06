@@ -4,9 +4,7 @@
  *  \author Darcy
  *  \date   2019-2023
  */
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-
-#include "doctest/doctest.h"
+#include "a_tbox_main.cpp"
 #include "file.hpp"
 #include "tbox/tbox.h"
 
@@ -21,20 +19,17 @@ get_lolly_tmp () {
 
 #if defined(OS_WIN) || defined(OS_MINGW)
 TEST_CASE ("is_directory on Windows") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (is_directory (url_system ("C:/Windows")));
 }
 #endif
 
 #if defined(OS_LINUX)
 TEST_CASE ("is_symbolic_link on linux") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (is_symbolic_link (url_system ("/usr/bin/python")));
 }
 #endif
 
 TEST_CASE ("is_directory/is_regular") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (is_directory (url_pwd ()));
   CHECK (!is_regular (url_pwd ()));
   CHECK (!is_symbolic_link (url_pwd ()));
@@ -46,7 +41,6 @@ TEST_CASE ("is_directory/is_regular") {
 }
 
 TEST_CASE ("is_newer") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   url lolly_tmp= get_lolly_tmp ();
   mkdir (lolly_tmp);
   url old_dir= lolly_tmp * url ("old");
@@ -59,7 +53,6 @@ TEST_CASE ("is_newer") {
 }
 
 TEST_CASE ("is_of_type") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (is_of_type (url_pwd (), "d"));
   CHECK (!is_of_type (url_pwd (), "f"));
   CHECK (is_of_type (url_pwd () * url ("xmake.lua"), "fr"));
@@ -69,17 +62,14 @@ TEST_CASE ("is_of_type") {
 }
 
 TEST_CASE ("file_size") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
 }
 
 TEST_CASE ("last_modified") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   CHECK (last_modified (url_pwd () * url ("xmake.lua")) > 0);
 }
 
 TEST_CASE ("mkdir/rmdir") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   url lolly_tmp = get_lolly_tmp ();
   url test_mkdir= lolly_tmp * url ("tmp_dir");
   mkdir (test_mkdir);
@@ -89,7 +79,6 @@ TEST_CASE ("mkdir/rmdir") {
 }
 
 TEST_CASE ("remove") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   url       lolly_tmp= get_lolly_tmp ();
   tb_hong_t time     = tb_time ();
 
@@ -119,7 +108,6 @@ TEST_CASE ("remove") {
 }
 
 TEST_CASE ("move") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   url       lolly_tmp= get_lolly_tmp ();
   tb_hong_t time     = tb_time ();
   url       m1       = lolly_tmp * url ("move_1.txt");
@@ -132,7 +120,6 @@ TEST_CASE ("move") {
 }
 
 TEST_CASE ("copy") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   url       lolly_tmp= get_lolly_tmp ();
   tb_hong_t time     = tb_time ();
   url       c1       = lolly_tmp * url ("copy_1.txt");
@@ -147,7 +134,6 @@ TEST_CASE ("copy") {
 }
 
 TEST_CASE ("url_temp") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   url       tmp1= url_temp ("test");
   tb_hong_t time= tb_time ();
   tb_file_touch (as_charp (as_string (tmp1)), time, time);
@@ -157,7 +143,6 @@ TEST_CASE ("url_temp") {
 }
 
 TEST_CASE ("read_directory") {
-  if (!tb_init (tb_null, tb_null)) exit (-1);
   bool flag1= false;
   CHECK (N (read_directory (url_pwd (), flag1)) > 0);
   CHECK (!flag1); // no error

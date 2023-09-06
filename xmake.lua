@@ -191,6 +191,7 @@ function add_test_target(filepath)
 
         add_includedirs("$(buildir)/L1")
         add_includedirs(lolly_includedirs)
+        add_includedirs("tests")
         add_files(filepath) 
 
         if is_plat("windows") then
