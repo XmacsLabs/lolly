@@ -15,6 +15,14 @@
 #include "array.hpp"
 #include "string.hpp"
 
+#if defined(OS_MINGW) || defined(OS_WIN)
+#define URL_CONCATER '\\'
+#define URL_SEPARATOR ';'
+#else
+#define URL_CONCATER '/'
+#define URL_SEPARATOR ':'
+#endif
+
 string get_env (string var);
 void   set_env (string var, string with);
 

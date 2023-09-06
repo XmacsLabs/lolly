@@ -18,6 +18,23 @@ url unix_tmp   = url_system ("/tmp");
 url unix_tmp_a = url_system ("/tmp/a");
 url abc_url    = url_system ("abc");
 
+TEST_CASE ("url with env") {
+#if defined(OS_MINGW) || defined(OS_WIN)
+  SUBCASE ("on windows") {
+    set_env ("TEST_ENV", "System;Plugins;Kernel");
+    url u= url ("$TEST_ENV");
+    CHECK (is_or (u));
+  }
+#endif
+#if defined(OS_MACOS) || defined(OS_LINUX) || defined(OS_WASM)
+  SUBCASE ("on macos/linux/wasm") {
+    set_env ("TEST_ENV", "System:Plugins:Kernel");
+    url u= url ("$TEST_ENV");
+    CHECK (is_or (u));
+  }
+#endif
+}
+
 TEST_CASE ("is here/parent/ancestor") { CHECK (is_here (url_here ())); }
 
 TEST_CASE ("is_none") {
@@ -77,4 +94,10 @@ TEST_CASE ("get_root") {
 #endif
   string_eq (get_root (none_url), "");
   string_eq (get_root (file_root | texmacs_org), "");
+}
+
+TEST_CASE ("as_string") {
+  url dirs= url ("Data") | url ("Kernel") | url ("Plugins");
+  string_eq (as_string (dirs), string ("Data") * URL_SEPARATOR * "Kernel" *
+                                   URL_SEPARATOR * "Plugins");
 }
