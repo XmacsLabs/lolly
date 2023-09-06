@@ -14,10 +14,10 @@ url system_root  = url_system ("%SystemRoot%");
 url windir       = url_system ("%windir%");
 
 TEST_CASE ("as_string on windows") {
-  CHECK_EQ (as_string (win_c) == string ("C:\\"), true);
-  CHECK_EQ (as_string (win_c_windows) == string ("C:\\Windows"), true);
-  CHECK_EQ (as_string (system_root) == string ("%SystemRoot%"), true);
-  CHECK_EQ (as_string (windir) == string ("%windir%"), true);
+  string_eq (as_string (win_c), "C:\\");
+  string_eq (as_string (win_c_windows), "C:\\Windows");
+  string_eq (as_string (system_root), "%SystemRoot%");
+  string_eq (as_string (windir), "%windir%");
 }
 #else
 url unix_root= url_system ("/");
@@ -25,6 +25,6 @@ url unix_tmp = url_system ("/tmp");
 
 TEST_CASE ("as_string on nix") {
   string_eq (as_string (unix_root), "/");
-  string_eq (as_string (unix_tmp) "/tmp", true);
+  string_eq (as_string (unix_tmp), "/tmp");
 }
 #endif
