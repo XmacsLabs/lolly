@@ -4,9 +4,7 @@
  *  \author Darcy
  *  \date   2019-2023
  */
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-
-#include "doctest/doctest.h"
+#include "a_tbox_main.cpp"
 #include "url.hpp"
 
 url ustc_edu   = url_system ("https://ustc.edu.cn");
@@ -64,19 +62,19 @@ TEST_CASE ("suffix") {
 
   // normal suffix should work
   url png= url ("/a/b/c/d.png");
-  CHECK_EQ (suffix (png) == string ("png"), true);
+  string_eq (suffix (png), "png");
   url png2= url ("/a/b.c/d.png");
-  CHECK_EQ (suffix (png2) == string ("png"), true);
+  string_eq (suffix (png2), "png");
 }
 
 TEST_CASE ("get_root") {
-  CHECK_EQ (get_root (ustc_edu) == "https", true);
-  CHECK_EQ (get_root (texmacs_org) == "http", true);
-  CHECK_EQ (get_root (file_root) == "file", true);
-  CHECK_EQ (get_root (ftp_root) == "ftp", true);
+  string_eq (get_root (ustc_edu), "https");
+  string_eq (get_root (texmacs_org), "http");
+  string_eq (get_root (file_root), "file");
+  string_eq (get_root (ftp_root), "ftp");
 #if defined(OS_MINGW) || defined(OS_WIN)
-  CHECK_EQ (get_root (wsl_ubuntu) == "default", true);
+  string_eq (get_root (wsl_ubuntu), "default");
 #endif
-  CHECK_EQ (get_root (none_url) == "", true);
-  CHECK_EQ (get_root (file_root | texmacs_org) == "", true);
+  string_eq (get_root (none_url), "");
+  string_eq (get_root (file_root | texmacs_org), "");
 }

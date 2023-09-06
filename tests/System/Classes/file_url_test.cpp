@@ -4,9 +4,7 @@
  *  \author Darcy
  *  \date   2019-2023
  */
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-
-#include "doctest/doctest.h"
+#include "a_tbox_main.cpp"
 #include "url.hpp"
 
 #if defined(OS_MINGW) || defined(OS_WIN)
@@ -26,7 +24,7 @@ url unix_root= url_system ("/");
 url unix_tmp = url_system ("/tmp");
 
 TEST_CASE ("as_string on nix") {
-  CHECK_EQ (as_string (unix_root) == "/", true);
-  CHECK_EQ (as_string (unix_tmp) == "/tmp", true);
+  string_eq (as_string (unix_root), "/");
+  string_eq (as_string (unix_tmp) "/tmp", true);
 }
 #endif
