@@ -684,8 +684,6 @@ int search_backwards (string what, int pos, string in);
  */
 int count_occurrences (string what, string in);
 
-int count_occurrences (string what, string in);
-
 /**
  * Checks whether a substring occurs within another string.
  *
