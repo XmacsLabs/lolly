@@ -1,5 +1,10 @@
 set_project("lolly")
+
 set_languages("c++17")
+includes("check_cxxtypes.lua")
+includes("check_cxxincludes.lua")
+includes("check_cxxfuncs.lua")
+includes("check_cxxsnippets.lua")
 
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
@@ -12,24 +17,6 @@ if is_plat("wasm") then
     add_requires("emscripten")
     set_toolchains("emcc@emscripten")
 end
-
-includes("check_cxxtypes.lua")
-configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
-configvar_check_cxxtypes("HAVE_TIME_T", "time_t", {includes = {"memory"}})
-
-includes("check_cxxincludes.lua")
-configvar_check_cxxincludes("HAVE_STDLIB_H", "stdlib.h")
-configvar_check_cxxincludes("HAVE_STDINT_H", "stdint.h")
-configvar_check_cxxincludes("HAVE_INTTYPES_H", "inttypes.h")
-
-includes("check_cxxfuncs.lua")
-configvar_check_cxxfuncs("HAVE_GETTIMEOFDAY", "gettimeofday", {includes={"sys/time.h"}})
-
-includes("check_cxxsnippets.lua")
-configvar_check_cxxsnippets(
-    "CONFIG_LARGE_POINTER", [[
-        #include <stdlib.h>
-        static_assert(sizeof(void*) == 8, "");]])
 
 --- require packages
 tbox_configs = {hash=true, ["force-utf8"]=true}
@@ -57,6 +44,29 @@ option("posix_thread")
     add_cxxtypes("std::mutex")
     add_cxxincludes("mutex")
 option_end()
+
+function my_configvar_check()
+    on_config(function (target)
+        if target:has_cxxtypes("intptr_t", {includes = "memory"}) then
+            target:set("configvar", "HAVE_INTPTR_T", 1)
+        end
+        if target:has_cxxtypes("time_t", {incldes = "memory"}) then
+            target:set("configvar", "HAVE_TIME_T", 1)
+        end
+        if target:has_cxxincludes("stdlib.h") then
+            target:set("configvar", "HAVE_STDLIB_H", 1)
+        end
+        if target:has_cxxincludes("stdint.h") then
+            target:set("configvar", "HAVE_STDINT_H", 1)
+        end
+        if target:has_cxxincludes("inttypes.h") then
+            target:set("configvar", "HAVE_INTTYPES_H", 1)
+        end
+        if target:has_cfuncs("gettimeofday", {includes={"sys/time.h"}}) then
+            target:set("configvar", "HAVE_GETTIMEOFDAY", 1)
+        end
+    end)
+end
 
 local lolly_files = {
     "Kernel/**/*.cpp",
@@ -89,6 +99,7 @@ target("liblolly") do
         set_languages("c++98")
     end
     set_policy("check.auto_ignore_flags", false)
+    my_configvar_check()
 
     set_basename("lolly")
 
@@ -137,11 +148,14 @@ target("liblolly") do
         add_defines("DOCTEST_CONFIG_NO_MULTITHREADING")
     end
 
-    if is_plat("windows") then
-        add_cxxflags("-FI " .. path.absolute("$(buildir)\\L1\\config.h"))
-    else
-        add_cxxflags("-include $(buildir)/L1/config.h")
-    end
+    before_build(function (target)
+        if is_plat("windows") then
+            target:add("cxxflags", "-FI " .. path.absolute("$(buildir)\\L1\\config.h"))
+        else
+            target:add("cxxflags", "-include $(buildir)/L1/config.h")
+        end
+    end)
+
     add_headerfiles("Kernel/Abstractions/(*.hpp)")
     add_headerfiles("Kernel/Algorithms/(*.hpp)")
     add_headerfiles("Kernel/Containers/(*.hpp)")
