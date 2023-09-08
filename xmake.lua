@@ -149,7 +149,7 @@ target("liblolly") do
     end
 
     before_build(function (target)
-        target:add("forceincludes", "$(buildir)/L1/config.h")
+        target:add("forceincludes", path.absolute("$(buildir)/L1/config.h"))
     end)
 
     add_headerfiles("Kernel/Abstractions/(*.hpp)")
@@ -205,7 +205,7 @@ function add_test_target(filepath)
         add_includedirs("$(buildir)/L1")
         add_includedirs(lolly_includedirs)
         add_includedirs("tests")
-        add_forceincludes("$(buildir)/L1/config.h")
+        add_forceincludes(path.absolute("$(buildir)/L1/config.h"))
         add_files(filepath) 
 
         if is_plat("wasm") then
