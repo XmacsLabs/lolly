@@ -1,6 +1,6 @@
 
 /**
- * \file      hashmap.hpp
+ * \file      hashmap.h
  * \details   fixed size hashmaps with reference counting
  * \copyright GPLv3
  * \author    Joris van der Hoeven

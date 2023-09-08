@@ -5,38 +5,47 @@
  *  \date   2023
  */
 #include "a_lolly_test.hpp"
+#include "analyze.hpp"
+#include "string.hpp"
 #include "tm_timer.hpp"
 
-#include <cstring>
-#include <iostream>
-#include <sstream>
-#include <string>
+string
+get_word (char* s, int index) {
+  int j= index;
+  while (j < N (s) && s[j] != ' ')
+    j++;
+  return string (s[index], j - index);
+}
 
 int
 get_timing_cumul (string rep) {
-  auto              out= as_charp (rep);
-  std::stringstream ss (out);
-  std::string       token;
+  char* out= as_charp (rep);
 
-  while (ss >> token) {
-    if (std::isdigit (token[0]) ||
-        (token[0] == '-' && std::isdigit (token[1]))) {
-      return std::stoi (token);
+  int i= 0;
+  while (i < N (out)) {
+    if (is_digit (out[i]) || (out[i] == '-' && is_digit (out[i + 1]))) {
+      return as_int (get_word (out, i));
     }
+    while (out[i] != ' ' && i < N (out))
+      ++i;
+    ++i;
   }
 }
 
 int
 get_timing_nr (string rep) {
-  auto              out= as_charp (rep);
-  std::stringstream ss (out);
-  std::string       token;
+  char* out= as_charp (rep);
+  // std::stringstream ss (out);
+  // std::string       token;
 
-  while (ss >> token) {
-    if (token[0] == '(') {
-      std::string token1= token.substr (1);
-      return std::stoi (token1);
+  int i= 0;
+  while (i < N (out)) {
+    if (out[i] == '(') {
+      return as_int (get_word (out, i + 1));
     }
+    while (out[i] != ' ' && i < N (out))
+      ++i;
+    ++i;
   }
   return -1;
 }
