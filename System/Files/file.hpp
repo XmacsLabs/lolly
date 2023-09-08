@@ -18,6 +18,7 @@ bool is_directory (url u);
 bool is_regular (url u);
 bool is_symbolic_link (url u);
 bool is_newer (url which, url than);
+bool is_of_type (url name, string filter);
 
 int file_size (url u);
 int last_modified (url u);

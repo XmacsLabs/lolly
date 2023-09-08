@@ -1,7 +1,4 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-
-#include "doctest/doctest.h"
-
+#include "a_lolly_test.hpp"
 #include "analyze.hpp"
 
 TEST_CASE ("test is alpha") {

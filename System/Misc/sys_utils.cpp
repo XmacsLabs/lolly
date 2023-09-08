@@ -28,7 +28,7 @@ get_env (string var) {
     size= tb_environment_load (environment, as_charp (var));
     if (size >= 1) {
       tb_for_all_if (tb_char_t const*, value, environment, value) {
-        ret= ret * string (value) * ";";
+        ret= ret * string (value) * URL_SEPARATOR;
       }
     }
   }
@@ -137,6 +137,11 @@ evaluate_system (array<string> arg, array<int> fd_in, array<string> in,
 }
 
 namespace lolly {
+void
+init_tbox () {
+  if (!tb_init (tb_null, tb_null)) exit (-1);
+}
+
 int
 system (string cmd) {
 #ifdef OS_WASM
