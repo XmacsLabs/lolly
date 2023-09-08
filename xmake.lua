@@ -149,11 +149,7 @@ target("liblolly") do
     end
 
     before_build(function (target)
-        if is_plat("windows") then
-            target:add("cxxflags", "-FI " .. path.absolute("$(buildir)\\L1\\config.h"))
-        else
-            target:add("cxxflags", "-include $(buildir)/L1/config.h")
-        end
+        target:add("forceincludes", "$(buildir)/L1/config.h")
     end)
 
     add_headerfiles("Kernel/Abstractions/(*.hpp)")
@@ -184,6 +180,9 @@ function add_test_target(filepath)
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
 
+        if is_plat("mingw") then
+            add_packages("mingw-w64")
+        end
         add_packages("tbox")
         add_packages("doctest")
         if not is_plat("wasm") then
@@ -206,13 +205,8 @@ function add_test_target(filepath)
         add_includedirs("$(buildir)/L1")
         add_includedirs(lolly_includedirs)
         add_includedirs("tests")
+        add_forceincludes("$(buildir)/L1/config.h")
         add_files(filepath) 
-
-        if is_plat("windows") then
-            add_cxxflags("-FI " .. path.absolute("$(buildir)\\L1\\config.h"))
-        else
-            add_cxxflags("-include $(buildir)/L1/config.h")
-        end
 
         if is_plat("wasm") then
             add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
