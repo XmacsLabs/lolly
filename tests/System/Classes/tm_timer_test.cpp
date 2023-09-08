@@ -9,22 +9,13 @@
 #include "string.hpp"
 #include "tm_timer.hpp"
 
-string
-get_word (char* s, int index) {
-  int j= index;
-  while (j < N (s) && s[j] != ' ')
-    j++;
-  return string (s[index], j - index);
-}
-
 int
-get_timing_cumul (string rep) {
-  char* out= as_charp (rep);
-
+get_timing_cumul (string out) {
   int i= 0;
+
   while (i < N (out)) {
     if (is_digit (out[i]) || (out[i] == '-' && is_digit (out[i + 1]))) {
-      return as_int (get_word (out, i));
+      return as_int (tokenize (out (i, N (out)), " ")[0]);
     }
     while (out[i] != ' ' && i < N (out))
       ++i;
@@ -33,15 +24,12 @@ get_timing_cumul (string rep) {
 }
 
 int
-get_timing_nr (string rep) {
-  char* out= as_charp (rep);
-  // std::stringstream ss (out);
-  // std::string       token;
-
+get_timing_nr (string out) {
   int i= 0;
+
   while (i < N (out)) {
     if (out[i] == '(') {
-      return as_int (get_word (out, i + 1));
+      return as_int (tokenize (out (i + 1, N (out)), " ")[0]);
     }
     while (out[i] != ' ' && i < N (out))
       ++i;
