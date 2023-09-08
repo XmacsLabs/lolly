@@ -25,6 +25,7 @@ jobs:
     env:
         # Force xmake to a specific folder (for cache)
         XMAKE_GLOBALDIR: ${{ github.workspace }}/.xmake-global
+        GITHUB_PATH: C:\Program Files\Git\bin;C:\Program Files\CMake\bin;C:/hostedtoolcache/windows/xmake/2.8.2/x64
     steps:
       - uses: xmake-io/github-action-setup-xmake@v1
         with:
