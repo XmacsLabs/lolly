@@ -61,12 +61,17 @@ jobs:
       # Force xmake to a specific folder (for cache)
       XMAKE_GLOBALDIR: "${{ github.workspace }}\\.xmake-global"
     steps:
-      - name: set PATH
+      - name: Run the installer as administrator
         run: |
-          echo "C:/hostedtoolcache/windows/xmake/2.8.2/x64" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8
-          echo "C:\Program Files\CMake\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-          echo "C:\Program Files\Git\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-          echo $env:GITHUB_ENV
+          iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+      - name: Scoop Path
+        run: |
+          echo "C:\Users\runneradmin\scoop\shims" > $Env:GITHUB_PATH
+      - name: Install dependencies
+        run: |
+          scoop install main/make
+          scoop install main/uutils-coreutils
+          scoop install main/elvish@0.19.1
       - uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: v2.8.2
@@ -83,7 +88,7 @@ jobs:
             ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
           key: ${{ runner.os }}-xrepo-${{ hashFiles('**/xmake.lua') }}
       - name: config
-        run: xmake config --policies=build.ccache --yes -vD --plat=mingw --mode=releasedbg
+        run: elvish .github/config_mingw.elv
       - name: build
         run: xmake build --yes -vD --all
       - name: test
