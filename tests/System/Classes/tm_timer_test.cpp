@@ -11,31 +11,27 @@
 
 int
 get_timing_cumul (string out) {
-  int i= 0;
+  // out: Task 'task1' took 0 ms
+  // out: Task 'task2' took 12 ms
+  int  pos= 0;
+  int  result;
+  auto tokens= tokenize (out, " took ");
 
-  while (i < N (out)) {
-    if (is_digit (out[i]) || (out[i] == '-' && is_digit (out[i + 1]))) {
-      return as_int (tokenize (out (i, N (out)), " ")[0]);
-    }
-    while (out[i] != ' ' && i < N (out))
-      ++i;
-    ++i;
-  }
+  read_int (tokens[1], pos, result);
+  return result;
 }
 
 int
 get_timing_nr (string out) {
-  int i= 0;
+  // out: Task 'task1' took 0 ms (0 invocations)
+  // out: Task 'task2' took 12 ms (1 invocations)
+  int  pos= 0;
+  int  result;
+  auto tokens= tokenize (out, " (");
 
-  while (i < N (out)) {
-    if (out[i] == '(') {
-      return as_int (tokenize (out (i + 1, N (out)), " ")[0]);
-    }
-    while (out[i] != ' ' && i < N (out))
-      ++i;
-    ++i;
-  }
-  return -1;
+  if (N (tokens) == 1) return -1;
+  if (read_int (tokens[1], pos, result) == false) return -1;
+  return result;
 }
 
 bool
