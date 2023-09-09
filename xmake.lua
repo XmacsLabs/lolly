@@ -50,9 +50,6 @@ function my_configvar_check()
         if target:has_cxxtypes("intptr_t", {includes = "memory"}) then
             target:set("configvar", "HAVE_INTPTR_T", 1)
         end
-        if target:has_cxxtypes("time_t", {incldes = "memory"}) then
-            target:set("configvar", "HAVE_TIME_T", 1)
-        end
         if target:has_cxxincludes("stdlib.h") then
             target:set("configvar", "HAVE_STDLIB_H", 1)
         end

@@ -62,6 +62,8 @@ to_zero (tm_ostream& out) {
   return ans;
 }
 
+TEST_CASE ("if time_t and long 64 bit") { CHECK (sizeof (time_t) == 8); }
+
 TEST_CASE ("function raw_time") {
   time_t startTime= raw_time ();
 
