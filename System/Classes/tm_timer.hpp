@@ -27,7 +27,9 @@
 // #endif
 
 // #ifdef HAVE_GETTIMEOFDAY
-// #include <sys/time.h>
+#ifdef OS_WASM
+#include <sys/time.h>
+#endif
 // #else
 // #include <sys/timeb.h>
 // #endif
