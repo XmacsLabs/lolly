@@ -13,7 +13,10 @@
 #include "basic.hpp"
 #include "iterator.hpp"
 #include "merge_sort.hpp"
+#include "sys_utils.hpp"
 #include "tm_ostream.hpp"
+
+#include "tbox/tbox.h"
 
 static hashmap<string, long> timing_level (0);
 static hashmap<string, long> timing_nr (0);
@@ -26,30 +29,18 @@ static hashmap<string, long> timing_last (0);
 
 time_t
 raw_time () {
-#ifdef HAVE_GETTIMEOFDAY
-  struct timeval tp;
-  gettimeofday (&tp, NULL);
+  tb_timeval_t tp= {0};
+  tb_gettimeofday (&tp, tb_null);
   return (time_t) ((tp.tv_sec * 1000) + (tp.tv_usec / 1000));
-#else
-  timeb tb;
-  ftime (&tb);
-  return (time_t) ((tb.time * 1000) + tb.millitm);
-#endif
 }
 
 static time_t start_time= raw_time ();
 
 time_t
 texmacs_time () {
-#ifdef HAVE_GETTIMEOFDAY
-  struct timeval tp;
-  gettimeofday (&tp, NULL);
+  tb_timeval_t tp= {0};
+  tb_gettimeofday (&tp, tb_null);
   return ((time_t) ((tp.tv_sec * 1000) + (tp.tv_usec / 1000))) - start_time;
-#else
-  timeb tb;
-  ftime (&tb);
-  return ((time_t) ((tb.time * 1000) + tb.millitm)) - start_time;
-#endif
 }
 
 /******************************************************************************
