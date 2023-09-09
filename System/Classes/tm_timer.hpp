@@ -14,11 +14,11 @@
 
 #include <time.h>
 
-// #ifdef HAVE_GETTIMEOFDAY
+#ifdef HAVE_GETTIMEOFDAY
 #include <sys/time.h>
-// #else
-// #include <sys/timeb.h>
-// #endif
+#else
+#include <sys/timeb.h>
+#endif
 
 #include "string.hpp"
 #include "tm_ostream.hpp"
