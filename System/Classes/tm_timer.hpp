@@ -12,7 +12,6 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#define _USE_32BIT_TIME_T
 #include <time.h>
 
 #ifdef HAVE_GETTIMEOFDAY
