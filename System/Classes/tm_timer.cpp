@@ -13,9 +13,9 @@
 #include "basic.hpp"
 #include "iterator.hpp"
 #include "merge_sort.hpp"
-#include "tm_ostream.hpp"
 #include "sys_utils.hpp"
 #include "tbox/tbox.h"
+#include "tm_ostream.hpp"
 
 static hashmap<string, int> timing_level (0);
 static hashmap<string, int> timing_nr (0);
@@ -28,8 +28,8 @@ static hashmap<string, int> timing_last (0);
 
 time_t
 raw_time () {
-  lolly::init_tbox();
-  tb_timeval_t tv = {0};
+  lolly::init_tbox ();
+  tb_timeval_t tv= {0};
   tb_gettimeofday (&tv, tb_null);
   return (time_t) ((tv.tv_sec * 1000) + (tv.tv_usec / 1000));
 }
@@ -38,8 +38,8 @@ static time_t start_time= raw_time ();
 
 time_t
 texmacs_time () {
-  lolly::init_tbox();
-  tb_timeval_t tv = {0};
+  lolly::init_tbox ();
+  tb_timeval_t tv= {0};
   tb_gettimeofday (&tv, tb_null);
   return ((time_t) ((tv.tv_sec * 1000) + (tv.tv_usec / 1000))) - start_time;
 }
