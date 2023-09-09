@@ -13,7 +13,6 @@
 #include "basic.hpp"
 #include "iterator.hpp"
 #include "merge_sort.hpp"
-#include "sys_utils.hpp"
 #include "tm_ostream.hpp"
 
 #include "tbox/tbox.h"
