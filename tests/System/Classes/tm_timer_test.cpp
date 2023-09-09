@@ -69,6 +69,8 @@ to_zero (tm_ostream& out) {
   return ans;
 }
 
+TEST_CASE ("if time_t 32 bit") { CHECK (sizeof (time_t) == 4); }
+
 TEST_CASE ("function raw_time") {
   time_t startTime= raw_time ();
 

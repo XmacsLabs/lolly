@@ -12,19 +12,8 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-// #ifndef OS_WIN
-
-// #ifndef __FreeBSD__
-// #ifndef HAVE_TIME_T
-// #define HAVE_TIME_T
-// #if (defined OS_LINUX || defined OS_MACOS)
-// typedef long time_t;
-// #endif
-// #endif
-// #endif
-// #else
+#define _USE_32BIT_TIME_T
 #include <time.h>
-// #endif
 
 #ifdef HAVE_GETTIMEOFDAY
 #include <sys/time.h>
