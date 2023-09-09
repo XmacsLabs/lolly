@@ -61,9 +61,6 @@ function my_configvar_check()
         if target:has_cxxincludes("inttypes.h") then
             target:set("configvar", "HAVE_INTTYPES_H", 1)
         end
-        if target:has_cfuncs("gettimeofday", {includes={"sys/time.h"}}) then
-            target:set("configvar", "HAVE_GETTIMEOFDAY", 1)
-        end
     end)
 end
 
