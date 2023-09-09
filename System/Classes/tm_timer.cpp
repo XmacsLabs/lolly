@@ -14,6 +14,8 @@
 #include "iterator.hpp"
 #include "merge_sort.hpp"
 #include "tm_ostream.hpp"
+#include "sys_utils.hpp"
+#include "tbox/tbox.h"
 
 static hashmap<string, int> timing_level (0);
 static hashmap<string, int> timing_nr (0);
@@ -26,30 +28,20 @@ static hashmap<string, int> timing_last (0);
 
 time_t
 raw_time () {
-#ifdef HAVE_GETTIMEOFDAY
-  struct timeval tp;
-  gettimeofday (&tp, NULL);
-  return (time_t) ((tp.tv_sec * 1000) + (tp.tv_usec / 1000));
-#else
-  timeb tb;
-  ftime (&tb);
-  return (time_t) ((tb.time * 1000) + tb.millitm);
-#endif
+  lolly::init_tbox();
+  tb_timeval_t tv = {0};
+  tb_gettimeofday (&tv, tb_null);
+  return (time_t) ((tv.tv_sec * 1000) + (tv.tv_usec / 1000));
 }
 
 static time_t start_time= raw_time ();
 
 time_t
 texmacs_time () {
-#ifdef HAVE_GETTIMEOFDAY
-  struct timeval tp;
-  gettimeofday (&tp, NULL);
-  return ((time_t) ((tp.tv_sec * 1000) + (tp.tv_usec / 1000))) - start_time;
-#else
-  timeb tb;
-  ftime (&tb);
-  return ((time_t) ((tb.time * 1000) + tb.millitm)) - start_time;
-#endif
+  lolly::init_tbox();
+  tb_timeval_t tv = {0};
+  tb_gettimeofday (&tv, tb_null);
+  return ((time_t) ((tv.tv_sec * 1000) + (tv.tv_usec / 1000))) - start_time;
 }
 
 /******************************************************************************
