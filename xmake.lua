@@ -1,3 +1,5 @@
+set_xmakever("2.8.2")
+
 set_project("lolly")
 
 set_languages("c++17")
