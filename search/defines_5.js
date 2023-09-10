@@ -5,6 +5,5 @@ var searchData=
   ['hashmap_5fcc_2',['HASHMAP_CC',['../hashmap_8ipp.html#a01b240af5bc650cfdba8cc1d87c47d41',1,'hashmap.ipp']]],
   ['hashmap_5fextra_5fcc_3',['HASHMAP_EXTRA_CC',['../hashmap__extra_8ipp.html#a4b31389e2bac22131bc939ad74fe46c6',1,'hashmap_extra.ipp']]],
   ['hashset_5fcc_4',['HASHSET_CC',['../hashset_8ipp.html#a778952571b3bdf6e2cb5e042cc168d02',1,'hashset.ipp']]],
-  ['hashtree_5fc_5',['HASHTREE_C',['../hashtree_8ipp.html#a9dc3809283e6872aa224a5610b62247b',1,'hashtree.ipp']]],
-  ['have_5ftime_5ft_6',['HAVE_TIME_T',['../tm__timer_8hpp.html#a43b68758b4b6f11ea9ff3ce33be38479',1,'tm_timer.hpp']]]
+  ['hashtree_5fc_5',['HASHTREE_C',['../hashtree_8ipp.html#a9dc3809283e6872aa224a5610b62247b',1,'hashtree.ipp']]]
 ];

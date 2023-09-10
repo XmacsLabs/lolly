@@ -30,9 +30,5 @@ digraph "sys_utils.cpp"
   Node12 [label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
   Node12 -> Node4 [color="steelblue1",style="solid"];
   Node1 -> Node13 [color="steelblue1",style="solid"];
-  Node13 [label="Unix/unix_sys_utils.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$unix__sys__utils_8hpp.html",tooltip=" "];
-  Node13 -> Node3 [color="steelblue1",style="solid"];
-  Node13 -> Node12 [color="steelblue1",style="solid"];
-  Node1 -> Node14 [color="steelblue1",style="solid"];
-  Node14 [label="tbox/tbox.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node13 [label="tbox/tbox.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

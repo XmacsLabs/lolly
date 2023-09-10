@@ -50,7 +50,7 @@ digraph "win_sys_utils.cpp"
   Node1 -> Node19 [color="steelblue1",style="solid"];
   Node19 [label="tm_timer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tm__timer_8hpp.html",tooltip=" "];
   Node19 -> Node20 [color="steelblue1",style="solid"];
-  Node20 [label="sys/timeb.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node20 [label="time.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node19 -> Node12 [color="steelblue1",style="solid"];
   Node19 -> Node7 [color="steelblue1",style="solid"];
   Node1 -> Node21 [color="steelblue1",style="solid"];

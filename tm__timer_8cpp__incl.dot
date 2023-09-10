@@ -8,7 +8,7 @@ digraph "tm_timer.cpp"
   Node1 -> Node2 [color="steelblue1",style="solid"];
   Node2 [label="tm_timer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tm__timer_8hpp.html",tooltip=" "];
   Node2 -> Node3 [color="steelblue1",style="solid"];
-  Node3 [label="sys/timeb.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 [label="time.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node2 -> Node4 [color="steelblue1",style="solid"];
   Node4 [label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
   Node4 -> Node5 [color="steelblue1",style="solid"];
@@ -64,4 +64,6 @@ digraph "tm_timer.cpp"
   Node23 -> Node22 [color="steelblue1",style="solid"];
   Node21 -> Node13 [color="steelblue1",style="solid"];
   Node1 -> Node8 [color="steelblue1",style="solid"];
+  Node1 -> Node24 [color="steelblue1",style="solid"];
+  Node24 [label="tbox/tbox.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }
