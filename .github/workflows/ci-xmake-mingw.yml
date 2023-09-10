@@ -63,7 +63,7 @@ jobs:
     steps:
       - uses: elves/setup-elvish@v1
         with:
-          elvish-version: 0.18.2
+          elvish-version: 0.19.2
       - uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: v2.8.2
