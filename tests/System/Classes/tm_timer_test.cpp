@@ -9,6 +9,8 @@
 #include "string.hpp"
 #include "tm_timer.hpp"
 
+#include "tbox/tbox.h"
+
 int
 get_timing_cumul (string out) {
   // out: Task 'task1' took 0 ms
@@ -63,6 +65,24 @@ to_zero (tm_ostream& out) {
 }
 
 TEST_CASE ("if time_t and long 64 bit") { CHECK (sizeof (time_t) == 8); }
+
+TEST_CASE ("function get_sec_time") {
+  tb_timeval_t tp= {0};
+  tb_gettimeofday (&tp, tb_null);
+  time_t t1= tp.tv_sec;
+  time_t t2= get_sec_time ();
+
+  CHECK (t2 >= t1);
+}
+
+TEST_CASE ("function get_usec_time") {
+  tb_timeval_t tp= {0};
+  tb_gettimeofday (&tp, tb_null);
+  time_t t1= tp.tv_usec;
+  time_t t2= get_usec_time ();
+
+  CHECK (t2 >= t1);
+}
 
 TEST_CASE ("function raw_time") {
   time_t startTime= raw_time ();

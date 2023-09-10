@@ -25,6 +25,19 @@ static hashmap<string, long> timing_last (0);
 /******************************************************************************
  * Getting the time
  ******************************************************************************/
+time_t
+get_sec_time () {
+  tb_timeval_t tp= {0};
+  tb_gettimeofday (&tp, tb_null);
+  return (time_t) tp.tv_sec;
+}
+
+time_t
+get_usec_time () {
+  tb_timeval_t tp= {0};
+  tb_gettimeofday (&tp, tb_null);
+  return (time_t) tp.tv_usec;
+}
 
 time_t
 raw_time () {
