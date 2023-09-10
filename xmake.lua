@@ -136,6 +136,7 @@ target("liblolly") do
                 OS_WIN = is_plat("windows"),
                 OS_MACOS = is_plat("macosx"),
                 OS_WASM = is_plat("wasm"),
+                OS_LINUX = is_plat("linux"),
             }
         }
     )
