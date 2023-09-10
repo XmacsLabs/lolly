@@ -15,5 +15,9 @@ if $platform:is-windows {
 }
 
 
-xmake run
+if (== (count $args) 0) {
+    xmake run
+} else {
+    xmake run $args[0]
+}
 
