@@ -85,7 +85,6 @@ get_user_name () {
 #if defined(OS_WASM)
   return "wasm_user_name";
 #endif
-
 }
 
 bool
@@ -147,7 +146,7 @@ evaluate_system (array<string> arg, array<int> fd_in, array<string> in,
 #endif
 
 #if defined(OS_WIN) || defined(OS_WASM)
-  int               ret = -1;
+  int ret= -1;
 #endif
 
   return append (as_string (ret), out);
