@@ -9,9 +9,9 @@ set-env EMSDK $emsdk_path
 
 
 if $platform:is-windows {
-    set-env EMSDK_NODE $emsdk_path/node/16.20.0_64bit/bin/node.exe
+    set-env EMSDK_NODE $emsdk_path/node/14.18.2_64bit/bin/node.exe
 } elif $platform:is-unix {
-    set-env EMSDK_NODE $emsdk_path/node/16.20.0_64bit/bin/node
+    set-env EMSDK_NODE $emsdk_path/node/14.18.2_64bit/bin/node
 }
 
 
