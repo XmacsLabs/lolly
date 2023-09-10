@@ -121,11 +121,11 @@ get_process_id () {
 #endif
 
 #if defined(OS_MACOS) || defined(OS_LINUX)
-  return 1;
+  return unix_get_process_id ();
 #endif
 
 #if defined(OS_WASM)
-  return unix_get_process_id ();
+  return 1;
 #endif
 }
 
