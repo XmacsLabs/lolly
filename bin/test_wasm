@@ -2,8 +2,8 @@
 
 use platform
 
-
-var pkg_info = (xrepo fetch --json emscripten | from-json)
+var emsdk_pkg = "emscripten 3.1.25"
+var pkg_info = (xrepo fetch --json $emsdk_pkg | from-json)
 var emsdk_path = $pkg_info[0][artifacts][installdir]
 set-env EMSDK $emsdk_path
 
@@ -20,4 +20,3 @@ if (== (count $args) 0) {
 } else {
     xmake run $args[0]
 }
-

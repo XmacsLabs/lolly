@@ -16,7 +16,7 @@ if is_plat("mingw") and is_host("windows") then
 end
 
 if is_plat("wasm") then
-    add_requires("emscripten")
+    add_requires("emscripten 3.1.25")
     set_toolchains("emcc@emscripten")
 end
 
