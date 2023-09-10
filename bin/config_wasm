@@ -1,9 +1,10 @@
 #!/usr/bin/env elvish
 
-xrepo install -y "emscripten 3.1.42"
+var emsdk_pkg = "emscripten 3.1.25"
+xrepo install -y $emsdk_pkg
 
-var pkg_info = (xrepo fetch --json emscripten | from-json)
+var pkg_info = (xrepo fetch --json $emsdk_pkg | from-json)
 var emsdk_path = $pkg_info[0][artifacts][installdir]
-set-env EMSDK $emsdk_path
 
-xmake config --yes -p wasm -vD
+xmake config --yes -vD -p wasm  --emsdk=$emsdk_path
+

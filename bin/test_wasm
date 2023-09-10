@@ -2,18 +2,21 @@
 
 use platform
 
-
-var pkg_info = (xrepo fetch --json emscripten | from-json)
+var emsdk_pkg = "emscripten 3.1.25"
+var pkg_info = (xrepo fetch --json $emsdk_pkg | from-json)
 var emsdk_path = $pkg_info[0][artifacts][installdir]
 set-env EMSDK $emsdk_path
 
 
 if $platform:is-windows {
-    set-env EMSDK_NODE $emsdk_path/node/16.20.0_64bit/bin/node.exe
+    set-env EMSDK_NODE $emsdk_path/node/14.18.2_64bit/bin/node.exe
 } elif $platform:is-unix {
-    set-env EMSDK_NODE $emsdk_path/node/16.20.0_64bit/bin/node
+    set-env EMSDK_NODE $emsdk_path/node/14.18.2_64bit/bin/node
 }
 
 
-xmake run
-
+if (== (count $args) 0) {
+    xmake run
+} else {
+    xmake run $args[0]
+}
