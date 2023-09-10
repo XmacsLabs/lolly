@@ -23,11 +23,9 @@ jobs:
   linuxbuild:
     runs-on: ubuntu-22.04
     steps:
-      - name: Install dependencies
-        run: | 
-          sudo apt-get update
-          sudo apt-get install -y elvish
-      # Force xmake to a specific folder (for cache)
+      - uses: elves/setup-elvish@v1
+        with:
+          elvish-version: 0.19.2
       - name: Set xmake global dir
         run: |
           echo "XMAKE_GLOBALDIR=${{ runner.workspace }}/.xmake-global" >> "${{ github.env }}"
@@ -59,17 +57,9 @@ jobs:
       # Force xmake to a specific folder (for cache)
       XMAKE_GLOBALDIR: "${{ github.workspace }}\\.xmake-global"
     steps:
-      - name: Run the installer as administrator
-        run: |
-          iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
-      - name: Scoop Path
-        run: |
-          echo "C:\Users\runneradmin\scoop\shims" > $Env:GITHUB_PATH
-      - name: Install dependencies
-        run: |
-          scoop install main/make
-          scoop install main/uutils-coreutils
-          scoop install main/elvish@0.19.1
+      - uses: elves/setup-elvish@v1
+        with:
+          elvish-version: 0.19.2
       - uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: branch@dev
