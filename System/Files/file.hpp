@@ -36,4 +36,7 @@ void remove (url u);
 void move (url u1, url u2);
 void copy (url u1, url u2);
 
+bool   load_string (file_url file_name, string& s, bool fatal);
+string string_load (file_url u);
+
 #endif

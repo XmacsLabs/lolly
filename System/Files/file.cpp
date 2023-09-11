@@ -302,3 +302,60 @@ remove (url u) {
     remove (u[2]);
   }
 }
+
+/******************************************************************************
+ * New style loading and saving
+ ******************************************************************************/
+
+bool
+load_string (file_url u, string& s, bool fatal) {
+  file_url r  = u;
+  bool     err= !is_rooted_name (r);
+  if (!err) {
+    string name= u.concretize ();
+    cout << "[DEBUG] name: " << name << LF;
+    // bench_start ("load file");
+
+    char* path= as_charp (name);
+
+    // Read file
+    if (tb_file_access (path, TB_FILE_MODE_RO)) {
+      tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RO);
+      if (file) {
+        tb_size_t size= tb_file_size (file);
+        cout << "File size: " << size << LF;
+        tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
+        if (tb_file_read (file, buffer, size) == -1) {
+          cout << "Error reading file!" << LF;
+        }
+        else {
+          cout << "File read!" << LF;
+          cout << "[DEBUG] buffer: " << buffer << LF;
+          int        seek= 0;
+          tm_ostream os;
+          os.buffer ();
+          while (seek < size) {
+            char c= buffer[seek];
+            os << c;
+            seek++;
+          }
+          string out= os.unbuffer ();
+          cout << "[DEBUG]: out = " << out << LF;
+          tb_file_exit (file);
+          s= out;
+        }
+      }
+    }
+    else {
+      cout << "File not readable!" << LF;
+      return false;
+    }
+  }
+}
+
+string
+string_load (file_url u) {
+  string s;
+  (void) load_string (u, s, false);
+  return s;
+}
