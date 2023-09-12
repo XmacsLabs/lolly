@@ -311,14 +311,23 @@ bool
 load_string (url u, string& s, bool fatal) {
   file_url r  = file_url (as_string (u));
   bool     err= !is_rooted_name (u);
-  if (!err) {
-    string name= r.concretize ();
-    char*  path= as_charp (name);
 
+  cout << "[DEBUG] load_string " << as_string (u) << LF;
+
+  if (!err) {
+    cout << "[DEBUG] error free " << LF;
+    string name= r.concretize ();
+    cout << "[DEBUG] name: " << string (name) (2, N (name) - 1) << LF;
+    char* path= as_charp (string (name) (2, N (name) - 1));
+    cout << "[DEBUG] path: " << path << LF;
     // Read file
-    if (tb_file_access (path, TB_FILE_MODE_RO)) {
-      tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RO);
+    if (tb_file_access (path, TB_FILE_MODE_RW)) {
+      cout << "File readable!" << LF;
+
+      tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RW);
+
       if (file) {
+        cout << "[DEBUG] file init " << LF;
         // lock file
         tb_file_sync (file);
         tb_size_t  size  = tb_file_size (file);

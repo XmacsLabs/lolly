@@ -174,7 +174,10 @@ TEST_CASE ("load_string part1") {
       buffer[seek]= c;
       seek++;
     }
-    auto file_ref= tb_file_init (as_charp (as_string (s1)), TB_FILE_MODE_WO);
+
+    cout << "[DEBUG] test s1: " << as_string (s1) << LF;
+
+    auto file_ref= tb_file_init (as_charp (as_string (s1)), TB_FILE_MODE_RW);
     tb_file_writ (file_ref, buffer, strlen (s2));
     string s;
     cout << "[DEBUG] test s: " << s << LF;
