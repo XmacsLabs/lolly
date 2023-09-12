@@ -152,8 +152,8 @@ TEST_CASE ("read_directory") {
 }
 
 TEST_CASE ("load_string part1") {
-  url       lolly_tmp= get_lolly_tmp ();
-  url       s1       = lolly_tmp * url ("load_string_1.txt");
+  url lolly_tmp= get_lolly_tmp ();
+  url s1       = lolly_tmp * url ("load_string_1.txt");
   // can access file?
   if (tb_file_access (as_charp (as_string (s1)), TB_FILE_MODE_RO)) {
     cout << "[DEBUG] can access file" << LF;
@@ -185,14 +185,14 @@ TEST_CASE ("load_string part1") {
 }
 
 TEST_CASE ("load_string part2") {
-  url       lolly_tmp= get_lolly_tmp ();
-  url       u1       = url_pwd() * url ("tests/System/Files/sample_file.txt");
-  url       u2       = url_pwd() * url ("tests/System/Files/sample_file_copy.txt");
-  url       u3       = url_pwd() * url ("tests/System/Files/sample_file_throw.txt");
-  string s1,s2,s3;
+  url    lolly_tmp= get_lolly_tmp ();
+  url    u1       = url_pwd () * url ("tests/System/Files/sample_file.txt");
+  url    u2= url_pwd () * url ("tests/System/Files/sample_file_copy.txt");
+  url    u3= url_pwd () * url ("tests/System/Files/sample_file_throw.txt");
+  string s1, s2, s3;
   CHECK (!load_string (u1, s1, false));
   CHECK (!load_string (u2, s2, false));
-  CHECK_EQ (s1==s2, true);
-  
+  CHECK_EQ (s1 == s2, true);
+
   CHECK_THROWS (load_string (u3, s3, true));
 }

@@ -313,15 +313,15 @@ load_string (url u, string& s, bool fatal) {
   bool     err= !is_rooted_name (u);
   if (!err) {
     string name= r.concretize ();
-    char* path= as_charp (name);
+    char*  path= as_charp (name);
 
     // Read file
     if (tb_file_access (path, TB_FILE_MODE_RO)) {
       tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RO);
       if (file) {
         // lock file
-        tb_file_sync(file);
-        tb_size_t size= tb_file_size (file);
+        tb_file_sync (file);
+        tb_size_t  size  = tb_file_size (file);
         tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
         if (tb_file_read (file, buffer, size) == -1) {
         }
@@ -335,7 +335,7 @@ load_string (url u, string& s, bool fatal) {
             seek++;
           }
           string out= os.unbuffer ();
-          s= out;
+          s         = out;
         }
         tb_file_exit (file);
         return false;
