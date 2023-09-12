@@ -308,29 +308,24 @@ remove (url u) {
  ******************************************************************************/
 
 bool
-load_string (file_url u, string& s, bool fatal) {
-  file_url r  = u;
-  bool     err= !is_rooted_name (r);
+load_string (url u, string& s, bool fatal) {
+  file_url r  = file_url (as_string (u));
+  bool     err= !is_rooted_name (u);
   if (!err) {
-    string name= u.concretize ();
-    cout << "[DEBUG] name: " << name << LF;
-    // bench_start ("load file");
-
+    string name= r.concretize ();
     char* path= as_charp (name);
 
     // Read file
     if (tb_file_access (path, TB_FILE_MODE_RO)) {
       tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RO);
       if (file) {
+        // lock file
+        tb_file_sync(file);
         tb_size_t size= tb_file_size (file);
-        cout << "File size: " << size << LF;
         tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
         if (tb_file_read (file, buffer, size) == -1) {
-          cout << "Error reading file!" << LF;
         }
         else {
-          cout << "File read!" << LF;
-          cout << "[DEBUG] buffer: " << buffer << LF;
           int        seek= 0;
           tm_ostream os;
           os.buffer ();
@@ -340,22 +335,26 @@ load_string (file_url u, string& s, bool fatal) {
             seek++;
           }
           string out= os.unbuffer ();
-          cout << "[DEBUG]: out = " << out << LF;
-          tb_file_exit (file);
           s= out;
         }
+        tb_file_exit (file);
+        return false;
       }
     }
     else {
       cout << "File not readable!" << LF;
-      return false;
+      if (fatal) {
+        TM_FAILED ("file not readable");
+      }
+      return true;
     }
   }
 }
 
 string
-string_load (file_url u) {
+string_load (url u) {
   string s;
+  // file_url f= u;
   (void) load_string (u, s, false);
   return s;
 }
