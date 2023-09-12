@@ -318,7 +318,11 @@ load_string (url u, string& s, bool fatal) {
     cout << "[DEBUG] error free " << LF;
     string name= r.concretize ();
     cout << "[DEBUG] name: " << string (name) (2, N (name) - 1) << LF;
+#if defined(OS_WIN) || defined(OS_MINGW)
     char* path= as_charp (string (name) (2, N (name) - 1));
+#else
+    char* path= as_charp (name);
+#endif
     cout << "[DEBUG] path: " << path << LF;
     // Read file
     if (tb_file_access (path, TB_FILE_MODE_RW)) {
