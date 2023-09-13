@@ -311,34 +311,29 @@ bool
 load_string (url u, string& s, bool fatal) {
   file_url r  = file_url (as_string (u));
   bool     err= !is_rooted_name (u);
-
-  cout << "[DEBUG] load_string " << as_string (u) << LF;
-
   if (!err) {
-    cout << "[DEBUG] error free " << LF;
     string name= r.concretize ();
-    cout << "[DEBUG] name: " << string (name) (2, N (name) - 1) << LF;
 #if defined(OS_WIN) || defined(OS_MINGW)
     char* path= as_charp (string (name) (2, N (name) - 1));
 #else
     char* path= as_charp (name);
 #endif
-    cout << "[DEBUG] path: " << path << LF;
     // Read file
     if (tb_file_access (path, TB_FILE_MODE_RW)) {
-      cout << "File readable!" << LF;
 
       tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RW);
 
       if (file) {
-        cout << "[DEBUG] file init " << LF;
         // lock file
         tb_file_sync (file);
-        tb_size_t  size  = tb_file_size (file);
-        tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
-        if (tb_file_read (file, buffer, size) == -1) {
+        tb_size_t size= tb_file_size (file);
+        if (size == 0) {
+          s= "";
+          tb_file_exit (file);
+          return false;
         }
-        else {
+        tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
+        if (tb_file_read (file, buffer, size) != -1) {
           int        seek= 0;
           tm_ostream os;
           os.buffer ();
@@ -355,7 +350,6 @@ load_string (url u, string& s, bool fatal) {
       }
     }
     else {
-      cout << "File not readable!" << LF;
       if (fatal) {
         TM_FAILED ("file not readable");
       }

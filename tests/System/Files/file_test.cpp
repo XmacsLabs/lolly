@@ -25,7 +25,7 @@ TEST_CASE ("is_directory on Windows") {
 
 #if defined(OS_LINUX)
 TEST_CASE ("is_symbolic_link on linux") {
-  // CHECK (is_symbolic_link (url_system ("/usr/bin/python")));
+  CHECK (is_symbolic_link (url_system ("/usr/bin/python")));
 }
 #endif
 
@@ -151,19 +151,26 @@ TEST_CASE ("read_directory") {
   CHECK (flag2); // error
 }
 
+TEST_CASE ("load empty file") {
+  url    lolly_tmp= get_lolly_tmp ();
+  url    u1       = lolly_tmp * url ("load_empty.txt");
+  string s1;
+  tb_file_create (as_charp (as_string (u1)));
+  CHECK (!load_string (u1, s1, false));
+  CHECK_EQ (s1 == string (""), true);
+}
+
 TEST_CASE ("load_string part1") {
   url lolly_tmp= get_lolly_tmp ();
-  url s1       = lolly_tmp * url ("load_string_1.txt");
+  url u1       = lolly_tmp * url ("load_string_1.txt");
   // can access file?
-  if (tb_file_access (as_charp (as_string (s1)), TB_FILE_MODE_RO)) {
-    cout << "[DEBUG] can access file" << LF;
-    while (!tb_file_remove (as_charp (as_string (s1)))) {
+  if (tb_file_access (as_charp (as_string (u1)), TB_FILE_MODE_RO)) {
+    while (!tb_file_remove (as_charp (as_string (u1)))) {
       tb_sleep (1);
     }
-    cout << "[DEBUG] removed file" << LF;
   }
   // create test file
-  if (tb_file_create (as_charp (as_string (s1)))) {
+  if (tb_file_create (as_charp (as_string (u1)))) {
     cout << "[DEBUG] can create file" << LF;
     const char* s2    = "hello world";
     tb_size_t   size  = strlen (s2);
@@ -175,14 +182,10 @@ TEST_CASE ("load_string part1") {
       seek++;
     }
 
-    cout << "[DEBUG] test s1: " << as_string (s1) << LF;
-
-    auto file_ref= tb_file_init (as_charp (as_string (s1)), TB_FILE_MODE_RW);
+    auto file_ref= tb_file_init (as_charp (as_string (u1)), TB_FILE_MODE_RW);
     tb_file_writ (file_ref, buffer, strlen (s2));
     string s;
-    cout << "[DEBUG] test s: " << s << LF;
-    CHECK (!load_string (s1, s, false));
-    cout << "[DEBUG] test s: " << s << LF;
+    CHECK (!load_string (u1, s, false));
     CHECK_EQ (s == string ("hello world"), true);
   }
 }
