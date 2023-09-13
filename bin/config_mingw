@@ -5,4 +5,6 @@ xrepo install -y $mingw_pkg
 var pkg_info = (xrepo fetch --json $mingw_pkg | from-json)
 var mingw_path = $pkg_info[0][artifacts][installdir]
 
+set paths = (conj $paths $mingw_path\\bin)
+
 xmake config --policies=build.ccache --yes -vD --plat=mingw --mode=releasedbg --mingw=$mingw_path -c

@@ -8,6 +8,17 @@ includes("check_cxxincludes.lua")
 includes("check_cxxfuncs.lua")
 includes("check_cxxsnippets.lua")
 
+configvar_check_cxxtypes("HAVE_INTPTR_T", "intptr_t", {includes = {"memory"}})
+configvar_check_cxxtypes("HAVE_TIME_T", "time_t", {includes = {"memory"}})
+configvar_check_cxxincludes("HAVE_STDLIB_H", "stdlib.h")
+configvar_check_cxxincludes("HAVE_STDINT_H", "stdint.h")
+configvar_check_cxxincludes("HAVE_INTTYPES_H", "inttypes.h")
+configvar_check_cxxfuncs("HAVE_GETTIMEOFDAY", "gettimeofday", {includes={"sys/time.h"}})
+configvar_check_cxxsnippets(
+    "CONFIG_LARGE_POINTER", [[
+        #include <stdlib.h>
+        static_assert(sizeof(void*) == 8, "");]])
+
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
 if is_plat("mingw") and is_host("windows") then
@@ -47,23 +58,6 @@ option("posix_thread")
     add_cxxincludes("mutex")
 option_end()
 
-function my_configvar_check()
-    on_config(function (target)
-        if target:has_cxxtypes("intptr_t", {includes = "memory"}) then
-            target:set("configvar", "HAVE_INTPTR_T", 1)
-        end
-        if target:has_cxxincludes("stdlib.h") then
-            target:set("configvar", "HAVE_STDLIB_H", 1)
-        end
-        if target:has_cxxincludes("stdint.h") then
-            target:set("configvar", "HAVE_STDINT_H", 1)
-        end
-        if target:has_cxxincludes("inttypes.h") then
-            target:set("configvar", "HAVE_INTTYPES_H", 1)
-        end
-    end)
-end
-
 local lolly_files = {
     "Kernel/**/*.cpp",
     "System/**/*.cpp",
@@ -95,7 +89,6 @@ target("liblolly") do
         set_languages("c++98")
     end
     set_policy("check.auto_ignore_flags", false)
-    my_configvar_check()
 
     set_basename("lolly")
 
