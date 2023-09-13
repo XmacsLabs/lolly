@@ -186,7 +186,7 @@ TEST_CASE ("load_string part1") {
     tb_file_writ (file_ref, buffer, strlen (s2));
     string s;
     CHECK (!load_string (u1, s, false));
-    CHECK_EQ (s == string ("hello world"), true);
+    string_eq (s, string ("hello world"));
   }
 }
 
@@ -198,7 +198,7 @@ TEST_CASE ("load_string part2") {
   string s1, s2, s3;
   CHECK (!load_string (u1, s1, false));
   CHECK (!load_string (u2, s2, false));
-  CHECK_EQ (s1 == s2, true);
+  string_eq (s1, s2);
 
   CHECK_THROWS (load_string (u3, s3, true));
 }

@@ -312,12 +312,9 @@ load_string (url u, string& s, bool fatal) {
   file_url r  = file_url (as_string (u));
   bool     err= !is_rooted_name (u);
   if (!err) {
-    string name= r.concretize ();
-#if defined(OS_WIN) || defined(OS_MINGW)
-    char* path= as_charp (string (name) (2, N (name) - 1));
-#else
+    string name= as_string (u);
+
     char* path= as_charp (name);
-#endif
     // Read file
     if (tb_file_access (path, TB_FILE_MODE_RW)) {
 
