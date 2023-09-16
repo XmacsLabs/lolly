@@ -309,7 +309,7 @@ remove (url u) {
 
 bool
 load_string (url u, string& s, bool fatal) {
-  bool     err= !is_rooted_name (u);
+  bool err= !is_rooted_name (u);
   if (!err) {
     string name= as_string (u);
 
