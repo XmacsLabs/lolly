@@ -302,3 +302,62 @@ remove (url u) {
     remove (u[2]);
   }
 }
+
+/******************************************************************************
+ * New style loading and saving
+ ******************************************************************************/
+
+bool
+load_string (url u, string& s, bool fatal) {
+  bool err= !is_rooted_name (u);
+  if (!err) {
+    string name= as_string (u);
+
+    char* path= as_charp (name);
+    // Read file
+    if (tb_file_access (path, TB_FILE_MODE_RW)) {
+
+      tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RW);
+
+      if (file) {
+        // lock file
+        tb_file_sync (file);
+        tb_size_t size= tb_file_size (file);
+        if (size == 0) {
+          s= "";
+          tb_file_exit (file);
+          return false;
+        }
+        tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
+        if (tb_file_read (file, buffer, size) != -1) {
+          int        seek= 0;
+          tm_ostream os;
+          os.buffer ();
+          while (seek < size) {
+            char c= buffer[seek];
+            os << c;
+            seek++;
+          }
+          string out= os.unbuffer ();
+          s         = out;
+        }
+        tb_file_exit (file);
+        return false;
+      }
+    }
+    else {
+      if (fatal) {
+        TM_FAILED ("file not readable");
+      }
+      return true;
+    }
+  }
+}
+
+string
+string_load (url u) {
+  string s;
+  // file_url f= u;
+  (void) load_string (u, s, false);
+  return s;
+}

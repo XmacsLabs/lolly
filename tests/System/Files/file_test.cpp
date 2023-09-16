@@ -150,3 +150,55 @@ TEST_CASE ("read_directory") {
   CHECK (N (read_directory (url_system ("no_such_dir"), flag2)) == 0);
   CHECK (flag2); // error
 }
+
+TEST_CASE ("load empty file") {
+  url    lolly_tmp= get_lolly_tmp ();
+  url    u1       = lolly_tmp * url ("load_empty.txt");
+  string s1;
+  tb_file_create (as_charp (as_string (u1)));
+  CHECK (!load_string (u1, s1, false));
+  CHECK_EQ (s1 == string (""), true);
+}
+
+TEST_CASE ("load_string part1") {
+  url lolly_tmp= get_lolly_tmp ();
+  url u1       = lolly_tmp * url ("load_string_1.txt");
+  // can access file?
+  if (tb_file_access (as_charp (as_string (u1)), TB_FILE_MODE_RO)) {
+    while (!tb_file_remove (as_charp (as_string (u1)))) {
+      tb_sleep (1);
+    }
+  }
+  // create test file
+  if (tb_file_create (as_charp (as_string (u1)))) {
+    cout << "[DEBUG] can create file" << LF;
+    const char* s2    = "hello world";
+    tb_size_t   size  = strlen (s2);
+    tb_byte_t*  buffer= (tb_byte_t*) tb_malloc_bytes (size);
+    int         seek  = 0;
+    while (seek < size) {
+      tb_byte_t c = s2[seek];
+      buffer[seek]= c;
+      seek++;
+    }
+
+    auto file_ref= tb_file_init (as_charp (as_string (u1)), TB_FILE_MODE_RW);
+    tb_file_writ (file_ref, buffer, strlen (s2));
+    string s;
+    CHECK (!load_string (u1, s, false));
+    string_eq (s, string ("hello world"));
+  }
+}
+
+TEST_CASE ("load_string part2") {
+  url    lolly_tmp= get_lolly_tmp ();
+  url    u1       = url_pwd () * url ("tests/System/Files/sample_file.txt");
+  url    u2= url_pwd () * url ("tests/System/Files/sample_file_copy.txt");
+  url    u3= url_pwd () * url ("tests/System/Files/sample_file_throw.txt");
+  string s1, s2, s3;
+  CHECK (!load_string (u1, s1, false));
+  CHECK (!load_string (u2, s2, false));
+  string_eq (s1, s2);
+
+  CHECK_THROWS (load_string (u3, s3, true));
+}
