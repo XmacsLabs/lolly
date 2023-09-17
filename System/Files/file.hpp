@@ -38,5 +38,7 @@ void copy (url u1, url u2);
 
 bool   load_string (url file_name, string& s, bool fatal);
 string string_load (url u);
+bool save_string (url file_name, const string& s, bool fatal) noexcept (false);
+void string_save (string s, url u) noexcept;
 
 #endif
