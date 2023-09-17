@@ -308,7 +308,7 @@ remove (url u) {
  ******************************************************************************/
 
 inline bool
-file_failure (bool fatal, const char* msg) noexcept (false) {
+file_failure (bool fatal, const char* msg) {
   if (fatal) {
     TM_FAILED (msg);
   }
@@ -373,7 +373,7 @@ string_load (url u) {
 }
 
 bool
-save_string (url u, const string& s, bool fatal) noexcept (false) {
+save_string (url u, const string& s, bool fatal) {
   ASSERT (sizeof (tb_byte_t) == sizeof (char),
           "invalid cast from tb_byte_t* to char*");
   url r= u;
@@ -404,6 +404,6 @@ save_string (url u, const string& s, bool fatal) noexcept (false) {
 }
 
 void
-string_save (string s, url u) noexcept {
+string_save (string s, url u) {
   (void) save_string (u, s, false);
 }
