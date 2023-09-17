@@ -307,6 +307,16 @@ remove (url u) {
  * New style loading and saving
  ******************************************************************************/
 
+static bool
+file_failure (bool fatal, const char* msg) {
+  if (fatal) {
+    TM_FAILED (msg);
+  }
+  else {
+    return true;
+  }
+}
+
 bool
 load_string (url u, string& s, bool fatal) {
   bool err= !is_rooted_name (u);
@@ -360,4 +370,40 @@ string_load (url u) {
   // file_url f= u;
   (void) load_string (u, s, false);
   return s;
+}
+
+bool
+save_string (url u, const string& s, bool fatal) {
+  ASSERT (sizeof (tb_byte_t) == sizeof (char),
+          "invalid cast from tb_byte_t* to char*");
+  url r= u;
+  if (!is_rooted_name (r)) {
+    return file_failure (fatal, "url should be absolute path");
+  }
+  string name= as_string (r);
+
+  const char* path= as_charp (name);
+  // tb_file_access cannot check TB_FILE_MODE_CREAT on windows, so create
+  // directly
+  tb_file_ref_t fout= tb_file_init (path, TB_FILE_MODE_WO | TB_FILE_MODE_CREAT |
+                                              TB_FILE_MODE_TRUNC);
+  if (fout == tb_null) {
+    return file_failure (fatal, "file not writeable");
+  }
+  tb_size_t        input_size= N (s);
+  const tb_byte_t* content  = reinterpret_cast<const tb_byte_t*> (as_charp (s));
+  tb_size_t        real_size= tb_file_writ (fout, content, input_size);
+  bool             writ_suc = real_size == input_size;
+  bool             exit_suc = tb_file_exit (fout);
+  if (writ_suc && exit_suc) {
+    return false;
+  }
+  else {
+    return file_failure (fatal, "unexpected behavior during writting");
+  }
+}
+
+void
+string_save (string s, url u) {
+  (void) save_string (u, s, false);
 }

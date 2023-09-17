@@ -202,3 +202,57 @@ TEST_CASE ("load_string part2") {
 
   CHECK_THROWS (load_string (u3, s3, true));
 }
+
+TEST_CASE ("save to empty file") {
+  url    lolly_tmp= get_lolly_tmp ();
+  url    u1       = lolly_tmp * url ("save_empty.txt");
+  string s1 ("test");
+  tb_file_touch (as_charp (as_string (u1)), 0, 0);
+  CHECK (!save_string (u1, s1, false));
+  string s2;
+  CHECK (!load_string (u1, s2, false));
+  string_eq (s1, s2);
+}
+
+TEST_CASE ("save to empty file with unicode filename") {
+  url    lolly_tmp= get_lolly_tmp ();
+  url    u1       = lolly_tmp * url ("保存到空文件.txt");
+  string s1 ("测试内容");
+  tb_file_touch (as_charp (as_string (u1)), 0, 0);
+  CHECK (!save_string (u1, s1, false));
+  string s2;
+  CHECK (!load_string (u1, s2, false));
+  string_eq (s1, s2);
+}
+
+TEST_CASE ("create and save to file") {
+  url            lolly_tmp= get_lolly_tmp ();
+  url            u1       = lolly_tmp * url ("save_nonexist.txt");
+  const char*    path1    = as_charp (as_string (u1));
+  tb_file_info_t info;
+  if (tb_file_info (path1, &info)) {
+    tb_file_remove (path1);
+  };
+  string s1 ("test");
+  CHECK (!save_string (u1, s1, true));
+  string s2;
+  CHECK (!load_string (u1, s2, true));
+  string_eq (s1, s2);
+}
+
+TEST_CASE ("save to exist file") {
+  url         lolly_tmp= get_lolly_tmp ();
+  url         u1       = lolly_tmp * url ("save_exist.txt");
+  const char* path1    = as_charp (as_string (u1));
+  tb_file_touch (path1, 0, 0);
+  tb_file_ref_t file=
+      tb_file_init (path1, TB_FILE_MODE_WO | TB_FILE_MODE_TRUNC);
+  tb_file_writ (
+      file, reinterpret_cast<const tb_uint8_t*> ("longer text for test"), 20);
+  tb_file_exit (file);
+  string s1 ("test");
+  CHECK (!save_string (u1, s1, false));
+  string s2;
+  CHECK (!load_string (u1, s2, false));
+  string_eq (s1, s2);
+}
