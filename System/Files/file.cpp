@@ -307,7 +307,7 @@ remove (url u) {
  * New style loading and saving
  ******************************************************************************/
 
-inline bool
+static bool
 file_failure (bool fatal, const char* msg) {
   if (fatal) {
     TM_FAILED (msg);
