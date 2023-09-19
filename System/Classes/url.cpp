@@ -244,6 +244,7 @@ url_default (string name, int type= URL_SYSTEM) {
 
 url
 url_general (string name, int type= URL_SYSTEM) {
+  printf("%s\n", as_charp (name));
   if (starts (name, "local:")) return file_url (name (6, N (name)));
   if (starts (name, "file://")) return file_url (name (7, N (name)));
   if (starts (name, "http://")) return http_url (name (7, N (name)));
@@ -251,10 +252,18 @@ url_general (string name, int type= URL_SYSTEM) {
   if (starts (name, "ftp://")) return ftp_url (name (6, N (name)));
   if (starts (name, "tmfs://")) return tmfs_url (name (7, N (name)));
   if (starts (name, "//")) return blank_url (name (2, N (name)));
-  if (heuristic_is_path (name, type)) return url_path (name, type);
-  if (heuristic_is_default (name, type)) return url_default (name, type);
-  if (heuristic_is_mingw_default (name, type))
+  if (heuristic_is_path (name, type)) {
+    printf("heuristic_is_path\n");
+    return url_path (name, type);
+  }
+  if (heuristic_is_default (name, type)) {
+    printf("heuristic_is_default\n");
+    return url_default (name, type);
+  }
+  if (heuristic_is_mingw_default (name, type)) {
+    printf("heuristic_is_mingw_default\n");
     return url_mingw_default (name, type);
+  }
   if (type != URL_CLEAN_UNIX) {
     if (heuristic_is_http (name)) return http_url (name);
     if (heuristic_is_ftp (name)) return ftp_url (name);
@@ -535,6 +544,7 @@ url
 operator* (url u1, url u2) {
   // cout << "concat " << u1->t << " * " << u2->t << "\n";
   if (is_root (u2) || (is_concat (u2) && is_root (u2[1]))) {
+    printf("branch 1\n");
     if (is_concat (u1) && is_root_web (u1[1])) {
       if (is_root (u2, "default") ||
           (is_concat (u2) && is_root (u2[1], "default"))) {
@@ -554,16 +564,19 @@ operator* (url u1, url u2) {
   if (is_none (u1)) return url_none ();
   if (is_none (u2)) return url_none ();
   if (u2 == url_parent ()) {
+    printf("branch 2\n");
     if (is_root (u1)) return u1;
     if (is_pseudo_atomic (u1) && (!is_parent (u1))) return url_here ();
     if (is_semi_root (u1)) return u1;
   }
   if (is_concat (u2) && (u2[1] == url_parent ())) {
+    printf("branch 3\n");
     if (is_root (u1)) return u1 * u2[2];
     if (is_pseudo_atomic (u1) && (!is_parent (u1))) return u2[2];
     if (is_semi_root (u1)) return u1 * u2[2];
   }
   if (is_concat (u1)) return u1[1] * (u1[2] * u2);
+  printf("else\n");
   return as_url (url_tuple ("concat", u1->t, u2->t));
 }
 
