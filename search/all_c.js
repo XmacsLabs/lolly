@@ -22,10 +22,11 @@ var searchData=
   ['list_5fcount_19',['list_count',['../list_8hpp.html#a0a09ef65c49ae2dfc620a8a3a350ce1d',1,'list.hpp']]],
   ['list_5frep_20',['list_rep',['../classlist__rep.html',1,'list_rep&lt; T &gt;'],['../classlist__rep.html#a6c1f8f1e3ee06fa7a744d08aab8e90f0',1,'list_rep::list_rep()']]],
   ['list_5ftest_2ecpp_21',['list_test.cpp',['../list__test_8cpp.html',1,'']]],
-  ['locase_22',['locase',['../analyze_8cpp.html#a8f16f9e4a24c4b4c0abd7b4ab00d084f',1,'locase(char c):&#160;analyze.cpp'],['../analyze_8hpp.html#acfcb1e585ea9e8b28eb659287ef0a6fe',1,'locase(char s):&#160;analyze.cpp']]],
-  ['locase_5fall_23',['locase_all',['../analyze_8cpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp']]],
-  ['locase_5ffirst_24',['locase_first',['../analyze_8hpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp'],['../analyze_8cpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp']]],
-  ['lolly_25',['lolly',['../namespacelolly.html',1,'']]],
-  ['lolly_3a_20a_20user_2dfriendly_20c_2b_2b_20standard_20library_20alternative_26',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]],
-  ['lolly_5fdoctests_2ehpp_27',['lolly_doctests.hpp',['../lolly__doctests_8hpp.html',1,'']]]
+  ['load_5fstring_22',['load_string',['../file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a',1,'load_string(url u, string &amp;s, bool fatal):&#160;file.cpp'],['../file_8hpp.html#a939e3f7b6bc67082472215e4d13ba705',1,'load_string(url file_name, string &amp;s, bool fatal):&#160;file.cpp']]],
+  ['locase_23',['locase',['../analyze_8cpp.html#a8f16f9e4a24c4b4c0abd7b4ab00d084f',1,'locase(char c):&#160;analyze.cpp'],['../analyze_8hpp.html#acfcb1e585ea9e8b28eb659287ef0a6fe',1,'locase(char s):&#160;analyze.cpp']]],
+  ['locase_5fall_24',['locase_all',['../analyze_8cpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#a2146ca5a032bbfbd0fdfd5034d891b64',1,'locase_all(string s):&#160;analyze.cpp']]],
+  ['locase_5ffirst_25',['locase_first',['../analyze_8cpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#aa12998f4e8a5e2fd6f1935ac52c2ed95',1,'locase_first(string s):&#160;analyze.cpp']]],
+  ['lolly_26',['lolly',['../namespacelolly.html',1,'']]],
+  ['lolly_3a_20a_20user_2dfriendly_20c_2b_2b_20standard_20library_20alternative_27',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]],
+  ['lolly_5fdoctests_2ehpp_28',['lolly_doctests.hpp',['../lolly__doctests_8hpp.html',1,'']]]
 ];

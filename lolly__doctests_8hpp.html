@@ -136,8 +136,14 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="lolly__doctests_8hpp_source.html#l00008">8</a> of file <a class="el" href="lolly__doctests_8hpp_source.html">lolly_doctests.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>                                      {</div>
-<div class="line"><span class="lineno">    9</span>  CHECK_EQ (left == right, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   10</span>}</div>
+<div class="line"><span class="lineno">    9</span>  <span class="keywordflow">if</span> (left != right) {</div>
+<div class="line"><span class="lineno">   10</span>    <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;left : &quot;</span> &lt;&lt; left &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
+<div class="line"><span class="lineno">   11</span>    <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;right: &quot;</span> &lt;&lt; right &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
+<div class="line"><span class="lineno">   12</span>  }</div>
+<div class="line"><span class="lineno">   13</span>  CHECK_EQ (left == right, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   14</span>}</div>
+<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00544">basic.hpp:544</a></div></div>
+<div class="ttc" id="atm__ostream_8cpp_html_a48e5827e9cd7a3f85b541ffc24937339"><div class="ttname"><a href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a></div><div class="ttdeci">tm_ostream &amp; cout</div><div class="ttdef"><b>Definition:</b> <a href="tm__ostream_8cpp_source.html#l00332">tm_ostream.cpp:332</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
