@@ -25,11 +25,17 @@ TEST_CASE ("label of url") {
   string_eq (none_url.label (), "none");
   string_eq (file_root.label (), "root");
   string_eq (ftp_root.label (), "root");
-  string_eq (wsl_ubuntu.label (), "concat");
-  string_eq (unix_root.label (), "");
-  string_eq (unix_root_txt.label (), "");
-  string_eq (unix_tmp.label (), "");
-  string_eq (unix_tmp_a.label (), "concat");
+#if defined(OS_MINGW) || defined(OS_WIN)
+  SUBCASE ("on host windows") { string_eq (wsl_ubuntu.label (), "concat"); }
+#endif
+#if defined(OS_MACOS) || defined(OS_LINUX) || defined(OS_WASM)
+  SUBCASE ("on host macos/linux/wasm") {
+    string_eq (unix_root.label (), "concat");
+    string_eq (unix_root_txt.label (), "concat");
+    string_eq (unix_tmp.label (), "concat");
+    string_eq (unix_tmp_a.label (), "concat");
+  }
+#endif
   string_eq (abc_url.label (), "");
 }
 
