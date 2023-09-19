@@ -7,16 +7,45 @@
 #include "a_tbox_main.cpp"
 #include "url.hpp"
 
-url ustc_edu   = url_system ("https://ustc.edu.cn");
-url texmacs_org= url_system ("http://texmacs.org");
-url none_url   = url_none ();
-url file_root  = url_root ("file");
-url ftp_root   = url_root ("ftp");
-url wsl_ubuntu = url_system ("\\\\wsl.localhost\\Ubuntu");
-url unix_root  = url_system ("/");
-url unix_tmp   = url_system ("/tmp");
-url unix_tmp_a = url_system ("/tmp/a");
-url abc_url    = url_system ("abc");
+url ustc_edu     = url_system ("https://ustc.edu.cn");
+url texmacs_org  = url_system ("http://texmacs.org");
+url none_url     = url_none ();
+url file_root    = url_root ("file");
+url ftp_root     = url_root ("ftp");
+url wsl_ubuntu   = url_system ("\\\\wsl.localhost\\Ubuntu");
+url unix_root    = url_system ("/");
+url unix_root_txt= url_system ("/abc.txt");
+url unix_tmp     = url_system ("/tmp");
+url unix_tmp_a   = url_system ("/tmp/a");
+url abc_url      = url_system ("abc");
+
+TEST_CASE ("label of url") {
+  string_eq (ustc_edu.label (), "concat");
+  string_eq (texmacs_org.label (), "concat");
+  string_eq (none_url.label (), "none");
+  string_eq (file_root.label (), "root");
+  string_eq (ftp_root.label (), "root");
+  string_eq (wsl_ubuntu.label (), "concat");
+  string_eq (unix_root.label (), "");
+  string_eq (unix_root_txt.label (), "");
+  string_eq (unix_tmp.label (), "");
+  string_eq (unix_tmp_a.label (), "concat");
+  string_eq (abc_url.label (), "");
+}
+
+TEST_CASE ("protocol of url") {
+  string_eq (ustc_edu.protocol (), "https");
+  string_eq (texmacs_org.protocol (), "http");
+  string_eq (none_url.protocol (), "");
+  string_eq (file_root.protocol (), "file");
+  string_eq (ftp_root.protocol (), "ftp");
+  string_eq (wsl_ubuntu.protocol (), "default");
+  string_eq (unix_root.protocol (), "");
+  string_eq (unix_root_txt.protocol (), "");
+  string_eq (unix_tmp.protocol (), "");
+  string_eq (unix_tmp_a.protocol (), "");
+  string_eq (abc_url.protocol (), "");
+}
 
 TEST_CASE ("url with env") {
 #if defined(OS_MINGW) || defined(OS_WIN)
