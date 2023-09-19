@@ -30,7 +30,7 @@ TEST_CASE ("label of url") {
 #endif
 #if defined(OS_MACOS) || defined(OS_LINUX) || defined(OS_WASM)
   SUBCASE ("on host macos/linux/wasm") {
-    string_eq (unix_root.label (), "concat");
+    string_eq (unix_root.label (), "root");
     string_eq (unix_root_txt.label (), "concat");
     string_eq (unix_tmp.label (), "concat");
     string_eq (unix_tmp_a.label (), "concat");
