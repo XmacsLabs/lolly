@@ -36,15 +36,25 @@ TEST_CASE ("label of url") {
 TEST_CASE ("protocol of url") {
   string_eq (ustc_edu.protocol (), "https");
   string_eq (texmacs_org.protocol (), "http");
-  string_eq (none_url.protocol (), "");
+  string_eq (none_url.protocol (), "default");
   string_eq (file_root.protocol (), "file");
   string_eq (ftp_root.protocol (), "ftp");
   string_eq (wsl_ubuntu.protocol (), "default");
-  string_eq (unix_root.protocol (), "");
-  string_eq (unix_root_txt.protocol (), "");
-  string_eq (unix_tmp.protocol (), "");
-  string_eq (unix_tmp_a.protocol (), "");
-  string_eq (abc_url.protocol (), "");
+  string_eq (unix_root.protocol (), "default");
+  string_eq (unix_root_txt.protocol (), "default");
+  string_eq (unix_tmp.protocol (), "default");
+  string_eq (unix_tmp_a.protocol (), "default");
+  string_eq (abc_url.protocol (), "default");
+
+  string_eq (get_root (ustc_edu), "https");
+  string_eq (get_root (texmacs_org), "http");
+  string_eq (get_root (file_root), "file");
+  string_eq (get_root (ftp_root), "ftp");
+#if defined(OS_MINGW) || defined(OS_WIN)
+  string_eq (get_root (wsl_ubuntu), "default");
+#endif
+  string_eq (get_root (none_url), "default");
+  string_eq (get_root (file_root | texmacs_org), "");
 }
 
 TEST_CASE ("url with env") {
@@ -111,18 +121,6 @@ TEST_CASE ("suffix") {
   string_eq (suffix (png), "png");
   url png2= url ("/a/b.c/d.png");
   string_eq (suffix (png2), "png");
-}
-
-TEST_CASE ("get_root") {
-  string_eq (get_root (ustc_edu), "https");
-  string_eq (get_root (texmacs_org), "http");
-  string_eq (get_root (file_root), "file");
-  string_eq (get_root (ftp_root), "ftp");
-#if defined(OS_MINGW) || defined(OS_WIN)
-  string_eq (get_root (wsl_ubuntu), "default");
-#endif
-  string_eq (get_root (none_url), "");
-  string_eq (get_root (file_root | texmacs_org), "");
 }
 
 TEST_CASE ("as_string") {
