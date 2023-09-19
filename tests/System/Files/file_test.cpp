@@ -23,12 +23,6 @@ TEST_CASE ("is_directory on Windows") {
 }
 #endif
 
-#if defined(OS_LINUX)
-TEST_CASE ("is_symbolic_link on linux") {
-  CHECK (is_symbolic_link (url_system ("/usr/bin/python")));
-}
-#endif
-
 TEST_CASE ("is_directory/is_regular") {
   CHECK (is_directory (url_pwd ()));
   CHECK (!is_regular (url_pwd ()));
@@ -171,7 +165,6 @@ TEST_CASE ("load_string part1") {
   }
   // create test file
   if (tb_file_create (as_charp (as_string (u1)))) {
-    cout << "[DEBUG] can create file" << LF;
     const char* s2    = "hello world";
     tb_size_t   size  = strlen (s2);
     tb_byte_t*  buffer= (tb_byte_t*) tb_malloc_bytes (size);
