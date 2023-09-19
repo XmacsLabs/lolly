@@ -325,9 +325,24 @@ load_string (url u, string& s, bool fatal) {
     cerr << "Failed to load url: [" << as_string (u) << "]" << LF;
     return file_failure (fatal, "Must be a local and single file");
   }
-  string name= as_string (u);
+  url u_iter  = expand (u);
+  url u_target= url_none ();
+  // iterate u_expanded to find the first existed file
+  while (is_or (u_iter)) {
+    if (is_regular (u_iter[1])) {
+      u_target= u_iter[1];
+      break;
+    }
+    u_iter= u_iter[2];
+  }
+  if (is_none (u_target)) {
+    // if u_target does not exist, is_or(u_iter) is false
+    // just use u_iter as u_target
+    u_target= u_iter;
+  }
 
-  char* path= as_charp (name);
+  string name= as_string (u_target);
+  char*  path= as_charp (name);
   if (tb_file_access (path, TB_FILE_MODE_RW)) { // Read file
     tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RW);
 
@@ -354,7 +369,7 @@ load_string (url u, string& s, bool fatal) {
     }
   }
   else {
-    cerr << "Failed to load url: [" << as_string (u) << "]" << LF;
+    cerr << "Failed to load url in [" << as_string (u) << "]" << LF;
     return file_failure (fatal, "file not readable");
   }
 }

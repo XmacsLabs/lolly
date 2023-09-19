@@ -196,6 +196,13 @@ TEST_CASE ("load_string part2") {
   CHECK_THROWS (load_string (u3, s3, true));
 }
 
+TEST_CASE ("load_string part3") {
+  url    u ("Kernel/Containers:Kernel/Types", "string.hpp");
+  string s;
+  load_string (u, s, false);
+  CHECK (N (s) > 0);
+}
+
 TEST_CASE ("save to empty file") {
   url    lolly_tmp= get_lolly_tmp ();
   url    u1       = lolly_tmp * url ("save_empty.txt");
