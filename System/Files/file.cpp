@@ -322,6 +322,7 @@ file_failure (bool fatal, const char* msg) {
 bool
 load_string (url u, string& s, bool fatal) {
   if (!is_local_and_single (u)) {
+    cerr << "Failed to load url: [" << as_string (u) << "]" << LF;
     return file_failure (fatal, "Must be a local and single file");
   }
   string name= as_string (u);
@@ -353,6 +354,7 @@ load_string (url u, string& s, bool fatal) {
     }
   }
   else {
+    cerr << "Failed to load url: [" << as_string (u) << "]" << LF;
     return file_failure (fatal, "file not readable");
   }
 }
@@ -370,6 +372,7 @@ save_string (url u, const string& s, bool fatal) {
   ASSERT (sizeof (tb_byte_t) == sizeof (char),
           "invalid cast from tb_byte_t* to char*");
   if (!is_local_and_single (u)) {
+    cerr << "Failed to save_string on url: [" << as_string (u) << "]" << LF;
     return file_failure (fatal, "url should be absolute path");
   }
   string name= as_string (u);
@@ -391,6 +394,7 @@ save_string (url u, const string& s, bool fatal) {
     return false;
   }
   else {
+    cerr << "Failed to save_string on url: [" << as_string (u) << "]" << LF;
     return file_failure (fatal, "unexpected behavior during writting");
   }
 }
