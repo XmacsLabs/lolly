@@ -340,16 +340,13 @@ load_string (url u, string& s, bool fatal) {
       }
       tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
       if (tb_file_read (file, buffer, size) != -1) {
-        int        seek= 0;
-        tm_ostream os;
-        os.buffer ();
+        s->resize (size);
+        int seek= 0;
         while (seek < size) {
-          char c= buffer[seek];
-          os << c;
+          char c = buffer[seek];
+          s[seek]= c;
           seek++;
         }
-        string out= os.unbuffer ();
-        s         = out;
       }
       tb_file_exit (file); // exit file
       return false;
