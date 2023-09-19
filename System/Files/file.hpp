@@ -14,6 +14,8 @@
 
 #include "url.hpp"
 
+bool is_local_and_single (url u);
+
 bool is_directory (url u);
 bool is_regular (url u);
 bool is_symbolic_link (url u);

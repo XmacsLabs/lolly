@@ -17,15 +17,17 @@
 
 #include "tbox/tbox.h"
 
-static bool
-is_single_path (url u) {
-  string label= u.label ();
-  return (label == "") || (label == "concat");
+bool
+is_local_and_single (url u) {
+  string label   = u.label ();
+  string protocol= u.protocol ();
+  return ((label == "") || (label == "concat")) &&
+         (protocol == "default" || protocol == "file");
 }
 
 bool
 is_directory (url u) {
-  if (!is_single_path (u)) return false;
+  if (!is_local_and_single (u)) return false;
 
   string         path= as_string (u);
   tb_file_info_t info;
@@ -44,7 +46,7 @@ is_directory (url u) {
 
 bool
 is_regular (url u) {
-  if (!is_single_path (u)) return false;
+  if (!is_local_and_single (u)) return false;
 
   string         path= as_string (u);
   tb_file_info_t info;
@@ -63,7 +65,7 @@ is_regular (url u) {
 
 bool
 is_symbolic_link (url u) {
-  if (!is_single_path (u)) return false;
+  if (!is_local_and_single (u)) return false;
 
   string         path= as_string (u);
   tb_file_info_t info;
@@ -77,8 +79,8 @@ is_symbolic_link (url u) {
 
 bool
 is_newer (url which, url than) {
-  if (!is_single_path (which)) return false;
-  if (!is_single_path (than)) return false;
+  if (!is_local_and_single (which)) return false;
+  if (!is_local_and_single (than)) return false;
 
   tb_file_info_t info1, info2;
   if (tb_file_info (as_charp (as_string (which)), &info1) &
@@ -94,7 +96,7 @@ bool
 is_of_type (url name, string filter) {
   if (is_ramdisc (name)) return true;
 
-  if (!is_single_path (name)) return false;
+  if (!is_local_and_single (name)) return false;
 
   if (filter == "") return true;
   int i, n= N (filter);
@@ -142,7 +144,7 @@ is_of_type (url name, string filter) {
 
 int
 file_size (url u) {
-  if (!is_single_path (u)) return -1;
+  if (!is_local_and_single (u)) return -1;
 
   string         path= as_string (u);
   tb_file_info_t info;
@@ -156,7 +158,7 @@ file_size (url u) {
 
 int
 last_modified (url u) {
-  if (!is_single_path (u)) return -1;
+  if (!is_local_and_single (u)) return -1;
 
   string         path= as_string (u);
   tb_file_info_t info;
@@ -181,7 +183,7 @@ tb_directory_walk_func (tb_char_t const* path, tb_file_info_t const* info,
 
 array<string>
 read_directory (url u, bool& error_flag) {
-  if (!is_single_path (u)) {
+  if (!is_local_and_single (u)) {
     error_flag= false;
     return array<string> ();
   }
@@ -201,11 +203,11 @@ void
 mkdir (url u) {
   string label= u.label ();
   if (label == "none" || label == "root" || label == "wildcard") return;
-  else if (is_single_path (u)) { // label == "" or label == "concat"
+  if (is_local_and_single (u)) { // label == "" or label == "concat"
     string path= as_string (u);
     tb_directory_create (as_charp (path));
   }
-  else { // label == "or"
+  if (is_or (u)) { // label == "or"
     mkdir (u[1]);
     mkdir (u[2]);
   }
@@ -224,11 +226,11 @@ void
 rmdir (url u) {
   string label= u.label ();
   if (label == "none" || label == "root" || label == "wildcard") return;
-  else if (is_single_path (u)) {
+  if (is_local_and_single (u)) { // label == "" or label == "concat"
     string path= as_string (u);
     tb_directory_remove (as_charp (path));
   }
-  else { // label == "or"
+  if (is_or (u)) { // label == "or"
     rmdir (u[1]);
     rmdir (u[2]);
   }
@@ -293,11 +295,11 @@ void
 remove (url u) {
   string label= u.label ();
   if (label == "none" || label == "root" || label == "wildcard") return;
-  else if (is_single_path (u)) {
+  if (is_local_and_single (u)) {
     string path= as_string (u);
     tb_file_remove (as_charp (path));
   }
-  else { // label == "or"
+  if (is_or (u)) { // label == "or"
     remove (u[1]);
     remove (u[2]);
   }
@@ -319,48 +321,42 @@ file_failure (bool fatal, const char* msg) {
 
 bool
 load_string (url u, string& s, bool fatal) {
-  bool err= !is_rooted_name (u);
-  if (!err) {
-    string name= as_string (u);
+  if (!is_local_and_single (u)) {
+    return file_failure (fatal, "Must be a local and single file");
+  }
+  string name= as_string (u);
 
-    char* path= as_charp (name);
-    // Read file
-    if (tb_file_access (path, TB_FILE_MODE_RW)) {
+  char* path= as_charp (name);
+  if (tb_file_access (path, TB_FILE_MODE_RW)) { // Read file
+    tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RW);
 
-      tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RW);
-
-      if (file) {
-        // lock file
-        tb_file_sync (file);
-        tb_size_t size= tb_file_size (file);
-        if (size == 0) {
-          s= "";
-          tb_file_exit (file);
-          return false;
-        }
-        tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
-        if (tb_file_read (file, buffer, size) != -1) {
-          int        seek= 0;
-          tm_ostream os;
-          os.buffer ();
-          while (seek < size) {
-            char c= buffer[seek];
-            os << c;
-            seek++;
-          }
-          string out= os.unbuffer ();
-          s         = out;
-        }
+    if (file) {
+      tb_file_sync (file); // lock file
+      tb_size_t size= tb_file_size (file);
+      if (size == 0) {
+        s= "";
         tb_file_exit (file);
         return false;
       }
-    }
-    else {
-      if (fatal) {
-        TM_FAILED ("file not readable");
+      tb_byte_t* buffer= (tb_byte_t*) tb_malloc_bytes (size);
+      if (tb_file_read (file, buffer, size) != -1) {
+        int        seek= 0;
+        tm_ostream os;
+        os.buffer ();
+        while (seek < size) {
+          char c= buffer[seek];
+          os << c;
+          seek++;
+        }
+        string out= os.unbuffer ();
+        s         = out;
       }
-      return true;
+      tb_file_exit (file); // exit file
+      return false;
     }
+  }
+  else {
+    return file_failure (fatal, "file not readable");
   }
 }
 
@@ -376,11 +372,10 @@ bool
 save_string (url u, const string& s, bool fatal) {
   ASSERT (sizeof (tb_byte_t) == sizeof (char),
           "invalid cast from tb_byte_t* to char*");
-  url r= u;
-  if (!is_rooted_name (r)) {
+  if (!is_local_and_single (u)) {
     return file_failure (fatal, "url should be absolute path");
   }
-  string name= as_string (r);
+  string name= as_string (u);
 
   const char* path= as_charp (name);
   // tb_file_access cannot check TB_FILE_MODE_CREAT on windows, so create
