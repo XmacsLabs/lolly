@@ -133,4 +133,10 @@ TEST_CASE ("as_string") {
   url dirs= url ("Data") | url ("Kernel") | url ("Plugins");
   string_eq (as_string (dirs), string ("Data") * URL_SEPARATOR * "Kernel" *
                                    URL_SEPARATOR * "Plugins");
+#if defined(OS_MINGW) || defined(OS_WIN)
+  SUBCASE ("on host windows") {
+    url app_mogan= url_system ("$ProgramFiles\\Mogan");
+    string_eq (as_string (app_mogan), string ("C:\\Program Files\\Mogan"));
+  }
+#endif
 }
