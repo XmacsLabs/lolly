@@ -327,7 +327,7 @@ load_string (url u, string& s, bool fatal) {
   }
   url u_iter  = expand (u);
   url u_target= url_none ();
-  // iterate u_expanded to find the first existed file
+  // iterate to find the first existed file
   while (is_or (u_iter)) {
     if (is_regular (u_iter[1])) {
       u_target= u_iter[1];
