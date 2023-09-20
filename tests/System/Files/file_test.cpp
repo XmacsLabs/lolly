@@ -8,6 +8,9 @@
 #include "file.hpp"
 #include "tbox/tbox.h"
 
+url unix_root= url_system ("/");
+url xmake_lua= url_pwd () * "xmake.lua";
+
 url
 get_lolly_tmp () {
 #if defined(OS_WIN) || defined(OS_MINGW)
@@ -24,15 +27,15 @@ TEST_CASE ("is_directory on Windows") {
 #endif
 
 TEST_CASE ("is_directory/is_regular") {
+#if defined(OS_LINUX) || defined(OS_MACOS) || defined(OS_WASM)
+  CHECK (is_directory (unix_root));
+#endif
   CHECK (is_directory (url_pwd () * "tests"));
 
-#ifndef OS_WASM
   CHECK (is_directory (url_pwd ()));
   CHECK (!is_regular (url_pwd ()));
   CHECK (!is_symbolic_link (url_pwd ()));
-#endif
 
-  url xmake_lua= url_pwd () * url ("xmake.lua");
   CHECK (!is_directory (xmake_lua));
   CHECK (is_regular (xmake_lua));
   CHECK (!is_symbolic_link (xmake_lua));
@@ -51,23 +54,17 @@ TEST_CASE ("is_newer") {
 }
 
 TEST_CASE ("is_of_type") {
-#ifndef OS_WASM
   CHECK (is_of_type (url_pwd (), "d"));
   CHECK (!is_of_type (url_pwd (), "f"));
-#endif
-  CHECK (is_of_type (url_pwd () * url ("xmake.lua"), "fr"));
+  CHECK (is_of_type (xmake_lua, "fr"));
 #if defined(OS_MINGW) || defined(OS_WIN)
   CHECK (is_of_type (url_pwd () * url ("bin/format.bat"), "x"));
 #endif
 }
 
-TEST_CASE ("file_size") {
-  CHECK (file_size (url_pwd () * url ("xmake.lua")) > 0);
-}
+TEST_CASE ("file_size") { CHECK (file_size (xmake_lua) > 0); }
 
-TEST_CASE ("last_modified") {
-  CHECK (last_modified (url_pwd () * url ("xmake.lua")) > 0);
-}
+TEST_CASE ("last_modified") { CHECK (last_modified (xmake_lua) > 0); }
 
 TEST_CASE ("mkdir/rmdir") {
   url lolly_tmp = get_lolly_tmp ();
