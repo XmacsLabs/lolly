@@ -26,11 +26,9 @@ TEST_CASE ("is_directory on Windows") {
 TEST_CASE ("is_directory/is_regular") {
   CHECK (is_directory (url_pwd () * "tests"));
 
-#ifndef OS_WASM
   CHECK (is_directory (url_pwd ()));
   CHECK (!is_regular (url_pwd ()));
   CHECK (!is_symbolic_link (url_pwd ()));
-#endif
 
   url xmake_lua= url_pwd () * url ("xmake.lua");
   CHECK (!is_directory (xmake_lua));
@@ -51,10 +49,8 @@ TEST_CASE ("is_newer") {
 }
 
 TEST_CASE ("is_of_type") {
-#ifndef OS_WASM
   CHECK (is_of_type (url_pwd (), "d"));
   CHECK (!is_of_type (url_pwd (), "f"));
-#endif
   CHECK (is_of_type (url_pwd () * url ("xmake.lua"), "fr"));
 #if defined(OS_MINGW) || defined(OS_WIN)
   CHECK (is_of_type (url_pwd () * url ("bin/format.bat"), "x"));

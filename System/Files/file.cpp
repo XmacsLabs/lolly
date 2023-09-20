@@ -21,7 +21,7 @@ bool
 is_local_and_single (url u) {
   string label   = u.label ();
   string protocol= u.protocol ();
-  return ((label == "") || (label == "concat")) &&
+  return ((label == "") || (label == "concat") || (label == "root")) &&
          (protocol == "default" || protocol == "file");
 }
 
