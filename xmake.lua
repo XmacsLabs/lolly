@@ -207,10 +207,14 @@ function add_test_target(filepath)
 
         if is_plat("wasm") then
             add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
+            add_ldflags("--preload-file xmake.lua")
+            add_ldflags("--preload-file tests")
             add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
             on_run(function (target)
                 node = os.getenv("EMSDK_NODE")
-                cmd = node .. " $(buildir)/wasm/wasm32/$(mode)/" .. testname .. ".js"
+                os.cd("$(buildir)/wasm/wasm32/$(mode)/")
+                print("> cd $(buildir)/wasm/wasm32/$(mode)/")
+                cmd = node .. " " .. testname .. ".js"
                 print("> " .. cmd)
                 os.exec(cmd)
             end)
@@ -250,7 +254,6 @@ end
 
 
 cpp_tests_not_on_wasm = table.join(
-    os.files("tests/System/Files/**_test.cpp"),
     os.files("tests/Plugins/Curl/**_test.cpp")
 )
 cpp_tests_on_all_plat = os.files("tests/**_test.cpp")

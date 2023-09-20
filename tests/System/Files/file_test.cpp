@@ -24,9 +24,13 @@ TEST_CASE ("is_directory on Windows") {
 #endif
 
 TEST_CASE ("is_directory/is_regular") {
+  CHECK (is_directory (url_pwd () * "tests"));
+
+#ifndef OS_WASM
   CHECK (is_directory (url_pwd ()));
   CHECK (!is_regular (url_pwd ()));
   CHECK (!is_symbolic_link (url_pwd ()));
+#endif
 
   url xmake_lua= url_pwd () * url ("xmake.lua");
   CHECK (!is_directory (xmake_lua));
@@ -47,8 +51,10 @@ TEST_CASE ("is_newer") {
 }
 
 TEST_CASE ("is_of_type") {
+#ifndef OS_WASM
   CHECK (is_of_type (url_pwd (), "d"));
   CHECK (!is_of_type (url_pwd (), "f"));
+#endif
   CHECK (is_of_type (url_pwd () * url ("xmake.lua"), "fr"));
 #if defined(OS_MINGW) || defined(OS_WIN)
   CHECK (is_of_type (url_pwd () * url ("bin/format.bat"), "x"));
@@ -138,7 +144,7 @@ TEST_CASE ("url_temp") {
 
 TEST_CASE ("read_directory") {
   bool flag1= false;
-  CHECK (N (read_directory (url_pwd (), flag1)) > 0);
+  CHECK (N (read_directory (url_pwd () * "tests", flag1)) > 0);
   CHECK (!flag1); // no error
   bool flag2= false;
   CHECK (N (read_directory (url_system ("no_such_dir"), flag2)) == 0);
@@ -197,7 +203,7 @@ TEST_CASE ("load_string part2") {
 }
 
 TEST_CASE ("load_string part3") {
-  url    u ("Kernel/Containers:Kernel/Types", "string.hpp");
+  url    u ("tests/Kernel/Containers:tests/Kernel/Types", "list_test.cpp");
   string s;
   load_string (u, s, false);
   CHECK (N (s) > 0);
