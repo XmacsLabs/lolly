@@ -343,8 +343,8 @@ load_string (url u, string& s, bool fatal) {
 
   string name= as_string (u_target);
   char*  path= as_charp (name);
-  if (tb_file_access (path, TB_FILE_MODE_RW)) { // Read file
-    tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RW);
+  if (tb_file_access (path, TB_FILE_MODE_RO)) { // Read file
+    tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RO);
 
     if (file) {
       tb_file_sync (file); // lock file

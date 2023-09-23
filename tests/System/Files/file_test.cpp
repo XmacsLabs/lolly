@@ -206,6 +206,24 @@ TEST_CASE ("load_string part3") {
   CHECK (N (s) > 0);
 }
 
+#if defined(OS_MINGW) || defined(OS_WIN)
+TEST_CASE ("load_string part 4: read only file") {
+  url    hosts= url_system ("C:\\Windows\\System32\\drivers\\etc\\hosts");
+  string s;
+  load_string (hosts, s, false);
+  CHECK (N (s) > 0);
+}
+#endif
+
+#if defined(OS_LINUX) || defined(OS_MACOS)
+TEST_CASE ("load_string part 4: read only file") {
+  url    hosts= url_system ("/etc/hosts");
+  string s;
+  load_string (hosts, s, false);
+  CHECK (N (s) > 0);
+}
+#endif
+
 TEST_CASE ("save to empty file") {
   url    lolly_tmp= get_lolly_tmp ();
   url    u1       = lolly_tmp * url ("save_empty.txt");
