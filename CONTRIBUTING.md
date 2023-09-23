@@ -1,5 +1,5 @@
 # Contributing
-## For Users
+## report issues
 Reporting bugs to [Github](https://github.com/XmacsLabs/lolly/issues)/[Gitee](https://gitee.com/XmacsLabs/lolly/issues)/[Codeberg](https://codeberg.org/XmacsLabs/lolly/issues) in English/Chinese.
 
 We use both English and Chinese languages, as our current developers primarily use these two languages.
@@ -15,8 +15,8 @@ We are using [xmake](https://xmake.io), please always use the xmake version spec
 | How to format | All | [English](docs/guide/Format.md)/[中文](docs/guide/Format.md) |
 
 # 贡献代码
-## 对于用户
-请向 [Github](https://github.com/XmacsLabs/lolly/issues)/[Gitee](https://gitee.com/XmacsLabs/lolly/issues)/[Codeberg](https://codeberg.org/XmacsLabs/lolly/issues) 报告英文或中文的问题。
+## 报告问题
+请向 [Github](https://github.com/XmacsLabs/lolly/issues)/[Gitee](https://gitee.com/XmacsLabs/lolly/issues)/[Codeberg](https://codeberg.org/XmacsLabs/lolly/issues) 报告的问题(用英文或者中文报告)。
 
 我们同时使用中文和英文，因为我们的现有开发人员主要使用这两种语言。
 

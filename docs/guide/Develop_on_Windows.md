@@ -2,16 +2,16 @@
 
 ## Using xmake
 ### Step 1: Installing xmake
-Xmake can be installed either from msys pacman, or from standalone installer for windows.
+Xmake can be installed either from scoop, or from standalone installer for windows.
 
-It is recommended to use pacman, and other packages need to be installed in this way
+It is recommended to use scoop, and other packages need to be installed in this way
 ```
-pacman -Sy xmake
-pacman -Sy make
-pacman -Sy git
+scoop install xmake
+scoop install make
+scoop install git
 ```
 
-Sometimes, it's necessary to ensure that xrepo is up-to-date to ensure the usage of the latest dependency build definitions:
+Sometimes, it's necessary to ensure that xrepo repository is up-to-date to ensure the usage of the latest dependency build definitions:
 ```
 xrepo update-repo
 ```

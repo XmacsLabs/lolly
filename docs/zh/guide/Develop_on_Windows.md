@@ -2,16 +2,16 @@
 
 ## 使用xmake
 ### 步骤1：安装xmake
-xmake可以通过msys pacman或Windows的独立安装程序安装。
+xmake可以通过scoop或Windows的独立安装程序安装。
 
-建议使用pacman，并以以下方式安装其他包
+建议使用scoop，并以以下方式安装其他包
 ```
-pacman -Sy xmake
-pacman -Sy make
-pacman -Sy git
+scoop install xmake
+scoop install make
+scoop install git
 ```
 
-有时，需要确保xrepo是最新的，以确保使用最新的依赖项构建定义：
+有时，需要xrepo仓库是最新的，以确保使用最新的依赖项构建定义：
 ```
 xrepo update-repo
 ```
@@ -19,7 +19,7 @@ xrepo update-repo
 ### 步骤2：安装和使用
 以xmake为例：
 #### 方法1：本地安装
-```
+``
 xmake config --yes
 xmake build liblolly
 xmake install --admin liblolly
