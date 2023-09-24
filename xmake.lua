@@ -21,7 +21,7 @@ if is_plat("wasm") then
 end
 
 --- require packages
-tbox_configs = {hash=true, ["force-utf8"]=true}
+tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
 add_requires("tbox dev", {system=false, configs=tbox_configs})
 add_requires("doctest 2.4.11", {system=false})
 if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
