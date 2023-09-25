@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lolly: How to Perform Testing</title>
+<title>Lolly: 在Windows上开发</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,30 +70,31 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">How to Perform Testing </div></div>
+  <div class="headertitle"><div class="title">在Windows上开发 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>For developers, there are two testing methods available: unit testing and integration testing.</p>
-<h1><a class="anchor" id="autotoc_md27"></a>
-Listing all Targets</h1>
-<p>The following command line can list all targets. Targets ending with <code>_test</code> are C++ unit tests. </p><div class="fragment"><div class="line">$ xmake show -l targets</div>
-<div class="line">path_test            ntuple_test          fast_search_test</div>
-<div class="line">base64_test          blackbox_test        hashset_test</div>
-<div class="line">tm_timer_test        string_test          fast_alloc_test</div>
-<div class="line">promise_test         liblolly             array_test</div>
-<div class="line">url_test             sys_utils_test       hashmap_test</div>
-<div class="line">curl_test            iterator_test        hashfunc_test</div>
-<div class="line">hashtree_test        tm_ostream_test      list_test</div>
-<div class="line">modification_test    parse_string_test    generic_tree_test</div>
-<div class="line">analyze_test         rel_hashmap_test     tree_test</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md28"></a>
-Unit Tests</h1>
-<p>As shown above, unit tests are in the format of xxx_test. You can run the following command to perform the tests (ensure you have built the code beforehand, see <a href="https://xmake.io">xmake</a> for details):</p>
-<p>Run only one test: </p><div class="fragment"><div class="line">xmake run xxx_test</div>
-<div class="line">bin\test_only.bat xxx_test # on Windows</div>
-<div class="line">bin/test_only xxx_test     # on Linux/macOS</div>
-</div><!-- fragment --><p>Run all tests: </p><div class="fragment"><div class="line">xmake run --group=tests</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<div class="textblock"><h1><a class="anchor" id="autotoc_md36"></a>
+使用xmake</h1>
+<h2><a class="anchor" id="autotoc_md37"></a>
+步骤1：安装xmake</h2>
+<p>xmake可以通过scoop或Windows的独立安装程序安装。</p>
+<p>建议使用scoop，并以以下方式安装其他包 </p><div class="fragment"><div class="line">scoop install xmake</div>
+<div class="line">scoop install make</div>
+<div class="line">scoop install git</div>
+</div><!-- fragment --><p>有时，需要xrepo仓库是最新的，以确保使用最新的依赖项构建定义： </p><div class="fragment"><div class="line">xrepo update-repo</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md38"></a>
+步骤2：安装和使用</h2>
+<p>以xmake为例： </p>
+<h3><a class="anchor" id="autotoc_md39"></a>
+方法1：本地安装</h3>
+<p>`` xmake config &ndash;yes xmake build liblolly xmake install &ndash;admin liblolly </p><div class="fragment"><div class="line">#### 方法2：添加xmake依赖</div>
+<div class="line">在需要lolly的库中，将以下内容添加到xmake.lua：</div>
+</div><!-- fragment --><p> add_requires("lolly", {system=false}) ```</p>
+<p>有关详细示例，请参阅<a href="https://github.com/XmacsLabs/mogan/blob/branch-1.2/misc/xmake/packages.lua">mogan</a>。</p>
+<h2><a class="anchor" id="autotoc_md40"></a>
+步骤3：编译和测试</h2>
+<p>请参阅<a class="el" href="md_docs_zh_guide_Test.html">如何测试</a>。 </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lolly: How to Perform Testing</title>
+<title>Lolly: 如何格式化代码</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,29 +70,27 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">How to Perform Testing </div></div>
+  <div class="headertitle"><div class="title">如何格式化代码 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>For developers, there are two testing methods available: unit testing and integration testing.</p>
-<h1><a class="anchor" id="autotoc_md27"></a>
-Listing all Targets</h1>
-<p>The following command line can list all targets. Targets ending with <code>_test</code> are C++ unit tests. </p><div class="fragment"><div class="line">$ xmake show -l targets</div>
-<div class="line">path_test            ntuple_test          fast_search_test</div>
-<div class="line">base64_test          blackbox_test        hashset_test</div>
-<div class="line">tm_timer_test        string_test          fast_alloc_test</div>
-<div class="line">promise_test         liblolly             array_test</div>
-<div class="line">url_test             sys_utils_test       hashmap_test</div>
-<div class="line">curl_test            iterator_test        hashfunc_test</div>
-<div class="line">hashtree_test        tm_ostream_test      list_test</div>
-<div class="line">modification_test    parse_string_test    generic_tree_test</div>
-<div class="line">analyze_test         rel_hashmap_test     tree_test</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md28"></a>
-Unit Tests</h1>
-<p>As shown above, unit tests are in the format of xxx_test. You can run the following command to perform the tests (ensure you have built the code beforehand, see <a href="https://xmake.io">xmake</a> for details):</p>
-<p>Run only one test: </p><div class="fragment"><div class="line">xmake run xxx_test</div>
-<div class="line">bin\test_only.bat xxx_test # on Windows</div>
-<div class="line">bin/test_only xxx_test     # on Linux/macOS</div>
-</div><!-- fragment --><p>Run all tests: </p><div class="fragment"><div class="line">xmake run --group=tests</div>
+<div class="textblock"><p>使用 Elvish 执行（需要确保你已经安装elvish）： </p><div class="fragment"><div class="line">elvish bin/format</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md42"></a>
+clang-format</h1>
+<p>将 clang-format 固定在 <code>16.0.x</code> 版本。</p>
+<h2><a class="anchor" id="autotoc_md43"></a>
+macOS</h2>
+<div class="fragment"><div class="line">brew install clang-format</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md44"></a>
+Windows</h2>
+<div class="fragment"><div class="line">scoop install llvm@16.0.6</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md45"></a>
+Linux</h2>
+<p>方法一： 你可以使用xrepo来安装llvm，但有时编译需要很长时间。 </p><div class="fragment"><div class="line">xrepo install &quot;llvm==16.0.5&quot;</div>
+</div><!-- fragment --><p>方法二： 你可以直接安装clang-format。 以ubuntu22.04为例：</p>
+<p>步骤1：获取密钥。 </p><div class="fragment"><div class="line">wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -</div>
+</div><!-- fragment --><p>步骤2：将来自https://apt.llvm.org/ 的相应Ubuntu版本的源代码插入到系统中。 </p><div class="fragment"><div class="line">sudo vim /etc/apt/sources.list</div>
+</div><!-- fragment --><p>步骤3：安装clang-format-16。 </p><div class="fragment"><div class="line">sudo apt update</div>
+<div class="line">sudo apt install clang-format-16</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
