@@ -277,3 +277,62 @@ TEST_CASE ("save to exist file") {
   CHECK (!load_string (u1, s2, false));
   string_eq (s1, s2);
 }
+
+TEST_CASE ("append to empty file") {
+  url lolly_tmp= get_lolly_tmp ();
+
+  SUBCASE ("file not exist") {
+    url    u1= lolly_tmp * url ("append_not_exist.txt");
+    string s1 ("file not exist");
+    string s2;
+
+    CHECK (!append_string (u1, s1, false));
+    CHECK (!load_string (u1, s2, false));
+    string_eq (s1, s2);
+  }
+
+  SUBCASE ("file empty") {
+    url    u1= lolly_tmp * url ("append_empty.txt");
+    string s1 ("file empty");
+    string s2;
+
+    tb_file_create (as_charp (as_string (u1)));
+    CHECK (!append_string (u1, s1, false));
+
+    CHECK (!load_string (u1, s2, false));
+    string_eq (s1, s2);
+  }
+}
+
+TEST_CASE ("append file not empty") {
+  url lolly_tmp= get_lolly_tmp ();
+  SUBCASE ("test file not empty") {
+    url u1= lolly_tmp * url ("append_not_empty.txt");
+    tb_file_create (as_charp (as_string (u1)));
+
+    string s1 ("head-");
+    string s2 ("file not empty");
+    string s3;
+
+    CHECK (!save_string (u1, s1, false));
+    CHECK (!append_string (u1, s2, false));
+
+    CHECK (!load_string (u1, s3, false));
+    string_eq ("head-file not empty", s3);
+  }
+
+  SUBCASE ("test file not empty") {
+    url u1= lolly_tmp * url ("unicode文件.txt");
+    tb_file_create (as_charp (as_string (u1)));
+
+    string s1 ("头-");
+    string s2 ("unicode文件");
+    string s3;
+
+    CHECK (!save_string (u1, s1, false));
+    CHECK (!append_string (u1, s2, false));
+
+    CHECK (!load_string (u1, s3, false));
+    string_eq ("头-unicode文件", s3);
+  }
+}
