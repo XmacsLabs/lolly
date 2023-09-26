@@ -19,7 +19,7 @@ xrepo update-repo
 ### 步骤2：安装和使用
 以xmake为例：
 #### 方法1：本地安装
-``
+```
 xmake config --yes
 xmake build liblolly
 xmake install --admin liblolly
