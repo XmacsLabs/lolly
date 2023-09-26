@@ -321,7 +321,7 @@ TEST_CASE ("append file not empty") {
     string_eq ("head-file not empty", s3);
   }
 
-  SUBCASE ("test file not empty") {
+  SUBCASE ("test file include unicode") {
     url u1= lolly_tmp * url ("unicode文件.txt");
     tb_file_create (as_charp (as_string (u1)));
 
