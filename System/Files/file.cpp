@@ -426,9 +426,9 @@ append_string (url u, string s, bool fatal) {
     return file_failure (fatal, "Must be a local and single file");
   }
 
-  url u_iter  = expand (u);
-  url u_target= url_none ();
-  bool err= false;
+  url  u_iter  = expand (u);
+  url  u_target= url_none ();
+  bool err     = false;
 
   // iterate to find the first existed file
   while (is_or (u_iter)) {
@@ -460,18 +460,17 @@ append_string (url u, string s, bool fatal) {
   if (fout == NULL) {
     err= true;
     cerr << "Append error for " << name << ", "
-          << "\n";
+         << "\n";
     return file_failure (fatal, "append file not find");
   }
 
   // append string to file
   if (!err) {
     tb_size_t        input_size= N (s);
-    const tb_byte_t* content=
-        reinterpret_cast<const tb_byte_t*> (as_charp (s));
-    tb_size_t real_size= tb_file_writ (fout, content, input_size);
-    bool      writ_suc = real_size == input_size;
-    bool      exit_suc = tb_file_exit (fout);
+    const tb_byte_t* content= reinterpret_cast<const tb_byte_t*> (as_charp (s));
+    tb_size_t        real_size= tb_file_writ (fout, content, input_size);
+    bool             writ_suc = real_size == input_size;
+    bool             exit_suc = tb_file_exit (fout);
 
     // release lock
     tb_filelock_leave (lock);
