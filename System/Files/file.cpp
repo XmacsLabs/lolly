@@ -459,9 +459,8 @@ append_string (url u, string s, bool fatal) {
 
   if (fout == NULL) {
     err= true;
-    cerr << "Append error for " << name << ", "
-         << "\n";
-    return file_failure (fatal, "append file not find");
+    cerr << "Append error for " << name << ", " << LF;
+    return file_failure (fatal, "file to append not found");
   }
 
   // append string to file
@@ -480,8 +479,8 @@ append_string (url u, string s, bool fatal) {
   }
 
   if (err) {
-    cerr << "File name= " << as_string (u) << "\n";
-    return file_failure (fatal, "append file not appendable");
+    cerr << "File name= " << as_string (u) << LF;
+    return file_failure (fatal, "file is not appendable");
   }
   return err;
 }
