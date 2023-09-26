@@ -14,7 +14,6 @@
 #include "analyze.hpp"
 #include "string.hpp"
 #include "sys_utils.hpp"
-#include "tmfs_url.hpp"
 
 #include "tbox/tbox.h"
 
@@ -422,62 +421,62 @@ string_save (string s, url u) {
 
 bool
 append_string (url u, string s, bool fatal) {
-  if (is_rooted_tmfs (u)) return file_failure (fatal, "file not appendable");
+  if (!is_local_and_single (u)) {
+    cerr << "Failed to load url: [" << as_string (u) << "]" << LF;
+    return file_failure (fatal, "Must be a local and single file");
+  }
 
-  url  r  = u;
-  bool err= !is_rooted_name (r);
+  url u_iter  = expand (u);
+  url u_target= url_none ();
+  bool err= false;
+
+  // iterate to find the first existed file
+  while (is_or (u_iter)) {
+    if (is_regular (u_iter[1])) {
+      u_target= u_iter[1];
+      break;
+    }
+    u_iter= u_iter[2];
+  }
+  if (is_none (u_target)) {
+    // if u_target does not exist, is_or(u_iter) is false
+    // just use u_iter as u_target
+    u_target= u_iter;
+  }
+  string name = as_string (u_target);
+  char*  _name= as_charp (name);
+
+  // open the file
+  tb_file_ref_t fout= tb_file_init (
+      _name, TB_FILE_MODE_WO | TB_FILE_MODE_APPEND | TB_FILE_MODE_CREAT);
+
+  // lock file
+  tb_filelock_ref_t lock= tb_filelock_init (fout);
+  if (tb_filelock_enter (lock, TB_FILELOCK_MODE_EX) == tb_false) {
+    tb_file_exit (fout);
+    fout= NULL;
+  }
+
+  if (fout == NULL) {
+    err= true;
+    cerr << "Append error for " << name << ", "
+          << "\n";
+    return file_failure (fatal, "append file not find");
+  }
+
+  // append string to file
   if (!err) {
-    url u_iter  = expand (u);
-    url u_target= url_none ();
+    tb_size_t        input_size= N (s);
+    const tb_byte_t* content=
+        reinterpret_cast<const tb_byte_t*> (as_charp (s));
+    tb_size_t real_size= tb_file_writ (fout, content, input_size);
+    bool      writ_suc = real_size == input_size;
+    bool      exit_suc = tb_file_exit (fout);
 
-    // iterate to find the first existed file
-    while (is_or (u_iter)) {
-      if (is_regular (u_iter[1])) {
-        u_target= u_iter[1];
-        break;
-      }
-      u_iter= u_iter[2];
-    }
-    if (is_none (u_target)) {
-      // if u_target does not exist, is_or(u_iter) is false
-      // just use u_iter as u_target
-      u_target= u_iter;
-    }
-    string name = as_string (u_target);
-    char*  _name= as_charp (name);
-
-    // open the file
-    tb_file_ref_t fout= tb_file_init (
-        _name, TB_FILE_MODE_WO | TB_FILE_MODE_APPEND | TB_FILE_MODE_CREAT);
-
-    // lock file
-    tb_filelock_ref_t lock= tb_filelock_init (fout);
-    if (tb_filelock_enter (lock, TB_FILELOCK_MODE_EX) == tb_false) {
-      tb_file_exit (fout);
-      fout= NULL;
-    }
-
-    if (fout == NULL) {
-      err= true;
-      cerr << "Append error for " << name << ", "
-           << "\n";
-      return file_failure (fatal, "append file not find");
-    }
-
-    // append string to file
-    if (!err) {
-      tb_size_t        input_size= N (s);
-      const tb_byte_t* content=
-          reinterpret_cast<const tb_byte_t*> (as_charp (s));
-      tb_size_t real_size= tb_file_writ (fout, content, input_size);
-      bool      writ_suc = real_size == input_size;
-      bool      exit_suc = tb_file_exit (fout);
-
-      // release lock
-      tb_filelock_leave (lock);
-      if (writ_suc & exit_suc) {
-        return false;
-      }
+    // release lock
+    tb_filelock_leave (lock);
+    if (writ_suc & exit_suc) {
+      return false;
     }
   }
 
