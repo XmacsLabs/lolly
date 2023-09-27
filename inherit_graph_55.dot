@@ -16,6 +16,4 @@ digraph "Graphical Class Hierarchy"
   Node4 [label="http_url",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classhttp__url.html",tooltip=" "];
   Node0 -> Node5 [dir="back",color="steelblue1",style="solid"];
   Node5 [label="https_url",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classhttps__url.html",tooltip=" "];
-  Node0 -> Node6 [dir="back",color="steelblue1",style="solid"];
-  Node6 [label="tmfs_url",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtmfs__url.html",tooltip=" "];
 }
