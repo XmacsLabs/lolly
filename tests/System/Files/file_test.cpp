@@ -86,6 +86,7 @@ TEST_CASE ("chdir/current_dir") {
   CHECK (tb_directory_current_set (as_charp (as_string (test_mkdir))) ==
          tb_true);
   url cur= current_dir ();
+  cout << "[DEBUG]:" << cur << "[DEBUG]:" << test_mkdir << "[END]" << LF;
   CHECK (cur == test_mkdir);
   // restore the test dir
   CHECK (tb_directory_current_set (as_charp (as_string (old))) == tb_true);
