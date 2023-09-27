@@ -236,6 +236,31 @@ rmdir (url u) {
   }
 }
 
+void
+chdir (url u) {
+  string label= u.label ();
+  if (label == "none" || label == "root" || label == "wildcard") return;
+  if (is_local_and_single (u)) { // label == "" or label == "concat"
+    string path= as_string (u);
+    tb_directory_current_set (as_charp (path));
+  }
+  if (is_or (u)) { // label == "or"
+    rmdir (u[1]);
+    rmdir (u[2]);
+  }
+}
+
+url
+current_dir () {
+  tb_char_t path[1024];
+  if (tb_directory_current (path, 1024) == 0) {
+    TM_FAILED ("Failed to get current dir!");
+  }
+
+  const char* _path= reinterpret_cast<const char*> (path);
+  return url (_path);
+}
+
 url
 url_temp (string suffix) {
   tb_char_t        uuid[37];
