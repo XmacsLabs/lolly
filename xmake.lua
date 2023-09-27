@@ -1,4 +1,4 @@
-set_xmakever("2.8.2")
+set_xmakever("2.8.3")
 
 set_project("lolly")
 

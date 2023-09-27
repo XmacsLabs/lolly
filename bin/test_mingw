@@ -9,7 +9,7 @@ if (eq $platform:os windows) {
   if (eq $E:GITHUB_ACTIONS "true") {
     echo "It is in Github Action"
     set paths = [
-      C:/hostedtoolcache/windows/xmake/2.8.2/x64
+      C:/hostedtoolcache/windows/xmake/2.8.3/x64
       $mingw_path/bin
     ]
   } else {
