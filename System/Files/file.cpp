@@ -258,7 +258,7 @@ current_dir () {
   }
 
   const char* _path= reinterpret_cast<const char*> (path);
-  return url (_path);
+  return url_system (_path);
 }
 
 url
