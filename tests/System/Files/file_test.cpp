@@ -78,14 +78,14 @@ TEST_CASE ("mkdir/rmdir") {
 TEST_CASE ("chdir/current_dir") {
   url lolly_tmp = get_lolly_tmp ();
   url test_mkdir= lolly_tmp * url ("ch_dir");
-  url old       = current_dir ();
+  url old       = url_pwd ();
 
   mkdir (test_mkdir);
   CHECK (is_directory (test_mkdir));
 
   CHECK (tb_directory_current_set (as_charp (as_string (test_mkdir))) ==
          tb_true);
-  url cur= current_dir ();
+  url cur= url_pwd ();
   cout << "[DEBUG]:" << cur << "[DEBUG]:" << test_mkdir << "[END]" << LF;
   CHECK (cur == test_mkdir);
   // restore the test dir

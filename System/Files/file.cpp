@@ -244,21 +244,6 @@ chdir (url u) {
     string path= as_string (u);
     tb_directory_current_set (as_charp (path));
   }
-  if (is_or (u)) { // label == "or"
-    rmdir (u[1]);
-    rmdir (u[2]);
-  }
-}
-
-url
-current_dir () {
-  tb_char_t path[1024];
-  if (tb_directory_current (path, 1024) == 0) {
-    TM_FAILED ("Failed to get current dir!");
-  }
-
-  const char* _path= reinterpret_cast<const char*> (path);
-  return url_system (_path);
 }
 
 url

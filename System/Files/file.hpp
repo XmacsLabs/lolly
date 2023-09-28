@@ -37,7 +37,6 @@ void chdir (url u);
 
 url url_temp_dir ();
 url url_temp (string suffix= "");
-url current_dir ();
 
 void remove (url u);
 void move (url u1, url u2);
