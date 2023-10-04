@@ -15,6 +15,8 @@ url
 get_lolly_tmp () {
 #if defined(OS_WIN) || defined(OS_MINGW)
   return url_system ("$TMP") * url (".lolly");
+#elif defined(OS_MACOS)
+  return url_system ("/private/tmp") * url (".lolly");
 #else
   return url_system ("/tmp") * url (".lolly");
 #endif
@@ -83,13 +85,11 @@ TEST_CASE ("chdir/current_dir") {
   mkdir (test_mkdir);
   CHECK (is_directory (test_mkdir));
 
-  CHECK (tb_directory_current_set (as_charp (as_string (test_mkdir))) ==
-         tb_true);
+  chdir (test_mkdir);
   url cur= url_pwd ();
-  cout << "[DEBUG]:" << cur << "[DEBUG]:" << test_mkdir << "[END]" << LF;
   CHECK (cur == test_mkdir);
   // restore the test dir
-  CHECK (tb_directory_current_set (as_charp (as_string (old))) == tb_true);
+  chdir (old);
 }
 
 TEST_CASE ("remove") {

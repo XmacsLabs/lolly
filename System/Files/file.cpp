@@ -238,12 +238,13 @@ rmdir (url u) {
 
 void
 chdir (url u) {
-  string label= u.label ();
-  if (label == "none" || label == "root" || label == "wildcard") return;
-  if (is_local_and_single (u)) { // label == "" or label == "concat"
+  if (is_local_and_single (u)) {
     string path= as_string (u);
-    tb_directory_current_set (as_charp (path));
+    if (tb_directory_current_set (as_charp (path)) != tb_true) {
+      TM_FAILED ("Failed to change the dir");
+    }
   }
+  else TM_FAILED ("file path invalid");
 }
 
 url
