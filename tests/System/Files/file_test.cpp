@@ -115,9 +115,9 @@ TEST_CASE ("chdir") {
     url test_link = lolly_tmp * url ("ch");
     mkdir (test_mkdir);
 #if defined(OS_MINGW) || defined(OS_WIN)
-    CreateSymbolicLink (as_charp (as_string (test_mkdir)),
-                        as_charp (as_string (test_link))
-                            SYMBOLIC_LINK_FLAG_DIRECTORY);
+    CreateSymbolicLink (as_charp (as_string (test_link)),
+                        as_charp (as_string (test_mkdir)),
+                        SYMBOLIC_LINK_FLAG_DIRECTORY);
 #else
     symlink (as_charp (as_string (test_mkdir)),
              as_charp (as_string (test_link)));
