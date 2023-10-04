@@ -77,19 +77,81 @@ TEST_CASE ("mkdir/rmdir") {
   CHECK (!is_directory (test_mkdir));
 }
 
-TEST_CASE ("chdir/current_dir") {
-  url lolly_tmp = get_lolly_tmp ();
-  url test_mkdir= lolly_tmp * url ("ch_dir");
-  url old       = url_pwd ();
+TEST_CASE ("chdir") {
+  url lolly_tmp= get_lolly_tmp ();
+  url old      = url_pwd ();
 
-  mkdir (test_mkdir);
-  CHECK (is_directory (test_mkdir));
+  SUBCASE ("tmp directory") {
+    url test_mkdir= lolly_tmp * url ("ch_dir");
 
-  chdir (test_mkdir);
-  url cur= url_pwd ();
-  CHECK (cur == test_mkdir);
-  // restore the test dir
-  chdir (old);
+    mkdir (test_mkdir);
+    CHECK (is_directory (test_mkdir));
+
+    chdir (test_mkdir);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
+
+  SUBCASE ("Root directory") {
+#if defined(OS_MINGW) || defined(OS_WIN)
+    url test_mkdir= url_system ("C:\\");
+#else
+    url test_mkdir= url_system ("/");
+#endif
+
+    chdir (test_mkdir);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
+
+  SUBCASE ("symlink") {
+    url test_mkdir= lolly_tmp * url ("ch_dir");
+    url test_link = lolly_tmp * url ("ch");
+    mkdir (test_mkdir);
+    symlink (as_charp (as_string (test_mkdir)),
+             as_charp (as_string (test_link)));
+
+    chdir (test_link);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
+
+  SUBCASE ("chinese") {
+    url test_mkdir= lolly_tmp * url ("中文");
+
+    mkdir (test_mkdir);
+    CHECK (is_directory (test_mkdir));
+
+    chdir (test_mkdir);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
+
+  SUBCASE ("dir with Space") {
+    url test_mkdir= lolly_tmp * url (" spa ce");
+
+    mkdir (test_mkdir);
+    CHECK (is_directory (test_mkdir));
+
+    chdir (test_mkdir);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
 }
 
 TEST_CASE ("remove") {
