@@ -159,6 +159,7 @@ target("liblolly") do
     add_headerfiles("System/IO/(*.hpp)")
     add_headerfiles("System/Memory/(*.hpp)")
     add_headerfiles("System/Misc/(*.hpp)")
+    add_headerfiles("System/Language/(*.hpp)")
     add_headerfiles("Data/String/(*.hpp)")
     add_headerfiles("Data/Scheme/(*.hpp)")
     add_headerfiles("Plugins/Curl/(*.hpp)", {prefixdir = "Curl"})
