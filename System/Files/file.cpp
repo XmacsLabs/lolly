@@ -465,13 +465,16 @@ append_string (url u, string s, bool fatal) {
   tb_size_t        input_size= N (s);
   const tb_byte_t* content  = reinterpret_cast<const tb_byte_t*> (as_charp (s));
   tb_size_t        real_size= tb_file_writ (fout, content, input_size);
-  bool             writ_suc = real_size == input_size;
+  bool             writ_sz_equ= (real_size == input_size);
   bool             release_suc= tb_filelock_leave (lock);
   tb_filelock_exit (lock);
   bool exit_suc= tb_file_exit (fout);
 
-  if (writ_suc && exit_suc && release_suc) return false;
-  else return true;
+  if (writ_sz_equ && exit_suc && release_suc) return false;
+  else {
+    cerr << "File name= " << as_string (u) << LF;
+    return file_failure (fatal, "file is not appendable");
+  }
 }
 
 void
