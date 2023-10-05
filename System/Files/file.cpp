@@ -426,9 +426,8 @@ append_string (url u, string s, bool fatal) {
     return file_failure (fatal, "Must be a local and single file");
   }
 
-  url  u_iter  = expand (u);
-  url  u_target= url_none ();
-  bool err     = false;
+  url u_iter  = expand (u);
+  url u_target= url_none ();
 
   // iterate to find the first existed file
   while (is_or (u_iter)) {
@@ -449,40 +448,30 @@ append_string (url u, string s, bool fatal) {
   // open the file
   tb_file_ref_t fout= tb_file_init (
       _name, TB_FILE_MODE_WO | TB_FILE_MODE_APPEND | TB_FILE_MODE_CREAT);
-
-  // lock file
-  tb_filelock_ref_t lock= tb_filelock_init (fout);
-  if (tb_filelock_enter (lock, TB_FILELOCK_MODE_EX) == tb_false) {
-    tb_file_exit (fout);
-    fout= NULL;
-  }
-
   if (fout == NULL) {
-    err= true;
     cerr << "Append error for " << name << ", " << LF;
     return file_failure (fatal, "file to append not found");
   }
 
+  // lock file
+  tb_filelock_ref_t lock= tb_filelock_init (fout);
+  if (tb_filelock_enter (lock, TB_FILELOCK_MODE_EX) == tb_false) {
+    tb_filelock_exit (lock);
+    tb_file_exit (fout);
+    return file_failure (fatal, "fail to lock file");
+  }
+
   // append string to file
-  if (!err) {
-    tb_size_t        input_size= N (s);
-    const tb_byte_t* content= reinterpret_cast<const tb_byte_t*> (as_charp (s));
-    tb_size_t        real_size= tb_file_writ (fout, content, input_size);
-    bool             writ_suc = real_size == input_size;
-    bool             exit_suc = tb_file_exit (fout);
+  tb_size_t        input_size= N (s);
+  const tb_byte_t* content  = reinterpret_cast<const tb_byte_t*> (as_charp (s));
+  tb_size_t        real_size= tb_file_writ (fout, content, input_size);
+  bool             writ_suc = real_size == input_size;
+  bool             release_suc= tb_filelock_leave (lock);
+  tb_filelock_exit (lock);
+  bool exit_suc= tb_file_exit (fout);
 
-    // release lock
-    tb_filelock_leave (lock);
-    if (writ_suc & exit_suc) {
-      return false;
-    }
-  }
-
-  if (err) {
-    cerr << "File name= " << as_string (u) << LF;
-    return file_failure (fatal, "file is not appendable");
-  }
-  return err;
+  if (writ_suc && exit_suc && release_suc) return false;
+  else return true;
 }
 
 void
