@@ -47,5 +47,6 @@ var searchData=
   ['os_5fwin_44',['os_win',['../sys__utils_8hpp.html#ab11e3509474da61b1ed15cbde827ac78',1,'os_win():&#160;sys_utils.cpp'],['../sys__utils_8cpp.html#ab11e3509474da61b1ed15cbde827ac78',1,'os_win():&#160;sys_utils.cpp']]],
   ['otherdirection_45',['otherDirection',['../classChannel.html#ae58c44ed97c8d510782dbcf640ea612b',1,'Channel']]],
   ['out_46',['out',['../struct__pipe__t.html#a9baab58673ed5922c277ae71bf272aee',1,'_pipe_t']]],
-  ['overlapping_47',['overlapping',['../analyze_8cpp.html#afd3045e31c90c2fc2f747850c4eb0a9f',1,'overlapping(string s1, string s2):&#160;analyze.cpp'],['../analyze_8hpp.html#afd3045e31c90c2fc2f747850c4eb0a9f',1,'overlapping(string s1, string s2):&#160;analyze.cpp']]]
+  ['outline_47',['outline',['../locale_8cpp.html#a9f63f2ea5fb31c854e478d11d4920eb4',1,'locale.cpp']]],
+  ['overlapping_48',['overlapping',['../analyze_8cpp.html#afd3045e31c90c2fc2f747850c4eb0a9f',1,'overlapping(string s1, string s2):&#160;analyze.cpp'],['../analyze_8hpp.html#afd3045e31c90c2fc2f747850c4eb0a9f',1,'overlapping(string s1, string s2):&#160;analyze.cpp']]]
 ];
