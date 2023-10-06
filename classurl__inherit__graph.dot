@@ -15,6 +15,4 @@ digraph "url"
   Node5 [label="http_url",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhttp__url.html",tooltip=" "];
   Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
   Node6 [label="https_url",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhttps__url.html",tooltip=" "];
-  Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
-  Node7 [label="tmfs_url",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classtmfs__url.html",tooltip=" "];
 }

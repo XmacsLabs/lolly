@@ -55,12 +55,7 @@ digraph "tree.hpp"
   Node15 -> Node24 [dir="back",color="steelblue1",style="solid"];
   Node24 [label="https_url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$https__url_8cpp.html",tooltip=" "];
   Node15 -> Node25 [dir="back",color="steelblue1",style="solid"];
-  Node25 [label="tmfs_url.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tmfs__url_8hpp.html",tooltip=" "];
-  Node25 -> Node26 [dir="back",color="steelblue1",style="solid"];
-  Node26 [label="tmfs_url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tmfs__url_8cpp.html",tooltip=" "];
-  Node25 -> Node27 [dir="back",color="steelblue1",style="solid"];
-  Node27 [label="url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url_8cpp.html",tooltip=" "];
-  Node15 -> Node27 [dir="back",color="steelblue1",style="solid"];
-  Node15 -> Node28 [dir="back",color="steelblue1",style="solid"];
-  Node28 [label="url_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url__test_8cpp.html",tooltip=" "];
+  Node25 [label="url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url_8cpp.html",tooltip=" "];
+  Node15 -> Node26 [dir="back",color="steelblue1",style="solid"];
+  Node26 [label="url_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url__test_8cpp.html",tooltip=" "];
 }

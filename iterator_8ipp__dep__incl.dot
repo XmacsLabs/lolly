@@ -67,12 +67,7 @@ digraph "iterator.ipp"
   Node20 -> Node29 [dir="back",color="steelblue1",style="solid"];
   Node29 [label="https_url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$https__url_8cpp.html",tooltip=" "];
   Node20 -> Node30 [dir="back",color="steelblue1",style="solid"];
-  Node30 [label="tmfs_url.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tmfs__url_8hpp.html",tooltip=" "];
-  Node30 -> Node31 [dir="back",color="steelblue1",style="solid"];
-  Node31 [label="tmfs_url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tmfs__url_8cpp.html",tooltip=" "];
-  Node30 -> Node32 [dir="back",color="steelblue1",style="solid"];
-  Node32 [label="url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url_8cpp.html",tooltip=" "];
-  Node20 -> Node32 [dir="back",color="steelblue1",style="solid"];
-  Node20 -> Node33 [dir="back",color="steelblue1",style="solid"];
-  Node33 [label="url_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url__test_8cpp.html",tooltip=" "];
+  Node30 [label="url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url_8cpp.html",tooltip=" "];
+  Node20 -> Node31 [dir="back",color="steelblue1",style="solid"];
+  Node31 [label="url_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url__test_8cpp.html",tooltip=" "];
 }
