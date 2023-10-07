@@ -84,4 +84,4 @@ jobs:
       - name: build
         run: xmake build --yes -vD --all
       - name: test
-        run: elvish bin/test_mingw
+        run: xmake run --yes -vD --group=tests

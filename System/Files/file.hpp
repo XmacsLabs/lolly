@@ -33,6 +33,7 @@ array<string> read_directory (url u, bool& error_flag);
 void mkdir (url u);
 void make_dir (url which);
 void rmdir (url u);
+void chdir (url u);
 
 url url_temp_dir ();
 url url_temp (string suffix= "");

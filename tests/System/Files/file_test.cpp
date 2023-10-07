@@ -15,6 +15,8 @@ url
 get_lolly_tmp () {
 #if defined(OS_WIN) || defined(OS_MINGW)
   return url_system ("$TMP") * url (".lolly");
+#elif defined(OS_MACOS)
+  return url_system ("/private/tmp") * url (".lolly");
 #else
   return url_system ("/tmp") * url (".lolly");
 #endif
@@ -73,6 +75,68 @@ TEST_CASE ("mkdir/rmdir") {
   CHECK (is_directory (test_mkdir));
   rmdir (test_mkdir);
   CHECK (!is_directory (test_mkdir));
+}
+
+TEST_CASE ("chdir") {
+  url lolly_tmp= get_lolly_tmp ();
+  url old      = url_pwd ();
+
+  SUBCASE ("tmp directory") {
+    url test_mkdir= lolly_tmp * url ("ch_dir");
+
+    mkdir (test_mkdir);
+    CHECK (is_directory (test_mkdir));
+
+    chdir (test_mkdir);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
+
+  SUBCASE ("Root directory") {
+#if defined(OS_MINGW) || defined(OS_WIN)
+    url test_mkdir= url_system ("C:\\");
+#else
+    url test_mkdir= url_system ("/");
+#endif
+
+    chdir (test_mkdir);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
+
+  SUBCASE ("chinese") {
+    url test_mkdir= lolly_tmp * url ("中文");
+
+    mkdir (test_mkdir);
+    CHECK (is_directory (test_mkdir));
+
+    chdir (test_mkdir);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
+
+  SUBCASE ("dir with Space") {
+    url test_mkdir= lolly_tmp * url (" spa ce");
+
+    mkdir (test_mkdir);
+    CHECK (is_directory (test_mkdir));
+
+    chdir (test_mkdir);
+    url cur= url_pwd ();
+    CHECK (cur == test_mkdir);
+
+    // restore the test dir
+    chdir (old);
+  }
 }
 
 TEST_CASE ("remove") {
