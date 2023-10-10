@@ -70,7 +70,7 @@ var searchData=
   ['sys_5futils_2ecpp_67',['sys_utils.cpp',['../sys__utils_8cpp.html',1,'']]],
   ['sys_5futils_2ehpp_68',['sys_utils.hpp',['../sys__utils_8hpp.html',1,'']]],
   ['sys_5futils_5ftest_2ecpp_69',['sys_utils_test.cpp',['../sys__utils__test_8cpp.html',1,'']]],
-  ['system_70',['system',['../namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d',1,'lolly']]],
+  ['system_70',['system',['../namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d',1,'lolly::system(string cmd)'],['../namespacelolly.html#aa35cfc8aecf0b2c09eb4dd580e39a344',1,'lolly::system(string s, string &amp;result)']]],
   ['system_5fwait_71',['system_wait',['../string_8cpp.html#ae7e359767a1ee35b0f29774168b41ecc',1,'system_wait(string message, string argument, int level):&#160;string.cpp'],['../string_8hpp.html#a576d5791763d837e600eed2c366abaf4',1,'system_wait(string message, string argument=&quot;&quot;, int level=0):&#160;string.cpp']]],
   ['sz_72',['sz',['../classChannel.html#a224f1cdcb7d1098632979aaeafed498d',1,'Channel']]]
 ];

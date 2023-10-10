@@ -50,6 +50,6 @@ var searchData=
   ['subtree_47',['subtree',['../path_8cpp.html#affa5fff3d0e6b45ddc69b980b9ba2fba',1,'subtree(tree &amp;t, path p):&#160;path.cpp'],['../path_8hpp.html#affa5fff3d0e6b45ddc69b980b9ba2fba',1,'subtree(tree &amp;t, path p):&#160;path.cpp']]],
   ['suffix_48',['suffix',['../url_8cpp.html#a152ca4c508950740cb850f82d3049cf6',1,'suffix(url u):&#160;url.cpp'],['../url_8hpp.html#a152ca4c508950740cb850f82d3049cf6',1,'suffix(url u):&#160;url.cpp']]],
   ['suppress_5flast_49',['suppress_last',['../list_8hpp.html#ae644fa030f543076ffd07b8d06aaab48',1,'suppress_last(list&lt; T &gt; &amp;l):&#160;list.ipp'],['../list_8ipp.html#ae644fa030f543076ffd07b8d06aaab48',1,'suppress_last(list&lt; T &gt; &amp;l):&#160;list.ipp']]],
-  ['system_50',['system',['../namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d',1,'lolly']]],
+  ['system_50',['system',['../namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d',1,'lolly::system(string cmd)'],['../namespacelolly.html#aa35cfc8aecf0b2c09eb4dd580e39a344',1,'lolly::system(string s, string &amp;result)']]],
   ['system_5fwait_51',['system_wait',['../string_8cpp.html#ae7e359767a1ee35b0f29774168b41ecc',1,'system_wait(string message, string argument, int level):&#160;string.cpp'],['../string_8hpp.html#a576d5791763d837e600eed2c366abaf4',1,'system_wait(string message, string argument=&quot;&quot;, int level=0):&#160;string.cpp']]]
 ];

@@ -93,6 +93,8 @@ Include dependency graph for sys_utils_test.cpp:</div>
 Functions</h2></td></tr>
 <tr class="memitem:ad256d622fc091a4f462488c60dfb2667"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__utils__test_8cpp.html#ad256d622fc091a4f462488c60dfb2667">TEST_CASE</a> (&quot;get_process_id&quot;)</td></tr>
 <tr class="separator:ad256d622fc091a4f462488c60dfb2667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b02a9e0f65e4a02123a0e6d7e47ac5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__utils__test_8cpp.html#ad2b02a9e0f65e4a02123a0e6d7e47ac5">TEST_CASE</a> (&quot;system with output&quot;)</td></tr>
+<tr class="separator:ad2b02a9e0f65e4a02123a0e6d7e47ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99dd5916761b1d434db55508cf5f459f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__utils__test_8cpp.html#a99dd5916761b1d434db55508cf5f459f">TEST_CASE</a> (&quot;system&quot;)</td></tr>
 <tr class="separator:a99dd5916761b1d434db55508cf5f459f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a365775853352057124051bff4ec991b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__utils__test_8cpp.html#a365775853352057124051bff4ec991b0">TEST_CASE</a> (&quot;get_env/set_env&quot;)</td></tr>
@@ -102,7 +104,7 @@ Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad256d622fc091a4f462488c60dfb2667" name="ad256d622fc091a4f462488c60dfb2667"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad256d622fc091a4f462488c60dfb2667">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad256d622fc091a4f462488c60dfb2667">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -110,7 +112,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramtype">&quot;get_process_id&quot;     &#160;</td>
+          <td class="paramtype">&quot;get_process_id&quot;      &#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -119,12 +121,44 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00004">4</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    4</span>{ CHECK (<a class="code hl_function" href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a> () &gt;= 1); }</div>
-<div class="ttc" id="asys__utils_8cpp_html_a920a0c8786d1b42eeccbfcf3bdce2663"><div class="ttname"><a href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a></div><div class="ttdeci">SN get_process_id()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00118">sys_utils.cpp:118</a></div></div>
+<div class="ttc" id="asys__utils_8cpp_html_a920a0c8786d1b42eeccbfcf3bdce2663"><div class="ttname"><a href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a></div><div class="ttdeci">SN get_process_id()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00127">sys_utils.cpp:127</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad2b02a9e0f65e4a02123a0e6d7e47ac5" name="ad2b02a9e0f65e4a02123a0e6d7e47ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b02a9e0f65e4a02123a0e6d7e47ac5">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;system with output&quot;     &#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00006">6</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>                                 {</div>
+<div class="line"><span class="lineno">    7</span>  <span class="keywordtype">string</span> result;</div>
+<div class="line"><span class="lineno">    8</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (result) == 0);</div>
+<div class="line"><span class="lineno">    9</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="sys__utils_8cpp.html#af882377c2708a5ecb79786eb3081e399">os_wasm</a> () &amp;&amp; !<a class="code hl_function" href="sys__utils_8cpp.html#a63a265a61f7b6bd73b3114a53da96668">os_mingw</a> ()) {</div>
+<div class="line"><span class="lineno">   10</span>    <a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;xmake --version&quot;</span>, result);</div>
+<div class="line"><span class="lineno">   11</span>    CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (result) &gt; 0);</div>
+<div class="line"><span class="lineno">   12</span>  }</div>
+<div class="line"><span class="lineno">   13</span>}</div>
+<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
+<div class="ttc" id="anamespacelolly_html_aa7c8230fccf51fc5c61bf22b06f4b99d"><div class="ttname"><a href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a></div><div class="ttdeci">int system(string cmd)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00171">sys_utils.cpp:171</a></div></div>
+<div class="ttc" id="asys__utils_8cpp_html_a63a265a61f7b6bd73b3114a53da96668"><div class="ttname"><a href="sys__utils_8cpp.html#a63a265a61f7b6bd73b3114a53da96668">os_mingw</a></div><div class="ttdeci">bool os_mingw()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00100">sys_utils.cpp:100</a></div></div>
+<div class="ttc" id="asys__utils_8cpp_html_af882377c2708a5ecb79786eb3081e399"><div class="ttname"><a href="sys__utils_8cpp.html#af882377c2708a5ecb79786eb3081e399">os_wasm</a></div><div class="ttdeci">bool os_wasm()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00118">sys_utils.cpp:118</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a99dd5916761b1d434db55508cf5f459f" name="a99dd5916761b1d434db55508cf5f459f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99dd5916761b1d434db55508cf5f459f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a99dd5916761b1d434db55508cf5f459f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,26 +173,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00006">6</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>                     {</div>
-<div class="line"><span class="lineno">    7</span><span class="preprocessor">#ifdef OS_WASM</span></div>
-<div class="line"><span class="lineno">    8</span>  CHECK_EQ (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;xmake --version&quot;</span>), -1);</div>
-<div class="line"><span class="lineno">    9</span>  CHECK_EQ (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;no_such_command&quot;</span>), -1);</div>
-<div class="line"><span class="lineno">   10</span>  CHECK_EQ (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;&quot;</span>), -1);</div>
-<div class="line"><span class="lineno">   11</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">   12</span><span class="preprocessor">#ifndef OS_MINGW</span></div>
-<div class="line"><span class="lineno">   13</span>  CHECK (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;xmake --version&quot;</span>) == 0);</div>
-<div class="line"><span class="lineno">   14</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   15</span>  CHECK (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;no_such_command&quot;</span>) != 0);</div>
-<div class="line"><span class="lineno">   16</span>  CHECK (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;&quot;</span>) != 0);</div>
-<div class="line"><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   18</span>}</div>
-<div class="ttc" id="anamespacelolly_html_aa7c8230fccf51fc5c61bf22b06f4b99d"><div class="ttname"><a href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a></div><div class="ttdeci">int system(string cmd)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00162">sys_utils.cpp:162</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00015">15</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                     {</div>
+<div class="line"><span class="lineno">   16</span><span class="preprocessor">#ifdef OS_WASM</span></div>
+<div class="line"><span class="lineno">   17</span>  CHECK_EQ (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;xmake --version&quot;</span>), -1);</div>
+<div class="line"><span class="lineno">   18</span>  CHECK_EQ (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;no_such_command&quot;</span>), -1);</div>
+<div class="line"><span class="lineno">   19</span>  CHECK_EQ (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;&quot;</span>), -1);</div>
+<div class="line"><span class="lineno">   20</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   21</span><span class="preprocessor">#ifndef OS_MINGW</span></div>
+<div class="line"><span class="lineno">   22</span>  CHECK (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;xmake --version&quot;</span>) == 0);</div>
+<div class="line"><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   24</span>  CHECK (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;no_such_command&quot;</span>) != 0);</div>
+<div class="line"><span class="lineno">   25</span>  CHECK (<a class="code hl_function" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a> (<span class="stringliteral">&quot;&quot;</span>) != 0);</div>
+<div class="line"><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   27</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a365775853352057124051bff4ec991b0" name="a365775853352057124051bff4ec991b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a365775853352057124051bff4ec991b0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a365775853352057124051bff4ec991b0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,24 +206,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00020">20</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                              {</div>
-<div class="line"><span class="lineno">   21</span><span class="preprocessor">#if defined(OS_MINGW) || defined(OS_WIN)</span></div>
-<div class="line"><span class="lineno">   22</span>  CHECK_EQ (<a class="code hl_function" href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a> (<span class="stringliteral">&quot;ProgramFiles&quot;</span>) == <span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   23</span>  <a class="code hl_function" href="sys__utils_8cpp.html#aba76e2e16096e5c0d9c4fba20c1638cb">set_env</a> (<span class="stringliteral">&quot;LOLLY_PATH&quot;</span>, <span class="stringliteral">&quot;C:\\lolly&quot;</span>);</div>
-<div class="line"><span class="lineno">   24</span>  CHECK_EQ (<a class="code hl_function" href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a> (<span class="stringliteral">&quot;LOLLY_PATH&quot;</span>) == <span class="stringliteral">&quot;C:\\lolly&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   26</span> </div>
-<div class="line"><span class="lineno">   27</span>  <a class="code hl_function" href="sys__utils_8cpp.html#aba76e2e16096e5c0d9c4fba20c1638cb">set_env</a> (<span class="stringliteral">&quot;SHELL&quot;</span>, <span class="stringliteral">&quot;/bin/zsh&quot;</span>);</div>
-<div class="line"><span class="lineno">   28</span>  CHECK_EQ (<a class="code hl_function" href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a> (<span class="stringliteral">&quot;SHELL&quot;</span>) == <span class="stringliteral">&quot;/bin/zsh&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   29</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00029">29</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                              {</div>
+<div class="line"><span class="lineno">   30</span><span class="preprocessor">#if defined(OS_MINGW) || defined(OS_WIN)</span></div>
+<div class="line"><span class="lineno">   31</span>  CHECK_EQ (<a class="code hl_function" href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a> (<span class="stringliteral">&quot;ProgramFiles&quot;</span>) == <span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   32</span>  <a class="code hl_function" href="sys__utils_8cpp.html#aba76e2e16096e5c0d9c4fba20c1638cb">set_env</a> (<span class="stringliteral">&quot;LOLLY_PATH&quot;</span>, <span class="stringliteral">&quot;C:\\lolly&quot;</span>);</div>
+<div class="line"><span class="lineno">   33</span>  CHECK_EQ (<a class="code hl_function" href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a> (<span class="stringliteral">&quot;LOLLY_PATH&quot;</span>) == <span class="stringliteral">&quot;C:\\lolly&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>  <a class="code hl_function" href="sys__utils_8cpp.html#aba76e2e16096e5c0d9c4fba20c1638cb">set_env</a> (<span class="stringliteral">&quot;SHELL&quot;</span>, <span class="stringliteral">&quot;/bin/zsh&quot;</span>);</div>
+<div class="line"><span class="lineno">   37</span>  CHECK_EQ (<a class="code hl_function" href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a> (<span class="stringliteral">&quot;SHELL&quot;</span>) == <span class="stringliteral">&quot;/bin/zsh&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   38</span>}</div>
 <div class="ttc" id="asys__utils_8cpp_html_aba76e2e16096e5c0d9c4fba20c1638cb"><div class="ttname"><a href="sys__utils_8cpp.html#aba76e2e16096e5c0d9c4fba20c1638cb">set_env</a></div><div class="ttdeci">void set_env(string var, string with)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00048">sys_utils.cpp:48</a></div></div>
 <div class="ttc" id="asys__utils_8cpp_html_adafe88317c2838dd7505ba786e93277d"><div class="ttname"><a href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a></div><div class="ttdeci">string get_env(string var)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00025">sys_utils.cpp:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a757a9fc11d9364674efc9cf6fad8ef60" name="a757a9fc11d9364674efc9cf6fad8ef60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a757a9fc11d9364674efc9cf6fad8ef60">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a757a9fc11d9364674efc9cf6fad8ef60">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,12 +238,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00031">31</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                            {</div>
-<div class="line"><span class="lineno">   32</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="sys__utils_8cpp.html#a2efd376c8a64ca818f2c92f6e2d62375">get_user_name</a> ()) &gt;= 0);</div>
-<div class="line"><span class="lineno">   33</span>  <span class="comment">// cout &lt;&lt; get_user_name () &lt;&lt; LF;</span></div>
-<div class="line"><span class="lineno">   34</span>}</div>
-<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00040">40</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                            {</div>
+<div class="line"><span class="lineno">   41</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="sys__utils_8cpp.html#a2efd376c8a64ca818f2c92f6e2d62375">get_user_name</a> ()) &gt;= 0);</div>
+<div class="line"><span class="lineno">   42</span>  <span class="comment">// cout &lt;&lt; get_user_name () &lt;&lt; LF;</span></div>
+<div class="line"><span class="lineno">   43</span>}</div>
 <div class="ttc" id="asys__utils_8cpp_html_a2efd376c8a64ca818f2c92f6e2d62375"><div class="ttname"><a href="sys__utils_8cpp.html#a2efd376c8a64ca818f2c92f6e2d62375">get_user_name</a></div><div class="ttdeci">string get_user_name()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00076">sys_utils.cpp:76</a></div></div>
 </div><!-- fragment -->
 </div>
