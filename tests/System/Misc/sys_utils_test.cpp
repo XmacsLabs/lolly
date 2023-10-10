@@ -3,6 +3,15 @@
 
 TEST_CASE ("get_process_id") { CHECK (get_process_id () >= 1); }
 
+TEST_CASE ("system with output") {
+  string result;
+  CHECK (N (result) == 0);
+  if (!os_wasm ()) {
+    lolly::system ("xmake --version", result);
+    CHECK (N (result) > 0);
+  }
+}
+
 TEST_CASE ("system") {
 #ifdef OS_WASM
   CHECK_EQ (lolly::system ("xmake --version"), -1);
