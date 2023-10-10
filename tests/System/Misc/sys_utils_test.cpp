@@ -6,7 +6,7 @@ TEST_CASE ("get_process_id") { CHECK (get_process_id () >= 1); }
 TEST_CASE ("system with output") {
   string result;
   CHECK (N (result) == 0);
-  if (!os_wasm ()) {
+  if (!os_wasm () && !os_mingw ()) {
     lolly::system ("xmake --version", result);
     CHECK (N (result) > 0);
   }
