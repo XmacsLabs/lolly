@@ -42,9 +42,6 @@ namespace lolly {
 void init_tbox ();
 int  system (string s);
 int  system (string s, string& r);
-
-string eval_system (string s);
-string var_eval_system (string s);
 } // namespace lolly
 
 #endif // defined SYS_UTILS_H

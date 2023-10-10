@@ -228,19 +228,4 @@ system (string s, string& result) {
   return status;
 }
 
-string
-eval_system (string s) {
-  string result;
-  (void) system (s, result);
-  return result;
-}
-
-string
-var_eval_system (string s) {
-  string r= eval_system (s);
-  while ((N (r) > 0) && (r[N (r) - 1] == '\n' || r[N (r) - 1] == '\r'))
-    r= r (0, N (r) - 1);
-  return r;
-}
-
 } // namespace lolly
