@@ -9,55 +9,97 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
+#pragma once
+
 #include "tree.hpp"
+#include "string.hpp"
 #include <cstdint>
 
 namespace lolly {
-namespace json {
+namespace data {
 
 enum json_label : int {
   STRING_TYPE= 0,
+  NULL_TYPE,
   BOOL_TYPE,
   INT64_TYPE,
   UINT64_TYPE,
   DOUBLE_TYPE,
   JSON_OBJECT,
   JSON_ARRAY,
-  JSON_PAIR,
+  JSON_PAIR
 };
 
 struct json_rep : concrete_struct {
   tree t;
-  inline tree_rep (tree p_t) : t (p_t) {}
+  inline json_rep (tree p_t) : t (p_t) {}
 };
 
 class json {
   CONCRETE (json);
 
-  // empty json
-  json ();
+private:
+  json (tree t) : rep (tm_new<json_rep> (t)) {}
 
-  // primitives
+public:
+  // empty json
+  json () { rep= tm_new<json_rep> (tree (JSON_OBJECT)); };
+
+  // primitives constructors
   json (string value) { rep= tm_new<json_rep> (tree (value)); }
+  json (nullptr_t value) { rep= tm_new<json_rep> (tree (NULL_TYPE)); }
   json (bool value) {
-    rep= tm_new<json_rep> (tree (BOOL_TYPE), tree (as_string (value)));
+    rep= tm_new<json_rep> (tree (BOOL_TYPE, tree (as_string (value))));
   }
   json (int64_t value) {
     rep= tm_new<json_rep> (tree (INT64_TYPE, tree (as_string (value))));
   }
   json (double value) { rep= tm_new<json_rep> (tree (as_string (value))); }
-
-  // pair
-  json (string key, json value) {
-    rep= tm_new<json_rep> (
-        tree (static_cast<int> (JSON_OBJECT),
-              tree (static_cast<int> (JSON_PAIR), tree (key), value->t)));
+  json (array<json> value) {
+    array<tree> arr= array<tree>();
+    for (int i= 0; i < N (value); i++) {
+      arr << value[i]->t;
+    }
+    rep= tm_new<json_rep> (tree (JSON_ARRAY, arr));
   }
 
-  // json operator () (string key) {
+  void set (string key, json value) {
+    json old_v= (*this) (key);
+    if (old_v.is_null ()) {
+      rep->t << tree (JSON_PAIR, key, value->t);
+    }
+    else {
+      int n= arity (rep->t);
+      for (int i= 0; i < n; i++) {
+        tree iter= rep->t[i];
+        if (is_atomic (iter[0]) && iter[0] == key) {
+          iter[1]= value->t;
+        }
+      }
+    }
+  }
 
-  //}
-}
+  json operator() (string key) {
+    if (rep->t->op == JSON_OBJECT) {
+      int n= arity (rep->t);
+      for (int i= 0; i < n; i++) {
+        tree iter= rep->t[i];
+        if (is_atomic (iter[0]) && iter[0] == key) {
+          return json (iter[1]);
+        }
+      }
+    }
+    return json (nullptr);
+  }
 
-} // namespace json
+  bool
+  is_null () {
+    return rep->t->op == NULL_TYPE;
+  }
+};
+CONCRETE_CODE (json);
+
+string as_string (json j);
+
+} // namespace data
 } // namespace lolly
