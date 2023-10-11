@@ -321,12 +321,12 @@ remove (url u) {
  *   Use two function to emulate using syntax and try-finally statement in C#
  ******************************************************************************/
 
-struct Status {
+struct file_status {
   bool             failed;
   const char*      error_msg;
   const char*      path;
   const tb_byte_t* buffer;
-  Status (bool failed_, const char* msg= "", const char* path_= NULL,
+  file_status (bool failed_, const char* msg= "", const char* path_= NULL,
           const tb_byte_t* buffer_= NULL)
       : failed (failed_), error_msg (msg), path (path_), buffer (buffer_) {}
 };
@@ -336,7 +336,7 @@ struct Status {
  * if all url does not exist, then the last one will be used.
  */
 static url
-lookout_first_exist (const url& u) {
+find_the_first_exist (const url& u) {
   url u_iter  = expand (u);
   url u_target= url_none ();
   // iterate to find the first existed file
@@ -356,50 +356,50 @@ lookout_first_exist (const url& u) {
 }
 
 static bool
-cleanup_and_return_finally (const Status& stat, const url& u, bool fatal,
+cleanup_and_return_finally (const file_status& status, const url& u, bool fatal,
                             const string& reason) {
 
-  if (stat.buffer != NULL) {
-    tm_delete_array (stat.buffer);
+  if (status.buffer != NULL) {
+    tm_delete_array (status.buffer);
   }
-  if (stat.path != NULL) {
-    tm_delete_array (stat.path);
+  if (status.path != NULL) {
+    tm_delete_array (status.path);
   }
 
-  if (!stat.failed) {
+  if (!status.failed) {
     return false;
   }
   cerr << "Failed to " << reason << " in [" << as_string (u) << "]" << LF;
   if (fatal) {
-    TM_FAILED (stat.error_msg);
+    TM_FAILED (status.error_msg);
   }
   else {
     return true;
   }
 }
 
-Status
+file_status
 load_string_try (url u, string& s) {
   if (!is_local_and_single (u)) {
-    return Status (true, "Must be a local and single file");
+    return file_status (true, "Must be a local and single file");
   }
-  url u_target= lookout_first_exist (u);
+  url u_target= find_the_first_exist (u);
 
   string      name= as_string (u_target);
   const char* path= as_charp (name);
   if (!tb_file_access (path, TB_FILE_MODE_RO)) {
-    return Status (true, "File is not readable", path);
+    return file_status (true, "File is not readable", path);
   }
   tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RO);
   if (file == tb_null) {
-    return Status (true, "Failed to init the file", path);
+    return file_status (true, "Failed to init the file", path);
   }
   tb_file_sync (file); // lock file
   tb_size_t size= tb_file_size (file);
   if (size == 0) {
     s= "";
     tb_file_exit (file);
-    return Status (false, "", path);
+    return file_status (false, "", path);
   }
   tb_byte_t* buffer     = tm_new_array<tb_byte_t> (size);
   tb_size_t  real_size  = tb_file_read (file, buffer, size);
@@ -412,16 +412,16 @@ load_string_try (url u, string& s) {
     for (size_t seek= 0; seek < size; seek++) {
       s[seek]= buffer[seek];
     }
-    return Status (false, "", path, buffer);
+    return file_status (false, "", path, buffer);
   }
   else {
-    return Status (true, "Unexpected behavior during reading", path, buffer);
+    return file_status (true, "Unexpected behavior during reading", path, buffer);
   }
 }
 
 bool
 load_string (url u, string& s, bool fatal) {
-  Status stat= load_string_try (u, s);
+  file_status stat= load_string_try (u, s);
   return cleanup_and_return_finally (stat, u, fatal, "load url");
 }
 
@@ -433,14 +433,14 @@ string_load (url u) {
   return s;
 }
 
-Status
+file_status
 save_string_try (url u, const string& s) {
   ASSERT (sizeof (tb_byte_t) == sizeof (char),
           "invalid cast from tb_byte_t* to char*");
   if (!is_local_and_single (u)) {
-    return Status (true, "Must be an absolute path");
+    return file_status (true, "Must be an absolute path");
   }
-  url         u_target= lookout_first_exist (u);
+  url         u_target= find_the_first_exist (u);
   string      name    = as_string (u_target);
   const char* path    = as_charp (name);
 
@@ -449,7 +449,7 @@ save_string_try (url u, const string& s) {
   tb_file_ref_t fout= tb_file_init (path, TB_FILE_MODE_WO | TB_FILE_MODE_CREAT |
                                               TB_FILE_MODE_TRUNC);
   if (fout == tb_null) {
-    return Status (true, "File not writeable", path);
+    return file_status (true, "File not writeable", path);
   }
 
   // lock file
@@ -457,7 +457,7 @@ save_string_try (url u, const string& s) {
   if (tb_filelock_enter (lock, TB_FILELOCK_MODE_EX) == tb_false) {
     tb_filelock_exit (lock);
     tb_file_exit (fout);
-    return Status (true, "Fail to lock file", path);
+    return file_status (true, "Fail to lock file", path);
   }
 
   tb_size_t        input_size= N (s);
@@ -468,16 +468,16 @@ save_string_try (url u, const string& s) {
   tb_filelock_exit (lock);
   bool exit_suc= tb_file_exit (fout);
   if (writ_sz_equ && exit_suc && release_suc) {
-    return Status (false, "", path, content);
+    return file_status (false, "", path, content);
   }
   else {
-    return Status (true, "Unexpected behavior during writting", path, content);
+    return file_status (true, "Unexpected behavior during writting", path, content);
   }
 }
 
 bool
 save_string (url u, const string& s, bool fatal) {
-  Status stat= save_string_try (u, s);
+  file_status stat= save_string_try (u, s);
   return cleanup_and_return_finally (stat, u, fatal, "save to url");
 }
 
@@ -486,12 +486,12 @@ string_save (const string& s, url u) {
   (void) save_string (u, s, false);
 }
 
-Status
+file_status
 append_string_try (url u, const string& s) {
   if (!is_local_and_single (u)) {
-    return Status (true, "Must be a local and single file");
+    return file_status (true, "Must be a local and single file");
   }
-  url    u_target= lookout_first_exist (u);
+  url    u_target= find_the_first_exist (u);
   string name    = as_string (u_target);
   char*  _name   = as_charp (name);
 
@@ -499,7 +499,7 @@ append_string_try (url u, const string& s) {
   tb_file_ref_t fout= tb_file_init (
       _name, TB_FILE_MODE_WO | TB_FILE_MODE_APPEND | TB_FILE_MODE_CREAT);
   if (fout == NULL) {
-    return Status (true, "File to append is not found or not appendable",
+    return file_status (true, "File to append is not found or not appendable",
                    _name);
   }
 
@@ -508,7 +508,7 @@ append_string_try (url u, const string& s) {
   if (tb_filelock_enter (lock, TB_FILELOCK_MODE_EX) == tb_false) {
     tb_filelock_exit (lock);
     tb_file_exit (fout);
-    return Status (true, "Fail to lock file", _name);
+    return file_status (true, "Fail to lock file", _name);
   }
 
   // append string to file
@@ -521,17 +521,17 @@ append_string_try (url u, const string& s) {
   bool exit_suc= tb_file_exit (fout);
 
   if (writ_sz_equ && exit_suc && release_suc) {
-    return Status (false, "", _name, content);
+    return file_status (false, "", _name, content);
   }
   else {
-    return Status (true, "Unexpected behavior during appending", _name,
+    return file_status (true, "Unexpected behavior during appending", _name,
                    content);
   }
 }
 
 bool
 append_string (url u, const string& s, bool fatal) {
-  Status stat= append_string_try (u, s);
+  file_status stat= append_string_try (u, s);
   return cleanup_and_return_finally (stat, u, fatal, "append to url");
 }
 
