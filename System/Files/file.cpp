@@ -327,7 +327,7 @@ struct file_status {
   const char*      path;
   const tb_byte_t* buffer;
   file_status (bool failed_, const char* msg= "", const char* path_= NULL,
-          const tb_byte_t* buffer_= NULL)
+               const tb_byte_t* buffer_= NULL)
       : failed (failed_), error_msg (msg), path (path_), buffer (buffer_) {}
 };
 
@@ -415,7 +415,8 @@ load_string_try (url u, string& s) {
     return file_status (false, "", path, buffer);
   }
   else {
-    return file_status (true, "Unexpected behavior during reading", path, buffer);
+    return file_status (true, "Unexpected behavior during reading", path,
+                        buffer);
   }
 }
 
@@ -471,7 +472,8 @@ save_string_try (url u, const string& s) {
     return file_status (false, "", path, content);
   }
   else {
-    return file_status (true, "Unexpected behavior during writting", path, content);
+    return file_status (true, "Unexpected behavior during writting", path,
+                        content);
   }
 }
 
@@ -500,7 +502,7 @@ append_string_try (url u, const string& s) {
       _name, TB_FILE_MODE_WO | TB_FILE_MODE_APPEND | TB_FILE_MODE_CREAT);
   if (fout == NULL) {
     return file_status (true, "File to append is not found or not appendable",
-                   _name);
+                        _name);
   }
 
   // lock file
@@ -525,7 +527,7 @@ append_string_try (url u, const string& s) {
   }
   else {
     return file_status (true, "Unexpected behavior during appending", _name,
-                   content);
+                        content);
   }
 }
 
