@@ -133,9 +133,10 @@ TEST_CASE ("suffix") {
 }
 
 TEST_CASE ("as_string") {
-  url file_env_lua= url_system ("file:///$PWD/xmake.lua");
+  set_env ("TEST_PWD", as_string (url_pwd ()));
+  url file_env_lua= url_system ("file:///$TEST_PWD/xmake.lua");
   string_eq (as_string (file_env_lua), as_string (url_pwd () * "xmake.lua"));
-  url local_env_lua= url_system ("local:$PWD/xmake.lua");
+  url local_env_lua= url_system ("local:$TEST_PWD/xmake.lua");
   string_eq (as_string (local_env_lua), as_string (url_pwd () * "xmake.lua"));
 
   url dirs= url ("Data") | url ("Kernel") | url ("Plugins");
