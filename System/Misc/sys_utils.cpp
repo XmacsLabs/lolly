@@ -23,11 +23,12 @@
 
 string
 get_env (string var) {
+  c_string             var_ (var);
   tb_size_t            size       = 0;
   string               ret        = string ("");
   tb_environment_ref_t environment= tb_environment_init ();
   if (environment) {
-    size= tb_environment_load (environment, as_charp (var));
+    size= tb_environment_load (environment, var_);
     if (size >= 1) {
       tb_for_all_if (tb_char_t const*, value, environment, value) {
         ret= ret * string (value) * URL_SEPARATOR;
@@ -49,10 +50,12 @@ set_env (string var, string with) {
   if (is_empty (with)) {
     return;
   }
+  c_string             var_ (var);
+  c_string             with_ (with);
   tb_environment_ref_t environment= tb_environment_init ();
   if (environment) {
-    tb_environment_insert (environment, as_charp (with), tb_true);
-    tb_environment_save (environment, as_charp (var));
+    tb_environment_insert (environment, with_, tb_true);
+    tb_environment_save (environment, var_);
     tb_environment_exit (environment);
   }
 }
@@ -173,7 +176,8 @@ system (string cmd) {
   return -1;
 #else
   tb_process_attr_t attr= {0};
-  return (int) tb_process_run_cmd (as_charp (cmd), &attr);
+  c_string          cmd_ (cmd);
+  return (int) tb_process_run_cmd (cmd_, &attr);
 #endif
 }
 
@@ -187,10 +191,11 @@ system (string s, string& result) {
   }
 
   // init process
+  c_string          cmd_ (s);
   tb_process_attr_t attr  = {0};
   attr.out.pipe           = file[1];
   attr.outtype            = TB_PROCESS_REDIRECT_TYPE_PIPE;
-  tb_process_ref_t process= tb_process_init_cmd (as_charp (s), &attr);
+  tb_process_ref_t process= tb_process_init_cmd (cmd_, &attr);
   if (process) {
     // read pipe data
     tb_size_t read= 0;

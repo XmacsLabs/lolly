@@ -20,6 +20,8 @@ url unix_tmp     = url_system ("/tmp");
 url unix_tmp_a   = url_system ("/tmp/a");
 url abc_url      = url_system ("abc");
 
+TEST_MEMORY_LEAK_INIT
+
 TEST_CASE ("label of url") {
   string_eq (ustc_edu.label (), "concat");
   string_eq (texmacs_org.label (), "concat");
@@ -149,3 +151,5 @@ TEST_CASE ("as_string") {
   }
 #endif
 }
+
+TEST_MEMORY_LEAK_ALL
