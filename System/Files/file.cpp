@@ -29,9 +29,9 @@ bool
 is_directory (url u) {
   if (!is_local_and_single (u)) return false;
 
-  string         path= as_string (u);
+  c_string       path (as_string (u));
   tb_file_info_t info;
-  if (tb_file_info (as_charp (path), &info)) {
+  if (tb_file_info (path, &info)) {
     switch (info.type) {
     case TB_FILE_TYPE_DIRECTORY:
       return true;
@@ -48,9 +48,9 @@ bool
 is_regular (url u) {
   if (!is_local_and_single (u)) return false;
 
-  string         path= as_string (u);
+  c_string       path (as_string (u));
   tb_file_info_t info;
-  if (tb_file_info (as_charp (path), &info)) {
+  if (tb_file_info (path, &info)) {
     switch (info.type) {
     case TB_FILE_TYPE_FILE:
       return true;
@@ -67,9 +67,9 @@ bool
 is_symbolic_link (url u) {
   if (!is_local_and_single (u)) return false;
 
-  string         path= as_string (u);
+  c_string       path (as_string (u));
   tb_file_info_t info;
-  if (tb_file_info (as_charp (path), &info)) {
+  if (tb_file_info (path, &info)) {
     return (info.flags & TB_FILE_FLAG_LINK) != 0;
   }
   else {
@@ -83,8 +83,8 @@ is_newer (url which, url than) {
   if (!is_local_and_single (than)) return false;
 
   tb_file_info_t info1, info2;
-  if (tb_file_info (as_charp (as_string (which)), &info1) &
-      tb_file_info (as_charp (as_string (than)), &info2)) {
+  if (tb_file_info (c_string (as_string (which)), &info1) &
+      tb_file_info (c_string (as_string (than)), &info2)) {
     return info1.mtime > info2.mtime;
   }
   else {
@@ -112,9 +112,9 @@ is_of_type (url name, string filter) {
     }
   }
 #endif
-  string         path= as_string (name);
+  c_string       path (as_string (name));
   tb_file_info_t info;
-  if (!tb_file_info (as_charp (path), &info)) {
+  if (!tb_file_info (path, &info)) {
     return false;
   }
   for (i= 0; i < n; i++)
@@ -130,13 +130,13 @@ is_of_type (url name, string filter) {
       if (info.flags != TB_FILE_FLAG_LINK) return false;
       break;
     case 'r':
-      if (!tb_file_access (as_charp (path), TB_FILE_MODE_RO)) return false;
+      if (!tb_file_access (path, TB_FILE_MODE_RO)) return false;
       break;
     case 'w':
-      if (!tb_file_access (as_charp (path), TB_FILE_MODE_WO)) return false;
+      if (!tb_file_access (path, TB_FILE_MODE_WO)) return false;
       break;
     case 'x':
-      if (!tb_file_access (as_charp (path), TB_FILE_MODE_EXEC)) return false;
+      if (!tb_file_access (path, TB_FILE_MODE_EXEC)) return false;
       break;
     }
   return true;
@@ -146,9 +146,9 @@ int
 file_size (url u) {
   if (!is_local_and_single (u)) return -1;
 
-  string         path= as_string (u);
+  c_string       path (as_string (u));
   tb_file_info_t info;
-  if (tb_file_info (as_charp (path), &info)) {
+  if (tb_file_info (path, &info)) {
     return info.size;
   }
   else {
@@ -160,9 +160,9 @@ int
 last_modified (url u) {
   if (!is_local_and_single (u)) return -1;
 
-  string         path= as_string (u);
+  c_string       path (as_string (u));
   tb_file_info_t info;
-  if (tb_file_info (as_charp (path), &info)) {
+  if (tb_file_info (path, &info)) {
     return info.mtime;
   }
   else {
@@ -188,14 +188,13 @@ read_directory (url u, bool& error_flag) {
     return array<string> ();
   }
 
-  string        path      = as_string (u);
+  c_string      path (as_string (u));
   array<string> arr_result= array<string> ();
   error_flag              = !is_directory (u);
   if (error_flag) {
     return arr_result;
   }
-  tb_directory_walk (as_charp (path), 0, tb_false, tb_directory_walk_func,
-                     &arr_result);
+  tb_directory_walk (path, 0, tb_false, tb_directory_walk_func, &arr_result);
   return arr_result;
 }
 
@@ -204,8 +203,8 @@ mkdir (url u) {
   string label= u.label ();
   if (label == "none" || label == "root" || label == "wildcard") return;
   if (is_local_and_single (u)) { // label == "" or label == "concat"
-    string path= as_string (u);
-    tb_directory_create (as_charp (path));
+    c_string path (as_string (u));
+    tb_directory_create (path);
   }
   if (is_or (u)) { // label == "or"
     mkdir (u[1]);
@@ -227,8 +226,8 @@ rmdir (url u) {
   string label= u.label ();
   if (label == "none" || label == "root" || label == "wildcard") return;
   if (is_local_and_single (u)) { // label == "" or label == "concat"
-    string path= as_string (u);
-    tb_directory_remove (as_charp (path));
+    c_string path (as_string (u));
+    tb_directory_remove (path);
   }
   if (is_or (u)) { // label == "or"
     rmdir (u[1]);
@@ -239,8 +238,8 @@ rmdir (url u) {
 void
 chdir (url u) {
   if (is_local_and_single (u)) {
-    string path= as_string (u);
-    if (tb_directory_current_set (as_charp (path)) != tb_true) {
+    c_string path (as_string (u));
+    if (tb_directory_current_set (path) != tb_true) {
       TM_FAILED ("Failed to change the dir");
     }
   }
@@ -288,18 +287,18 @@ url_temp_dir () {
 
 void
 move (url u1, url u2) {
-  string p1= as_string (u1);
-  string p2= as_string (u2);
+  c_string p1 (as_string (u1));
+  c_string p2 (as_string (u2));
 
-  tb_file_rename (as_charp (p1), as_charp (p2));
+  tb_file_rename (p1, p2);
 }
 
 void
 copy (url u1, url u2) {
-  string p1= as_string (u1);
-  string p2= as_string (u2);
+  c_string p1 (as_string (u1));
+  c_string p2 (as_string (u2));
 
-  tb_file_copy (as_charp (p1), as_charp (p2), TB_FILE_COPY_LINK);
+  tb_file_copy (p1, p2, TB_FILE_COPY_LINK);
 }
 
 void
@@ -307,10 +306,10 @@ remove (url u) {
   string label= u.label ();
   if (label == "none" || label == "root" || label == "wildcard") return;
   if (is_local_and_single (u)) {
-    string path= as_string (u);
-    tb_file_remove (as_charp (path));
+    c_string path (as_string (u));
+    tb_file_remove (path);
   }
-  if (is_or (u)) { // label == "or"
+  else if (is_or (u)) { // label == "or"
     remove (u[1]);
     remove (u[2]);
   }
@@ -337,22 +336,16 @@ struct file_status {
  */
 static url
 find_the_first_exist (const url& u) {
-  url u_iter  = expand (u);
-  url u_target= url_none ();
+  url u_iter= expand (u);
   // iterate to find the first existed file
   while (is_or (u_iter)) {
     if (is_regular (u_iter[1])) {
-      u_target= u_iter[1];
-      break;
+      return u_iter[1];
     }
     u_iter= u_iter[2];
   }
-  if (is_none (u_target)) {
-    // if u_target does not exist, is_or(u_iter) is false
-    // just use u_iter as u_target
-    u_target= u_iter;
-  }
-  return u_target;
+  // if u_target does not exist, just return the last url
+  return u_iter;
 }
 
 static bool

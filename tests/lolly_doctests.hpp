@@ -20,4 +20,7 @@ string_eq (string left, string right) {
   int mem_lolly= 0;                                                            \
   TEST_CASE ("read before test") { mem_lolly= mem_used (); }
 
+#define TEST_MEMORY_LEAK_RESET                                                 \
+  TEST_CASE ("reset test of memory leak") { mem_lolly= mem_used (); }
+
 #endif
