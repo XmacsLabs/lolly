@@ -326,8 +326,8 @@ struct Status {
   const char*      error_msg;
   const char*      path;
   const tb_byte_t* buffer;
-  Status (bool failed_, const char* msg= "", const char* path_= nullptr,
-          const tb_byte_t* buffer_= nullptr)
+  Status (bool failed_, const char* msg= "", const char* path_= NULL,
+          const tb_byte_t* buffer_= NULL)
       : failed (failed_), error_msg (msg), path (path_), buffer (buffer_) {}
 };
 
@@ -359,10 +359,10 @@ static bool
 cleanup_and_return_finally (const Status& stat, const url& u, bool fatal,
                             const string& reason) {
 
-  if (stat.buffer != nullptr) {
+  if (stat.buffer != NULL) {
     tm_delete_array (stat.buffer);
   }
-  if (stat.path != nullptr) {
+  if (stat.path != NULL) {
     tm_delete_array (stat.path);
   }
 
@@ -392,7 +392,7 @@ load_string_try (url u, string& s) {
   }
   tb_file_ref_t file= tb_file_init (path, TB_FILE_MODE_RO);
   if (file == tb_null) {
-    return Status (true, "File is not readable", path);
+    return Status (true, "Failed to init the file", path);
   }
   tb_file_sync (file); // lock file
   tb_size_t size= tb_file_size (file);
