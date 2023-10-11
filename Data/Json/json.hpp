@@ -46,14 +46,20 @@ public:
 
   // primitives constructors
   json (string value) { rep= tm_new<json_rep> (tree (value)); }
+  json (const char* value) { rep= tm_new<json_rep> (tree (string (value))); }
   json (nullptr_t value) { rep= tm_new<json_rep> (tree (NULL_TYPE)); }
   json (bool value) {
-    rep= tm_new<json_rep> (tree (BOOL_TYPE, tree (as_string (value))));
+    rep= tm_new<json_rep> (tree (BOOL_TYPE, tree (as_string_bool (value))));
   }
   json (DI value) {
     rep= tm_new<json_rep> (tree (INT64_TYPE, tree (as_string (value))));
   }
-  json (double value) { rep= tm_new<json_rep> (tree (as_string (value))); }
+  json (SI value) {
+    rep= tm_new<json_rep> (tree (INT64_TYPE, tree (as_string (value))));
+  }
+  json (double value) {
+    rep= tm_new<json_rep> (tree (DOUBLE_TYPE, tree (as_string (value))));
+  }
   json (array<json> value) {
     array<tree> arr= array<tree> ();
     for (int i= 0; i < N (value); i++) {
@@ -62,40 +68,22 @@ public:
     rep= tm_new<json_rep> (tree (JSON_ARRAY, arr));
   }
 
-  void set (string key, json value) {
-    json old_v= (*this) (key);
-    if (old_v.is_null ()) {
-      rep->t << tree (JSON_PAIR, key, value->t);
-    }
-    else {
-      int n= arity (rep->t);
-      for (int i= 0; i < n; i++) {
-        tree iter= rep->t[i];
-        if (is_atomic (iter[0]) && iter[0] == key) {
-          iter[1]= value->t;
-        }
-      }
-    }
-  }
-
-  json operator() (string key) {
-    if (rep->t->op == JSON_OBJECT) {
-      int n= arity (rep->t);
-      for (int i= 0; i < n; i++) {
-        tree iter= rep->t[i];
-        if (is_atomic (iter[0]) && iter[0] == key) {
-          return json (iter[1]);
-        }
-      }
-    }
-    return json (nullptr);
-  }
-
   bool is_null () { return rep->t->op == NULL_TYPE; }
+  bool is_string () { return rep->t->op == STRING_TYPE; }
+  bool is_number () {
+    return rep->t->op == DOUBLE_TYPE || rep->t->op == INT64_TYPE ||
+           rep->t->op == UINT64_TYPE;
+  }
+  bool is_bool () { return rep->t->op == BOOL_TYPE; }
 
+  json   operator() (string key);
+  json   get (string key);
+  void   set (string key, json value);
   string to_string ();
 };
 CONCRETE_CODE (json);
+
+string as_string (json j);
 
 } // namespace data
 } // namespace lolly
