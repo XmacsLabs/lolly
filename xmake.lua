@@ -92,11 +92,7 @@ local lolly_includedirs = {
 
 target("liblolly") do
     set_kind("static")
-    if is_plat("mingw") then
-        set_languages("c++11")
-    else
-        set_languages("c++98")
-    end
+    set_languages("c++11")
     set_policy("check.auto_ignore_flags", false)
     my_configvar_check()
 
