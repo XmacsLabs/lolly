@@ -41,7 +41,6 @@ elseif is_config("malloc", "jemalloc") then
     add_requires("jemalloc 5.3.0", {system=false, configs={envs={LD_PRELOAD="`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision`" }}})
 end
 add_requires("cpp-httplib 0.14.0")
-add_requires("nlohmann_json 3.11.2")
 
 option("posix_thread")
     set_showmenu(false)
@@ -115,7 +114,6 @@ target("liblolly") do
         add_packages("jemalloc")
     end 
     add_packages("cpp-httplib")
-    add_packages("nlohmann_json")
 
     if is_plat("mingw", "windows") then 
         add_includedirs("Plugins/Windows")
@@ -191,7 +189,6 @@ function add_test_target(filepath)
         if not is_plat("wasm") then
             add_packages("libcurl")
         end
-        add_packages("nlohmann_json")
 
         if is_plat("linux") then
             add_syslinks("stdc++", "m")

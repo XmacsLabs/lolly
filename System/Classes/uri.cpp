@@ -7,5 +7,5 @@ uri_host (url u) {
 
 string
 uri_path (url u) {
-  return string ("/") * as_string (u[2][1], URL_STANDARD);
+  return string ("/") * as_string (u[2][2], URL_STANDARD);
 }

@@ -10,6 +10,6 @@
 
 TEST_CASE ("http::get") {
   json   j   = lolly::http::get ("https://httpbin.org/get");
-  string body= j["body"].dump ().c_str ();
+  string body= j ("body").to_string ();
   CHECK (N (body) > 0);
 }

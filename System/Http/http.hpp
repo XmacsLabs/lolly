@@ -11,10 +11,11 @@
 
 #pragma once
 
+#include "json.hpp"
 #include "tree.hpp"
 #include "url.hpp"
-#include <nlohmann/json.hpp>
-using json= nlohmann::json;
+
+using json= lolly::data::json;
 
 namespace lolly {
 namespace http {
