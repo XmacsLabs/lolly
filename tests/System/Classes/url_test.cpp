@@ -11,6 +11,7 @@ url ustc_edu     = url_system ("https://ustc.edu.cn");
 url texmacs_org  = url_system ("http://texmacs.org");
 url none_url     = url_none ();
 url file_root    = url_root ("file");
+url file_tmp     = url_system ("file:///tmp");
 url ftp_root     = url_root ("ftp");
 url wsl_ubuntu   = url_system ("\\\\wsl.localhost\\Ubuntu");
 url unix_root    = url_system ("/");
@@ -36,6 +37,7 @@ TEST_CASE ("label of url") {
     string_eq (unix_tmp_a.label (), "concat");
   }
 #endif
+  string_eq (file_tmp.label (), "concat");
   string_eq (abc_url.label (), "");
 }
 
@@ -55,6 +57,7 @@ TEST_CASE ("protocol of url") {
   string_eq (get_root (ustc_edu), "https");
   string_eq (get_root (texmacs_org), "http");
   string_eq (get_root (file_root), "file");
+  string_eq (get_root (file_tmp), "file");
   string_eq (get_root (ftp_root), "ftp");
 #if defined(OS_MINGW) || defined(OS_WIN)
   string_eq (get_root (wsl_ubuntu), "default");
@@ -130,6 +133,11 @@ TEST_CASE ("suffix") {
 }
 
 TEST_CASE ("as_string") {
+  url file_env_lua= url_system ("file:///$PWD/xmake.lua");
+  string_eq (as_string (file_env_lua), as_string (url_pwd () * "xmake.lua"));
+  url local_env_lua= url_system ("local:$PWD/xmake.lua");
+  string_eq (as_string (local_env_lua), as_string (url_pwd () * "xmake.lua"));
+
   url dirs= url ("Data") | url ("Kernel") | url ("Plugins");
   string_eq (as_string (dirs), string ("Data") * URL_SEPARATOR * "Kernel" *
                                    URL_SEPARATOR * "Plugins");
