@@ -14,7 +14,7 @@ TEST_CASE ("as_string") {
   string_eq (json (false).to_string (), raw_quote ("false"));
   string_eq (json (1).to_string (), "1");
   string_eq (json (2.11).to_string (), "2.11");
-  string_eq (json (nullptr).to_string (), raw_quote ("null"));
+  string_eq (json::json_null ().to_string (), raw_quote ("null"));
 }
 
 TEST_CASE ("access") {

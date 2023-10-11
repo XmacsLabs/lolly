@@ -15,7 +15,7 @@ json::operator() (string key) {
       }
     }
   }
-  return json (nullptr);
+  return json_null ();
 }
 
 json
