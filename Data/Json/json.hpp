@@ -47,7 +47,7 @@ public:
   // primitives constructors
   json (string value) { rep= tm_new<json_rep> (tree (value)); }
   json (const char* value) { rep= tm_new<json_rep> (tree (string (value))); }
-  json (nullptr_t value) { rep= tm_new<json_rep> (tree (NULL_TYPE)); }
+  json (nullptr_t) { rep= tm_new<json_rep> (tree (NULL_TYPE)); }
   json (bool value) {
     rep= tm_new<json_rep> (tree (BOOL_TYPE, tree (as_string_bool (value))));
   }
