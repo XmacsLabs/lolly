@@ -71,6 +71,7 @@ local lolly_files = {
     "System/**/*.cpp",
     "Data/String/**.cpp",
     "Data/Scheme/**.cpp",
+    "Data/Json/**.cpp",
 }
 local lolly_includedirs = {
     "Kernel/Abstractions",

@@ -11,9 +11,8 @@
 
 #pragma once
 
-#include "tree.hpp"
 #include "string.hpp"
-#include <cstdint>
+#include "tree.hpp"
 
 namespace lolly {
 namespace data {
@@ -51,12 +50,12 @@ public:
   json (bool value) {
     rep= tm_new<json_rep> (tree (BOOL_TYPE, tree (as_string (value))));
   }
-  json (int64_t value) {
+  json (DI value) {
     rep= tm_new<json_rep> (tree (INT64_TYPE, tree (as_string (value))));
   }
   json (double value) { rep= tm_new<json_rep> (tree (as_string (value))); }
   json (array<json> value) {
-    array<tree> arr= array<tree>();
+    array<tree> arr= array<tree> ();
     for (int i= 0; i < N (value); i++) {
       arr << value[i]->t;
     }
@@ -92,14 +91,11 @@ public:
     return json (nullptr);
   }
 
-  bool
-  is_null () {
-    return rep->t->op == NULL_TYPE;
-  }
+  bool is_null () { return rep->t->op == NULL_TYPE; }
+
+  string to_string ();
 };
 CONCRETE_CODE (json);
-
-string as_string (json j);
 
 } // namespace data
 } // namespace lolly
