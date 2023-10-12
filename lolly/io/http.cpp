@@ -18,6 +18,12 @@
 namespace lolly {
 namespace io {
 
+#ifdef OS_WASM
+json
+http_get (url u) {
+  return json ();
+}
+#else
 json
 http_get (url u) {
   c_string      u_cstr= c_string (as_string (u));
@@ -33,6 +39,7 @@ http_get (url u) {
   r_json.set ("headers", headers_json);
   return r_json;
 }
+#endif
 
 } // namespace io
 } // namespace lolly
