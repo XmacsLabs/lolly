@@ -1,7 +1,7 @@
 
 /******************************************************************************
- * MODULE     : uri.cpp
- * DESCRIPTION: URI
+ * MODULE     : http.hpp
+ * DESCRIPTION: HTTP related routines
  * COPYRIGHT  : (C) 2023  Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
@@ -9,14 +9,18 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include "uri.hpp"
+#pragma once
 
-string
-uri_host (url u) {
-  return as_string (u[2][1]);
-}
+#include "lolly/data/json.hpp"
+#include "tree.hpp"
+#include "url.hpp"
 
-string
-uri_path (url u) {
-  return string ("/") * as_string (u[2][2], URL_STANDARD);
+using json= lolly::data::json;
+
+namespace lolly {
+namespace io {
+
+json http_get (url u);
+
 }
+} // namespace lolly

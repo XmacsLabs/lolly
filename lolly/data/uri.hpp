@@ -1,7 +1,7 @@
 
 /******************************************************************************
- * MODULE     : http.hpp
- * DESCRIPTION: HTTP related routines
+ * MODULE     : uri.hpp
+ * DESCRIPTION: URI
  * COPYRIGHT  : (C) 2023  Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
@@ -11,16 +11,12 @@
 
 #pragma once
 
-#include "json.hpp"
-#include "tree.hpp"
 #include "url.hpp"
 
-using json= lolly::data::json;
-
 namespace lolly {
-namespace http {
+namespace data {
 
-json get (url u);
-
-}
+string uri_host (url u);
+string uri_path (url u);
+} // namespace data
 } // namespace lolly

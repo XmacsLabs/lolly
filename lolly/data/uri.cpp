@@ -1,6 +1,6 @@
 
 /******************************************************************************
- * MODULE     : uri.hpp
+ * MODULE     : uri.cpp
  * DESCRIPTION: URI
  * COPYRIGHT  : (C) 2023  Darcy Shen
  *******************************************************************************
@@ -9,9 +9,20 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#pragma once
+#include "uri.hpp"
 
-#include "url.hpp"
+namespace lolly {
+namespace data {
 
-string uri_host (url u);
-string uri_path (url u);
+string
+uri_host (url u) {
+  return as_string (u[2][1]);
+}
+
+string
+uri_path (url u) {
+  return string ("/") * as_string (u[2][2], URL_STANDARD);
+}
+
+} // namespace data
+} // namespace lolly

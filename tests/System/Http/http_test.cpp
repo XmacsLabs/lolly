@@ -6,10 +6,10 @@
  */
 
 #include "a_tbox_main.cpp"
-#include "http.hpp"
+#include "lolly/io/http.hpp"
 
 TEST_CASE ("http::get") {
-  json   j   = lolly::http::get ("https://httpbin.org/get");
+  json   j   = lolly::io::http_get ("https://httpbin.org/get");
   string body= j ("body").dump ();
   CHECK (N (body) > 0);
 }

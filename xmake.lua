@@ -70,7 +70,7 @@ local lolly_files = {
     "System/**/*.cpp",
     "Data/String/**.cpp",
     "Data/Scheme/**.cpp",
-    "Data/Json/**.cpp",
+    "lolly/**/**.cpp",
 }
 local lolly_includedirs = {
     "Kernel/Abstractions",
@@ -79,16 +79,15 @@ local lolly_includedirs = {
     "Kernel/Types",
     "Data/String",
     "Data/Scheme",
-    "Data/Json",
     "System/Classes",
     "System/Files",
     "System/IO",
     "System/Memory",
     "System/Misc",
-    "System/Http",
     "Plugins/Curl",
     "Plugins/Unix",
     "Plugins",
+    "$(projectdir)"
 }
 
 target("liblolly") do
@@ -165,8 +164,8 @@ target("liblolly") do
     add_headerfiles("Data/Scheme/(*.hpp)")
     add_headerfiles("Plugins/Curl/(*.hpp)", {prefixdir = "Curl"})
     add_headerfiles("Plugins/Windows/(*.hpp)", {prefixdir = "Windows"})
-    add_headerfiles("Data/Json/(*.hpp)", {prefixdir="lolly"})
-    add_headerfiles("System/Http/(*.hpp)", {prefixdir = "lolly"})
+    add_headerfiles("lolly/data/(*.hpp)", {prefixdir="lolly"})
+    add_headerfiles("lolly/io/(*.hpp)", {prefixdir = "lolly"})
     add_includedirs(lolly_includedirs)
     add_files(lolly_files)
 end

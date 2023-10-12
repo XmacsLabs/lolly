@@ -7,7 +7,7 @@
 
 #include "a_lolly_test.hpp"
 #include "analyze.hpp"
-#include "json.hpp"
+#include "lolly/data/json.hpp"
 #include "string.hpp"
 #include "tm_ostream.hpp"
 
