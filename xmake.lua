@@ -24,11 +24,6 @@ end
 tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
 add_requires("tbox dev", {system=false, configs=tbox_configs})
 add_requires("doctest 2.4.11", {system=false})
-if is_plat("linux") and (linuxos.name() == "ubuntu" or linuxos.name() == "uos") then
-    add_requires("apt::libcurl4-openssl-dev", {alias="libcurl"})
-elseif not is_plat("wasm") then
-    add_requires("libcurl 7.84.0", {system=false})
-end 
 option("malloc")
     set_default("standard")
     set_showmenu(true)
@@ -84,7 +79,6 @@ local lolly_includedirs = {
     "System/IO",
     "System/Memory",
     "System/Misc",
-    "Plugins/Curl",
     "Plugins/Unix",
     "Plugins",
     "$(projectdir)"
@@ -100,11 +94,6 @@ target("liblolly") do
 
     --- dependent packages
     add_packages("tbox")
-    if not is_plat("wasm") then
-        add_packages("libcurl")
-        add_includedirs("Plugins/Curl")
-        add_files("Plugins/Curl/**.cpp")
-    end
     if is_config("malloc", "mimalloc") then 
         add_defines("MIMALLOC")
         add_packages("mimalloc")
@@ -162,7 +151,6 @@ target("liblolly") do
     add_headerfiles("System/Language/(*.hpp)")
     add_headerfiles("Data/String/(*.hpp)")
     add_headerfiles("Data/Scheme/(*.hpp)")
-    add_headerfiles("Plugins/Curl/(*.hpp)", {prefixdir = "Curl"})
     add_headerfiles("Plugins/Windows/(*.hpp)", {prefixdir = "Windows"})
     add_headerfiles("lolly/(data/*.hpp)", {prefixdir="lolly"})
     add_headerfiles("lolly/(io/*.hpp)", {prefixdir = "lolly"})
@@ -185,9 +173,6 @@ function add_test_target(filepath)
         end
         add_packages("tbox")
         add_packages("doctest")
-        if not is_plat("wasm") then
-            add_packages("libcurl")
-        end
 
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
@@ -256,21 +241,10 @@ function add_test_target(filepath)
 end
 
 
-cpp_tests_not_on_wasm = table.join(
-    os.files("tests/Plugins/Curl/**_test.cpp")
-)
 cpp_tests_on_all_plat = os.files("tests/**_test.cpp")
 
-for _, filepath in ipairs(cpp_tests_not_on_wasm) do
-    if not is_plat("wasm") then
-        add_test_target(filepath)
-    end
-end
-
 for _, filepath in ipairs(cpp_tests_on_all_plat) do
-    if not table.contains(cpp_tests_not_on_wasm, filepath) then
-        add_test_target (filepath)
-    end
+    add_test_target (filepath)
 end
 
 
