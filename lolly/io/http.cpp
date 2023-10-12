@@ -13,7 +13,9 @@
 #include "lolly/data/uri.hpp"
 #include "tree.hpp"
 
+#ifndef OS_WASM
 #include <cpr/cpr.h>
+#endif
 
 namespace lolly {
 namespace io {
