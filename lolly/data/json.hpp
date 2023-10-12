@@ -11,9 +11,9 @@
 
 #pragma once
 
+#include "stdint.h"
 #include "string.hpp"
 #include "tree.hpp"
-#include "stdint.h"
 
 namespace lolly {
 namespace data {
