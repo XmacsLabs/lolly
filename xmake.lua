@@ -35,7 +35,11 @@ if is_config("malloc", "mimalloc") then
 elseif is_config("malloc", "jemalloc") then 
     add_requires("jemalloc 5.3.0", {system=false, configs={envs={LD_PRELOAD="`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision`" }}})
 end
-add_requires("cpp-httplib 0.14.0")
+
+if not is_plat("wasm") then
+    add_requires("cpr 1.10.3")
+end
+
 
 option("posix_thread")
     set_showmenu(false)
@@ -86,7 +90,7 @@ local lolly_includedirs = {
 
 target("liblolly") do
     set_kind("static")
-    set_languages("c++11")
+    set_languages("c++17")
     set_policy("check.auto_ignore_flags", false)
     my_configvar_check()
 
@@ -101,7 +105,9 @@ target("liblolly") do
         add_defines("JEMALLOC")
         add_packages("jemalloc")
     end 
-    add_packages("cpp-httplib")
+    if not is_plat("wasm") then
+        add_packages("cpr")
+    end
 
     if is_plat("mingw", "windows") then 
         add_includedirs("Plugins/Windows")

@@ -52,6 +52,7 @@ json::set (string key, json value) {
   }
 }
 
+// TODO: Use json escape and unescape
 string
 json::dump () {
   tree t= this->rep->t;
@@ -85,7 +86,7 @@ json::dump () {
     }
     for (int i= 1; i < n; i++) {
       ret= ret * ",";
-      ret= ret * raw_quote (as_string (t[0][0]));
+      ret= ret * raw_quote (as_string (t[i][0]));
       ret= ret * ":";
       ret= ret * json (t[i][1]).dump ();
     }

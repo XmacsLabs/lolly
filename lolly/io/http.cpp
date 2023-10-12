@@ -13,22 +13,35 @@
 #include "lolly/data/uri.hpp"
 #include "tree.hpp"
 
-#include <httplib.h>
+#ifndef OS_WASM
+#include <cpr/cpr.h>
+#endif
 
 namespace lolly {
 namespace io {
 
+#ifdef OS_WASM
 json
 http_get (url u) {
-  string          host= data::uri_host (u);
-  string          path= data::uri_path (u);
-  httplib::Client cli ((char*) c_string (host));
-  auto            r= cli.Get ((char*) c_string (path));
-  json            r_json;
-  r_json.set ("status", r->status);
-  r_json.set ("body", (r->body).c_str ());
+  return json ();
+}
+#else
+json
+http_get (url u) {
+  c_string      u_cstr= c_string (as_string (u));
+  cpr::Response r     = cpr::Get (cpr::Url{u_cstr});
+  json          r_json;
+  r_json.set ("status_code", (int64_t) r.status_code);
+  r_json.set ("url", r.url.c_str ());
+  r_json.set ("text", r.text.c_str ());
+  json headers_json;
+  for (auto i= r.header.begin (); i != r.header.end (); i++) {
+    headers_json.set (string (i->first.c_str ()), string (i->second.c_str ()));
+  }
+  r_json.set ("headers", headers_json);
   return r_json;
 }
+#endif
 
 } // namespace io
 } // namespace lolly
