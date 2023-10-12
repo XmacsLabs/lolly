@@ -1,7 +1,7 @@
 
 /******************************************************************************
  * MODULE     : json.hpp
- * DESCRIPTION: JSON Data
+ * DESCRIPTION: JSON Data Type
  * COPYRIGHT  : (C) 2023  Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.

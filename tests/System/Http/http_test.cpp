@@ -1,8 +1,8 @@
-/** \file file.cpp
+/** \file http_test.cpp
  *  \copyright GPLv3
- *  \details Unitests for file.
- *  \author Darcy
- *  \date   2019-2023
+ *  \details Unitests for http.
+ *  \author Darcy Shen
+ *  \date   2023
  */
 
 #include "a_tbox_main.cpp"
@@ -10,6 +10,6 @@
 
 TEST_CASE ("http::get") {
   json   j   = lolly::http::get ("https://httpbin.org/get");
-  string body= j ("body").to_string ();
+  string body= j ("body").dump ();
   CHECK (N (body) > 0);
 }
