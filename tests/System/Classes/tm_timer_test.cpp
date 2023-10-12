@@ -106,6 +106,8 @@ TEST_CASE ("function texmacs_time") {
   CHECK (t2 >= t1);
 }
 
+TEST_MEMORY_LEAK_ALL
+
 TEST_CASE ("function bench_start and bench_cumul") {
   debug_set ("bench", true);
   tm_ostream ostream;
@@ -240,5 +242,3 @@ TEST_CASE ("function bench_print") {
     CHECK (out == b);
   }
 }
-
-TEST_MEMORY_LEAK_ALL
