@@ -71,19 +71,21 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">lolly Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacelolly_1_1data"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html">data</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacelolly_1_1io"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1io.html">io</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae67e35ac2b9478c567de72b16a874673"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#ae67e35ac2b9478c567de72b16a874673">curl_version</a> ()</td></tr>
-<tr class="separator:ae67e35ac2b9478c567de72b16a874673"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca3090acb54e8559f30a4f214319c785"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#aca3090acb54e8559f30a4f214319c785">write_data</a> (void *contents, size_t size, size_t nmemb, void *userp)</td></tr>
-<tr class="separator:aca3090acb54e8559f30a4f214319c785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6fe7b4912333fe12bbef5d8a6ef81f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#af6fe7b4912333fe12bbef5d8a6ef81f7">curl_get</a> (<a class="el" href="classstring.html">string</a> source, <a class="el" href="classstring.html">string</a> user_agent)</td></tr>
-<tr class="separator:af6fe7b4912333fe12bbef5d8a6ef81f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7372c421169d7c0d10cf4a810ecdbde1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#a7372c421169d7c0d10cf4a810ecdbde1">win_get_username</a> ()</td></tr>
 <tr class="separator:a7372c421169d7c0d10cf4a810ecdbde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5676a9b980b91430d04a8dd4e469cc19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#a5676a9b980b91430d04a8dd4e469cc19">init_tbox</a> ()</td></tr>
@@ -94,143 +96,6 @@ Functions</h2></td></tr>
 <tr class="separator:aa35cfc8aecf0b2c09eb4dd580e39a344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ae67e35ac2b9478c567de72b16a874673" name="ae67e35ac2b9478c567de72b16a874673"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae67e35ac2b9478c567de72b16a874673">&#9670;&#160;</a></span>curl_version()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classstring.html">string</a> lolly::curl_version </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="curl_8cpp_source.html#l00019">19</a> of file <a class="el" href="curl_8cpp_source.html">curl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                {</div>
-<div class="line"><span class="lineno">   20</span>  curl_version_info_data* data= curl_version_info (CURLVERSION_NOW);</div>
-<div class="line"><span class="lineno">   21</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classstring.html">string</a> (data-&gt;version);</div>
-<div class="line"><span class="lineno">   22</span>}</div>
-<div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00034">string.hpp:34</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aca3090acb54e8559f30a4f214319c785" name="aca3090acb54e8559f30a4f214319c785"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca3090acb54e8559f30a4f214319c785">&#9670;&#160;</a></span>write_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static size_t lolly::write_data </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>contents</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>nmemb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="curl_8cpp_source.html#l00025">25</a> of file <a class="el" href="curl_8cpp_source.html">curl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                                    {</div>
-<div class="line"><span class="lineno">   26</span>  ((std::string*) userp)-&gt;append ((<span class="keywordtype">char</span>*) contents, size * nmemb);</div>
-<div class="line"><span class="lineno">   27</span>  <span class="keywordflow">return</span> size * nmemb;</div>
-<div class="line"><span class="lineno">   28</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="af6fe7b4912333fe12bbef5d8a6ef81f7" name="af6fe7b4912333fe12bbef5d8a6ef81f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6fe7b4912333fe12bbef5d8a6ef81f7">&#9670;&#160;</a></span>curl_get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classstring.html">string</a> lolly::curl_get </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname"><em>user_agent</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="curl_8cpp_source.html#l00031">31</a> of file <a class="el" href="curl_8cpp_source.html">curl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                            {</div>
-<div class="line"><span class="lineno">   32</span>  std::string readBuffer;</div>
-<div class="line"><span class="lineno">   33</span>  CURL*       curl= curl_easy_init ();</div>
-<div class="line"><span class="lineno">   34</span> </div>
-<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">if</span> (curl) {</div>
-<div class="line"><span class="lineno">   36</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classurl.html">url</a>;</div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="string_8cpp.html#adcb54e05f4e6a63da1eebfedcbcb6fb1">is_quoted</a> (source)) <a class="code hl_class" href="classurl.html">url</a>= source (1, <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (source) - 1);</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">else</span> <a class="code hl_class" href="classurl.html">url</a>= source;</div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>    curl_easy_setopt (curl, CURLOPT_URL, <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classurl.html">url</a>));</div>
-<div class="line"><span class="lineno">   41</span>    curl_easy_setopt (curl, CURLOPT_WRITEFUNCTION, write_data);</div>
-<div class="line"><span class="lineno">   42</span>    curl_easy_setopt (curl, CURLOPT_WRITEDATA, &amp;readBuffer);</div>
-<div class="line"><span class="lineno">   43</span>    curl_easy_setopt (curl, CURLOPT_USERAGENT, <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (user_agent));</div>
-<div class="line"><span class="lineno">   44</span>    curl_easy_setopt (curl, CURLOPT_FOLLOWLOCATION, 1L);</div>
-<div class="line"><span class="lineno">   45</span>    curl_easy_setopt (curl, CURLOPT_REDIR_PROTOCOLS,</div>
-<div class="line"><span class="lineno">   46</span>                      CURLPROTO_HTTP | CURLPROTO_HTTPS);</div>
-<div class="line"><span class="lineno">   47</span>    CURLcode res= curl_easy_perform (curl);</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>    curl_easy_cleanup (curl);</div>
-<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classstring.html">string</a> (readBuffer.c_str ());</div>
-<div class="line"><span class="lineno">   51</span>  }</div>
-<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classstring.html">string</a> ();</div>
-<div class="line"><span class="lineno">   54</span>  }</div>
-<div class="line"><span class="lineno">   55</span>}</div>
-<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
-<div class="ttc" id="aclassurl_html"><div class="ttname"><a href="classurl.html">url</a></div><div class="ttdef"><b>Definition:</b> <a href="url_8hpp_source.html#l00034">url.hpp:34</a></div></div>
-<div class="ttc" id="astring_8cpp_html_a6a5cc26a2db9765c14853b9cfd7335b4"><div class="ttname"><a href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a></div><div class="ttdeci">char * as_charp(string s)</div><div class="ttdef"><b>Definition:</b> <a href="string_8cpp_source.html#l00281">string.cpp:281</a></div></div>
-<div class="ttc" id="astring_8cpp_html_adcb54e05f4e6a63da1eebfedcbcb6fb1"><div class="ttname"><a href="string_8cpp.html#adcb54e05f4e6a63da1eebfedcbcb6fb1">is_quoted</a></div><div class="ttdeci">bool is_quoted(string s)</div><div class="ttdef"><b>Definition:</b> <a href="string_8cpp_source.html#l00408">string.cpp:408</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a7372c421169d7c0d10cf4a810ecdbde1" name="a7372c421169d7c0d10cf4a810ecdbde1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7372c421169d7c0d10cf4a810ecdbde1">&#9670;&#160;</a></span>win_get_username()</h2>
 
@@ -255,6 +120,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  143</span>  <span class="keywordflow">if</span> (len == 0) <span class="keywordflow">return</span> <a class="code hl_class" href="classstring.html">string</a> (<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">  144</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classstring.html">string</a> (buffer);</div>
 <div class="line"><span class="lineno">  145</span>}</div>
+<div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00034">string.hpp:34</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -273,10 +139,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00166">166</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>             {</div>
-<div class="line"><span class="lineno">  167</span>  <span class="keywordflow">if</span> (!tb_init (tb_null, tb_null)) exit (-1);</div>
-<div class="line"><span class="lineno">  168</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00169">169</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>             {</div>
+<div class="line"><span class="lineno">  170</span>  <span class="keywordflow">if</span> (!tb_init (tb_null, tb_null)) exit (-1);</div>
+<div class="line"><span class="lineno">  171</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -296,15 +162,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00171">171</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                    {</div>
-<div class="line"><span class="lineno">  172</span><span class="preprocessor">#ifdef OS_WASM</span></div>
-<div class="line"><span class="lineno">  173</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  174</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  175</span>  tb_process_attr_t attr= {0};</div>
-<div class="line"><span class="lineno">  176</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) tb_process_run_cmd (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (cmd), &amp;attr);</div>
-<div class="line"><span class="lineno">  177</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  178</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00174">174</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>                    {</div>
+<div class="line"><span class="lineno">  175</span><span class="preprocessor">#ifdef OS_WASM</span></div>
+<div class="line"><span class="lineno">  176</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  177</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  178</span>  tb_process_attr_t attr= {0};</div>
+<div class="line"><span class="lineno">  179</span>  <a class="code hl_class" href="classc__string.html">c_string</a>          cmd_ (cmd);</div>
+<div class="line"><span class="lineno">  180</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) tb_process_run_cmd (cmd_, &amp;attr);</div>
+<div class="line"><span class="lineno">  181</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  182</span>}</div>
+<div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00113">string.hpp:113</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -334,56 +202,57 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00181">181</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                  {</div>
-<div class="line"><span class="lineno">  182</span>  tb_long_t status= -1;</div>
-<div class="line"><span class="lineno">  183</span>  <span class="comment">// init pipe files</span></div>
-<div class="line"><span class="lineno">  184</span>  tb_pipe_file_ref_t file[2]= {0};</div>
-<div class="line"><span class="lineno">  185</span>  <span class="keywordflow">if</span> (!tb_pipe_file_init_pair (file, tb_null, 0)) {</div>
-<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">return</span> status;</div>
-<div class="line"><span class="lineno">  187</span>  }</div>
-<div class="line"><span class="lineno">  188</span> </div>
-<div class="line"><span class="lineno">  189</span>  <span class="comment">// init process</span></div>
-<div class="line"><span class="lineno">  190</span>  tb_process_attr_t attr  = {0};</div>
-<div class="line"><span class="lineno">  191</span>  attr.out.pipe           = file[1];</div>
-<div class="line"><span class="lineno">  192</span>  attr.outtype            = TB_PROCESS_REDIRECT_TYPE_PIPE;</div>
-<div class="line"><span class="lineno">  193</span>  tb_process_ref_t process= tb_process_init_cmd (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (s), &amp;attr);</div>
-<div class="line"><span class="lineno">  194</span>  <span class="keywordflow">if</span> (process) {</div>
-<div class="line"><span class="lineno">  195</span>    <span class="comment">// read pipe data</span></div>
-<div class="line"><span class="lineno">  196</span>    tb_size_t <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>= 0;</div>
-<div class="line"><span class="lineno">  197</span>    <span class="comment">// TODO: should be a config here</span></div>
-<div class="line"><span class="lineno">  198</span>    tb_byte_t data[8192];</div>
-<div class="line"><span class="lineno">  199</span>    tb_size_t size= <span class="keyword">sizeof</span> (data);</div>
-<div class="line"><span class="lineno">  200</span>    tb_bool_t wait= tb_false;</div>
-<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">while</span> (<a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a> &lt; size) {</div>
-<div class="line"><span class="lineno">  202</span>      tb_long_t real= tb_pipe_file_read (file[0], data + <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>, size - <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>);</div>
-<div class="line"><span class="lineno">  203</span>      <span class="keywordflow">if</span> (real &gt; 0) {</div>
-<div class="line"><span class="lineno">  204</span>        <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>+= real;</div>
-<div class="line"><span class="lineno">  205</span>        wait= tb_false;</div>
-<div class="line"><span class="lineno">  206</span>      }</div>
-<div class="line"><span class="lineno">  207</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!real &amp;&amp; !wait) {</div>
-<div class="line"><span class="lineno">  208</span>        <span class="comment">// wait pipe</span></div>
-<div class="line"><span class="lineno">  209</span>        tb_long_t ok= tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, 1000);</div>
-<div class="line"><span class="lineno">  210</span>        tb_check_break (ok &gt; 0);</div>
-<div class="line"><span class="lineno">  211</span>        wait= tb_true;</div>
-<div class="line"><span class="lineno">  212</span>      }</div>
-<div class="line"><span class="lineno">  213</span>      <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-<div class="line"><span class="lineno">  215</span> </div>
-<div class="line"><span class="lineno">  216</span>    result= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> ((tb_char_t*) data);</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>    <span class="comment">// wait process</span></div>
-<div class="line"><span class="lineno">  219</span>    tb_process_wait (process, &amp;status, -1);</div>
+<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00185">185</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>                                  {</div>
+<div class="line"><span class="lineno">  186</span>  tb_long_t status= -1;</div>
+<div class="line"><span class="lineno">  187</span>  <span class="comment">// init pipe files</span></div>
+<div class="line"><span class="lineno">  188</span>  tb_pipe_file_ref_t file[2]= {0};</div>
+<div class="line"><span class="lineno">  189</span>  <span class="keywordflow">if</span> (!tb_pipe_file_init_pair (file, tb_null, 0)) {</div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">return</span> status;</div>
+<div class="line"><span class="lineno">  191</span>  }</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>  <span class="comment">// init process</span></div>
+<div class="line"><span class="lineno">  194</span>  <a class="code hl_class" href="classc__string.html">c_string</a>          cmd_ (s);</div>
+<div class="line"><span class="lineno">  195</span>  tb_process_attr_t attr  = {0};</div>
+<div class="line"><span class="lineno">  196</span>  attr.out.pipe           = file[1];</div>
+<div class="line"><span class="lineno">  197</span>  attr.outtype            = TB_PROCESS_REDIRECT_TYPE_PIPE;</div>
+<div class="line"><span class="lineno">  198</span>  tb_process_ref_t process= tb_process_init_cmd (cmd_, &amp;attr);</div>
+<div class="line"><span class="lineno">  199</span>  <span class="keywordflow">if</span> (process) {</div>
+<div class="line"><span class="lineno">  200</span>    <span class="comment">// read pipe data</span></div>
+<div class="line"><span class="lineno">  201</span>    tb_size_t <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>= 0;</div>
+<div class="line"><span class="lineno">  202</span>    <span class="comment">// TODO: should be a config here</span></div>
+<div class="line"><span class="lineno">  203</span>    tb_byte_t data[8192];</div>
+<div class="line"><span class="lineno">  204</span>    tb_size_t size= <span class="keyword">sizeof</span> (data);</div>
+<div class="line"><span class="lineno">  205</span>    tb_bool_t wait= tb_false;</div>
+<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">while</span> (<a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a> &lt; size) {</div>
+<div class="line"><span class="lineno">  207</span>      tb_long_t real= tb_pipe_file_read (file[0], data + <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>, size - <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>);</div>
+<div class="line"><span class="lineno">  208</span>      <span class="keywordflow">if</span> (real &gt; 0) {</div>
+<div class="line"><span class="lineno">  209</span>        <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>+= real;</div>
+<div class="line"><span class="lineno">  210</span>        wait= tb_false;</div>
+<div class="line"><span class="lineno">  211</span>      }</div>
+<div class="line"><span class="lineno">  212</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!real &amp;&amp; !wait) {</div>
+<div class="line"><span class="lineno">  213</span>        <span class="comment">// wait pipe</span></div>
+<div class="line"><span class="lineno">  214</span>        tb_long_t ok= tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, 1000);</div>
+<div class="line"><span class="lineno">  215</span>        tb_check_break (ok &gt; 0);</div>
+<div class="line"><span class="lineno">  216</span>        wait= tb_true;</div>
+<div class="line"><span class="lineno">  217</span>      }</div>
+<div class="line"><span class="lineno">  218</span>      <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
 <div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>    <span class="comment">// exit process</span></div>
-<div class="line"><span class="lineno">  222</span>    tb_process_exit (process);</div>
-<div class="line"><span class="lineno">  223</span>  }</div>
-<div class="line"><span class="lineno">  224</span> </div>
-<div class="line"><span class="lineno">  225</span>  <span class="comment">// exit pipe files</span></div>
-<div class="line"><span class="lineno">  226</span>  tb_pipe_file_exit (file[0]);</div>
-<div class="line"><span class="lineno">  227</span>  tb_pipe_file_exit (file[1]);</div>
-<div class="line"><span class="lineno">  228</span>  <span class="keywordflow">return</span> status;</div>
-<div class="line"><span class="lineno">  229</span>}</div>
+<div class="line"><span class="lineno">  221</span>    result= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> ((tb_char_t*) data);</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>    <span class="comment">// wait process</span></div>
+<div class="line"><span class="lineno">  224</span>    tb_process_wait (process, &amp;status, -1);</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>    <span class="comment">// exit process</span></div>
+<div class="line"><span class="lineno">  227</span>    tb_process_exit (process);</div>
+<div class="line"><span class="lineno">  228</span>  }</div>
+<div class="line"><span class="lineno">  229</span> </div>
+<div class="line"><span class="lineno">  230</span>  <span class="comment">// exit pipe files</span></div>
+<div class="line"><span class="lineno">  231</span>  tb_pipe_file_exit (file[0]);</div>
+<div class="line"><span class="lineno">  232</span>  tb_pipe_file_exit (file[1]);</div>
+<div class="line"><span class="lineno">  233</span>  <span class="keywordflow">return</span> status;</div>
+<div class="line"><span class="lineno">  234</span>}</div>
 <div class="ttc" id="aanalyze_8cpp_html_a259106ae46c8c1330ffe29617b3cf2cc"><div class="ttname"><a href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a></div><div class="ttdeci">bool read(string s, int &amp;i, const char *test)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01067">analyze.cpp:1067</a></div></div>
 <div class="ttc" id="apath_8cpp_html_a6533057a5c870ee5ec0b2e688dd4d90f"><div class="ttname"><a href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a></div><div class="ttdeci">string as_string(path p)</div><div class="ttdef"><b>Definition:</b> <a href="path_8cpp_source.html#l00037">path.cpp:37</a></div></div>
 </div><!-- fragment -->

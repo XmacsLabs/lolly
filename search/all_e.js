@@ -24,5 +24,6 @@ var searchData=
   ['notify_5fvar_5fsplit_21',['notify_var_split',['../classobserver__rep.html#aadc5047c1635a025c8aa14b7bb8367c1',1,'observer_rep']]],
   ['ntuple_2ehpp_22',['ntuple.hpp',['../ntuple_8hpp.html',1,'']]],
   ['ntuple_5ftest_2ecpp_23',['ntuple_test.cpp',['../ntuple__test_8cpp.html',1,'']]],
-  ['num_24',['NUM',['../fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a',1,'fast_alloc_test.cpp']]]
+  ['null_5ftype_24',['NULL_TYPE',['../namespacelolly_1_1data.html#a01288eee69b7e52dc00ad9021af846d8a23e4694f755cce8a8fe52e31b69cfb27',1,'lolly::data']]],
+  ['num_25',['NUM',['../fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a',1,'fast_alloc_test.cpp']]]
 ];

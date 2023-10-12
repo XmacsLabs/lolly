@@ -121,7 +121,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="sys__utils__test_8cpp_source.html#l00004">4</a> of file <a class="el" href="sys__utils__test_8cpp_source.html">sys_utils_test.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    4</span>{ CHECK (<a class="code hl_function" href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a> () &gt;= 1); }</div>
-<div class="ttc" id="asys__utils_8cpp_html_a920a0c8786d1b42eeccbfcf3bdce2663"><div class="ttname"><a href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a></div><div class="ttdeci">SN get_process_id()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00127">sys_utils.cpp:127</a></div></div>
+<div class="ttc" id="asys__utils_8cpp_html_a920a0c8786d1b42eeccbfcf3bdce2663"><div class="ttname"><a href="sys__utils_8cpp.html#a920a0c8786d1b42eeccbfcf3bdce2663">get_process_id</a></div><div class="ttdeci">SN get_process_id()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00130">sys_utils.cpp:130</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -151,9 +151,9 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   12</span>  }</div>
 <div class="line"><span class="lineno">   13</span>}</div>
 <div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
-<div class="ttc" id="anamespacelolly_html_aa7c8230fccf51fc5c61bf22b06f4b99d"><div class="ttname"><a href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a></div><div class="ttdeci">int system(string cmd)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00171">sys_utils.cpp:171</a></div></div>
-<div class="ttc" id="asys__utils_8cpp_html_a63a265a61f7b6bd73b3114a53da96668"><div class="ttname"><a href="sys__utils_8cpp.html#a63a265a61f7b6bd73b3114a53da96668">os_mingw</a></div><div class="ttdeci">bool os_mingw()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00100">sys_utils.cpp:100</a></div></div>
-<div class="ttc" id="asys__utils_8cpp_html_af882377c2708a5ecb79786eb3081e399"><div class="ttname"><a href="sys__utils_8cpp.html#af882377c2708a5ecb79786eb3081e399">os_wasm</a></div><div class="ttdeci">bool os_wasm()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00118">sys_utils.cpp:118</a></div></div>
+<div class="ttc" id="anamespacelolly_html_aa7c8230fccf51fc5c61bf22b06f4b99d"><div class="ttname"><a href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">lolly::system</a></div><div class="ttdeci">int system(string cmd)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00174">sys_utils.cpp:174</a></div></div>
+<div class="ttc" id="asys__utils_8cpp_html_a63a265a61f7b6bd73b3114a53da96668"><div class="ttname"><a href="sys__utils_8cpp.html#a63a265a61f7b6bd73b3114a53da96668">os_mingw</a></div><div class="ttdeci">bool os_mingw()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00103">sys_utils.cpp:103</a></div></div>
+<div class="ttc" id="asys__utils_8cpp_html_af882377c2708a5ecb79786eb3081e399"><div class="ttname"><a href="sys__utils_8cpp.html#af882377c2708a5ecb79786eb3081e399">os_wasm</a></div><div class="ttdeci">bool os_wasm()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00121">sys_utils.cpp:121</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -217,7 +217,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   36</span>  <a class="code hl_function" href="sys__utils_8cpp.html#aba76e2e16096e5c0d9c4fba20c1638cb">set_env</a> (<span class="stringliteral">&quot;SHELL&quot;</span>, <span class="stringliteral">&quot;/bin/zsh&quot;</span>);</div>
 <div class="line"><span class="lineno">   37</span>  CHECK_EQ (<a class="code hl_function" href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a> (<span class="stringliteral">&quot;SHELL&quot;</span>) == <span class="stringliteral">&quot;/bin/zsh&quot;</span>, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   38</span>}</div>
-<div class="ttc" id="asys__utils_8cpp_html_aba76e2e16096e5c0d9c4fba20c1638cb"><div class="ttname"><a href="sys__utils_8cpp.html#aba76e2e16096e5c0d9c4fba20c1638cb">set_env</a></div><div class="ttdeci">void set_env(string var, string with)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00048">sys_utils.cpp:48</a></div></div>
+<div class="ttc" id="asys__utils_8cpp_html_aba76e2e16096e5c0d9c4fba20c1638cb"><div class="ttname"><a href="sys__utils_8cpp.html#aba76e2e16096e5c0d9c4fba20c1638cb">set_env</a></div><div class="ttdeci">void set_env(string var, string with)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00049">sys_utils.cpp:49</a></div></div>
 <div class="ttc" id="asys__utils_8cpp_html_adafe88317c2838dd7505ba786e93277d"><div class="ttname"><a href="sys__utils_8cpp.html#adafe88317c2838dd7505ba786e93277d">get_env</a></div><div class="ttdeci">string get_env(string var)</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00025">sys_utils.cpp:25</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -243,7 +243,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   41</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="sys__utils_8cpp.html#a2efd376c8a64ca818f2c92f6e2d62375">get_user_name</a> ()) &gt;= 0);</div>
 <div class="line"><span class="lineno">   42</span>  <span class="comment">// cout &lt;&lt; get_user_name () &lt;&lt; LF;</span></div>
 <div class="line"><span class="lineno">   43</span>}</div>
-<div class="ttc" id="asys__utils_8cpp_html_a2efd376c8a64ca818f2c92f6e2d62375"><div class="ttname"><a href="sys__utils_8cpp.html#a2efd376c8a64ca818f2c92f6e2d62375">get_user_name</a></div><div class="ttdeci">string get_user_name()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00076">sys_utils.cpp:76</a></div></div>
+<div class="ttc" id="asys__utils_8cpp_html_a2efd376c8a64ca818f2c92f6e2d62375"><div class="ttname"><a href="sys__utils_8cpp.html#a2efd376c8a64ca818f2c92f6e2d62375">get_user_name</a></div><div class="ttdeci">string get_user_name()</div><div class="ttdef"><b>Definition:</b> <a href="sys__utils_8cpp_source.html#l00079">sys_utils.cpp:79</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

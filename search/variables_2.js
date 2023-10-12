@@ -17,6 +17,6 @@ var searchData=
   ['b9_14',['b9',['../blackbox__test_8cpp.html#a4383189ef21517aefacaa8fd80d4d86e',1,'blackbox_test.cpp']]],
   ['bout_15',['bout',['../blackbox__test_8cpp.html#a556f84581cef3d885226a1a936f8d1ff',1,'blackbox_test.cpp']]],
   ['buf_16',['buf',['../classbuffered__ostream__rep.html#af8961b55095b3ee21727a49c7b4f765f',1,'buffered_ostream_rep']]],
-  ['buffer_17',['buffer',['../struct__channel.html#a3d5424c0d11212f97a1aac81ffd2c51b',1,'_channel']]],
+  ['buffer_17',['buffer',['../structfile__status.html#a08cfde39357933be13926cd0167be7ec',1,'file_status::buffer()'],['../struct__channel.html#a3d5424c0d11212f97a1aac81ffd2c51b',1,'_channel::buffer()']]],
   ['buffer_5fsize_18',['buffer_size',['../struct__channel.html#a0050ec1bda8fadc54e50f4631fb5cfca',1,'_channel']]]
 ];

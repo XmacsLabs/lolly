@@ -92,7 +92,17 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  CHECK_EQ (left == right, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a96d60a30156bc5024f0ace85b903300c">   16</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_ALL                                                   \</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">  TEST_CASE (&quot;test memory leak above&quot;</span>) { CHECK_EQ (mem_used (), mem_lolly); }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a931102e4e092186b370d8091d2cb6712">   19</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_INIT                                                  \</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">  int mem_lolly= 0;                                                            \</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">  TEST_CASE (&quot;read before test&quot;</span>) { mem_lolly= mem_used (); }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a0f28f8e42b3e9f5f73cfa264bdab6873">   23</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_RESET                                                 \</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">  TEST_CASE (&quot;reset test of memory leak&quot;</span>) { mem_lolly= mem_used (); }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00544">basic.hpp:544</a></div></div>
 <div class="ttc" id="alolly__doctests_8hpp_html_a9fd61dbcf41093dd553e2c0a64ab9861"><div class="ttname"><a href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a></div><div class="ttdeci">void string_eq(string left, string right)</div><div class="ttdef"><b>Definition:</b> <a href="lolly__doctests_8hpp_source.html#l00008">lolly_doctests.hpp:8</a></div></div>
 <div class="ttc" id="astring_8hpp_html"><div class="ttname"><a href="string_8hpp.html">string.hpp</a></div></div>
