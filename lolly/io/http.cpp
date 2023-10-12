@@ -29,7 +29,7 @@ http_get (url u) {
   c_string      u_cstr= c_string (as_string (u));
   cpr::Response r     = cpr::Get (cpr::Url{u_cstr});
   json          r_json;
-  r_json.set ("status_code", r.status_code);
+  r_json.set ("status_code", (int64_t) r.status_code);
   r_json.set ("url", r.url.c_str ());
   r_json.set ("text", r.text.c_str ());
   json headers_json;
