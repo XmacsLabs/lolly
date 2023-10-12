@@ -83,7 +83,7 @@ public:
   json   get (string key);
   json   operator() (string key);
   void   set (string key, json value);
-  string to_string ();
+  string dump ();
 };
 CONCRETE_CODE (json);
 

@@ -42,7 +42,7 @@ json::set (string key, json value) {
 }
 
 string
-json::to_string () {
+json::dump () {
   tree t= this->rep->t;
   if (this->is_string ()) {
     return raw_quote (as_string (t));
@@ -59,7 +59,7 @@ json::to_string () {
   if (t->op == JSON_ARRAY) {
     string ret= "[";
     for (int i= 0; i < arity (t); i++) {
-      ret= ret * json (t[0]).to_string ();
+      ret= ret * json (t[0]).dump ();
     }
     ret= ret * "]";
     return ret;
@@ -70,13 +70,13 @@ json::to_string () {
     if (n > 0) {
       ret= ret * raw_quote (as_string (t[0][0]));
       ret= ret * ":";
-      ret= ret * json (t[0][1]).to_string ();
+      ret= ret * json (t[0][1]).dump ();
     }
     for (int i= 1; i < n; i++) {
       ret= ret * ",";
       ret= ret * raw_quote (as_string (t[0][0]));
       ret= ret * ":";
-      ret= ret * json (t[i][1]).to_string ();
+      ret= ret * json (t[i][1]).dump ();
     }
     ret= ret * "}";
     return ret;
