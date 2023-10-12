@@ -1,3 +1,9 @@
+/** \file json_test.cpp
+ *  \copyright GPLv3
+ *  \details Unitests for json
+ *  \author Darcy Shen
+ *  \date   2023
+ */
 
 #include "a_lolly_test.hpp"
 #include "analyze.hpp"
