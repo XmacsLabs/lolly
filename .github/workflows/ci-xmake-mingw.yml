@@ -23,6 +23,7 @@ on:
 
 jobs:
   linuxbuild:
+    if: false # disable it for cpr
     runs-on: ubuntu-22.04
     steps:
       - name: Install dependencies
