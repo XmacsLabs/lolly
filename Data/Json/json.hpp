@@ -30,7 +30,8 @@ enum json_label : int {
 };
 
 struct json_rep : concrete_struct {
-  tree t;
+  tree                 t;
+  hashmap<string, int> index;
   inline json_rep (tree p_t) : t (p_t) {}
 };
 
@@ -75,9 +76,12 @@ public:
            rep->t->op == UINT64_TYPE;
   }
   bool is_bool () { return rep->t->op == BOOL_TYPE; }
+  bool is_object () { return rep->t->op == JSON_OBJECT; }
+  bool is_array () { return rep->t->op == JSON_ARRAY; }
 
-  json   operator() (string key);
+  bool   contains (string key);
   json   get (string key);
+  json   operator() (string key);
   void   set (string key, json value);
   string to_string ();
 };

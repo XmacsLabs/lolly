@@ -4,39 +4,40 @@
 namespace lolly {
 namespace data {
 
+bool
+json::contains (string key) {
+  if (!is_object ()) return false;
+  return rep->index->contains (key);
+}
+
 json
-json::operator() (string key) {
-  if (rep->t->op == JSON_OBJECT) {
-    int n= arity (rep->t);
-    for (int i= 0; i < n; i++) {
-      tree iter= rep->t[i];
-      if (is_atomic (iter[0]) && iter[0] == key) {
-        return json (iter[1]);
-      }
+json::get (string key) {
+  if (is_object ()) {
+    if (rep->index->contains (key)) {
+      int  i   = rep->index (key);
+      tree pair= rep->t[i];
+      return json (pair[1]);
     }
   }
   return json_null ();
 }
 
 json
-json::get (string key) {
-  return (*this) (key);
+json::operator() (string key) {
+  return get (key);
 }
 
 void
 json::set (string key, json value) {
-  json old_v= (*this) (key);
-  if (old_v.is_null ()) {
-    rep->t << tree (JSON_PAIR, key, value->t);
+  if (!is_object ()) return;
+  if (contains (key)) {
+    int  i   = rep->index (key);
+    tree pair= rep->t[i];
+    pair[1]  = value->t;
   }
   else {
-    int n= arity (rep->t);
-    for (int i= 0; i < n; i++) {
-      tree iter= rep->t[i];
-      if (is_atomic (iter[0]) && iter[0] == key) {
-        iter[1]= value->t;
-      }
-    }
+    rep->index (key)= arity (rep->t);
+    rep->t << tree (JSON_PAIR, key, value->t);
   }
 }
 
