@@ -40,6 +40,7 @@ if is_config("malloc", "mimalloc") then
 elseif is_config("malloc", "jemalloc") then 
     add_requires("jemalloc 5.3.0", {system=false, configs={envs={LD_PRELOAD="`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision`" }}})
 end
+add_requires("cpp-httplib 0.14.0")
 
 option("posix_thread")
     set_showmenu(false)
@@ -69,6 +70,7 @@ local lolly_files = {
     "System/**/*.cpp",
     "Data/String/**.cpp",
     "Data/Scheme/**.cpp",
+    "lolly/**/**.cpp",
 }
 local lolly_includedirs = {
     "Kernel/Abstractions",
@@ -85,15 +87,12 @@ local lolly_includedirs = {
     "Plugins/Curl",
     "Plugins/Unix",
     "Plugins",
+    "$(projectdir)"
 }
 
 target("liblolly") do
     set_kind("static")
-    if is_plat("mingw") then
-        set_languages("c++11")
-    else
-        set_languages("c++98")
-    end
+    set_languages("c++11")
     set_policy("check.auto_ignore_flags", false)
     my_configvar_check()
 
@@ -113,6 +112,7 @@ target("liblolly") do
         add_defines("JEMALLOC")
         add_packages("jemalloc")
     end 
+    add_packages("cpp-httplib")
 
     if is_plat("mingw", "windows") then 
         add_includedirs("Plugins/Windows")
@@ -164,6 +164,8 @@ target("liblolly") do
     add_headerfiles("Data/Scheme/(*.hpp)")
     add_headerfiles("Plugins/Curl/(*.hpp)", {prefixdir = "Curl"})
     add_headerfiles("Plugins/Windows/(*.hpp)", {prefixdir = "Windows"})
+    add_headerfiles("lolly/(data/*.hpp)", {prefixdir="lolly"})
+    add_headerfiles("lolly/(io/*.hpp)", {prefixdir = "lolly"})
     add_includedirs(lolly_includedirs)
     add_files(lolly_files)
 end
