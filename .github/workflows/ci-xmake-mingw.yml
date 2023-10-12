@@ -57,6 +57,7 @@ jobs:
       - name: test
         run: xmake run --yes -vD --diagnosis --group=tests
   windowsbuild:
+    if: false # disable it for cpr, we may need to upgrade mingw later
     runs-on: windows-2019
     env:
       # Force xmake to a specific folder (for cache)
