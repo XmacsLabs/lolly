@@ -9,6 +9,8 @@
 #include "lolly/io/http.hpp"
 
 TEST_CASE ("http::get") {
+#ifndef OS_WASM
   json j= lolly::io::http_get ("https://httpbin.org/get");
   CHECK (N (as_string (j ("text"))) > 0);
+#endif
 }
