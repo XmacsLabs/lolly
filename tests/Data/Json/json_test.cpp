@@ -30,5 +30,5 @@ TEST_CASE ("access") {
   j.set ("name", "John");
   string_eq (as_string (j ("name")), "John");
   j.set ("age", 12);
-  string_eq (j.dump (), "{\"name\":\"John\",\"name\":12}");
+  string_eq (j.dump (), "{\"name\":\"John\",\"age\":12}");
 }
