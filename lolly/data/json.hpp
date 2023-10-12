@@ -13,6 +13,7 @@
 
 #include "string.hpp"
 #include "tree.hpp"
+#include "stdint.h"
 
 namespace lolly {
 namespace data {
@@ -51,10 +52,13 @@ public:
   json (bool value) {
     rep= tm_new<json_rep> (tree (BOOL_TYPE, tree (as_string_bool (value))));
   }
-  json (DI value) {
+  json (int64_t value) {
     rep= tm_new<json_rep> (tree (INT64_TYPE, tree (as_string (value))));
   }
-  json (SI value) {
+  json (int32_t value) {
+    rep= tm_new<json_rep> (tree (INT64_TYPE, tree (as_string (value))));
+  }
+  json (int16_t value) {
     rep= tm_new<json_rep> (tree (INT64_TYPE, tree (as_string (value))));
   }
   json (double value) {
