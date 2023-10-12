@@ -164,8 +164,8 @@ target("liblolly") do
     add_headerfiles("Data/Scheme/(*.hpp)")
     add_headerfiles("Plugins/Curl/(*.hpp)", {prefixdir = "Curl"})
     add_headerfiles("Plugins/Windows/(*.hpp)", {prefixdir = "Windows"})
-    add_headerfiles("lolly/data/(*.hpp)", {prefixdir="lolly"})
-    add_headerfiles("lolly/io/(*.hpp)", {prefixdir = "lolly"})
+    add_headerfiles("lolly/(data/*.hpp)", {prefixdir="lolly"})
+    add_headerfiles("lolly/(io/*.hpp)", {prefixdir = "lolly"})
     add_includedirs(lolly_includedirs)
     add_files(lolly_files)
 end
