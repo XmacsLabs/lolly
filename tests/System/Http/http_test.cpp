@@ -6,13 +6,20 @@
  */
 
 #include "a_tbox_main.cpp"
-#include "blackbox.hpp"
 #include "generic_tree.hpp"
+#include "hashmap.hpp"
 #include "lolly/io/http.hpp"
+
+using lolly::io::http_get;
+using lolly::io::http_response_ref;
 
 TEST_CASE ("http::get") {
 #ifndef OS_WASM
-  tree r= lolly::io::http_get ("https://httpbin.org/get");
-  CHECK_EQ (as<tree, long> (r[0][0]), 200);
+  tree r          = http_get ("https://httpbin.org/get");
+  long status_code= as<tree, long> (http_response_ref (r, STATUS_CODE));
+  CHECK_EQ (status_code, 200);
+  auto hmap= as<tree, hashmap<string, string> > (http_response_ref (r, HEADER));
+  string content_type= hmap ("Content-Type");
+  string_eq (content_type, "application/json");
 #endif
 }

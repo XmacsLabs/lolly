@@ -13,4 +13,12 @@
 
 #include "tree.hpp"
 
-enum http_response_label : int { ROOT= 1, STATUS_CODE };
+enum http_response_label : int {
+  STATUS_CODE= 1,
+  TEXT,
+  URL,
+  ELAPSED,
+  HEADER,
+  ROOT,
+  TUPLE
+};

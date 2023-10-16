@@ -11,13 +11,15 @@
 
 #pragma once
 
+#include "http_response.hpp"
 #include "tree.hpp"
 #include "url.hpp"
 
 namespace lolly {
 namespace io {
 
+tree http_response_ref (tree res, http_response_label op);
 tree http_get (url u);
 
-}
+} // namespace io
 } // namespace lolly
