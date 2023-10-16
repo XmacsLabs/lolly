@@ -10,6 +10,7 @@
  ******************************************************************************/
 
 #include "lolly/io/http.hpp"
+#include "analyze.hpp"
 #include "generic_tree.hpp"
 #include "hashmap.hpp"
 #include "lolly/data/uri.hpp"
@@ -41,7 +42,9 @@ http_get (url u) {
   http_response_set (ret, ELAPSED, as<double, tree> (r.elapsed));
   auto hmap= hashmap<string, string> ();
   for (auto i= r.header.begin (); i != r.header.end (); i++) {
-    hmap (string (i->first.c_str ()))= string (i->second.c_str ());
+    string key  = locase_all (string (i->first.c_str ()));
+    string value= string (i->second.c_str ());
+    hmap (key)  = value;
   }
   http_response_set (ret, HEADER, as<hashmap<string, string>, tree> (hmap));
   return ret;

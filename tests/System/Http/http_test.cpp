@@ -18,7 +18,7 @@ TEST_CASE ("http::get") {
   long status_code= as<tree, long> (http_response_ref (r, STATUS_CODE));
   CHECK_EQ (status_code, 200);
   auto hmap= as<tree, hashmap<string, string> > (http_response_ref (r, HEADER));
-  string content_type= hmap ("Content-Type");
+  string content_type= hmap ("content-type");
   string_eq (content_type, "application/json");
 #endif
 }
