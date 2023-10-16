@@ -82,6 +82,8 @@ digraph "json_test.cpp"
   Node29 [label="observer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8hpp.html",tooltip=" "];
   Node29 -> Node5 [color="steelblue1",style="solid"];
   Node22 -> Node5 [color="steelblue1",style="solid"];
+  Node21 -> Node30 [color="steelblue1",style="solid"];
+  Node30 [label="stdint.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node5 [color="steelblue1",style="solid"];
   Node1 -> Node9 [color="steelblue1",style="solid"];
 }

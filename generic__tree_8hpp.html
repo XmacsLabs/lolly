@@ -110,7 +110,7 @@ Classes</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:abf0acee02d192650d69f0856d43e1730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classblackbox.html">blackbox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generic__tree_8hpp.html#abf0acee02d192650d69f0856d43e1730">as_blackbox</a> (const <a class="el" href="classtree.html">tree</a> &amp;<a class="el" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>)</td></tr>
 <tr class="separator:abf0acee02d192650d69f0856d43e1730"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae325c8ae4158ad9bfe722b509ff1237c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
+<tr class="memitem:ae325c8ae4158ad9bfe722b509ff1237c"><td class="memTemplParams" colspan="2">template&lt;typename F , typename T &gt; </td></tr>
 <tr class="memitem:ae325c8ae4158ad9bfe722b509ff1237c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="generic__tree_8hpp.html#ae325c8ae4158ad9bfe722b509ff1237c">as</a> (const F &amp;<a class="el" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>)</td></tr>
 <tr class="separator:ae325c8ae4158ad9bfe722b509ff1237c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -155,7 +155,7 @@ Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename F &gt; </div>
+template&lt;typename F , typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -177,7 +177,7 @@ template&lt;typename T , typename F &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="generic__tree_8hpp_source.html#l00048">48</a> of file <a class="el" href="generic__tree_8hpp_source.html">generic_tree.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   48</span>                {</div>
-<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="structconvert__helper.html#a6a5c281c3aa5120ebb10162b099dd945">convert_helper&lt;F, T&gt;::op</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>);</div>
+<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="structconvert__helper.html#a6a5c281c3aa5120ebb10162b099dd945">convert_helper&lt;T, F&gt;::op</a> (<a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>);</div>
 <div class="line"><span class="lineno">   50</span>}</div>
 <div class="ttc" id="astructconvert__helper_html_a6a5c281c3aa5120ebb10162b099dd945"><div class="ttname"><a href="structconvert__helper.html#a6a5c281c3aa5120ebb10162b099dd945">convert_helper::op</a></div><div class="ttdeci">static T op(const F &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="generic__tree_8hpp_source.html#l00033">generic_tree.hpp:33</a></div></div>
 </div><!-- fragment -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['null_5ftype_0',['NULL_TYPE',['../namespacelolly_1_1data.html#a01288eee69b7e52dc00ad9021af846d8a23e4694f755cce8a8fe52e31b69cfb27',1,'lolly::data']]]
+  ['lf_0',['LF',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4',1,'basic.hpp']]]
 ];

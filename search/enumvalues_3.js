@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hrule_0',['HRULE',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a88d425b54c630fffd0e35379e037c38f',1,'basic.hpp']]]
+  ['elapsed_0',['ELAPSED',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10abe2d03210c1733ce4c512d845f966f17',1,'lolly::io']]]
 ];

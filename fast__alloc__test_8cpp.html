@@ -105,8 +105,8 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a39c50aac88ede89491cbf739ca7a2e2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fast__alloc__test_8cpp.html#a39c50aac88ede89491cbf739ca7a2e2c">TEST_CASE</a> (&quot;test for memory leaks&quot;)</td></tr>
 <tr class="separator:a39c50aac88ede89491cbf739ca7a2e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a701a3d712af54c4d8711ceb706344bdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fast__alloc__test_8cpp.html#a701a3d712af54c4d8711ceb706344bdb">TEST_CASE</a> (&quot;test basic data types&quot;)</td></tr>
-<tr class="separator:a701a3d712af54c4d8711ceb706344bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd68513e6bef39ca7083346bb0cc023d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lolly__doctests_8hpp.html#a931102e4e092186b370d8091d2cb6712">TEST_MEMORY_LEAK_INIT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fast__alloc__test_8cpp.html#afd68513e6bef39ca7083346bb0cc023d">TEST_CASE</a> (&quot;test basic data types&quot;)</td></tr>
+<tr class="separator:afd68513e6bef39ca7083346bb0cc023d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a822d59f2447d26be3aab041843533a67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fast__alloc__test_8cpp.html#a822d59f2447d26be3aab041843533a67">TEST_CASE</a> (&quot;test class&quot;)</td></tr>
 <tr class="separator:a822d59f2447d26be3aab041843533a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -163,14 +163,14 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a701a3d712af54c4d8711ceb706344bdb" name="a701a3d712af54c4d8711ceb706344bdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a701a3d712af54c4d8711ceb706344bdb">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/3]</span></h2>
+<a id="afd68513e6bef39ca7083346bb0cc023d" name="afd68513e6bef39ca7083346bb0cc023d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd68513e6bef39ca7083346bb0cc023d">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TEST_CASE </td>
+          <td class="memname"><a class="el" href="lolly__doctests_8hpp.html#a931102e4e092186b370d8091d2cb6712">TEST_MEMORY_LEAK_INIT</a> TEST_CASE </td>
           <td>(</td>
           <td class="paramtype">&quot;test basic data types&quot;        &#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -179,48 +179,48 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc__test_8cpp_source.html#l00028">28</a> of file <a class="el" href="fast__alloc__test_8cpp_source.html">fast_alloc_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                    {</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span><span class="preprocessor">#ifdef OS_WASM</span></div>
-<div class="line"><span class="lineno">   31</span><span class="preprocessor">#define NUM 100</span></div>
-<div class="line"><span class="lineno">   32</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">   33</span><span class="preprocessor">#define NUM 10000</span></div>
-<div class="line"><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   35</span> </div>
-<div class="line"><span class="lineno">   36</span>  <span class="keywordtype">char</span>*   ch[<a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
-<div class="line"><span class="lineno">   37</span>  <span class="keywordtype">int</span>*    in[<a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
-<div class="line"><span class="lineno">   38</span>  <span class="keywordtype">long</span>*   lo[<a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
-<div class="line"><span class="lineno">   39</span>  <span class="keywordtype">double</span>* dou[<a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>; i++) { <span class="comment">// for gprof</span></div>
-<div class="line"><span class="lineno">   42</span>    ch[i]= tm_new&lt;char&gt; ();</div>
-<div class="line"><span class="lineno">   43</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (ch[i]);</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>    in[i]= tm_new&lt;int&gt; ();</div>
-<div class="line"><span class="lineno">   46</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (in[i]);</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>    lo[i]= tm_new&lt;long&gt; ();</div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (lo[i]);</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>    dou[i]= tm_new&lt;double&gt; ();</div>
-<div class="line"><span class="lineno">   52</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (dou[i]);</div>
-<div class="line"><span class="lineno">   53</span>  }</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>; i++) {</div>
-<div class="line"><span class="lineno">   56</span>    ch[i] = tm_new&lt;char&gt; ();</div>
-<div class="line"><span class="lineno">   57</span>    in[i] = tm_new&lt;int&gt; ();</div>
-<div class="line"><span class="lineno">   58</span>    lo[i] = tm_new&lt;long&gt; ();</div>
-<div class="line"><span class="lineno">   59</span>    dou[i]= tm_new&lt;double&gt; ();</div>
-<div class="line"><span class="lineno">   60</span>  }</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>; i++) {</div>
-<div class="line"><span class="lineno">   63</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (ch[i]);</div>
-<div class="line"><span class="lineno">   64</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (in[i]);</div>
-<div class="line"><span class="lineno">   65</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (lo[i]);</div>
-<div class="line"><span class="lineno">   66</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (dou[i]);</div>
-<div class="line"><span class="lineno">   67</span>  }</div>
-<div class="line"><span class="lineno">   68</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc__test_8cpp_source.html#l00030">30</a> of file <a class="el" href="fast__alloc__test_8cpp_source.html">fast_alloc_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                    {</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span><span class="preprocessor">#ifdef OS_WASM</span></div>
+<div class="line"><span class="lineno">   33</span><span class="preprocessor">#define NUM 100</span></div>
+<div class="line"><span class="lineno">   34</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   35</span><span class="preprocessor">#define NUM 10000</span></div>
+<div class="line"><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>  <span class="keywordtype">char</span>*   ch[<a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
+<div class="line"><span class="lineno">   39</span>  <span class="keywordtype">int</span>*    in[<a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordtype">long</span>*   lo[<a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
+<div class="line"><span class="lineno">   41</span>  <span class="keywordtype">double</span>* dou[<a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>; i++) { <span class="comment">// for gprof</span></div>
+<div class="line"><span class="lineno">   44</span>    ch[i]= tm_new&lt;char&gt; ();</div>
+<div class="line"><span class="lineno">   45</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (ch[i]);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    in[i]= tm_new&lt;int&gt; ();</div>
+<div class="line"><span class="lineno">   48</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (in[i]);</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    lo[i]= tm_new&lt;long&gt; ();</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (lo[i]);</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>    dou[i]= tm_new&lt;double&gt; ();</div>
+<div class="line"><span class="lineno">   54</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (dou[i]);</div>
+<div class="line"><span class="lineno">   55</span>  }</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>; i++) {</div>
+<div class="line"><span class="lineno">   58</span>    ch[i] = tm_new&lt;char&gt; ();</div>
+<div class="line"><span class="lineno">   59</span>    in[i] = tm_new&lt;int&gt; ();</div>
+<div class="line"><span class="lineno">   60</span>    lo[i] = tm_new&lt;long&gt; ();</div>
+<div class="line"><span class="lineno">   61</span>    dou[i]= tm_new&lt;double&gt; ();</div>
+<div class="line"><span class="lineno">   62</span>  }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_define" href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a>; i++) {</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (ch[i]);</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (in[i]);</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (lo[i]);</div>
+<div class="line"><span class="lineno">   68</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (dou[i]);</div>
+<div class="line"><span class="lineno">   69</span>  }</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 <div class="ttc" id="afast__alloc__test_8cpp_html_aaf0952059602752258dccaa015d7b54a"><div class="ttname"><a href="fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a">NUM</a></div><div class="ttdeci">#define NUM</div></div>
 </div><!-- fragment -->
 </div>
@@ -241,11 +241,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc__test_8cpp_source.html#l00070">70</a> of file <a class="el" href="fast__alloc__test_8cpp_source.html">fast_alloc_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                         {</div>
-<div class="line"><span class="lineno">   71</span>  <a class="code hl_struct" href="structComplex.html">Complex</a>* p_complex= tm_new&lt;Complex&gt; (35.8, 26.2);</div>
-<div class="line"><span class="lineno">   72</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (p_complex);</div>
-<div class="line"><span class="lineno">   73</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc__test_8cpp_source.html#l00072">72</a> of file <a class="el" href="fast__alloc__test_8cpp_source.html">fast_alloc_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                         {</div>
+<div class="line"><span class="lineno">   73</span>  <a class="code hl_struct" href="structComplex.html">Complex</a>* p_complex= tm_new&lt;Complex&gt; (35.8, 26.2);</div>
+<div class="line"><span class="lineno">   74</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#adcc86832661a6ed53d539170e7ba91ea">tm_delete</a> (p_complex);</div>
+<div class="line"><span class="lineno">   75</span>}</div>
 <div class="ttc" id="astructComplex_html"><div class="ttname"><a href="structComplex.html">Complex</a></div><div class="ttdef"><b>Definition:</b> <a href="fast__alloc__test_8cpp_source.html#l00004">fast_alloc_test.cpp:4</a></div></div>
 </div><!-- fragment -->
 </div>

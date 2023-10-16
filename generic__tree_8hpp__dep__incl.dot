@@ -8,5 +8,16 @@ digraph "generic_tree.hpp"
   Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
   Node2 [label="generic_tree_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$generic__tree__test_8cpp.html",tooltip=" "];
   Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
-  Node3 [label="tree.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree_8cpp.html",tooltip=" "];
+  Node3 [label="http.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8cpp.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="http_response.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__response_8hpp.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="http.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8hpp.html",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node5 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="http_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__test_8cpp.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="tree.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree_8cpp.html",tooltip=" "];
 }

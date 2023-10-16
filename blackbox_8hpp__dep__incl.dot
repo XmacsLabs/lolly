@@ -12,7 +12,18 @@ digraph "blackbox.hpp"
   Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
   Node4 [label="generic_tree_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$generic__tree__test_8cpp.html",tooltip=" "];
   Node3 -> Node5 [dir="back",color="steelblue1",style="solid"];
-  Node5 [label="tree.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree_8cpp.html",tooltip=" "];
-  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
-  Node6 [label="observer.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8cpp.html",tooltip=" "];
+  Node5 [label="http.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8cpp.html",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="http_response.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__response_8hpp.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node6 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="http.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8hpp.html",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node7 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="http_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__test_8cpp.html",tooltip=" "];
+  Node3 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node3 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="tree.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree_8cpp.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="observer.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8cpp.html",tooltip=" "];
 }
