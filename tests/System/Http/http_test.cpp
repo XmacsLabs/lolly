@@ -6,11 +6,13 @@
  */
 
 #include "a_tbox_main.cpp"
+#include "blackbox.hpp"
+#include "generic_tree.hpp"
 #include "lolly/io/http.hpp"
 
 TEST_CASE ("http::get") {
 #ifndef OS_WASM
-  json j= lolly::io::http_get ("https://httpbin.org/get");
-  CHECK (N (as_string (j ("text"))) > 0);
+  tree r= lolly::io::http_get ("https://httpbin.org/get");
+  CHECK_EQ (as<tree, long> (r[0][0]), 200);
 #endif
 }

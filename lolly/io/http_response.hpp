@@ -1,7 +1,7 @@
 
 /******************************************************************************
- * MODULE     : http.hpp
- * DESCRIPTION: HTTP related routines
+ * MODULE     : http_response.hpp
+ * DESCRIPTION: Tree repr of HTTP Response
  * COPYRIGHT  : (C) 2023  Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
@@ -12,12 +12,5 @@
 #pragma once
 
 #include "tree.hpp"
-#include "url.hpp"
 
-namespace lolly {
-namespace io {
-
-tree http_get (url u);
-
-}
-} // namespace lolly
+enum http_response_label : int { ROOT= 1, STATUS_CODE };

@@ -10,6 +10,8 @@
  ******************************************************************************/
 
 #include "http.hpp"
+#include "generic_tree.hpp"
+#include "http_response.hpp"
 #include "lolly/data/uri.hpp"
 #include "tree.hpp"
 
@@ -21,25 +23,19 @@ namespace lolly {
 namespace io {
 
 #ifdef OS_WASM
-json
+tree
 http_get (url u) {
-  return json ();
+  return tree ();
 }
 #else
-json
+tree
 http_get (url u) {
   c_string      u_cstr= c_string (as_string (u));
   cpr::Response r     = cpr::Get (cpr::Url{u_cstr});
-  json          r_json;
-  r_json.set ("status_code", (int64_t) r.status_code);
-  r_json.set ("url", r.url.c_str ());
-  r_json.set ("text", r.text.c_str ());
-  json headers_json;
-  for (auto i= r.header.begin (); i != r.header.end (); i++) {
-    headers_json.set (string (i->first.c_str ()), string (i->second.c_str ()));
-  }
-  r_json.set ("headers", headers_json);
-  return r_json;
+  tree          ret   = tree (http_response_label::ROOT, 0);
+  ret << tree (http_response_label::STATUS_CODE,
+               as<long, tree> (r.status_code));
+  return ret;
 }
 #endif
 
