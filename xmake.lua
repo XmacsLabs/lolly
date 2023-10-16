@@ -37,7 +37,7 @@ elseif is_config("malloc", "jemalloc") then
 end
 
 if not is_plat("wasm") then
-    add_requires("cpr 1.10.3")
+    add_requires("cpr 1.10.5")
 end
 
 
