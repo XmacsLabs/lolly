@@ -10,8 +10,7 @@
 #include "hashmap.hpp"
 #include "lolly/io/http.hpp"
 
-using lolly::io::http_get;
-using lolly::io::http_response_ref;
+using namespace lolly::io;
 
 TEST_CASE ("http::get") {
 #ifndef OS_WASM

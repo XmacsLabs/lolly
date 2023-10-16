@@ -9,10 +9,11 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include "http.hpp"
+#include "lolly/io/http.hpp"
 #include "generic_tree.hpp"
-#include "http_response.hpp"
+#include "hashmap.hpp"
 #include "lolly/data/uri.hpp"
+#include "lolly/io/http_response.hpp"
 #include "tree.hpp"
 
 #ifndef OS_WASM
@@ -22,15 +23,10 @@
 namespace lolly {
 namespace io {
 
-tree
-http_response_ref (tree response, http_response_label op) {
-  return response[op - 1][0];
-}
-
 #ifdef OS_WASM
 tree
 http_get (url u) {
-  return tree ();
+  return http_response_init ();
 }
 #else
 tree
@@ -38,20 +34,16 @@ http_get (url u) {
   string        u_str = as_string (u);
   c_string      u_cstr= c_string (u_str);
   cpr::Response r     = cpr::Get (cpr::Url{u_cstr});
-  tree          ret   = tree (http_response_label::ROOT, 0);
-  ret << tree (http_response_label::STATUS_CODE,
-               as<long, tree> (r.status_code));
-  ret << tree (http_response_label::TEXT, tree (r.text.c_str ()));
-  ret << tree (http_response_label::URL, tree (u_str));
-  ret << tree (http_response_label::ELAPSED, as<double, tree> (r.elapsed));
+  tree          ret   = http_response_init ();
+  http_response_set (ret, STATUS_CODE, as<long, tree> (r.status_code));
+  http_response_set (ret, TEXT, tree (r.text.c_str ()));
+  http_response_set (ret, URL, tree (u_str));
+  http_response_set (ret, ELAPSED, as<double, tree> (r.elapsed));
   auto hmap= hashmap<string, string> ();
   for (auto i= r.header.begin (); i != r.header.end (); i++) {
     hmap (string (i->first.c_str ()))= string (i->second.c_str ());
   }
-  tree header= tree (http_response_label::HEADER,
-                     as<hashmap<string, string>, tree> (hmap));
-  ret << header;
-
+  http_response_set (ret, HEADER, as<hashmap<string, string>, tree> (hmap));
   return ret;
 }
 #endif
