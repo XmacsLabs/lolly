@@ -11,16 +11,14 @@
 
 #pragma once
 
-#include "lolly/data/json.hpp"
+#include "lolly/io/http_response.hpp"
 #include "tree.hpp"
 #include "url.hpp"
-
-using json= lolly::data::json;
 
 namespace lolly {
 namespace io {
 
-json http_get (url u);
+tree http_get (url u);
 
-}
+} // namespace io
 } // namespace lolly

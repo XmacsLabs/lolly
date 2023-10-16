@@ -9,8 +9,12 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include "http.hpp"
+#include "lolly/io/http.hpp"
+#include "analyze.hpp"
+#include "generic_tree.hpp"
+#include "hashmap.hpp"
 #include "lolly/data/uri.hpp"
+#include "lolly/io/http_response.hpp"
 #include "tree.hpp"
 
 #ifndef OS_WASM
@@ -21,25 +25,29 @@ namespace lolly {
 namespace io {
 
 #ifdef OS_WASM
-json
+tree
 http_get (url u) {
-  return json ();
+  return http_response_init ();
 }
 #else
-json
+tree
 http_get (url u) {
-  c_string      u_cstr= c_string (as_string (u));
+  string        u_str = as_string (u);
+  c_string      u_cstr= c_string (u_str);
   cpr::Response r     = cpr::Get (cpr::Url{u_cstr});
-  json          r_json;
-  r_json.set ("status_code", (int64_t) r.status_code);
-  r_json.set ("url", r.url.c_str ());
-  r_json.set ("text", r.text.c_str ());
-  json headers_json;
+  tree          ret   = http_response_init ();
+  http_response_set (ret, STATUS_CODE, as<long, tree> (r.status_code));
+  http_response_set (ret, TEXT, tree (r.text.c_str ()));
+  http_response_set (ret, URL, tree (u_str));
+  http_response_set (ret, ELAPSED, as<double, tree> (r.elapsed));
+  auto hmap= hashmap<string, string> ();
   for (auto i= r.header.begin (); i != r.header.end (); i++) {
-    headers_json.set (string (i->first.c_str ()), string (i->second.c_str ()));
+    string key  = locase_all (string (i->first.c_str ()));
+    string value= string (i->second.c_str ());
+    hmap (key)  = value;
   }
-  r_json.set ("headers", headers_json);
-  return r_json;
+  http_response_set (ret, HEADER, as<hashmap<string, string>, tree> (hmap));
+  return ret;
 }
 #endif
 
