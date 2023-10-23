@@ -146,7 +146,7 @@ TEST_CASE ("long list under stack size") {
   cout << "Initial mem used: " << initial_mem_used << LF;
   list<string> long_l;
   // increase the size to 5000, there will be a stackoverflow on Windows
-  for (int i=0; i<4000; i++) {
+  for (int i= 0; i < 4000; i++) {
     long_l= list<string> ("88888888", long_l);
   }
   int final_mem_used= mem_used ();
