@@ -192,7 +192,6 @@ list<T>
 reverse (list<T> l) {
   list<T> r;
   while (!is_nil (l)) {
-    mem_info ();
     r= list<T> (l->item, r);
     l= l->next;
   }
