@@ -101,3 +101,17 @@ TEST_CASE ("test contains") {
   CHECK_EQ (contains (2, five_elem), true);
   CHECK_EQ (contains (3, five_elem), true);
 }
+
+TEST_CASE ("long array") {
+  int arr_size        = 10000000;
+  int initial_mem_used= mem_used ();
+  cout << "Initial mem used: " << initial_mem_used << LF;
+  array<string> long_arr= array<string> ();
+  for (int i= 0; i < arr_size; i++) {
+    long_arr << string ("88888888");
+  }
+  int final_mem_used= mem_used ();
+  cout << "Final mem used: " << final_mem_used << LF;
+  cout << "Actual mem used: " << final_mem_used - initial_mem_used << LF;
+  CHECK_EQ (arr_size, N (long_arr));
+}
