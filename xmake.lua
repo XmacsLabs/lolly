@@ -248,7 +248,6 @@ end
 
 
 cpp_tests_on_all_plat = os.files("tests/**_test.cpp")
-
 for _, filepath in ipairs(cpp_tests_on_all_plat) do
     add_test_target (filepath)
 end
