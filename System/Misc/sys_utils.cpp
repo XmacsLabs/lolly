@@ -195,6 +195,7 @@ system (string s, string& result) {
   tb_process_attr_t attr  = {0};
   attr.out.pipe           = file[1];
   attr.outtype            = TB_PROCESS_REDIRECT_TYPE_PIPE;
+  attr.flags              = TB_PROCESS_FLAG_NO_WINDOW;
   tb_process_ref_t process= tb_process_init_cmd (cmd_, &attr);
   if (process) {
     // read pipe data
