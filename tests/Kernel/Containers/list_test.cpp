@@ -140,3 +140,14 @@ TEST_CASE ("contains") {
   CHECK_EQ (contains (normal, 2L), true);
   CHECK_EQ (contains (normal, 3L), true);
 }
+
+TEST_CASE ("long list") {
+  mem_info ();
+  list<string> long_l;
+  for (int i=0; i<300000; i++) {
+    if (i % 5000 == 0) {
+      mem_info ();
+    }
+    long_l= list<string> ("hello", long_l);
+  }
+}
