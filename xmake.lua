@@ -182,8 +182,6 @@ function add_test_target(filepath)
 
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
-            -- explicitly set stack size to 1M on linux
-            add_ldflags("-Wl,--stack,1048576")
         end
 
         if is_plat("windows") then
