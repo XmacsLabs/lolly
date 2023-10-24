@@ -7,6 +7,7 @@ on:
       - 'Kernel/**'
       - 'System/**'
       - 'tests/**'
+      - 'lolly/**'
       - '.github/workflows/ci-xmake-wasm.yml'
       - 'xmake.lua' 
   pull_request:
