@@ -21,7 +21,8 @@ call (string cmd) {
   return -1;
 #else
   tb_process_attr_t attr= {0};
-  c_string          cmd_ (cmd);
+  attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
+  c_string cmd_ (cmd);
   return (int) tb_process_run_cmd (cmd_, &attr);
 #endif
 }

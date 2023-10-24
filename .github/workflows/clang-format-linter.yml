@@ -7,6 +7,7 @@ on:
       - 'Kernel/**'
       - 'System/**'
       - 'tests/**'
+      - 'lolly/**'
       - '.github/workflows/clang-format-linter.yml'
       - 'xmake.lua' 
   workflow_dispatch:

@@ -6,6 +6,7 @@ on:
     paths:
       - 'Kernel/**'
       - 'System/**'
+      - 'lolly/**'
       - 'tests/**'
       - '.github/workflows/ci-xmake-mingw.yml'
       - 'xmake.lua' 
@@ -15,6 +16,7 @@ on:
     paths:
       - 'Kernel/**'
       - 'System/**'
+      - 'lolly/**'
       - 'tests/**'
       - '.github/workflows/ci-xmake-mingw.yml'
       - 'xmake.lua' 

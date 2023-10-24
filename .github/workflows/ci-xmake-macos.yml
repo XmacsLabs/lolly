@@ -6,6 +6,7 @@ on:
     paths:
       - 'Kernel/**'
       - 'System/**'
+      - 'lolly/**'
       - 'tests/**'
       - '.github/workflows/ci-xmake-macos.yml'
       - 'xmake.lua' 
@@ -14,6 +15,7 @@ on:
     paths:
       - 'Kernel/**'
       - 'System/**'
+      - 'lolly/**'
       - 'tests/**'
       - '.github/workflows/ci-xmake-macos.yml'
       - 'xmake.lua' 
