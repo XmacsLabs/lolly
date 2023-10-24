@@ -83,6 +83,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacelolly_1_1io"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1io.html">io</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacelolly_1_1system"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1system.html">system</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -90,10 +92,6 @@ Functions</h2></td></tr>
 <tr class="separator:a7372c421169d7c0d10cf4a810ecdbde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5676a9b980b91430d04a8dd4e469cc19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#a5676a9b980b91430d04a8dd4e469cc19">init_tbox</a> ()</td></tr>
 <tr class="separator:a5676a9b980b91430d04a8dd4e469cc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7c8230fccf51fc5c61bf22b06f4b99d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#aa7c8230fccf51fc5c61bf22b06f4b99d">system</a> (<a class="el" href="classstring.html">string</a> cmd)</td></tr>
-<tr class="separator:aa7c8230fccf51fc5c61bf22b06f4b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa35cfc8aecf0b2c09eb4dd580e39a344"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#aa35cfc8aecf0b2c09eb4dd580e39a344">system</a> (<a class="el" href="classstring.html">string</a> s, <a class="el" href="classstring.html">string</a> &amp;result)</td></tr>
-<tr class="separator:aa35cfc8aecf0b2c09eb4dd580e39a344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a7372c421169d7c0d10cf4a810ecdbde1" name="a7372c421169d7c0d10cf4a810ecdbde1"></a>
@@ -143,118 +141,6 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  169</span>             {</div>
 <div class="line"><span class="lineno">  170</span>  <span class="keywordflow">if</span> (!tb_init (tb_null, tb_null)) exit (-1);</div>
 <div class="line"><span class="lineno">  171</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aa7c8230fccf51fc5c61bf22b06f4b99d" name="aa7c8230fccf51fc5c61bf22b06f4b99d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7c8230fccf51fc5c61bf22b06f4b99d">&#9670;&#160;</a></span>system() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int lolly::system </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname"><em>cmd</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00174">174</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                    {</div>
-<div class="line"><span class="lineno">  175</span><span class="preprocessor">#ifdef OS_WASM</span></div>
-<div class="line"><span class="lineno">  176</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  177</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  178</span>  tb_process_attr_t attr= {0};</div>
-<div class="line"><span class="lineno">  179</span>  <a class="code hl_class" href="classc__string.html">c_string</a>          cmd_ (cmd);</div>
-<div class="line"><span class="lineno">  180</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) tb_process_run_cmd (cmd_, &amp;attr);</div>
-<div class="line"><span class="lineno">  181</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  182</span>}</div>
-<div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00113">string.hpp:113</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aa35cfc8aecf0b2c09eb4dd580e39a344" name="aa35cfc8aecf0b2c09eb4dd580e39a344"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa35cfc8aecf0b2c09eb4dd580e39a344">&#9670;&#160;</a></span>system() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int lolly::system </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a> &amp;&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00185">185</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                  {</div>
-<div class="line"><span class="lineno">  186</span>  tb_long_t status= -1;</div>
-<div class="line"><span class="lineno">  187</span>  <span class="comment">// init pipe files</span></div>
-<div class="line"><span class="lineno">  188</span>  tb_pipe_file_ref_t file[2]= {0};</div>
-<div class="line"><span class="lineno">  189</span>  <span class="keywordflow">if</span> (!tb_pipe_file_init_pair (file, tb_null, 0)) {</div>
-<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">return</span> status;</div>
-<div class="line"><span class="lineno">  191</span>  }</div>
-<div class="line"><span class="lineno">  192</span> </div>
-<div class="line"><span class="lineno">  193</span>  <span class="comment">// init process</span></div>
-<div class="line"><span class="lineno">  194</span>  <a class="code hl_class" href="classc__string.html">c_string</a>          cmd_ (s);</div>
-<div class="line"><span class="lineno">  195</span>  tb_process_attr_t attr  = {0};</div>
-<div class="line"><span class="lineno">  196</span>  attr.out.pipe           = file[1];</div>
-<div class="line"><span class="lineno">  197</span>  attr.outtype            = TB_PROCESS_REDIRECT_TYPE_PIPE;</div>
-<div class="line"><span class="lineno">  198</span>  tb_process_ref_t process= tb_process_init_cmd (cmd_, &amp;attr);</div>
-<div class="line"><span class="lineno">  199</span>  <span class="keywordflow">if</span> (process) {</div>
-<div class="line"><span class="lineno">  200</span>    <span class="comment">// read pipe data</span></div>
-<div class="line"><span class="lineno">  201</span>    tb_size_t <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>= 0;</div>
-<div class="line"><span class="lineno">  202</span>    <span class="comment">// TODO: should be a config here</span></div>
-<div class="line"><span class="lineno">  203</span>    tb_byte_t data[8192];</div>
-<div class="line"><span class="lineno">  204</span>    tb_size_t size= <span class="keyword">sizeof</span> (data);</div>
-<div class="line"><span class="lineno">  205</span>    tb_bool_t wait= tb_false;</div>
-<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">while</span> (<a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a> &lt; size) {</div>
-<div class="line"><span class="lineno">  207</span>      tb_long_t real= tb_pipe_file_read (file[0], data + <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>, size - <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>);</div>
-<div class="line"><span class="lineno">  208</span>      <span class="keywordflow">if</span> (real &gt; 0) {</div>
-<div class="line"><span class="lineno">  209</span>        <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>+= real;</div>
-<div class="line"><span class="lineno">  210</span>        wait= tb_false;</div>
-<div class="line"><span class="lineno">  211</span>      }</div>
-<div class="line"><span class="lineno">  212</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!real &amp;&amp; !wait) {</div>
-<div class="line"><span class="lineno">  213</span>        <span class="comment">// wait pipe</span></div>
-<div class="line"><span class="lineno">  214</span>        tb_long_t ok= tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, 1000);</div>
-<div class="line"><span class="lineno">  215</span>        tb_check_break (ok &gt; 0);</div>
-<div class="line"><span class="lineno">  216</span>        wait= tb_true;</div>
-<div class="line"><span class="lineno">  217</span>      }</div>
-<div class="line"><span class="lineno">  218</span>      <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>    result= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> ((tb_char_t*) data);</div>
-<div class="line"><span class="lineno">  222</span> </div>
-<div class="line"><span class="lineno">  223</span>    <span class="comment">// wait process</span></div>
-<div class="line"><span class="lineno">  224</span>    tb_process_wait (process, &amp;status, -1);</div>
-<div class="line"><span class="lineno">  225</span> </div>
-<div class="line"><span class="lineno">  226</span>    <span class="comment">// exit process</span></div>
-<div class="line"><span class="lineno">  227</span>    tb_process_exit (process);</div>
-<div class="line"><span class="lineno">  228</span>  }</div>
-<div class="line"><span class="lineno">  229</span> </div>
-<div class="line"><span class="lineno">  230</span>  <span class="comment">// exit pipe files</span></div>
-<div class="line"><span class="lineno">  231</span>  tb_pipe_file_exit (file[0]);</div>
-<div class="line"><span class="lineno">  232</span>  tb_pipe_file_exit (file[1]);</div>
-<div class="line"><span class="lineno">  233</span>  <span class="keywordflow">return</span> status;</div>
-<div class="line"><span class="lineno">  234</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_a259106ae46c8c1330ffe29617b3cf2cc"><div class="ttname"><a href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a></div><div class="ttdeci">bool read(string s, int &amp;i, const char *test)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01067">analyze.cpp:1067</a></div></div>
-<div class="ttc" id="apath_8cpp_html_a6533057a5c870ee5ec0b2e688dd4d90f"><div class="ttname"><a href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a></div><div class="ttdeci">string as_string(path p)</div><div class="ttdef"><b>Definition:</b> <a href="path_8cpp_source.html#l00037">path.cpp:37</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
