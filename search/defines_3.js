@@ -1,26 +1,7 @@
 var searchData=
 [
-  ['debug_5faqua_0',['DEBUG_AQUA',['../basic_8hpp.html#a11745ae2beccb9454b683426ee6ac502',1,'basic.hpp']]],
-  ['debug_5faqua_5fwidgets_1',['DEBUG_AQUA_WIDGETS',['../basic_8hpp.html#a4e06a094f7fcc648ff7e1c9f89afda73',1,'basic.hpp']]],
-  ['debug_5fauto_2',['DEBUG_AUTO',['../basic_8hpp.html#a7d9a842617dd5672e28fb39b22f4b0b1',1,'basic.hpp']]],
-  ['debug_5fbench_3',['DEBUG_BENCH',['../basic_8hpp.html#afdba6767b6cbf8a4204b3db0283b145f',1,'basic.hpp']]],
-  ['debug_5fconvert_4',['DEBUG_CONVERT',['../basic_8hpp.html#a64809b6507c452b83e0326f3adc00d58',1,'basic.hpp']]],
-  ['debug_5fcorrect_5',['DEBUG_CORRECT',['../basic_8hpp.html#a771f0b5d7a6becd56ab2f1b40194f51b',1,'basic.hpp']]],
-  ['debug_5fevents_6',['DEBUG_EVENTS',['../basic_8hpp.html#a133d8993848d3fa2c41270511f133eb7',1,'basic.hpp']]],
-  ['debug_5fflatten_7',['DEBUG_FLATTEN',['../basic_8hpp.html#af90fdd7cdfc365fe2d84d540717062db',1,'basic.hpp']]],
-  ['debug_5fhistory_8',['DEBUG_HISTORY',['../basic_8hpp.html#adbd4a9b9909262259f0b2179939e5539',1,'basic.hpp']]],
-  ['debug_5fio_9',['DEBUG_IO',['../basic_8hpp.html#aa1b2b9f2886a468441606f89913c0c59',1,'basic.hpp']]],
-  ['debug_5fkeyboard_10',['DEBUG_KEYBOARD',['../basic_8hpp.html#a989d0ae4452ea74bec463dd116c9d462',1,'basic.hpp']]],
-  ['debug_5flive_11',['DEBUG_LIVE',['../basic_8hpp.html#a76e475175db415ab262bd751a957790a',1,'basic.hpp']]],
-  ['debug_5fpackrat_12',['DEBUG_PACKRAT',['../basic_8hpp.html#affb001ad84e75f136088b5e86273da9d',1,'basic.hpp']]],
-  ['debug_5fparser_13',['DEBUG_PARSER',['../basic_8hpp.html#a8e654728b92a3e3e7040c10d72e77868',1,'basic.hpp']]],
-  ['debug_5fqt_14',['DEBUG_QT',['../basic_8hpp.html#aff21b852cb6f5ba5733c9d89a4c87221',1,'basic.hpp']]],
-  ['debug_5fqt_5fwidgets_15',['DEBUG_QT_WIDGETS',['../basic_8hpp.html#a17471884f968d689d4f6b97e7609066b',1,'basic.hpp']]],
-  ['debug_5fremote_16',['DEBUG_REMOTE',['../basic_8hpp.html#a2b4204f4a739dff34465964cc009d335',1,'basic.hpp']]],
-  ['debug_5fstd_17',['DEBUG_STD',['../basic_8hpp.html#aa0e28a443c323a58cf7b4a9f104ca63b',1,'basic.hpp']]],
-  ['debug_5fverbose_18',['DEBUG_VERBOSE',['../basic_8hpp.html#acdea1a21961362dc76e7459f64bbb054',1,'basic.hpp']]],
-  ['dec_5fcount_19',['DEC_COUNT',['../basic_8hpp.html#a4f8364cb401cc5bd7fd26d6478aa79ff',1,'basic.hpp']]],
-  ['dec_5fcount_5fnull_20',['DEC_COUNT_NULL',['../basic_8hpp.html#a909b15fba767295c08fbfb5799417238',1,'basic.hpp']]],
-  ['doctest_5fconfig_5fimplement_21',['DOCTEST_CONFIG_IMPLEMENT',['../a__tbox__main_8cpp.html#adf980eb1ed0df2191c56fd3d218c2819',1,'a_tbox_main.cpp']]],
-  ['doctest_5fconfig_5fimplement_5fwith_5fmain_22',['DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN',['../a__lolly__test_8hpp.html#a623b8690a262536536a43eab2d7df03d',1,'a_lolly_test.hpp']]]
+  ['dec_5fcount_0',['DEC_COUNT',['../basic_8hpp.html#a4f8364cb401cc5bd7fd26d6478aa79ff',1,'basic.hpp']]],
+  ['dec_5fcount_5fnull_1',['DEC_COUNT_NULL',['../basic_8hpp.html#a909b15fba767295c08fbfb5799417238',1,'basic.hpp']]],
+  ['doctest_5fconfig_5fimplement_2',['DOCTEST_CONFIG_IMPLEMENT',['../a__tbox__main_8cpp.html#adf980eb1ed0df2191c56fd3d218c2819',1,'a_tbox_main.cpp']]],
+  ['doctest_5fconfig_5fimplement_5fwith_5fmain_3',['DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN',['../a__lolly__test_8hpp.html#a623b8690a262536536a43eab2d7df03d',1,'a_lolly_test.hpp']]]
 ];

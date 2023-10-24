@@ -110,11 +110,12 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   21</span>  <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">   22</span><span class="preprocessor">#else</span></div>
 <div class="line"><span class="lineno">   23</span>  tb_process_attr_t attr= {0};</div>
-<div class="line"><span class="lineno">   24</span>  <a class="code hl_class" href="classc__string.html">c_string</a>          cmd_ (cmd);</div>
-<div class="line"><span class="lineno">   25</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) tb_process_run_cmd (cmd_, &amp;attr);</div>
-<div class="line"><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   27</span>}</div>
-<div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00113">string.hpp:113</a></div></div>
+<div class="line"><span class="lineno">   24</span>  attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;</div>
+<div class="line"><span class="lineno">   25</span>  <a class="code hl_class" href="classc__string.html">c_string</a> cmd_ (cmd);</div>
+<div class="line"><span class="lineno">   26</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) tb_process_run_cmd (cmd_, &amp;attr);</div>
+<div class="line"><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   28</span>}</div>
+<div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00110">string.hpp:110</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -144,58 +145,58 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="subprocess_8cpp_source.html#l00030">30</a> of file <a class="el" href="subprocess_8cpp_source.html">subprocess.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                        {</div>
-<div class="line"><span class="lineno">   31</span>  tb_long_t status= -1;</div>
-<div class="line"><span class="lineno">   32</span>  <span class="comment">// init pipe files</span></div>
-<div class="line"><span class="lineno">   33</span>  tb_pipe_file_ref_t file[2]= {0};</div>
-<div class="line"><span class="lineno">   34</span>  <span class="keywordflow">if</span> (!tb_pipe_file_init_pair (file, tb_null, 0)) {</div>
-<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">return</span> status;</div>
-<div class="line"><span class="lineno">   36</span>  }</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>  <span class="comment">// init process</span></div>
-<div class="line"><span class="lineno">   39</span>  <a class="code hl_class" href="classc__string.html">c_string</a>          cmd_ (s);</div>
-<div class="line"><span class="lineno">   40</span>  tb_process_attr_t attr  = {0};</div>
-<div class="line"><span class="lineno">   41</span>  attr.out.pipe           = file[1];</div>
-<div class="line"><span class="lineno">   42</span>  attr.outtype            = TB_PROCESS_REDIRECT_TYPE_PIPE;</div>
-<div class="line"><span class="lineno">   43</span>  attr.flags              = TB_PROCESS_FLAG_NO_WINDOW;</div>
-<div class="line"><span class="lineno">   44</span>  tb_process_ref_t process= tb_process_init_cmd (cmd_, &amp;attr);</div>
-<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">if</span> (process) {</div>
-<div class="line"><span class="lineno">   46</span>    <span class="comment">// read pipe data</span></div>
-<div class="line"><span class="lineno">   47</span>    tb_size_t <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>= 0;</div>
-<div class="line"><span class="lineno">   48</span>    <span class="comment">// TODO: should be a config here</span></div>
-<div class="line"><span class="lineno">   49</span>    tb_byte_t data[8192];</div>
-<div class="line"><span class="lineno">   50</span>    tb_size_t size= <span class="keyword">sizeof</span> (data);</div>
-<div class="line"><span class="lineno">   51</span>    tb_bool_t wait= tb_false;</div>
-<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">while</span> (<a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a> &lt; size) {</div>
-<div class="line"><span class="lineno">   53</span>      tb_long_t real= tb_pipe_file_read (file[0], data + <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>, size - <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>);</div>
-<div class="line"><span class="lineno">   54</span>      <span class="keywordflow">if</span> (real &gt; 0) {</div>
-<div class="line"><span class="lineno">   55</span>        <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>+= real;</div>
-<div class="line"><span class="lineno">   56</span>        wait= tb_false;</div>
-<div class="line"><span class="lineno">   57</span>      }</div>
-<div class="line"><span class="lineno">   58</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!real &amp;&amp; !wait) {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="comment">// wait pipe</span></div>
-<div class="line"><span class="lineno">   60</span>        tb_long_t ok= tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, 1000);</div>
-<div class="line"><span class="lineno">   61</span>        tb_check_break (ok &gt; 0);</div>
-<div class="line"><span class="lineno">   62</span>        wait= tb_true;</div>
-<div class="line"><span class="lineno">   63</span>      }</div>
-<div class="line"><span class="lineno">   64</span>      <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>    result= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> ((tb_char_t*) data);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>    <span class="comment">// wait process</span></div>
-<div class="line"><span class="lineno">   70</span>    tb_process_wait (process, &amp;status, -1);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    <span class="comment">// exit process</span></div>
-<div class="line"><span class="lineno">   73</span>    tb_process_exit (process);</div>
-<div class="line"><span class="lineno">   74</span>  }</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>  <span class="comment">// exit pipe files</span></div>
-<div class="line"><span class="lineno">   77</span>  tb_pipe_file_exit (file[0]);</div>
-<div class="line"><span class="lineno">   78</span>  tb_pipe_file_exit (file[1]);</div>
-<div class="line"><span class="lineno">   79</span>  <span class="keywordflow">return</span> status;</div>
-<div class="line"><span class="lineno">   80</span>}</div>
+<p class="definition">Definition at line <a class="el" href="subprocess_8cpp_source.html#l00031">31</a> of file <a class="el" href="subprocess_8cpp_source.html">subprocess.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                                        {</div>
+<div class="line"><span class="lineno">   32</span>  tb_long_t status= -1;</div>
+<div class="line"><span class="lineno">   33</span>  <span class="comment">// init pipe files</span></div>
+<div class="line"><span class="lineno">   34</span>  tb_pipe_file_ref_t file[2]= {0};</div>
+<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">if</span> (!tb_pipe_file_init_pair (file, tb_null, 0)) {</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">return</span> status;</div>
+<div class="line"><span class="lineno">   37</span>  }</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>  <span class="comment">// init process</span></div>
+<div class="line"><span class="lineno">   40</span>  <a class="code hl_class" href="classc__string.html">c_string</a>          cmd_ (s);</div>
+<div class="line"><span class="lineno">   41</span>  tb_process_attr_t attr  = {0};</div>
+<div class="line"><span class="lineno">   42</span>  attr.out.pipe           = file[1];</div>
+<div class="line"><span class="lineno">   43</span>  attr.outtype            = TB_PROCESS_REDIRECT_TYPE_PIPE;</div>
+<div class="line"><span class="lineno">   44</span>  attr.flags              = TB_PROCESS_FLAG_NO_WINDOW;</div>
+<div class="line"><span class="lineno">   45</span>  tb_process_ref_t process= tb_process_init_cmd (cmd_, &amp;attr);</div>
+<div class="line"><span class="lineno">   46</span>  <span class="keywordflow">if</span> (process) {</div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment">// read pipe data</span></div>
+<div class="line"><span class="lineno">   48</span>    tb_size_t <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>= 0;</div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment">// TODO: should be a config here</span></div>
+<div class="line"><span class="lineno">   50</span>    tb_byte_t data[8192];</div>
+<div class="line"><span class="lineno">   51</span>    tb_size_t size= <span class="keyword">sizeof</span> (data);</div>
+<div class="line"><span class="lineno">   52</span>    tb_bool_t wait= tb_false;</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">while</span> (<a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a> &lt; size) {</div>
+<div class="line"><span class="lineno">   54</span>      tb_long_t real= tb_pipe_file_read (file[0], data + <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>, size - <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>);</div>
+<div class="line"><span class="lineno">   55</span>      <span class="keywordflow">if</span> (real &gt; 0) {</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a>+= real;</div>
+<div class="line"><span class="lineno">   57</span>        wait= tb_false;</div>
+<div class="line"><span class="lineno">   58</span>      }</div>
+<div class="line"><span class="lineno">   59</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!real &amp;&amp; !wait) {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="comment">// wait pipe</span></div>
+<div class="line"><span class="lineno">   61</span>        tb_long_t ok= tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, 1000);</div>
+<div class="line"><span class="lineno">   62</span>        tb_check_break (ok &gt; 0);</div>
+<div class="line"><span class="lineno">   63</span>        wait= tb_true;</div>
+<div class="line"><span class="lineno">   64</span>      }</div>
+<div class="line"><span class="lineno">   65</span>      <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    result= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> ((tb_char_t*) data);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment">// wait process</span></div>
+<div class="line"><span class="lineno">   71</span>    tb_process_wait (process, &amp;status, -1);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <span class="comment">// exit process</span></div>
+<div class="line"><span class="lineno">   74</span>    tb_process_exit (process);</div>
+<div class="line"><span class="lineno">   75</span>  }</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>  <span class="comment">// exit pipe files</span></div>
+<div class="line"><span class="lineno">   78</span>  tb_pipe_file_exit (file[0]);</div>
+<div class="line"><span class="lineno">   79</span>  tb_pipe_file_exit (file[1]);</div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">return</span> status;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
 <div class="ttc" id="aanalyze_8cpp_html_a259106ae46c8c1330ffe29617b3cf2cc"><div class="ttname"><a href="analyze_8cpp.html#a259106ae46c8c1330ffe29617b3cf2cc">read</a></div><div class="ttdeci">bool read(string s, int &amp;i, const char *test)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01067">analyze.cpp:1067</a></div></div>
 <div class="ttc" id="apath_8cpp_html_a6533057a5c870ee5ec0b2e688dd4d90f"><div class="ttname"><a href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a></div><div class="ttdeci">string as_string(path p)</div><div class="ttdef"><b>Definition:</b> <a href="path_8cpp_source.html#l00037">path.cpp:37</a></div></div>
 </div><!-- fragment -->

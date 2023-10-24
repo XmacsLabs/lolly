@@ -75,8 +75,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">string.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -156,15 +155,6 @@ Functions</h2></td></tr>
 <tr class="separator:adcb54e05f4e6a63da1eebfedcbcb6fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0df568fb9e677ab62d33d174d1e9e23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8cpp.html#ad0df568fb9e677ab62d33d174d1e9e23">is_id</a> (<a class="el" href="classstring.html">string</a> s)</td></tr>
 <tr class="separator:ad0df568fb9e677ab62d33d174d1e9e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af14c661aa167b48dea7afa753c025de4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8cpp.html#af14c661aa167b48dea7afa753c025de4">set_wait_handler</a> (void(*<a class="el" href="hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07">routine</a>)(<a class="el" href="classstring.html">string</a>, <a class="el" href="classstring.html">string</a>, int))</td></tr>
-<tr class="separator:af14c661aa167b48dea7afa753c025de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7e359767a1ee35b0f29774168b41ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8cpp.html#ae7e359767a1ee35b0f29774168b41ecc">system_wait</a> (<a class="el" href="classstring.html">string</a> message, <a class="el" href="classstring.html">string</a> <a class="el" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a>, int level)</td></tr>
-<tr class="separator:ae7e359767a1ee35b0f29774168b41ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a8dbffb597a1077acf8e85120f9b227c3"><td class="memItemLeft" align="right" valign="top">static void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8cpp.html#a8dbffb597a1077acf8e85120f9b227c3">the_wait_handler</a> )(<a class="el" href="classstring.html">string</a>, <a class="el" href="classstring.html">string</a>, int) = NULL</td></tr>
-<tr class="separator:a8dbffb597a1077acf8e85120f9b227c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a52be85c188a31a687d01b97965cfba23" name="a52be85c188a31a687d01b97965cfba23"></a>
@@ -1113,129 +1103,6 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  424</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  425</span>}</div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="af14c661aa167b48dea7afa753c025de4" name="af14c661aa167b48dea7afa753c025de4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af14c661aa167b48dea7afa753c025de4">&#9670;&#160;</a></span>set_wait_handler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_wait_handler </td>
-          <td>(</td>
-          <td class="paramtype">void(*)(<a class="el" href="classstring.html">string</a>, <a class="el" href="classstring.html">string</a>, int)&#160;</td>
-          <td class="paramname"><em>routine</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="string_8cpp_source.html#l00434">434</a> of file <a class="el" href="string_8cpp_source.html">string.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  434</span>                                                         {</div>
-<div class="line"><span class="lineno">  435</span>  <a class="code hl_variable" href="string_8cpp.html#a8dbffb597a1077acf8e85120f9b227c3">the_wait_handler</a>= <a class="code hl_function" href="hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07">routine</a>;</div>
-<div class="line"><span class="lineno">  436</span>}</div>
-<div class="ttc" id="ahashmap__test_8cpp_html_a89004bb8340b90c70d3a66af077bed07"><div class="ttname"><a href="hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07">routine</a></div><div class="ttdeci">void routine(int key)</div><div class="ttdef"><b>Definition:</b> <a href="hashmap__test_8cpp_source.html#l00030">hashmap_test.cpp:30</a></div></div>
-<div class="ttc" id="astring_8cpp_html_a8dbffb597a1077acf8e85120f9b227c3"><div class="ttname"><a href="string_8cpp.html#a8dbffb597a1077acf8e85120f9b227c3">the_wait_handler</a></div><div class="ttdeci">static void(* the_wait_handler)(string, string, int)</div><div class="ttdef"><b>Definition:</b> <a href="string_8cpp_source.html#l00431">string.cpp:431</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ae7e359767a1ee35b0f29774168b41ecc" name="ae7e359767a1ee35b0f29774168b41ecc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7e359767a1ee35b0f29774168b41ecc">&#9670;&#160;</a></span>system_wait()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void system_wait </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname"><em>message</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>level</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="string_8cpp_source.html#l00439">439</a> of file <a class="el" href="string_8cpp_source.html">string.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  439</span>                                                         {</div>
-<div class="line"><span class="lineno">  440</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="string_8cpp.html#a8dbffb597a1077acf8e85120f9b227c3">the_wait_handler</a> == NULL) {</div>
-<div class="line"><span class="lineno">  441</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="basic_8hpp.html#a7d9a842617dd5672e28fb39b22f4b0b1">DEBUG_AUTO</a>) {</div>
-<div class="line"><span class="lineno">  442</span>      <span class="keywordflow">if</span> (message == <span class="stringliteral">&quot;&quot;</span>) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;TeXmacs] Done&quot;</span> &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
-<div class="line"><span class="lineno">  443</span>      <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a> == <span class="stringliteral">&quot;&quot;</span>) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;TeXmacs] &quot;</span> &lt;&lt; message &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
-<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">else</span> <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;TeXmacs] &quot;</span> &lt;&lt; message &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a> &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
-<div class="line"><span class="lineno">  446</span>        <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;TeXmacs] Please wait...&quot;</span> &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
-<div class="line"><span class="lineno">  447</span>      }</div>
-<div class="line"><span class="lineno">  448</span>    }</div>
-<div class="line"><span class="lineno">  449</span>  }</div>
-<div class="line"><span class="lineno">  450</span>  <span class="keywordflow">else</span> <a class="code hl_variable" href="string_8cpp.html#a8dbffb597a1077acf8e85120f9b227c3">the_wait_handler</a> (message, <a class="code hl_function" href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a>, level);</div>
-<div class="line"><span class="lineno">  451</span>}</div>
-<div class="ttc" id="abasic_8hpp_html_a7d9a842617dd5672e28fb39b22f4b0b1"><div class="ttname"><a href="basic_8hpp.html#a7d9a842617dd5672e28fb39b22f4b0b1">DEBUG_AUTO</a></div><div class="ttdeci">#define DEBUG_AUTO</div><div class="ttdoc">Macro used to enable or disable debugging output for the &quot;auto&quot; debugging flag.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00127">basic.hpp:127</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00544">basic.hpp:544</a></div></div>
-<div class="ttc" id="amodification_8cpp_html_adf3bb6bfe2e7278c7d503ec0496e6bee"><div class="ttname"><a href="modification_8cpp.html#adf3bb6bfe2e7278c7d503ec0496e6bee">argument</a></div><div class="ttdeci">int argument(modification mod)</div><div class="ttdef"><b>Definition:</b> <a href="modification_8cpp_source.html#l00124">modification.cpp:124</a></div></div>
-<div class="ttc" id="atm__ostream_8cpp_html_a48e5827e9cd7a3f85b541ffc24937339"><div class="ttname"><a href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a></div><div class="ttdeci">tm_ostream &amp; cout</div><div class="ttdef"><b>Definition:</b> <a href="tm__ostream_8cpp_source.html#l00332">tm_ostream.cpp:332</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a8dbffb597a1077acf8e85120f9b227c3" name="a8dbffb597a1077acf8e85120f9b227c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dbffb597a1077acf8e85120f9b227c3">&#9670;&#160;</a></span>the_wait_handler</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void(* the_wait_handler) (<a class="el" href="classstring.html">string</a>, <a class="el" href="classstring.html">string</a>, int) </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> = NULL</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="string_8cpp_source.html#l00431">431</a> of file <a class="el" href="string_8cpp_source.html">string.cpp</a>.</p>
-
 </div>
 </div>
 </div><!-- contents -->

@@ -384,16 +384,12 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="tm__timer_8cpp_source.html#l00099">99</a> of file <a class="el" href="tm__timer_8cpp_source.html">tm_timer.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   99</span>                                               {</div>
-<div class="line"><span class="lineno">  100</span>  <span class="comment">// print timing for a given type of task</span></div>
-<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="basic_8hpp.html#afdba6767b6cbf8a4204b3db0283b145f">DEBUG_BENCH</a>) {</div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordtype">long</span> nr= <a class="code hl_variable" href="tm__timer_8cpp.html#a6be4f481d97859d122ac9491016e9ecb">timing_nr</a>[task];</div>
-<div class="line"><span class="lineno">  103</span>    ostream &lt;&lt; <span class="stringliteral">&quot;Task &#39;&quot;</span> &lt;&lt; task &lt;&lt; <span class="stringliteral">&quot;&#39; took &quot;</span> &lt;&lt; <a class="code hl_variable" href="tm__timer_8cpp.html#a7dab39b81a321b62c3318408126f67b5">timing_cumul</a>[task] &lt;&lt; <span class="stringliteral">&quot; ms&quot;</span>;</div>
-<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> (nr &gt; 1) ostream &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; nr &lt;&lt; <span class="stringliteral">&quot; invocations)&quot;</span>;</div>
-<div class="line"><span class="lineno">  105</span>    ostream &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
-<div class="line"><span class="lineno">  106</span>  }</div>
-<div class="line"><span class="lineno">  107</span>}</div>
-<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00544">basic.hpp:544</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_afdba6767b6cbf8a4204b3db0283b145f"><div class="ttname"><a href="basic_8hpp.html#afdba6767b6cbf8a4204b3db0283b145f">DEBUG_BENCH</a></div><div class="ttdeci">#define DEBUG_BENCH</div><div class="ttdoc">Macro used to enable or disable debugging output for the &quot;bench&quot; debugging flag.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00157">basic.hpp:157</a></div></div>
+<div class="line"><span class="lineno">  100</span>  <span class="keywordtype">long</span> nr= <a class="code hl_variable" href="tm__timer_8cpp.html#a6be4f481d97859d122ac9491016e9ecb">timing_nr</a>[task];</div>
+<div class="line"><span class="lineno">  101</span>  ostream &lt;&lt; <span class="stringliteral">&quot;Task &#39;&quot;</span> &lt;&lt; task &lt;&lt; <span class="stringliteral">&quot;&#39; took &quot;</span> &lt;&lt; <a class="code hl_variable" href="tm__timer_8cpp.html#a7dab39b81a321b62c3318408126f67b5">timing_cumul</a>[task] &lt;&lt; <span class="stringliteral">&quot; ms&quot;</span>;</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">if</span> (nr &gt; 1) ostream &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; nr &lt;&lt; <span class="stringliteral">&quot; invocations)&quot;</span>;</div>
+<div class="line"><span class="lineno">  103</span>  ostream &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
+<div class="line"><span class="lineno">  104</span>}</div>
+<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00372">basic.hpp:372</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -421,15 +417,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tm__timer_8cpp_source.html#l00110">110</a> of file <a class="el" href="tm__timer_8cpp_source.html">tm_timer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                  {</div>
-<div class="line"><span class="lineno">  111</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a>    a;</div>
-<div class="line"><span class="lineno">  112</span>  <a class="code hl_class" href="structiterator.html">iterator&lt;string&gt;</a> it= <a class="code hl_function" href="iterator_8hpp.html#ac57c236a9a461ba5c5c414e3d70c0348">iterate</a> (h);</div>
-<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">while</span> (it-&gt;busy ())</div>
-<div class="line"><span class="lineno">  114</span>    a &lt;&lt; it-&gt;next ();</div>
-<div class="line"><span class="lineno">  115</span>  <a class="code hl_function" href="merge__sort_8hpp.html#af13f7afca0289bf2bdf00af5480bf7c1">merge_sort</a> (a);</div>
-<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">return</span> a;</div>
-<div class="line"><span class="lineno">  117</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tm__timer_8cpp_source.html#l00107">107</a> of file <a class="el" href="tm__timer_8cpp_source.html">tm_timer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                                  {</div>
+<div class="line"><span class="lineno">  108</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a>    a;</div>
+<div class="line"><span class="lineno">  109</span>  <a class="code hl_class" href="structiterator.html">iterator&lt;string&gt;</a> it= <a class="code hl_function" href="iterator_8hpp.html#ac57c236a9a461ba5c5c414e3d70c0348">iterate</a> (h);</div>
+<div class="line"><span class="lineno">  110</span>  <span class="keywordflow">while</span> (it-&gt;busy ())</div>
+<div class="line"><span class="lineno">  111</span>    a &lt;&lt; it-&gt;next ();</div>
+<div class="line"><span class="lineno">  112</span>  <a class="code hl_function" href="merge__sort_8hpp.html#af13f7afca0289bf2bdf00af5480bf7c1">merge_sort</a> (a);</div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  114</span>}</div>
 <div class="ttc" id="aclassarray_html"><div class="ttname"><a href="classarray.html">array</a></div><div class="ttdoc">A template class representing an array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00095">array.hpp:95</a></div></div>
 <div class="ttc" id="aiterator_8hpp_html_ac57c236a9a461ba5c5c414e3d70c0348"><div class="ttname"><a href="iterator_8hpp.html#ac57c236a9a461ba5c5c414e3d70c0348">iterate</a></div><div class="ttdeci">iterator&lt; T &gt; iterate(hashmap&lt; T, U &gt; h)</div><div class="ttdoc">Generates an iterator for a container of type hashmap&lt;T, U&gt;.</div><div class="ttdef"><b>Definition:</b> <a href="iterator_8ipp_source.html#l00134">iterator.ipp:134</a></div></div>
 <div class="ttc" id="amerge__sort_8hpp_html_af13f7afca0289bf2bdf00af5480bf7c1"><div class="ttname"><a href="merge__sort_8hpp.html#af13f7afca0289bf2bdf00af5480bf7c1">merge_sort</a></div><div class="ttdeci">void merge_sort(array&lt; T &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> <a href="merge__sort_8hpp_source.html#l00060">merge_sort.hpp:60</a></div></div>
@@ -453,16 +449,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tm__timer_8cpp_source.html#l00120">120</a> of file <a class="el" href="tm__timer_8cpp_source.html">tm_timer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                                  {</div>
-<div class="line"><span class="lineno">  121</span>  <span class="comment">// print timings for all types of tasks</span></div>
-<div class="line"><span class="lineno">  122</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> a= <a class="code hl_function" href="tm__timer_8cpp.html#a41bae6982786f75d5abfd6951fdd8a3f">collect</a> (<a class="code hl_variable" href="tm__timer_8cpp.html#a7dab39b81a321b62c3318408126f67b5">timing_cumul</a>);</div>
-<div class="line"><span class="lineno">  123</span>  <span class="keywordtype">int</span>           i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a);</div>
-<div class="line"><span class="lineno">  124</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n; i++)</div>
-<div class="line"><span class="lineno">  125</span>    <a class="code hl_function" href="tm__timer_8cpp.html#a1d1ee3decfe1da57fd6ef3d424beb423">bench_print</a> (ostream, a[i]);</div>
-<div class="line"><span class="lineno">  126</span>}</div>
+<p class="definition">Definition at line <a class="el" href="tm__timer_8cpp_source.html#l00117">117</a> of file <a class="el" href="tm__timer_8cpp_source.html">tm_timer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                                  {</div>
+<div class="line"><span class="lineno">  118</span>  <span class="comment">// print timings for all types of tasks</span></div>
+<div class="line"><span class="lineno">  119</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> a= <a class="code hl_function" href="tm__timer_8cpp.html#a41bae6982786f75d5abfd6951fdd8a3f">collect</a> (<a class="code hl_variable" href="tm__timer_8cpp.html#a7dab39b81a321b62c3318408126f67b5">timing_cumul</a>);</div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordtype">int</span>           i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a);</div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_function" href="tm__timer_8cpp.html#a1d1ee3decfe1da57fd6ef3d424beb423">bench_print</a> (ostream, a[i]);</div>
+<div class="line"><span class="lineno">  123</span>}</div>
 <div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
-<div class="ttc" id="atm__timer_8cpp_html_a41bae6982786f75d5abfd6951fdd8a3f"><div class="ttname"><a href="tm__timer_8cpp.html#a41bae6982786f75d5abfd6951fdd8a3f">collect</a></div><div class="ttdeci">static array&lt; string &gt; collect(hashmap&lt; string, long &gt; h)</div><div class="ttdef"><b>Definition:</b> <a href="tm__timer_8cpp_source.html#l00110">tm_timer.cpp:110</a></div></div>
+<div class="ttc" id="atm__timer_8cpp_html_a41bae6982786f75d5abfd6951fdd8a3f"><div class="ttname"><a href="tm__timer_8cpp.html#a41bae6982786f75d5abfd6951fdd8a3f">collect</a></div><div class="ttdeci">static array&lt; string &gt; collect(hashmap&lt; string, long &gt; h)</div><div class="ttdef"><b>Definition:</b> <a href="tm__timer_8cpp_source.html#l00107">tm_timer.cpp:107</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
