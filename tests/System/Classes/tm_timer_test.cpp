@@ -109,7 +109,6 @@ TEST_CASE ("function texmacs_time") {
 TEST_MEMORY_LEAK_ALL
 
 TEST_CASE ("function bench_start and bench_cumul") {
-  debug_set ("bench", true);
   tm_ostream ostream;
   ostream.buffer ();
 
@@ -156,7 +155,6 @@ TEST_CASE ("function bench_start and bench_cumul") {
 }
 
 TEST_CASE ("function bench_end") {
-  debug_set ("bench", true);
   tm_ostream ostream;
   ostream.buffer ();
 
@@ -175,7 +173,6 @@ TEST_CASE ("function bench_end") {
 }
 
 TEST_CASE ("function bench_reset") {
-  debug_set ("bench", true);
   tm_ostream ostream;
   ostream.buffer ();
 
@@ -202,7 +199,6 @@ TEST_CASE ("function bench_reset") {
 }
 
 TEST_CASE ("function bench_print") {
-  debug_set ("bench", true);
   tm_ostream ostream;
   ostream.buffer ();
 
