@@ -6,8 +6,8 @@ on:
     paths:
       - 'Kernel/**'
       - 'System/**'
-      - 'tests/**'
       - 'lolly/**'
+      - 'tests/**'
       - '.github/workflows/ci-xmake-macos.yml'
       - 'xmake.lua' 
   pull_request:
@@ -15,6 +15,7 @@ on:
     paths:
       - 'Kernel/**'
       - 'System/**'
+      - 'lolly/**'
       - 'tests/**'
       - '.github/workflows/ci-xmake-macos.yml'
       - 'xmake.lua' 

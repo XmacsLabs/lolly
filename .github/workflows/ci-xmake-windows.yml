@@ -6,6 +6,7 @@ on:
     paths:
       - 'Kernel/**'
       - 'System/**'
+      - 'lolly/**'
       - 'tests/**'
       - '.github/workflows/ci-xmake-windows.yml'
       - 'xmake.lua' 
@@ -14,8 +15,8 @@ on:
     paths:
       - 'Kernel/**'
       - 'System/**'
-      - 'tests/**'
       - 'lolly/**'
+      - 'tests/**'
       - '.github/workflows/ci-xmake-windows.yml'
       - 'xmake.lua' 
   workflow_dispatch:
