@@ -21,4 +21,9 @@ TEST_CASE ("get_user_name") {
   // cout << get_user_name () << LF;
 }
 
+TEST_CASE ("get_stacktrace") {
+  CHECK (N (lolly::get_stacktrace (10)) >= 0);
+  cout << lolly::get_stacktrace (10) << LF;
+}
+
 TEST_MEMORY_LEAK_ALL
