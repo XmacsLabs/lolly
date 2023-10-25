@@ -200,13 +200,12 @@ get_stacktrace (unsigned int max_frames) {
     // print name of current stack frame
     const char* curname=
         tb_backtrace_symbols_name (symbollist, addrlist, addrlen, i);
-    if (curname == NULL)
-    {
+    if (curname == NULL) {
       r << "  null\n";
-    } else {
+    }
+    else {
       r << "  " << string (curname) << "\n";
     }
-    
   }
 
   tm_delete_array (funcname);
