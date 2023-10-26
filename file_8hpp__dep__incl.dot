@@ -9,4 +9,6 @@ digraph "file.hpp"
   Node2 [label="file.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$file_8cpp.html",tooltip=" "];
   Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
   Node3 [label="file_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$file__test_8cpp.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="http_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__test_8cpp.html",tooltip=" "];
 }

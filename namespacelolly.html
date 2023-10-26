@@ -92,6 +92,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7372c421169d7c0d10cf4a810ecdbde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5676a9b980b91430d04a8dd4e469cc19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#a5676a9b980b91430d04a8dd4e469cc19">init_tbox</a> ()</td></tr>
 <tr class="separator:a5676a9b980b91430d04a8dd4e469cc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6644ef86d400d90674f6661cf312374"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly.html#ad6644ef86d400d90674f6661cf312374">get_stacktrace</a> (unsigned int max_frames)</td></tr>
+<tr class="separator:ad6644ef86d400d90674f6661cf312374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a7372c421169d7c0d10cf4a810ecdbde1" name="a7372c421169d7c0d10cf4a810ecdbde1"></a>
@@ -141,6 +143,71 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  169</span>             {</div>
 <div class="line"><span class="lineno">  170</span>  <span class="keywordflow">if</span> (!tb_init (tb_null, tb_null)) exit (-1);</div>
 <div class="line"><span class="lineno">  171</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad6644ef86d400d90674f6661cf312374" name="ad6644ef86d400d90674f6661cf312374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6644ef86d400d90674f6661cf312374">&#9670;&#160;</a></span>get_stacktrace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstring.html">string</a> lolly::get_stacktrace </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>max_frames</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sys__utils_8cpp_source.html#l00174">174</a> of file <a class="el" href="sys__utils_8cpp_source.html">sys_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>                                         {</div>
+<div class="line"><span class="lineno">  175</span>  <span class="keywordtype">string</span> r;</div>
+<div class="line"><span class="lineno">  176</span>  r &lt;&lt; <span class="stringliteral">&quot;Backtrace of C++ stack:\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>  <span class="comment">// storage array for stack trace address data. skip the first, it is the</span></div>
+<div class="line"><span class="lineno">  179</span>  <span class="comment">// address of this function.</span></div>
+<div class="line"><span class="lineno">  180</span>  <a class="code hl_define" href="basic_8hpp.html#a0e1cc4ae2b47091f01fdf1d0107a68bc">STACK_NEW_ARRAY</a> (addrlist, tb_pointer_t, max_frames + 1);</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>  <span class="comment">// retrieve current stack addresses</span></div>
+<div class="line"><span class="lineno">  183</span>  <span class="keywordtype">int</span> addrlen= tb_backtrace_frames (addrlist, max_frames, 2);</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>  <span class="keywordflow">if</span> (addrlen == 0) {</div>
+<div class="line"><span class="lineno">  186</span>    r &lt;&lt; <span class="stringliteral">&quot;  &lt;empty, possibly corrupt&gt;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  187</span>    <a class="code hl_define" href="basic_8hpp.html#ae52e80dc20c32ed44dc042a8190a39c0">STACK_DELETE_ARRAY</a> (addrlist);</div>
+<div class="line"><span class="lineno">  188</span>    <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  189</span>  }</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>  <span class="comment">// resolve addresses into strings by tbox, differs under various platforms.</span></div>
+<div class="line"><span class="lineno">  192</span>  <span class="comment">// this array must be released</span></div>
+<div class="line"><span class="lineno">  193</span>  tb_handle_t symbollist= tb_backtrace_symbols_init (addrlist, addrlen);</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>  <span class="comment">// allocate string which will be filled with the function name</span></div>
+<div class="line"><span class="lineno">  196</span>  <span class="keywordtype">char</span>* funcname= tm_new_array&lt;char&gt; (1024);</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>  <span class="comment">// iterate over the returned symbol lines.</span></div>
+<div class="line"><span class="lineno">  199</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; addrlen; i++) {</div>
+<div class="line"><span class="lineno">  200</span>    <span class="comment">// print name of current stack frame</span></div>
+<div class="line"><span class="lineno">  201</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* curname=</div>
+<div class="line"><span class="lineno">  202</span>        tb_backtrace_symbols_name (symbollist, addrlist, addrlen, i);</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">if</span> (curname == NULL) {</div>
+<div class="line"><span class="lineno">  204</span>      r &lt;&lt; <span class="stringliteral">&quot;  null\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  205</span>    }</div>
+<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  207</span>      r &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; <a class="code hl_class" href="classstring.html">string</a> (curname) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="line"><span class="lineno">  209</span>  }</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#ae8003acebedc36c860028e6f9fd82fd2">tm_delete_array</a> (funcname);</div>
+<div class="line"><span class="lineno">  212</span>  tb_backtrace_symbols_exit (symbollist);</div>
+<div class="line"><span class="lineno">  213</span>  <a class="code hl_define" href="basic_8hpp.html#ae52e80dc20c32ed44dc042a8190a39c0">STACK_DELETE_ARRAY</a> (addrlist);</div>
+<div class="line"><span class="lineno">  214</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  215</span>}</div>
+<div class="ttc" id="abasic_8hpp_html_a0e1cc4ae2b47091f01fdf1d0107a68bc"><div class="ttname"><a href="basic_8hpp.html#a0e1cc4ae2b47091f01fdf1d0107a68bc">STACK_NEW_ARRAY</a></div><div class="ttdeci">#define STACK_NEW_ARRAY(name, T, size)</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00052">basic.hpp:52</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_ae52e80dc20c32ed44dc042a8190a39c0"><div class="ttname"><a href="basic_8hpp.html#ae52e80dc20c32ed44dc042a8190a39c0">STACK_DELETE_ARRAY</a></div><div class="ttdeci">#define STACK_DELETE_ARRAY(name)</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00053">basic.hpp:53</a></div></div>
+<div class="ttc" id="afast__alloc_8hpp_html_ae8003acebedc36c860028e6f9fd82fd2"><div class="ttname"><a href="fast__alloc_8hpp.html#ae8003acebedc36c860028e6f9fd82fd2">tm_delete_array</a></div><div class="ttdeci">void tm_delete_array(C *Ptr)</div><div class="ttdef"><b>Definition:</b> <a href="fast__alloc_8hpp_source.html#l00446">fast_alloc.hpp:446</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
