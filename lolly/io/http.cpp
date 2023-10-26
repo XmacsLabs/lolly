@@ -24,6 +24,20 @@
 namespace lolly {
 namespace io {
 
+#ifdef OS_WASM
+
+tree
+http_get (url u) {
+  return http_response_init ();
+}
+
+tree
+download (url from, url to) {
+  return http_response_init ();
+}
+
+#else
+
 static tree
 response_to_tree (cpr::Response r, string url) {
   tree ret= http_response_init ();
@@ -40,20 +54,6 @@ response_to_tree (cpr::Response r, string url) {
   http_response_set (ret, HEADER, as<hashmap<string, string>, tree> (hmap));
   return ret;
 }
-
-#ifdef OS_WASM
-
-tree
-http_get (url u) {
-  return http_response_init ();
-}
-
-tree
-download (url from, url to) {
-  return http_response_init ();
-}
-
-#else
 
 tree
 http_get (url u) {
