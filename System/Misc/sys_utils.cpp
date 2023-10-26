@@ -170,4 +170,48 @@ init_tbox () {
   if (!tb_init (tb_null, tb_null)) exit (-1);
 }
 
+string
+get_stacktrace (unsigned int max_frames) {
+  string r;
+  r << "Backtrace of C++ stack:\n";
+
+  // storage array for stack trace address data. skip the first, it is the
+  // address of this function.
+  STACK_NEW_ARRAY (addrlist, tb_pointer_t, max_frames + 1);
+
+  // retrieve current stack addresses
+  int addrlen= tb_backtrace_frames (addrlist, max_frames, 2);
+
+  if (addrlen == 0) {
+    r << "  <empty, possibly corrupt>\n";
+    STACK_DELETE_ARRAY (addrlist);
+    return r;
+  }
+
+  // resolve addresses into strings by tbox, differs under various platforms.
+  // this array must be released
+  tb_handle_t symbollist= tb_backtrace_symbols_init (addrlist, addrlen);
+
+  // allocate string which will be filled with the function name
+  char* funcname= tm_new_array<char> (1024);
+
+  // iterate over the returned symbol lines.
+  for (int i= 0; i < addrlen; i++) {
+    // print name of current stack frame
+    const char* curname=
+        tb_backtrace_symbols_name (symbollist, addrlist, addrlen, i);
+    if (curname == NULL) {
+      r << "  null\n";
+    }
+    else {
+      r << "  " << string (curname) << "\n";
+    }
+  }
+
+  tm_delete_array (funcname);
+  tb_backtrace_symbols_exit (symbollist);
+  STACK_DELETE_ARRAY (addrlist);
+  return r;
+}
+
 } // namespace lolly
