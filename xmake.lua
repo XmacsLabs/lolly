@@ -2,7 +2,7 @@ set_xmakever("2.8.3")
 
 -- add releasedbg, debug and release modes.
 set_allowedmodes("releasedbg", "release", "debug")
-add_rules("mode.releasedbg", "mode.release", "mode.debug")
+add_rules("mode.debug")
 
 set_project("lolly")
 
