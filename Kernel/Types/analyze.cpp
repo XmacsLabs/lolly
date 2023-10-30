@@ -1296,6 +1296,16 @@ parse (string s, int& pos, SI*& a, int len) {
  ******************************************************************************/
 
 int
+index_of (string s, char c) {
+  for (int i= 0; i < N (s); i++) {
+    if (s[i] == c) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+int
 search_forwards (array<string> a, int pos, string in) {
   int n= N (in), na= N (a);
   while (pos <= n) {
