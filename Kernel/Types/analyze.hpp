@@ -335,6 +335,14 @@ string Alpha_nr (int nr);
 string fnsymbol_nr (int nr);
 
 /**
+ * @brief Generates a Chinese numeral for a given integer.
+ *
+ * @param nr The integer to be converted to a Chinese numeral.
+ * @return A string representing the Chinese numeral.
+ */
+string hanzi_nr (int32_t nr);
+
+/**
  * @brief Converts an integer to a hexadecimal string.
  *
  * @param i The integer to be converted to a hexadecimal string.

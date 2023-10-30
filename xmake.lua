@@ -96,6 +96,7 @@ target("liblolly") do
     set_kind("static")
     set_languages("c++17")
     set_policy("check.auto_ignore_flags", false)
+    set_encodings("utf-8")
     my_configvar_check()
 
     set_basename("lolly")
@@ -190,7 +191,7 @@ function add_test_target(filepath)
         end
 
         if is_plat("windows") then
-            add_cxxflags("/utf-8")
+            set_encodings("utf-8")
             add_ldflags("/LTCG")
         end
 
