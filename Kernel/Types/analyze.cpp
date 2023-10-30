@@ -574,9 +574,8 @@ fnsymbol_nr (int nr) {
   return r;
 }
 
-static string chars_han[10]= {"<unspecified>", "<#4E00>", "<#4E8C>", "<#4E09>",
-                              "<#56DB>",       "<#4E94>", "<#516D>", "<#4E03>",
-                              "<#516B>",       "<#4E5D>"};
+static string chars_han[10]= {
+    "<unspecified>", "一", "二", "三", "四", "五", "六", "七", "八", "九"};
 
 string
 hanzi_sub (int nr, bool leading_zero) {
@@ -587,92 +586,89 @@ hanzi_sub (int nr, bool leading_zero) {
   switch (cases) {
   case 0x0:
   case 0x10:
-    return chars_han[thousand] * "<#5343>" * chars_han[hundred] * "<#767E>" *
-           chars_han[ten] * "<#5341>" * chars_han[one];
+    return chars_han[thousand] * "千" * chars_han[hundred] * "百" *
+           chars_han[ten] * "十" * chars_han[one];
   case 0x1:
   case 0x11:
-    return chars_han[thousand] * "<#5343>" * chars_han[hundred] * "<#767E>" *
-           chars_han[ten] * "<#5341>";
+    return chars_han[thousand] * "千" * chars_han[hundred] * "百" *
+           chars_han[ten] * "十";
   case 0x2:
   case 0x12:
-    return chars_han[thousand] * "<#5343>" * chars_han[hundred] *
-           "<#767E><#96F6>" * chars_han[one];
+    return chars_han[thousand] * "千" * chars_han[hundred] * "百零" *
+           chars_han[one];
   case 0x3:
   case 0x13:
-    return chars_han[thousand] * "<#5343>" * chars_han[hundred] * "<#767E>";
+    return chars_han[thousand] * "千" * chars_han[hundred] * "百";
   case 0x4:
   case 0x14:
-    return chars_han[thousand] * "<#5343><#96F6>" * chars_han[ten] * "<#5341>" *
+    return chars_han[thousand] * "千零" * chars_han[ten] * "十" *
            chars_han[one];
   case 0x5:
   case 0x15:
-    return chars_han[thousand] * "<#5343><#96F6>" * chars_han[ten] * "<#5341>";
+    return chars_han[thousand] * "千零" * chars_han[ten] * "十";
   case 0x6:
   case 0x16:
-    return chars_han[thousand] * "<#5343><#96F6>" * chars_han[one];
+    return chars_han[thousand] * "千零" * chars_han[one];
   case 0x7:
   case 0x17:
-    return chars_han[thousand] * "<#5343>";
+    return chars_han[thousand] * "千";
   case 0x8:
-    return chars_han[hundred] * "<#767E>" * chars_han[ten] * "<#5341>" *
-           chars_han[one];
+    return chars_han[hundred] * "百" * chars_han[ten] * "十" * chars_han[one];
   case 0x18:
-    return "<#96F6>" * chars_han[hundred] * "<#767E>" * chars_han[ten] *
-           "<#5341>" * chars_han[one];
+    return "零" * chars_han[hundred] * "百" * chars_han[ten] * "十" *
+           chars_han[one];
   case 0x9:
-    return chars_han[hundred] * "<#767E>" * chars_han[ten] * "<#5341>";
+    return chars_han[hundred] * "百" * chars_han[ten] * "十";
   case 0x19:
-    return "<#96F6>" * chars_han[hundred] * "<#767E>" * chars_han[ten] *
-           "<#5341>";
+    return "零" * chars_han[hundred] * "百" * chars_han[ten] * "十";
   case 0xA:
-    return chars_han[hundred] * "<#767E><#96F6>" * chars_han[one];
+    return chars_han[hundred] * "百零" * chars_han[one];
   case 0x1A:
-    return "<#96F6>" * chars_han[hundred] * "<#767E><#96F6>" * chars_han[one];
+    return "零" * chars_han[hundred] * "百零" * chars_han[one];
   case 0xB:
-    return chars_han[hundred] * "<#767E>";
+    return chars_han[hundred] * "百";
   case 0x1B:
-    return "<#96F6>" * chars_han[hundred] * "<#767E>";
+    return "零" * chars_han[hundred] * "百";
   case 0xC:
     if (ten == 1) {
-      return "<#5341>" * chars_han[one];
+      return "十" * chars_han[one];
     }
     else {
-      return chars_han[ten] * "<#5341>" * chars_han[one];
+      return chars_han[ten] * "十" * chars_han[one];
     }
   case 0x1C:
-    return "<#96F6>" * chars_han[ten] * "<#5341>" * chars_han[one];
+    return "零" * chars_han[ten] * "十" * chars_han[one];
   case 0xD:
     if (ten == 1) {
-      return "<#5341>";
+      return "十";
     }
     else {
-      return chars_han[ten] * "<#5341>";
+      return chars_han[ten] * "十";
     }
   case 0x1D:
-    return "<#96F6>" * chars_han[ten] * "<#5341>";
+    return "零" * chars_han[ten] * "十";
   case 0xE:
     return chars_han[one];
   case 0x1E:
-    return "<#96F6>" * chars_han[one];
+    return "零" * chars_han[one];
   case 0xF:
   case 0x1F:
     return "";
   default:
-    return "#<unspecified>" * as_string (cases);
+    return "<unspecified>" * as_string (cases);
   }
 }
 string
 hanzi_nr (int nr) {
-  if (nr < 0) return "<#8D1F>" * hanzi_nr (-nr);
-  if (nr == 0) return "<#96F6>";
+  if (nr < 0) return "负" * hanzi_nr (-nr);
+  if (nr == 0) return "零";
   if (nr >= 100000000) {
-    return hanzi_sub (nr / 100000000, false) * "<#4EBF>" *
-           hanzi_sub ((nr / 10000) % 10000, true) * "<#4E07>" *
+    return hanzi_sub (nr / 100000000, false) * "亿" *
+           hanzi_sub ((nr / 10000) % 10000, true) * "万" *
            hanzi_sub (nr % 10000, true);
   }
   if (nr >= 10000) {
-    return hanzi_sub (nr / 10000, false) * "<#4E07>" *
-           hanzi_sub (nr % 10000, true);
+    return hanzi_sub (nr / 10000, false) * "万" * hanzi_sub (nr % 10000, true);
   }
   return hanzi_sub (nr, false);
 }
