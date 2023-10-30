@@ -625,6 +625,8 @@ void parse (string s, int& pos, HN& ret);
 void parse (string s, int& pos, SI& ret);
 void parse (string s, int& pos, SI*& a, int len);
 
+int index_of (string s, char c);
+
 /**
  * Searches for a substring in a string.
  *
