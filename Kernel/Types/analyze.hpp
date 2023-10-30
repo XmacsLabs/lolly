@@ -340,7 +340,7 @@ string fnsymbol_nr (int nr);
  * @param nr The integer to be converted to a Chinese numeral.
  * @return A string representing the Chinese numeral.
  */
-string hanzi_nr (int nr);
+string hanzi_nr (int32_t nr);
 
 /**
  * @brief Converts an integer to a hexadecimal string.

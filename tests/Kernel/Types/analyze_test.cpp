@@ -163,4 +163,6 @@ TEST_CASE ("hanzi_nr") {
   string_eq (hanzi_nr (10001), "一万零一");
   string_eq (hanzi_nr (153457), "十五万三千四百五十七");
   string_eq (hanzi_nr (300153457), "三亿零一十五万三千四百五十七");
+  string_eq (hanzi_nr (0x7FFFFFFF), "二十一亿四千七百四十八万三千六百四十七");
+  string_eq (hanzi_nr (0x80000000), "负二十一亿四千七百四十八万三千六百四十八");
 }

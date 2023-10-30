@@ -580,7 +580,7 @@ static string chars_han[10]= {
     "<unspecified>", "一", "二", "三", "四", "五", "六", "七", "八", "九"};
 
 string
-hanzi_sub (int nr, bool leading_zero) {
+hanzi_sub (int16_t nr, bool leading_zero) {
   short thousand= (nr % 10000) / 1000, hundred= (nr % 1000) / 100,
         ten= (nr % 100) / 10, one= nr % 10;
   short cases= (leading_zero << 4) | ((thousand == 0) << 3) |
@@ -660,10 +660,12 @@ hanzi_sub (int nr, bool leading_zero) {
     return "<unspecified>" * as_string (cases);
   }
 }
+
 string
-hanzi_nr (int nr) {
-  if (nr < 0) return "负" * hanzi_nr (-nr);
+hanzi_nr (int32_t nr) {
   if (nr == 0) return "零";
+  if (nr == 0x80000000) return "负二十一亿四千七百四十八万三千六百四十八";
+  if (nr < 0) return "负" * hanzi_nr (-nr);
   if (nr >= 100000000) {
     return hanzi_sub (nr / 100000000, false) * "亿" *
            hanzi_sub ((nr / 10000) % 10000, true) * "万" *
