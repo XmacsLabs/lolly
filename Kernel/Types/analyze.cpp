@@ -574,6 +574,8 @@ fnsymbol_nr (int nr) {
   return r;
 }
 
+// 0 should not be used as index of this array, or bug occurs. because digit 0
+// is handled specially according to position of digit.
 static string chars_han[10]= {
     "<unspecified>", "一", "二", "三", "四", "五", "六", "七", "八", "九"};
 
