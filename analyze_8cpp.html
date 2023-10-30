@@ -344,6 +344,8 @@ Functions</h2></td></tr>
 <tr class="separator:a13911f5f27e9619f72fecf700abf9d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e456cf6be136c965adc7ae089e56db8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="analyze_8cpp.html#a2e456cf6be136c965adc7ae089e56db8">parse</a> (<a class="el" href="classstring.html">string</a> s, int &amp;pos, <a class="el" href="basic_8hpp.html#ae5f8c752bdc5c81c9ef12931088c2305">SI</a> *&amp;a, int len)</td></tr>
 <tr class="separator:a2e456cf6be136c965adc7ae089e56db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdcd80cafdc0a3b79cc457195d429c45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="analyze_8cpp.html#afdcd80cafdc0a3b79cc457195d429c45">index_of</a> (<a class="el" href="classstring.html">string</a> s, char c)</td></tr>
+<tr class="separator:afdcd80cafdc0a3b79cc457195d429c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ba90c170884bbf172db5cb32757d75f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a> (<a class="el" href="classarray.html">array</a>&lt; <a class="el" href="classstring.html">string</a> &gt; a, int pos, <a class="el" href="classstring.html">string</a> in)</td></tr>
 <tr class="separator:a2ba90c170884bbf172db5cb32757d75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e796b8b96ea90b5768bcd1eccdde091"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="analyze_8cpp.html#a9e796b8b96ea90b5768bcd1eccdde091">search_forwards</a> (<a class="el" href="classstring.html">string</a> s, int pos, <a class="el" href="classstring.html">string</a> in)</td></tr>
@@ -4453,6 +4455,44 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="afdcd80cafdc0a3b79cc457195d429c45" name="afdcd80cafdc0a3b79cc457195d429c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdcd80cafdc0a3b79cc457195d429c45">&#9670;&#160;</a></span>index_of()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int index_of </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01299">1299</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1299</span>                            {</div>
+<div class="line"><span class="lineno"> 1300</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s); i++) {</div>
+<div class="line"><span class="lineno"> 1301</span>    <span class="keywordflow">if</span> (s[i] == c) {</div>
+<div class="line"><span class="lineno"> 1302</span>      <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno"> 1303</span>    }</div>
+<div class="line"><span class="lineno"> 1304</span>  }</div>
+<div class="line"><span class="lineno"> 1305</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1306</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a2ba90c170884bbf172db5cb32757d75f" name="a2ba90c170884bbf172db5cb32757d75f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ba90c170884bbf172db5cb32757d75f">&#9670;&#160;</a></span>search_forwards() <span class="overload">[1/3]</span></h2>
 
@@ -4495,17 +4535,17 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Position where the substring was found, or -1 if not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01299">1299</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1299</span>                                                      {</div>
-<div class="line"><span class="lineno"> 1300</span>  <span class="keywordtype">int</span> n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (in), na= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a);</div>
-<div class="line"><span class="lineno"> 1301</span>  <span class="keywordflow">while</span> (pos &lt;= n) {</div>
-<div class="line"><span class="lineno"> 1302</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; na; i++)</div>
-<div class="line"><span class="lineno"> 1303</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a[i]) &gt; 0 &amp;&amp; in[pos] == a[i][0] &amp;&amp; <a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (in, pos, a[i]))</div>
-<div class="line"><span class="lineno"> 1304</span>        <span class="keywordflow">return</span> pos;</div>
-<div class="line"><span class="lineno"> 1305</span>    pos++;</div>
-<div class="line"><span class="lineno"> 1306</span>  }</div>
-<div class="line"><span class="lineno"> 1307</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1308</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01309">1309</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1309</span>                                                      {</div>
+<div class="line"><span class="lineno"> 1310</span>  <span class="keywordtype">int</span> n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (in), na= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a);</div>
+<div class="line"><span class="lineno"> 1311</span>  <span class="keywordflow">while</span> (pos &lt;= n) {</div>
+<div class="line"><span class="lineno"> 1312</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; na; i++)</div>
+<div class="line"><span class="lineno"> 1313</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a[i]) &gt; 0 &amp;&amp; in[pos] == a[i][0] &amp;&amp; <a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (in, pos, a[i]))</div>
+<div class="line"><span class="lineno"> 1314</span>        <span class="keywordflow">return</span> pos;</div>
+<div class="line"><span class="lineno"> 1315</span>    pos++;</div>
+<div class="line"><span class="lineno"> 1316</span>  }</div>
+<div class="line"><span class="lineno"> 1317</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1318</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4551,17 +4591,17 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Position where the substring was found, or -1 if not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01311">1311</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1311</span>                                               {</div>
-<div class="line"><span class="lineno"> 1312</span>  <span class="keywordtype">int</span> k= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s), n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (in);</div>
-<div class="line"><span class="lineno"> 1313</span>  <span class="keywordflow">if</span> (k == 0) <span class="keywordflow">return</span> pos;</div>
-<div class="line"><span class="lineno"> 1314</span>  <span class="keywordtype">char</span> c= s[0];</div>
-<div class="line"><span class="lineno"> 1315</span>  <span class="keywordflow">while</span> (pos + k &lt;= n) {</div>
-<div class="line"><span class="lineno"> 1316</span>    <span class="keywordflow">if</span> (in[pos] == c &amp;&amp; <a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (in, pos, s)) <span class="keywordflow">return</span> pos;</div>
-<div class="line"><span class="lineno"> 1317</span>    pos++;</div>
-<div class="line"><span class="lineno"> 1318</span>  }</div>
-<div class="line"><span class="lineno"> 1319</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1320</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01321">1321</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1321</span>                                               {</div>
+<div class="line"><span class="lineno"> 1322</span>  <span class="keywordtype">int</span> k= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s), n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (in);</div>
+<div class="line"><span class="lineno"> 1323</span>  <span class="keywordflow">if</span> (k == 0) <span class="keywordflow">return</span> pos;</div>
+<div class="line"><span class="lineno"> 1324</span>  <span class="keywordtype">char</span> c= s[0];</div>
+<div class="line"><span class="lineno"> 1325</span>  <span class="keywordflow">while</span> (pos + k &lt;= n) {</div>
+<div class="line"><span class="lineno"> 1326</span>    <span class="keywordflow">if</span> (in[pos] == c &amp;&amp; <a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (in, pos, s)) <span class="keywordflow">return</span> pos;</div>
+<div class="line"><span class="lineno"> 1327</span>    pos++;</div>
+<div class="line"><span class="lineno"> 1328</span>  }</div>
+<div class="line"><span class="lineno"> 1329</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1330</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4600,11 +4640,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Position where the substring was found, or -1 if not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01323">1323</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1323</span>                                      {</div>
-<div class="line"><span class="lineno"> 1324</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a> (s, 0, in);</div>
-<div class="line"><span class="lineno"> 1325</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_a2ba90c170884bbf172db5cb32757d75f"><div class="ttname"><a href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a></div><div class="ttdeci">int search_forwards(array&lt; string &gt; a, int pos, string in)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01299">analyze.cpp:1299</a></div></div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01333">1333</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1333</span>                                      {</div>
+<div class="line"><span class="lineno"> 1334</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a> (s, 0, in);</div>
+<div class="line"><span class="lineno"> 1335</span>}</div>
+<div class="ttc" id="aanalyze_8cpp_html_a2ba90c170884bbf172db5cb32757d75f"><div class="ttname"><a href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a></div><div class="ttdeci">int search_forwards(array&lt; string &gt; a, int pos, string in)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01309">analyze.cpp:1309</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4643,10 +4683,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the string occurs, otherwise false. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01328">1328</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1328</span>                                {</div>
-<div class="line"><span class="lineno"> 1329</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a> (what, 0, in) &gt;= 0;</div>
-<div class="line"><span class="lineno"> 1330</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01338">1338</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1338</span>                                {</div>
+<div class="line"><span class="lineno"> 1339</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a> (what, 0, in) &gt;= 0;</div>
+<div class="line"><span class="lineno"> 1340</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4692,14 +4732,14 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Position where the substring was found, or -1 if not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01333">1333</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1333</span>                                                {</div>
-<div class="line"><span class="lineno"> 1334</span>  <span class="keywordflow">while</span> (pos &gt;= 0) {</div>
-<div class="line"><span class="lineno"> 1335</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (in, pos, s)) <span class="keywordflow">return</span> pos;</div>
-<div class="line"><span class="lineno"> 1336</span>    pos--;</div>
-<div class="line"><span class="lineno"> 1337</span>  }</div>
-<div class="line"><span class="lineno"> 1338</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1339</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01343">1343</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1343</span>                                                {</div>
+<div class="line"><span class="lineno"> 1344</span>  <span class="keywordflow">while</span> (pos &gt;= 0) {</div>
+<div class="line"><span class="lineno"> 1345</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (in, pos, s)) <span class="keywordflow">return</span> pos;</div>
+<div class="line"><span class="lineno"> 1346</span>    pos--;</div>
+<div class="line"><span class="lineno"> 1347</span>  }</div>
+<div class="line"><span class="lineno"> 1348</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1349</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4738,11 +4778,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Position where the substring was found, or -1 if not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01342">1342</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1342</span>                                       {</div>
-<div class="line"><span class="lineno"> 1343</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#aeb40f13d7f9b300d62118ded84122e74">search_backwards</a> (s, <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (in) - <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s), in);</div>
-<div class="line"><span class="lineno"> 1344</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_aeb40f13d7f9b300d62118ded84122e74"><div class="ttname"><a href="analyze_8cpp.html#aeb40f13d7f9b300d62118ded84122e74">search_backwards</a></div><div class="ttdeci">int search_backwards(string s, int pos, string in)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01333">analyze.cpp:1333</a></div></div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01352">1352</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1352</span>                                       {</div>
+<div class="line"><span class="lineno"> 1353</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#aeb40f13d7f9b300d62118ded84122e74">search_backwards</a> (s, <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (in) - <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s), in);</div>
+<div class="line"><span class="lineno"> 1354</span>}</div>
+<div class="ttc" id="aanalyze_8cpp_html_aeb40f13d7f9b300d62118ded84122e74"><div class="ttname"><a href="analyze_8cpp.html#aeb40f13d7f9b300d62118ded84122e74">search_backwards</a></div><div class="ttdeci">int search_backwards(string s, int pos, string in)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01343">analyze.cpp:1343</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4781,18 +4821,18 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of occurrences of the substring. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01347">1347</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1347</span>                                        {</div>
-<div class="line"><span class="lineno"> 1348</span>  <span class="keywordtype">int</span> count= 0;</div>
-<div class="line"><span class="lineno"> 1349</span>  <span class="keywordtype">int</span> i= 0, next, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (in);</div>
-<div class="line"><span class="lineno"> 1350</span>  <span class="keywordflow">while</span> (i &lt; n) {</div>
-<div class="line"><span class="lineno"> 1351</span>    next= <a class="code hl_function" href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a> (s, i, in);</div>
-<div class="line"><span class="lineno"> 1352</span>    <span class="keywordflow">if</span> (next == -1) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1353</span>    count++;</div>
-<div class="line"><span class="lineno"> 1354</span>    i= next + 1;</div>
-<div class="line"><span class="lineno"> 1355</span>  }</div>
-<div class="line"><span class="lineno"> 1356</span>  <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno"> 1357</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01357">1357</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1357</span>                                        {</div>
+<div class="line"><span class="lineno"> 1358</span>  <span class="keywordtype">int</span> count= 0;</div>
+<div class="line"><span class="lineno"> 1359</span>  <span class="keywordtype">int</span> i= 0, next, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (in);</div>
+<div class="line"><span class="lineno"> 1360</span>  <span class="keywordflow">while</span> (i &lt; n) {</div>
+<div class="line"><span class="lineno"> 1361</span>    next= <a class="code hl_function" href="analyze_8cpp.html#a2ba90c170884bbf172db5cb32757d75f">search_forwards</a> (s, i, in);</div>
+<div class="line"><span class="lineno"> 1362</span>    <span class="keywordflow">if</span> (next == -1) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1363</span>    count++;</div>
+<div class="line"><span class="lineno"> 1364</span>    i= next + 1;</div>
+<div class="line"><span class="lineno"> 1365</span>  }</div>
+<div class="line"><span class="lineno"> 1366</span>  <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno"> 1367</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4831,16 +4871,16 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The length of the longest overlapping string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01360">1360</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1360</span>                                   {</div>
-<div class="line"><span class="lineno"> 1361</span>  <span class="comment">// return the longuest string being suffix of s1 and prefix of s2</span></div>
-<div class="line"><span class="lineno"> 1362</span>  <span class="keywordtype">int</span> i= <a class="code hl_function" href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1), <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2)), n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1);</div>
-<div class="line"><span class="lineno"> 1363</span>  <span class="keywordflow">while</span> (i &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1364</span>    <span class="keywordflow">if</span> (s1 (n - i, n) == s2 (0, i)) <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno"> 1365</span>    i--;</div>
-<div class="line"><span class="lineno"> 1366</span>  }</div>
-<div class="line"><span class="lineno"> 1367</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1368</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01370">1370</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1370</span>                                   {</div>
+<div class="line"><span class="lineno"> 1371</span>  <span class="comment">// return the longuest string being suffix of s1 and prefix of s2</span></div>
+<div class="line"><span class="lineno"> 1372</span>  <span class="keywordtype">int</span> i= <a class="code hl_function" href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1), <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2)), n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1);</div>
+<div class="line"><span class="lineno"> 1373</span>  <span class="keywordflow">while</span> (i &gt; 0) {</div>
+<div class="line"><span class="lineno"> 1374</span>    <span class="keywordflow">if</span> (s1 (n - i, n) == s2 (0, i)) <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno"> 1375</span>    i--;</div>
+<div class="line"><span class="lineno"> 1376</span>  }</div>
+<div class="line"><span class="lineno"> 1377</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1378</span>}</div>
 <div class="ttc" id="abasic_8hpp_html_a3f87cd2d262ac14391344cfe9d268c03"><div class="ttname"><a href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a></div><div class="ttdeci">SI min(SI i, SI j)</div><div class="ttdoc">Returns the minimum of two signed integers.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00159">basic.hpp:159</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -4887,21 +4927,21 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new string with all occurrences of the substring replaced. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01371">1371</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1371</span>                                           {</div>
-<div class="line"><span class="lineno"> 1372</span>  <span class="keywordtype">int</span>    i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
-<div class="line"><span class="lineno"> 1373</span>  <span class="keywordtype">string</span> r;</div>
-<div class="line"><span class="lineno"> 1374</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n;)</div>
-<div class="line"><span class="lineno"> 1375</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (s, i, what)) {</div>
-<div class="line"><span class="lineno"> 1376</span>      r &lt;&lt; by;</div>
-<div class="line"><span class="lineno"> 1377</span>      i+= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (what);</div>
-<div class="line"><span class="lineno"> 1378</span>    }</div>
-<div class="line"><span class="lineno"> 1379</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1380</span>      r &lt;&lt; s[i];</div>
-<div class="line"><span class="lineno"> 1381</span>      i++;</div>
-<div class="line"><span class="lineno"> 1382</span>    }</div>
-<div class="line"><span class="lineno"> 1383</span>  <span class="keywordflow">return</span> r;</div>
-<div class="line"><span class="lineno"> 1384</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01381">1381</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1381</span>                                           {</div>
+<div class="line"><span class="lineno"> 1382</span>  <span class="keywordtype">int</span>    i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
+<div class="line"><span class="lineno"> 1383</span>  <span class="keywordtype">string</span> r;</div>
+<div class="line"><span class="lineno"> 1384</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n;)</div>
+<div class="line"><span class="lineno"> 1385</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (s, i, what)) {</div>
+<div class="line"><span class="lineno"> 1386</span>      r &lt;&lt; by;</div>
+<div class="line"><span class="lineno"> 1387</span>      i+= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (what);</div>
+<div class="line"><span class="lineno"> 1388</span>    }</div>
+<div class="line"><span class="lineno"> 1389</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1390</span>      r &lt;&lt; s[i];</div>
+<div class="line"><span class="lineno"> 1391</span>      i++;</div>
+<div class="line"><span class="lineno"> 1392</span>    }</div>
+<div class="line"><span class="lineno"> 1393</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno"> 1394</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4951,21 +4991,21 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01387">1387</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1387</span>                                                        {</div>
-<div class="line"><span class="lineno"> 1388</span>  <span class="keywordflow">if</span> (wpos == <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (w)) <span class="keywordflow">return</span> spos == <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
-<div class="line"><span class="lineno"> 1389</span>  <span class="keywordflow">if</span> (w[wpos] != <span class="charliteral">&#39;*&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1390</span>    <span class="keywordflow">return</span> (spos &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s)) &amp;&amp; (s[spos] == w[wpos]) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1391</span>           <a class="code hl_function" href="analyze_8cpp.html#abaea624bb2f827e7cccb72adec0c50a3">match_wildcard</a> (s, spos + 1, w, wpos + 1);</div>
-<div class="line"><span class="lineno"> 1392</span>  <span class="keywordflow">while</span> ((wpos &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (w)) &amp;&amp; (w[wpos] == <span class="charliteral">&#39;*&#39;</span>))</div>
-<div class="line"><span class="lineno"> 1393</span>    wpos++;</div>
-<div class="line"><span class="lineno"> 1394</span>  <span class="keywordflow">while</span> (spos &lt;= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s)) {</div>
-<div class="line"><span class="lineno"> 1395</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#abaea624bb2f827e7cccb72adec0c50a3">match_wildcard</a> (s, spos, w, wpos)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1396</span>    spos++;</div>
-<div class="line"><span class="lineno"> 1397</span>  }</div>
-<div class="line"><span class="lineno"> 1398</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1399</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_abaea624bb2f827e7cccb72adec0c50a3"><div class="ttname"><a href="analyze_8cpp.html#abaea624bb2f827e7cccb72adec0c50a3">match_wildcard</a></div><div class="ttdeci">static bool match_wildcard(string s, int spos, string w, int wpos)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01387">analyze.cpp:1387</a></div></div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01397">1397</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1397</span>                                                        {</div>
+<div class="line"><span class="lineno"> 1398</span>  <span class="keywordflow">if</span> (wpos == <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (w)) <span class="keywordflow">return</span> spos == <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
+<div class="line"><span class="lineno"> 1399</span>  <span class="keywordflow">if</span> (w[wpos] != <span class="charliteral">&#39;*&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1400</span>    <span class="keywordflow">return</span> (spos &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s)) &amp;&amp; (s[spos] == w[wpos]) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1401</span>           <a class="code hl_function" href="analyze_8cpp.html#abaea624bb2f827e7cccb72adec0c50a3">match_wildcard</a> (s, spos + 1, w, wpos + 1);</div>
+<div class="line"><span class="lineno"> 1402</span>  <span class="keywordflow">while</span> ((wpos &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (w)) &amp;&amp; (w[wpos] == <span class="charliteral">&#39;*&#39;</span>))</div>
+<div class="line"><span class="lineno"> 1403</span>    wpos++;</div>
+<div class="line"><span class="lineno"> 1404</span>  <span class="keywordflow">while</span> (spos &lt;= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s)) {</div>
+<div class="line"><span class="lineno"> 1405</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#abaea624bb2f827e7cccb72adec0c50a3">match_wildcard</a> (s, spos, w, wpos)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1406</span>    spos++;</div>
+<div class="line"><span class="lineno"> 1407</span>  }</div>
+<div class="line"><span class="lineno"> 1408</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1409</span>}</div>
+<div class="ttc" id="aanalyze_8cpp_html_abaea624bb2f827e7cccb72adec0c50a3"><div class="ttname"><a href="analyze_8cpp.html#abaea624bb2f827e7cccb72adec0c50a3">match_wildcard</a></div><div class="ttdeci">static bool match_wildcard(string s, int spos, string w, int wpos)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01397">analyze.cpp:1397</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5004,10 +5044,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the string matches the wildcard pattern, otherwise false. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01402">1402</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1402</span>                                    {</div>
-<div class="line"><span class="lineno"> 1403</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#abaea624bb2f827e7cccb72adec0c50a3">match_wildcard</a> (s, 0, w, 0);</div>
-<div class="line"><span class="lineno"> 1404</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01412">1412</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1412</span>                                    {</div>
+<div class="line"><span class="lineno"> 1413</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#abaea624bb2f827e7cccb72adec0c50a3">match_wildcard</a> (s, 0, w, 0);</div>
+<div class="line"><span class="lineno"> 1414</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5053,18 +5093,18 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The position of the first non-alphabetic character; -1 if not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01407">1407</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1407</span>                                                 {</div>
-<div class="line"><span class="lineno"> 1408</span>  <span class="keywordflow">if</span> (forward) {</div>
-<div class="line"><span class="lineno"> 1409</span>    <span class="keywordflow">for</span> (; pos &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s); pos++)</div>
-<div class="line"><span class="lineno"> 1410</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="analyze_8cpp.html#a90488c03e222e1672a7b635cfc83d4b5">is_alpha</a> (s[pos])) <span class="keywordflow">return</span> pos;</div>
-<div class="line"><span class="lineno"> 1411</span>  }</div>
-<div class="line"><span class="lineno"> 1412</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1413</span>    <span class="keywordflow">for</span> (; pos &gt; 0; pos--)</div>
-<div class="line"><span class="lineno"> 1414</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="analyze_8cpp.html#a90488c03e222e1672a7b635cfc83d4b5">is_alpha</a> (s[pos - 1])) <span class="keywordflow">return</span> pos - 1;</div>
-<div class="line"><span class="lineno"> 1415</span>  }</div>
-<div class="line"><span class="lineno"> 1416</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1417</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01417">1417</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1417</span>                                                 {</div>
+<div class="line"><span class="lineno"> 1418</span>  <span class="keywordflow">if</span> (forward) {</div>
+<div class="line"><span class="lineno"> 1419</span>    <span class="keywordflow">for</span> (; pos &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s); pos++)</div>
+<div class="line"><span class="lineno"> 1420</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="analyze_8cpp.html#a90488c03e222e1672a7b635cfc83d4b5">is_alpha</a> (s[pos])) <span class="keywordflow">return</span> pos;</div>
+<div class="line"><span class="lineno"> 1421</span>  }</div>
+<div class="line"><span class="lineno"> 1422</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1423</span>    <span class="keywordflow">for</span> (; pos &gt; 0; pos--)</div>
+<div class="line"><span class="lineno"> 1424</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="analyze_8cpp.html#a90488c03e222e1672a7b635cfc83d4b5">is_alpha</a> (s[pos - 1])) <span class="keywordflow">return</span> pos - 1;</div>
+<div class="line"><span class="lineno"> 1425</span>  }</div>
+<div class="line"><span class="lineno"> 1426</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1427</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5103,20 +5143,20 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An array of strings split based on the separator. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01420">1420</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1420</span>                                {</div>
-<div class="line"><span class="lineno"> 1421</span>  <span class="keywordtype">int</span>           start= 0;</div>
-<div class="line"><span class="lineno"> 1422</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> a;</div>
-<div class="line"><span class="lineno"> 1423</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);)</div>
-<div class="line"><span class="lineno"> 1424</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (s, i, sep)) {</div>
-<div class="line"><span class="lineno"> 1425</span>      a &lt;&lt; s (start, i);</div>
-<div class="line"><span class="lineno"> 1426</span>      i+= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (sep);</div>
-<div class="line"><span class="lineno"> 1427</span>      start= i;</div>
-<div class="line"><span class="lineno"> 1428</span>    }</div>
-<div class="line"><span class="lineno"> 1429</span>    <span class="keywordflow">else</span> i++;</div>
-<div class="line"><span class="lineno"> 1430</span>  a &lt;&lt; s (start, <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s));</div>
-<div class="line"><span class="lineno"> 1431</span>  <span class="keywordflow">return</span> a;</div>
-<div class="line"><span class="lineno"> 1432</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01430">1430</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1430</span>                                {</div>
+<div class="line"><span class="lineno"> 1431</span>  <span class="keywordtype">int</span>           start= 0;</div>
+<div class="line"><span class="lineno"> 1432</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> a;</div>
+<div class="line"><span class="lineno"> 1433</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);)</div>
+<div class="line"><span class="lineno"> 1434</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a> (s, i, sep)) {</div>
+<div class="line"><span class="lineno"> 1435</span>      a &lt;&lt; s (start, i);</div>
+<div class="line"><span class="lineno"> 1436</span>      i+= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (sep);</div>
+<div class="line"><span class="lineno"> 1437</span>      start= i;</div>
+<div class="line"><span class="lineno"> 1438</span>    }</div>
+<div class="line"><span class="lineno"> 1439</span>    <span class="keywordflow">else</span> i++;</div>
+<div class="line"><span class="lineno"> 1440</span>  a &lt;&lt; s (start, <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s));</div>
+<div class="line"><span class="lineno"> 1441</span>  <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno"> 1442</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5155,15 +5195,15 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A single string consisting of the array elements separated by the separator. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01435">1435</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1435</span>                                        {</div>
-<div class="line"><span class="lineno"> 1436</span>  <span class="keywordtype">string</span> r;</div>
-<div class="line"><span class="lineno"> 1437</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a); i++) {</div>
-<div class="line"><span class="lineno"> 1438</span>    <span class="keywordflow">if</span> (i != 0) r &lt;&lt; sep;</div>
-<div class="line"><span class="lineno"> 1439</span>    r &lt;&lt; a[i];</div>
-<div class="line"><span class="lineno"> 1440</span>  }</div>
-<div class="line"><span class="lineno"> 1441</span>  <span class="keywordflow">return</span> r;</div>
-<div class="line"><span class="lineno"> 1442</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01445">1445</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1445</span>                                        {</div>
+<div class="line"><span class="lineno"> 1446</span>  <span class="keywordtype">string</span> r;</div>
+<div class="line"><span class="lineno"> 1447</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a); i++) {</div>
+<div class="line"><span class="lineno"> 1448</span>    <span class="keywordflow">if</span> (i != 0) r &lt;&lt; sep;</div>
+<div class="line"><span class="lineno"> 1449</span>    r &lt;&lt; a[i];</div>
+<div class="line"><span class="lineno"> 1450</span>  }</div>
+<div class="line"><span class="lineno"> 1451</span>  <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno"> 1452</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5191,13 +5231,13 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string without leading spaces. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01445">1445</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1445</span>                            {</div>
-<div class="line"><span class="lineno"> 1446</span>  <span class="keywordtype">int</span> start;</div>
-<div class="line"><span class="lineno"> 1447</span>  <span class="keywordflow">for</span> (start= 0; start &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s) &amp;&amp; <a class="code hl_function" href="analyze_8hpp.html#a29140d1345bb0eba0d1086e92874972e">is_space</a> (s[start]); start++)</div>
-<div class="line"><span class="lineno"> 1448</span>    ;</div>
-<div class="line"><span class="lineno"> 1449</span>  <span class="keywordflow">return</span> s (start, <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s));</div>
-<div class="line"><span class="lineno"> 1450</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01455">1455</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1455</span>                            {</div>
+<div class="line"><span class="lineno"> 1456</span>  <span class="keywordtype">int</span> start;</div>
+<div class="line"><span class="lineno"> 1457</span>  <span class="keywordflow">for</span> (start= 0; start &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s) &amp;&amp; <a class="code hl_function" href="analyze_8hpp.html#a29140d1345bb0eba0d1086e92874972e">is_space</a> (s[start]); start++)</div>
+<div class="line"><span class="lineno"> 1458</span>    ;</div>
+<div class="line"><span class="lineno"> 1459</span>  <span class="keywordflow">return</span> s (start, <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s));</div>
+<div class="line"><span class="lineno"> 1460</span>}</div>
 <div class="ttc" id="aanalyze_8hpp_html_a29140d1345bb0eba0d1086e92874972e"><div class="ttname"><a href="analyze_8hpp.html#a29140d1345bb0eba0d1086e92874972e">is_space</a></div><div class="ttdeci">bool is_space(char c)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8hpp_source.html#l00060">analyze.hpp:60</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -5226,13 +5266,13 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string without trailing spaces. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01453">1453</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1453</span>                             {</div>
-<div class="line"><span class="lineno"> 1454</span>  <span class="keywordtype">int</span> end;</div>
-<div class="line"><span class="lineno"> 1455</span>  <span class="keywordflow">for</span> (end= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s) - 1; end &gt;= 0 &amp;&amp; <a class="code hl_function" href="analyze_8hpp.html#a29140d1345bb0eba0d1086e92874972e">is_space</a> (s[end]); end--)</div>
-<div class="line"><span class="lineno"> 1456</span>    ;</div>
-<div class="line"><span class="lineno"> 1457</span>  <span class="keywordflow">return</span> s (0, end + 1);</div>
-<div class="line"><span class="lineno"> 1458</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01463">1463</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1463</span>                             {</div>
+<div class="line"><span class="lineno"> 1464</span>  <span class="keywordtype">int</span> end;</div>
+<div class="line"><span class="lineno"> 1465</span>  <span class="keywordflow">for</span> (end= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s) - 1; end &gt;= 0 &amp;&amp; <a class="code hl_function" href="analyze_8hpp.html#a29140d1345bb0eba0d1086e92874972e">is_space</a> (s[end]); end--)</div>
+<div class="line"><span class="lineno"> 1466</span>    ;</div>
+<div class="line"><span class="lineno"> 1467</span>  <span class="keywordflow">return</span> s (0, end + 1);</div>
+<div class="line"><span class="lineno"> 1468</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5260,12 +5300,12 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string without leading and trailing spaces. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01461">1461</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1461</span>                       {</div>
-<div class="line"><span class="lineno"> 1462</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#a7a78bf681a9ad9ffb903e2daec694249">trim_spaces_left</a> (<a class="code hl_function" href="analyze_8cpp.html#afe66c68d9e0d226fd6ce91b36408aa7c">trim_spaces_right</a> (s));</div>
-<div class="line"><span class="lineno"> 1463</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_a7a78bf681a9ad9ffb903e2daec694249"><div class="ttname"><a href="analyze_8cpp.html#a7a78bf681a9ad9ffb903e2daec694249">trim_spaces_left</a></div><div class="ttdeci">string trim_spaces_left(string s)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01445">analyze.cpp:1445</a></div></div>
-<div class="ttc" id="aanalyze_8cpp_html_afe66c68d9e0d226fd6ce91b36408aa7c"><div class="ttname"><a href="analyze_8cpp.html#afe66c68d9e0d226fd6ce91b36408aa7c">trim_spaces_right</a></div><div class="ttdeci">string trim_spaces_right(string s)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01453">analyze.cpp:1453</a></div></div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01471">1471</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1471</span>                       {</div>
+<div class="line"><span class="lineno"> 1472</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="analyze_8cpp.html#a7a78bf681a9ad9ffb903e2daec694249">trim_spaces_left</a> (<a class="code hl_function" href="analyze_8cpp.html#afe66c68d9e0d226fd6ce91b36408aa7c">trim_spaces_right</a> (s));</div>
+<div class="line"><span class="lineno"> 1473</span>}</div>
+<div class="ttc" id="aanalyze_8cpp_html_a7a78bf681a9ad9ffb903e2daec694249"><div class="ttname"><a href="analyze_8cpp.html#a7a78bf681a9ad9ffb903e2daec694249">trim_spaces_left</a></div><div class="ttdeci">string trim_spaces_left(string s)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01455">analyze.cpp:1455</a></div></div>
+<div class="ttc" id="aanalyze_8cpp_html_afe66c68d9e0d226fd6ce91b36408aa7c"><div class="ttname"><a href="analyze_8cpp.html#afe66c68d9e0d226fd6ce91b36408aa7c">trim_spaces_right</a></div><div class="ttdeci">string trim_spaces_right(string s)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01463">analyze.cpp:1463</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5293,14 +5333,14 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An array of strings with all leading and trailing spaces removed. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01466">1466</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1466</span>                              {</div>
-<div class="line"><span class="lineno"> 1467</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a));</div>
-<div class="line"><span class="lineno"> 1468</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a); i++)</div>
-<div class="line"><span class="lineno"> 1469</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[i]= <a class="code hl_function" href="analyze_8cpp.html#a2d22315ff9b473c31eea6df5c460747b">trim_spaces</a> (a[i]);</div>
-<div class="line"><span class="lineno"> 1470</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>;</div>
-<div class="line"><span class="lineno"> 1471</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_a2d22315ff9b473c31eea6df5c460747b"><div class="ttname"><a href="analyze_8cpp.html#a2d22315ff9b473c31eea6df5c460747b">trim_spaces</a></div><div class="ttdeci">string trim_spaces(string s)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01461">analyze.cpp:1461</a></div></div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01476">1476</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1476</span>                              {</div>
+<div class="line"><span class="lineno"> 1477</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a));</div>
+<div class="line"><span class="lineno"> 1478</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (a); i++)</div>
+<div class="line"><span class="lineno"> 1479</span>    <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>[i]= <a class="code hl_function" href="analyze_8cpp.html#a2d22315ff9b473c31eea6df5c460747b">trim_spaces</a> (a[i]);</div>
+<div class="line"><span class="lineno"> 1480</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>;</div>
+<div class="line"><span class="lineno"> 1481</span>}</div>
+<div class="ttc" id="aanalyze_8cpp_html_a2d22315ff9b473c31eea6df5c460747b"><div class="ttname"><a href="analyze_8cpp.html#a2d22315ff9b473c31eea6df5c460747b">trim_spaces</a></div><div class="ttdeci">string trim_spaces(string s)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01471">analyze.cpp:1471</a></div></div>
 <div class="ttc" id="ablackbox__test_8cpp_html_a8d44fd90fb43432ab6b2957b83f6c486"><div class="ttname"><a href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a></div><div class="ttdeci">blackbox b[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00040">blackbox_test.cpp:40</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -5351,28 +5391,28 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01478">1478</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1478</span>                                                      {</div>
-<div class="line"><span class="lineno"> 1479</span>  <span class="keywordtype">int</span> n1= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1), n2= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2), bc= 0, bl= 0, br= 0;</div>
-<div class="line"><span class="lineno"> 1480</span>  <span class="keywordflow">for</span> (c2= 0; c2 &lt; n2; c2++)</div>
-<div class="line"><span class="lineno"> 1481</span>    <span class="keywordflow">if</span> (s1[c1] == s2[c2]) {</div>
-<div class="line"><span class="lineno"> 1482</span>      <span class="keywordtype">int</span> l= 0, r= 0;</div>
-<div class="line"><span class="lineno"> 1483</span>      <span class="keywordflow">while</span> (c1 + r &lt; n1 &amp;&amp; c2 + r &lt; n2 &amp;&amp; s1[c1 + r] == s2[c2 + r])</div>
-<div class="line"><span class="lineno"> 1484</span>        r++;</div>
-<div class="line"><span class="lineno"> 1485</span>      <span class="keywordflow">while</span> (l &lt; c1 &amp;&amp; l &lt; c2 &amp;&amp; s1[c1 - l - 1] == s2[c2 - l - 1])</div>
-<div class="line"><span class="lineno"> 1486</span>        l++;</div>
-<div class="line"><span class="lineno"> 1487</span>      <span class="keywordflow">if</span> (l + r &gt; bl + br) {</div>
-<div class="line"><span class="lineno"> 1488</span>        bc= c2;</div>
-<div class="line"><span class="lineno"> 1489</span>        bl= l;</div>
-<div class="line"><span class="lineno"> 1490</span>        br= r;</div>
-<div class="line"><span class="lineno"> 1491</span>      }</div>
-<div class="line"><span class="lineno"> 1492</span>    }</div>
-<div class="line"><span class="lineno"> 1493</span>  <span class="keywordflow">if</span> (bl + br &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1494</span>    c1= c1 - bl;</div>
-<div class="line"><span class="lineno"> 1495</span>    c2= bc - bl;</div>
-<div class="line"><span class="lineno"> 1496</span>  }</div>
-<div class="line"><span class="lineno"> 1497</span>  <span class="keywordflow">return</span> bl + br;</div>
-<div class="line"><span class="lineno"> 1498</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01488">1488</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1488</span>                                                      {</div>
+<div class="line"><span class="lineno"> 1489</span>  <span class="keywordtype">int</span> n1= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1), n2= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2), bc= 0, bl= 0, br= 0;</div>
+<div class="line"><span class="lineno"> 1490</span>  <span class="keywordflow">for</span> (c2= 0; c2 &lt; n2; c2++)</div>
+<div class="line"><span class="lineno"> 1491</span>    <span class="keywordflow">if</span> (s1[c1] == s2[c2]) {</div>
+<div class="line"><span class="lineno"> 1492</span>      <span class="keywordtype">int</span> l= 0, r= 0;</div>
+<div class="line"><span class="lineno"> 1493</span>      <span class="keywordflow">while</span> (c1 + r &lt; n1 &amp;&amp; c2 + r &lt; n2 &amp;&amp; s1[c1 + r] == s2[c2 + r])</div>
+<div class="line"><span class="lineno"> 1494</span>        r++;</div>
+<div class="line"><span class="lineno"> 1495</span>      <span class="keywordflow">while</span> (l &lt; c1 &amp;&amp; l &lt; c2 &amp;&amp; s1[c1 - l - 1] == s2[c2 - l - 1])</div>
+<div class="line"><span class="lineno"> 1496</span>        l++;</div>
+<div class="line"><span class="lineno"> 1497</span>      <span class="keywordflow">if</span> (l + r &gt; bl + br) {</div>
+<div class="line"><span class="lineno"> 1498</span>        bc= c2;</div>
+<div class="line"><span class="lineno"> 1499</span>        bl= l;</div>
+<div class="line"><span class="lineno"> 1500</span>        br= r;</div>
+<div class="line"><span class="lineno"> 1501</span>      }</div>
+<div class="line"><span class="lineno"> 1502</span>    }</div>
+<div class="line"><span class="lineno"> 1503</span>  <span class="keywordflow">if</span> (bl + br &gt; 0) {</div>
+<div class="line"><span class="lineno"> 1504</span>    c1= c1 - bl;</div>
+<div class="line"><span class="lineno"> 1505</span>    c2= bc - bl;</div>
+<div class="line"><span class="lineno"> 1506</span>  }</div>
+<div class="line"><span class="lineno"> 1507</span>  <span class="keywordflow">return</span> bl + br;</div>
+<div class="line"><span class="lineno"> 1508</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5422,24 +5462,24 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01501">1501</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1501</span>                                                     {</div>
-<div class="line"><span class="lineno"> 1502</span>  <span class="keywordtype">int</span> best_len= 0;</div>
-<div class="line"><span class="lineno"> 1503</span>  c1= c2= 0;</div>
-<div class="line"><span class="lineno"> 1504</span>  <span class="keywordtype">int</span> n1= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1), n2= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2);</div>
-<div class="line"><span class="lineno"> 1505</span>  <span class="keywordflow">if</span> (n1 == 0 || n2 == 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1506</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>= <a class="code hl_function" href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_function" href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (n1, n2), 6);</div>
-<div class="line"><span class="lineno"> 1507</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k= 1; k &lt; <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>; k++) {</div>
-<div class="line"><span class="lineno"> 1508</span>    <span class="keywordtype">int</span> a1= (k * n1) / <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>, a2= (k * n2) / <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
-<div class="line"><span class="lineno"> 1509</span>    <span class="keywordtype">int</span> len= <a class="code hl_function" href="analyze_8cpp.html#a64586f2de1e4a41ce451cc73fb967eed">find_longest</a> (s1, s2, a1, a2);</div>
-<div class="line"><span class="lineno"> 1510</span>    <span class="keywordflow">if</span> (len &gt; best_len) {</div>
-<div class="line"><span class="lineno"> 1511</span>      best_len= len;</div>
-<div class="line"><span class="lineno"> 1512</span>      c1      = a1;</div>
-<div class="line"><span class="lineno"> 1513</span>      c2      = a2;</div>
-<div class="line"><span class="lineno"> 1514</span>    }</div>
-<div class="line"><span class="lineno"> 1515</span>  }</div>
-<div class="line"><span class="lineno"> 1516</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_a64586f2de1e4a41ce451cc73fb967eed"><div class="ttname"><a href="analyze_8cpp.html#a64586f2de1e4a41ce451cc73fb967eed">find_longest</a></div><div class="ttdeci">static int find_longest(string s1, string s2, int &amp;c1, int &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01478">analyze.cpp:1478</a></div></div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01511">1511</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1511</span>                                                     {</div>
+<div class="line"><span class="lineno"> 1512</span>  <span class="keywordtype">int</span> best_len= 0;</div>
+<div class="line"><span class="lineno"> 1513</span>  c1= c2= 0;</div>
+<div class="line"><span class="lineno"> 1514</span>  <span class="keywordtype">int</span> n1= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1), n2= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2);</div>
+<div class="line"><span class="lineno"> 1515</span>  <span class="keywordflow">if</span> (n1 == 0 || n2 == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1516</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>= <a class="code hl_function" href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_function" href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (n1, n2), 6);</div>
+<div class="line"><span class="lineno"> 1517</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k= 1; k &lt; <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>; k++) {</div>
+<div class="line"><span class="lineno"> 1518</span>    <span class="keywordtype">int</span> a1= (k * n1) / <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>, a2= (k * n2) / <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>;</div>
+<div class="line"><span class="lineno"> 1519</span>    <span class="keywordtype">int</span> len= <a class="code hl_function" href="analyze_8cpp.html#a64586f2de1e4a41ce451cc73fb967eed">find_longest</a> (s1, s2, a1, a2);</div>
+<div class="line"><span class="lineno"> 1520</span>    <span class="keywordflow">if</span> (len &gt; best_len) {</div>
+<div class="line"><span class="lineno"> 1521</span>      best_len= len;</div>
+<div class="line"><span class="lineno"> 1522</span>      c1      = a1;</div>
+<div class="line"><span class="lineno"> 1523</span>      c2      = a2;</div>
+<div class="line"><span class="lineno"> 1524</span>    }</div>
+<div class="line"><span class="lineno"> 1525</span>  }</div>
+<div class="line"><span class="lineno"> 1526</span>}</div>
+<div class="ttc" id="aanalyze_8cpp_html_a64586f2de1e4a41ce451cc73fb967eed"><div class="ttname"><a href="analyze_8cpp.html#a64586f2de1e4a41ce451cc73fb967eed">find_longest</a></div><div class="ttdeci">static int find_longest(string s1, string s2, int &amp;c1, int &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01488">analyze.cpp:1488</a></div></div>
 <div class="ttc" id="ablackbox__test_8cpp_html_ae6d631320ed189a50f11ed922bc06d7e"><div class="ttname"><a href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a></div><div class="ttdeci">blackbox t[13]</div><div class="ttdef"><b>Definition:</b> <a href="blackbox__test_8cpp_source.html#l00039">blackbox_test.cpp:39</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -5480,53 +5520,53 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An array containing sets of four integers: </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01519">1519</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1519</span>                                   {</div>
-<div class="line"><span class="lineno"> 1520</span>  <span class="keywordtype">int</span> n1= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1), n2= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2);</div>
-<div class="line"><span class="lineno"> 1521</span>  <span class="keywordtype">int</span> i1= 0, i2= 0, j1= n1, j2= n2;</div>
-<div class="line"><span class="lineno"> 1522</span>  <span class="keywordflow">while</span> (i1 &lt; j1 &amp;&amp; i2 &lt; j2 &amp;&amp; s1[i1] == s2[i2]) {</div>
-<div class="line"><span class="lineno"> 1523</span>    i1++;</div>
-<div class="line"><span class="lineno"> 1524</span>    i2++;</div>
-<div class="line"><span class="lineno"> 1525</span>  }</div>
-<div class="line"><span class="lineno"> 1526</span>  <span class="keywordflow">while</span> (i1 &lt; j1 &amp;&amp; i2 &lt; j2 &amp;&amp; s1[j1 - 1] == s2[j2 - 1]) {</div>
-<div class="line"><span class="lineno"> 1527</span>    j1--;</div>
-<div class="line"><span class="lineno"> 1528</span>    j2--;</div>
-<div class="line"><span class="lineno"> 1529</span>  }</div>
-<div class="line"><span class="lineno"> 1530</span>  <span class="keywordflow">if</span> (i1 == i2 &amp;&amp; j1 == j2) <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> ();</div>
-<div class="line"><span class="lineno"> 1531</span>  <span class="keywordflow">if</span> (i1 &gt; 0 || i2 &gt; 0 || j1 &lt; n1 || j2 &lt; n2) {</div>
-<div class="line"><span class="lineno"> 1532</span>    <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r= <a class="code hl_function" href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a> (s1 (i1, j1), s2 (i2, j2));</div>
-<div class="line"><span class="lineno"> 1533</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k= 0; k &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (r); k+= 4) {</div>
-<div class="line"><span class="lineno"> 1534</span>      r[k]+= i1;</div>
-<div class="line"><span class="lineno"> 1535</span>      r[k + 1]+= i1;</div>
-<div class="line"><span class="lineno"> 1536</span>      r[k + 2]+= i2;</div>
-<div class="line"><span class="lineno"> 1537</span>      r[k + 3]+= i2;</div>
-<div class="line"><span class="lineno"> 1538</span>    }</div>
-<div class="line"><span class="lineno"> 1539</span>    <span class="keywordflow">return</span> r;</div>
-<div class="line"><span class="lineno"> 1540</span>  }</div>
-<div class="line"><span class="lineno"> 1541</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1542</span>    <span class="keywordtype">int</span> c1, c2;</div>
-<div class="line"><span class="lineno"> 1543</span>    <a class="code hl_function" href="analyze_8cpp.html#ae94489510cb7d13d58e75167acb7517a">find_common</a> (s1, s2, c1, c2);</div>
-<div class="line"><span class="lineno"> 1544</span>    <span class="keywordflow">if</span> (c1 == 0 &amp;&amp; c2 == 0) {</div>
-<div class="line"><span class="lineno"> 1545</span>      <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r;</div>
-<div class="line"><span class="lineno"> 1546</span>      r &lt;&lt; i1 &lt;&lt; j1 &lt;&lt; i2 &lt;&lt; j2;</div>
-<div class="line"><span class="lineno"> 1547</span>      <span class="keywordflow">return</span> r;</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01529">1529</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1529</span>                                   {</div>
+<div class="line"><span class="lineno"> 1530</span>  <span class="keywordtype">int</span> n1= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s1), n2= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s2);</div>
+<div class="line"><span class="lineno"> 1531</span>  <span class="keywordtype">int</span> i1= 0, i2= 0, j1= n1, j2= n2;</div>
+<div class="line"><span class="lineno"> 1532</span>  <span class="keywordflow">while</span> (i1 &lt; j1 &amp;&amp; i2 &lt; j2 &amp;&amp; s1[i1] == s2[i2]) {</div>
+<div class="line"><span class="lineno"> 1533</span>    i1++;</div>
+<div class="line"><span class="lineno"> 1534</span>    i2++;</div>
+<div class="line"><span class="lineno"> 1535</span>  }</div>
+<div class="line"><span class="lineno"> 1536</span>  <span class="keywordflow">while</span> (i1 &lt; j1 &amp;&amp; i2 &lt; j2 &amp;&amp; s1[j1 - 1] == s2[j2 - 1]) {</div>
+<div class="line"><span class="lineno"> 1537</span>    j1--;</div>
+<div class="line"><span class="lineno"> 1538</span>    j2--;</div>
+<div class="line"><span class="lineno"> 1539</span>  }</div>
+<div class="line"><span class="lineno"> 1540</span>  <span class="keywordflow">if</span> (i1 == i2 &amp;&amp; j1 == j2) <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> ();</div>
+<div class="line"><span class="lineno"> 1541</span>  <span class="keywordflow">if</span> (i1 &gt; 0 || i2 &gt; 0 || j1 &lt; n1 || j2 &lt; n2) {</div>
+<div class="line"><span class="lineno"> 1542</span>    <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r= <a class="code hl_function" href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a> (s1 (i1, j1), s2 (i2, j2));</div>
+<div class="line"><span class="lineno"> 1543</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k= 0; k &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (r); k+= 4) {</div>
+<div class="line"><span class="lineno"> 1544</span>      r[k]+= i1;</div>
+<div class="line"><span class="lineno"> 1545</span>      r[k + 1]+= i1;</div>
+<div class="line"><span class="lineno"> 1546</span>      r[k + 2]+= i2;</div>
+<div class="line"><span class="lineno"> 1547</span>      r[k + 3]+= i2;</div>
 <div class="line"><span class="lineno"> 1548</span>    }</div>
-<div class="line"><span class="lineno"> 1549</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1550</span>      <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r1= <a class="code hl_function" href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a> (s1 (0, c1), s2 (0, c2));</div>
-<div class="line"><span class="lineno"> 1551</span>      <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r2= <a class="code hl_function" href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a> (s1 (c1, n1), s2 (c2, n2));</div>
-<div class="line"><span class="lineno"> 1552</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k= 0; k &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (r2); k+= 4) {</div>
-<div class="line"><span class="lineno"> 1553</span>        r2[k]+= c1;</div>
-<div class="line"><span class="lineno"> 1554</span>        r2[k + 1]+= c1;</div>
-<div class="line"><span class="lineno"> 1555</span>        r2[k + 2]+= c2;</div>
-<div class="line"><span class="lineno"> 1556</span>        r2[k + 3]+= c2;</div>
-<div class="line"><span class="lineno"> 1557</span>      }</div>
-<div class="line"><span class="lineno"> 1558</span>      r1 &lt;&lt; r2;</div>
-<div class="line"><span class="lineno"> 1559</span>      <span class="keywordflow">return</span> r1;</div>
-<div class="line"><span class="lineno"> 1560</span>    }</div>
-<div class="line"><span class="lineno"> 1561</span>  }</div>
-<div class="line"><span class="lineno"> 1562</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_aa40a6a4842f38b1f3af1fda8ade30da5"><div class="ttname"><a href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a></div><div class="ttdeci">array&lt; int &gt; differences(string s1, string s2)</div><div class="ttdoc">the differences between two strings by identifying the common substrings and returning the different ...</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01519">analyze.cpp:1519</a></div></div>
-<div class="ttc" id="aanalyze_8cpp_html_ae94489510cb7d13d58e75167acb7517a"><div class="ttname"><a href="analyze_8cpp.html#ae94489510cb7d13d58e75167acb7517a">find_common</a></div><div class="ttdeci">static void find_common(string s1, string s2, int &amp;c1, int &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01501">analyze.cpp:1501</a></div></div>
+<div class="line"><span class="lineno"> 1549</span>    <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno"> 1550</span>  }</div>
+<div class="line"><span class="lineno"> 1551</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1552</span>    <span class="keywordtype">int</span> c1, c2;</div>
+<div class="line"><span class="lineno"> 1553</span>    <a class="code hl_function" href="analyze_8cpp.html#ae94489510cb7d13d58e75167acb7517a">find_common</a> (s1, s2, c1, c2);</div>
+<div class="line"><span class="lineno"> 1554</span>    <span class="keywordflow">if</span> (c1 == 0 &amp;&amp; c2 == 0) {</div>
+<div class="line"><span class="lineno"> 1555</span>      <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r;</div>
+<div class="line"><span class="lineno"> 1556</span>      r &lt;&lt; i1 &lt;&lt; j1 &lt;&lt; i2 &lt;&lt; j2;</div>
+<div class="line"><span class="lineno"> 1557</span>      <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno"> 1558</span>    }</div>
+<div class="line"><span class="lineno"> 1559</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1560</span>      <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r1= <a class="code hl_function" href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a> (s1 (0, c1), s2 (0, c2));</div>
+<div class="line"><span class="lineno"> 1561</span>      <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r2= <a class="code hl_function" href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a> (s1 (c1, n1), s2 (c2, n2));</div>
+<div class="line"><span class="lineno"> 1562</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k= 0; k &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (r2); k+= 4) {</div>
+<div class="line"><span class="lineno"> 1563</span>        r2[k]+= c1;</div>
+<div class="line"><span class="lineno"> 1564</span>        r2[k + 1]+= c1;</div>
+<div class="line"><span class="lineno"> 1565</span>        r2[k + 2]+= c2;</div>
+<div class="line"><span class="lineno"> 1566</span>        r2[k + 3]+= c2;</div>
+<div class="line"><span class="lineno"> 1567</span>      }</div>
+<div class="line"><span class="lineno"> 1568</span>      r1 &lt;&lt; r2;</div>
+<div class="line"><span class="lineno"> 1569</span>      <span class="keywordflow">return</span> r1;</div>
+<div class="line"><span class="lineno"> 1570</span>    }</div>
+<div class="line"><span class="lineno"> 1571</span>  }</div>
+<div class="line"><span class="lineno"> 1572</span>}</div>
+<div class="ttc" id="aanalyze_8cpp_html_aa40a6a4842f38b1f3af1fda8ade30da5"><div class="ttname"><a href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a></div><div class="ttdeci">array&lt; int &gt; differences(string s1, string s2)</div><div class="ttdoc">the differences between two strings by identifying the common substrings and returning the different ...</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01529">analyze.cpp:1529</a></div></div>
+<div class="ttc" id="aanalyze_8cpp_html_ae94489510cb7d13d58e75167acb7517a"><div class="ttname"><a href="analyze_8cpp.html#ae94489510cb7d13d58e75167acb7517a">find_common</a></div><div class="ttdeci">static void find_common(string s1, string s2, int &amp;c1, int &amp;c2)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01511">analyze.cpp:1511</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5566,14 +5606,14 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An integer representing the sum of lengths of all differing sections between the two strings. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01565">1565</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1565</span>                                {</div>
-<div class="line"><span class="lineno"> 1566</span>  <span class="keywordtype">int</span>        d= 0;</div>
-<div class="line"><span class="lineno"> 1567</span>  <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r= <a class="code hl_function" href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a> (s1, s2);</div>
-<div class="line"><span class="lineno"> 1568</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k= 0; k &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (r); k+= 4)</div>
-<div class="line"><span class="lineno"> 1569</span>    d+= <a class="code hl_function" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a> (r[k + 1] - r[k], r[k + 3] - r[k + 2]);</div>
-<div class="line"><span class="lineno"> 1570</span>  <span class="keywordflow">return</span> d;</div>
-<div class="line"><span class="lineno"> 1571</span>}</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01575">1575</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1575</span>                                {</div>
+<div class="line"><span class="lineno"> 1576</span>  <span class="keywordtype">int</span>        d= 0;</div>
+<div class="line"><span class="lineno"> 1577</span>  <a class="code hl_class" href="classarray.html">array&lt;int&gt;</a> r= <a class="code hl_function" href="analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5">differences</a> (s1, s2);</div>
+<div class="line"><span class="lineno"> 1578</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k= 0; k &lt; <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (r); k+= 4)</div>
+<div class="line"><span class="lineno"> 1579</span>    d+= <a class="code hl_function" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a> (r[k + 1] - r[k], r[k + 3] - r[k + 2]);</div>
+<div class="line"><span class="lineno"> 1580</span>  <span class="keywordflow">return</span> d;</div>
+<div class="line"><span class="lineno"> 1581</span>}</div>
 <div class="ttc" id="abasic_8hpp_html_a722bf3cd3acddf15e6bca8135bad679d"><div class="ttname"><a href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a></div><div class="ttdeci">SI max(SI i, SI j)</div><div class="ttdoc">Returns the maximum of two signed integers.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00172">basic.hpp:172</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -5620,23 +5660,23 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01578">1578</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1578</span>                                                   {</div>
-<div class="line"><span class="lineno"> 1579</span>  <span class="keywordtype">int</span> start= 0;</div>
-<div class="line"><span class="lineno"> 1580</span>  <span class="keywordtype">int</span> i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
-<div class="line"><span class="lineno"> 1581</span>  <span class="keywordflow">for</span> (i= start; i &lt; n &amp;&amp; !<a class="code hl_function" href="analyze_8hpp.html#a1e714b9bf56f2ff77be755b9ea05c078">is_locase</a> (s[i]); i++) {</div>
-<div class="line"><span class="lineno"> 1582</span>  }</div>
-<div class="line"><span class="lineno"> 1583</span>  <span class="keywordtype">string</span> s1= s (start, i);</div>
-<div class="line"><span class="lineno"> 1584</span>  <span class="keywordtype">string</span> s2= s (i, n);</div>
-<div class="line"><span class="lineno"> 1585</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (s1) &amp;&amp; (<a class="code hl_function" href="analyze_8cpp.html#a9b373bd12e2a7cfb588d05129c4708b0">is_locase_alpha</a> (s2) || <a class="code hl_function" href="string_8cpp.html#ae1ddad97c500caa13e19855a6be286ed">is_empty</a> (s2))) {</div>
-<div class="line"><span class="lineno"> 1586</span>    len = <a class="code hl_function" href="string_8cpp.html#ab1a6e401db0c3d83c44570543fe08f4c">as_double</a> (s1);</div>
-<div class="line"><span class="lineno"> 1587</span>    unit= s2;</div>
-<div class="line"><span class="lineno"> 1588</span>  }</div>
-<div class="line"><span class="lineno"> 1589</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1590</span>    len = 0.0;</div>
-<div class="line"><span class="lineno"> 1591</span>    unit= <span class="stringliteral">&quot;error&quot;</span>;</div>
+<p class="definition">Definition at line <a class="el" href="analyze_8cpp_source.html#l01588">1588</a> of file <a class="el" href="analyze_8cpp_source.html">analyze.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1588</span>                                                   {</div>
+<div class="line"><span class="lineno"> 1589</span>  <span class="keywordtype">int</span> start= 0;</div>
+<div class="line"><span class="lineno"> 1590</span>  <span class="keywordtype">int</span> i, n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
+<div class="line"><span class="lineno"> 1591</span>  <span class="keywordflow">for</span> (i= start; i &lt; n &amp;&amp; !<a class="code hl_function" href="analyze_8hpp.html#a1e714b9bf56f2ff77be755b9ea05c078">is_locase</a> (s[i]); i++) {</div>
 <div class="line"><span class="lineno"> 1592</span>  }</div>
-<div class="line"><span class="lineno"> 1593</span>}</div>
+<div class="line"><span class="lineno"> 1593</span>  <span class="keywordtype">string</span> s1= s (start, i);</div>
+<div class="line"><span class="lineno"> 1594</span>  <span class="keywordtype">string</span> s2= s (i, n);</div>
+<div class="line"><span class="lineno"> 1595</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a> (s1) &amp;&amp; (<a class="code hl_function" href="analyze_8cpp.html#a9b373bd12e2a7cfb588d05129c4708b0">is_locase_alpha</a> (s2) || <a class="code hl_function" href="string_8cpp.html#ae1ddad97c500caa13e19855a6be286ed">is_empty</a> (s2))) {</div>
+<div class="line"><span class="lineno"> 1596</span>    len = <a class="code hl_function" href="string_8cpp.html#ab1a6e401db0c3d83c44570543fe08f4c">as_double</a> (s1);</div>
+<div class="line"><span class="lineno"> 1597</span>    unit= s2;</div>
+<div class="line"><span class="lineno"> 1598</span>  }</div>
+<div class="line"><span class="lineno"> 1599</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1600</span>    len = 0.0;</div>
+<div class="line"><span class="lineno"> 1601</span>    unit= <span class="stringliteral">&quot;error&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1602</span>  }</div>
+<div class="line"><span class="lineno"> 1603</span>}</div>
 <div class="ttc" id="aanalyze_8cpp_html_a9b373bd12e2a7cfb588d05129c4708b0"><div class="ttname"><a href="analyze_8cpp.html#a9b373bd12e2a7cfb588d05129c4708b0">is_locase_alpha</a></div><div class="ttdeci">bool is_locase_alpha(string s)</div><div class="ttdoc">Checks if a string contains only lowercase alphabetic characters.</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l00054">analyze.cpp:54</a></div></div>
 <div class="ttc" id="aanalyze_8hpp_html_a1e714b9bf56f2ff77be755b9ea05c078"><div class="ttname"><a href="analyze_8hpp.html#a1e714b9bf56f2ff77be755b9ea05c078">is_locase</a></div><div class="ttdeci">bool is_locase(char c)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8hpp_source.html#l00026">analyze.hpp:26</a></div></div>
 <div class="ttc" id="astring_8cpp_html_a81edf84e403e5fbd83c130dacb5c6bdd"><div class="ttname"><a href="string_8cpp.html#a81edf84e403e5fbd83c130dacb5c6bdd">is_double</a></div><div class="ttdeci">bool is_double(string s)</div><div class="ttdef"><b>Definition:</b> <a href="string_8cpp_source.html#l00376">string.cpp:376</a></div></div>
