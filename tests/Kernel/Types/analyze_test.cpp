@@ -142,25 +142,25 @@ TEST_CASE ("replace") {
 }
 
 TEST_CASE ("hanzi_nr") {
-  CHECK_EQ (hanzi_nr (-1605) == "负一千六百零五", true);
-  CHECK_EQ (hanzi_nr (0) == "零", true);
-  CHECK_EQ (hanzi_nr (1) == "一", true);
-  CHECK_EQ (hanzi_nr (10) == "十", true);
-  CHECK_EQ (hanzi_nr (11) == "十一", true);
-  CHECK_EQ (hanzi_nr (42) == "四十二", true);
-  CHECK_EQ (hanzi_nr (90) == "九十", true);
-  CHECK_EQ (hanzi_nr (100) == "一百", true);
-  CHECK_EQ (hanzi_nr (102) == "一百零二", true);
-  CHECK_EQ (hanzi_nr (110) == "一百一十", true);
-  CHECK_EQ (hanzi_nr (123) == "一百二十三", true);
-  CHECK_EQ (hanzi_nr (1000) == "一千", true);
-  CHECK_EQ (hanzi_nr (1001) == "一千零一", true);
-  CHECK_EQ (hanzi_nr (1024) == "一千零二十四", true);
-  CHECK_EQ (hanzi_nr (1030) == "一千零三十", true);
-  CHECK_EQ (hanzi_nr (1600) == "一千六百", true);
-  CHECK_EQ (hanzi_nr (1605) == "一千六百零五", true);
-  CHECK_EQ (hanzi_nr (10000) == "一万", true);
-  CHECK_EQ (hanzi_nr (10001) == "一万零一", true);
-  CHECK_EQ (hanzi_nr (153457) == "十五万三千四百五十七", true);
-  CHECK_EQ (hanzi_nr (300153457) == "三亿零一十五万三千四百五十七", true);
+  string_eq (hanzi_nr (-1605), "负一千六百零五");
+  string_eq (hanzi_nr (0), "零");
+  string_eq (hanzi_nr (1), "一");
+  string_eq (hanzi_nr (10), "十");
+  string_eq (hanzi_nr (11), "十一");
+  string_eq (hanzi_nr (42), "四十二");
+  string_eq (hanzi_nr (90), "九十");
+  string_eq (hanzi_nr (100), "一百");
+  string_eq (hanzi_nr (102), "一百零二");
+  string_eq (hanzi_nr (110), "一百一十");
+  string_eq (hanzi_nr (123), "一百二十三");
+  string_eq (hanzi_nr (1000), "一千");
+  string_eq (hanzi_nr (1001), "一千零一");
+  string_eq (hanzi_nr (1024), "一千零二十四");
+  string_eq (hanzi_nr (1030), "一千零三十");
+  string_eq (hanzi_nr (1600), "一千六百");
+  string_eq (hanzi_nr (1605), "一千六百零五");
+  string_eq (hanzi_nr (10000), "一万");
+  string_eq (hanzi_nr (10001), "一万零一");
+  string_eq (hanzi_nr (153457), "十五万三千四百五十七");
+  string_eq (hanzi_nr (300153457), "三亿零一十五万三千四百五十七");
 }
