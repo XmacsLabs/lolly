@@ -87,8 +87,10 @@ TEST_CASE ("as_int") {
     CHECK_EQ (as_int ("2147483648"), -2147483648);
   }
 
-  SUBCASE ("int overflow") {
+  SUBCASE ("invalid int") {
     CHECK_EQ (as_int ("not a int"), 0);
+    CHECK_EQ (as_int ("1pt"), 1);
+    CHECK_EQ (as_int ("1.23"), 1);
   }
 }
 
