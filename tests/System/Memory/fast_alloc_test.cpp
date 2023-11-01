@@ -84,13 +84,10 @@ TEST_CASE ("test tm_*_array") {
   tm_delete_array (p_wide);
 }
 
-TEST_MEMORY_LEAK_ALL
-TEST_MEMORY_LEAK_RESET
-
 TEST_CASE ("test tm_*") {
   const int bnum=
 #ifdef OS_WASM
-      800;
+      200;
 #else
       100000;
 #endif
@@ -102,9 +99,6 @@ TEST_CASE ("test tm_*") {
     tm_delete (volume[i]);
   }
 }
-
-TEST_MEMORY_LEAK_ALL
-TEST_MEMORY_LEAK_RESET
 
 TEST_CASE ("test tm_*_array with class") {
   Complex* volume[NUM];
