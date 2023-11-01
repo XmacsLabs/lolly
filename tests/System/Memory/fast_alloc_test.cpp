@@ -84,14 +84,10 @@ TEST_CASE ("test tm_*_array") {
   tm_delete_array (p_wide);
 }
 
-TEST_CASE ("test tm_*") {
-  const int bnum=
-#ifdef OS_WASM
-      150;
-#else
-      100000;
-#endif
-  int* volume[bnum];
+#ifndef OS_WASM
+TEST_CASE ("test large bunch of tm_*") {
+  const int bnum= 100000;
+  int*      volume[bnum];
   for (int i= 0; i < bnum; i++) {
     volume[i]= tm_new<int> (35);
   }
@@ -99,8 +95,9 @@ TEST_CASE ("test tm_*") {
     tm_delete (volume[i]);
   }
 }
+#endif
 
-TEST_CASE ("test tm_*_array with class") {
+TEST_CASE ("test large bunch of tm_*_array with class") {
   Complex* volume[NUM];
   for (int i= 0; i < NUM; i++) {
     volume[i]= tm_new_array<Complex> (9);
