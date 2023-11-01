@@ -191,7 +191,7 @@ tm_ostream::flush () {
 void
 tm_ostream::buffer () {
   rep= tm_new<buffered_ostream_rep> (rep);
-  INC_COUNT(rep);
+  INC_COUNT (rep);
 }
 
 string
@@ -199,6 +199,7 @@ tm_ostream::unbuffer () {
   buffered_ostream_rep* ptr= (buffered_ostream_rep*) rep;
   rep                      = ptr->master;
   string r                 = ptr->buf;
+  INC_COUNT (rep);
   DEC_COUNT (ptr);
   return r;
 }

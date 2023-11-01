@@ -106,8 +106,6 @@ TEST_CASE ("function texmacs_time") {
   CHECK (t2 >= t1);
 }
 
-TEST_MEMORY_LEAK_ALL
-
 TEST_CASE ("function bench_start and bench_cumul") {
   tm_ostream ostream;
   ostream.buffer ();
@@ -197,6 +195,14 @@ TEST_CASE ("function bench_reset") {
     CHECK (get_timing_nr (out) == -1);
   }
 }
+
+TEST_CASE ("clean up before testing memory leak") {
+  bench_reset ("task");
+  bench_reset ("task1");
+  bench_reset ("task2");
+}
+
+TEST_MEMORY_LEAK_ALL
 
 TEST_CASE ("function bench_print") {
   tm_ostream ostream;
