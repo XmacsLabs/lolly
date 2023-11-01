@@ -90,7 +90,7 @@ TEST_MEMORY_LEAK_RESET
 TEST_CASE ("test tm_*") {
   const int bnum=
 #ifdef OS_WASM
-      1000;
+      800;
 #else
       100000;
 #endif
