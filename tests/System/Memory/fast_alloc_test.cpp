@@ -87,7 +87,7 @@ TEST_CASE ("test tm_*_array") {
 TEST_CASE ("test tm_*") {
   const int bnum=
 #ifdef OS_WASM
-      1 00;
+      150;
 #else
       100000;
 #endif
