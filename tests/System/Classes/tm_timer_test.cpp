@@ -45,9 +45,9 @@ test_same (tm_ostream& a, string b) {
 
 string
 to_zero (tm_ostream& out) {
-  string s1     = out.unbuffer ();
-  char*  ans    = as_charp (s1);
-  char*  current= ans;
+  string   s1= out.unbuffer ();
+  c_string ans (s1);
+  char*    current= ans;
   while ((current= strstr (current, "took"))) {
     current+= strlen ("took");
     while (*current && (*current == '(')) {
@@ -196,14 +196,6 @@ TEST_CASE ("function bench_reset") {
   }
 }
 
-TEST_CASE ("clean up before testing memory leak") {
-  bench_reset ("task");
-  bench_reset ("task1");
-  bench_reset ("task2");
-}
-
-TEST_MEMORY_LEAK_ALL
-
 TEST_CASE ("function bench_print") {
   tm_ostream ostream;
   ostream.buffer ();
@@ -243,4 +235,11 @@ TEST_CASE ("function bench_print") {
 
     CHECK (out == b);
   }
+}
+
+TEST_CASE ("testing memory leakage of tm_timer") {
+  bench_reset ("task");
+  bench_reset ("task1");
+  bench_reset ("task2");
+  CHECK_EQ (mem_used (), mem_lolly);
 }
