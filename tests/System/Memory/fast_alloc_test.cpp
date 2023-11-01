@@ -78,9 +78,14 @@ TEST_CASE ("test class") {
 TEST_CASE ("test tm_*_array") {
   uint8_t* p_complex= tm_new_array<uint8_t> (100);
   tm_delete_array (p_complex);
-  p_complex= tm_new_array<uint8_t> (20000000);
+#ifdef OS_WASM
+  const size_t size_prim= 200, size_complex= 100;
+#else
+  const size_t size_prim= 20000000, size_complex= 5000000;
+#endif
+  p_complex= tm_new_array<uint8_t> (size_prim);
   tm_delete_array (p_complex);
-  Complex* p_wide= tm_new_array<Complex> (5000000);
+  Complex* p_wide= tm_new_array<Complex> (size_complex);
   tm_delete_array (p_wide);
 }
 
@@ -95,6 +100,8 @@ TEST_CASE ("test large bunch of tm_*") {
     tm_delete (volume[i]);
   }
 }
+TEST_MEMORY_LEAK_ALL
+TEST_MEMORY_LEAK_RESET
 #endif
 
 TEST_CASE ("test large bunch of tm_*_array with class") {
