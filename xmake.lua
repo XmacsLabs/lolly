@@ -74,7 +74,7 @@ end
 
 local lolly_files = {
     "Kernel/**/*.cpp",
-    "System/**/*.cpp",
+    "System/**/*.cpp|Memory/impl/*.cpp",
     "Data/String/**.cpp",
     "Data/Scheme/**.cpp",
     "lolly/**/**.cpp",
@@ -107,12 +107,14 @@ target("liblolly") do
 
     --- dependent packages
     add_packages("tbox")
-    if is_config("malloc", "mimalloc") then 
-        add_defines("MIMALLOC")
+    if is_config("malloc", "mimalloc") then
         add_packages("mimalloc")
+        add_files("System/Memory/impl/mi_malloc.cpp")
     elseif is_config("malloc", "jemalloc") then 
-        add_defines("JEMALLOC")
         add_packages("jemalloc")
+        add_files("System/Memory/impl/je_malloc.cpp")
+    else
+        add_files("System/Memory/impl/fast_alloc.cpp")
     end 
     if not is_plat("wasm") then
         add_packages("cpr")
