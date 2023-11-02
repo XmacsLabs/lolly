@@ -11,6 +11,9 @@
 
 #ifndef ANALYZE_H
 #define ANALYZE_H
+
+#include <stdint.h>
+
 #include "array.hpp"
 #include "hashset.hpp"
 #include "ntuple.hpp"
@@ -300,7 +303,7 @@ string downgrade_math_letters (string s);
  * @param nr The integer to be converted to Roman numeral.
  * @return A string representing the Roman numeral.
  */
-string roman_nr (int nr);
+string roman_nr (int32_t nr);
 
 /**
  * @brief Generates an uppercase Roman numeral string for an integer.
@@ -308,7 +311,7 @@ string roman_nr (int nr);
  * @param nr The integer to be converted to Roman numeral.
  * @return A string representing the uppercase Roman numeral.
  */
-string Roman_nr (int nr);
+string Roman_nr (int32_t nr);
 
 /**
  * @brief Generates an alphabetic string for an integer.

@@ -514,20 +514,23 @@ static string hundreds[10]= {"",  "c",  "cc",  "ccc",  "cd",
                              "d", "dc", "dcc", "dccc", "cm"};
 
 string
-roman_nr (int nr) {
-  if (nr < 0) return "-" * roman_nr (-nr);
+roman_nr (int32_t nr) {
   if (nr == 0) return "o";
-  if (nr > 1000) return "m" * roman_nr (nr - 1000);
   if (nr == 1000) return "m";
   if (nr == 999) return "im";
   if (nr == 499) return "id";
+  if (nr >= 10000) return "<unspecified>";
+  if (nr <= -10000) return "<unspecified>";
+
+  if (nr < 0) return "-" * roman_nr (-nr);
+  if (nr > 1000) return "m" * roman_nr (nr - 1000);
   if ((nr % 100) == 99) return hundreds[nr / 100] * "ic";
   if ((nr % 100) == 49) return hundreds[nr / 100] * "il";
   return hundreds[nr / 100] * tens[(nr % 100) / 10] * ones[nr % 10];
 }
 
 string
-Roman_nr (int nr) {
+Roman_nr (int32_t nr) {
   return upcase_all (roman_nr (nr));
 }
 

@@ -141,6 +141,49 @@ TEST_CASE ("replace") {
   CHECK_EQ (replace ("a-b-c", "-", "_") == "a_b_c", true);
 }
 
+TEST_CASE ("roman_nr") {
+  SUBCASE ("0-9") {
+    string_eq (roman_nr (0), "o");
+    string_eq (roman_nr (1), "i");
+    string_eq (roman_nr (2), "ii");
+    string_eq (roman_nr (3), "iii");
+    string_eq (roman_nr (4), "iv");
+    string_eq (roman_nr (5), "v");
+    string_eq (roman_nr (6), "vi");
+    string_eq (roman_nr (7), "vii");
+    string_eq (roman_nr (8), "viii");
+    string_eq (roman_nr (9), "ix");
+  }
+  SUBCASE ("10-99") {
+    string_eq (roman_nr (10), "x");
+    string_eq (roman_nr (20), "xx");
+    string_eq (roman_nr (30), "xxx");
+    string_eq (roman_nr (40), "xl");
+    string_eq (roman_nr (50), "l");
+    string_eq (roman_nr (60), "lx");
+    string_eq (roman_nr (70), "lxx");
+    string_eq (roman_nr (80), "lxxx");
+    string_eq (roman_nr (90), "xc");
+    string_eq (roman_nr (99), "ic");
+  }
+  SUBCASE ("100-999") {
+    string_eq (roman_nr (100), "c");
+    string_eq (roman_nr (200), "cc");
+    string_eq (roman_nr (300), "ccc");
+    string_eq (roman_nr (400), "cd");
+    string_eq (roman_nr (500), "d");
+    string_eq (roman_nr (600), "dc");
+    string_eq (roman_nr (700), "dcc");
+    string_eq (roman_nr (800), "dccc");
+    string_eq (roman_nr (900), "cm");
+    string_eq (roman_nr (999), "im");
+  }
+  SUBCASE ("max int32 or min int32") {
+    string_eq (roman_nr (0x7FFFFFFF), "<unspecified>");
+    string_eq (roman_nr (0x80000000), "<unspecified>");
+  }
+}
+
 TEST_CASE ("hanzi_nr") {
   string_eq (hanzi_nr (-1605), "负一千六百零五");
   string_eq (hanzi_nr (0), "零");
