@@ -519,8 +519,8 @@ roman_nr (int32_t nr) {
   if (nr == 1000) return "m";
   if (nr == 999) return "im";
   if (nr == 499) return "id";
-  if (nr >= 10000) return "<unspecified>";
-  if (nr <= -10000) return "<unspecified>";
+  if (nr >= 3999) return "<unspecified>";
+  if (nr <= -3999) return "<unspecified>";
 
   if (nr < 0) return "-" * roman_nr (-nr);
   if (nr > 1000) return "m" * roman_nr (nr - 1000);
