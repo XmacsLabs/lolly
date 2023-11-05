@@ -26,7 +26,7 @@ end
 
 --- require packages
 tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
-add_requires("tbox dev", {system=false, configs=tbox_configs})
+add_requires("tbox 1.7.5", {system=false, configs=tbox_configs})
 add_requires("doctest 2.4.11", {system=false})
 option("malloc")
     set_default("standard")
