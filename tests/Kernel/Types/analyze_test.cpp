@@ -164,7 +164,7 @@ TEST_CASE ("roman_nr") {
     string_eq (roman_nr (70), "lxx");
     string_eq (roman_nr (80), "lxxx");
     string_eq (roman_nr (90), "xc");
-    string_eq (roman_nr (99), "ic");
+    string_eq (roman_nr (99), "xcix");
   }
   SUBCASE ("100-999") {
     string_eq (roman_nr (100), "c");
@@ -176,9 +176,11 @@ TEST_CASE ("roman_nr") {
     string_eq (roman_nr (700), "dcc");
     string_eq (roman_nr (800), "dccc");
     string_eq (roman_nr (900), "cm");
-    string_eq (roman_nr (999), "im");
+    string_eq (roman_nr (999), "cmxcix");
   }
+  SUBCASE ("1000-3999") { string_eq (roman_nr (3999), "mmmcmxcix"); }
   SUBCASE ("max int32 or min int32") {
+    string_eq (roman_nr (4000), "<unspecified>");
     string_eq (roman_nr (0x7FFFFFFF), "<unspecified>");
     string_eq (roman_nr (0x80000000), "<unspecified>");
   }
