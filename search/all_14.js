@@ -36,13 +36,14 @@ var searchData=
   ['project_201_3a_20documentation_33',['Project 1: Documentation',['../md_devel_1.html',1,'']]],
   ['project_202_3a_20unit_20tests_34',['Project 2: Unit Tests',['../md_devel_2.html',1,'']]],
   ['project_3a_20ci_2fcd_20on_20gitee_2fgithub_2fcodeberg_35',['Project: CI/CD on Gitee/Github/Codeberg',['../md_devel_4.html',1,'']]],
-  ['project_3a_20port_20lolly_20to_20msvc_36',['Project: Port lolly to msvc',['../md_devel_3.html',1,'']]],
-  ['project_3a_20upgrade_20to_20xmake_202_2e8_2e5_37',['Project: Upgrade to xmake 2.8.5',['../md_devel_18.html',1,'']]],
-  ['promise_38',['promise',['../classpromise.html',1,'']]],
-  ['promise_2ehpp_39',['promise.hpp',['../promise_8hpp.html',1,'']]],
-  ['promise_5frep_40',['promise_rep',['../classpromise__rep.html#a0b94e8b3d00b9da59e5ded8bb9016f94',1,'promise_rep::promise_rep()'],['../classpromise__rep.html',1,'promise_rep&lt; T &gt;']]],
-  ['promise_5frep_3c_20int_20_3e_41',['promise_rep&lt; int &gt;',['../classpromise__rep.html',1,'']]],
-  ['promise_5frep_5fint_5fadd_42',['promise_rep_int_add',['../classpromise__rep__int__add.html#a1f95fe618be5391a707deb099a157992',1,'promise_rep_int_add::promise_rep_int_add()'],['../classpromise__rep__int__add.html',1,'promise_rep_int_add']]],
-  ['promise_5ftest_2ecpp_43',['promise_test.cpp',['../promise__test_8cpp.html',1,'']]],
-  ['protocol_44',['protocol',['../classurl.html#a50d995f1deaa4382f7db95c2277cd464',1,'url']]]
+  ['project_3a_20number_36',['Project: Number',['../md_devel_17.html',1,'']]],
+  ['project_3a_20port_20lolly_20to_20msvc_37',['Project: Port lolly to msvc',['../md_devel_3.html',1,'']]],
+  ['project_3a_20upgrade_20to_20xmake_202_2e8_2e5_38',['Project: Upgrade to xmake 2.8.5',['../md_devel_18.html',1,'']]],
+  ['promise_39',['promise',['../classpromise.html',1,'']]],
+  ['promise_2ehpp_40',['promise.hpp',['../promise_8hpp.html',1,'']]],
+  ['promise_5frep_41',['promise_rep',['../classpromise__rep.html#a0b94e8b3d00b9da59e5ded8bb9016f94',1,'promise_rep::promise_rep()'],['../classpromise__rep.html',1,'promise_rep&lt; T &gt;']]],
+  ['promise_5frep_3c_20int_20_3e_42',['promise_rep&lt; int &gt;',['../classpromise__rep.html',1,'']]],
+  ['promise_5frep_5fint_5fadd_43',['promise_rep_int_add',['../classpromise__rep__int__add.html#a1f95fe618be5391a707deb099a157992',1,'promise_rep_int_add::promise_rep_int_add()'],['../classpromise__rep__int__add.html',1,'promise_rep_int_add']]],
+  ['promise_5ftest_2ecpp_44',['promise_test.cpp',['../promise__test_8cpp.html',1,'']]],
+  ['protocol_45',['protocol',['../classurl.html#a50d995f1deaa4382f7db95c2277cd464',1,'url']]]
 ];
