@@ -1,4 +1,4 @@
-set_xmakever("2.8.3")
+set_xmakever("2.8.5")
 
 -- add releasedbg, debug and release modes.
 set_allowedmodes("releasedbg", "release", "debug")
