@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['develop_5fon_5flinux_2emd_0',['Develop_on_Linux.md',['../zh_2guide_2Develop__on__Linux_8md.html',1,'']]],
-  ['develop_5fon_5fwindows_2emd_1',['Develop_on_Windows.md',['../zh_2guide_2Develop__on__Windows_8md.html',1,'']]],
-  ['format_2emd_2',['Format.md',['../zh_2guide_2Format_8md.html',1,'']]],
-  ['test_2emd_3',['Test.md',['../zh_2guide_2Test_8md.html',1,'']]],
-  ['zero_5felem_4',['zero_elem',['../array__test_8cpp.html#a33314050315eadc2189e60d29b2c3bc0',1,'array_test.cpp']]],
-  ['zero_5fpath_5',['zero_path',['../path_8cpp.html#a16e5e2b7972351529f9a1e25ecfb2331',1,'zero_path(path p):&#160;path.cpp'],['../path_8hpp.html#a16e5e2b7972351529f9a1e25ecfb2331',1,'zero_path(path p):&#160;path.cpp']]]
+  ['value_0',['value',['../classc__string__rep.html#a99fba435aef9897468f8e74293420864',1,'c_string_rep']]],
+  ['version_5finf_1',['version_inf',['../path_8cpp.html#a467dc50ebd84ae521579f6c8fd287ff3',1,'version_inf(string v1, string v2):&#160;path.cpp'],['../path_8hpp.html#a467dc50ebd84ae521579f6c8fd287ff3',1,'version_inf(string v1, string v2):&#160;path.cpp']]],
+  ['version_5finf_5feq_2',['version_inf_eq',['../path_8cpp.html#a04ea07dd5ffe3f4653b6ecf4e2e3ec78',1,'version_inf_eq(string v1, string v2):&#160;path.cpp'],['../path_8hpp.html#a04ea07dd5ffe3f4653b6ecf4e2e3ec78',1,'version_inf_eq(string v1, string v2):&#160;path.cpp']]]
 ];

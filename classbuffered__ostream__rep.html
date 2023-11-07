@@ -118,6 +118,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8f428986d668d0f66fe91af3f80abaf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8961b55095b3ee21727a49c7b4f765f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbuffered__ostream__rep.html#af8961b55095b3ee21727a49c7b4f765f">buf</a></td></tr>
 <tr class="separator:af8961b55095b3ee21727a49c7b4f765f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classtm__ostream__rep"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classtm__ostream__rep')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classtm__ostream__rep.html">tm_ostream_rep</a></td></tr>
+<tr class="memitem:ad96047c6cc43d7662abd27703596e600 inherit pub_attribs_classtm__ostream__rep"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtm__ostream__rep.html#ad96047c6cc43d7662abd27703596e600">ref_count</a></td></tr>
+<tr class="separator:ad96047c6cc43d7662abd27703596e600 inherit pub_attribs_classtm__ostream__rep"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -161,7 +164,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="tm__ostream_8cpp_source.html#l00133">133</a> of file <a class="el" href="tm__ostream_8cpp_source.html">tm_ostream.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>{ <a class="code hl_define" href="basic_8hpp.html#a4f8364cb401cc5bd7fd26d6478aa79ff">DEC_COUNT</a> (<a class="code hl_variable" href="classbuffered__ostream__rep.html#a8f428986d668d0f66fe91af3f80abaf4">master</a>); }</div>
+<div class="ttc" id="abasic_8hpp_html_a4f8364cb401cc5bd7fd26d6478aa79ff"><div class="ttname"><a href="basic_8hpp.html#a4f8364cb401cc5bd7fd26d6478aa79ff">DEC_COUNT</a></div><div class="ttdeci">#define DEC_COUNT(R)</div><div class="ttdoc">Macro used to decrement the reference count for a structure object and delete it if the count reaches...</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00487">basic.hpp:487</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

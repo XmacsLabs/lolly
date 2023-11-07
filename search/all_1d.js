@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['如何格式化代码_0',['如何格式化代码',['../md_docs_zh_guide_Format.html',1,'']]],
-  ['如何测试_1',['如何测试',['../md_docs_zh_guide_Test.html',1,'']]]
+  ['y_0',['y',['../classpromise__rep__int__add.html#a4f838a0f706115f7ebfff9b1e44cf89a',1,'promise_rep_int_add']]]
 ];

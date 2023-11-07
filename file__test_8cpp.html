@@ -95,6 +95,8 @@ Include dependency graph for file_test.cpp:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a80d276906da7fc8997150532b39ba505"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classurl.html">url</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ()</td></tr>
 <tr class="separator:a80d276906da7fc8997150532b39ba505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31abfaac2a34b0d170ceea277cb16a82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__test_8cpp.html#a31abfaac2a34b0d170ceea277cb16a82">remove_if_exist</a> (const <a class="el" href="classurl.html">url</a> &amp;u1)</td></tr>
+<tr class="separator:a31abfaac2a34b0d170ceea277cb16a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a167b564304d1eb6e76224abc29ba8df7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lolly__doctests_8hpp.html#a931102e4e092186b370d8091d2cb6712">TEST_MEMORY_LEAK_INIT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__test_8cpp.html#a167b564304d1eb6e76224abc29ba8df7">TEST_CASE</a> (&quot;is_directory/is_regular&quot;)</td></tr>
 <tr class="separator:a167b564304d1eb6e76224abc29ba8df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a761e10e660051e615fa2f97bee6bfe88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__test_8cpp.html#a761e10e660051e615fa2f97bee6bfe88">TEST_CASE</a> (&quot;is_newer&quot;)</td></tr>
@@ -178,6 +180,35 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a31abfaac2a34b0d170ceea277cb16a82" name="a31abfaac2a34b0d170ceea277cb16a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31abfaac2a34b0d170ceea277cb16a82">&#9670;&#160;</a></span>remove_if_exist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_if_exist </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classurl.html">url</a> &amp;&#160;</td>
+          <td class="paramname"><em>u1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00026">26</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>                                {</div>
+<div class="line"><span class="lineno">   27</span>  <a class="code hl_class" href="classc__string.html">c_string</a>       path1 (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1));</div>
+<div class="line"><span class="lineno">   28</span>  tb_file_info_t info;</div>
+<div class="line"><span class="lineno">   29</span>  <span class="keywordflow">if</span> (tb_file_info (path1, &amp;info)) {</div>
+<div class="line"><span class="lineno">   30</span>    tb_file_remove (path1);</div>
+<div class="line"><span class="lineno">   31</span>  };</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+<div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00110">string.hpp:110</a></div></div>
+<div class="ttc" id="apath_8cpp_html_a6533057a5c870ee5ec0b2e688dd4d90f"><div class="ttname"><a href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a></div><div class="ttdeci">string as_string(path p)</div><div class="ttdef"><b>Definition:</b> <a href="path_8cpp_source.html#l00037">path.cpp:37</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a167b564304d1eb6e76224abc29ba8df7" name="a167b564304d1eb6e76224abc29ba8df7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a167b564304d1eb6e76224abc29ba8df7">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/22]</span></h2>
 
@@ -194,21 +225,21 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00033">33</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                      {</div>
-<div class="line"><span class="lineno">   34</span><span class="preprocessor">#if defined(OS_LINUX) || defined(OS_MACOS) || defined(OS_WASM)</span></div>
-<div class="line"><span class="lineno">   35</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_variable" href="file__test_8cpp.html#ae83324fe46ec53aab2c9829e0f634665">unix_root</a>));</div>
-<div class="line"><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   37</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <span class="stringliteral">&quot;tests&quot;</span>));</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ()));</div>
-<div class="line"><span class="lineno">   40</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a050a74eb8a7a094681a16a11cc700944">is_regular</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ()));</div>
-<div class="line"><span class="lineno">   41</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a91924c509aa15e1d5b58d1acbb8d97d1">is_symbolic_link</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ()));</div>
-<div class="line"><span class="lineno">   42</span> </div>
-<div class="line"><span class="lineno">   43</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>));</div>
-<div class="line"><span class="lineno">   44</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a050a74eb8a7a094681a16a11cc700944">is_regular</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>));</div>
-<div class="line"><span class="lineno">   45</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a91924c509aa15e1d5b58d1acbb8d97d1">is_symbolic_link</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>));</div>
-<div class="line"><span class="lineno">   46</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00042">42</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                      {</div>
+<div class="line"><span class="lineno">   43</span><span class="preprocessor">#if defined(OS_LINUX) || defined(OS_MACOS) || defined(OS_WASM)</span></div>
+<div class="line"><span class="lineno">   44</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_variable" href="file__test_8cpp.html#ae83324fe46ec53aab2c9829e0f634665">unix_root</a>));</div>
+<div class="line"><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   46</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <span class="stringliteral">&quot;tests&quot;</span>));</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ()));</div>
+<div class="line"><span class="lineno">   49</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a050a74eb8a7a094681a16a11cc700944">is_regular</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ()));</div>
+<div class="line"><span class="lineno">   50</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a91924c509aa15e1d5b58d1acbb8d97d1">is_symbolic_link</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ()));</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>));</div>
+<div class="line"><span class="lineno">   53</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a050a74eb8a7a094681a16a11cc700944">is_regular</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>));</div>
+<div class="line"><span class="lineno">   54</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a91924c509aa15e1d5b58d1acbb8d97d1">is_symbolic_link</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>));</div>
+<div class="line"><span class="lineno">   55</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a050a74eb8a7a094681a16a11cc700944"><div class="ttname"><a href="file_8cpp.html#a050a74eb8a7a094681a16a11cc700944">is_regular</a></div><div class="ttdeci">bool is_regular(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00048">file.cpp:48</a></div></div>
 <div class="ttc" id="afile_8cpp_html_a1f38de5e1ae10c13d94b20717a2156f9"><div class="ttname"><a href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a></div><div class="ttdeci">bool is_directory(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00029">file.cpp:29</a></div></div>
 <div class="ttc" id="afile_8cpp_html_a91924c509aa15e1d5b58d1acbb8d97d1"><div class="ttname"><a href="file_8cpp.html#a91924c509aa15e1d5b58d1acbb8d97d1">is_symbolic_link</a></div><div class="ttdeci">bool is_symbolic_link(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00067">file.cpp:67</a></div></div>
@@ -234,18 +265,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00048">48</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                       {</div>
-<div class="line"><span class="lineno">   49</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">   50</span>  <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (lolly_tmp);</div>
-<div class="line"><span class="lineno">   51</span>  <a class="code hl_class" href="classurl.html">url</a> old_dir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;old&quot;</span>);</div>
-<div class="line"><span class="lineno">   52</span>  <a class="code hl_class" href="classurl.html">url</a> new_dir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;new&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span>  <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (old_dir);</div>
-<div class="line"><span class="lineno">   54</span>  tb_sleep (1);</div>
-<div class="line"><span class="lineno">   55</span>  <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (new_dir);</div>
-<div class="line"><span class="lineno">   56</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a4011b7c5aa74db3e7c98a476168cd1e6">is_newer</a> (new_dir, old_dir));</div>
-<div class="line"><span class="lineno">   57</span>  <a class="code hl_function" href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a> (old_dir | new_dir);</div>
-<div class="line"><span class="lineno">   58</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00057">57</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                       {</div>
+<div class="line"><span class="lineno">   58</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">   59</span>  <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (lolly_tmp);</div>
+<div class="line"><span class="lineno">   60</span>  <a class="code hl_class" href="classurl.html">url</a> old_dir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;old&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>  <a class="code hl_class" href="classurl.html">url</a> new_dir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;new&quot;</span>);</div>
+<div class="line"><span class="lineno">   62</span>  <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (old_dir);</div>
+<div class="line"><span class="lineno">   63</span>  tb_sleep (1);</div>
+<div class="line"><span class="lineno">   64</span>  <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (new_dir);</div>
+<div class="line"><span class="lineno">   65</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a4011b7c5aa74db3e7c98a476168cd1e6">is_newer</a> (new_dir, old_dir));</div>
+<div class="line"><span class="lineno">   66</span>  <a class="code hl_function" href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a> (old_dir | new_dir);</div>
+<div class="line"><span class="lineno">   67</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a4011b7c5aa74db3e7c98a476168cd1e6"><div class="ttname"><a href="file_8cpp.html#a4011b7c5aa74db3e7c98a476168cd1e6">is_newer</a></div><div class="ttdeci">bool is_newer(url which, url than)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00081">file.cpp:81</a></div></div>
 <div class="ttc" id="afile_8cpp_html_a55cd0c0a7563e91f3ae1fd7722b4d80c"><div class="ttname"><a href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a></div><div class="ttdeci">void rmdir(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00225">file.cpp:225</a></div></div>
 <div class="ttc" id="afile_8cpp_html_ae1088448c5be27e69ebaffe110214798"><div class="ttname"><a href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a></div><div class="ttdeci">void mkdir(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00202">file.cpp:202</a></div></div>
@@ -269,15 +300,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00060">60</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                         {</div>
-<div class="line"><span class="lineno">   61</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> (), <span class="stringliteral">&quot;d&quot;</span>));</div>
-<div class="line"><span class="lineno">   62</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> (), <span class="stringliteral">&quot;f&quot;</span>));</div>
-<div class="line"><span class="lineno">   63</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>, <span class="stringliteral">&quot;fr&quot;</span>));</div>
-<div class="line"><span class="lineno">   64</span><span class="preprocessor">#if defined(OS_MINGW) || defined(OS_WIN)</span></div>
-<div class="line"><span class="lineno">   65</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;bin/format.bat&quot;</span>), <span class="stringliteral">&quot;x&quot;</span>));</div>
-<div class="line"><span class="lineno">   66</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   67</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00069">69</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>                         {</div>
+<div class="line"><span class="lineno">   70</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> (), <span class="stringliteral">&quot;d&quot;</span>));</div>
+<div class="line"><span class="lineno">   71</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> (), <span class="stringliteral">&quot;f&quot;</span>));</div>
+<div class="line"><span class="lineno">   72</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>, <span class="stringliteral">&quot;fr&quot;</span>));</div>
+<div class="line"><span class="lineno">   73</span><span class="preprocessor">#if defined(OS_MINGW) || defined(OS_WIN)</span></div>
+<div class="line"><span class="lineno">   74</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;bin/format.bat&quot;</span>), <span class="stringliteral">&quot;x&quot;</span>));</div>
+<div class="line"><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   76</span>}</div>
 <div class="ttc" id="afile_8cpp_html_afbb8ec4f9a36d5be5eaeea4e8334bcc3"><div class="ttname"><a href="file_8cpp.html#afbb8ec4f9a36d5be5eaeea4e8334bcc3">is_of_type</a></div><div class="ttdeci">bool is_of_type(url name, string filter)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00096">file.cpp:96</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -298,8 +329,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00069">69</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>{ CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>) &gt; 0); }</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00078">78</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>{ CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>) &gt; 0); }</div>
 <div class="ttc" id="afile_8cpp_html_aa2785cb5277458f95607537f48a2a8c2"><div class="ttname"><a href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a></div><div class="ttdeci">int file_size(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00146">file.cpp:146</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -320,8 +351,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00071">71</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>{ CHECK (<a class="code hl_function" href="file_8cpp.html#a01792b80592120b32acc7165f73f4dff">last_modified</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>) &gt; 0); }</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00080">80</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>{ CHECK (<a class="code hl_function" href="file_8cpp.html#a01792b80592120b32acc7165f73f4dff">last_modified</a> (<a class="code hl_variable" href="file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc">xmake_lua</a>) &gt; 0); }</div>
 <div class="ttc" id="afile_8cpp_html_a01792b80592120b32acc7165f73f4dff"><div class="ttname"><a href="file_8cpp.html#a01792b80592120b32acc7165f73f4dff">last_modified</a></div><div class="ttdeci">int last_modified(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00160">file.cpp:160</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -342,15 +373,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00073">73</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                          {</div>
-<div class="line"><span class="lineno">   74</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp = <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">   75</span>  <a class="code hl_class" href="classurl.html">url</a> test_mkdir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;tmp_dir&quot;</span>);</div>
-<div class="line"><span class="lineno">   76</span>  <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">   77</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
-<div class="line"><span class="lineno">   78</span>  <a class="code hl_function" href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">   79</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
-<div class="line"><span class="lineno">   80</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00082">82</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                          {</div>
+<div class="line"><span class="lineno">   83</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp = <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">   84</span>  <a class="code hl_class" href="classurl.html">url</a> test_mkdir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;tmp_dir&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>  <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">   86</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
+<div class="line"><span class="lineno">   87</span>  <a class="code hl_function" href="file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c">rmdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">   88</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
+<div class="line"><span class="lineno">   89</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -370,68 +401,68 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00082">82</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                    {</div>
-<div class="line"><span class="lineno">   83</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">   84</span>  <a class="code hl_class" href="classurl.html">url</a> old      = <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>  SUBCASE (<span class="stringliteral">&quot;tmp directory&quot;</span>) {</div>
-<div class="line"><span class="lineno">   87</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;ch_dir&quot;</span>);</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">   90</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">   93</span>    <a class="code hl_class" href="classurl.html">url</a> cur= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
-<div class="line"><span class="lineno">   94</span>    CHECK (cur == test_mkdir);</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>    <span class="comment">// restore the test dir</span></div>
-<div class="line"><span class="lineno">   97</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (old);</div>
-<div class="line"><span class="lineno">   98</span>  }</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>  SUBCASE (<span class="stringliteral">&quot;Root directory&quot;</span>) {</div>
-<div class="line"><span class="lineno">  101</span><span class="preprocessor">#if defined(OS_MINGW) || defined(OS_WIN)</span></div>
-<div class="line"><span class="lineno">  102</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= <a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;C:\\&quot;</span>);</div>
-<div class="line"><span class="lineno">  103</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  104</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= <a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><span class="lineno">  105</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">  108</span>    <a class="code hl_class" href="classurl.html">url</a> cur= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
-<div class="line"><span class="lineno">  109</span>    CHECK (cur == test_mkdir);</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>    <span class="comment">// restore the test dir</span></div>
-<div class="line"><span class="lineno">  112</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (old);</div>
-<div class="line"><span class="lineno">  113</span>  }</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>  SUBCASE (<span class="stringliteral">&quot;chinese&quot;</span>) {</div>
-<div class="line"><span class="lineno">  116</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;中文&quot;</span>);</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">  119</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">  122</span>    <a class="code hl_class" href="classurl.html">url</a> cur= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
-<div class="line"><span class="lineno">  123</span>    CHECK (cur == test_mkdir);</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>    <span class="comment">// restore the test dir</span></div>
-<div class="line"><span class="lineno">  126</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (old);</div>
-<div class="line"><span class="lineno">  127</span>  }</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>  SUBCASE (<span class="stringliteral">&quot;dir with Space&quot;</span>) {</div>
-<div class="line"><span class="lineno">  130</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot; spa ce&quot;</span>);</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">  133</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (test_mkdir);</div>
-<div class="line"><span class="lineno">  136</span>    <a class="code hl_class" href="classurl.html">url</a> cur= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
-<div class="line"><span class="lineno">  137</span>    CHECK (cur == test_mkdir);</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>    <span class="comment">// restore the test dir</span></div>
-<div class="line"><span class="lineno">  140</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (old);</div>
-<div class="line"><span class="lineno">  141</span>  }</div>
-<div class="line"><span class="lineno">  142</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00091">91</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                    {</div>
+<div class="line"><span class="lineno">   92</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">   93</span>  <a class="code hl_class" href="classurl.html">url</a> old      = <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>  SUBCASE (<span class="stringliteral">&quot;tmp directory&quot;</span>) {</div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;ch_dir&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">   99</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">  102</span>    <a class="code hl_class" href="classurl.html">url</a> cur= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
+<div class="line"><span class="lineno">  103</span>    CHECK (cur == test_mkdir);</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    <span class="comment">// restore the test dir</span></div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (old);</div>
+<div class="line"><span class="lineno">  107</span>  }</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>  SUBCASE (<span class="stringliteral">&quot;Root directory&quot;</span>) {</div>
+<div class="line"><span class="lineno">  110</span><span class="preprocessor">#if defined(OS_MINGW) || defined(OS_WIN)</span></div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= <a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;C:\\&quot;</span>);</div>
+<div class="line"><span class="lineno">  112</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= <a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><span class="lineno">  114</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">  117</span>    <a class="code hl_class" href="classurl.html">url</a> cur= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
+<div class="line"><span class="lineno">  118</span>    CHECK (cur == test_mkdir);</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>    <span class="comment">// restore the test dir</span></div>
+<div class="line"><span class="lineno">  121</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (old);</div>
+<div class="line"><span class="lineno">  122</span>  }</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>  SUBCASE (<span class="stringliteral">&quot;chinese&quot;</span>) {</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;中文&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">  128</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_class" href="classurl.html">url</a> cur= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
+<div class="line"><span class="lineno">  132</span>    CHECK (cur == test_mkdir);</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>    <span class="comment">// restore the test dir</span></div>
+<div class="line"><span class="lineno">  135</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (old);</div>
+<div class="line"><span class="lineno">  136</span>  }</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>  SUBCASE (<span class="stringliteral">&quot;dir with Space&quot;</span>) {</div>
+<div class="line"><span class="lineno">  139</span>    <a class="code hl_class" href="classurl.html">url</a> test_mkdir= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot; spa ce&quot;</span>);</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>    <a class="code hl_function" href="file_8cpp.html#ae1088448c5be27e69ebaffe110214798">mkdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">  142</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (test_mkdir));</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (test_mkdir);</div>
+<div class="line"><span class="lineno">  145</span>    <a class="code hl_class" href="classurl.html">url</a> cur= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> ();</div>
+<div class="line"><span class="lineno">  146</span>    CHECK (cur == test_mkdir);</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    <span class="comment">// restore the test dir</span></div>
+<div class="line"><span class="lineno">  149</span>    <a class="code hl_function" href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a> (old);</div>
+<div class="line"><span class="lineno">  150</span>  }</div>
+<div class="line"><span class="lineno">  151</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a718059b9912f0743aa0321fb8a6e79e9"><div class="ttname"><a href="file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9">chdir</a></div><div class="ttdeci">void chdir(url u)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00239">file.cpp:239</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -452,38 +483,36 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00144">144</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                     {</div>
-<div class="line"><span class="lineno">  145</span>  <a class="code hl_class" href="classurl.html">url</a>       lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  146</span>  tb_hong_t time     = tb_time ();</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>  SUBCASE (<span class="stringliteral">&quot;single file&quot;</span>) {</div>
-<div class="line"><span class="lineno">  149</span>    <a class="code hl_class" href="classurl.html">url</a> xyz_txt= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;xyz.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  150</span>    tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (xyz_txt)), time, time);</div>
-<div class="line"><span class="lineno">  151</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz_txt) == 0);</div>
-<div class="line"><span class="lineno">  152</span>    <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (xyz_txt);</div>
-<div class="line"><span class="lineno">  153</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz_txt) == -1);</div>
-<div class="line"><span class="lineno">  154</span>  }</div>
-<div class="line"><span class="lineno">  155</span> </div>
-<div class="line"><span class="lineno">  156</span>  SUBCASE (<span class="stringliteral">&quot;multiple files&quot;</span>) {</div>
-<div class="line"><span class="lineno">  157</span>    <a class="code hl_class" href="classurl.html">url</a> xyz1_txt= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;xyz1.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  158</span>    <a class="code hl_class" href="classurl.html">url</a> xyz2_txt= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;xyz2.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  159</span>    <a class="code hl_class" href="classurl.html">url</a> xyz3_txt= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;xyz3.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  160</span>    tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (xyz1_txt)), time, time);</div>
-<div class="line"><span class="lineno">  161</span>    tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (xyz2_txt)), time, time);</div>
-<div class="line"><span class="lineno">  162</span>    tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (xyz3_txt)), time, time);</div>
-<div class="line"><span class="lineno">  163</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz1_txt) == 0);</div>
-<div class="line"><span class="lineno">  164</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz2_txt) == 0);</div>
-<div class="line"><span class="lineno">  165</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz3_txt) == 0);</div>
-<div class="line"><span class="lineno">  166</span>    <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (xyz1_txt | xyz2_txt | xyz3_txt);</div>
-<div class="line"><span class="lineno">  167</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz1_txt) == -1);</div>
-<div class="line"><span class="lineno">  168</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz2_txt) == -1);</div>
-<div class="line"><span class="lineno">  169</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz3_txt) == -1);</div>
-<div class="line"><span class="lineno">  170</span>  }</div>
-<div class="line"><span class="lineno">  171</span>}</div>
-<div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00110">string.hpp:110</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00153">153</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>                     {</div>
+<div class="line"><span class="lineno">  154</span>  <a class="code hl_class" href="classurl.html">url</a>       lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  155</span>  tb_hong_t time     = tb_time ();</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>  SUBCASE (<span class="stringliteral">&quot;single file&quot;</span>) {</div>
+<div class="line"><span class="lineno">  158</span>    <a class="code hl_class" href="classurl.html">url</a> xyz_txt= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;xyz.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  159</span>    tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (xyz_txt)), time, time);</div>
+<div class="line"><span class="lineno">  160</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz_txt) == 0);</div>
+<div class="line"><span class="lineno">  161</span>    <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (xyz_txt);</div>
+<div class="line"><span class="lineno">  162</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz_txt) == -1);</div>
+<div class="line"><span class="lineno">  163</span>  }</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>  SUBCASE (<span class="stringliteral">&quot;multiple files&quot;</span>) {</div>
+<div class="line"><span class="lineno">  166</span>    <a class="code hl_class" href="classurl.html">url</a> xyz1_txt= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;xyz1.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  167</span>    <a class="code hl_class" href="classurl.html">url</a> xyz2_txt= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;xyz2.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  168</span>    <a class="code hl_class" href="classurl.html">url</a> xyz3_txt= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;xyz3.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  169</span>    tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (xyz1_txt)), time, time);</div>
+<div class="line"><span class="lineno">  170</span>    tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (xyz2_txt)), time, time);</div>
+<div class="line"><span class="lineno">  171</span>    tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (xyz3_txt)), time, time);</div>
+<div class="line"><span class="lineno">  172</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz1_txt) == 0);</div>
+<div class="line"><span class="lineno">  173</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz2_txt) == 0);</div>
+<div class="line"><span class="lineno">  174</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz3_txt) == 0);</div>
+<div class="line"><span class="lineno">  175</span>    <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (xyz1_txt | xyz2_txt | xyz3_txt);</div>
+<div class="line"><span class="lineno">  176</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz1_txt) == -1);</div>
+<div class="line"><span class="lineno">  177</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz2_txt) == -1);</div>
+<div class="line"><span class="lineno">  178</span>    CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (xyz3_txt) == -1);</div>
+<div class="line"><span class="lineno">  179</span>  }</div>
+<div class="line"><span class="lineno">  180</span>}</div>
 <div class="ttc" id="alist_8hpp_html_a42eb6f916ba8f2e3e1d1266d11e18583"><div class="ttname"><a href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a></div><div class="ttdeci">list&lt; T &gt; remove(list&lt; T &gt; l, T what)</div><div class="ttdoc">Create a new list with a specific item removed.</div><div class="ttdef"><b>Definition:</b> <a href="list_8ipp_source.html#l00203">list.ipp:203</a></div></div>
-<div class="ttc" id="apath_8cpp_html_a6533057a5c870ee5ec0b2e688dd4d90f"><div class="ttname"><a href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a></div><div class="ttdeci">string as_string(path p)</div><div class="ttdef"><b>Definition:</b> <a href="path_8cpp_source.html#l00037">path.cpp:37</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -503,18 +532,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00173">173</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>                   {</div>
-<div class="line"><span class="lineno">  174</span>  <a class="code hl_class" href="classurl.html">url</a>       lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  175</span>  tb_hong_t time     = tb_time ();</div>
-<div class="line"><span class="lineno">  176</span>  <a class="code hl_class" href="classurl.html">url</a>       m1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;move_1.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  177</span>  <a class="code hl_class" href="classurl.html">url</a>       m2       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;move_2.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  178</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (m1)), time, time);</div>
-<div class="line"><span class="lineno">  179</span>  <a class="code hl_function" href="file_8cpp.html#a5678d220291b4fdd65cd45f31d5edf92">move</a> (m1, m2);</div>
-<div class="line"><span class="lineno">  180</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (m1) == -1);</div>
-<div class="line"><span class="lineno">  181</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (m2) == 0);</div>
-<div class="line"><span class="lineno">  182</span>  <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (m2);</div>
-<div class="line"><span class="lineno">  183</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00182">182</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>                   {</div>
+<div class="line"><span class="lineno">  183</span>  <a class="code hl_class" href="classurl.html">url</a>       lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  184</span>  tb_hong_t time     = tb_time ();</div>
+<div class="line"><span class="lineno">  185</span>  <a class="code hl_class" href="classurl.html">url</a>       m1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;move_1.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  186</span>  <a class="code hl_class" href="classurl.html">url</a>       m2       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;move_2.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  187</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (m1)), time, time);</div>
+<div class="line"><span class="lineno">  188</span>  <a class="code hl_function" href="file_8cpp.html#a5678d220291b4fdd65cd45f31d5edf92">move</a> (m1, m2);</div>
+<div class="line"><span class="lineno">  189</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (m1) == -1);</div>
+<div class="line"><span class="lineno">  190</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (m2) == 0);</div>
+<div class="line"><span class="lineno">  191</span>  <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (m2);</div>
+<div class="line"><span class="lineno">  192</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a5678d220291b4fdd65cd45f31d5edf92"><div class="ttname"><a href="file_8cpp.html#a5678d220291b4fdd65cd45f31d5edf92">move</a></div><div class="ttdeci">void move(url u1, url u2)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00289">file.cpp:289</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -535,20 +564,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00185">185</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                   {</div>
-<div class="line"><span class="lineno">  186</span>  <a class="code hl_class" href="classurl.html">url</a>       lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  187</span>  tb_hong_t time     = tb_time ();</div>
-<div class="line"><span class="lineno">  188</span>  <a class="code hl_class" href="classurl.html">url</a>       c1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;copy_1.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  189</span>  <a class="code hl_class" href="classurl.html">url</a>       c2       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;copy_2.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  190</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (c1)), time, time);</div>
-<div class="line"><span class="lineno">  191</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (c2) == -1);</div>
-<div class="line"><span class="lineno">  192</span>  <a class="code hl_function" href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a> (c1, c2);</div>
-<div class="line"><span class="lineno">  193</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (c1) == 0);</div>
-<div class="line"><span class="lineno">  194</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (c2) == 0);</div>
-<div class="line"><span class="lineno">  195</span>  <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (c1);</div>
-<div class="line"><span class="lineno">  196</span>  <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (c2);</div>
-<div class="line"><span class="lineno">  197</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00194">194</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>                   {</div>
+<div class="line"><span class="lineno">  195</span>  <a class="code hl_class" href="classurl.html">url</a>       lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  196</span>  tb_hong_t time     = tb_time ();</div>
+<div class="line"><span class="lineno">  197</span>  <a class="code hl_class" href="classurl.html">url</a>       c1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;copy_1.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  198</span>  <a class="code hl_class" href="classurl.html">url</a>       c2       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;copy_2.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  199</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (c1)), time, time);</div>
+<div class="line"><span class="lineno">  200</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (c2) == -1);</div>
+<div class="line"><span class="lineno">  201</span>  <a class="code hl_function" href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a> (c1, c2);</div>
+<div class="line"><span class="lineno">  202</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (c1) == 0);</div>
+<div class="line"><span class="lineno">  203</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (c2) == 0);</div>
+<div class="line"><span class="lineno">  204</span>  <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (c1);</div>
+<div class="line"><span class="lineno">  205</span>  <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a> (c2);</div>
+<div class="line"><span class="lineno">  206</span>}</div>
 <div class="ttc" id="abasic_8hpp_html_a2ef6020a582fc3399a7f7af2334655b9"><div class="ttname"><a href="basic_8hpp.html#a2ef6020a582fc3399a7f7af2334655b9">copy</a></div><div class="ttdeci">int copy(int x)</div><div class="ttdoc">Returns a copy of an integer.</div><div class="ttdef"><b>Definition:</b> <a href="basic_8hpp_source.html#l00334">basic.hpp:334</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -569,15 +598,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00201">201</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                       {</div>
-<div class="line"><span class="lineno">  202</span>  <a class="code hl_class" href="classurl.html">url</a>       tmp1= <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> (<span class="stringliteral">&quot;test&quot;</span>);</div>
-<div class="line"><span class="lineno">  203</span>  tb_hong_t time= tb_time ();</div>
-<div class="line"><span class="lineno">  204</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (tmp1)), time, time);</div>
-<div class="line"><span class="lineno">  205</span>  <a class="code hl_class" href="classurl.html">url</a> tmp2= <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> (<span class="stringliteral">&quot;test&quot;</span>);</div>
-<div class="line"><span class="lineno">  206</span>  CHECK_EQ (tmp1 == tmp2, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  207</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_function" href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a> ()));</div>
-<div class="line"><span class="lineno">  208</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00210">210</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>                       {</div>
+<div class="line"><span class="lineno">  211</span>  <a class="code hl_class" href="classurl.html">url</a>       tmp1= <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> (<span class="stringliteral">&quot;test&quot;</span>);</div>
+<div class="line"><span class="lineno">  212</span>  tb_hong_t time= tb_time ();</div>
+<div class="line"><span class="lineno">  213</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (tmp1)), time, time);</div>
+<div class="line"><span class="lineno">  214</span>  <a class="code hl_class" href="classurl.html">url</a> tmp2= <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> (<span class="stringliteral">&quot;test&quot;</span>);</div>
+<div class="line"><span class="lineno">  215</span>  CHECK_EQ (tmp1 == tmp2, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  216</span>  CHECK (<a class="code hl_function" href="file_8cpp.html#a1f38de5e1ae10c13d94b20717a2156f9">is_directory</a> (<a class="code hl_function" href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a> ()));</div>
+<div class="line"><span class="lineno">  217</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a284b643bc17714f25f658d3cb84527e2"><div class="ttname"><a href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a></div><div class="ttdeci">url url_temp(string suffix)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00250">file.cpp:250</a></div></div>
 <div class="ttc" id="afile_8cpp_html_a999af6855a9702e7b8164a9041ccb875"><div class="ttname"><a href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a></div><div class="ttdeci">url url_temp_dir()</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00279">file.cpp:279</a></div></div>
 </div><!-- fragment -->
@@ -599,15 +628,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00213">213</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  213</span>                             {</div>
-<div class="line"><span class="lineno">  214</span>  <span class="keywordtype">bool</span> flag1= <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  215</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="file_8cpp.html#affe0d356c2831adbd2efb2a30b6f2e4c">read_directory</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <span class="stringliteral">&quot;tests&quot;</span>, flag1)) &gt; 0);</div>
-<div class="line"><span class="lineno">  216</span>  CHECK (!flag1); <span class="comment">// no error</span></div>
-<div class="line"><span class="lineno">  217</span>  <span class="keywordtype">bool</span> flag2= <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  218</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="file_8cpp.html#affe0d356c2831adbd2efb2a30b6f2e4c">read_directory</a> (<a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;no_such_dir&quot;</span>), flag2)) == 0);</div>
-<div class="line"><span class="lineno">  219</span>  CHECK (flag2); <span class="comment">// error</span></div>
-<div class="line"><span class="lineno">  220</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00222">222</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>                             {</div>
+<div class="line"><span class="lineno">  223</span>  <span class="keywordtype">bool</span> flag1= <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  224</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="file_8cpp.html#affe0d356c2831adbd2efb2a30b6f2e4c">read_directory</a> (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <span class="stringliteral">&quot;tests&quot;</span>, flag1)) &gt; 0);</div>
+<div class="line"><span class="lineno">  225</span>  CHECK (!flag1); <span class="comment">// no error</span></div>
+<div class="line"><span class="lineno">  226</span>  <span class="keywordtype">bool</span> flag2= <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  227</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_function" href="file_8cpp.html#affe0d356c2831adbd2efb2a30b6f2e4c">read_directory</a> (<a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;no_such_dir&quot;</span>), flag2)) == 0);</div>
+<div class="line"><span class="lineno">  228</span>  CHECK (flag2); <span class="comment">// error</span></div>
+<div class="line"><span class="lineno">  229</span>}</div>
 <div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
 <div class="ttc" id="afile_8cpp_html_affe0d356c2831adbd2efb2a30b6f2e4c"><div class="ttname"><a href="file_8cpp.html#affe0d356c2831adbd2efb2a30b6f2e4c">read_directory</a></div><div class="ttdeci">array&lt; string &gt; read_directory(url u, bool &amp;error_flag)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00185">file.cpp:185</a></div></div>
 </div><!-- fragment -->
@@ -629,15 +658,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00222">222</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>                              {</div>
-<div class="line"><span class="lineno">  223</span>  <a class="code hl_class" href="classurl.html">url</a>    lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  224</span>  <a class="code hl_class" href="classurl.html">url</a>    u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;load_empty.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  225</span>  <span class="keywordtype">string</span> s1;</div>
-<div class="line"><span class="lineno">  226</span>  tb_file_create (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)));</div>
-<div class="line"><span class="lineno">  227</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  228</span>  CHECK_EQ (s1 == <span class="keywordtype">string</span> (<span class="stringliteral">&quot;&quot;</span>), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  229</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00231">231</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  231</span>                              {</div>
+<div class="line"><span class="lineno">  232</span>  <a class="code hl_class" href="classurl.html">url</a>    lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  233</span>  <a class="code hl_class" href="classurl.html">url</a>    u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;load_empty.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  234</span>  <span class="keywordtype">string</span> s1;</div>
+<div class="line"><span class="lineno">  235</span>  tb_file_create (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)));</div>
+<div class="line"><span class="lineno">  236</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  237</span>  CHECK_EQ (s1 == <span class="keywordtype">string</span> (<span class="stringliteral">&quot;&quot;</span>), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  238</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a20be21b01deb2d7f37fe75657e177c4a"><div class="ttname"><a href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a></div><div class="ttdeci">bool load_string(url u, string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00417">file.cpp:417</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -658,36 +687,36 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00231">231</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  231</span>                                {</div>
-<div class="line"><span class="lineno">  232</span>  <a class="code hl_class" href="classurl.html">url</a>      lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  233</span>  <a class="code hl_class" href="classurl.html">url</a>      u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;load_string_1.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  234</span>  <a class="code hl_class" href="classc__string.html">c_string</a> s1 (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1));</div>
-<div class="line"><span class="lineno">  235</span>  <span class="comment">// can access file?</span></div>
-<div class="line"><span class="lineno">  236</span>  <span class="keywordflow">if</span> (tb_file_access (s1, TB_FILE_MODE_RO)) {</div>
-<div class="line"><span class="lineno">  237</span>    <span class="keywordflow">while</span> (!tb_file_remove (s1)) {</div>
-<div class="line"><span class="lineno">  238</span>      tb_sleep (1);</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
-<div class="line"><span class="lineno">  240</span>  }</div>
-<div class="line"><span class="lineno">  241</span>  <span class="comment">// create test file</span></div>
-<div class="line"><span class="lineno">  242</span>  <span class="keywordflow">if</span> (tb_file_create (s1)) {</div>
-<div class="line"><span class="lineno">  243</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* s2    = <span class="stringliteral">&quot;hello world&quot;</span>;</div>
-<div class="line"><span class="lineno">  244</span>    tb_size_t   size  = strlen (s2);</div>
-<div class="line"><span class="lineno">  245</span>    tb_byte_t*  buffer= (tb_byte_t*) tb_malloc_bytes (size);</div>
-<div class="line"><span class="lineno">  246</span>    <span class="keywordtype">int</span>         seek  = 0;</div>
-<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">while</span> (seek &lt; size) {</div>
-<div class="line"><span class="lineno">  248</span>      tb_byte_t c = s2[seek];</div>
-<div class="line"><span class="lineno">  249</span>      buffer[seek]= c;</div>
-<div class="line"><span class="lineno">  250</span>      seek++;</div>
-<div class="line"><span class="lineno">  251</span>    }</div>
-<div class="line"><span class="lineno">  252</span> </div>
-<div class="line"><span class="lineno">  253</span>    <span class="keyword">auto</span> file_ref= tb_file_init (s1, TB_FILE_MODE_RW);</div>
-<div class="line"><span class="lineno">  254</span>    tb_file_writ (file_ref, buffer, strlen (s2));</div>
-<div class="line"><span class="lineno">  255</span>    <span class="keywordtype">string</span> s;</div>
-<div class="line"><span class="lineno">  256</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  257</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s, <span class="keywordtype">string</span> (<span class="stringliteral">&quot;hello world&quot;</span>));</div>
-<div class="line"><span class="lineno">  258</span>  }</div>
-<div class="line"><span class="lineno">  259</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00240">240</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  240</span>                                {</div>
+<div class="line"><span class="lineno">  241</span>  <a class="code hl_class" href="classurl.html">url</a>      lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  242</span>  <a class="code hl_class" href="classurl.html">url</a>      u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;load_string_1.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  243</span>  <a class="code hl_class" href="classc__string.html">c_string</a> s1 (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1));</div>
+<div class="line"><span class="lineno">  244</span>  <span class="comment">// can access file?</span></div>
+<div class="line"><span class="lineno">  245</span>  <span class="keywordflow">if</span> (tb_file_access (s1, TB_FILE_MODE_RO)) {</div>
+<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">while</span> (!tb_file_remove (s1)) {</div>
+<div class="line"><span class="lineno">  247</span>      tb_sleep (1);</div>
+<div class="line"><span class="lineno">  248</span>    }</div>
+<div class="line"><span class="lineno">  249</span>  }</div>
+<div class="line"><span class="lineno">  250</span>  <span class="comment">// create test file</span></div>
+<div class="line"><span class="lineno">  251</span>  <span class="keywordflow">if</span> (tb_file_create (s1)) {</div>
+<div class="line"><span class="lineno">  252</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* s2    = <span class="stringliteral">&quot;hello world&quot;</span>;</div>
+<div class="line"><span class="lineno">  253</span>    tb_size_t   size  = strlen (s2);</div>
+<div class="line"><span class="lineno">  254</span>    tb_byte_t*  buffer= (tb_byte_t*) tb_malloc_bytes (size);</div>
+<div class="line"><span class="lineno">  255</span>    <span class="keywordtype">int</span>         seek  = 0;</div>
+<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">while</span> (seek &lt; size) {</div>
+<div class="line"><span class="lineno">  257</span>      tb_byte_t c = s2[seek];</div>
+<div class="line"><span class="lineno">  258</span>      buffer[seek]= c;</div>
+<div class="line"><span class="lineno">  259</span>      seek++;</div>
+<div class="line"><span class="lineno">  260</span>    }</div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span>    <span class="keyword">auto</span> file_ref= tb_file_init (s1, TB_FILE_MODE_RW);</div>
+<div class="line"><span class="lineno">  263</span>    tb_file_writ (file_ref, buffer, strlen (s2));</div>
+<div class="line"><span class="lineno">  264</span>    <span class="keywordtype">string</span> s;</div>
+<div class="line"><span class="lineno">  265</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  266</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s, <span class="keywordtype">string</span> (<span class="stringliteral">&quot;hello world&quot;</span>));</div>
+<div class="line"><span class="lineno">  267</span>  }</div>
+<div class="line"><span class="lineno">  268</span>}</div>
 <div class="ttc" id="alolly__doctests_8hpp_html_a9fd61dbcf41093dd553e2c0a64ab9861"><div class="ttname"><a href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a></div><div class="ttdeci">void string_eq(string left, string right)</div><div class="ttdef"><b>Definition:</b> <a href="lolly__doctests_8hpp_source.html#l00008">lolly_doctests.hpp:8</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -708,19 +737,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00263">263</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  263</span>                                {</div>
-<div class="line"><span class="lineno">  264</span>  <a class="code hl_class" href="classurl.html">url</a>    lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  265</span>  <a class="code hl_class" href="classurl.html">url</a>    u1       = <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;tests/System/Files/sample_file.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  266</span>  <a class="code hl_class" href="classurl.html">url</a>    u2= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;tests/System/Files/sample_file_copy.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  267</span>  <a class="code hl_class" href="classurl.html">url</a>    u3= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;tests/System/Files/sample_file_throw.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  268</span>  <span class="keywordtype">string</span> s1, s2, s3;</div>
-<div class="line"><span class="lineno">  269</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  270</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u2, s2, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  271</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
-<div class="line"><span class="lineno">  272</span> </div>
-<div class="line"><span class="lineno">  273</span>  CHECK_THROWS (<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u3, s3, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">  274</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00272">272</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>                                {</div>
+<div class="line"><span class="lineno">  273</span>  <a class="code hl_class" href="classurl.html">url</a>    lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  274</span>  <a class="code hl_class" href="classurl.html">url</a>    u1       = <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;tests/System/Files/sample_file.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  275</span>  <a class="code hl_class" href="classurl.html">url</a>    u2= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;tests/System/Files/sample_file_copy.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  276</span>  <a class="code hl_class" href="classurl.html">url</a>    u3= <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;tests/System/Files/sample_file_throw.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  277</span>  <span class="keywordtype">string</span> s1, s2, s3;</div>
+<div class="line"><span class="lineno">  278</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  279</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u2, s2, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  280</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>  CHECK_THROWS (<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u3, s3, <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">  283</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -740,13 +769,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00278">278</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  278</span>                                {</div>
-<div class="line"><span class="lineno">  279</span>  <a class="code hl_class" href="classurl.html">url</a>    u (<span class="stringliteral">&quot;tests/Kernel/Containers:tests/Kernel/Types&quot;</span>, <span class="stringliteral">&quot;list_test.cpp&quot;</span>);</div>
-<div class="line"><span class="lineno">  280</span>  <span class="keywordtype">string</span> s;</div>
-<div class="line"><span class="lineno">  281</span>  <a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u, s, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  282</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s) &gt; 0);</div>
-<div class="line"><span class="lineno">  283</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00287">287</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  287</span>                                {</div>
+<div class="line"><span class="lineno">  288</span>  <a class="code hl_class" href="classurl.html">url</a>    u (<span class="stringliteral">&quot;tests/Kernel/Containers:tests/Kernel/Types&quot;</span>, <span class="stringliteral">&quot;list_test.cpp&quot;</span>);</div>
+<div class="line"><span class="lineno">  289</span>  <span class="keywordtype">string</span> s;</div>
+<div class="line"><span class="lineno">  290</span>  <a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u, s, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  291</span>  CHECK (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s) &gt; 0);</div>
+<div class="line"><span class="lineno">  292</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -766,17 +795,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00303">303</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  303</span>                                 {</div>
-<div class="line"><span class="lineno">  304</span>  <a class="code hl_class" href="classurl.html">url</a>    lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  305</span>  <a class="code hl_class" href="classurl.html">url</a>    u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;save_empty.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  306</span>  <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;test&quot;</span>);</div>
-<div class="line"><span class="lineno">  307</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)), 0, 0);</div>
-<div class="line"><span class="lineno">  308</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  309</span>  <span class="keywordtype">string</span> s2;</div>
-<div class="line"><span class="lineno">  310</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  311</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
-<div class="line"><span class="lineno">  312</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00312">312</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  312</span>                                 {</div>
+<div class="line"><span class="lineno">  313</span>  <a class="code hl_class" href="classurl.html">url</a>    lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  314</span>  <a class="code hl_class" href="classurl.html">url</a>    u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;save_empty.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  315</span>  <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;test&quot;</span>);</div>
+<div class="line"><span class="lineno">  316</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)), 0, 0);</div>
+<div class="line"><span class="lineno">  317</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  318</span>  <span class="keywordtype">string</span> s2;</div>
+<div class="line"><span class="lineno">  319</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  320</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
+<div class="line"><span class="lineno">  321</span>}</div>
 <div class="ttc" id="afile_8cpp_html_ab22f9dc8c3a591e553e8bf10a91ab589"><div class="ttname"><a href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a></div><div class="ttdeci">bool save_string(url u, const string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00474">file.cpp:474</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -797,17 +826,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00314">314</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  314</span>                                                       {</div>
-<div class="line"><span class="lineno">  315</span>  <a class="code hl_class" href="classurl.html">url</a>    lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  316</span>  <a class="code hl_class" href="classurl.html">url</a>    u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;保存到空文件.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  317</span>  <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;测试内容&quot;</span>);</div>
-<div class="line"><span class="lineno">  318</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)), 0, 0);</div>
-<div class="line"><span class="lineno">  319</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  320</span>  <span class="keywordtype">string</span> s2;</div>
-<div class="line"><span class="lineno">  321</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  322</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
-<div class="line"><span class="lineno">  323</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00323">323</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  323</span>                                                       {</div>
+<div class="line"><span class="lineno">  324</span>  <a class="code hl_class" href="classurl.html">url</a>    lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  325</span>  <a class="code hl_class" href="classurl.html">url</a>    u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;保存到空文件.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  326</span>  <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;测试内容&quot;</span>);</div>
+<div class="line"><span class="lineno">  327</span>  tb_file_touch (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)), 0, 0);</div>
+<div class="line"><span class="lineno">  328</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  329</span>  <span class="keywordtype">string</span> s2;</div>
+<div class="line"><span class="lineno">  330</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  331</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
+<div class="line"><span class="lineno">  332</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -827,21 +856,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00325">325</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  325</span>                                      {</div>
-<div class="line"><span class="lineno">  326</span>  <a class="code hl_class" href="classurl.html">url</a>            lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  327</span>  <a class="code hl_class" href="classurl.html">url</a>            u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;save_nonexist.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  328</span>  <a class="code hl_class" href="classc__string.html">c_string</a>       path1 (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1));</div>
-<div class="line"><span class="lineno">  329</span>  tb_file_info_t info;</div>
-<div class="line"><span class="lineno">  330</span>  <span class="keywordflow">if</span> (tb_file_info (path1, &amp;info)) {</div>
-<div class="line"><span class="lineno">  331</span>    tb_file_remove (path1);</div>
-<div class="line"><span class="lineno">  332</span>  };</div>
-<div class="line"><span class="lineno">  333</span>  <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;test&quot;</span>);</div>
-<div class="line"><span class="lineno">  334</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">  335</span>  <span class="keywordtype">string</span> s2;</div>
-<div class="line"><span class="lineno">  336</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">true</span>));</div>
-<div class="line"><span class="lineno">  337</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
-<div class="line"><span class="lineno">  338</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00334">334</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  334</span>                                      {</div>
+<div class="line"><span class="lineno">  335</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  336</span>  <a class="code hl_class" href="classurl.html">url</a> u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;save_nonexist.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  337</span>  <a class="code hl_function" href="file__test_8cpp.html#a31abfaac2a34b0d170ceea277cb16a82">remove_if_exist</a> (u1);</div>
+<div class="line"><span class="lineno">  338</span>  <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;test&quot;</span>);</div>
+<div class="line"><span class="lineno">  339</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">  340</span>  <span class="keywordtype">string</span> s2;</div>
+<div class="line"><span class="lineno">  341</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">  342</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
+<div class="line"><span class="lineno">  343</span>}</div>
+<div class="ttc" id="afile__test_8cpp_html_a31abfaac2a34b0d170ceea277cb16a82"><div class="ttname"><a href="file__test_8cpp.html#a31abfaac2a34b0d170ceea277cb16a82">remove_if_exist</a></div><div class="ttdeci">void remove_if_exist(const url &amp;u1)</div><div class="ttdef"><b>Definition:</b> <a href="file__test_8cpp_source.html#l00026">file_test.cpp:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -861,23 +887,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00340">340</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  340</span>                                 {</div>
-<div class="line"><span class="lineno">  341</span>  <a class="code hl_class" href="classurl.html">url</a>      lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  342</span>  <a class="code hl_class" href="classurl.html">url</a>      u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;save_exist.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  343</span>  <a class="code hl_class" href="classc__string.html">c_string</a> path1 (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1));</div>
-<div class="line"><span class="lineno">  344</span>  tb_file_touch (path1, 0, 0);</div>
-<div class="line"><span class="lineno">  345</span>  tb_file_ref_t file=</div>
-<div class="line"><span class="lineno">  346</span>      tb_file_init (path1, TB_FILE_MODE_WO | TB_FILE_MODE_TRUNC);</div>
-<div class="line"><span class="lineno">  347</span>  tb_file_writ (</div>
-<div class="line"><span class="lineno">  348</span>      file, <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>tb_uint8_t*<span class="keyword">&gt;</span> (<span class="stringliteral">&quot;longer text for test&quot;</span>), 20);</div>
-<div class="line"><span class="lineno">  349</span>  tb_file_exit (file);</div>
-<div class="line"><span class="lineno">  350</span>  <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;test&quot;</span>);</div>
-<div class="line"><span class="lineno">  351</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  352</span>  <span class="keywordtype">string</span> s2;</div>
-<div class="line"><span class="lineno">  353</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  354</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
-<div class="line"><span class="lineno">  355</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00345">345</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  345</span>                                 {</div>
+<div class="line"><span class="lineno">  346</span>  <a class="code hl_class" href="classurl.html">url</a>      lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  347</span>  <a class="code hl_class" href="classurl.html">url</a>      u1       = lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;save_exist.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  348</span>  <a class="code hl_class" href="classc__string.html">c_string</a> path1 (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1));</div>
+<div class="line"><span class="lineno">  349</span>  tb_file_touch (path1, 0, 0);</div>
+<div class="line"><span class="lineno">  350</span>  tb_file_ref_t file=</div>
+<div class="line"><span class="lineno">  351</span>      tb_file_init (path1, TB_FILE_MODE_WO | TB_FILE_MODE_TRUNC);</div>
+<div class="line"><span class="lineno">  352</span>  tb_file_writ (</div>
+<div class="line"><span class="lineno">  353</span>      file, <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>tb_uint8_t*<span class="keyword">&gt;</span> (<span class="stringliteral">&quot;longer text for test&quot;</span>), 20);</div>
+<div class="line"><span class="lineno">  354</span>  tb_file_exit (file);</div>
+<div class="line"><span class="lineno">  355</span>  <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;test&quot;</span>);</div>
+<div class="line"><span class="lineno">  356</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  357</span>  <span class="keywordtype">string</span> s2;</div>
+<div class="line"><span class="lineno">  358</span>  CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  359</span>  <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
+<div class="line"><span class="lineno">  360</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -897,32 +923,33 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00357">357</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  357</span>                                   {</div>
-<div class="line"><span class="lineno">  358</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  359</span> </div>
-<div class="line"><span class="lineno">  360</span>  SUBCASE (<span class="stringliteral">&quot;file not exist&quot;</span>) {</div>
-<div class="line"><span class="lineno">  361</span>    <a class="code hl_class" href="classurl.html">url</a>    u1= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;append_not_exist.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  362</span>    <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;file not exist&quot;</span>);</div>
-<div class="line"><span class="lineno">  363</span>    <span class="keywordtype">string</span> s2;</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00362">362</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  362</span>                                   {</div>
+<div class="line"><span class="lineno">  363</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
 <div class="line"><span class="lineno">  364</span> </div>
-<div class="line"><span class="lineno">  365</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  366</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  367</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
-<div class="line"><span class="lineno">  368</span>  }</div>
-<div class="line"><span class="lineno">  369</span> </div>
-<div class="line"><span class="lineno">  370</span>  SUBCASE (<span class="stringliteral">&quot;file empty&quot;</span>) {</div>
-<div class="line"><span class="lineno">  371</span>    <a class="code hl_class" href="classurl.html">url</a>    u1= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;append_empty.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  372</span>    <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;file empty&quot;</span>);</div>
-<div class="line"><span class="lineno">  373</span>    <span class="keywordtype">string</span> s2;</div>
-<div class="line"><span class="lineno">  374</span> </div>
-<div class="line"><span class="lineno">  375</span>    tb_file_create (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)));</div>
-<div class="line"><span class="lineno">  376</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  377</span> </div>
-<div class="line"><span class="lineno">  378</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  379</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
-<div class="line"><span class="lineno">  380</span>  }</div>
-<div class="line"><span class="lineno">  381</span>}</div>
+<div class="line"><span class="lineno">  365</span>  SUBCASE (<span class="stringliteral">&quot;file not exist&quot;</span>) {</div>
+<div class="line"><span class="lineno">  366</span>    <a class="code hl_class" href="classurl.html">url</a>    u1= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;append_not_exist.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  367</span>    <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;file not exist&quot;</span>);</div>
+<div class="line"><span class="lineno">  368</span>    <span class="keywordtype">string</span> s2;</div>
+<div class="line"><span class="lineno">  369</span>    <a class="code hl_function" href="file__test_8cpp.html#a31abfaac2a34b0d170ceea277cb16a82">remove_if_exist</a> (u1);</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  372</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  373</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
+<div class="line"><span class="lineno">  374</span>  }</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>  SUBCASE (<span class="stringliteral">&quot;file empty&quot;</span>) {</div>
+<div class="line"><span class="lineno">  377</span>    <a class="code hl_class" href="classurl.html">url</a>    u1= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;append_empty.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  378</span>    <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;file empty&quot;</span>);</div>
+<div class="line"><span class="lineno">  379</span>    <span class="keywordtype">string</span> s2;</div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>    tb_file_create (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)));</div>
+<div class="line"><span class="lineno">  382</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  383</span> </div>
+<div class="line"><span class="lineno">  384</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s2, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  385</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (s1, s2);</div>
+<div class="line"><span class="lineno">  386</span>  }</div>
+<div class="line"><span class="lineno">  387</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a616fc1dd2eb4e10648bab200699036db"><div class="ttname"><a href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a></div><div class="ttdeci">bool append_string(url u, const string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00528">file.cpp:528</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -943,39 +970,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00383">383</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  383</span>                                    {</div>
-<div class="line"><span class="lineno">  384</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
-<div class="line"><span class="lineno">  385</span>  SUBCASE (<span class="stringliteral">&quot;test file not empty&quot;</span>) {</div>
-<div class="line"><span class="lineno">  386</span>    <a class="code hl_class" href="classurl.html">url</a> u1= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;append_not_empty.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  387</span>    tb_file_create (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)));</div>
-<div class="line"><span class="lineno">  388</span> </div>
-<div class="line"><span class="lineno">  389</span>    <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;head-&quot;</span>);</div>
-<div class="line"><span class="lineno">  390</span>    <span class="keywordtype">string</span> s2 (<span class="stringliteral">&quot;file not empty&quot;</span>);</div>
-<div class="line"><span class="lineno">  391</span>    <span class="keywordtype">string</span> s3;</div>
-<div class="line"><span class="lineno">  392</span> </div>
-<div class="line"><span class="lineno">  393</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  394</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a> (u1, s2, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  395</span> </div>
-<div class="line"><span class="lineno">  396</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s3, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  397</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (<span class="stringliteral">&quot;head-file not empty&quot;</span>, s3);</div>
-<div class="line"><span class="lineno">  398</span>  }</div>
-<div class="line"><span class="lineno">  399</span> </div>
-<div class="line"><span class="lineno">  400</span>  SUBCASE (<span class="stringliteral">&quot;test file include unicode&quot;</span>) {</div>
-<div class="line"><span class="lineno">  401</span>    <a class="code hl_class" href="classurl.html">url</a> u1= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;unicode文件.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  402</span>    tb_file_create (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)));</div>
-<div class="line"><span class="lineno">  403</span> </div>
-<div class="line"><span class="lineno">  404</span>    <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;头-&quot;</span>);</div>
-<div class="line"><span class="lineno">  405</span>    <span class="keywordtype">string</span> s2 (<span class="stringliteral">&quot;unicode文件&quot;</span>);</div>
-<div class="line"><span class="lineno">  406</span>    <span class="keywordtype">string</span> s3;</div>
-<div class="line"><span class="lineno">  407</span> </div>
-<div class="line"><span class="lineno">  408</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  409</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a> (u1, s2, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  410</span> </div>
-<div class="line"><span class="lineno">  411</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s3, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  412</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (<span class="stringliteral">&quot;头-unicode文件&quot;</span>, s3);</div>
-<div class="line"><span class="lineno">  413</span>  }</div>
-<div class="line"><span class="lineno">  414</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file__test_8cpp_source.html#l00389">389</a> of file <a class="el" href="file__test_8cpp_source.html">file_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  389</span>                                    {</div>
+<div class="line"><span class="lineno">  390</span>  <a class="code hl_class" href="classurl.html">url</a> lolly_tmp= <a class="code hl_function" href="file__test_8cpp.html#a80d276906da7fc8997150532b39ba505">get_lolly_tmp</a> ();</div>
+<div class="line"><span class="lineno">  391</span>  SUBCASE (<span class="stringliteral">&quot;test file not empty&quot;</span>) {</div>
+<div class="line"><span class="lineno">  392</span>    <a class="code hl_class" href="classurl.html">url</a> u1= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;append_not_empty.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  393</span>    tb_file_create (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)));</div>
+<div class="line"><span class="lineno">  394</span> </div>
+<div class="line"><span class="lineno">  395</span>    <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;head-&quot;</span>);</div>
+<div class="line"><span class="lineno">  396</span>    <span class="keywordtype">string</span> s2 (<span class="stringliteral">&quot;file not empty&quot;</span>);</div>
+<div class="line"><span class="lineno">  397</span>    <span class="keywordtype">string</span> s3;</div>
+<div class="line"><span class="lineno">  398</span> </div>
+<div class="line"><span class="lineno">  399</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  400</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a> (u1, s2, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  401</span> </div>
+<div class="line"><span class="lineno">  402</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s3, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  403</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (<span class="stringliteral">&quot;head-file not empty&quot;</span>, s3);</div>
+<div class="line"><span class="lineno">  404</span>  }</div>
+<div class="line"><span class="lineno">  405</span> </div>
+<div class="line"><span class="lineno">  406</span>  SUBCASE (<span class="stringliteral">&quot;test file include unicode&quot;</span>) {</div>
+<div class="line"><span class="lineno">  407</span>    <a class="code hl_class" href="classurl.html">url</a> u1= lolly_tmp * <a class="code hl_class" href="classurl.html">url</a> (<span class="stringliteral">&quot;unicode文件.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  408</span>    tb_file_create (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (u1)));</div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>    <span class="keywordtype">string</span> s1 (<span class="stringliteral">&quot;头-&quot;</span>);</div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordtype">string</span> s2 (<span class="stringliteral">&quot;unicode文件&quot;</span>);</div>
+<div class="line"><span class="lineno">  412</span>    <span class="keywordtype">string</span> s3;</div>
+<div class="line"><span class="lineno">  413</span> </div>
+<div class="line"><span class="lineno">  414</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (u1, s1, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  415</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a616fc1dd2eb4e10648bab200699036db">append_string</a> (u1, s2, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>    CHECK (!<a class="code hl_function" href="file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (u1, s3, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  418</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (<span class="stringliteral">&quot;头-unicode文件&quot;</span>, s3);</div>
+<div class="line"><span class="lineno">  419</span>  }</div>
+<div class="line"><span class="lineno">  420</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
