@@ -1,4 +1,4 @@
-set_xmakever("2.8.3")
+set_xmakever("2.8.5")
 
 -- add releasedbg, debug and release modes.
 set_allowedmodes("releasedbg", "release", "debug")
@@ -7,10 +7,7 @@ add_rules("mode.debug")
 set_project("lolly")
 
 set_languages("c++17")
-includes("check_cxxtypes.lua")
-includes("check_cxxincludes.lua")
-includes("check_cxxfuncs.lua")
-includes("check_cxxsnippets.lua")
+includes("@builtin/check")
 
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
