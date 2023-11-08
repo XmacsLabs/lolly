@@ -1,8 +1,4 @@
-if is_plat("macosx") then
-    set_xmakever("2.8.5")
-else
-    set_xmakever("2.8.3")
-end
+set_xmakever("2.8.5")
 
 -- add releasedbg, debug and release modes.
 set_allowedmodes("releasedbg", "release", "debug")
@@ -12,15 +8,7 @@ set_project("lolly")
 LOLLY_VERSION= "1.3.1"
 
 set_languages("c++17")
-
-if is_plat("macosx") then
-    includes("@builtin/check")
-else
-    includes("check_cxxtypes.lua")
-    includes("check_cxxincludes.lua")
-    includes("check_cxxfuncs.lua")
-    includes("check_cxxsnippets.lua")
-end
+includes("@builtin/check")
 
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
