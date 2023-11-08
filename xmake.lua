@@ -7,10 +7,7 @@ add_rules("mode.debug")
 set_project("lolly")
 
 set_languages("c++17")
-includes("check_cxxtypes.lua")
-includes("check_cxxincludes.lua")
-includes("check_cxxfuncs.lua")
-includes("check_cxxsnippets.lua")
+includes("@builtin/check")
 
 set_allowedplats("linux", "macosx", "mingw", "wasm", "windows")
 
