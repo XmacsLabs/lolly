@@ -5,6 +5,7 @@ set_allowedmodes("releasedbg", "release", "debug")
 add_rules("mode.debug")
 
 set_project("lolly")
+LOLLY_VERSION= "1.3.0"
 
 set_languages("c++17")
 includes("@builtin/check")
@@ -263,7 +264,7 @@ add_configfiles(
         pattern = "@(.-)@",
         variables = {
             PACKAGE = "Lolly",
-            LOLLY_VERSION = "1.2.0",
+            LOLLY_VERSION = LOLLY_VERSION,
             DOXYGEN_DIR = get_config("buildir"),
             DEVEL_VERSION = DEVEL_VERSION,
             HTML_EXTRA_STYLESHEET = "doxygen-awesome-css/doxygen-awesome.css",
