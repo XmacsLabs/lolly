@@ -37,13 +37,14 @@ digraph "analyze.cpp"
   Node15 [label="list.ipp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$list_8ipp.html",tooltip=" "];
   Node15 -> Node14 [color="steelblue1",style="solid"];
   Node13 -> Node16 [color="steelblue1",style="solid"];
-  Node16 [label="hashset.ipp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$hashset_8ipp.html",tooltip=" "];
-  Node16 -> Node13 [color="steelblue1",style="solid"];
-  Node2 -> Node17 [color="steelblue1",style="solid"];
-  Node17 [label="ntuple.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ntuple_8hpp.html",tooltip=" "];
-  Node17 -> Node5 [color="steelblue1",style="solid"];
+  Node16 [label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
+  Node16 -> Node5 [color="steelblue1",style="solid"];
+  Node13 -> Node17 [color="steelblue1",style="solid"];
+  Node17 [label="hashset.ipp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$hashset_8ipp.html",tooltip=" "];
+  Node17 -> Node13 [color="steelblue1",style="solid"];
   Node2 -> Node18 [color="steelblue1",style="solid"];
-  Node18 [label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
+  Node18 [label="ntuple.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ntuple_8hpp.html",tooltip=" "];
   Node18 -> Node5 [color="steelblue1",style="solid"];
-  Node1 -> Node17 [color="steelblue1",style="solid"];
+  Node2 -> Node16 [color="steelblue1",style="solid"];
+  Node1 -> Node18 [color="steelblue1",style="solid"];
 }

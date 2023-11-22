@@ -106,6 +106,7 @@ digraph "fast_alloc.hpp"
   Node96 -> Node66 [dir="back",color="steelblue1",style="solid"];
   Node96 -> Node24 [dir="back",color="steelblue1",style="solid"];
   Node96 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node96 -> Node85 [dir="back",color="steelblue1",style="solid"];
   Node96 -> Node87 [dir="back",color="steelblue1",style="solid"];
   Node96 -> Node77 [dir="back",color="steelblue1",style="solid"];
   Node77 [label="hashtree_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$hashtree__test_8cpp.html",tooltip=" "];

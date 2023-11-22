@@ -104,6 +104,7 @@ digraph "basic.hpp"
   Node95 -> Node65 [dir="back",color="steelblue1",style="solid"];
   Node95 -> Node23 [dir="back",color="steelblue1",style="solid"];
   Node95 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node95 -> Node84 [dir="back",color="steelblue1",style="solid"];
   Node95 -> Node86 [dir="back",color="steelblue1",style="solid"];
   Node95 -> Node76 [dir="back",color="steelblue1",style="solid"];
   Node76 [label="hashtree_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$hashtree__test_8cpp.html",tooltip=" "];

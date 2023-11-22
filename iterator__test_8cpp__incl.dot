@@ -47,6 +47,7 @@ digraph "iterator_test.cpp"
   Node13 -> Node19 [color="steelblue1",style="solid"];
   Node19 [label="hashset.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$hashset_8hpp.html",tooltip=" "];
   Node19 -> Node15 [color="steelblue1",style="solid"];
+  Node19 -> Node5 [color="steelblue1",style="solid"];
   Node19 -> Node20 [color="steelblue1",style="solid"];
   Node20 [label="hashset.ipp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$hashset_8ipp.html",tooltip=" "];
   Node20 -> Node19 [color="steelblue1",style="solid"];

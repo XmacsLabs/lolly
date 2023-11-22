@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['lolly_201_2e0_2ex_0',['Lolly 1.0.x',['../md_devel_1_0.html',1,'']]],
-  ['lolly_201_2e1_2ex_1',['Lolly 1.1.x',['../md_devel_1_1.html',1,'']]],
-  ['lolly_3a_20a_20user_2dfriendly_20c_2b_2b_20standard_20library_20alternative_2',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]]
+  ['how_20to_20format_20the_20code_0',['How to format the code',['../md_docs_guide_Format.html',1,'']]],
+  ['how_20to_20perform_20testing_1',['How to Perform Testing',['../md_docs_guide_Test.html',1,'']]]
 ];

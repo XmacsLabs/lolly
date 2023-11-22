@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['how_20to_20format_20the_20code_0',['How to format the code',['../md_docs_guide_Format.html',1,'']]],
-  ['how_20to_20perform_20testing_1',['How to Perform Testing',['../md_docs_guide_Test.html',1,'']]]
+  ['developing_20on_20gnu_2flinux_0',['Developing on GNU/Linux',['../md_docs_guide_Develop_on_Linux.html',1,'']]],
+  ['developing_20on_20windows_1',['Developing on Windows',['../md_docs_guide_Develop_on_Windows.html',1,'']]]
 ];
