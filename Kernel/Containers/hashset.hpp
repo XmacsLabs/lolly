@@ -10,6 +10,7 @@
 #ifndef HASHSET_H
 #define HASHSET_H
 #include "list.hpp"
+#include "string.hpp"
 
 template <class T> class hashset;
 template <class T> class hashset_iterator_rep;
@@ -137,6 +138,11 @@ template <class T> bool operator< (hashset<T> h1, hashset<T> h2);
  * @return hashset<T>& A reference to the modified hash set.
  */
 template <class T> hashset<T>& operator<< (hashset<T>& h, T x);
+
+inline hashset<string>&
+operator<< (hashset<string>& a, char* x) {
+  return a << string (x);
+}
 
 #include "hashset.ipp"
 
