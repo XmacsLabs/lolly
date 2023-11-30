@@ -1,10 +1,22 @@
 #include "a_lolly_test.hpp"
 #include "fast_alloc.hpp"
+#include "tm_timer.hpp"
+
+int
+usec_diff (time_t start, time_t end) {
+  if (start <= end) {
+    return end - start;
+  }
+  else {
+    return end + 1000000 - start;
+  }
+}
 
 struct Complex {
 public:
   double re, im;
   Complex (double re_, double im_) : re (re_), im (im_) {}
+  Complex () : re (0.5), im (1.0) {}
   ~Complex () {}
 };
 
@@ -39,6 +51,7 @@ TEST_CASE ("test basic data types") {
   int*    in[NUM];
   long*   lo[NUM];
   double* dou[NUM];
+  int     time= get_usec_time ();
 
   for (int i= 0; i < NUM; i++) { // for gprof
     ch[i]= tm_new<char> ();
@@ -67,11 +80,64 @@ TEST_CASE ("test basic data types") {
     tm_delete (lo[i]);
     tm_delete (dou[i]);
   }
+  cout << "basic type: " << usec_diff(time, get_usec_time ()) << LF;
 }
 
 TEST_CASE ("test class") {
   Complex* p_complex= tm_new<Complex> (35.8, 26.2);
   tm_delete (p_complex);
+}
+
+TEST_CASE ("test tm_*_array") {
+  uint8_t* p_complex= tm_new_array<uint8_t> (100);
+  tm_delete_array (p_complex);
+#ifdef OS_WASM
+  const size_t size_prim= 200, size_complex= 100;
+#else
+  const size_t size_prim= 20000000, size_complex= 5000000;
+#endif
+  int time = get_usec_time ();
+  p_complex= tm_new_array<uint8_t> (size_prim);
+  tm_delete_array (p_complex);
+  Complex* p_wide= tm_new_array<Complex> (size_complex);
+  tm_delete_array (p_wide);
+  cout << "large array: " << usec_diff(time, get_usec_time ()) << LF;
+}
+
+#ifndef OS_WASM
+TEST_CASE ("test large bunch of tm_*") {
+  const int bnum= 100000;
+  int*      volume[bnum];
+  for (int i= 0; i < bnum; i++) {
+    volume[i]= tm_new<int> (35);
+  }
+  for (int i= 0; i < bnum; i++) {
+    tm_delete (volume[i]);
+  }
+}
+TEST_MEMORY_LEAK_ALL
+TEST_MEMORY_LEAK_RESET
+#endif
+
+TEST_CASE ("test large bunch of tm_*_array with class") {
+  Complex* volume[NUM];
+  int      time= get_usec_time ();
+  for (int i= 0; i < NUM; i++) {
+    volume[i]= tm_new_array<Complex> (9);
+  }
+  for (int i= 0; i < NUM; i++) {
+    tm_delete_array (volume[i]);
+  }
+  cout << "frequent allocation of array: " << usec_diff(time, get_usec_time ()) << LF;
+ time = get_usec_time();
+  for (int i= 0; i < NUM; i++) {
+    volume[i]= tm_new_array<Complex> (9);
+  }
+  for (int i= 0; i < NUM; i++) {
+    tm_delete_array (volume[i]);
+  }
+  cout << "frequent allocation by reuse: " << usec_diff(time, get_usec_time ()) << LF;
+
 }
 
 TEST_MEMORY_LEAK_ALL
