@@ -27,6 +27,11 @@ namespace io {
 #ifdef OS_WASM
 
 tree
+http_head (url u) {
+  return http_response_init ();
+}
+
+tree
 http_get (url u) {
   return http_response_init ();
 }
