@@ -26,8 +26,5 @@ digraph "hashset.ipp"
   Node3 -> Node11 [color="steelblue1",style="solid"];
   Node11 [label="list.ipp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$list_8ipp.html",tooltip=" "];
   Node11 -> Node3 [color="steelblue1",style="solid"];
-  Node2 -> Node12 [color="steelblue1",style="solid"];
-  Node12 [label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
-  Node12 -> Node4 [color="steelblue1",style="solid"];
   Node2 -> Node1 [color="steelblue1",style="solid"];
 }

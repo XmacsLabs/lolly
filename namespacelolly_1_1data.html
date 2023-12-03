@@ -113,6 +113,8 @@ Functions</h2></td></tr>
 <tr class="separator:a68e3c102879ca231373fa6b03268f5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc8a6d748db873447e21da2f8863c5ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#afc8a6d748db873447e21da2f8863c5ed">CONCRETE_CODE</a> (<a class="el" href="classlolly_1_1data_1_1json.html">json</a>)</td></tr>
 <tr class="separator:afc8a6d748db873447e21da2f8863c5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600300cd50b77ad463498256968ca50e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#a600300cd50b77ad463498256968ca50e">unicode_get_range</a> (int code)</td></tr>
+<tr class="separator:a600300cd50b77ad463498256968ca50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a630676dee432d3164584d5b7b038a5c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#a630676dee432d3164584d5b7b038a5c9">uri_host</a> (<a class="el" href="classurl.html">url</a> u)</td></tr>
 <tr class="separator:a630676dee432d3164584d5b7b038a5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4035a12f27c86bcf1f202afc0e1a378a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#a4035a12f27c86bcf1f202afc0e1a378a">uri_path</a> (<a class="el" href="classurl.html">url</a> u)</td></tr>
@@ -212,6 +214,42 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a600300cd50b77ad463498256968ca50e" name="a600300cd50b77ad463498256968ca50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a600300cd50b77ad463498256968ca50e">&#9670;&#160;</a></span>unicode_get_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstring.html">string</a> lolly::data::unicode_get_range </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unicode_8cpp_source.html#l00017">17</a> of file <a class="el" href="unicode_8cpp_source.html">unicode.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                             {</div>
+<div class="line"><span class="lineno">   18</span>  <span class="keywordflow">if</span> (code &lt;= 0x7f) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ascii&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x80 &amp;&amp; code &lt;= 0x37f) <span class="keywordflow">return</span> <span class="stringliteral">&quot;latin&quot;</span>;</div>
+<div class="line"><span class="lineno">   20</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x380 &amp;&amp; code &lt;= 0x3ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;greek&quot;</span>;</div>
+<div class="line"><span class="lineno">   21</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x400 &amp;&amp; code &lt;= 0x4ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;cyrillic&quot;</span>;</div>
+<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x2460 &amp;&amp; code &lt;= 0x24ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;enclosed_alphanumerics&quot;</span>;</div>
+<div class="line"><span class="lineno">   23</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x3000 &amp;&amp; code &lt;= 0x303f) <span class="keywordflow">return</span> <span class="stringliteral">&quot;cjk&quot;</span>;</div>
+<div class="line"><span class="lineno">   24</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x4e00 &amp;&amp; code &lt;= 0x9fcc) <span class="keywordflow">return</span> <span class="stringliteral">&quot;cjk&quot;</span>;</div>
+<div class="line"><span class="lineno">   25</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0xff00 &amp;&amp; code &lt;= 0xffef) <span class="keywordflow">return</span> <span class="stringliteral">&quot;cjk&quot;</span>;</div>
+<div class="line"><span class="lineno">   26</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x3040 &amp;&amp; code &lt;= 0x309F) <span class="keywordflow">return</span> <span class="stringliteral">&quot;hiragana&quot;</span>;</div>
+<div class="line"><span class="lineno">   27</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0xac00 &amp;&amp; code &lt;= 0xd7af) <span class="keywordflow">return</span> <span class="stringliteral">&quot;hangul&quot;</span>;</div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x2000 &amp;&amp; code &lt;= 0x23ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;mathsymbols&quot;</span>;</div>
+<div class="line"><span class="lineno">   29</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x2900 &amp;&amp; code &lt;= 0x2e7f) <span class="keywordflow">return</span> <span class="stringliteral">&quot;mathextra&quot;</span>;</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x1d400 &amp;&amp; code &lt;= 0x1d7ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;mathletters&quot;</span>;</div>
+<div class="line"><span class="lineno">   31</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a630676dee432d3164584d5b7b038a5c9" name="a630676dee432d3164584d5b7b038a5c9"></a>

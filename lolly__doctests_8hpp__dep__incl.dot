@@ -68,5 +68,7 @@ digraph "lolly_doctests.hpp"
   Node27 -> Node32 [dir="back",color="steelblue1",style="solid"];
   Node32 [label="sys_utils_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$sys__utils__test_8cpp.html",tooltip=" "];
   Node27 -> Node33 [dir="back",color="steelblue1",style="solid"];
-  Node33 [label="url_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url__test_8cpp.html",tooltip=" "];
+  Node33 [label="unicode_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$unicode__test_8cpp.html",tooltip=" "];
+  Node27 -> Node34 [dir="back",color="steelblue1",style="solid"];
+  Node34 [label="url_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$url__test_8cpp.html",tooltip=" "];
 }
