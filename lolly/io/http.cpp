@@ -64,6 +64,14 @@ http_get (url u) {
 }
 
 tree
+http_head (url u) {
+  string        u_str = as_string (u);
+  c_string      u_cstr= c_string (u_str);
+  cpr::Response r     = cpr::Get (cpr::Url{u_cstr});
+  return response_to_tree (r, u_str);
+}
+
+tree
 download (url from, url to) {
   string   from_str = as_string (from);
   c_string from_cstr= c_string (from_str);

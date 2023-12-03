@@ -19,6 +19,7 @@ namespace lolly {
 namespace io {
 
 tree http_get (url u);
+tree http_head (url u);
 tree download (url from, url to);
 
 } // namespace io
