@@ -61,7 +61,7 @@ response_to_tree (cpr::Response r, string url) {
 }
 
 tree
-http_get (url u) {
+http_get (url u, tree headers) {
   string        u_str = as_string (u);
   c_string      u_cstr= c_string (u_str);
   cpr::Response r     = cpr::Get (cpr::Url{u_cstr});
@@ -69,7 +69,7 @@ http_get (url u) {
 }
 
 tree
-http_head (url u) {
+http_head (url u, tree headers) {
   string        u_str = as_string (u);
   c_string      u_cstr= c_string (u_str);
   cpr::Response r     = cpr::Head (cpr::Url{u_cstr});
