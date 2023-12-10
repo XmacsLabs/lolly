@@ -51,6 +51,15 @@ is_alpha (string s) {
 }
 
 bool
+is_alphanum (string s) {
+  int i;
+  if (N (s) == 0) return false;
+  for (i= 0; i < N (s); i++)
+    if (!(is_alpha (s[i]) || is_digit (s[i]))) return false;
+  return true;
+}
+
+bool
 is_locase_alpha (string s) {
   int i;
   if (N (s) == 0) return false;
@@ -1437,6 +1446,11 @@ search_forwards (string s, string in) {
 bool
 occurs (string what, string in) {
   return search_forwards (what, 0, in) >= 0;
+}
+
+bool
+contains (string s, string what) {
+  return search_forwards (what, 0, s) >= 0;
 }
 
 int

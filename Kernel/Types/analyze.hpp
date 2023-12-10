@@ -97,6 +97,8 @@ bool is_iso_upcase (char c);
  */
 bool is_alpha (string s);
 
+bool is_alphanum (string s);
+
 /**
  * @brief Checks if a string contains only lowercase alphabetic characters.
  *
@@ -705,6 +707,8 @@ int count_occurrences (string what, string in);
  * @return True if the string occurs, otherwise false.
  */
 bool occurs (string what, string in);
+
+bool contains (string s, string what);
 
 /**
  * Finds the length of the longest string that is both a suffix of the first
