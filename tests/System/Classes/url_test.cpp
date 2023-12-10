@@ -175,6 +175,9 @@ TEST_CASE ("unknown protocol like zotero") {
   url tmfs_u= url_system ("tmfs://git/status");
   string_eq (tmfs_u.protocol (), "tmfs");
   CHECK (!is_or (tmfs_u));
+
+  url c_u= url_system ("C://Program Files/MoganResearch");
+  string_neq (c_u.protocol (), "C");
 }
 
 TEST_MEMORY_LEAK_ALL

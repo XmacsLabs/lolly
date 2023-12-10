@@ -247,7 +247,7 @@ url_general (string name, int type= URL_SYSTEM) {
     array<string> tokens  = tokenize (name, "://");
     string        protocol= tokens[0];
     string        path    = tokens[1];
-    if (N (tokens) == 2 && is_alphanum (protocol)) {
+    if (N (tokens) == 2 && is_alphanum (protocol) && N (protocol) >= 2) {
       if (protocol == "file") return file_url (path);
       if (protocol == "http") return http_url (path);
       if (protocol == "https") return https_url (path);
