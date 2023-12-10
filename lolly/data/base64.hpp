@@ -9,12 +9,13 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
+#pragma once
+
 #include "string.hpp"
 
-#ifndef BASE64_H
-#define BASE64_H
-
+namespace lolly {
+namespace data {
 string encode_base64 (string s);
 string decode_base64 (string s);
-
-#endif // BASE64_H
+} // namespace data
+} // namespace lolly
