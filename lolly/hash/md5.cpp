@@ -47,7 +47,7 @@ md5_hexdigest (url u) {
     }
 
     tb_size_t i          = 0;
-    tb_char_t md5_hex[17]= {0};
+    tb_char_t md5_hex[32]= {0};
     for (i= 0; i < 16; ++i)
       tb_snprintf (md5_hex + (i << 1), 3, "%02x", o_buffer[i]);
     return string (md5_hex);
