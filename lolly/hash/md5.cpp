@@ -9,8 +9,8 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include "file.hpp"
 #include "md5.hpp"
+#include "file.hpp"
 
 #include <tbox/tbox.h>
 
