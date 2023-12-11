@@ -63,6 +63,18 @@ TEST_CASE ("is_alphanum") {
   CHECK (!is_alphanum ("!"));
 }
 
+TEST_CASE ("as_hex") {
+  SUBCASE ("0~255") {
+    string_eq (as_hex ((uint8_t) 0), "00");
+    string_eq (as_hex ((uint8_t) 1), "01");
+    string_eq (as_hex ((uint8_t) 255), "ff");
+  }
+  SUBCASE ("overflow") {
+    string_eq (as_hex ((uint8_t) -1), "ff");
+    string_eq (as_hex ((uint8_t) 256), "00");
+  }
+}
+
 TEST_CASE ("cjk_unified_ideographs") {
   CHECK (is_cjk_unified_ideographs ("<#4E2D>"));
   CHECK (has_cjk_unified_ideographs ("<#4E2D>"));

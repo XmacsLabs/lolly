@@ -10,6 +10,7 @@
  ******************************************************************************/
 
 #include "md5.hpp"
+#include "analyze.hpp"
 #include "file.hpp"
 
 #include <tbox/tbox.h>
@@ -46,11 +47,11 @@ md5_hexdigest (url u) {
       return string ("");
     }
 
-    tb_size_t i          = 0;
-    tb_char_t md5_hex[32]= {0};
-    for (i= 0; i < 16; ++i)
-      tb_snprintf (md5_hex + (i << 1), 3, "%02x", o_buffer[i]);
-    return string (md5_hex);
+    string md5_hex= string ();
+    for (int i= 0; i < 16; ++i) {
+      md5_hex << as_hex (o_buffer[i]);
+    }
+    return md5_hex;
   }
   else {
     return string ("");
