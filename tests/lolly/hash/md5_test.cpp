@@ -17,14 +17,8 @@ using lolly::hash::md5_hexdigest;
 
 TEST_CASE ("md5_hexdigest") {
   SUBCASE ("normal file") {
-    if (os_win () || os_mingw ()) {
-      string_eq (md5_hexdigest (url_pwd () * "LICENSE"),
-                 "3c34afdc3adf82d2448f12715a255122");
-    }
-    else {
-      string_eq (md5_hexdigest (url_pwd () * "LICENSE"),
-                 "d32239bcb673463ab874e80d47fae504");
-    }
+    string_eq (md5_hexdigest (url_pwd () * "LICENSE"),
+               "d32239bcb673463ab874e80d47fae504");
   }
   SUBCASE ("empty file") {
     url temp= url_temp ();

@@ -33,6 +33,8 @@ jobs:
           xmake-version: v2.8.5
       - name: update repo
         run: xmake repo -u
+      - name: git crlf
+        run: git config --global core.autocrlf false
       - uses: actions/checkout@v3
         with:
           fetch-depth: 1
