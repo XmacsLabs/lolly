@@ -37,8 +37,6 @@ jobs:
       - name: update repo
         run: |
           xmake repo -u
-      - name: git crlf
-        run: git config --global core.autocrlf false
       - uses: actions/checkout@v3
         with:
           fetch-depth: 1
@@ -70,6 +68,8 @@ jobs:
       - name: update repo
         run: |
           xrepo update-repo
+      - name: git crlf
+        run: git config --global core.autocrlf false
       - uses: actions/checkout@v3
         with:
           fetch-depth: 1
