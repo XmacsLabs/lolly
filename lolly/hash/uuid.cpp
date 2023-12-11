@@ -9,9 +9,9 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include <tbox/tbox.h>
-
 #include "uuid.hpp"
+
+#include <tbox/tbox.h>
 
 namespace lolly {
 namespace hash {
