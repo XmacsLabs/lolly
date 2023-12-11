@@ -1,7 +1,7 @@
 
 /******************************************************************************
- * MODULE     : uuid.cpp
- * DESCRIPTION: UUID generation
+ * MODULE     : md5.hpp
+ * DESCRIPTION: md5 digest
  * COPYRIGHT  : (C) 2023  Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
@@ -9,19 +9,13 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include "uuid.hpp"
-#include <tbox/tbox.h>
+#pragma once
+
+#include "string.hpp"
+#include "url.hpp"
 
 namespace lolly {
 namespace hash {
-string
-uuid_make () {
-  tb_char_t        uuid[37];
-  const tb_char_t* ret= tb_uuid4_make_cstr (uuid, tb_null);
-  if (ret == NULL) {
-    TM_FAILED ("Failed to generate UUID");
-  }
-  return string (ret);
+string md5_hexdigest (url u);
 }
-} // namespace hash
 } // namespace lolly
