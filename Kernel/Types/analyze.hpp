@@ -126,28 +126,6 @@ bool is_iso_alpha (string s);
 bool is_numeric (string s);
 
 /**
- * @brief Checks if a string contains only CJK Unified Ideographs.
- *
- * @param s The string to check.
- * @return True if all characters in the string are CJK Unified Ideographs,
- * otherwise false.
- * @note This function expects the CJK Unified Ideographs to be in a specific
- * encoded format.
- */
-bool is_cjk_unified_ideographs (string s);
-
-/**
- * @brief Checks if a string contains any CJK Unified Ideographs.
- *
- * @param s The string to check.
- * @return True if the string contains at least one CJK Unified Ideograph,
- * otherwise false.
- * @note This function expects the CJK Unified Ideographs to be in a specific
- * encoded format.
- */
-bool has_cjk_unified_ideographs (string s);
-
-/**
  * @brief Converts a lowercase character to uppercase.
  *
  * @param c The character to convert.
