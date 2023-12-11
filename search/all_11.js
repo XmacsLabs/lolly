@@ -21,7 +21,7 @@ var searchData=
   ['inside_18',['inside',['../tree_8hpp.html#a53928b7ba230c8d50515d71dfe266703',1,'inside():&#160;tree.hpp'],['../classtree.html#a53928b7ba230c8d50515d71dfe266703',1,'tree::inside()']]],
   ['instances_19',['instances',['../classresource__ptr.html#a8792fc268b073edbc2c03115652c1150',1,'resource_ptr']]],
   ['int64_5ftype_20',['INT64_TYPE',['../namespacelolly_1_1data.html#a01288eee69b7e52dc00ad9021af846d8a52ec12d314e3278b11d03080d043a68c',1,'lolly::data']]],
-  ['int_5fto_5fb64_21',['int_to_b64',['../base64_8cpp.html#ab9515e4fe26d7867829aeaee065902b3',1,'base64.cpp']]],
+  ['int_5fto_5fb64_21',['int_to_b64',['../namespacelolly_1_1data.html#a2341c30af48b0acaf394d007f4e5a912',1,'lolly::data']]],
   ['invert_22',['invert',['../hashmap__extra_8ipp.html#adf316feb4f923111b22484d37e080c89',1,'invert(hashmap&lt; T, U &gt; patch, hashmap&lt; T, U &gt; base):&#160;hashmap_extra.ipp'],['../hashmap_8hpp.html#adf316feb4f923111b22484d37e080c89',1,'invert(hashmap&lt; T, U &gt; patch, hashmap&lt; T, U &gt; base):&#160;hashmap_extra.ipp']]],
   ['is_5falpha_23',['is_alpha',['../analyze_8hpp.html#a90488c03e222e1672a7b635cfc83d4b5',1,'is_alpha(string s):&#160;analyze.cpp'],['../analyze_8cpp.html#a90488c03e222e1672a7b635cfc83d4b5',1,'is_alpha(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#aa5bea284141cbe4ae9703917d38dbeec',1,'is_alpha(char c):&#160;analyze.hpp']]],
   ['is_5falphanum_24',['is_alphanum',['../analyze_8hpp.html#a146d195e7b968f6b55f05b24dbcdc4b2',1,'is_alphanum(string s):&#160;analyze.cpp'],['../analyze_8cpp.html#a146d195e7b968f6b55f05b24dbcdc4b2',1,'is_alphanum(string s):&#160;analyze.cpp']]],

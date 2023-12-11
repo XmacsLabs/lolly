@@ -1,7 +1,7 @@
 var searchData=
 [
   ['empty_0',['empty',['../classhashmap__rep.html#a138275b8ed6bb4bdaefdc7b4441286bf',1,'hashmap_rep']]],
-  ['encode_5fbase64_1',['encode_base64',['../base64_8cpp.html#ad6ae9328b27b7af762f8d03ba2bb3396',1,'encode_base64(char c1, char c2, char c3):&#160;base64.cpp'],['../base64_8cpp.html#aff59524bf18754335a19ed62ef4be5c2',1,'encode_base64(string s):&#160;base64.cpp'],['../base64_8hpp.html#aff59524bf18754335a19ed62ef4be5c2',1,'encode_base64(string s):&#160;base64.cpp']]],
+  ['encode_5fbase64_1',['encode_base64',['../namespacelolly_1_1data.html#a70beb077536b3ec520bc1ebd04e88cd3',1,'lolly::data::encode_base64(char c1, char c2, char c3)'],['../namespacelolly_1_1data.html#a1a59469c495b6ae7fbaf9f4242e03359',1,'lolly::data::encode_base64(string s)']]],
   ['ends_2',['ends',['../analyze_8hpp.html#a1f979270044423cc26337327c4d375e9',1,'ends(string s, const string test):&#160;analyze.cpp'],['../analyze_8hpp.html#ac835ed61769e4f35ec7c39f57346595d',1,'ends(string s, const char *test):&#160;analyze.cpp'],['../analyze_8cpp.html#adcc51946f361554a7faa58452367528d',1,'ends(string s, const string r):&#160;analyze.cpp'],['../analyze_8cpp.html#a3bf78d83c6e08edbf9e898b278f9e677',1,'ends(string s, const char *what):&#160;analyze.cpp']]],
   ['enlarge_5fmalloc_3',['enlarge_malloc',['../fast__alloc_8hpp.html#afa3aef94c5a63959c6c45adc07d9db6f',1,'enlarge_malloc(size_t s):&#160;fast_alloc.cpp'],['../fast__alloc_8cpp.html#af223977c34c531b6630f6f5a721397b7',1,'enlarge_malloc(size_t sz):&#160;fast_alloc.cpp']]],
   ['equal_4',['equal',['../classblackbox__rep.html#adbe011bf7259e2c3fcf23301c70cca42',1,'blackbox_rep::equal()'],['../classwhitebox__rep.html#a3ff7f2e03d94da6dfbd1e6893a6337dc',1,'whitebox_rep::equal()']]],

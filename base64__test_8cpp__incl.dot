@@ -29,6 +29,6 @@ digraph "base64_test.cpp"
   Node6 -> Node12 [color="steelblue1",style="solid"];
   Node12 [label="math.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node13 [color="steelblue1",style="solid"];
-  Node13 [label="base64.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$base64_8hpp.html",tooltip=" "];
+  Node13 [label="lolly/data/base64.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$base64_8hpp.html",tooltip=" "];
   Node13 -> Node5 [color="steelblue1",style="solid"];
 }

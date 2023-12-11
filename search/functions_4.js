@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['decode_5fbase64_0',['decode_base64',['../base64_8cpp.html#ae351c1116bb031a7dc0fdd36687bbdd2',1,'decode_base64(array&lt; int &gt; ac):&#160;base64.cpp'],['../base64_8cpp.html#a02ac8142b6bb02f6e7f980424c1a37e7',1,'decode_base64(string s):&#160;base64.cpp'],['../base64_8hpp.html#a02ac8142b6bb02f6e7f980424c1a37e7',1,'decode_base64(string s):&#160;base64.cpp']]],
+  ['decode_5fbase64_0',['decode_base64',['../namespacelolly_1_1data.html#a083edca3fb16a7cd6cce07a5bae5b1c8',1,'lolly::data::decode_base64(array&lt; int &gt; ac)'],['../namespacelolly_1_1data.html#ab978a41326fa124960a0d7a51438f1d3',1,'lolly::data::decode_base64(string s)']]],
   ['delta_1',['delta',['../url_8cpp.html#ab87a6ee28b0a5dacf177b9c13c5ee9a4',1,'delta(url base, url u):&#160;url.cpp'],['../url_8hpp.html#ab87a6ee28b0a5dacf177b9c13c5ee9a4',1,'delta(url base, url u):&#160;url.cpp']]],
   ['delta_5fsub_2',['delta_sub',['../url_8cpp.html#a7785d18987d57ce39bec171a8a3c4612',1,'url.cpp']]],
   ['descends_3',['descends',['../url_8cpp.html#a6aa2030640a069317bfa0d04903042b3',1,'descends(url u, url base):&#160;url.cpp'],['../url_8hpp.html#a6aa2030640a069317bfa0d04903042b3',1,'descends(url u, url base):&#160;url.cpp']]],

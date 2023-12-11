@@ -47,8 +47,8 @@ var searchData=
   ['rmdir_44',['rmdir',['../file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c',1,'rmdir(url u):&#160;file.cpp'],['../file_8hpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c',1,'rmdir(url u):&#160;file.cpp']]],
   ['roman_5fnr_45',['Roman_nr',['../analyze_8cpp.html#ad2d944b51475e6af17c42143a1c2e5bb',1,'Roman_nr(int32_t nr):&#160;analyze.cpp'],['../analyze_8hpp.html#ad2d944b51475e6af17c42143a1c2e5bb',1,'Roman_nr(int32_t nr):&#160;analyze.cpp']]],
   ['roman_5fnr_46',['roman_nr',['../analyze_8cpp.html#a181c79f528d11b7ef418443a82bb64ca',1,'roman_nr(int32_t nr):&#160;analyze.cpp'],['../analyze_8hpp.html#a181c79f528d11b7ef418443a82bb64ca',1,'roman_nr(int32_t nr):&#160;analyze.cpp']]],
-  ['root_47',['ROOT',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
-  ['root_48',['root',['../modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp'],['../modification_8hpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp']]],
+  ['root_47',['root',['../modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp'],['../modification_8hpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp']]],
+  ['root_48',['ROOT',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
   ['round_5flength_49',['round_length',['../array_8ipp.html#a2db02dec333ae4764479a173b59fa5e3',1,'round_length(int n, size_t s):&#160;array.ipp'],['../string_8cpp.html#a52be85c188a31a687d01b97965cfba23',1,'round_length(int n):&#160;string.cpp']]],
   ['routine_50',['routine',['../hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07',1,'hashmap_test.cpp']]]
 ];

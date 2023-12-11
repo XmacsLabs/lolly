@@ -11,7 +11,7 @@ var searchData=
   ['b4_8',['b4',['../blackbox__test_8cpp.html#a34c50232fd3d74a01803070e5591366f',1,'blackbox_test.cpp']]],
   ['b5_9',['b5',['../blackbox__test_8cpp.html#a854c1a366399c05c1f441330a8ebdc67',1,'blackbox_test.cpp']]],
   ['b6_10',['b6',['../blackbox__test_8cpp.html#affb3daa9fbc8d233917ca89408564d8a',1,'blackbox_test.cpp']]],
-  ['b64_5fto_5fint_11',['b64_to_int',['../base64_8cpp.html#ab253153ce743f40cc6d352b3f0307a9f',1,'base64.cpp']]],
+  ['b64_5fto_5fint_11',['b64_to_int',['../namespacelolly_1_1data.html#aefb201477968aa5d38ec7dfca41d2b3c',1,'lolly::data']]],
   ['b7_12',['b7',['../blackbox__test_8cpp.html#af3adc2e63956ebbd63bbbaf5f63d4ef2',1,'blackbox_test.cpp']]],
   ['b8_13',['b8',['../blackbox__test_8cpp.html#aea0e1ae5519270709067ffdc49076f40',1,'blackbox_test.cpp']]],
   ['b9_14',['b9',['../blackbox__test_8cpp.html#a4383189ef21517aefacaa8fd80d4d86e',1,'blackbox_test.cpp']]],
