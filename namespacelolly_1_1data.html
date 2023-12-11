@@ -124,6 +124,12 @@ Functions</h2></td></tr>
 <tr class="separator:afc8a6d748db873447e21da2f8863c5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a600300cd50b77ad463498256968ca50e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#a600300cd50b77ad463498256968ca50e">unicode_get_range</a> (int code)</td></tr>
 <tr class="separator:a600300cd50b77ad463498256968ca50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bd1a22a18117faa9b661618a3d2b29"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#aa4bd1a22a18117faa9b661618a3d2b29">is_cjk_unified_ideographs</a> (<a class="el" href="classstring.html">string</a> s)</td></tr>
+<tr class="memdesc:aa4bd1a22a18117faa9b661618a3d2b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string contains only CJK Unified Ideographs.  <br /></td></tr>
+<tr class="separator:aa4bd1a22a18117faa9b661618a3d2b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc4fd6f957952f31eddac5891da8a1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#adcc4fd6f957952f31eddac5891da8a1d">has_cjk_unified_ideographs</a> (<a class="el" href="classstring.html">string</a> s)</td></tr>
+<tr class="memdesc:adcc4fd6f957952f31eddac5891da8a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string contains any CJK Unified Ideographs.  <br /></td></tr>
+<tr class="separator:adcc4fd6f957952f31eddac5891da8a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a630676dee432d3164584d5b7b038a5c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#a630676dee432d3164584d5b7b038a5c9">uri_host</a> (<a class="el" href="classurl.html">url</a> u)</td></tr>
 <tr class="separator:a630676dee432d3164584d5b7b038a5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4035a12f27c86bcf1f202afc0e1a378a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1data.html#a4035a12f27c86bcf1f202afc0e1a378a">uri_path</a> (<a class="el" href="classurl.html">url</a> u)</td></tr>
@@ -444,6 +450,100 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   30</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x1d400 &amp;&amp; code &lt;= 0x1d7ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;mathletters&quot;</span>;</div>
 <div class="line"><span class="lineno">   31</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><span class="lineno">   32</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa4bd1a22a18117faa9b661618a3d2b29" name="aa4bd1a22a18117faa9b661618a3d2b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4bd1a22a18117faa9b661618a3d2b29">&#9670;&#160;</a></span>is_cjk_unified_ideographs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lolly::data::is_cjk_unified_ideographs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a string contains only CJK Unified Ideographs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>The string to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if all characters in the string are CJK Unified Ideographs, otherwise false. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function expects the CJK Unified Ideographs to be in a specific encoded format. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="unicode_8cpp_source.html#l00035">35</a> of file <a class="el" href="unicode_8cpp_source.html">unicode.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                     {</div>
+<div class="line"><span class="lineno">   36</span>  <span class="keywordtype">int</span> n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span> (s[i] == <span class="charliteral">&#39;&lt;&#39;</span> &amp;&amp; i + 1 &lt; n &amp;&amp; s[i + 1] == <span class="charliteral">&#39;#&#39;</span>) {</div>
+<div class="line"><span class="lineno">   39</span>      <span class="keywordtype">int</span> start= i + 2;</div>
+<div class="line"><span class="lineno">   40</span>      i        = i + 2;</div>
+<div class="line"><span class="lineno">   41</span>      <span class="keywordflow">while</span> (i &lt; n &amp;&amp; s[i] != <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line"><span class="lineno">   42</span>        i++;</div>
+<div class="line"><span class="lineno">   43</span>      <span class="keywordtype">string</span> r= s (start, i);</div>
+<div class="line"><span class="lineno">   44</span>      <span class="keywordflow">if</span> (<span class="stringliteral">&quot;4E00&quot;</span> &lt;= r &amp;&amp; r &lt;= <span class="stringliteral">&quot;9FBF&quot;</span>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   45</span>      <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   48</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   51</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adcc4fd6f957952f31eddac5891da8a1d" name="adcc4fd6f957952f31eddac5891da8a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc4fd6f957952f31eddac5891da8a1d">&#9670;&#160;</a></span>has_cjk_unified_ideographs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lolly::data::has_cjk_unified_ideographs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a string contains any CJK Unified Ideographs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>The string to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the string contains at least one CJK Unified Ideograph, otherwise false. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function expects the CJK Unified Ideographs to be in a specific encoded format. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="unicode_8cpp_source.html#l00054">54</a> of file <a class="el" href="unicode_8cpp_source.html">unicode.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                      {</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordtype">int</span> n= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> (s[i] == <span class="charliteral">&#39;&lt;&#39;</span> &amp;&amp; i + 1 &lt; n &amp;&amp; s[i + 1] == <span class="charliteral">&#39;#&#39;</span>) {</div>
+<div class="line"><span class="lineno">   58</span>      <span class="keywordtype">int</span> start= i + 2;</div>
+<div class="line"><span class="lineno">   59</span>      i        = i + 2;</div>
+<div class="line"><span class="lineno">   60</span>      <span class="keywordflow">while</span> (i &lt; n &amp;&amp; s[i] != <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line"><span class="lineno">   61</span>        i++;</div>
+<div class="line"><span class="lineno">   62</span>      <span class="keywordtype">string</span> r= s (start, i);</div>
+<div class="line"><span class="lineno">   63</span>      <span class="keywordflow">if</span> (<span class="stringliteral">&quot;4E00&quot;</span> &lt;= r &amp;&amp; r &lt;= <span class="stringliteral">&quot;9FBF&quot;</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   64</span>      <span class="keywordflow">else</span> <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   67</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
