@@ -348,6 +348,15 @@ string fnsymbol_nr (int nr);
 string hanzi_nr (int32_t nr);
 
 /**
+ * @brief Converts an 8-bit unsigned integer to a fixed-length (2) hex string.
+ *
+ * @param i The integer to be converted to a fixed-length hex string.
+ * @return The fixed-length (2) hexadecimal string representation of the input
+ * integer.
+ */
+string as_hex (uint8_t i);
+
+/**
  * @brief Converts an integer to a hexadecimal string.
  *
  * @param i The integer to be converted to a hexadecimal string.
