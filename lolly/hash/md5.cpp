@@ -9,10 +9,10 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include "md5.hpp"
-#include "file.hpp"
-
 #include <tbox/tbox.h>
+
+#include "file.hpp"
+#include "md5.hpp"
 
 namespace lolly {
 namespace hash {
@@ -30,8 +30,11 @@ md5_hexdigest (url u) {
   if (file == tb_null) {
     return string ("");
   }
+  tb_size_t i_size= tb_file_size (file);
+  if (i_size == 0) {
+    return "d41d8cd98f00b204e9800998ecf8427e";
+  }
   tb_file_sync (file); // lock file
-  tb_size_t  i_size     = tb_file_size (file);
   tb_byte_t* i_buffer   = tm_new_array<tb_byte_t> (i_size);
   tb_size_t  real_size  = tb_file_read (file, i_buffer, i_size);
   bool       read_sz_equ= (real_size == i_size);
@@ -39,7 +42,9 @@ md5_hexdigest (url u) {
   if (read_sz_equ && exit_suc) {
     tb_byte_t o_buffer[16];
     tb_size_t o_size= tb_md5_make (i_buffer, i_size, o_buffer, 16);
-    if (o_size != 16) return string ("");
+    if (o_size != 16) {
+      return string ("");
+    }
 
     tb_size_t i          = 0;
     tb_char_t md5_hex[17]= {0};
