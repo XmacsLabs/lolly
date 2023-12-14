@@ -91,8 +91,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab4f7eda678c507eb700919852113dc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae64c4bbc84bb98874177d0637382c118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1system.html#ae64c4bbc84bb98874177d0637382c118">timer_cumul</a> (<a class="el" href="classstring.html">string</a> task)</td></tr>
 <tr class="separator:ae64c4bbc84bb98874177d0637382c118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e988ea81756c8eb7a7e62e846eefdc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1system.html#a3e988ea81756c8eb7a7e62e846eefdc0">timer_end</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;ostream, <a class="el" href="classstring.html">string</a> task)</td></tr>
-<tr class="separator:a3e988ea81756c8eb7a7e62e846eefdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6644d442145d2a679a4ef08c9e1f14fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1system.html#a6644d442145d2a679a4ef08c9e1f14fb">timer_end</a> (<a class="el" href="classstring.html">string</a> task)</td></tr>
+<tr class="separator:a6644d442145d2a679a4ef08c9e1f14fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a495ecc9c1b248e662c50d9bb87b40a0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1system.html#a495ecc9c1b248e662c50d9bb87b40a0c">timer_reset</a> (<a class="el" href="classstring.html">string</a> task)</td></tr>
 <tr class="separator:a495ecc9c1b248e662c50d9bb87b40a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a805cc6dd139cd775ad58a8067c7df299"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelolly_1_1system.html#a805cc6dd139cd775ad58a8067c7df299">bench_print</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;ostream, <a class="el" href="classstring.html">string</a> task, uint32_t threshold)</td></tr>
@@ -288,8 +288,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a3e988ea81756c8eb7a7e62e846eefdc0" name="a3e988ea81756c8eb7a7e62e846eefdc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e988ea81756c8eb7a7e62e846eefdc0">&#9670;&#160;</a></span>timer_end()</h2>
+<a id="a6644d442145d2a679a4ef08c9e1f14fb" name="a6644d442145d2a679a4ef08c9e1f14fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6644d442145d2a679a4ef08c9e1f14fb">&#9670;&#160;</a></span>timer_end()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,26 +297,16 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void lolly::system::timer_end </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td>
-          <td class="paramname"><em>ostream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="classstring.html">string</a>&#160;</td>
-          <td class="paramname"><em>task</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>task</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="timer_8cpp_source.html#l00051">51</a> of file <a class="el" href="timer_8cpp_source.html">timer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                             {</div>
-<div class="line"><span class="lineno">   52</span>  <span class="comment">// end timer for a given type of task, print result and reset timer</span></div>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                        {</div>
+<div class="line"><span class="lineno">   52</span>  <span class="comment">// end timer for a given type of task, and reset timer</span></div>
 <div class="line"><span class="lineno">   53</span>  <a class="code hl_function" href="namespacelolly_1_1system.html#ae64c4bbc84bb98874177d0637382c118">timer_cumul</a> (task);</div>
 <div class="line"><span class="lineno">   54</span>  <a class="code hl_function" href="namespacelolly_1_1system.html#a495ecc9c1b248e662c50d9bb87b40a0c">timer_reset</a> (task);</div>
 <div class="line"><span class="lineno">   55</span>}</div>
