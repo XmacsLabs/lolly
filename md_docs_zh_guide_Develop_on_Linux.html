@@ -73,26 +73,26 @@ $(function() {
   <div class="headertitle"><div class="title">在GNU/Linux上开发 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md54"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md51"></a>
 使用xmake</h1>
-<h2><a class="anchor" id="autotoc_md55"></a>
+<h2><a class="anchor" id="autotoc_md52"></a>
 第一步：安装xmake</h2>
 <p>以Debian及衍生版为例： </p><div class="fragment"><div class="line">sudo add-apt-repository ppa:xmake-io/xmake</div>
 <div class="line">sudo apt install xmake</div>
 </div><!-- fragment --><p>有时候需要保持xrepo是最新的，以保证使用最新的依赖的构建定义 </p><div class="fragment"><div class="line">xrepo update-repo</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md56"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md53"></a>
 第二步：安装与使用</h2>
 <p>以xmake为例： </p>
-<h3><a class="anchor" id="autotoc_md57"></a>
+<h3><a class="anchor" id="autotoc_md54"></a>
 方法一：安装到本地</h3>
 <div class="fragment"><div class="line">xmake config --yes</div>
 <div class="line">xmake build liblolly</div>
 <div class="line">xmake install --admin liblolly</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md58"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md55"></a>
 方法二：添加xmake依赖</h3>
 <p>在需要用lolly的库中,在xmake.lua中添加： </p><div class="fragment"><div class="line">add_requires(&quot;lolly&quot;, {system=false})</div>
 </div><!-- fragment --><p> 详细样例可见<a href="https://github.com/XmacsLabs/mogan/blob/branch-1.2/misc/xmake/packages.lua">mogan</a>。</p>
-<h2><a class="anchor" id="autotoc_md59"></a>
+<h2><a class="anchor" id="autotoc_md56"></a>
 第三步：编译测试</h2>
 <p>见<a class="el" href="md_docs_zh_guide_Test.html">如何测试</a>。 </p>
 </div></div><!-- contents -->
