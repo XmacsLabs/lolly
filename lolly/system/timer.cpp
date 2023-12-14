@@ -48,13 +48,6 @@ timer_cumul (string task) {
 }
 
 void
-timer_end (string task) {
-  // end timer for a given type of task, and reset timer
-  timer_cumul (task);
-  timer_reset (task);
-}
-
-void
 timer_reset (string task) {
   // reset timer for a given type of task
   timing_level->reset (task);
@@ -65,10 +58,11 @@ timer_reset (string task) {
 
 void
 bench_print (tm_ostream& ostream, string task, uint32_t threshold) {
-  uint32_t nr= timing_nr[task];
-  if (nr < threshold) return;
+  uint32_t elapse_time= timing_cumul[task];
+  if (elapse_time < threshold) return;
 
-  ostream << "Task '" << task << "' took " << timing_cumul[task] << " ms";
+  uint32_t nr= timing_nr[task];
+  ostream << "Task '" << task << "' took " << elapse_time << " ms";
   if (nr > 1) ostream << " (" << nr << " invocations)";
   ostream << LF;
 }

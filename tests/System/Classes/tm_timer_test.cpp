@@ -14,7 +14,6 @@
 
 using lolly::system::bench_print;
 using lolly::system::timer_cumul;
-using lolly::system::timer_end;
 using lolly::system::timer_reset;
 using lolly::system::timer_start;
 
