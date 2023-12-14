@@ -19,28 +19,28 @@
 namespace lolly {
 namespace system {
 
-static hashmap<string, long> timing_level (0);
-static hashmap<string, long> timing_nr (0);
-static hashmap<string, long> timing_cumul (0);
-static hashmap<string, long> timing_last (0);
+static hashmap<string, uint32_t> timing_level (0);
+static hashmap<string, uint32_t> timing_nr (0);
+static hashmap<string, uint32_t> timing_cumul (0);
+static hashmap<string, uint32_t> timing_last (0);
 
 /******************************************************************************
  * Routines for benchmarking
  ******************************************************************************/
 
 void
-bench_start (string task) {
+timer_start (string task) {
   // start timer for a given type of task
-  if (timing_level[task] == 0) timing_last (task)= (long) texmacs_time ();
+  if (timing_level[task] == 0) timing_last (task)= (uint32_t) texmacs_time ();
   timing_level (task)++;
 }
 
 void
-bench_cumul (string task) {
+timer_cumul (string task) {
   // end timer for a given type of task, but don't reset timer
   timing_level (task)--;
   if (timing_level[task] == 0) {
-    long ms= ((long) texmacs_time ()) - timing_last (task);
+    uint32_t ms= ((uint32_t) texmacs_time ()) - timing_last (task);
     timing_nr (task)++;
     timing_cumul (task)+= ms;
     timing_last->reset (task);
@@ -48,15 +48,14 @@ bench_cumul (string task) {
 }
 
 void
-bench_end (tm_ostream& ostream, string task) {
+timer_end (tm_ostream& ostream, string task) {
   // end timer for a given type of task, print result and reset timer
-  bench_cumul (task);
-  bench_print (ostream, task);
-  bench_reset (task);
+  timer_cumul (task);
+  timer_reset (task);
 }
 
 void
-bench_reset (string task) {
+timer_reset (string task) {
   // reset timer for a given type of task
   timing_level->reset (task);
   timing_nr->reset (task);
@@ -65,15 +64,17 @@ bench_reset (string task) {
 }
 
 void
-bench_print (tm_ostream& ostream, string task) {
-  long nr= timing_nr[task];
+bench_print (tm_ostream& ostream, string task, uint32_t threshold) {
+  uint32_t nr= timing_nr[task];
+  if (nr < threshold) return;
+
   ostream << "Task '" << task << "' took " << timing_cumul[task] << " ms";
   if (nr > 1) ostream << " (" << nr << " invocations)";
   ostream << LF;
 }
 
 static array<string>
-collect (hashmap<string, long> h) {
+collect (hashmap<string, uint32_t> h) {
   array<string>    a;
   iterator<string> it= iterate (h);
   while (it->busy ())

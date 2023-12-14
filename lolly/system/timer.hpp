@@ -12,15 +12,16 @@
 #pragma once
 
 #include "string.hpp"
+#include <stdint.h>
 
 namespace lolly {
 namespace system {
 
-void bench_start (string task);
-void bench_cumul (string task);
-void bench_end (tm_ostream& ostream, string task);
-void bench_reset (string task);
-void bench_print (tm_ostream& ostream, string task);
+void timer_start (string task);
+void timer_cumul (string task);
+void timer_end (tm_ostream& ostream, string task);
+void timer_reset (string task);
+void bench_print (tm_ostream& ostream, string task, uint32_t threshold= 0);
 void bench_print (tm_ostream& ostream);
 
 } // namespace system
