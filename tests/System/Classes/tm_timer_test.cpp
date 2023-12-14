@@ -12,11 +12,11 @@
 
 #include "tbox/tbox.h"
 
-using lolly::system::bench_cumul;
-using lolly::system::bench_end;
 using lolly::system::bench_print;
-using lolly::system::bench_reset;
-using lolly::system::bench_start;
+using lolly::system::timer_cumul;
+using lolly::system::timer_end;
+using lolly::system::timer_reset;
+using lolly::system::timer_start;
 
 int
 get_timing_cumul (string out) {
@@ -113,19 +113,19 @@ TEST_CASE ("function texmacs_time") {
   CHECK (t2 >= t1);
 }
 
-TEST_CASE ("function bench_start and bench_cumul") {
+TEST_CASE ("function timer_start and timer_cumul") {
   tm_ostream ostream;
   ostream.buffer ();
 
   SUBCASE ("start once") {
-    bench_start ("task1");
+    timer_start ("task1");
     bench_print (ostream, "task1");
     string out= ostream.unbuffer ();
     int    t1 = get_timing_cumul (out);
 
     CHECK (t1 == 0);
 
-    bench_cumul ("task1");
+    timer_cumul ("task1");
     ostream.buffer ();
     bench_print (ostream, "task1");
     out   = ostream.unbuffer ();
@@ -135,9 +135,9 @@ TEST_CASE ("function bench_start and bench_cumul") {
   }
 
   SUBCASE ("start multiple times") {
-    bench_start ("task2");
+    timer_start ("task2");
 
-    bench_cumul ("task2");
+    timer_cumul ("task2");
     bench_print (ostream, "task1");
     string out= ostream.unbuffer ();
     int    t1 = get_timing_cumul (out);
@@ -145,9 +145,9 @@ TEST_CASE ("function bench_start and bench_cumul") {
     CHECK (t1 >= 0);
     CHECK (get_timing_nr (out) == -1);
 
-    bench_start ("task2");
+    timer_start ("task2");
 
-    bench_cumul ("task2");
+    timer_cumul ("task2");
     ostream.buffer ();
     bench_print (ostream, "task2");
     out   = ostream.unbuffer ();
@@ -159,30 +159,30 @@ TEST_CASE ("function bench_start and bench_cumul") {
   }
 }
 
-TEST_CASE ("function bench_end") {
+TEST_CASE ("function timer_end") {
   tm_ostream ostream;
   ostream.buffer ();
 
-  bench_start ("task");
-  bench_end (ostream, "task");
+  timer_start ("task");
+  timer_end (ostream, "task");
   string out= ostream.unbuffer ();
 
   CHECK (get_timing_nr (out) == -1);
 
-  bench_start ("task");
+  timer_start ("task");
   ostream.buffer ();
-  bench_end (ostream, "task");
+  timer_end (ostream, "task");
   out= ostream.unbuffer ();
 
   CHECK (get_timing_nr (out) == -1);
 }
 
-TEST_CASE ("function bench_reset") {
+TEST_CASE ("function timer_reset") {
   tm_ostream ostream;
   ostream.buffer ();
 
   SUBCASE ("if task empty") {
-    bench_reset ("task");
+    timer_reset ("task");
     bench_print (ostream, "task");
     string out= ostream.unbuffer ();
 
@@ -190,12 +190,12 @@ TEST_CASE ("function bench_reset") {
   }
 
   SUBCASE ("if task not empty") {
-    bench_start ("task");
-    bench_cumul ("task");
-    bench_start ("task");
-    bench_cumul ("task");
+    timer_start ("task");
+    timer_cumul ("task");
+    timer_start ("task");
+    timer_cumul ("task");
 
-    bench_reset ("task");
+    timer_reset ("task");
     bench_print (ostream, "task");
     string out= ostream.unbuffer ();
 
@@ -214,11 +214,11 @@ TEST_CASE ("function bench_print") {
     CHECK (test_same (ostream, b));
 
     ostream.buffer ();
-    bench_reset ("task1");
-    bench_start ("task1");
-    bench_cumul ("task1");
-    bench_start ("task1");
-    bench_cumul ("task1");
+    timer_reset ("task1");
+    timer_start ("task1");
+    timer_cumul ("task1");
+    timer_start ("task1");
+    timer_cumul ("task1");
     bench_print (ostream, "task1");
 
     string ans= "Task 'task1' took 0 ms (2 invocations)\n";
@@ -228,13 +228,13 @@ TEST_CASE ("function bench_print") {
   }
 
   SUBCASE ("print multiple task") {
-    bench_reset ("task1");
-    bench_reset ("task2");
+    timer_reset ("task1");
+    timer_reset ("task2");
 
-    bench_start ("task1");
-    bench_cumul ("task1");
-    bench_start ("task2");
-    bench_cumul ("task2");
+    timer_start ("task1");
+    timer_cumul ("task1");
+    timer_start ("task2");
+    timer_cumul ("task2");
     bench_print (ostream);
 
     string out= to_zero (ostream);
@@ -245,8 +245,8 @@ TEST_CASE ("function bench_print") {
 }
 
 TEST_CASE ("testing memory leakage of tm_timer") {
-  bench_reset ("task");
-  bench_reset ("task1");
-  bench_reset ("task2");
+  timer_reset ("task");
+  timer_reset ("task1");
+  timer_reset ("task2");
   CHECK_EQ (mem_used (), mem_lolly);
 }
