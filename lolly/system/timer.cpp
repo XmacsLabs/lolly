@@ -48,8 +48,8 @@ timer_cumul (string task) {
 }
 
 void
-timer_end (tm_ostream& ostream, string task) {
-  // end timer for a given type of task, print result and reset timer
+timer_end (string task) {
+  // end timer for a given type of task, and reset timer
   timer_cumul (task);
   timer_reset (task);
 }

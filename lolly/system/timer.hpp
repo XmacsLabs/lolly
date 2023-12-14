@@ -19,8 +19,8 @@ namespace system {
 
 void timer_start (string task);
 void timer_cumul (string task);
-void timer_end (tm_ostream& ostream, string task);
 void timer_reset (string task);
+void timer_end (string task);
 void bench_print (tm_ostream& ostream, string task, uint32_t threshold= 0);
 void bench_print (tm_ostream& ostream);
 
