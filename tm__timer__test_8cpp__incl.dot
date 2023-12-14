@@ -53,13 +53,15 @@ digraph "tm_timer_test.cpp"
   Node21 [label="ntuple.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ntuple_8hpp.html",tooltip=" "];
   Node21 -> Node6 [color="steelblue1",style="solid"];
   Node13 -> Node5 [color="steelblue1",style="solid"];
-  Node1 -> Node5 [color="steelblue1",style="solid"];
   Node1 -> Node22 [color="steelblue1",style="solid"];
-  Node22 [label="tm_timer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tm__timer_8hpp.html",tooltip=" "];
-  Node22 -> Node23 [color="steelblue1",style="solid"];
-  Node23 [label="time.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node22 [label="lolly/system/timer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$timer_8hpp.html",tooltip=" "];
   Node22 -> Node5 [color="steelblue1",style="solid"];
-  Node22 -> Node9 [color="steelblue1",style="solid"];
-  Node1 -> Node24 [color="steelblue1",style="solid"];
-  Node24 [label="tbox/tbox.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node22 -> Node14 [color="steelblue1",style="solid"];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node1 -> Node23 [color="steelblue1",style="solid"];
+  Node23 [label="tm_timer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tm__timer_8hpp.html",tooltip=" "];
+  Node23 -> Node24 [color="steelblue1",style="solid"];
+  Node24 [label="time.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node25 [color="steelblue1",style="solid"];
+  Node25 [label="tbox/tbox.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

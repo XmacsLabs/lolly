@@ -53,8 +53,6 @@ digraph "unix_sys_utils.cpp"
   Node20 [label="tm_timer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tm__timer_8hpp.html",tooltip=" "];
   Node20 -> Node21 [color="steelblue1",style="solid"];
   Node21 [label="time.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node20 -> Node12 [color="steelblue1",style="solid"];
-  Node20 -> Node7 [color="steelblue1",style="solid"];
   Node1 -> Node22 [color="steelblue1",style="solid"];
   Node22 [label="fcntl.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node23 [color="steelblue1",style="solid"];

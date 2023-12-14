@@ -43,7 +43,7 @@ var searchData=
   ['closeunused_40',['closeUnused',['../classChannel.html#aa462b7e71a7b1db2514d764518e05ebc',1,'Channel']]],
   ['closing_5fdelimiter_41',['closing_delimiter',['../analyze_8cpp.html#a9e77aeb532104ee21cf10a536e98e81a',1,'closing_delimiter(char c):&#160;analyze.cpp'],['../analyze_8hpp.html#a9e77aeb532104ee21cf10a536e98e81a',1,'closing_delimiter(char c):&#160;analyze.cpp']]],
   ['code_42',['code',['../structhashentry.html#a9b15cef416ce151d7acd6d505f22b0c6',1,'hashentry']]],
-  ['collect_43',['collect',['../tm__timer_8cpp.html#a41bae6982786f75d5abfd6951fdd8a3f',1,'tm_timer.cpp']]],
+  ['collect_43',['collect',['../namespacelolly_1_1system.html#a0ecc03ae682411aa3e57593cc11ff848',1,'lolly::system']]],
   ['color_44',['color',['../basic_8hpp.html#ae561696a8948d3288529e868b68b87f2',1,'basic.hpp']]],
   ['common_45',['common',['../path_8cpp.html#af750161b28cf42a4721b477ef423a90d',1,'common(path start, path end):&#160;path.cpp'],['../path_8hpp.html#af750161b28cf42a4721b477ef423a90d',1,'common(path start, path end):&#160;path.cpp']]],
   ['complex_46',['Complex',['../structComplex.html#ab1aaeee52acb23180f477f7ead8ec701',1,'Complex::Complex(double re_, double im_)'],['../structComplex.html#a43b9f07cdf697c71b5fd506a6cc80b8f',1,'Complex::Complex()'],['../structComplex.html',1,'Complex']]],
