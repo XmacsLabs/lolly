@@ -6,10 +6,17 @@
  */
 #include "a_lolly_test.hpp"
 #include "analyze.hpp"
+#include "lolly/system/timer.hpp"
 #include "string.hpp"
 #include "tm_timer.hpp"
 
 #include "tbox/tbox.h"
+
+using lolly::system::bench_cumul;
+using lolly::system::bench_end;
+using lolly::system::bench_print;
+using lolly::system::bench_reset;
+using lolly::system::bench_start;
 
 int
 get_timing_cumul (string out) {
