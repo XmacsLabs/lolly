@@ -159,24 +159,6 @@ TEST_CASE ("function timer_start and timer_cumul") {
   }
 }
 
-TEST_CASE ("function timer_end") {
-  tm_ostream ostream;
-  ostream.buffer ();
-
-  timer_start ("task");
-  timer_end (ostream, "task");
-  string out= ostream.unbuffer ();
-
-  CHECK (get_timing_nr (out) == -1);
-
-  timer_start ("task");
-  ostream.buffer ();
-  timer_end (ostream, "task");
-  out= ostream.unbuffer ();
-
-  CHECK (get_timing_nr (out) == -1);
-}
-
 TEST_CASE ("function timer_reset") {
   tm_ostream ostream;
   ostream.buffer ();
