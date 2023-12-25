@@ -278,22 +278,6 @@ string convert_tabs_to_spaces (string s, int w);
 string downgrade_math_letters (string s);
 
 /**
- * @brief Generates a Roman numeral string for an integer.
- *
- * @param nr The integer to be converted to Roman numeral.
- * @return A string representing the Roman numeral.
- */
-string roman_nr (int32_t nr);
-
-/**
- * @brief Generates an uppercase Roman numeral string for an integer.
- *
- * @param nr The integer to be converted to Roman numeral.
- * @return A string representing the uppercase Roman numeral.
- */
-string Roman_nr (int32_t nr);
-
-/**
  * @brief Generates an alphabetic string for an integer.
  *
  * @param nr The integer to be converted to an alphabetic string.

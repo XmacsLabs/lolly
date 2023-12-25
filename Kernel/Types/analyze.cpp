@@ -477,28 +477,6 @@ contains_unicode_char (string s) {
  * Roman and alpha numbers
  ******************************************************************************/
 
-static string ones[10]    = {"",  "i",  "ii",  "iii",  "iv",
-                             "v", "vi", "vii", "viii", "ix"};
-static string tens[10]    = {"",  "x",  "xx",  "xxx",  "xl",
-                             "l", "lx", "lxx", "lxxx", "xc"};
-static string hundreds[10]= {"",  "c",  "cc",  "ccc",  "cd",
-                             "d", "dc", "dcc", "dccc", "cm"};
-static string thousands[4]= {"", "m", "mm", "mmm"};
-
-string
-roman_nr (int32_t nr) {
-  if (nr == 0) return "o";
-  if (nr > 3999 || nr < -3999) return "?";
-  if (nr < 0) return "-" * roman_nr (-nr);
-  return thousands[(nr / 1000) % 10] * hundreds[(nr / 100) % 10] *
-         tens[(nr / 10) % 10] * ones[nr % 10];
-}
-
-string
-Roman_nr (int32_t nr) {
-  return upcase_all (roman_nr (nr));
-}
-
 string
 alpha_nr (int nr) {
   if (nr < 0) return "-" * alpha_nr (-nr);
