@@ -488,8 +488,8 @@ static string thousands[4]= {"", "m", "mm", "mmm"};
 string
 roman_nr (int32_t nr) {
   if (nr == 0) return "o";
-  if (nr > 3999) return "<unspecified>";
-  if (nr < -3999) return "<unspecified>";
+  if (nr > 3999 || nr < -3999) return "?";
+  if (nr < 0) return "-" * roman_nr (-nr);
   return thousands[(nr / 1000) % 10] * hundreds[(nr / 100) % 10] *
          tens[(nr / 10) % 10] * ones[nr % 10];
 }
