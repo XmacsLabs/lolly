@@ -31,5 +31,13 @@ string to_roman (int32_t nr);
  * @return A string representing the uppercase Roman numeral.
  */
 string to_Roman (int32_t nr);
+
+/**
+ * @brief Generates a Chinese numeral for a given integer.
+ *
+ * @param nr The integer to be converted to a Chinese numeral.
+ * @return A string representing the Chinese numeral.
+ */
+string to_hanzi (int32_t nr);
 } // namespace data
 } // namespace lolly

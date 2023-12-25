@@ -125,10 +125,10 @@ hanzi_sub (int16_t nr, bool leading_zero) {
 }
 
 string
-hanzi_nr (int32_t nr) {
+to_hanzi (int32_t nr) {
   if (nr == 0) return "零";
   if (nr == 0x80000000) return "负二十一亿四千七百四十八万三千六百四十八";
-  if (nr < 0) return "负" * hanzi_nr (-nr);
+  if (nr < 0) return "负" * to_hanzi (-nr);
   if (nr >= 100000000) {
     return hanzi_sub (nr / 100000000, false) * "亿" *
            hanzi_sub ((nr / 10000) % 10000, true) * "万" *
@@ -139,7 +139,6 @@ hanzi_nr (int32_t nr) {
   }
   return hanzi_sub (nr, false);
 }
-
 
 } // namespace data
 } // namespace lolly
