@@ -278,22 +278,6 @@ string convert_tabs_to_spaces (string s, int w);
 string downgrade_math_letters (string s);
 
 /**
- * @brief Generates a Roman numeral string for an integer.
- *
- * @param nr The integer to be converted to Roman numeral.
- * @return A string representing the Roman numeral.
- */
-string roman_nr (int32_t nr);
-
-/**
- * @brief Generates an uppercase Roman numeral string for an integer.
- *
- * @param nr The integer to be converted to Roman numeral.
- * @return A string representing the uppercase Roman numeral.
- */
-string Roman_nr (int32_t nr);
-
-/**
  * @brief Generates an alphabetic string for an integer.
  *
  * @param nr The integer to be converted to an alphabetic string.
@@ -316,14 +300,6 @@ string Alpha_nr (int nr);
  * @return A string representing the footnote symbol.
  */
 string fnsymbol_nr (int nr);
-
-/**
- * @brief Generates a Chinese numeral for a given integer.
- *
- * @param nr The integer to be converted to a Chinese numeral.
- * @return A string representing the Chinese numeral.
- */
-string hanzi_nr (int32_t nr);
 
 /**
  * @brief Converts an 8-bit unsigned integer to a fixed-length (2) hex string.
