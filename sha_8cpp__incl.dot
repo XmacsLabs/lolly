@@ -82,8 +82,12 @@ digraph "sha.cpp"
   Node1 -> Node29 [color="steelblue1",style="solid"];
   Node29 [label="file.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$file_8hpp.html",tooltip=" "];
   Node29 -> Node11 [color="steelblue1",style="solid"];
+  Node1 -> Node30 [color="steelblue1",style="solid"];
+  Node30 [label="lolly/data/numeral.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$numeral_8hpp.html",tooltip=" "];
+  Node30 -> Node3 [color="steelblue1",style="solid"];
+  Node30 -> Node27 [color="steelblue1",style="solid"];
   Node1 -> Node3 [color="steelblue1",style="solid"];
   Node1 -> Node11 [color="steelblue1",style="solid"];
-  Node1 -> Node30 [color="steelblue1",style="solid"];
-  Node30 [label="tbox/tbox.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node31 [color="steelblue1",style="solid"];
+  Node31 [label="tbox/tbox.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

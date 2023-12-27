@@ -21,6 +21,6 @@ var searchData=
   ['find_5fthe_5ffirst_5fexist_18',['find_the_first_exist',['../file_8cpp.html#a67115504e0c85a7e14b6555d362770b0',1,'file.cpp']]],
   ['flush_19',['flush',['../classtm__ostream.html#a58a2fb6900ce064447f997db3ecddd45',1,'tm_ostream::flush()'],['../classtm__ostream__rep.html#a3d3e2bff933ea7faa8ea3a48a66919ca',1,'tm_ostream_rep::flush()'],['../classstd__ostream__rep.html#a02150d29130403a0c41d495f3a63cc91',1,'std_ostream_rep::flush()']]],
   ['fnsymbol_5fnr_20',['fnsymbol_nr',['../analyze_8cpp.html#ac8d6c2e94b0c5b329e8a46940a6ea6c5',1,'fnsymbol_nr(int nr):&#160;analyze.cpp'],['../analyze_8hpp.html#ac8d6c2e94b0c5b329e8a46940a6ea6c5',1,'fnsymbol_nr(int nr):&#160;analyze.cpp']]],
-  ['from_5fhexadecimal_21',['from_hexadecimal',['../analyze_8hpp.html#a9f9af1b6ebd39ec3b0fdb4ef61dcd54a',1,'from_hexadecimal(string s):&#160;analyze.cpp'],['../analyze_8cpp.html#a9f9af1b6ebd39ec3b0fdb4ef61dcd54a',1,'from_hexadecimal(string s):&#160;analyze.cpp']]],
-  ['ftp_5furl_22',['ftp_url',['../classftp__url.html#a54205f407b9260d82555690f1b013c47',1,'ftp_url::ftp_url(const char *name)'],['../classftp__url.html#a17a204191f677a66cfc7db0700852b33',1,'ftp_url::ftp_url(string name)']]]
+  ['from_5fhex_21',['from_hex',['../namespacelolly_1_1data.html#ad75652db639075910fcb69c64a6fbefa',1,'lolly::data']]],
+  ['ftp_5furl_22',['ftp_url',['../classftp__url.html#a17a204191f677a66cfc7db0700852b33',1,'ftp_url::ftp_url(string name)'],['../classftp__url.html#a54205f407b9260d82555690f1b013c47',1,'ftp_url::ftp_url(const char *name)']]]
 ];

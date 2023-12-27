@@ -18,7 +18,7 @@ var searchData=
   ['channel_15',['Channel',['../classChannel.html#aa1213944ac5b0526b6e91c6e550c44b0',1,'Channel']]],
   ['channel_16',['channel',['../classspawn__system.html#a5f9d66fa0d22b8d5c8ac3ebdab73db93',1,'spawn_system']]],
   ['channel_17',['Channel',['../classChannel.html',1,'']]],
-  ['chars_5fhan_18',['chars_han',['../analyze_8cpp.html#a9432c152edff15879010d7e92637e13b',1,'analyze.cpp']]],
+  ['chars_5fhan_18',['chars_han',['../namespacelolly_1_1data.html#ab5440186b6f19e5775851489ca8b5e58',1,'lolly::data']]],
   ['chdir_19',['chdir',['../file_8hpp.html#a718059b9912f0743aa0321fb8a6e79e9',1,'chdir(url u):&#160;file.cpp'],['../file_8cpp.html#a718059b9912f0743aa0321fb8a6e79e9',1,'chdir(url u):&#160;file.cpp']]],
   ['check_5fatomic_20',['CHECK_ATOMIC',['../tree_8hpp.html#a03f3fccea062b1e2c6bcb3474584057b',1,'tree.hpp']]],
   ['check_5fcompound_21',['CHECK_COMPOUND',['../tree_8hpp.html#aafc5b3f12413ecb535be2f5e00daf415',1,'tree.hpp']]],

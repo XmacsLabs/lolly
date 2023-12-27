@@ -45,5 +45,9 @@ digraph "analyze.cpp"
   Node2 -> Node18 [color="steelblue1",style="solid"];
   Node18 [label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
   Node18 -> Node5 [color="steelblue1",style="solid"];
+  Node1 -> Node19 [color="steelblue1",style="solid"];
+  Node19 [label="lolly/data/numeral.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$numeral_8hpp.html",tooltip=" "];
+  Node19 -> Node18 [color="steelblue1",style="solid"];
+  Node19 -> Node3 [color="steelblue1",style="solid"];
   Node1 -> Node17 [color="steelblue1",style="solid"];
 }

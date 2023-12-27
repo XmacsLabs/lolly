@@ -45,10 +45,12 @@ var searchData=
   ['reverse_42',['reverse',['../list_8ipp.html#a7e55797894c6a78dff226ac29faa3ec8',1,'reverse(list&lt; T &gt; l):&#160;list.ipp'],['../list_8hpp.html#a7e55797894c6a78dff226ac29faa3ec8',1,'reverse(list&lt; T &gt; l):&#160;list.ipp'],['../array_8ipp.html#a51322ab3ef3f86891dc0c29729de9daf',1,'reverse(array&lt; T &gt; a):&#160;array.ipp'],['../array_8hpp.html#a51322ab3ef3f86891dc0c29729de9daf',1,'reverse(array&lt; T &gt; a):&#160;array.ipp']]],
   ['right_5findex_43',['right_index',['../tree_8hpp.html#a4063fca25ac586ddfb68853334b6d58e',1,'tree.hpp']]],
   ['rmdir_44',['rmdir',['../file_8cpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c',1,'rmdir(url u):&#160;file.cpp'],['../file_8hpp.html#a55cd0c0a7563e91f3ae1fd7722b4d80c',1,'rmdir(url u):&#160;file.cpp']]],
-  ['roman_5fnr_45',['roman_nr',['../analyze_8cpp.html#a181c79f528d11b7ef418443a82bb64ca',1,'roman_nr(int32_t nr):&#160;analyze.cpp'],['../analyze_8hpp.html#a181c79f528d11b7ef418443a82bb64ca',1,'roman_nr(int32_t nr):&#160;analyze.cpp']]],
-  ['roman_5fnr_46',['Roman_nr',['../analyze_8cpp.html#ad2d944b51475e6af17c42143a1c2e5bb',1,'Roman_nr(int32_t nr):&#160;analyze.cpp'],['../analyze_8hpp.html#ad2d944b51475e6af17c42143a1c2e5bb',1,'Roman_nr(int32_t nr):&#160;analyze.cpp']]],
-  ['root_47',['root',['../modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp'],['../modification_8hpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp']]],
-  ['root_48',['ROOT',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
-  ['round_5flength_49',['round_length',['../array_8ipp.html#a2db02dec333ae4764479a173b59fa5e3',1,'round_length(int n, size_t s):&#160;array.ipp'],['../string_8cpp.html#a52be85c188a31a687d01b97965cfba23',1,'round_length(int n):&#160;string.cpp']]],
-  ['routine_50',['routine',['../hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07',1,'hashmap_test.cpp']]]
+  ['roman_5fhundreds_45',['roman_hundreds',['../namespacelolly_1_1data.html#ac7fdc4599e62f3e3f71fa93a89ccd454',1,'lolly::data']]],
+  ['roman_5fones_46',['roman_ones',['../namespacelolly_1_1data.html#a5d661022f1b9e2c4097f172329d93821',1,'lolly::data']]],
+  ['roman_5ftens_47',['roman_tens',['../namespacelolly_1_1data.html#a6ffd21906a0295aee34daf329a2068c6',1,'lolly::data']]],
+  ['roman_5fthousands_48',['roman_thousands',['../namespacelolly_1_1data.html#a50c7542e69d40b51a1d873f3bb374180',1,'lolly::data']]],
+  ['root_49',['root',['../modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp'],['../modification_8hpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp']]],
+  ['root_50',['ROOT',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
+  ['round_5flength_51',['round_length',['../array_8ipp.html#a2db02dec333ae4764479a173b59fa5e3',1,'round_length(int n, size_t s):&#160;array.ipp'],['../string_8cpp.html#a52be85c188a31a687d01b97965cfba23',1,'round_length(int n):&#160;string.cpp']]],
+  ['routine_52',['routine',['../hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07',1,'hashmap_test.cpp']]]
 ];
