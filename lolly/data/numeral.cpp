@@ -15,13 +15,20 @@
 
 namespace lolly {
 namespace data {
-static string roman_ones[10]    = {"",  "i",  "ii",  "iii",  "iv",
-                                   "v", "vi", "vii", "viii", "ix"};
-static string roman_tens[10]    = {"",  "x",  "xx",  "xxx",  "xl",
-                                   "l", "lx", "lxx", "lxxx", "xc"};
-static string roman_hundreds[10]= {"",  "c",  "cc",  "ccc",  "cd",
-                                   "d", "dc", "dcc", "dccc", "cm"};
-static string roman_thousands[4]= {"", "m", "mm", "mmm"};
+static const string roman_ones[10]    = {"",  "i",  "ii",  "iii",  "iv",
+                                         "v", "vi", "vii", "viii", "ix"};
+static const string roman_tens[10]    = {"",  "x",  "xx",  "xxx",  "xl",
+                                         "l", "lx", "lxx", "lxxx", "xc"};
+static const string roman_hundreds[10]= {"",  "c",  "cc",  "ccc",  "cd",
+                                         "d", "dc", "dcc", "dccc", "cm"};
+static const string roman_thousands[4]= {"", "m", "mm", "mmm"};
+
+// 0 should not be used as index of this array, or bug occurs. because digit 0
+// is handled specially according to position of digit.
+static const string chars_han[10]= {"?",  "一", "二", "三", "四",
+                                    "五", "六", "七", "八", "九"};
+
+static const char* hex_string= "0123456789ABCDEF";
 
 string
 to_roman (int32_t nr) {
@@ -36,11 +43,6 @@ string
 to_Roman (int32_t nr) {
   return upcase_all (to_roman (nr));
 }
-
-// 0 should not be used as index of this array, or bug occurs. because digit 0
-// is handled specially according to position of digit.
-static string chars_han[10]= {
-    "<unspecified>", "一", "二", "三", "四", "五", "六", "七", "八", "九"};
 
 string
 hanzi_sub (int16_t nr, bool leading_zero) {
@@ -120,7 +122,7 @@ hanzi_sub (int16_t nr, bool leading_zero) {
   case 0x1F:
     return "";
   default:
-    return "<unspecified>" * as_string (cases);
+    return "?" * as_string (cases);
   }
 }
 
@@ -138,6 +140,63 @@ to_hanzi (int32_t nr) {
     return hanzi_sub (nr / 10000, false) * "万" * hanzi_sub (nr % 10000, true);
   }
   return hanzi_sub (nr, false);
+}
+
+string
+to_padded_Hex (uint8_t i) {
+  uint8_t i_low = i & 15;
+  uint8_t i_high= i >> 4;
+  return string (hex_string[i_high]) * string (hex_string[i_low]);
+}
+
+string
+to_padded_hex (uint8_t i) {
+  return locase_all (to_padded_Hex (i));
+}
+
+string
+to_Hex (int32_t i) {
+  if (i == INT32_MIN) return "-80000000";
+  if (i < 0) return "-" * to_Hex (-i);
+  if (i < 16) return hex_string[i & 15];
+  return to_Hex (i >> 4) * hex_string[i & 15];
+}
+
+string
+to_hex (int32_t i) {
+  return locase_all (to_Hex (i));
+}
+
+string
+to_Hex (pointer ptr) {
+  intptr_t i= (intptr_t) ptr;
+  if (i < 0) return "-" * to_Hex (-i);
+  if (i < 16) return hex_string[i & 15];
+  return to_Hex (i >> 4) * hex_string[i & 15];
+}
+
+string
+to_hex (pointer ptr) {
+  return locase_all (to_Hex (ptr));
+}
+
+int
+from_hex (string s) {
+  int i, n= N (s), res= 0;
+  if ((n > 0) && (s[0] == '-')) return -from_hex (s (1, n));
+  for (i= 0; i < n; i++) {
+    res= res << 4;
+    if (is_digit (s[i])) res+= (int) (s[i] - '0');
+    if ((s[i] >= 'A') && (s[i] <= 'F')) res+= (int) (s[i] + 10 - 'A');
+    if ((s[i] >= 'a') && (s[i] <= 'f')) res+= (int) (s[i] + 10 - 'a');
+  }
+  return res;
+}
+
+string
+as_hexadecimal (int i, int len) {
+  if (len == 1) return hex_string[i & 15];
+  else return as_hexadecimal (i >> 4, len - 1) * hex_string[i & 15];
 }
 
 } // namespace data

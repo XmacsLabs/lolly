@@ -11,10 +11,9 @@
 
 #include "a_tbox_main.cpp"
 #include "lolly/data/numeral.hpp"
+#include <cstdint>
 
-using lolly::data::to_hanzi;
-using lolly::data::to_roman;
-using lolly::data::to_Roman;
+using namespace lolly::data;
 
 TEST_CASE ("to_roman") {
   SUBCASE ("0-9") {
@@ -88,8 +87,8 @@ TEST_CASE ("to_roman") {
   }
   SUBCASE ("max int32 or min int32") {
     string_eq (to_roman (4000), "?");
-    string_eq (to_roman (0x7FFFFFFF), "?");
-    string_eq (to_roman (0x80000000), "?");
+    string_eq (to_roman (INT32_MAX), "?");
+    string_eq (to_roman (INT32_MIN), "?");
   }
 }
 
@@ -117,4 +116,41 @@ TEST_CASE ("to_hanzi") {
   string_eq (to_hanzi (300153457), "三亿零一十五万三千四百五十七");
   string_eq (to_hanzi (0x7FFFFFFF), "二十一亿四千七百四十八万三千六百四十七");
   string_eq (to_hanzi (0x80000000), "负二十一亿四千七百四十八万三千六百四十八");
+}
+
+TEST_CASE ("to_padded_hex") {
+  SUBCASE ("0~255") {
+    string_eq (to_padded_hex ((uint8_t) 0), "00");
+    string_eq (to_padded_hex ((uint8_t) 1), "01");
+    string_eq (to_padded_hex ((uint8_t) 255), "ff");
+  }
+  SUBCASE ("overflow") {
+    string_eq (to_padded_hex ((uint8_t) -1), "ff");
+    string_eq (to_padded_hex ((uint8_t) UINT8_MAX), "ff");
+    string_eq (to_padded_hex ((uint8_t) UINT8_MAX + 1), "00");
+  }
+}
+
+TEST_CASE ("to_hex/to_Hex") {
+  SUBCASE ("0-15 (+/-)") {
+    for (int i= 1; i < 10; i++) {
+      string_eq (to_hex (i), as_string (i));
+      string_eq (to_Hex (i), as_string (i));
+      string_eq (to_hex (-i), "-" * as_string (i));
+      string_eq (to_hex (-i), "-" * as_string (i));
+    }
+    string_eq (to_hex (0), "0");
+    string_eq (to_hex (10), "a");
+    string_eq (to_hex (11), "b");
+    string_eq (to_hex (12), "c");
+    string_eq (to_hex (13), "d");
+    string_eq (to_hex (14), "e");
+    string_eq (to_hex (15), "f");
+  }
+  SUBCASE ("min/max/overflow") {
+    string_eq (to_hex (INT32_MIN), "-80000000");
+    string_eq (to_hex (INT32_MIN - 1), "7fffffff");
+    string_eq (to_hex (INT32_MAX), "7fffffff");
+    string_eq (to_hex (INT32_MAX + 1), "-80000000");
+  }
 }

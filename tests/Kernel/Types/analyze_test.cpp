@@ -63,18 +63,6 @@ TEST_CASE ("is_alphanum") {
   CHECK (!is_alphanum ("!"));
 }
 
-TEST_CASE ("as_hex") {
-  SUBCASE ("0~255") {
-    string_eq (as_hex ((uint8_t) 0), "00");
-    string_eq (as_hex ((uint8_t) 1), "01");
-    string_eq (as_hex ((uint8_t) 255), "ff");
-  }
-  SUBCASE ("overflow") {
-    string_eq (as_hex ((uint8_t) -1), "ff");
-    string_eq (as_hex ((uint8_t) 256), "00");
-  }
-}
-
 TEST_CASE ("test locase all") {
   CHECK_EQ (locase_all (string ("true")) == string ("true"), true);
   CHECK_EQ (locase_all (string ("TRue")) == string ("true"), true);
