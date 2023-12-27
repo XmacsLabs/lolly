@@ -140,5 +140,44 @@ to_hanzi (int32_t nr) {
   return hanzi_sub (nr, false);
 }
 
+static const char* hex_string= "0123456789ABCDEF";
+
+string
+to_padded_Hex (uint8_t i) {
+  uint8_t i_low = i & 15;
+  uint8_t i_high= i >> 4;
+  return string (hex_string[i_high]) * string (hex_string[i_low]);
+}
+
+string
+to_padded_hex (uint8_t i) {
+  return locase_all (to_padded_Hex (i));
+}
+
+string
+to_Hex (int i) {
+  if (i < 0) return "-" * to_Hex (-i);
+  if (i < 16) return hex_string[i & 15];
+  return to_Hex (i >> 4) * hex_string[i & 15];
+}
+
+string
+to_hex (int i) {
+  return locase_all (to_Hex (i));
+}
+
+string
+to_Hex (pointer ptr) {
+  intptr_t i= (intptr_t) ptr;
+  if (i < 0) return "-" * to_Hex (-i);
+  if (i < 16) return hex_string[i & 15];
+  return to_Hex (i >> 4) * hex_string[i & 15];
+}
+
+string
+to_hex (pointer ptr) {
+  return locase_all (to_Hex (ptr));
+}
+
 } // namespace data
 } // namespace lolly

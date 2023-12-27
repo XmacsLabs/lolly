@@ -12,9 +12,7 @@
 #include "a_tbox_main.cpp"
 #include "lolly/data/numeral.hpp"
 
-using lolly::data::to_hanzi;
-using lolly::data::to_roman;
-using lolly::data::to_Roman;
+using namespace lolly::data;
 
 TEST_CASE ("to_roman") {
   SUBCASE ("0-9") {
@@ -117,4 +115,16 @@ TEST_CASE ("to_hanzi") {
   string_eq (to_hanzi (300153457), "三亿零一十五万三千四百五十七");
   string_eq (to_hanzi (0x7FFFFFFF), "二十一亿四千七百四十八万三千六百四十七");
   string_eq (to_hanzi (0x80000000), "负二十一亿四千七百四十八万三千六百四十八");
+}
+
+TEST_CASE ("as_hex") {
+  SUBCASE ("0~255") {
+    string_eq (to_padded_hex ((uint8_t) 0), "00");
+    string_eq (to_padded_hex ((uint8_t) 1), "01");
+    string_eq (to_padded_hex ((uint8_t) 255), "ff");
+  }
+  SUBCASE ("overflow") {
+    string_eq (to_padded_hex ((uint8_t) -1), "ff");
+    string_eq (to_padded_hex ((uint8_t) 256), "00");
+  }
 }

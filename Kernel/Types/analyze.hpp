@@ -302,31 +302,6 @@ string Alpha_nr (int nr);
 string fnsymbol_nr (int nr);
 
 /**
- * @brief Converts an 8-bit unsigned integer to a fixed-length (2) hex string.
- *
- * @param i The integer to be converted to a fixed-length hex string.
- * @return The fixed-length (2) hexadecimal string representation of the input
- * integer.
- */
-string as_hex (uint8_t i);
-
-/**
- * @brief Converts an integer to a hexadecimal string.
- *
- * @param i The integer to be converted to a hexadecimal string.
- * @return The hexadecimal string representation of the input integer.
- */
-string as_hexadecimal (int i);
-
-/**
- * @brief Converts a pointer to a hexadecimal string.
- *
- * @param ptr The pointer to be converted to a hexadecimal string.
- * @return The hexadecimal string representation of the input pointer.
- */
-string as_hexadecimal (pointer ptr);
-
-/**
  * @brief Converts an integer to a hexadecimal string with a fixed length.
  *
  * @param i The integer to be converted to a hexadecimal string.

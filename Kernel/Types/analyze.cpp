@@ -527,28 +527,6 @@ fnsymbol_nr (int nr) {
 static const char* hex_string= "0123456789ABCDEF";
 
 string
-as_hex (uint8_t i) {
-  uint8_t i_low = i & 15;
-  uint8_t i_high= i >> 4;
-  return locase_all (string (hex_string[i_high]) * string (hex_string[i_low]));
-}
-
-string
-as_hexadecimal (int i) {
-  if (i < 0) return "-" * as_hexadecimal (-i);
-  if (i < 16) return hex_string[i & 15];
-  return as_hexadecimal (i >> 4) * hex_string[i & 15];
-}
-
-string
-as_hexadecimal (pointer ptr) {
-  intptr_t i= (intptr_t) ptr;
-  if (i < 0) return "-" * as_hexadecimal (-i);
-  if (i < 16) return hex_string[i & 15];
-  return as_hexadecimal (i >> 4) * hex_string[i & 15];
-}
-
-string
 as_hexadecimal (int i, int len) {
   if (len == 1) return hex_string[i & 15];
   else return as_hexadecimal (i >> 4, len - 1) * hex_string[i & 15];
