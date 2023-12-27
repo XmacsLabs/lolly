@@ -10,6 +10,7 @@
  ******************************************************************************/
 
 #include "analyze.hpp"
+#include "lolly/data/numeral.hpp"
 #include "ntuple.hpp"
 
 /******************************************************************************
@@ -521,31 +522,6 @@ fnsymbol_nr (int nr) {
 }
 
 /******************************************************************************
- * Conversions to and from hexadecimal
- ******************************************************************************/
-
-static const char* hex_string= "0123456789ABCDEF";
-
-string
-as_hexadecimal (int i, int len) {
-  if (len == 1) return hex_string[i & 15];
-  else return as_hexadecimal (i >> 4, len - 1) * hex_string[i & 15];
-}
-
-int
-from_hexadecimal (string s) {
-  int i, n= N (s), res= 0;
-  if ((n > 0) && (s[0] == '-')) return -from_hexadecimal (s (1, n));
-  for (i= 0; i < n; i++) {
-    res= res << 4;
-    if (is_digit (s[i])) res+= (int) (s[i] - '0');
-    if ((s[i] >= 'A') && (s[i] <= 'F')) res+= (int) (s[i] + 10 - 'A');
-    if ((s[i] >= 'a') && (s[i] <= 'f')) res+= (int) (s[i] + 10 - 'a');
-  }
-  return res;
-}
-
-/******************************************************************************
  * Routines for the TeXmacs encoding
  ******************************************************************************/
 
@@ -933,7 +909,7 @@ unescape_guile (string s) {
       else if (i + 3 < n && s[i + 1] == 'x' && is_hex_digit (s[i + 2]) &&
                is_hex_digit (s[i + 3])) {
         string e= s (i + 2, i + 4);
-        r << (unsigned char) from_hexadecimal (e);
+        r << (unsigned char) lolly::data::from_hex (e);
         i+= 3;
       }
       else r << s[i];
