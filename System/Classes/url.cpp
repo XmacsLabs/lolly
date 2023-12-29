@@ -361,7 +361,7 @@ suffix (url u, bool use_locase) {
     while ((N (r) > 0) && (r[N (r) - 1] == '~' || r[N (r) - 1] == '#'))
       r= r (0, N (r) - 1);
     int found= index_of (r, '?');
-    if (found != -1) r= r(0, found);
+    if (found != -1) r= r (0, found);
     if (use_locase) return locase_all (r);
     else return r;
   }
@@ -375,9 +375,9 @@ suffix (url u) {
 
 string
 basename (url u, string suf) {
-  string s= as_string (tail (u));
-  int found= index_of (s, '?');
-  if (found != -1) s= s(0, found);
+  string s    = as_string (tail (u));
+  int    found= index_of (s, '?');
+  if (found != -1) s= s (0, found);
   return remove_suffix (s, suf);
 }
 
