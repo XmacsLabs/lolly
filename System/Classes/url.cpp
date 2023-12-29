@@ -349,7 +349,7 @@ tail (url u) {
 }
 
 string
-suffix (url u) {
+suffix (url u, bool use_locase) {
   u= tail (u);
   if (!is_atomic (u)) return "";
   string s= as_string (u);
@@ -361,24 +361,30 @@ suffix (url u) {
     while ((N (r) > 0) && (r[N (r) - 1] == '~' || r[N (r) - 1] == '#'))
       r= r (0, N (r) - 1);
     int found= index_of (r, '?');
-    if (found == -1) return locase_all (r);
-    else return locase_all (r (0, found));
+    if (found != -1) r= r (0, found);
+    if (use_locase) return locase_all (r);
+    else return r;
   }
   return "";
 }
 
 string
+suffix (url u) {
+  return suffix (u, true);
+}
+
+string
 basename (url u, string suf) {
-  string s= as_string (tail (u));
-  if (suf != "" && N (s) > N (suf) && suf == s (N (s) - N (suf), N (s)))
-    return s (0, N (s) - N (suf));
-  return s;
+  string s    = as_string (tail (u));
+  int    found= index_of (s, '?');
+  if (found != -1) s= s (0, found);
+  return remove_suffix (s, suf);
 }
 
 string
 basename (url u) {
-  string s= suffix (u);
-  if (N (s) != 0) s= "." * s;
+  string s= suffix (u, false);
+  if (!is_empty (s)) s= "." * s;
   return basename (u, s);
 }
 

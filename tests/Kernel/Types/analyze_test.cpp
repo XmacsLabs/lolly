@@ -89,6 +89,22 @@ TEST_CASE ("test string union") {
   CHECK_EQ (string_union ("Hello World", "eo") == string ("Hll Wrldeo"), true);
 }
 
+TEST_CASE ("remove_prefix") {
+  string_eq (remove_prefix ("abc", "a"), "bc");
+  string_eq (remove_prefix ("abc", ""), "abc");
+  string_eq (remove_prefix ("", ""), "");
+  string_eq (remove_prefix ("abc", ""), "abc");
+  string_eq (remove_prefix ("a1a", "a"), "1a");
+}
+
+TEST_CASE ("remove_suffix") {
+  string_eq (remove_suffix ("abc", "c"), "ab");
+  string_eq (remove_suffix ("abc", ""), "abc");
+  string_eq (remove_suffix ("", ""), "");
+  string_eq (remove_suffix ("abc", ""), "abc");
+  string_eq (remove_suffix ("a1a", "a"), "a1");
+}
+
 TEST_CASE ("test scm quote") {
   CHECK_EQ (scm_quote ("a") == "\"a\"", true);
   CHECK_EQ (scm_quote ("") == "\"\"", true);
