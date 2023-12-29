@@ -22,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.11</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.12</span>
    </div>
   </td>
  </tr>
@@ -123,7 +123,7 @@ Functions</h2></td></tr>
 <tr class="separator:a718059b9912f0743aa0321fb8a6e79e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a999af6855a9702e7b8164a9041ccb875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classurl.html">url</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8hpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a> ()</td></tr>
 <tr class="separator:a999af6855a9702e7b8164a9041ccb875"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4601a2a74d5d8f1f022803a5b03d18a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classurl.html">url</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8hpp.html#ab4601a2a74d5d8f1f022803a5b03d18a">url_temp</a> (<a class="el" href="classstring.html">string</a> <a class="el" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a>=&quot;&quot;)</td></tr>
+<tr class="memitem:ab4601a2a74d5d8f1f022803a5b03d18a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classurl.html">url</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8hpp.html#ab4601a2a74d5d8f1f022803a5b03d18a">url_temp</a> (<a class="el" href="classstring.html">string</a> <a class="el" href="url_8cpp.html#a10fa8a0cc1cd2ce23c4a06bd172ebe94">suffix</a>=&quot;&quot;)</td></tr>
 <tr class="separator:ab4601a2a74d5d8f1f022803a5b03d18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad729646733b307b9416adf696595ff1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8hpp.html#ad729646733b307b9416adf696595ff1b">remove</a> (<a class="el" href="classurl.html">url</a> u)</td></tr>
 <tr class="separator:ad729646733b307b9416adf696595ff1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,7 +368,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  106</span><span class="preprocessor">#if defined(OS_MINGW) || defined(OS_WIN)</span></div>
 <div class="line"><span class="lineno">  107</span>  <span class="keywordtype">string</span> suf;</div>
 <div class="line"><span class="lineno">  108</span>  <span class="keywordflow">if</span> (filter == <span class="stringliteral">&quot;x&quot;</span>) {</div>
-<div class="line"><span class="lineno">  109</span>    suf= <a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a> (name);</div>
+<div class="line"><span class="lineno">  109</span>    suf= <a class="code hl_function" href="url_8cpp.html#a10fa8a0cc1cd2ce23c4a06bd172ebe94">suffix</a> (name);</div>
 <div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> ((suf != <span class="stringliteral">&quot;exe&quot;</span>) &amp;&amp; (suf != <span class="stringliteral">&quot;bat&quot;</span>) &amp;&amp; (suf != <span class="stringliteral">&quot;com&quot;</span>)) {</div>
 <div class="line"><span class="lineno">  111</span>      name= <a class="code hl_function" href="url_8cpp.html#addd29930e7fb72555219d5e90bdaec42">glue</a> (name, <span class="stringliteral">&quot;.exe&quot;</span>);</div>
 <div class="line"><span class="lineno">  112</span>      suf = <span class="stringliteral">&quot;exe&quot;</span>;</div>
@@ -405,9 +405,9 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  143</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  144</span>}</div>
 <div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
-<div class="ttc" id="aurl_8cpp_html_a152ca4c508950740cb850f82d3049cf6"><div class="ttname"><a href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a></div><div class="ttdeci">string suffix(url u)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00352">url.cpp:352</a></div></div>
-<div class="ttc" id="aurl_8cpp_html_a7fcd085b956112eb9ff14d534491d89f"><div class="ttname"><a href="url_8cpp.html#a7fcd085b956112eb9ff14d534491d89f">is_ramdisc</a></div><div class="ttdeci">bool is_ramdisc(url u)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00675">url.cpp:675</a></div></div>
-<div class="ttc" id="aurl_8cpp_html_addd29930e7fb72555219d5e90bdaec42"><div class="ttname"><a href="url_8cpp.html#addd29930e7fb72555219d5e90bdaec42">glue</a></div><div class="ttdeci">url glue(url u, string s)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00386">url.cpp:386</a></div></div>
+<div class="ttc" id="aurl_8cpp_html_a10fa8a0cc1cd2ce23c4a06bd172ebe94"><div class="ttname"><a href="url_8cpp.html#a10fa8a0cc1cd2ce23c4a06bd172ebe94">suffix</a></div><div class="ttdeci">string suffix(url u, bool use_locase)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00352">url.cpp:352</a></div></div>
+<div class="ttc" id="aurl_8cpp_html_a7fcd085b956112eb9ff14d534491d89f"><div class="ttname"><a href="url_8cpp.html#a7fcd085b956112eb9ff14d534491d89f">is_ramdisc</a></div><div class="ttdeci">bool is_ramdisc(url u)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00681">url.cpp:681</a></div></div>
+<div class="ttc" id="aurl_8cpp_html_addd29930e7fb72555219d5e90bdaec42"><div class="ttname"><a href="url_8cpp.html#addd29930e7fb72555219d5e90bdaec42">glue</a></div><div class="ttdeci">url glue(url u, string s)</div><div class="ttdef"><b>Definition:</b> <a href="url_8cpp_source.html#l00392">url.cpp:392</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -699,18 +699,18 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00251">251</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  251</span>                         {</div>
 <div class="line"><span class="lineno">  252</span>  <span class="keywordtype">string</span> file_name= <a class="code hl_function" href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a> (<a class="code hl_function" href="namespacelolly_1_1hash.html#a6629d52733d84e7b9ad3b2ef1ea490bf">lolly::hash::uuid_make</a> (), <span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;_&quot;</span>);</div>
-<div class="line"><span class="lineno">  253</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="string_8cpp.html#ae1ddad97c500caa13e19855a6be286ed">is_empty</a> (<a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a>)) {</div>
-<div class="line"><span class="lineno">  254</span>    file_name= file_name * <a class="code hl_class" href="classstring.html">string</a> (<span class="stringliteral">&quot;.&quot;</span>) * <a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a>;</div>
+<div class="line"><span class="lineno">  253</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="string_8cpp.html#ae1ddad97c500caa13e19855a6be286ed">is_empty</a> (<a class="code hl_function" href="url_8cpp.html#a10fa8a0cc1cd2ce23c4a06bd172ebe94">suffix</a>)) {</div>
+<div class="line"><span class="lineno">  254</span>    file_name= file_name * <a class="code hl_class" href="classstring.html">string</a> (<span class="stringliteral">&quot;.&quot;</span>) * <a class="code hl_function" href="url_8cpp.html#a10fa8a0cc1cd2ce23c4a06bd172ebe94">suffix</a>;</div>
 <div class="line"><span class="lineno">  255</span>  }</div>
 <div class="line"><span class="lineno">  256</span>  <a class="code hl_class" href="classurl.html">url</a> u= <a class="code hl_function" href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a> () * <a class="code hl_class" href="classurl.html">url</a> (file_name);</div>
 <div class="line"><span class="lineno">  257</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (u) == -1) {</div>
 <div class="line"><span class="lineno">  258</span>    <span class="keywordflow">return</span> u;</div>
 <div class="line"><span class="lineno">  259</span>  }</div>
 <div class="line"><span class="lineno">  260</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> (<a class="code hl_function" href="url_8cpp.html#a152ca4c508950740cb850f82d3049cf6">suffix</a>);</div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> (<a class="code hl_function" href="url_8cpp.html#a10fa8a0cc1cd2ce23c4a06bd172ebe94">suffix</a>);</div>
 <div class="line"><span class="lineno">  262</span>  }</div>
 <div class="line"><span class="lineno">  263</span>}</div>
-<div class="ttc" id="aanalyze_8cpp_html_abf51647f03d162c0ab951cacee80e57c"><div class="ttname"><a href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a></div><div class="ttdeci">string replace(string s, string what, string by)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01293">analyze.cpp:1293</a></div></div>
+<div class="ttc" id="aanalyze_8cpp_html_abf51647f03d162c0ab951cacee80e57c"><div class="ttname"><a href="analyze_8cpp.html#abf51647f03d162c0ab951cacee80e57c">replace</a></div><div class="ttdeci">string replace(string s, string what, string by)</div><div class="ttdef"><b>Definition:</b> <a href="analyze_8cpp_source.html#l01307">analyze.cpp:1307</a></div></div>
 <div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition:</b> <a href="string_8hpp_source.html#l00034">string.hpp:34</a></div></div>
 <div class="ttc" id="afile_8cpp_html_a284b643bc17714f25f658d3cb84527e2"><div class="ttname"><a href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a></div><div class="ttdeci">url url_temp(string suffix)</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00251">file.cpp:251</a></div></div>
 <div class="ttc" id="afile_8cpp_html_a999af6855a9702e7b8164a9041ccb875"><div class="ttname"><a href="file_8cpp.html#a999af6855a9702e7b8164a9041ccb875">url_temp_dir</a></div><div class="ttdeci">url url_temp_dir()</div><div class="ttdef"><b>Definition:</b> <a href="file_8cpp_source.html#l00277">file.cpp:277</a></div></div>

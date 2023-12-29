@@ -81,7 +81,7 @@ var searchData=
   ['subprocess_2ehpp_78',['subprocess.hpp',['../subprocess_8hpp.html',1,'']]],
   ['subprocess_5ftest_2ecpp_79',['subprocess_test.cpp',['../subprocess__test_8cpp.html',1,'']]],
   ['subtree_80',['subtree',['../path_8cpp.html#affa5fff3d0e6b45ddc69b980b9ba2fba',1,'subtree(tree &amp;t, path p):&#160;path.cpp'],['../path_8hpp.html#affa5fff3d0e6b45ddc69b980b9ba2fba',1,'subtree(tree &amp;t, path p):&#160;path.cpp']]],
-  ['suffix_81',['suffix',['../url_8cpp.html#a152ca4c508950740cb850f82d3049cf6',1,'suffix(url u):&#160;url.cpp'],['../url_8hpp.html#a152ca4c508950740cb850f82d3049cf6',1,'suffix(url u):&#160;url.cpp']]],
+  ['suffix_81',['suffix',['../url_8cpp.html#a10fa8a0cc1cd2ce23c4a06bd172ebe94',1,'suffix(url u, bool use_locase):&#160;url.cpp'],['../url_8cpp.html#a152ca4c508950740cb850f82d3049cf6',1,'suffix(url u):&#160;url.cpp'],['../url_8hpp.html#a152ca4c508950740cb850f82d3049cf6',1,'suffix(url u):&#160;url.cpp'],['../url_8hpp.html#a10fa8a0cc1cd2ce23c4a06bd172ebe94',1,'suffix(url u, bool use_locase):&#160;url.cpp']]],
   ['suppress_5flast_82',['suppress_last',['../list_8hpp.html#ae644fa030f543076ffd07b8d06aaab48',1,'suppress_last(list&lt; T &gt; &amp;l):&#160;list.ipp'],['../list_8ipp.html#ae644fa030f543076ffd07b8d06aaab48',1,'suppress_last(list&lt; T &gt; &amp;l):&#160;list.ipp']]],
   ['sys_5futils_2ecpp_83',['sys_utils.cpp',['../sys__utils_8cpp.html',1,'']]],
   ['sys_5futils_2ehpp_84',['sys_utils.hpp',['../sys__utils_8hpp.html',1,'']]],
