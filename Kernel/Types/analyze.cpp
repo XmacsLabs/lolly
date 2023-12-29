@@ -164,6 +164,20 @@ string_minus (string s1, string s2) {
   return r;
 }
 
+string
+remove_prefix (string s, string prefix) {
+  if (is_empty (s) || is_empty (prefix)) return s;
+  if (starts (s, prefix)) return s(N(prefix), N(s));
+  return s;
+}
+
+string
+remove_suffix (string s, string suffix) {
+  if (is_empty (s) || is_empty (suffix)) return s;
+  if (ends (s, suffix)) return s(0, N(s)-N(suffix));
+  return s;
+}
+
 /******************************************************************************
  * Spanish in relation with ispell
  ******************************************************************************/

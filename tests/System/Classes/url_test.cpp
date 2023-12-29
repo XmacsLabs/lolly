@@ -120,17 +120,26 @@ TEST_CASE ("is_concat on unix and wasm") {
 }
 #endif
 
-TEST_CASE ("suffix") {
+TEST_CASE ("suffix/basename") {
   SUBCASE ("empty suffix") {
     url no_suffix= url ("/a/b/c/d/no_suffix");
     CHECK (is_empty (suffix (no_suffix)));
+    string_eq (basename (no_suffix), "no_suffix");
+
     url no_suffix2= url ("/a/b.c/d/no_suffix");
     CHECK (is_empty (suffix (no_suffix2)));
+    string_eq (basename (no_suffix2), "no_suffix");
   }
 
   SUBCASE ("normal suffix") {
     url png= url ("/a/b/c/d.png");
+    url PNG= url ("/a/b/c/d.PNG");
     string_eq (suffix (png), "png");
+    string_eq (suffix (PNG), "png");
+    string_eq (suffix (PNG, false), "PNG");
+    string_eq (basename (png), "d");
+    string_eq (basename (PNG), "d");
+
     url png2= url ("/a/b.c/d.png");
     string_eq (suffix (png2), "png");
   }
@@ -138,14 +147,17 @@ TEST_CASE ("suffix") {
   SUBCASE ("normal http url") {
     url png= url ("https://name.com/path/to.png");
     string_eq (suffix (png), "png");
+    string_eq (basename (png), "to");
 
     url jpg= url ("https://name.org/path/to.jpg");
     string_eq (suffix (jpg), "jpg");
+    string_eq (basename (jpg), "to");
   }
 
   SUBCASE ("http url with paramters") {
     url jpg= url ("https://name.cn/path/to.jpg?width=100");
     string_eq (suffix (jpg), "jpg");
+    string_eq (basename (jpg), "to");
   }
 }
 

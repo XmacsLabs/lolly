@@ -209,6 +209,24 @@ string string_union (string s1, string s2);
  */
 string string_minus (string s1, string s2);
 
+/**
+ * @brief Remove the prefix from s if matches
+ * @param s the string
+ * @param prefix the prefix
+ * @return If the prefix matches, return s with prefix removed,
+ * otherwise, return s
+ */
+string remove_prefix (string s, string prefix);
+
+/**
+ * @brief Remove the suffix from s if matches
+ * @param s the string
+ * @param prefix the suffix
+ * @return If the suffix matches, return s with suffix removed,
+ * otherwise, return s
+ */
+string remove_suffix (string s, string suffix);
+
 string utf8_to_t2a (string s);
 string t2a_to_utf8 (string s);
 string utf8_to_cork (string s);
