@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['how_20to_20format_20the_20code_0',['How to format the code',['../md_docs_guide_Format.html',1,'']]],
-  ['how_20to_20perform_20testing_1',['How to Perform Testing',['../md_docs_guide_Test.html',1,'']]]
+  ['3_20and_20wasm_0',['13: xmake 2.8.3 and wasm',['../md_devel_213.html',1,'']]],
+  ['3_20x_1',['Lolly 1.3.x',['../md_devel_21_83.html',1,'']]]
 ];

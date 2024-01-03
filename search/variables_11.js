@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['t_0',['t',['../structlolly_1_1data_1_1json__rep.html#a5c36931b560460a71a6d15c10da36377',1,'lolly::data::json_rep::t()'],['../structurl__rep.html#a302d9c4cc02473e8c97ae5971c6d072e',1,'url_rep::t()'],['../classmodification__rep.html#a47c654807ab5276f5719685128c0a27c',1,'modification_rep::t()'],['../blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e',1,'t():&#160;blackbox_test.cpp']]],
+  ['t_0',['t',['../classmodification__rep.html#a47c654807ab5276f5719685128c0a27c',1,'modification_rep::t'],['../structlolly_1_1data_1_1json__rep.html#a5c36931b560460a71a6d15c10da36377',1,'lolly::data::json_rep::t'],['../structurl__rep.html#a302d9c4cc02473e8c97ae5971c6d072e',1,'url_rep::t'],['../blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e',1,'t:&#160;blackbox_test.cpp']]],
   ['t0_1',['t0',['../blackbox__test_8cpp.html#ae7aa3ccff5452630a2abff378cde87e7',1,'blackbox_test.cpp']]],
   ['t1_2',['t1',['../blackbox__test_8cpp.html#a18b5f54faeb11f10fb26a4c937c07319',1,'blackbox_test.cpp']]],
   ['t10_3',['t10',['../blackbox__test_8cpp.html#a73195812432a27779b2c4c1b6931ca9e',1,'blackbox_test.cpp']]],
@@ -16,7 +16,7 @@ var searchData=
   ['t9_13',['t9',['../blackbox__test_8cpp.html#a3fd1f343354e7811dbc4b0b5015fa7c4',1,'blackbox_test.cpp']]],
   ['texmacs_5forg_14',['texmacs_org',['../url__test_8cpp.html#a02ca8517e8f847d06440ff1e72f819eb',1,'url_test.cpp']]],
   ['the_5fatom_5flist_15',['the_atom_list',['../list__test_8cpp.html#ad71f2372282db6fde4c656c46693de95',1,'list_test.cpp']]],
-  ['the_5fexception_16',['the_exception',['../basic_8cpp.html#ad6010da12662bc643bd47c7340c01a68',1,'the_exception():&#160;basic.cpp'],['../basic_8hpp.html#ad6010da12662bc643bd47c7340c01a68',1,'the_exception():&#160;basic.cpp']]],
+  ['the_5fexception_16',['the_exception',['../basic_8cpp.html#ad6010da12662bc643bd47c7340c01a68',1,'the_exception:&#160;basic.cpp'],['../basic_8hpp.html#ad6010da12662bc643bd47c7340c01a68',1,'the_exception:&#160;basic.cpp']]],
   ['the_5fnil_5flist_17',['the_nil_list',['../list__test_8cpp.html#a3be2ed17dade65f85bcfc131742ee016',1,'list_test.cpp']]],
   ['the_5freport_18',['the_report',['../basic_8cpp.html#af4063585580e1d263a6a5c69f43b1a5a',1,'basic.cpp']]],
   ['three_5felem_19',['three_elem',['../array__test_8cpp.html#aec15e529aba848bcd870d488ca7664a0',1,'array_test.cpp']]],
