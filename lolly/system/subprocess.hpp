@@ -16,6 +16,6 @@
 namespace lolly {
 namespace system {
 int call (string cmd);
-int check_output (string cmd, string& result, int64_t timeout= 100);
+int check_output (string cmd, string& result, int64_t timeout= 30);
 } // namespace system
 } // namespace lolly

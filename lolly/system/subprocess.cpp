@@ -49,20 +49,23 @@ check_output (string s, string& result, int64_t timeout) {
     // TODO: should be a config here
     tb_byte_t data[8192];
     tb_size_t size= sizeof (data);
-    tb_bool_t wait= tb_false;
+
+    int retry= 3;
     while (read < size) {
       tb_long_t real= tb_pipe_file_read (file[0], data + read, size - read);
+      cout << "real\t" << real << LF;
       if (real > 0) {
         read+= real;
-        wait= tb_false;
       }
-      else if (!real && !wait) {
-        // wait pipe
-        tb_long_t ok= tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, timeout);
-        tb_check_break (ok > 0);
-        wait= tb_true;
+      tb_long_t ok= tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, timeout);
+      if (ok == 0) { // timeout
+        retry= retry - 1;
+        cout << "retry: " << retry << LF;
+        if (retry == 0) break;
       }
-      else break;
+      else if (ok == -1) { // failed
+        break;
+      }
     }
 
     result= as_string ((tb_char_t*) data);
