@@ -50,28 +50,33 @@ check_output (string s, string& result, int64_t timeout) {
     tb_byte_t data[8192];
     tb_size_t size= sizeof (data);
 
-    int retry= 3;
+    tb_bool_t wait= tb_false;
     while (read < size) {
       tb_long_t real= tb_pipe_file_read (file[0], data + read, size - read);
-      cout << "real\t" << real << LF;
       if (real > 0) {
         read+= real;
+        wait= tb_false;
       }
-      tb_long_t ok= tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, timeout);
-      if (ok == 0) { // timeout
-        retry= retry - 1;
-        cout << "retry: " << retry << LF;
-        if (retry == 0) break;
+      else if (!real && !wait) {
+        tb_long_t ok   = 0;
+        int       retry= 10;
+        if (read > 0) {
+          retry= 3;
+        }
+        while (retry > 0 && (ok == 0)) {
+          ok   = tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, timeout);
+          retry= retry - 1;
+        }
+        tb_check_break (ok > 0);
+        wait= tb_true;
       }
-      else if (ok == -1) { // failed
-        break;
-      }
+      else break;
     }
 
     result= as_string ((tb_char_t*) data);
 
     // wait process
-    tb_process_wait (process, &status, -1);
+    tb_process_wait (process, &status, timeout);
 
     // exit process
     tb_process_exit (process);
