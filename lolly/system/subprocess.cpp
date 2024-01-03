@@ -49,7 +49,6 @@ check_output (string s, string& result, int64_t timeout) {
     // TODO: should be a config here
     tb_byte_t data[8192];
     tb_size_t size= sizeof (data);
-
     tb_bool_t wait= tb_false;
     while (read < size) {
       tb_long_t real= tb_pipe_file_read (file[0], data + read, size - read);
@@ -59,9 +58,9 @@ check_output (string s, string& result, int64_t timeout) {
       }
       else if (!real && !wait) {
         tb_long_t ok   = 0;
-        int       retry= 10;
+        int       retry= 25;
         if (read > 0) {
-          retry= 3;
+          retry= 2;
         }
         while (retry > 0 && (ok == 0)) {
           ok   = tb_pipe_file_wait (file[0], TB_PIPE_EVENT_READ, timeout);

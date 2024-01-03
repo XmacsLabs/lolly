@@ -24,7 +24,6 @@ TEST_CASE ("check_output") {
   if (!os_wasm () && !os_mingw ()) {
     lolly::system::check_output ("xmake --version", result);
     CHECK (N (result) > 0);
-    cout << result << LF;
   }
 }
 
