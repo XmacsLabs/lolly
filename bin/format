@@ -11,6 +11,7 @@ if (eq $platform:os windows) {
 } elif (eq $platform:os linux) {
   set paths = [
     /usr/lib/llvm-16/bin
+    $E:HOME/bin
   ]	
 } else {
 }
