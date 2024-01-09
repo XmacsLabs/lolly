@@ -175,8 +175,8 @@ TEST_CASE ("contains/occurs") {
 }
 
 TEST_CASE ("replace") {
-  CHECK_EQ (replace ("a-b", "-", "_") == "a_b", true);
-  CHECK_EQ (replace ("a-b-c", "-", "_") == "a_b_c", true);
+  string_eq (replace (string ("a-b"), string ("-"), string("_")), "a_b");
+  string_eq (replace (string ("a-b-c"), string("-"), string("_")), "a_b_c");
 }
 
 TEST_CASE ("tokenize") {
