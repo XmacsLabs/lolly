@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.13</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.14</span>
    </div>
   </td>
  </tr>
@@ -76,19 +76,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md39"></a>use elvish to execute(you need install elvish before): </p><div class="fragment"><div class="line">elvish bin/format</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md43"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md46"></a>
 clang-format</h1>
 <p>Pin clang-format to <code>16.0.x</code>.</p>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 macOS</h2>
 <div class="fragment"><div class="line">brew install clang-format</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md46"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md48"></a>
 Windows</h2>
 <div class="fragment"><div class="line">scoop install llvm@16.0.6</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md48"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md49"></a>
 Linux</h2>
 <p>Method 1: You could install llvm by xrepo, but sometimes it takes a lot of time to compile. </p><div class="fragment"><div class="line">xrepo install &quot;llvm==16.0.5&quot;</div>
-</div><!-- fragment --><p>Method 2: You could install clang-format directly. Take ubuntu22.04 as example:</p>
+</div><!-- fragment --><p>Method 2: You could install clang-format directly. Take <a class="el" href="classarray.html#a38e0c41e596853a76660333e9155fee6" title="Construct a new array object with length 0.">ubuntu22.04</a> as example:</p>
 <p>Step1 : get the key. </p><div class="fragment"><div class="line">wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -</div>
 </div><!-- fragment --><p>Step2 : insert the source code for the corresponding Ubuntu version from <a href="https://apt.llvm.org/">https://apt.llvm.org/</a> into your system. </p><div class="fragment"><div class="line">sudo vim /etc/apt/sources.list</div>
 </div><!-- fragment --><p>Step3 : install clang-format-16. </p><div class="fragment"><div class="line">sudo apt update</div>

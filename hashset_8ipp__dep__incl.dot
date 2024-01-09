@@ -125,10 +125,9 @@ digraph "hashset.ipp"
   Node45 -> Node55 [id="edge71_Node000045_Node000055",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node55 [id="Node000055",label="https_url.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$https__url_8cpp.html",tooltip=" "];
   Node45 -> Node56 [id="edge72_Node000045_Node000056",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node56 [id="Node000056",label="md5.hpp",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$md5_8hpp.html",tooltip=" "];
-  Node56 -> Node14 [id="edge73_Node000056_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node45 -> Node18 [id="edge74_Node000045_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node45 -> Node21 [id="edge75_Node000045_Node000021",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 -> Node25 [id="edge76_Node000002_Node000025",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 -> Node29 [id="edge77_Node000002_Node000029",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node56 [id="Node000056",label="lolly_doctests.hpp",height=0.2,width=0.4,color="red", fillcolor="#FFF0F0", style="filled",URL="$lolly__doctests_8hpp.html",tooltip=" "];
+  Node45 -> Node18 [id="edge73_Node000045_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node45 -> Node21 [id="edge74_Node000045_Node000021",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node25 [id="edge75_Node000002_Node000025",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node29 [id="edge76_Node000002_Node000029",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }
