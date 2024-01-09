@@ -46,7 +46,6 @@ public:
 
   inline tree ();
   inline tree (string l);
-  inline tree (const char* l);
   inline tree (int l, int n= 0);
   inline tree (int l, array<tree> a);
   inline tree (tree t, int n);
@@ -158,7 +157,6 @@ tree::operator= (tree x) {
 }
 
 inline tree::tree () : rep (tm_new<atomic_rep> (string ())) {}
-inline tree::tree (const char* s) : rep (tm_new<atomic_rep> (s)) {}
 inline tree::tree (string s) : rep (tm_new<atomic_rep> (s)) {}
 inline tree::tree (int l, int n)
     : rep (tm_new<compound_rep> (l, array<tree> (n))) {}

@@ -126,8 +126,8 @@ TEST_CASE ("test is int") {
   // Only 0-9 in chars are int
   for (auto i= 0; i < 256; i++) {
     char iter= (char) i;
-    if (iter >= '0' && iter <= '9') CHECK_EQ (is_int (iter), true);
-    else CHECK_EQ (!is_int (iter), true);
+    if (iter >= '0' && iter <= '9') CHECK_EQ (is_int (string (iter)), true);
+    else CHECK_EQ (!is_int (string (iter)), true);
   }
 
   // Random tests
