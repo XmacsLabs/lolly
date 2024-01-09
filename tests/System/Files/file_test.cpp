@@ -230,7 +230,9 @@ TEST_CASE ("read_directory") {
 
 TEST_CASE ("subdirectories") {
   url_eq (subdirectories (url_none ()), url_none ());
-  url_eq (subdirectories (url_pwd () * "bin"), url_pwd () * "bin");
+  if (!os_wasm ()) {
+    url_eq (subdirectories (url_pwd () * "bin"), url_pwd () * "bin");
+  }
 }
 
 TEST_CASE ("load_string from empty file") {
