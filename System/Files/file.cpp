@@ -199,6 +199,21 @@ read_directory (url u, bool& error_flag) {
   return arr_result;
 }
 
+url
+subdirectories (url u) {
+  if (is_or (u)) return subdirectories (u[1]) | subdirectories (u[2]);
+  else if (is_directory (u)) {
+    url           ret= u;
+    bool          error_flag;
+    array<string> dir= read_directory (u, error_flag);
+    for (int i= 0; i < N (dir); i++)
+      if (!starts (dir[i], ".") && is_directory (u * dir[i]))
+        ret= ret | subdirectories (u * dir[i]);
+    return ret;
+  }
+  else return url_none ();
+}
+
 void
 mkdir (url u) {
   string label= u.label ();
