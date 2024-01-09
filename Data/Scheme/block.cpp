@@ -104,7 +104,7 @@ string_to_scheme_tree (string s, int& i) {
     }
     }
 
-  return "";
+  return scheme_tree ("");
 }
 
 scheme_tree
