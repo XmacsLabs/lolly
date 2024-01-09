@@ -76,7 +76,7 @@ string_to_scheme_tree (string s, int& i) {
 
     case '\'':
       i++;
-      return scheme_tree (TUPLE, "\'", string_to_scheme_tree (s, i));
+      return scheme_tree (TUPLE, tree ("\'"), string_to_scheme_tree (s, i));
 
     case '\"': { // "
       int start= i++;
