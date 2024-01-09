@@ -3,9 +3,19 @@
 
 #include "doctest/doctest.h"
 #include "string.hpp"
+#include "url.hpp"
 
 inline void
 string_eq (string left, string right) {
+  if (left != right) {
+    cout << "left : " << left << LF;
+    cout << "right: " << right << LF;
+  }
+  CHECK_EQ (left == right, true);
+}
+
+inline void
+url_eq (url left, url right) {
   if (left != right) {
     cout << "left : " << left << LF;
     cout << "right: " << right << LF;

@@ -115,7 +115,7 @@ TEST_CASE ("chdir") {
 
     chdir (test_mkdir);
     url cur= url_pwd ();
-    CHECK (cur == test_mkdir);
+    url_eq (cur, test_mkdir);
 
     // restore the test dir
     chdir (old);
@@ -226,6 +226,11 @@ TEST_CASE ("read_directory") {
   bool flag2= false;
   CHECK (N (read_directory (url_system ("no_such_dir"), flag2)) == 0);
   CHECK (flag2); // error
+}
+
+TEST_CASE ("subdirectories") {
+  url_eq (subdirectories (url_none ()), url_none ());
+  url_eq (subdirectories (url_pwd () * "bin"), url_pwd () * "bin");
 }
 
 TEST_CASE ("load_string from empty file") {
