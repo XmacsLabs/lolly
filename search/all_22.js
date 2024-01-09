@@ -7,10 +7,10 @@ var searchData=
   ['x4_4',['x4',['../classquartet.html#a594264012fe33f2290a2e05b46bada9b',1,'quartet::x4'],['../classquintuple.html#a755789d8942676cafba3c1415881f306',1,'quintuple::x4'],['../classsextuple.html#aec02ce15e622b31eff5925baebc03834',1,'sextuple::x4']]],
   ['x5_5',['x5',['../classquintuple.html#ad688e6bb4ec5fbd6635c08025c8a5838',1,'quintuple::x5'],['../classsextuple.html#a88c27481ecb78db9956a0195ddc61918',1,'sextuple::x5']]],
   ['x6_6',['x6',['../classsextuple.html#aa3001d0aad046966f0c85b864c600d32',1,'sextuple']]],
-  ['xmake_7',['Xmake',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md33',1,'Step 1: Installing xmake'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md41',1,'Step 1: Installing xmake'],['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md32',1,'Using xmake'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md40',1,'Using xmake']]],
+  ['xmake_7',['Xmake',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md33',1,'Step 1: Installing xmake'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md47',1,'Step 1: Installing xmake'],['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md32',1,'Using xmake'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md41',1,'Using xmake']]],
   ['xmake_202_208_202_8',['Project: Upgrade to xmake 2.8.2',['../md_devel_211.html',1,'']]],
   ['xmake_202_208_203_20and_20wasm_9',['13: xmake 2.8.3 and wasm',['../md_devel_213.html',1,'']]],
   ['xmake_202_208_205_10',['Project: Upgrade to xmake 2.8.5',['../md_devel_218.html',1,'']]],
-  ['xmake_20dependency_11',['Xmake Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md36',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md44',1,'Method 2: Adding xmake Dependency']]],
+  ['xmake_20dependency_11',['Xmake Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md36',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md50',1,'Method 2: Adding xmake Dependency']]],
   ['xmake_5flua_12',['xmake_lua',['../file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc',1,'file_test.cpp']]]
 ];
