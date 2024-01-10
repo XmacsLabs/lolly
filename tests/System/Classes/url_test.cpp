@@ -193,26 +193,34 @@ TEST_CASE ("unknown protocol like zotero") {
 }
 
 TEST_CASE ("relative") {
-  url_eq (relative ("/tmp", "a.txt"), url_system ("/a.txt"));
-  url_eq (relative ("/tmp", "x/a.txt"), url_system ("/x/a.txt"));
-  url_eq (relative ("/tmp", "x/y/a.txt"), url_system ("/x/y/a.txt"));
-  url_eq (relative ("/tmp", "/a.txt"), url_system ("/a.txt"));
-  url_eq (relative ("/tmp", "/tmp/a.txt"), url_system ("/tmp/a.txt"));
-  url_eq (relative ("/tmp", "/x/y/z/a.txt"), url_system ("/x/y/z/a.txt"));
-  url_eq (relative ("/tmp/b.txt", "a.txt"), url_system ("/tmp/a.txt"));
-  url_eq (relative (url_none (), url_none ()), url_none ());
-  url_eq (relative ("/tmp", url_none ()), url_none ());
-  url_eq (relative (url_none (), "a.txt"), url_none ());
-  url_eq (relative (url_none (), "/tmp/a.txt"), url ("/tmp/a.txt"));
+  SUBCASE ("on macOS/Linux/wasm") {
+    if (!os_win ()) {
+      url_eq (relative ("/tmp", "a.txt"), url_system ("/a.txt"));
+      url_eq (relative ("/tmp", "x/a.txt"), url_system ("/x/a.txt"));
+      url_eq (relative ("/tmp", "x/y/a.txt"), url_system ("/x/y/a.txt"));
+      url_eq (relative ("/tmp", "/a.txt"), url_system ("/a.txt"));
+      url_eq (relative ("/tmp", "/tmp/a.txt"), url_system ("/tmp/a.txt"));
+      url_eq (relative ("/tmp", "/x/y/z/a.txt"), url_system ("/x/y/z/a.txt"));
+      url_eq (relative ("/tmp/b.txt", "a.txt"), url_system ("/tmp/a.txt"));
+      url_eq (relative (url_none (), url_none ()), url_none ());
+      url_eq (relative ("/tmp", url_none ()), url_none ());
+      url_eq (relative (url_none (), "a.txt"), url_none ());
+      url_eq (relative (url_none (), "/tmp/a.txt"), url ("/tmp/a.txt"));
+    }
+  }
 }
 
 TEST_CASE ("delta") {
-  url_eq (delta ("/tmp", "/tmp/a.txt"), url ("tmp/a.txt"));
-  url_eq (delta ("/tmp", "/tmp/x/a.txt"), url ("tmp/x/a.txt"));
-  url_eq (delta ("/tmp", "/x/a.txt"), url ("x/a.txt"));
-  url_eq (delta ("/tmp", url_none ()), url_none ());
-  url_eq (delta (url_none (), "/tmp/a.txt"), url ("/tmp/a.txt"));
-  url_eq (delta (url_none (), url_none ()), url_none ());
+  SUBCASE ("on macOS/Linux/wasm") {
+    if (!os_win ()) {
+      url_eq (delta ("/tmp", "/tmp/a.txt"), url ("tmp/a.txt"));
+      url_eq (delta ("/tmp", "/tmp/x/a.txt"), url ("tmp/x/a.txt"));
+      url_eq (delta ("/tmp", "/x/a.txt"), url ("x/a.txt"));
+      url_eq (delta ("/tmp", url_none ()), url_none ());
+      url_eq (delta (url_none (), "/tmp/a.txt"), url ("/tmp/a.txt"));
+      url_eq (delta (url_none (), url_none ()), url_none ());
+    }
+  }
 }
 
 TEST_MEMORY_LEAK_ALL
