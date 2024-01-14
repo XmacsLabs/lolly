@@ -12,8 +12,8 @@
 #ifndef FAST_ALLOC_H
 #define FAST_ALLOC_H
 
-#include <stdlib.h>
 #include "tm_ostream.hpp"
+#include <stdlib.h>
 #define WORD_LENGTH 8
 #define WORD_LENGTH_INC 7
 #define WORD_MASK 0xfffffffffffffff8
@@ -22,30 +22,9 @@
 #define BLOCK_SIZE 65536 // should be >>> MAX_FAST
 
 /******************************************************************************
- * Globals
- ******************************************************************************/
-
-extern void*
-    alloc_table[MAX_FAST]; // Static declaration initializes with NULL's
-extern char* alloc_mem;
-#ifdef DEBUG_ON
-extern char* alloc_mem_top;
-extern char* alloc_mem_bottom;
-#endif
-bool          break_stub (void* ptr);
-extern size_t alloc_remains;
-extern int    allocated;
-extern int    large_uses;
-
-#define alloc_ptr(i) alloc_table[i]
-#define ind(ptr) (*((void**) ptr))
-
-/******************************************************************************
  * General purpose fast allocation routines
  ******************************************************************************/
 
-extern void* safe_malloc (size_t s);
-extern void* enlarge_malloc (size_t s);
 extern void* fast_alloc (size_t s);
 extern void  fast_free (void* ptr, size_t s);
 extern void* fast_new (size_t s);

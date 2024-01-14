@@ -29,11 +29,6 @@ safe_malloc (size_t sz) {
 }
 
 void*
-enlarge_malloc (size_t sz) {
-  return NULL;
-}
-
-void*
 fast_alloc (size_t sz) {
   return safe_malloc (sz);
 }
