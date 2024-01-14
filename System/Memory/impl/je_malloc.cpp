@@ -9,8 +9,8 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include "fast_alloc.hpp"
 #include "assert.h"
+#include "fast_alloc.hpp"
 #include "jemalloc/jemalloc.h"
 
 int mem_used ();
@@ -22,7 +22,7 @@ int mem_used ();
 void*
 safe_malloc (size_t sz) {
   void* ptr= malloc (sz);
-  
+
   if (ptr == NULL) {
     cerr << "Fatal error: out of memory\n";
     abort ();

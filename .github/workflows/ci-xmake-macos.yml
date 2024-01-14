@@ -59,7 +59,7 @@ jobs:
           key: ${{ runner.os }}-xmake-qt${{ matrix.qt_ver }}-${{ hashFiles('**/xmake.lua') }}
 
       - name: config
-        run: xmake config --policies=build.ccache -o ${{ runner.workspace }}/build --yes -vD  --malloc={{ matrix.malloc }}
+        run: xmake config --policies=build.ccache -o ${{ runner.workspace }}/build --yes -vD  --malloc=${{ matrix.malloc }}
       - name: build
         run: xmake build --yes -vD
       - name: test

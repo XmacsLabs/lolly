@@ -54,7 +54,7 @@ jobs:
           key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
       # Force xmake to a specific folder (for cache)
       - name: config
-        run: xmake config --yes -vD --malloc={{ matrix.malloc }}
+        run: xmake config --yes -vD --malloc=${{ matrix.malloc }}
       - name: build
         run: xmake build --yes -vD
       - name: test
