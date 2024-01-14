@@ -31,8 +31,19 @@ add_requires("doctest 2.4.11", {system=false})
 option("malloc")
     set_default("default")
     set_showmenu(true)
-    set_description("Enable mimalloc or jemalloc library")
-    set_values("default", "mimalloc", "jemalloc")
+    set_description([[
+Enable mimalloc or jemalloc library.
+    - default
+    - mimalloc (on windows, linux, and macos)
+    - jemalloc (on linux)
+]])
+    if is_plat("linux") then
+        set_values("default", "mimalloc", "jemalloc")
+    elseif is_plat("wasm") then
+        set_values("default")
+    else
+        set_values("default", "mimalloc")
+    end
 option_end()
 if is_config("malloc", "mimalloc") then 
     add_requires("mimalloc 2.1.2")
