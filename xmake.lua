@@ -24,10 +24,16 @@ end
 
 --- require packages
 local CURL_VERSION = "8.4.0"
+local TBOX_VERSION = "1.7.5"
+local DOCTEST_VERSION = "2.4.11"
+local MIMALLOC_VERSION = "2.1.2"
+local JEMALLOC_VERSION = "5.3.0"
+local CPR_VERSION = "1.10.5"
 
 tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
-add_requires("tbox 1.7.5", {system=false, configs=tbox_configs})
-add_requires("doctest 2.4.11", {system=false})
+add_requires("tbox " .. TBOX_VERSION, {system=false, configs=tbox_configs})
+add_requires("doctest " .. DOCTEST_VERSION, {system=false})
+
 option("malloc")
     set_default("default")
     set_showmenu(true)
@@ -46,13 +52,13 @@ Enable mimalloc or jemalloc library.
     end
 option_end()
 if is_config("malloc", "mimalloc") then 
-    add_requires("mimalloc 2.1.2")
+    add_requires("mimalloc " .. MIMALLOC_VERSION)
 elseif is_config("malloc", "jemalloc") then 
-    add_requires("jemalloc 5.3.0", {system=false, configs={envs={LD_PRELOAD="`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision`" }}})
+    add_requires("jemalloc " .. JEMALLOC_VERSION, {system=false, configs={envs={LD_PRELOAD="`jemalloc-config --libdir`/libjemalloc.so.`jemalloc-config --revision`" }}})
 end
 
 if not is_plat("wasm") then
-    add_requires("cpr 1.10.5")
+    add_requires("cpr " .. CPR_VERSION)
     if linuxos.name() == "uos" then
         -- curl on UOS is too old for CPR
         add_requireconfs("cpr.libcurl", {version = CURL_VERSION, system = false, override=true})
