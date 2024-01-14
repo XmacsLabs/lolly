@@ -26,7 +26,7 @@ jobs:
     strategy:
       matrix:
         malloc:
-          [mimalloc, standard]
+          [mimalloc, jemalloc, standard]
     steps:
       - uses: actions/checkout@v2
         with:
