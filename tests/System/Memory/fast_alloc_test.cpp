@@ -80,7 +80,7 @@ TEST_CASE ("test basic data types") {
     tm_delete (lo[i]);
     tm_delete (dou[i]);
   }
-  cout << "basic type: " << usec_diff(time, get_usec_time ()) << LF;
+  cout << "basic type: " << usec_diff (time, get_usec_time ()) << LF;
 }
 
 TEST_CASE ("test class") {
@@ -101,7 +101,7 @@ TEST_CASE ("test tm_*_array") {
   tm_delete_array (p_complex);
   Complex* p_wide= tm_new_array<Complex> (size_complex);
   tm_delete_array (p_wide);
-  cout << "large array: " << usec_diff(time, get_usec_time ()) << LF;
+  cout << "large array: " << usec_diff (time, get_usec_time ()) << LF;
 }
 
 #ifndef OS_WASM
@@ -128,16 +128,17 @@ TEST_CASE ("test large bunch of tm_*_array with class") {
   for (int i= 0; i < NUM; i++) {
     tm_delete_array (volume[i]);
   }
-  cout << "frequent allocation of array: " << usec_diff(time, get_usec_time ()) << LF;
- time = get_usec_time();
+  cout << "frequent allocation of array: " << usec_diff (time, get_usec_time ())
+       << LF;
+  time= get_usec_time ();
   for (int i= 0; i < NUM; i++) {
     volume[i]= tm_new_array<Complex> (9);
   }
   for (int i= 0; i < NUM; i++) {
     tm_delete_array (volume[i]);
   }
-  cout << "frequent allocation by reuse: " << usec_diff(time, get_usec_time ()) << LF;
-
+  cout << "frequent allocation by reuse: " << usec_diff (time, get_usec_time ())
+       << LF;
 }
 
 TEST_MEMORY_LEAK_ALL
