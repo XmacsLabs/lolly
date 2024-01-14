@@ -27,7 +27,7 @@ jobs:
     strategy:
       matrix:
         malloc:
-          [mimalloc, standard]
+          [mimalloc, default]
     env:
         # Force xmake to a specific folder (for cache)
         XMAKE_GLOBALDIR: ${{ github.workspace }}/.xmake-global

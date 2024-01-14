@@ -27,7 +27,7 @@ jobs:
     strategy:
       matrix:
         malloc:
-          [mimalloc, jemalloc, standard]
+          [mimalloc, jemalloc, default]
     steps:
       - name: Install dependencies
         run: | 

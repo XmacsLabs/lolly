@@ -29,10 +29,10 @@ tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
 add_requires("tbox 1.7.5", {system=false, configs=tbox_configs})
 add_requires("doctest 2.4.11", {system=false})
 option("malloc")
-    set_default("standard")
+    set_default("default")
     set_showmenu(true)
     set_description("Enable mimalloc or jemalloc library")
-    set_values("standard", "mimalloc", "jemalloc")
+    set_values("default", "mimalloc", "jemalloc")
 option_end()
 if is_config("malloc", "mimalloc") then 
     add_requires("mimalloc 2.1.2")

@@ -2,7 +2,7 @@
 /******************************************************************************
  * MODULE     : Fast memory allocation using mimalloc
  * DESCRIPTION:
- * COPYRIGHT  : (C) 1999  Joris van der Hoeven
+ * COPYRIGHT  : (C) 2023-2024  jingkaimori
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
  * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
