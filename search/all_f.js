@@ -5,7 +5,7 @@ var searchData=
   ['empty_2',['empty',['../classhashmap__rep.html#a138275b8ed6bb4bdaefdc7b4441286bf',1,'hashmap_rep']]],
   ['encode_5fbase64_3',['encode_base64',['../namespacelolly_1_1data.html#a70beb077536b3ec520bc1ebd04e88cd3',1,'lolly::data::encode_base64(char c1, char c2, char c3)'],['../namespacelolly_1_1data.html#a1a59469c495b6ae7fbaf9f4242e03359',1,'lolly::data::encode_base64(string s)']]],
   ['ends_4',['ends',['../analyze_8cpp.html#a3bf78d83c6e08edbf9e898b278f9e677',1,'ends(string s, const char *what):&#160;analyze.cpp'],['../analyze_8cpp.html#adcc51946f361554a7faa58452367528d',1,'ends(string s, const string r):&#160;analyze.cpp'],['../analyze_8hpp.html#ac835ed61769e4f35ec7c39f57346595d',1,'ends(string s, const char *test):&#160;analyze.cpp'],['../analyze_8hpp.html#a1f979270044423cc26337327c4d375e9',1,'ends(string s, const string test):&#160;analyze.cpp']]],
-  ['enlarge_5fmalloc_5',['enlarge_malloc',['../fast__alloc_8cpp.html#af223977c34c531b6630f6f5a721397b7',1,'enlarge_malloc(size_t sz):&#160;fast_alloc.cpp'],['../fast__alloc_8hpp.html#afa3aef94c5a63959c6c45adc07d9db6f',1,'enlarge_malloc(size_t s):&#160;fast_alloc.cpp']]],
+  ['enlarge_5fmalloc_5',['enlarge_malloc',['../fast__alloc_8cpp.html#af223977c34c531b6630f6f5a721397b7',1,'fast_alloc.cpp']]],
   ['environ_6',['environ',['../unix__sys__utils_8cpp.html#aa006daaf11f1e2e45a6ababaf463212b',1,'unix_sys_utils.cpp']]],
   ['equal_7',['equal',['../classblackbox__rep.html#adbe011bf7259e2c3fcf23301c70cca42',1,'blackbox_rep::equal()'],['../classwhitebox__rep.html#a3ff7f2e03d94da6dfbd1e6893a6337dc',1,'whitebox_rep::equal()']]],
   ['error_5fmsg_8',['error_msg',['../structfile__status.html#a69a738204e99ee4503d8f513960d8378',1,'file_status']]],

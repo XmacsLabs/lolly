@@ -38,7 +38,7 @@ var searchData=
   ['bracket_5fro_35',['bracket_ro',['../classhashmap__rep.html#a514c2b8948f959c3a47652fedad433e5',1,'hashmap_rep']]],
   ['bracket_5frw_36',['bracket_rw',['../classhashmap__rep.html#a37a05893933e46c8d978f3bc30df0ffb',1,'hashmap_rep']]],
   ['bracket_5frw_5fdebug_37',['bracket_rw_debug',['../classhashmap__rep.html#a2ce163819b91a1656006921dffba9c8b',1,'hashmap_rep']]],
-  ['break_5fstub_38',['break_stub',['../fast__alloc_8hpp.html#a1135155f0cd997b56d08a78c12c505d6',1,'fast_alloc.hpp']]],
+  ['break_5fstub_38',['break_stub',['../fast__alloc_8cpp.html#a1135155f0cd997b56d08a78c12c505d6',1,'fast_alloc.cpp']]],
   ['buf_39',['buf',['../classbuffered__ostream__rep.html#af8961b55095b3ee21727a49c7b4f765f',1,'buffered_ostream_rep']]],
   ['buffer_40',['buffer',['../struct__channel.html#a3d5424c0d11212f97a1aac81ffd2c51b',1,'_channel::buffer'],['../structfile__status.html#a08cfde39357933be13926cd0167be7ec',1,'file_status::buffer'],['../classtm__ostream.html#a5e84ed4796db5af4b55de9b577fe926b',1,'tm_ostream::buffer()']]],
   ['buffer_5fsize_41',['buffer_size',['../struct__channel.html#a0050ec1bda8fadc54e50f4631fb5cfca',1,'_channel']]],

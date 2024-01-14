@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['safe_5fmalloc_0',['safe_malloc',['../fast__alloc_8cpp.html#ad279aae3c5ebab1b0555ee8736c17ba5',1,'safe_malloc(size_t sz):&#160;fast_alloc.cpp'],['../fast__alloc_8hpp.html#abe7a39685c84f879f2296e6f22eae1b3',1,'safe_malloc(size_t s):&#160;fast_alloc.cpp']]],
+  ['safe_5fmalloc_0',['safe_malloc',['../fast__alloc_8cpp.html#ad279aae3c5ebab1b0555ee8736c17ba5',1,'safe_malloc(size_t sz):&#160;fast_alloc.cpp'],['../je__malloc_8cpp.html#ad279aae3c5ebab1b0555ee8736c17ba5',1,'safe_malloc(size_t sz):&#160;je_malloc.cpp'],['../mi__malloc_8cpp.html#ad279aae3c5ebab1b0555ee8736c17ba5',1,'safe_malloc(size_t sz):&#160;mi_malloc.cpp']]],
   ['save_5fstring_1',['save_string',['../file_8cpp.html#ab22f9dc8c3a591e553e8bf10a91ab589',1,'save_string(url u, const string &amp;s, bool fatal):&#160;file.cpp'],['../file_8hpp.html#a656836da111255feccf5aee34c007fb3',1,'save_string(url file_name, const string &amp;s, bool fatal=false):&#160;file.cpp']]],
   ['save_5fstring_5ftry_2',['save_string_try',['../file_8cpp.html#aa765523dc3d36a061e228a0c27b22764',1,'file.cpp']]],
   ['scheme_5ftree_5fto_5fblock_3',['scheme_tree_to_block',['../block_8cpp.html#a8f05ac0c8d6975976ebf4a8f935e0ee0',1,'scheme_tree_to_block(scheme_tree p):&#160;block.cpp'],['../block_8hpp.html#a61ee997d36fd8b981d0579210b181dd3',1,'scheme_tree_to_block(scheme_tree t):&#160;block.cpp']]],

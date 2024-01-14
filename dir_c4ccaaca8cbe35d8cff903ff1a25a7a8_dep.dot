@@ -8,7 +8,13 @@ digraph "Memory"
   subgraph clusterdir_9af51e3826d4f9e80d9103b2de543e84 {
     graph [ bgcolor="#edf0f7", pencolor="grey25", label="System", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_9af51e3826d4f9e80d9103b2de543e84.html",tooltip=""]
   dir_6585f33a0ea7f281ba0139d26289315f [label="IO", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_6585f33a0ea7f281ba0139d26289315f.html",tooltip=""];
-  dir_c4ccaaca8cbe35d8cff903ff1a25a7a8 [label="Memory", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_c4ccaaca8cbe35d8cff903ff1a25a7a8.html",tooltip=""];
+  subgraph clusterdir_c4ccaaca8cbe35d8cff903ff1a25a7a8 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_c4ccaaca8cbe35d8cff903ff1a25a7a8.html",tooltip=""]
+    dir_c4ccaaca8cbe35d8cff903ff1a25a7a8 [shape=plaintext, label="Memory"];
+  dir_64bdf6b864da86900faae3037a568917 [label="impl", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_64bdf6b864da86900faae3037a568917.html",tooltip=""];
   }
-  dir_c4ccaaca8cbe35d8cff903ff1a25a7a8->dir_6585f33a0ea7f281ba0139d26289315f [headlabel="1", labeldistance=1.5 headhref="dir_000029_000020.html" href="dir_000029_000020.html" color="steelblue1" fontcolor="steelblue1"];
+  }
+  dir_52bed8acfaac088d5968cb2c84d7645d [label="Kernel", fillcolor="#edf0f7", color="red", style="filled", URL="dir_52bed8acfaac088d5968cb2c84d7645d.html",tooltip=""];
+  dir_c4ccaaca8cbe35d8cff903ff1a25a7a8->dir_6585f33a0ea7f281ba0139d26289315f [headlabel="1", labeldistance=1.5 headhref="dir_000030_000021.html" href="dir_000030_000021.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_64bdf6b864da86900faae3037a568917->dir_52bed8acfaac088d5968cb2c84d7645d [headlabel="1", labeldistance=1.5 headhref="dir_000019_000025.html" href="dir_000019_000025.html" color="steelblue1" fontcolor="steelblue1"];
 }

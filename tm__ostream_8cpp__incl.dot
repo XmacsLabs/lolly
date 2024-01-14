@@ -11,9 +11,9 @@ digraph "tm_ostream.cpp"
   Node3 [id="Node000003",label="cstdio",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="fast_alloc.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$fast__alloc_8hpp.html",tooltip=" "];
-  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node2 [id="edge4_Node000004_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node5 [id="edge5_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node5 [id="Node000005",label="stdlib.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node4 -> Node2 [id="edge5_Node000004_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node4 -> Node6 [id="edge6_Node000004_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="new",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node7 [id="edge7_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];

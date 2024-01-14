@@ -10,7 +10,7 @@ var searchData=
   ['bracket_5fro_7',['bracket_ro',['../classhashmap__rep.html#a514c2b8948f959c3a47652fedad433e5',1,'hashmap_rep']]],
   ['bracket_5frw_8',['bracket_rw',['../classhashmap__rep.html#a37a05893933e46c8d978f3bc30df0ffb',1,'hashmap_rep']]],
   ['bracket_5frw_5fdebug_9',['bracket_rw_debug',['../classhashmap__rep.html#a2ce163819b91a1656006921dffba9c8b',1,'hashmap_rep']]],
-  ['break_5fstub_10',['break_stub',['../fast__alloc_8hpp.html#a1135155f0cd997b56d08a78c12c505d6',1,'fast_alloc.hpp']]],
+  ['break_5fstub_10',['break_stub',['../fast__alloc_8cpp.html#a1135155f0cd997b56d08a78c12c505d6',1,'fast_alloc.cpp']]],
   ['buffer_11',['buffer',['../classtm__ostream.html#a5e84ed4796db5af4b55de9b577fe926b',1,'tm_ostream']]],
   ['buffered_5fostream_5frep_12',['buffered_ostream_rep',['../classbuffered__ostream__rep.html#a8ee6ed67e322faa18fb4a6aba96852c4',1,'buffered_ostream_rep']]],
   ['busy_13',['busy',['../classiterator__rep.html#a8ffca42c928b6be3c3b7d35ce3112185',1,'iterator_rep::busy()'],['../classhashset__iterator__rep.html#a29a8c21ad31f7de9add28ed97e2bf98a',1,'hashset_iterator_rep::busy()'],['../classhashmap__iterator__rep.html#a377c316f4b2f906a2cab92891baf83a4',1,'hashmap_iterator_rep::busy()']]]
