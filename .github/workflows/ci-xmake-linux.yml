@@ -24,6 +24,10 @@ on:
 jobs:
   linuxbuild:
     runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        malloc:
+          [mimalloc, standard]
     steps:
       - name: Install dependencies
         run: | 
@@ -50,7 +54,7 @@ jobs:
           key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
       # Force xmake to a specific folder (for cache)
       - name: config
-        run: xmake config --yes -vD
+        run: xmake config --yes -vD --malloc={{ matrix.malloc }}
       - name: build
         run: xmake build --yes -vD
       - name: test
