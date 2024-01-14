@@ -12,7 +12,7 @@
 #include "assert.h"
 #include "basic.hpp"
 #include "fast_alloc.hpp"
-#include "mimalloc.h"
+#include <mimalloc.h>
 
 /*****************************************************************************/
 // General purpose fast allocation routines
