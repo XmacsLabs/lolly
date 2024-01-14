@@ -34,7 +34,7 @@ TEST_CASE ("test for memory leaks") {
 
   char* q_char= tm_new<char> ('z'); // here p_char is modified to 'z'
 
-  *p_char= 'c'; // here q_char is modified to 'c'
+  // *p_char= 'c'; // behavior of this code is unspecified, DO NOT DO THIS!
 }
 
 TEST_MEMORY_LEAK_INIT
