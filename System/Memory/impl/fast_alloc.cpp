@@ -16,6 +16,10 @@
 
 #include "fast_alloc.hpp"
 
+/******************************************************************************
+ * Globals
+ ******************************************************************************/
+
 void* alloc_table[MAX_FAST]; // Static declaration initializes with NULL's
 char* alloc_mem= NULL;
 #ifdef DEBUG_ON
@@ -27,11 +31,16 @@ int    allocated    = 0;
 int    fast_chunks  = 0;
 int    large_uses   = 0;
 int    MEM_DEBUG    = 0;
-int    mem_used ();
 
 /*****************************************************************************/
 // General purpose fast allocation routines
 /*****************************************************************************/
+
+#define alloc_ptr(i) alloc_table[i]
+#define ind(ptr) (*((void**) ptr))
+
+bool break_stub (void* ptr);
+int  mem_used ();
 
 void*
 safe_malloc (size_t sz) {

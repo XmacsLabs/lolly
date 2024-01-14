@@ -29,10 +29,21 @@ tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
 add_requires("tbox 1.7.5", {system=false, configs=tbox_configs})
 add_requires("doctest 2.4.11", {system=false})
 option("malloc")
-    set_default("standard")
+    set_default("default")
     set_showmenu(true)
-    set_description("Enable mimalloc or jemalloc library")
-    set_values("standard", "mimalloc", "jemalloc")
+    set_description([[
+Enable mimalloc or jemalloc library.
+    - default
+    - mimalloc (on windows, linux, and macos)
+    - jemalloc (on linux)
+]])
+    if is_plat("linux") then
+        set_values("default", "mimalloc", "jemalloc")
+    elseif is_plat("wasm") then
+        set_values("default")
+    else
+        set_values("default", "mimalloc")
+    end
 option_end()
 if is_config("malloc", "mimalloc") then 
     add_requires("mimalloc 2.1.2")
@@ -74,7 +85,7 @@ end
 
 local lolly_files = {
     "Kernel/**/*.cpp",
-    "System/**/*.cpp",
+    "System/**/*.cpp|Memory/impl/*.cpp",
     "Data/String/**.cpp",
     "Data/Scheme/**.cpp",
     "lolly/**/**.cpp",
@@ -107,12 +118,14 @@ target("liblolly") do
 
     --- dependent packages
     add_packages("tbox")
-    if is_config("malloc", "mimalloc") then 
-        add_defines("MIMALLOC")
+    if is_config("malloc", "mimalloc") then
         add_packages("mimalloc")
+        add_files("System/Memory/impl/mi_malloc.cpp")
     elseif is_config("malloc", "jemalloc") then 
-        add_defines("JEMALLOC")
         add_packages("jemalloc")
+        add_files("System/Memory/impl/je_malloc.cpp")
+    else
+        add_files("System/Memory/impl/fast_alloc.cpp")
     end 
     if not is_plat("wasm") then
         add_packages("cpr")

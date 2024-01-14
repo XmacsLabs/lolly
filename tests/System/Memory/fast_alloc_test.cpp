@@ -1,5 +1,16 @@
 #include "a_lolly_test.hpp"
 #include "fast_alloc.hpp"
+#include "tm_timer.hpp"
+
+int
+usec_diff (time_t start, time_t end) {
+  if (start <= end) {
+    return end - start;
+  }
+  else {
+    return end + 1000000 - start;
+  }
+}
 
 struct Complex {
 public:
@@ -23,7 +34,7 @@ TEST_CASE ("test for memory leaks") {
 
   char* q_char= tm_new<char> ('z'); // here p_char is modified to 'z'
 
-  *p_char= 'c'; // here q_char is modified to 'c'
+  // *p_char= 'c'; // behavior of this code is unspecified, DO NOT DO THIS!
 }
 
 TEST_MEMORY_LEAK_INIT
@@ -40,6 +51,7 @@ TEST_CASE ("test basic data types") {
   int*    in[NUM];
   long*   lo[NUM];
   double* dou[NUM];
+  int     time= get_usec_time ();
 
   for (int i= 0; i < NUM; i++) { // for gprof
     ch[i]= tm_new<char> ();
@@ -68,6 +80,7 @@ TEST_CASE ("test basic data types") {
     tm_delete (lo[i]);
     tm_delete (dou[i]);
   }
+  cout << "basic type: " << usec_diff (time, get_usec_time ()) << LF;
 }
 
 TEST_CASE ("test class") {
@@ -83,10 +96,12 @@ TEST_CASE ("test tm_*_array") {
 #else
   const size_t size_prim= 20000000, size_complex= 5000000;
 #endif
+  int time = get_usec_time ();
   p_complex= tm_new_array<uint8_t> (size_prim);
   tm_delete_array (p_complex);
   Complex* p_wide= tm_new_array<Complex> (size_complex);
   tm_delete_array (p_wide);
+  cout << "large array: " << usec_diff (time, get_usec_time ()) << LF;
 }
 
 #ifndef OS_WASM
@@ -106,12 +121,24 @@ TEST_MEMORY_LEAK_RESET
 
 TEST_CASE ("test large bunch of tm_*_array with class") {
   Complex* volume[NUM];
+  int      time= get_usec_time ();
   for (int i= 0; i < NUM; i++) {
     volume[i]= tm_new_array<Complex> (9);
   }
   for (int i= 0; i < NUM; i++) {
     tm_delete_array (volume[i]);
   }
+  cout << "frequent allocation of array: " << usec_diff (time, get_usec_time ())
+       << LF;
+  time= get_usec_time ();
+  for (int i= 0; i < NUM; i++) {
+    volume[i]= tm_new_array<Complex> (9);
+  }
+  for (int i= 0; i < NUM; i++) {
+    tm_delete_array (volume[i]);
+  }
+  cout << "frequent allocation by reuse: " << usec_diff (time, get_usec_time ())
+       << LF;
 }
 
 TEST_MEMORY_LEAK_ALL
