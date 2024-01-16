@@ -1,6 +1,9 @@
 #include "a_lolly_test.hpp"
 #include "fast_alloc.hpp"
 #include "tm_timer.hpp"
+#define ANKERL_NANOBENCH_IMPLEMENT
+#include <nanobench.h>
+static ankerl::nanobench::Bench bench;
 
 int
 usec_diff (time_t start, time_t end) {
@@ -51,41 +54,83 @@ TEST_CASE ("test basic data types") {
   int*    in[NUM];
   long*   lo[NUM];
   double* dou[NUM];
-  int     time= get_usec_time ();
 
-  for (int i= 0; i < NUM; i++) { // for gprof
-    ch[i]= tm_new<char> ();
-    tm_delete (ch[i]);
+  bench.batch (NUM * 4)
+      .unit ("alloc & free")
+      .run ("basic type, fast collect", [&] {
+        for (int i= 0; i < NUM; i++) { // for gprof
+          ch[i]= tm_new<char> ();
+          tm_delete (ch[i]);
 
-    in[i]= tm_new<int> ();
-    tm_delete (in[i]);
+          in[i]= tm_new<int> ();
+          tm_delete (in[i]);
 
-    lo[i]= tm_new<long> ();
-    tm_delete (lo[i]);
+          lo[i]= tm_new<long> ();
+          tm_delete (lo[i]);
 
-    dou[i]= tm_new<double> ();
-    tm_delete (dou[i]);
-  }
+          dou[i]= tm_new<double> ();
+          tm_delete (dou[i]);
+        }
+      });
 
-  for (int i= 0; i < NUM; i++) {
-    ch[i] = tm_new<char> ();
-    in[i] = tm_new<int> ();
-    lo[i] = tm_new<long> ();
-    dou[i]= tm_new<double> ();
-  }
+  bench.run ("basic type, bulk collect", [&] {
+    for (int i= 0; i < NUM; i++) {
+      ch[i] = tm_new<char> ();
+      in[i] = tm_new<int> ();
+      lo[i] = tm_new<long> ();
+      dou[i]= tm_new<double> ();
+    }
 
-  for (int i= 0; i < NUM; i++) {
-    tm_delete (ch[i]);
-    tm_delete (in[i]);
-    tm_delete (lo[i]);
-    tm_delete (dou[i]);
-  }
-  cout << "basic type: " << usec_diff (time, get_usec_time ()) << LF;
+    for (int i= 0; i < NUM; i++) {
+      tm_delete (ch[i]);
+      tm_delete (in[i]);
+      tm_delete (lo[i]);
+      tm_delete (dou[i]);
+    }
+  });
+  bench.batch (NUM).run ("char, bulk collect", [&] {
+    for (int i= 0; i < NUM; i++) {
+      ch[i]= tm_new<char> ();
+    }
+
+    for (int i= 0; i < NUM; i++) {
+      tm_delete (ch[i]);
+    }
+  });
+  bench.run ("int, bulk collect", [&] {
+    for (int i= 0; i < NUM; i++) {
+      in[i]= tm_new<int> ();
+    }
+
+    for (int i= 0; i < NUM; i++) {
+      tm_delete (in[i]);
+    }
+  });
+  bench.run ("long, bulk collect", [&] {
+    for (int i= 0; i < NUM; i++) {
+      lo[i]= tm_new<long> ();
+    }
+
+    for (int i= 0; i < NUM; i++) {
+      tm_delete (lo[i]);
+    }
+  });
+  bench.run ("double, bulk collect", [&] {
+    for (int i= 0; i < NUM; i++) {
+      dou[i]= tm_new<double> ();
+    }
+
+    for (int i= 0; i < NUM; i++) {
+      tm_delete (dou[i]);
+    }
+  });
 }
 
 TEST_CASE ("test class") {
-  Complex* p_complex= tm_new<Complex> (35.8, 26.2);
-  tm_delete (p_complex);
+  bench.batch (1).run ("struct", [&] {
+    Complex* p_complex= tm_new<Complex> (35.8, 26.2);
+    tm_delete (p_complex);
+  });
 }
 
 TEST_CASE ("test tm_*_array") {
@@ -96,12 +141,14 @@ TEST_CASE ("test tm_*_array") {
 #else
   const size_t size_prim= 20000000, size_complex= 5000000;
 #endif
-  int time = get_usec_time ();
-  p_complex= tm_new_array<uint8_t> (size_prim);
-  tm_delete_array (p_complex);
-  Complex* p_wide= tm_new_array<Complex> (size_complex);
-  tm_delete_array (p_wide);
-  cout << "large array: " << usec_diff (time, get_usec_time ()) << LF;
+  bench.batch (size_prim).run ("large array of basic type", [&] {
+    p_complex= tm_new_array<uint8_t> (size_prim);
+    tm_delete_array (p_complex);
+  });
+  bench.batch (size_complex).run ("large array of complex structure", [&] {
+    Complex* p_wide= tm_new_array<Complex> (size_complex);
+    tm_delete_array (p_wide);
+  });
 }
 
 #ifndef OS_WASM
@@ -121,24 +168,14 @@ TEST_MEMORY_LEAK_RESET
 
 TEST_CASE ("test large bunch of tm_*_array with class") {
   Complex* volume[NUM];
-  int      time= get_usec_time ();
-  for (int i= 0; i < NUM; i++) {
-    volume[i]= tm_new_array<Complex> (9);
-  }
-  for (int i= 0; i < NUM; i++) {
-    tm_delete_array (volume[i]);
-  }
-  cout << "frequent allocation of array: " << usec_diff (time, get_usec_time ())
-       << LF;
-  time= get_usec_time ();
-  for (int i= 0; i < NUM; i++) {
-    volume[i]= tm_new_array<Complex> (9);
-  }
-  for (int i= 0; i < NUM; i++) {
-    tm_delete_array (volume[i]);
-  }
-  cout << "frequent allocation by reuse: " << usec_diff (time, get_usec_time ())
-       << LF;
+  bench.batch (NUM).run ("frequent allocation of array, space reused", [&] {
+    for (int i= 0; i < NUM; i++) {
+      volume[i]= tm_new_array<Complex> (9);
+    }
+    for (int i= 0; i < NUM; i++) {
+      tm_delete_array (volume[i]);
+    }
+  });
 }
 
 TEST_MEMORY_LEAK_ALL

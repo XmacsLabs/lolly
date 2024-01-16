@@ -33,6 +33,7 @@ local CPR_VERSION = "1.10.5"
 tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
 add_requires("tbox " .. TBOX_VERSION, {system=false, configs=tbox_configs})
 add_requires("doctest " .. DOCTEST_VERSION, {system=false})
+add_requires("nanobench", {system=false})
 
 option("malloc")
     set_default("default")
@@ -209,6 +210,7 @@ function add_test_target(filepath)
         end
         add_packages("tbox")
         add_packages("doctest")
+        add_packages("nanobench")
 
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
