@@ -34,9 +34,9 @@ stages:
           - apt-get install -y software-properties-common 
           - /usr/bin/add-apt-repository ppa:xmake-io/xmake
           - apt-get update
-          - apt-get install -y xmake
+          - apt-get install -y xmake libcurl4-openssl-dev pkg-config
           - xmake repo -u
-          - xmake config --yes
+          - xmake config -vD --yes --enable_tests=true
           - xmake build -vD liblolly
           - xmake --yes -vD --group=tests -j 1 build
           - xmake run -vD
