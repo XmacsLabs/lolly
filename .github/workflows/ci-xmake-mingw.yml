@@ -53,7 +53,7 @@ jobs:
             ${{ github.workspace }}/build/.build_cache
           key: ${{ runner.os }}-xmake-qt-${{ hashFiles('**/xmake.lua') }}
       - name: config
-        run: xmake config --yes -vD --plat=mingw
+        run: xmake config --yes -vD --plat=mingw --enable_tests=true
       - name: build
         run: xmake build --yes -vD
       - name: test
