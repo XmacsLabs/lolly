@@ -15,8 +15,9 @@ var searchData=
   ['b7_12',['b7',['../blackbox__test_8cpp.html#af3adc2e63956ebbd63bbbaf5f63d4ef2',1,'blackbox_test.cpp']]],
   ['b8_13',['b8',['../blackbox__test_8cpp.html#aea0e1ae5519270709067ffdc49076f40',1,'blackbox_test.cpp']]],
   ['b9_14',['b9',['../blackbox__test_8cpp.html#a4383189ef21517aefacaa8fd80d4d86e',1,'blackbox_test.cpp']]],
-  ['bout_15',['bout',['../blackbox__test_8cpp.html#a556f84581cef3d885226a1a936f8d1ff',1,'blackbox_test.cpp']]],
-  ['buf_16',['buf',['../classbuffered__ostream__rep.html#af8961b55095b3ee21727a49c7b4f765f',1,'buffered_ostream_rep']]],
-  ['buffer_17',['buffer',['../struct__channel.html#a3d5424c0d11212f97a1aac81ffd2c51b',1,'_channel::buffer'],['../structfile__status.html#a08cfde39357933be13926cd0167be7ec',1,'file_status::buffer']]],
-  ['buffer_5fsize_18',['buffer_size',['../struct__channel.html#a0050ec1bda8fadc54e50f4631fb5cfca',1,'_channel']]]
+  ['bench_15',['bench',['../string__test_8cpp.html#aa6cd1b3828e108ccda5026615ba419b9',1,'bench:&#160;string_test.cpp'],['../fast__alloc__test_8cpp.html#aa6cd1b3828e108ccda5026615ba419b9',1,'bench:&#160;fast_alloc_test.cpp']]],
+  ['bout_16',['bout',['../blackbox__test_8cpp.html#a556f84581cef3d885226a1a936f8d1ff',1,'blackbox_test.cpp']]],
+  ['buf_17',['buf',['../classbuffered__ostream__rep.html#af8961b55095b3ee21727a49c7b4f765f',1,'buffered_ostream_rep']]],
+  ['buffer_18',['buffer',['../struct__channel.html#a3d5424c0d11212f97a1aac81ffd2c51b',1,'_channel::buffer'],['../structfile__status.html#a08cfde39357933be13926cd0167be7ec',1,'file_status::buffer']]],
+  ['buffer_5fsize_19',['buffer_size',['../struct__channel.html#a0050ec1bda8fadc54e50f4631fb5cfca',1,'_channel']]]
 ];

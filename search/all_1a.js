@@ -55,7 +55,7 @@ var searchData=
   ['project_3a_20upgrade_20to_20xmake_202_208_205_52',['Project: Upgrade to xmake 2.8.5',['../md_devel_218.html',1,'']]],
   ['project_3a_20use_20lolly_20as_20a_20package_20in_20mogan_53',['Project: Use lolly as a package in Mogan',['../md_devel_25.html',1,'']]],
   ['project_3a_20use_20tbox_20to_20implement_20file_20and_20others_54',['Project: Use tbox to implement file and others',['../md_devel_212.html',1,'']]],
-  ['projects_55',['Projects',['../md_devel_21_80.html#autotoc_md7',1,'Projects'],['../md_devel_21_81.html#autotoc_md9',1,'Projects'],['../md_devel_21_83.html#autotoc_md11',1,'Projects']]],
+  ['projects_55',['Projects',['../md_devel_21_80.html#autotoc_md7',1,'Projects'],['../md_devel_21_81.html#autotoc_md9',1,'Projects'],['../md_devel_21_83.html#autotoc_md12',1,'Projects']]],
   ['promise_56',['promise',['../classpromise.html',1,'']]],
   ['promise_2ehpp_57',['promise.hpp',['../promise_8hpp.html',1,'']]],
   ['promise_5frep_58',['promise_rep',['../classpromise__rep.html',1,'promise_rep&lt; T &gt;'],['../classpromise__rep.html#a0b94e8b3d00b9da59e5ded8bb9016f94',1,'promise_rep::promise_rep()']]],
