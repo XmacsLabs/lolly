@@ -60,7 +60,7 @@ TEST_CASE ("test concat") {
   CHECK_EQ (string ("abc") * "de" == string ("abcde"), true);
   CHECK_EQ (string ("abc") * string ("de") == string ("abcde"), true);
   CHECK_EQ ("abc" * string ("de") == string ("abcde"), true);
-  bench.minEpochIterations(40000);
+  bench.minEpochIterations (40000);
   bench.run ("concat string", [&] {
     static string a ("abc"), b ("de");
     a*            b;
