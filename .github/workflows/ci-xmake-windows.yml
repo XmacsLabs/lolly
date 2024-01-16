@@ -50,7 +50,7 @@ jobs:
             ${{ github.workspace }}/build/.build_cache
           key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
       - name: config
-        run: xmake config --yes -vD --malloc=${{ matrix.malloc }}
+        run: xmake config --yes -vD --malloc=${{ matrix.malloc }} --enable_tests=true
       - name: build
         run: xmake build --yes -vD
       - name: test

@@ -80,7 +80,7 @@ jobs:
             ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
           key: ${{ runner.os }}-wasm-${{ hashFiles('**/xmake.lua') }}
       - name: config
-        run: xmake config --yes -p wasm -vD
+        run: xmake config --yes -p wasm -vD --enable_tests=true
       - name: build
         run: xmake build --yes -vD
       - name: test

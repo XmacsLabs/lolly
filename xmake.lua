@@ -22,18 +22,7 @@ if is_plat("wasm") then
     set_toolchains("emcc@emscripten")
 end
 
---- require packages
-local TBOX_VERSION = "1.7.5"
-local DOCTEST_VERSION = "2.4.11"
-local MIMALLOC_VERSION = "2.1.2"
-local JEMALLOC_VERSION = "5.3.0"
-local CPR_VERSION = "1.8.3"
-
-tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
-add_requires("tbox " .. TBOX_VERSION, {system=false, configs=tbox_configs})
-add_requires("doctest " .. DOCTEST_VERSION, {system=false})
-add_requires("nanobench", {system=false})
-
+-- Options
 option("malloc")
     set_default("default")
     set_showmenu(true)
@@ -51,6 +40,36 @@ Enable mimalloc or jemalloc library.
         set_values("default", "mimalloc")
     end
 option_end()
+
+option("posix_thread")
+    set_showmenu(false)
+    add_cxxtypes("std::mutex")
+    add_cxxincludes("mutex")
+option_end()
+
+option("enable_tests")
+    set_description([[
+Enable tests or not
+    - false (default)
+    - true
+]])
+option_end()
+
+
+--- Require packages
+local TBOX_VERSION = "1.7.5"
+local DOCTEST_VERSION = "2.4.11"
+local MIMALLOC_VERSION = "2.1.2"
+local JEMALLOC_VERSION = "5.3.0"
+local CPR_VERSION = "1.8.3"
+
+tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
+add_requires("tbox " .. TBOX_VERSION, {system=false, configs=tbox_configs})
+if has_config("enable_tests") then
+    add_requires("doctest " .. DOCTEST_VERSION, {system=false})
+    add_requires("nanobench", {system=false})
+end
+
 if is_config("malloc", "mimalloc") then 
     add_requires("mimalloc " .. MIMALLOC_VERSION)
 elseif is_config("malloc", "jemalloc") then 
@@ -61,12 +80,6 @@ if not is_plat("wasm") then
     add_requires("cpr " .. CPR_VERSION)
 end
 
-
-option("posix_thread")
-    set_showmenu(false)
-    add_cxxtypes("std::mutex")
-    add_cxxincludes("mutex")
-option_end()
 
 function my_configvar_check()
     on_config(function (target)
@@ -275,9 +288,11 @@ function add_test_target(filepath)
 end
 
 
-cpp_tests_on_all_plat = os.files("tests/**_test.cpp")
-for _, filepath in ipairs(cpp_tests_on_all_plat) do
-    add_test_target (filepath)
+if has_config("enable_tests") then
+    cpp_tests_on_all_plat = os.files("tests/**_test.cpp")
+    for _, filepath in ipairs(cpp_tests_on_all_plat) do
+        add_test_target (filepath)
+    end
 end
 
 
