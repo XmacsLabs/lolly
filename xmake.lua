@@ -23,12 +23,11 @@ if is_plat("wasm") then
 end
 
 --- require packages
-local CURL_VERSION = "8.4.0"
 local TBOX_VERSION = "1.7.5"
 local DOCTEST_VERSION = "2.4.11"
 local MIMALLOC_VERSION = "2.1.2"
 local JEMALLOC_VERSION = "5.3.0"
-local CPR_VERSION = "1.10.5"
+local CPR_VERSION = "1.8.3"
 
 tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
 add_requires("tbox " .. TBOX_VERSION, {system=false, configs=tbox_configs})
@@ -60,10 +59,6 @@ end
 
 if not is_plat("wasm") then
     add_requires("cpr " .. CPR_VERSION)
-    if linuxos.name() == "uos" then
-        -- curl on UOS is too old for CPR
-        add_requireconfs("cpr.libcurl", {version = CURL_VERSION, system = false, override=true})
-    end
 end
 
 
