@@ -1,19 +1,8 @@
 #include "a_lolly_test.hpp"
 #include "fast_alloc.hpp"
 #include "tm_timer.hpp"
-#define ANKERL_NANOBENCH_IMPLEMENT
 #include <nanobench.h>
 static ankerl::nanobench::Bench bench;
-
-int
-usec_diff (time_t start, time_t end) {
-  if (start <= end) {
-    return end - start;
-  }
-  else {
-    return end + 1000000 - start;
-  }
-}
 
 struct Complex {
 public:

@@ -19,18 +19,8 @@
 /*****************************************************************************/
 
 void*
-safe_malloc (size_t sz) {
-  void* ptr= mi_malloc (mi_good_size (sz));
-  if (ptr == NULL) {
-    cerr << "Fatal error: out of memory\n";
-    abort ();
-  }
-  return ptr;
-}
-
-void*
 fast_alloc (size_t sz) {
-  return safe_malloc (sz);
+  return mi_malloc (sz);
 }
 
 void
@@ -40,7 +30,7 @@ fast_free (void* ptr, size_t sz) {
 
 void*
 fast_new (size_t s) {
-  return safe_malloc (s);
+  return mi_malloc (s);
 }
 
 void
@@ -72,4 +62,34 @@ void
 mem_info () {
   cout << "\n---------------- memory statistics ----------------\n";
   cout << "malloc overrided:" << mi_is_redirected () << "\n";
+}
+
+void
+mem_err_handler (int err, void* arg) {
+  switch (err) {
+  case ENOMEM:
+    cerr << "Fatal error: out of memory\n";
+    break;
+  case EINVAL:
+    cerr << "Fatal error: invalid pointer\n";
+    break;
+  case EFAULT:
+    cerr << "Corrupted heap. Please check whether there are objects used after "
+            "free.\n";
+    break;
+  case EOVERFLOW:
+    cerr << "Fatal error: input argument of allocator is too large\n";
+    break;
+  case EAGAIN:
+    cerr << "Double free detected\n";
+    break;
+  default:
+    break;
+  }
+  abort ();
+}
+
+void
+mem_init () {
+  mi_register_error (mem_err_handler, NULL);
 }

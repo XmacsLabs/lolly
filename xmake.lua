@@ -209,7 +209,7 @@ function add_test_target(filepath)
     local testname = path.basename(filepath)
     target(testname) do 
         set_group("tests")
-        add_deps("liblolly")
+        add_deps("test_base")
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
 
@@ -289,6 +289,25 @@ end
 
 
 if has_config("enable_tests") then
+    target("test_base")do
+        set_kind("object")
+        add_deps("liblolly")
+        set_languages("c++17")
+        set_policy("check.auto_ignore_flags", false)
+        add_packages("tbox")
+        add_packages("doctest")
+        add_packages("nanobench")
+
+        if is_plat("windows") then
+            set_encodings("utf-8")
+        end
+        add_includedirs("$(buildir)/L1")
+        add_includedirs(lolly_includedirs)
+        add_includedirs("tests")
+        add_forceincludes(path.absolute("$(buildir)/L1/config.h"))
+        add_files("tests/a_tbox_main.cpp")
+    end
+
     cpp_tests_on_all_plat = os.files("tests/**_test.cpp")
     for _, filepath in ipairs(cpp_tests_on_all_plat) do
         add_test_target (filepath)
