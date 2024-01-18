@@ -12,6 +12,7 @@
 #include "assert.h"
 #include "basic.hpp"
 #include "fast_alloc.hpp"
+#include <errno.h>
 #include <mimalloc.h>
 
 /*****************************************************************************/
