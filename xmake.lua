@@ -219,6 +219,7 @@ function add_test_target(filepath)
         add_packages("tbox")
         add_packages("doctest")
         add_packages("nanobench")
+        add_packages("emscripten")
 
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
@@ -241,9 +242,7 @@ function add_test_target(filepath)
 
         if is_plat("wasm") then
             add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
-            add_ldflags("--preload-file xmake.lua")
-            add_ldflags("--preload-file tests")
-            add_ldflags("--preload-file LICENSE")
+            set_values("wasm.preloadfiles", {"xmake.lua", "tests", "LICENSE"})
             add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
             on_run(function (target)
                 node = os.getenv("EMSDK_NODE")
@@ -300,6 +299,8 @@ if has_config("enable_tests") then
 
         if is_plat("windows") then
             set_encodings("utf-8")
+        elseif is_plat("wasm") then
+            add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
         end
         add_includedirs("$(buildir)/L1")
         add_includedirs(lolly_includedirs)
