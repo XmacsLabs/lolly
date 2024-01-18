@@ -11,6 +11,7 @@
 
 #include "a_lolly_test.hpp"
 #include "lolly/data/numeral.hpp"
+#include <climits>
 #include <cstdint>
 
 using namespace lolly::data;
