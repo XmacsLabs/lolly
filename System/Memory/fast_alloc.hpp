@@ -32,6 +32,7 @@ extern void  fast_delete (void* ptr);
 
 extern int  mem_used ();
 extern void mem_info ();
+extern void mem_init ();
 void*       alloc_check (const char* msg, void* ptr, size_t* sp);
 
 /******************************************************************************

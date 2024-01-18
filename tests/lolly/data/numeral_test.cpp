@@ -9,8 +9,9 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
-#include "a_tbox_main.cpp"
+#include "a_lolly_test.hpp"
 #include "lolly/data/numeral.hpp"
+#include <climits>
 #include <cstdint>
 
 using namespace lolly::data;

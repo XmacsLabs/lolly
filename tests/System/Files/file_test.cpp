@@ -4,9 +4,11 @@
  *  \author Darcy
  *  \date   2019-2023
  */
-#include "a_tbox_main.cpp"
+#include "a_lolly_test.hpp"
 #include "file.hpp"
+#include "sys_utils.hpp"
 #include "tbox/tbox.h"
+#include <cstring>
 
 url unix_root= url_system ("/");
 url xmake_lua= url_pwd () * "xmake.lua";
@@ -259,15 +261,10 @@ TEST_CASE ("load_string from newly created file") {
     const char* s2    = "hello world";
     tb_size_t   size  = strlen (s2);
     tb_byte_t*  buffer= (tb_byte_t*) tb_malloc_bytes (size);
-    int         seek  = 0;
-    while (seek < size) {
-      tb_byte_t c = s2[seek];
-      buffer[seek]= c;
-      seek++;
-    }
+    memcpy (buffer, s2, size);
 
     auto file_ref= tb_file_init (s1, TB_FILE_MODE_RW);
-    tb_file_writ (file_ref, buffer, strlen (s2));
+    tb_file_writ (file_ref, buffer, size);
     string s;
     CHECK (!load_string (u1, s, false));
     string_eq (s, string ("hello world"));

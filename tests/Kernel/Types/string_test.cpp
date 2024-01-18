@@ -1,6 +1,5 @@
 #include "a_lolly_test.hpp"
 #include "string.hpp"
-#define ANKERL_NANOBENCH_IMPLEMENT
 #include <nanobench.h>
 
 static ankerl::nanobench::Bench bench;

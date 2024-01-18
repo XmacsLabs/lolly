@@ -4,7 +4,8 @@
  *  \author Darcy
  *  \date   2019-2023
  */
-#include "a_tbox_main.cpp"
+#include "a_lolly_test.hpp"
+#include "sys_utils.hpp"
 #include "url.hpp"
 
 url ustc_edu     = url_system ("https://ustc.edu.cn");
