@@ -261,8 +261,7 @@ TEST_CASE ("load_string from newly created file") {
     const char* s2    = "hello world";
     tb_size_t   size  = strlen (s2);
     tb_byte_t*  buffer= (tb_byte_t*) tb_malloc_bytes (size);
-    int         seek  = 0;
-    memcpy (buffer, s2, seek);
+    memcpy (buffer, s2, size);
 
     auto file_ref= tb_file_init (s1, TB_FILE_MODE_RW);
     tb_file_writ (file_ref, buffer, size);
