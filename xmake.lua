@@ -219,7 +219,6 @@ function add_test_target(filepath)
         add_packages("tbox")
         add_packages("doctest")
         add_packages("nanobench")
-        add_packages("emscripten")
 
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
