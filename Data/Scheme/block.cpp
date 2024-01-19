@@ -22,27 +22,46 @@ static int UNKNOWN= 1;
 static int TUPLE  = 245;
 
 void
-unslash (string& s, string& r, int& i, int& lth, bool is_end (char)) {
-  char ch= s[i];
-  while (!is_end (ch) && i < lth) {
-    if ((s[i] == '\\') && ((i + 1) < lth)) {
+unslash (string& s, string& r, int& i, int& lth, int& r_index,
+         bool is_end (char)) {
+  int  end_index= i;
+  char ch       = s[end_index];
+  while (!is_end (ch) && end_index < lth) {
+    if ((end_index < lth - 1) && (ch == '\\')) end_index++;
+    end_index++;
+    ch= s[end_index];
+  }
+  int r_size= N (r);
+  r->resize (r_size + end_index - i);
+
+  ch     = s[i];
+  r_index= r_size;
+  while (i < end_index) {
+    if ((ch == '\\') && ((i + 1) < end_index)) {
       i++;
       ch= s[i];
       switch (ch) {
       case '0':
-        r << ((char) 0);
+        r[r_index]= ((char) 0);
+        r_index++;
         break;
       case 'n':
-        r << '\n';
+        r[r_index]= '\n';
+        r_index++;
         break;
       case 't':
-        r << '\t';
+        r[r_index]= '\t';
+        r_index++;
         break;
       default:
-        r << ch;
+        r[r_index]= ch;
+        r_index++;
       }
     }
-    else r << ch;
+    else {
+      r[r_index]= ch;
+      r_index++;
+    }
     i++;
     ch= s[i];
   }
@@ -96,10 +115,12 @@ string_to_scheme_tree (string& s, int& i) {
 
     case '\"': { // "
       string quoted ("\"");
+      int    quoted_index;
       i++;
-      unslash (s, quoted, i, lth, ends_with_quote);
+      unslash (s, quoted, i, lth, quoted_index, ends_with_quote);
       if (i < lth) i++;
-      quoted << "\"";
+      quoted->resize (quoted_index + 1);
+      quoted[quoted_index]= '"';
       return scheme_tree (quoted);
     }
 
@@ -110,7 +131,9 @@ string_to_scheme_tree (string& s, int& i) {
 
     default: {
       string token;
-      unslash (s, token, i, lth, ends_with_paren);
+      int    token_index;
+      unslash (s, token, i, lth, token_index, ends_with_paren);
+      token->resize (token_index);
       return scheme_tree (token);
     }
     }
