@@ -21,12 +21,14 @@
 static int UNKNOWN= 1;
 static int TUPLE  = 245;
 
-string
-unslash (string s) {
-  int    i, n= N (s);
-  string r;
-  for (i= 0; i < n; i++)
-    if ((s[i] == '\\') && ((i + 1) < n)) switch (s[++i]) {
+void
+unslash (string& s, string& r, int& i, int& lth, bool is_end (char)) {
+  char ch= s[i];
+  while (!is_end (ch) && i < lth) {
+    if ((s[i] == '\\') && ((i + 1) < lth)) {
+      i++;
+      ch= s[i];
+      switch (ch) {
       case '0':
         r << ((char) 0);
         break;
@@ -37,10 +39,13 @@ unslash (string s) {
         r << '\t';
         break;
       default:
-        r << s[i];
+        r << ch;
       }
-    else r << s[i];
-  return r;
+    }
+    else r << ch;
+    i++;
+    ch= s[i];
+  }
 }
 
 /******************************************************************************
@@ -52,9 +57,20 @@ is_spc (char c) {
   return (c == ' ') || (c == '\t') || (c == '\n');
 }
 
+static bool
+ends_with_paren (char c) {
+  return (c == ' ') || (c == '\t') || (c == '\n') || (c == '(') || (c == ')');
+};
+
+static bool
+ends_with_quote (char ch) {
+  return (ch == '\"');
+};
+
 static scheme_tree
-string_to_scheme_tree (string s, int& i) {
-  for (; i < N (s); i++)
+string_to_scheme_tree (string& s, int& i) {
+  int lth= N (s);
+  for (; i < lth; i++)
     switch (s[i]) {
 
     case ' ':
@@ -65,12 +81,12 @@ string_to_scheme_tree (string s, int& i) {
       scheme_tree p (TUPLE);
       i++;
       while (true) {
-        while ((i < N (s)) && is_spc (s[i]))
+        while ((i < lth) && is_spc (s[i]))
           i++;
-        if ((i == N (s)) || (s[i] == ')')) break;
+        if ((i == lth) || (s[i] == ')')) break;
         p << string_to_scheme_tree (s, i);
       }
-      if (i < N (s)) i++;
+      if (i < lth) i++;
       return p;
     }
 
@@ -79,28 +95,23 @@ string_to_scheme_tree (string s, int& i) {
       return scheme_tree (TUPLE, tree ("\'"), string_to_scheme_tree (s, i));
 
     case '\"': { // "
-      int start= i++;
-      while ((i < N (s)) && (s[i] != '\"')) { // "
-        if ((i < N (s) - 1) && (s[i] == '\\')) i++;
-        i++;
-      }
-      if (i < N (s)) i++;
-      return scheme_tree (unslash (s (start, i)));
+      string quoted ("\"");
+      i++;
+      unslash (s, quoted, i, lth, ends_with_quote);
+      if (i < lth) i++;
+      quoted << "\"";
+      return scheme_tree (quoted);
     }
 
     case ';':
-      while ((i < N (s)) && (s[i] != '\n'))
+      while ((i < lth) && (s[i] != '\n'))
         i++;
       break;
 
     default: {
-      int start= i;
-      while ((i < N (s)) && (!is_spc (s[i])) && (s[i] != '(') &&
-             (s[i] != ')')) {
-        if ((i < N (s) - 1) && (s[i] == '\\')) i++;
-        i++;
-      }
-      return scheme_tree (unslash (s (start, i)));
+      string token;
+      unslash (s, token, i, lth, ends_with_paren);
+      return scheme_tree (token);
     }
     }
 
@@ -117,12 +128,12 @@ string_to_scheme_tree (string s) {
 scheme_tree
 block_to_scheme_tree (string s) {
   scheme_tree p (TUPLE);
-  int         i= 0;
-  while ((i < N (s)) && (is_spc (s[i]) || s[i] == ')'))
+  int         i= 0, lth= N (s);
+  while ((i < lth) && (is_spc (s[i]) || s[i] == ')'))
     i++;
-  while (i < N (s)) {
+  while (i < lth) {
     p << string_to_scheme_tree (s, i);
-    while ((i < N (s)) && (is_spc (s[i]) || s[i] == ')'))
+    while ((i < lth) && (is_spc (s[i]) || s[i] == ')'))
       i++;
   }
   return p;
