@@ -22,7 +22,7 @@ static int UNKNOWN= 1;
 static int TUPLE  = 245;
 
 void
-unslash (string& s, string& r, int& i, int& r_index, int end_index) {
+unslash (string& s, int i, int end_index, string& r, int& r_index) {
   char ch= s[i];
   while (i < end_index) {
     if ((ch == '\\') && ((i + 1) < end_index)) {
@@ -98,8 +98,9 @@ string_to_scheme_tree (string& s, int& i, const int length) {
 
     case '\"': { // "
       i++;
-      int  end_index= i;
-      char ch       = s[end_index];
+      int       end_index  = i;
+      const int start_index= i;
+      char      ch         = s[end_index];
       while (!(ch == '\"') && end_index < length) {
         if ((ch == '\\') && (end_index < length - 1)) end_index++;
         end_index++;
@@ -109,8 +110,13 @@ string_to_scheme_tree (string& s, int& i, const int length) {
       int       quoted_index= r_size;
       string    quoted (r_size + end_index - i);
       quoted[0]= '"';
-      unslash (s, quoted, i, quoted_index, end_index);
-      if (i < length) i++;
+      unslash (s, start_index, end_index, quoted, quoted_index);
+      if (i < length) {
+        i= end_index + 1;
+      }
+      else {
+        i= end_index;
+      };
       quoted->resize (quoted_index + 1);
       quoted[quoted_index]= '"';
       return scheme_tree (quoted);
@@ -122,8 +128,9 @@ string_to_scheme_tree (string& s, int& i, const int length) {
       break;
 
     default: {
-      int  end_index= i;
-      char ch       = s[end_index];
+      int       end_index  = i;
+      const int start_index= i;
+      char      ch         = s[end_index];
       while (!(is_paren_or_spc (ch)) && end_index < length) {
         if ((ch == '\\') && (end_index < length - 1)) end_index++;
         end_index++;
@@ -132,7 +139,8 @@ string_to_scheme_tree (string& s, int& i, const int length) {
       const int r_size     = 0; // empty string
       int       token_index= r_size;
       string    token (r_size + end_index - i);
-      unslash (s, token, i, token_index, end_index);
+      unslash (s, start_index, end_index, token, token_index);
+      i= end_index;
       token->resize (token_index);
       return scheme_tree (token);
     }
