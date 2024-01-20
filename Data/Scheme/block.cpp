@@ -22,20 +22,8 @@ static int UNKNOWN= 1;
 static int TUPLE  = 245;
 
 void
-unslash (string& s, string& r, int& i, int& lth, int& r_index,
-         bool is_end (char)) {
-  int  end_index= i;
-  char ch       = s[end_index];
-  while (!is_end (ch) && end_index < lth) {
-    if ((end_index < lth - 1) && (ch == '\\')) end_index++;
-    end_index++;
-    ch= s[end_index];
-  }
-  int r_size= N (r);
-  r->resize (r_size + end_index - i);
-
-  ch     = s[i];
-  r_index= r_size;
+unslash (string& s, string& r, int& i, int& r_index, int end_index) {
+  char ch= s[i];
   while (i < end_index) {
     if ((ch == '\\') && ((i + 1) < end_index)) {
       i++;
@@ -81,11 +69,6 @@ ends_with_paren (char c) {
   return (c == ' ') || (c == '\t') || (c == '\n') || (c == '(') || (c == ')');
 };
 
-static bool
-ends_with_quote (char ch) {
-  return (ch == '\"');
-};
-
 static scheme_tree
 string_to_scheme_tree (string& s, int& i) {
   int lth= N (s);
@@ -100,7 +83,7 @@ string_to_scheme_tree (string& s, int& i) {
       scheme_tree p (TUPLE);
       i++;
       while (true) {
-        while ((i < lth) && is_spc (s[i]))
+        while (is_spc (s[i]) && (i < lth))
           i++;
         if ((i == lth) || (s[i] == ')')) break;
         p << string_to_scheme_tree (s, i);
@@ -114,10 +97,19 @@ string_to_scheme_tree (string& s, int& i) {
       return scheme_tree (TUPLE, tree ("\'"), string_to_scheme_tree (s, i));
 
     case '\"': { // "
-      string quoted ("\"");
-      int    quoted_index;
       i++;
-      unslash (s, quoted, i, lth, quoted_index, ends_with_quote);
+      int  end_index= i;
+      char ch       = s[end_index];
+      while (!(ch == '\"') && end_index < lth) {
+        if ((ch == '\\') && (end_index < lth - 1)) end_index++;
+        end_index++;
+        ch= s[end_index];
+      }
+      const int r_size      = 1; // N ("\"");
+      int       quoted_index= r_size;
+      string    quoted (r_size + end_index - i);
+      quoted[0]= '"';
+      unslash (s, quoted, i, quoted_index, end_index);
       if (i < lth) i++;
       quoted->resize (quoted_index + 1);
       quoted[quoted_index]= '"';
@@ -130,9 +122,17 @@ string_to_scheme_tree (string& s, int& i) {
       break;
 
     default: {
-      string token;
-      int    token_index;
-      unslash (s, token, i, lth, token_index, ends_with_paren);
+      int  end_index= i;
+      char ch       = s[end_index];
+      while (!(ends_with_paren (ch)) && end_index < lth) {
+        if ((ch == '\\') && (end_index < lth - 1)) end_index++;
+        end_index++;
+        ch= s[end_index];
+      }
+      const int r_size     = 0; // empty string
+      int       token_index= r_size;
+      string    token (r_size + end_index - i);
+      unslash (s, token, i, token_index, end_index);
       token->resize (token_index);
       return scheme_tree (token);
     }
