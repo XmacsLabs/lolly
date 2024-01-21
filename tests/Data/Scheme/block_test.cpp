@@ -1,6 +1,6 @@
 /** \file block_test.cpp
  *  \copyright GPLv3
- *  \details Unitests and benchmark for scheme parser
+ *  \details Unitests for scheme parser
  *  \author jingkaimori
  *  \date   2024
  */
@@ -10,9 +10,6 @@
 #include "file.hpp"
 #include "string.hpp"
 #include "tm_ostream.hpp"
-#include <nanobench.h>
-
-static ankerl::nanobench::Bench bench;
 
 static const int UNKNOWN= 1;
 static const int TUPLE  = 245;
@@ -118,27 +115,4 @@ TEST_CASE ("scheme_tree_to_block") {
       scheme_tree_to_block (tree (
           TUPLE, tree (TUPLE, "scheme", tree (TUPLE, "parser", "combinator")),
           tree (TUPLE, "common-lisp", "gene_rator"))));
-}
-
-TEST_CASE ("benchmark") {
-  string buffer;
-  url    u= url_pwd () * url ("tests/Data/Scheme/dictionary.scm");
-  load_string (u, buffer, false);
-  bench.minEpochIterations (10)
-      .batch (N (buffer))
-      .unit ("character")
-      .run ("parsing large group of simple element",
-            [&] { block_to_scheme_tree (buffer); });
-  scheme_tree parsed_tree= block_to_scheme_tree (buffer);
-  bench.run ("serializing large group of simple element",
-             [&] { scheme_tree_to_block (parsed_tree); });
-
-  u= url_pwd () * url ("tests/Data/Scheme/virtual-font.scm");
-  load_string (u, buffer, false);
-  bench.batch (N (buffer)).run ("parsing group of complex tree", [&] {
-    block_to_scheme_tree (buffer);
-  });
-  parsed_tree= block_to_scheme_tree (buffer);
-  bench.run ("serializing group of complex tree",
-             [&] { scheme_tree_to_block (parsed_tree); });
 }

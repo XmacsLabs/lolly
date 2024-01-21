@@ -3,8 +3,6 @@
 #include "doctest/doctest.h"
 #include "lolly_doctests.hpp"
 #include "sys_utils.hpp"
-#define ANKERL_NANOBENCH_IMPLEMENT
-#include <nanobench.h>
 
 int
 main (int argc, char** argv) {
