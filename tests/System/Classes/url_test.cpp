@@ -67,6 +67,12 @@ TEST_CASE ("protocol of url") {
 #endif
   string_eq (get_root (none_url), "default");
   string_eq (get_root (file_root | texmacs_org), "");
+#if defined(OS_MACOS) || defined(OS_LINUX) || defined(OS_WASM)
+  SUBCASE ("on host macos/linux/wasm") {
+    url u1= url_system ("file:///$HOME/.bashrc");
+    string_eq (get_root (u1), "file");
+  }
+#endif
 }
 
 TEST_CASE ("url with env") {
@@ -165,9 +171,11 @@ TEST_CASE ("suffix/basename") {
 TEST_CASE ("as_string") {
   set_env ("TEST_PWD", as_string (url_pwd ()));
   url file_env_lua= url_system ("file:///$TEST_PWD/xmake.lua");
-  string_eq (as_string (file_env_lua), as_string (url_pwd () * "xmake.lua"));
+  string_eq (as_string (file_env_lua),
+             "file://" * as_string (url_pwd () * "xmake.lua"));
   url local_env_lua= url_system ("local:$TEST_PWD/xmake.lua");
-  string_eq (as_string (local_env_lua), as_string (url_pwd () * "xmake.lua"));
+  string_eq (as_string (local_env_lua),
+             "file://" * as_string (url_pwd () * "xmake.lua"));
 
   url dirs= url ("Data") | url ("Kernel") | url ("Plugins");
   string_eq (as_string (dirs), string ("Data") * URL_SEPARATOR * "Kernel" *

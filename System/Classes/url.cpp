@@ -567,6 +567,9 @@ operator* (url u1, url u2) {
       if (is_root (u2, "blank") || (is_concat (u2) && is_root (u2[1], "blank")))
         return reroot (u2, u1[1][1]->t->label);
     }
+    if (is_root (u1) && is_rooted (u1, "file")) {
+      return u1 * u2[2];
+    }
     return u2;
   }
   if (is_here (u1) || (u1->t == "")) return u2;
