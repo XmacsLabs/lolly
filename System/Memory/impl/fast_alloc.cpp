@@ -15,6 +15,7 @@
  ******************************************************************************/
 
 #include "fast_alloc.hpp"
+#include <cstring>
 
 /******************************************************************************
  * Globals
@@ -112,6 +113,26 @@ fast_free (void* ptr, size_t sz) {
     large_uses-= sz;
     free (ptr);
     if (MEM_DEBUG >= 3) cout << "Memory used: " << mem_used () << " bytes\n";
+  }
+}
+
+void*
+fast_realloc (void* ptr, size_t old_size, size_t new_size) {
+  size_t old_size_plus_pointer= (old_size + WORD_LENGTH_INC) & WORD_MASK;
+  size_t new_size_plus_pointer= (new_size + WORD_LENGTH_INC) & WORD_MASK;
+  if (old_size_plus_pointer >= MAX_FAST && new_size_plus_pointer >= MAX_FAST) {
+    if (MEM_DEBUG >= 3)
+      cout << "Big realloc from " << old_size << " to " << new_size
+           << " bytes\n";
+    large_uses+= new_size - old_size;
+    if (MEM_DEBUG >= 3) cout << "Memory used: " << mem_used () << " bytes\n";
+    return realloc (ptr, new_size);
+  }
+  else {
+    void* newptr= fast_alloc (new_size);
+    memcpy (newptr, ptr, (old_size < new_size ? old_size : new_size));
+    fast_free (ptr, old_size);
+    return newptr;
   }
 }
 

@@ -27,6 +27,7 @@
 
 extern void* fast_alloc (size_t s);
 extern void  fast_free (void* ptr, size_t s);
+extern void* fast_realloc (void* ptr, size_t old_size, size_t new_size);
 extern void* fast_new (size_t s);
 extern void  fast_delete (void* ptr);
 
@@ -413,6 +414,21 @@ tm_new_array (int n) {
   for (int i= 0; i < n; i++, ctr++)
     (void) new ((void*) ctr) C ();
   return (C*) ptr;
+}
+template <typename C>
+inline C*
+tm_resize_array (int new_num, C* Ptr) {
+  void* old_arr    = (void*) Ptr;
+  old_arr          = (void*) (((char*) old_arr) - WORD_LENGTH);
+  int   old_num    = *((int*) old_arr);
+  void* new_arr    = fast_realloc (old_arr, old_num * sizeof (C) + WORD_LENGTH,
+                                   new_num * sizeof (C) + WORD_LENGTH);
+  *((int*) new_arr)= new_num;
+  new_arr          = (void*) (((char*) new_arr) + WORD_LENGTH);
+  C* ctr           = (C*) new_arr + old_num;
+  for (int i= old_num; i < new_num; i++, ctr++)
+    (void) new ((void*) ctr) C ();
+  return (C*) new_arr;
 }
 
 template <typename C>
