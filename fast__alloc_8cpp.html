@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.17</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.18</span>
    </div>
   </td>
  </tr>
@@ -84,6 +84,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="fast__alloc_8hpp_source.html">fast_alloc.hpp</a>&quot;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for fast_alloc.cpp:</div>
 <div class="dyncontent">
@@ -94,45 +95,49 @@ Include dependency graph for fast_alloc.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8fea8792e2ea00b700efa7b627e40695" id="r_a8fea8792e2ea00b700efa7b627e40695"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="classarray.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a>(i)&#160;&#160;&#160;<a class="el" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a>[i]</td></tr>
+<tr class="memitem:a8fea8792e2ea00b700efa7b627e40695" id="r_a8fea8792e2ea00b700efa7b627e40695"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a>(i)&#160;&#160;&#160;<a class="el" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a>[i]</td></tr>
 <tr class="separator:a8fea8792e2ea00b700efa7b627e40695"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bcc8ae5e5cc2101c8d6e5bb24a624d0" id="r_a5bcc8ae5e5cc2101c8d6e5bb24a624d0"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="classarray.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a>(<a class="el" href="classarray.html">ptr</a>)&#160;&#160;&#160;(*((<a class="el" href="classarray.html">void</a>**) <a class="el" href="classarray.html">ptr</a>))</td></tr>
+<tr class="memitem:a5bcc8ae5e5cc2101c8d6e5bb24a624d0" id="r_a5bcc8ae5e5cc2101c8d6e5bb24a624d0"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a>(<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)&#160;&#160;&#160;(*((<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a>**) <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>))</td></tr>
 <tr class="separator:a5bcc8ae5e5cc2101c8d6e5bb24a624d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1135155f0cd997b56d08a78c12c505d6" id="r_a1135155f0cd997b56d08a78c12c505d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="el" href="classarray.html">void</a> *<a class="el" href="classarray.html">ptr</a>)</td></tr>
+<tr class="memitem:a1135155f0cd997b56d08a78c12c505d6" id="r_a1135155f0cd997b56d08a78c12c505d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)</td></tr>
 <tr class="separator:a1135155f0cd997b56d08a78c12c505d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a20f5042b481bc1db204717407a7c22" id="r_a7a20f5042b481bc1db204717407a7c22"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> ()</td></tr>
 <tr class="separator:a7a20f5042b481bc1db204717407a7c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad279aae3c5ebab1b0555ee8736c17ba5" id="r_ad279aae3c5ebab1b0555ee8736c17ba5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (<a class="el" href="classarray.html">size_t</a> sz)</td></tr>
+<tr class="memitem:ad279aae3c5ebab1b0555ee8736c17ba5" id="r_ad279aae3c5ebab1b0555ee8736c17ba5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> sz)</td></tr>
 <tr class="separator:ad279aae3c5ebab1b0555ee8736c17ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af223977c34c531b6630f6f5a721397b7" id="r_af223977c34c531b6630f6f5a721397b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a> (<a class="el" href="classarray.html">size_t</a> sz)</td></tr>
+<tr class="memitem:af223977c34c531b6630f6f5a721397b7" id="r_af223977c34c531b6630f6f5a721397b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> sz)</td></tr>
 <tr class="separator:af223977c34c531b6630f6f5a721397b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b0727406a35e692d84b23542694cf41" id="r_a9b0727406a35e692d84b23542694cf41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b0727406a35e692d84b23542694cf41">fast_alloc</a> (<a class="el" href="classarray.html">size_t</a> sz)</td></tr>
+<tr class="memitem:a9b0727406a35e692d84b23542694cf41" id="r_a9b0727406a35e692d84b23542694cf41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b0727406a35e692d84b23542694cf41">fast_alloc</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> sz)</td></tr>
 <tr class="separator:a9b0727406a35e692d84b23542694cf41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f0da830980b741e5d30452b85c3336b" id="r_a2f0da830980b741e5d30452b85c3336b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f0da830980b741e5d30452b85c3336b">fast_free</a> (<a class="el" href="classarray.html">void</a> *<a class="el" href="classarray.html">ptr</a>, <a class="el" href="classarray.html">size_t</a> sz)</td></tr>
+<tr class="memitem:a2f0da830980b741e5d30452b85c3336b" id="r_a2f0da830980b741e5d30452b85c3336b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f0da830980b741e5d30452b85c3336b">fast_free</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>, <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> sz)</td></tr>
 <tr class="separator:a2f0da830980b741e5d30452b85c3336b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89a41290067cc8bb0c8c59b6320e0551" id="r_a89a41290067cc8bb0c8c59b6320e0551"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89a41290067cc8bb0c8c59b6320e0551">fast_new</a> (<a class="el" href="classarray.html">size_t</a> s)</td></tr>
+<tr class="memitem:a02232061221ab1539b18d6e669b20dd5" id="r_a02232061221ab1539b18d6e669b20dd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02232061221ab1539b18d6e669b20dd5">fast_realloc</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>, <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size</a>, <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size</a>)</td></tr>
+<tr class="separator:a02232061221ab1539b18d6e669b20dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a41290067cc8bb0c8c59b6320e0551" id="r_a89a41290067cc8bb0c8c59b6320e0551"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89a41290067cc8bb0c8c59b6320e0551">fast_new</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> s)</td></tr>
 <tr class="separator:a89a41290067cc8bb0c8c59b6320e0551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2972888e3e766c07c1842fd506818686" id="r_a2972888e3e766c07c1842fd506818686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2972888e3e766c07c1842fd506818686">fast_delete</a> (<a class="el" href="classarray.html">void</a> *<a class="el" href="classarray.html">ptr</a>)</td></tr>
+<tr class="memitem:a2972888e3e766c07c1842fd506818686" id="r_a2972888e3e766c07c1842fd506818686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2972888e3e766c07c1842fd506818686">fast_delete</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)</td></tr>
 <tr class="separator:a2972888e3e766c07c1842fd506818686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a139953b5a90b802016d77ab4cb5c91" id="r_a7a139953b5a90b802016d77ab4cb5c91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a139953b5a90b802016d77ab4cb5c91">fast_alloc_mw</a> (<a class="el" href="classarray.html">size_t</a> s)</td></tr>
+<tr class="memitem:a7a139953b5a90b802016d77ab4cb5c91" id="r_a7a139953b5a90b802016d77ab4cb5c91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a139953b5a90b802016d77ab4cb5c91">fast_alloc_mw</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> s)</td></tr>
 <tr class="separator:a7a139953b5a90b802016d77ab4cb5c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5154ab52e1b65cf0b1e67fdb43222d3d" id="r_a5154ab52e1b65cf0b1e67fdb43222d3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5154ab52e1b65cf0b1e67fdb43222d3d">fast_free_mw</a> (<a class="el" href="classarray.html">void</a> *<a class="el" href="classarray.html">ptr</a>, <a class="el" href="classarray.html">size_t</a> s)</td></tr>
+<tr class="memitem:a5154ab52e1b65cf0b1e67fdb43222d3d" id="r_a5154ab52e1b65cf0b1e67fdb43222d3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5154ab52e1b65cf0b1e67fdb43222d3d">fast_free_mw</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>, <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> s)</td></tr>
 <tr class="separator:a5154ab52e1b65cf0b1e67fdb43222d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4059a686e41235c933c74b67b19eb8d" id="r_ad4059a686e41235c933c74b67b19eb8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4059a686e41235c933c74b67b19eb8d">compute_free</a> (<a class="el" href="classarray.html">void</a> *<a class="el" href="classarray.html">ptr</a>)</td></tr>
+<tr class="memitem:ad4059a686e41235c933c74b67b19eb8d" id="r_ad4059a686e41235c933c74b67b19eb8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4059a686e41235c933c74b67b19eb8d">compute_free</a> (<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)</td></tr>
 <tr class="separator:ad4059a686e41235c933c74b67b19eb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fbd1f1e6ecaf3d95792c9c6a55766d4" id="r_a1fbd1f1e6ecaf3d95792c9c6a55766d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fbd1f1e6ecaf3d95792c9c6a55766d4">mem_info</a> ()</td></tr>
+<tr class="memitem:a1fbd1f1e6ecaf3d95792c9c6a55766d4" id="r_a1fbd1f1e6ecaf3d95792c9c6a55766d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fbd1f1e6ecaf3d95792c9c6a55766d4">mem_info</a> ()</td></tr>
 <tr class="separator:a1fbd1f1e6ecaf3d95792c9c6a55766d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce51c33e96ef646614c4c93f271e316" id="r_a9ce51c33e96ef646614c4c93f271e316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ce51c33e96ef646614c4c93f271e316">mem_init</a> ()</td></tr>
+<tr class="separator:a9ce51c33e96ef646614c4c93f271e316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2ff81d1e504ca87346cd76e1f253fbab" id="r_a2ff81d1e504ca87346cd76e1f253fbab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a> [<a class="el" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>]</td></tr>
+<tr class="memitem:a2ff81d1e504ca87346cd76e1f253fbab" id="r_a2ff81d1e504ca87346cd76e1f253fbab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a> [<a class="el" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>]</td></tr>
 <tr class="separator:a2ff81d1e504ca87346cd76e1f253fbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4afe2977ec71286ee13928f27045835f" id="r_a4afe2977ec71286ee13928f27045835f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> = <a class="el" href="classarray.html">NULL</a></td></tr>
+<tr class="memitem:a4afe2977ec71286ee13928f27045835f" id="r_a4afe2977ec71286ee13928f27045835f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> = <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">NULL</a></td></tr>
 <tr class="separator:a4afe2977ec71286ee13928f27045835f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a684234b373f8fd268c4bf1c57a2c41ab" id="r_a684234b373f8fd268c4bf1c57a2c41ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a> = 0</td></tr>
+<tr class="memitem:a684234b373f8fd268c4bf1c57a2c41ab" id="r_a684234b373f8fd268c4bf1c57a2c41ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a> = 0</td></tr>
 <tr class="separator:a684234b373f8fd268c4bf1c57a2c41ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a115235fc25fdf1c03d856bd072b6cead" id="r_a115235fc25fdf1c03d856bd072b6cead"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a115235fc25fdf1c03d856bd072b6cead">allocated</a> = 0</td></tr>
 <tr class="separator:a115235fc25fdf1c03d856bd072b6cead"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,7 +156,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#<a class="el" href="classarray.html">define</a> alloc_ptr</td>
+          <td class="memname">#<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">define</a> alloc_ptr</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname">i</span></td><td>)</td>
           <td>&#160;&#160;&#160;<a class="el" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a>[i]</td>
@@ -159,7 +164,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00039">39</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00040">40</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>
@@ -170,15 +175,15 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#<a class="el" href="classarray.html">define</a> ind</td>
+          <td class="memname">#<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">define</a> ind</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><a class="el" href="classarray.html">ptr</a></span></td><td>)</td>
-          <td>&#160;&#160;&#160;(*((<a class="el" href="classarray.html">void</a>**) <a class="el" href="classarray.html">ptr</a>))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a></span></td><td>)</td>
+          <td>&#160;&#160;&#160;(*((<a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a>**) <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00040">40</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00041">41</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>
@@ -192,7 +197,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">bool break_stub </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -215,23 +220,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00245">245</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>            {</div>
-<div class="line"><span class="lineno">  246</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classarray.html">free_bytes</a>= <a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>;</div>
-<div class="line"><span class="lineno">  247</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classarray.html">chunks_use</a>= <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a> * <a class="code hl_variable" href="#a64481d845d339802738c7cc984ac576b">fast_chunks</a>;</div>
-<div class="line"><span class="lineno">  248</span>  <span class="keywordtype">int</span> i;</div>
-<div class="line"><span class="lineno">  249</span>  <span class="keywordflow">for</span> (i= <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>; i &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>; i+= <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>)</div>
-<div class="line"><span class="lineno">  250</span>    <a class="code hl_class" href="classarray.html">free_bytes</a>+= i * <a class="code hl_function" href="#ad4059a686e41235c933c74b67b19eb8d">compute_free</a> (<a class="code hl_variable" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a> + i);</div>
-<div class="line"><span class="lineno">  251</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classarray.html">small_uses</a>= <a class="code hl_class" href="classarray.html">chunks_use</a> - <a class="code hl_class" href="classarray.html">free_bytes</a>;</div>
-<div class="line"><span class="lineno">  252</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">small_uses</a> + <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>;</div>
-<div class="line"><span class="lineno">  253</span>}</div>
-<div class="ttc" id="aclassarray_html"><div class="ttname"><a href="classarray.html">array</a></div><div class="ttdoc">A template class representing an array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00095">array.hpp:95</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_a2ff81d1e504ca87346cd76e1f253fbab"><div class="ttname"><a href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a></div><div class="ttdeci">void * alloc_table[MAX_FAST]</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00023">fast_alloc.cpp:23</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_a322ea7f0081bb9a08ef28cb08f94e78d"><div class="ttname"><a href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a></div><div class="ttdeci">int large_uses</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00032">fast_alloc.cpp:32</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_a64481d845d339802738c7cc984ac576b"><div class="ttname"><a href="#a64481d845d339802738c7cc984ac576b">fast_chunks</a></div><div class="ttdeci">int fast_chunks</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00031">fast_alloc.cpp:31</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_a684234b373f8fd268c4bf1c57a2c41ab"><div class="ttname"><a href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a></div><div class="ttdeci">size_t alloc_remains</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00029">fast_alloc.cpp:29</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_ad4059a686e41235c933c74b67b19eb8d"><div class="ttname"><a href="#ad4059a686e41235c933c74b67b19eb8d">compute_free</a></div><div class="ttdeci">int compute_free(void *ptr)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00235">fast_alloc.cpp:235</a></div></div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00266">266</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  266</span>            {</div>
+<div class="line"><span class="lineno">  267</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free_bytes</a>= <a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>;</div>
+<div class="line"><span class="lineno">  268</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">chunks_use</a>= <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a> * <a class="code hl_variable" href="#a64481d845d339802738c7cc984ac576b">fast_chunks</a>;</div>
+<div class="line"><span class="lineno">  269</span>  <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">  270</span>  <span class="keywordflow">for</span> (i= <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>; i &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>; i+= <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>)</div>
+<div class="line"><span class="lineno">  271</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free_bytes</a>+= i * <a class="code hl_function" href="#ad4059a686e41235c933c74b67b19eb8d">compute_free</a> (<a class="code hl_variable" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a> + i);</div>
+<div class="line"><span class="lineno">  272</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">small_uses</a>= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">chunks_use</a> - <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free_bytes</a>;</div>
+<div class="line"><span class="lineno">  273</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">small_uses</a> + <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>;</div>
+<div class="line"><span class="lineno">  274</span>}</div>
+<div class="ttc" id="afast__alloc_8cpp_html_a2ff81d1e504ca87346cd76e1f253fbab"><div class="ttname"><a href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a></div><div class="ttdeci">void * alloc_table[MAX_FAST]</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00024">fast_alloc.cpp:24</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_a322ea7f0081bb9a08ef28cb08f94e78d"><div class="ttname"><a href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a></div><div class="ttdeci">int large_uses</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00033">fast_alloc.cpp:33</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_a64481d845d339802738c7cc984ac576b"><div class="ttname"><a href="#a64481d845d339802738c7cc984ac576b">fast_chunks</a></div><div class="ttdeci">int fast_chunks</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00032">fast_alloc.cpp:32</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_a684234b373f8fd268c4bf1c57a2c41ab"><div class="ttname"><a href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a></div><div class="ttdeci">size_t alloc_remains</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00030">fast_alloc.cpp:30</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_ad4059a686e41235c933c74b67b19eb8d"><div class="ttname"><a href="#ad4059a686e41235c933c74b67b19eb8d">compute_free</a></div><div class="ttdeci">int compute_free(void *ptr)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00256">fast_alloc.cpp:256</a></div></div>
 <div class="ttc" id="afast__alloc_8hpp_html_a4c8b6e3f5b517ddc1b9f9670ea0ead8f"><div class="ttname"><a href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a></div><div class="ttdeci">#define WORD_LENGTH</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00017">fast_alloc.hpp:17</a></div></div>
+<div class="ttc" id="afast__alloc_8hpp_html_a8c09c4a1ed33efc95abda66d3b5a7231"><div class="ttname"><a href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a></div><div class="ttdeci">C * tm_new()</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00060">fast_alloc.hpp:60</a></div></div>
 <div class="ttc" id="afast__alloc_8hpp_html_abb11cb8fc3beaa4da5c9c2be358eb7c1"><div class="ttname"><a href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a></div><div class="ttdeci">#define MAX_FAST</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00021">fast_alloc.hpp:21</a></div></div>
 <div class="ttc" id="afast__alloc_8hpp_html_ad51ded0bbd705f02f73fc60c0b721ced"><div class="ttname"><a href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a></div><div class="ttdeci">#define BLOCK_SIZE</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00022">fast_alloc.hpp:22</a></div></div>
 </div><!-- fragment -->
@@ -244,23 +249,23 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> * safe_malloc </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> * safe_malloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>sz</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>sz</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00046">46</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                        {</div>
-<div class="line"><span class="lineno">   47</span>  <span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_class" href="classarray.html">malloc</a> (sz);</div>
-<div class="line"><span class="lineno">   48</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classarray.html">ptr</a> == <a class="code hl_class" href="classarray.html">NULL</a>) {</div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_variable" href="tm__ostream_8cpp.html#a046e54865aa998d93de1c39c09d3da21">cerr</a> &lt;&lt; <span class="stringliteral">&quot;Fatal error: out of memory\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   50</span>    <a class="code hl_class" href="classarray.html">abort</a> ();</div>
-<div class="line"><span class="lineno">   51</span>  }</div>
-<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">   53</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00047">47</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                        {</div>
+<div class="line"><span class="lineno">   48</span>  <span class="keywordtype">void</span>* <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">malloc</a> (sz);</div>
+<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a> == <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">NULL</a>) {</div>
+<div class="line"><span class="lineno">   50</span>    <a class="code hl_variable" href="tm__ostream_8cpp.html#a046e54865aa998d93de1c39c09d3da21">cerr</a> &lt;&lt; <span class="stringliteral">&quot;Fatal error: out of memory\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">abort</a> ();</div>
+<div class="line"><span class="lineno">   52</span>  }</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">   54</span>}</div>
 <div class="ttc" id="atm__ostream_8cpp_html_a046e54865aa998d93de1c39c09d3da21"><div class="ttname"><a href="tm__ostream_8cpp.html#a046e54865aa998d93de1c39c09d3da21">cerr</a></div><div class="ttdeci">tm_ostream &amp; cerr</div><div class="ttdef"><b>Definition</b> <a href="tm__ostream_8cpp_source.html#l00335">tm_ostream.cpp:335</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -272,41 +277,41 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> * enlarge_malloc </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> * enlarge_malloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>sz</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>sz</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00056">56</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                           {</div>
-<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a> &lt; sz) {</div>
-<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">   59</span>      <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>)          = <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (<a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>);</div>
-<div class="line"><span class="lineno">   60</span>      <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (<a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>)= <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="line"><span class="lineno">   62</span>    <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>= (<span class="keywordtype">char</span>*) <a class="code hl_function" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (<a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a>);</div>
-<div class="line"><span class="lineno">   63</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
-<div class="line"><span class="lineno">   64</span>    <a class="code hl_class" href="classarray.html">alloc_mem_top</a>= <a class="code hl_class" href="classarray.html">alloc_mem_top</a> &gt;= <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> + <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a></div>
-<div class="line"><span class="lineno">   65</span>                       ? <a class="code hl_class" href="classarray.html">alloc_mem_top</a></div>
-<div class="line"><span class="lineno">   66</span>                       : (<a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> + <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a>);</div>
-<div class="line"><span class="lineno">   67</span>    <a class="code hl_class" href="classarray.html">alloc_mem_bottom</a>=</div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_class" href="classarray.html">alloc_mem_bottom</a> &gt; <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> ? <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> : <a class="code hl_class" href="classarray.html">alloc_mem_bottom</a>;</div>
-<div class="line"><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   70</span>    <a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>= <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a>;</div>
-<div class="line"><span class="lineno">   71</span>    <a class="code hl_variable" href="#a64481d845d339802738c7cc984ac576b">fast_chunks</a>++;</div>
-<div class="line"><span class="lineno">   72</span>  }</div>
-<div class="line"><span class="lineno">   73</span>  <span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>;</div>
-<div class="line"><span class="lineno">   74</span>  <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>+= sz;</div>
-<div class="line"><span class="lineno">   75</span>  <a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>-= sz;</div>
-<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">   77</span>}</div>
-<div class="ttc" id="afast__alloc_8cpp_html_a4afe2977ec71286ee13928f27045835f"><div class="ttname"><a href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a></div><div class="ttdeci">char * alloc_mem</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00024">fast_alloc.cpp:24</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_a5bcc8ae5e5cc2101c8d6e5bb24a624d0"><div class="ttname"><a href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a></div><div class="ttdeci">#define ind(ptr)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00040">fast_alloc.cpp:40</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_a8fea8792e2ea00b700efa7b627e40695"><div class="ttname"><a href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a></div><div class="ttdeci">#define alloc_ptr(i)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00039">fast_alloc.cpp:39</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_ad279aae3c5ebab1b0555ee8736c17ba5"><div class="ttname"><a href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a></div><div class="ttdeci">void * safe_malloc(size_t sz)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00046">fast_alloc.cpp:46</a></div></div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00057">57</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                           {</div>
+<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a> &lt; sz) {</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a> &gt; 0) {</div>
+<div class="line"><span class="lineno">   60</span>      <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>)          = <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (<a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>);</div>
+<div class="line"><span class="lineno">   61</span>      <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (<a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>)= <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>= (<span class="keywordtype">char</span>*) <a class="code hl_function" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (<a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a>);</div>
+<div class="line"><span class="lineno">   64</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">alloc_mem_top</a>= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">alloc_mem_top</a> &gt;= <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> + <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a></div>
+<div class="line"><span class="lineno">   66</span>                       ? <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">alloc_mem_top</a></div>
+<div class="line"><span class="lineno">   67</span>                       : (<a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> + <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a>);</div>
+<div class="line"><span class="lineno">   68</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">alloc_mem_bottom</a>=</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">alloc_mem_bottom</a> &gt; <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> ? <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a> : <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">alloc_mem_bottom</a>;</div>
+<div class="line"><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   71</span>    <a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>= <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a>;</div>
+<div class="line"><span class="lineno">   72</span>    <a class="code hl_variable" href="#a64481d845d339802738c7cc984ac576b">fast_chunks</a>++;</div>
+<div class="line"><span class="lineno">   73</span>  }</div>
+<div class="line"><span class="lineno">   74</span>  <span class="keywordtype">void</span>* <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>;</div>
+<div class="line"><span class="lineno">   75</span>  <a class="code hl_variable" href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a>+= sz;</div>
+<div class="line"><span class="lineno">   76</span>  <a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>-= sz;</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">   78</span>}</div>
+<div class="ttc" id="afast__alloc_8cpp_html_a4afe2977ec71286ee13928f27045835f"><div class="ttname"><a href="#a4afe2977ec71286ee13928f27045835f">alloc_mem</a></div><div class="ttdeci">char * alloc_mem</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00025">fast_alloc.cpp:25</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_a5bcc8ae5e5cc2101c8d6e5bb24a624d0"><div class="ttname"><a href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a></div><div class="ttdeci">#define ind(ptr)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00041">fast_alloc.cpp:41</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_a8fea8792e2ea00b700efa7b627e40695"><div class="ttname"><a href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a></div><div class="ttdeci">#define alloc_ptr(i)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00040">fast_alloc.cpp:40</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_ad279aae3c5ebab1b0555ee8736c17ba5"><div class="ttname"><a href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a></div><div class="ttdeci">void * safe_malloc(size_t sz)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00047">fast_alloc.cpp:47</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -317,37 +322,37 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> * fast_alloc </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> * fast_alloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>sz</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>sz</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00080">80</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                       {</div>
-<div class="line"><span class="lineno">   81</span>  sz= (sz + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
-<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">if</span> (sz &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
-<div class="line"><span class="lineno">   83</span>    <span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz);</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classarray.html">ptr</a> == <a class="code hl_class" href="classarray.html">NULL</a>) <span class="keywordflow">return</span> <a class="code hl_function" href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a> (sz);</div>
-<div class="line"><span class="lineno">   85</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz)= <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">   86</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
-<div class="line"><span class="lineno">   87</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">   90</span>  }</div>
-<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big alloc of &quot;</span> &lt;&lt; sz &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   94</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>+= sz;</div>
-<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (sz);</div>
-<div class="line"><span class="lineno">   96</span>  }</div>
-<div class="line"><span class="lineno">   97</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00081">81</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                       {</div>
+<div class="line"><span class="lineno">   82</span>  sz= (sz + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
+<div class="line"><span class="lineno">   83</span>  <span class="keywordflow">if</span> (sz &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz);</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a> == <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">NULL</a>) <span class="keywordflow">return</span> <a class="code hl_function" href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a> (sz);</div>
+<div class="line"><span class="lineno">   86</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz)= <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">   87</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
+<div class="line"><span class="lineno">   88</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">   91</span>  }</div>
+<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big alloc of &quot;</span> &lt;&lt; sz &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>+= sz;</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (sz);</div>
+<div class="line"><span class="lineno">   97</span>  }</div>
+<div class="line"><span class="lineno">   98</span>}</div>
 <div class="ttc" id="afast__alloc_8cpp_html_a1135155f0cd997b56d08a78c12c505d6"><div class="ttname"><a href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a></div><div class="ttdeci">bool break_stub(void *ptr)</div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_a7a20f5042b481bc1db204717407a7c22"><div class="ttname"><a href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a></div><div class="ttdeci">int mem_used()</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00245">fast_alloc.cpp:245</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_ab80c807437477a2a7297dbff2c7ceb54"><div class="ttname"><a href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a></div><div class="ttdeci">int MEM_DEBUG</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00033">fast_alloc.cpp:33</a></div></div>
-<div class="ttc" id="afast__alloc_8cpp_html_af223977c34c531b6630f6f5a721397b7"><div class="ttname"><a href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a></div><div class="ttdeci">void * enlarge_malloc(size_t sz)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00056">fast_alloc.cpp:56</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_a7a20f5042b481bc1db204717407a7c22"><div class="ttname"><a href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a></div><div class="ttdeci">int mem_used()</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00266">fast_alloc.cpp:266</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_ab80c807437477a2a7297dbff2c7ceb54"><div class="ttname"><a href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a></div><div class="ttdeci">int MEM_DEBUG</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00034">fast_alloc.cpp:34</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_af223977c34c531b6630f6f5a721397b7"><div class="ttname"><a href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a></div><div class="ttdeci">void * enlarge_malloc(size_t sz)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00057">fast_alloc.cpp:57</a></div></div>
 <div class="ttc" id="afast__alloc_8hpp_html_aab26bc04ca9681d33df75f8d86388781"><div class="ttname"><a href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a></div><div class="ttdeci">#define WORD_LENGTH_INC</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00018">fast_alloc.hpp:18</a></div></div>
 <div class="ttc" id="afast__alloc_8hpp_html_abcb67eb1473b6632cf4c8a8a653f35be"><div class="ttname"><a href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a></div><div class="ttdeci">#define WORD_MASK</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00019">fast_alloc.hpp:19</a></div></div>
 <div class="ttc" id="atm__ostream_8cpp_html_a48e5827e9cd7a3f85b541ffc24937339"><div class="ttname"><a href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a></div><div class="ttdeci">tm_ostream &amp; cout</div><div class="ttdef"><b>Definition</b> <a href="tm__ostream_8cpp_source.html#l00334">tm_ostream.cpp:334</a></div></div>
@@ -361,36 +366,84 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> fast_free </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> fast_free </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em>, </span></td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classarray.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00100">100</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                 {</div>
-<div class="line"><span class="lineno">  101</span>  sz= (sz + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
-<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">if</span> (sz &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
-<div class="line"><span class="lineno">  103</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
-<div class="line"><span class="lineno">  104</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  105</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz));</div>
-<div class="line"><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  107</span>    <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_class" href="classarray.html">ptr</a>)     = <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz);</div>
-<div class="line"><span class="lineno">  108</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz)= <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">  109</span>  }</div>
-<div class="line"><span class="lineno">  110</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big free of &quot;</span> &lt;&lt; sz &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  112</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>-= sz;</div>
-<div class="line"><span class="lineno">  113</span>    <a class="code hl_class" href="classarray.html">free</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  115</span>  }</div>
-<div class="line"><span class="lineno">  116</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00101">101</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>                                 {</div>
+<div class="line"><span class="lineno">  102</span>  sz= (sz + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">if</span> (sz &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
+<div class="line"><span class="lineno">  104</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz));</div>
+<div class="line"><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  108</span>    <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)     = <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz);</div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (sz)= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">  110</span>  }</div>
+<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big free of &quot;</span> &lt;&lt; sz &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>-= sz;</div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  116</span>  }</div>
+<div class="line"><span class="lineno">  117</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a02232061221ab1539b18d6e669b20dd5" name="a02232061221ab1539b18d6e669b20dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02232061221ab1539b18d6e669b20dd5">&#9670;&#160;</a></span>fast_realloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> * fast_realloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>old_size</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>new_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00120">120</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                           {</div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size_plus_pointer</a>= (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size</a> + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
+<div class="line"><span class="lineno">  122</span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size_plus_pointer</a>= (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size</a> + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
+<div class="line"><span class="lineno">  123</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size_plus_pointer</a> &gt;= <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a> &amp;&amp; <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size_plus_pointer</a> &gt;= <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3)</div>
+<div class="line"><span class="lineno">  125</span>      <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big realloc from &quot;</span> &lt;&lt; <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size</a> &lt;&lt; <span class="stringliteral">&quot; to &quot;</span> &lt;&lt; <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size</a></div>
+<div class="line"><span class="lineno">  126</span>           &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  127</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>+= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size</a> - <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size</a>;</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">realloc</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>, <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size</a>);</div>
+<div class="line"><span class="lineno">  130</span>  }</div>
+<div class="line"><span class="lineno">  131</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">newptr</a>= <a class="code hl_function" href="#a9b0727406a35e692d84b23542694cf41">fast_alloc</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size</a>);</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">memcpy</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">newptr</a>, <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>, (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size</a> &lt; <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size</a> ? <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size</a> : <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">new_size</a>));</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_function" href="#a2f0da830980b741e5d30452b85c3336b">fast_free</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>, <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">old_size</a>);</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">newptr</a>;</div>
+<div class="line"><span class="lineno">  136</span>  }</div>
+<div class="line"><span class="lineno">  137</span>}</div>
+<div class="ttc" id="afast__alloc_8cpp_html_a2f0da830980b741e5d30452b85c3336b"><div class="ttname"><a href="#a2f0da830980b741e5d30452b85c3336b">fast_free</a></div><div class="ttdeci">void fast_free(void *ptr, size_t sz)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00101">fast_alloc.cpp:101</a></div></div>
+<div class="ttc" id="afast__alloc_8cpp_html_a9b0727406a35e692d84b23542694cf41"><div class="ttname"><a href="#a9b0727406a35e692d84b23542694cf41">fast_alloc</a></div><div class="ttdeci">void * fast_alloc(size_t sz)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8cpp_source.html#l00081">fast_alloc.cpp:81</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -401,52 +454,52 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> * fast_new </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> * fast_new </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00119">119</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                    {</div>
-<div class="line"><span class="lineno">  120</span>  <span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">  121</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
-<div class="line"><span class="lineno">  122</span>  s= (s + (4 * <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
-<div class="line"><span class="lineno">  123</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  124</span>  s               = (s + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a> + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
-<div class="line"><span class="lineno">  125</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  126</span>  <span class="keywordflow">if</span> (s &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
-<div class="line"><span class="lineno">  127</span>    <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s);</div>
-<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classarray.html">ptr</a> == <a class="code hl_class" href="classarray.html">NULL</a>) <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_function" href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a> (s);</div>
-<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">else</span> <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s)= <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  130</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
-<div class="line"><span class="lineno">  131</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  132</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  133</span>  }</div>
-<div class="line"><span class="lineno">  134</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big alloc of &quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  137</span>    <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_function" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (s);</div>
-<div class="line"><span class="lineno">  138</span>    <span class="comment">// if ((((int) ptr) &amp; 15) != 0) cout &lt;&lt; &quot;Unaligned new &quot; &lt;&lt; ptr &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">  139</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>+= s;</div>
-<div class="line"><span class="lineno">  140</span>  }</div>
-<div class="line"><span class="lineno">  141</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
-<div class="line"><span class="lineno">  142</span>  <span class="keywordtype">char</span>* <a class="code hl_class" href="classarray.html">mem</a>                        = (<span class="keywordtype">char</span>*) <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">  143</span>  *((<span class="keywordtype">size_t</span>*) <a class="code hl_class" href="classarray.html">ptr</a>)                 = s;</div>
-<div class="line"><span class="lineno">  144</span>  <a class="code hl_class" href="classarray.html">ptr</a>                              = ((<span class="keywordtype">char</span>*) <a class="code hl_class" href="classarray.html">ptr</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>;</div>
-<div class="line"><span class="lineno">  145</span>  *((<span class="keywordtype">size_t</span>*) <a class="code hl_class" href="classarray.html">ptr</a>)                 = s;</div>
-<div class="line"><span class="lineno">  146</span>  <a class="code hl_class" href="classarray.html">ptr</a>                              = ((<span class="keywordtype">char</span>*) <a class="code hl_class" href="classarray.html">ptr</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>;</div>
-<div class="line"><span class="lineno">  147</span>  *((<span class="keywordtype">size_t</span>*) <a class="code hl_class" href="classarray.html">ptr</a>)                 = ~s;</div>
-<div class="line"><span class="lineno">  148</span>  <a class="code hl_class" href="classarray.html">ptr</a>                              = ((<span class="keywordtype">char</span>*) <a class="code hl_class" href="classarray.html">ptr</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>;</div>
-<div class="line"><span class="lineno">  149</span>  *((<span class="keywordtype">int</span>*) (<a class="code hl_class" href="classarray.html">mem</a> + s - <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>))= 0x55aa;</div>
-<div class="line"><span class="lineno">  150</span>  <span class="keywordflow">return</span> (<span class="keywordtype">void</span>*) <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">  151</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  152</span>  *((<span class="keywordtype">size_t</span>*) <a class="code hl_class" href="classarray.html">ptr</a>)= s;</div>
-<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">return</span> (<span class="keywordtype">void</span>*) (((<span class="keywordtype">char</span>*) <a class="code hl_class" href="classarray.html">ptr</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>);</div>
-<div class="line"><span class="lineno">  154</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  155</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00140">140</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>                    {</div>
+<div class="line"><span class="lineno">  141</span>  <span class="keywordtype">void</span>* <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">  142</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
+<div class="line"><span class="lineno">  143</span>  s= (s + (4 * <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
+<div class="line"><span class="lineno">  144</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  145</span>  s               = (s + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a> + <a class="code hl_define" href="fast__alloc_8hpp.html#aab26bc04ca9681d33df75f8d86388781">WORD_LENGTH_INC</a>) &amp; <a class="code hl_define" href="fast__alloc_8hpp.html#abcb67eb1473b6632cf4c8a8a653f35be">WORD_MASK</a>;</div>
+<div class="line"><span class="lineno">  146</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">if</span> (s &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
+<div class="line"><span class="lineno">  148</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s);</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a> == <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">NULL</a>) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_function" href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a> (s);</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">else</span> <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s)= <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  151</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
+<div class="line"><span class="lineno">  152</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  153</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  154</span>  }</div>
+<div class="line"><span class="lineno">  155</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big alloc of &quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  158</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_function" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (s);</div>
+<div class="line"><span class="lineno">  159</span>    <span class="comment">// if ((((int) ptr) &amp; 15) != 0) cout &lt;&lt; &quot;Unaligned new &quot; &lt;&lt; ptr &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">  160</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>+= s;</div>
+<div class="line"><span class="lineno">  161</span>  }</div>
+<div class="line"><span class="lineno">  162</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
+<div class="line"><span class="lineno">  163</span>  <span class="keywordtype">char</span>* <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">mem</a>                        = (<span class="keywordtype">char</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">  164</span>  *((<span class="keywordtype">size_t</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)                 = s;</div>
+<div class="line"><span class="lineno">  165</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>                              = ((<span class="keywordtype">char</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>;</div>
+<div class="line"><span class="lineno">  166</span>  *((<span class="keywordtype">size_t</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)                 = s;</div>
+<div class="line"><span class="lineno">  167</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>                              = ((<span class="keywordtype">char</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>;</div>
+<div class="line"><span class="lineno">  168</span>  *((<span class="keywordtype">size_t</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)                 = <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">~s</a>;</div>
+<div class="line"><span class="lineno">  169</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>                              = ((<span class="keywordtype">char</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>;</div>
+<div class="line"><span class="lineno">  170</span>  *((<span class="keywordtype">int</span>*) (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">mem</a> + s - <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>))= 0x55aa;</div>
+<div class="line"><span class="lineno">  171</span>  <span class="keywordflow">return</span> (<span class="keywordtype">void</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">  172</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  173</span>  *((<span class="keywordtype">size_t</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)= s;</div>
+<div class="line"><span class="lineno">  174</span>  <span class="keywordflow">return</span> (<span class="keywordtype">void</span>*) (((<span class="keywordtype">char</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>) + <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>);</div>
+<div class="line"><span class="lineno">  175</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  176</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -457,39 +510,39 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> fast_delete </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> fast_delete </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00181">181</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                        {</div>
-<div class="line"><span class="lineno">  182</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
-<div class="line"><span class="lineno">  183</span>  <span class="keywordtype">size_t</span> s;</div>
-<div class="line"><span class="lineno">  184</span>  <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_function" href="fast__alloc_8hpp.html#ad6d869b80c110e621ba9c128b61c6317">alloc_check</a> (<span class="stringliteral">&quot;fast_delete&quot;</span>, <a class="code hl_class" href="classarray.html">ptr</a>, &amp;s);</div>
-<div class="line"><span class="lineno">  185</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  186</span>  <a class="code hl_class" href="classarray.html">ptr</a>     = (<span class="keywordtype">void</span>*) (((<span class="keywordtype">char</span>*) <a class="code hl_class" href="classarray.html">ptr</a>) - <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>);</div>
-<div class="line"><span class="lineno">  187</span>  <span class="keywordtype">size_t</span> s= *((<span class="keywordtype">size_t</span>*) <a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  188</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  189</span>  <span class="keywordflow">if</span> (s &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
-<div class="line"><span class="lineno">  190</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
-<div class="line"><span class="lineno">  191</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  192</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s));</div>
-<div class="line"><span class="lineno">  193</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  194</span>    <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_class" href="classarray.html">ptr</a>)    = <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s);</div>
-<div class="line"><span class="lineno">  195</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s)= <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">  196</span>  }</div>
-<div class="line"><span class="lineno">  197</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  198</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big free of &quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  199</span>    <span class="comment">// if ((((int) ptr) &amp; 15) != 0) cout &lt;&lt; &quot;Unaligned delete &quot; &lt;&lt; ptr &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">  200</span>    <a class="code hl_class" href="classarray.html">free</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  201</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>-= s;</div>
-<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  203</span>  }</div>
-<div class="line"><span class="lineno">  204</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00202">202</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>                        {</div>
+<div class="line"><span class="lineno">  203</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
+<div class="line"><span class="lineno">  204</span>  <span class="keywordtype">size_t</span> s;</div>
+<div class="line"><span class="lineno">  205</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_function" href="fast__alloc_8hpp.html#ad6d869b80c110e621ba9c128b61c6317">alloc_check</a> (<span class="stringliteral">&quot;fast_delete&quot;</span>, <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>, &amp;s);</div>
+<div class="line"><span class="lineno">  206</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  207</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>     = (<span class="keywordtype">void</span>*) (((<span class="keywordtype">char</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>) - <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>);</div>
+<div class="line"><span class="lineno">  208</span>  <span class="keywordtype">size_t</span> s= *((<span class="keywordtype">size_t</span>*) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  209</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  210</span>  <span class="keywordflow">if</span> (s &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
+<div class="line"><span class="lineno">  211</span><span class="preprocessor">#ifdef DEBUG_ON</span></div>
+<div class="line"><span class="lineno">  212</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  213</span>    <a class="code hl_function" href="#a1135155f0cd997b56d08a78c12c505d6">break_stub</a> (<a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s));</div>
+<div class="line"><span class="lineno">  214</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  215</span>    <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)    = <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s);</div>
+<div class="line"><span class="lineno">  216</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s)= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">  217</span>  }</div>
+<div class="line"><span class="lineno">  218</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  219</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Big free of &quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  220</span>    <span class="comment">// if ((((int) ptr) &amp; 15) != 0) cout &lt;&lt; &quot;Unaligned delete &quot; &lt;&lt; ptr &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><span class="lineno">  221</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  222</span>    <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>-= s;</div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab80c807437477a2a7297dbff2c7ceb54">MEM_DEBUG</a> &gt;= 3) <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Memory used: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a7a20f5042b481bc1db204717407a7c22">mem_used</a> () &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  224</span>  }</div>
+<div class="line"><span class="lineno">  225</span>}</div>
 <div class="ttc" id="afast__alloc_8hpp_html_ad6d869b80c110e621ba9c128b61c6317"><div class="ttname"><a href="fast__alloc_8hpp.html#ad6d869b80c110e621ba9c128b61c6317">alloc_check</a></div><div class="ttdeci">void * alloc_check(const char *msg, void *ptr, size_t *sp)</div></div>
 </div><!-- fragment -->
 </div>
@@ -501,24 +554,24 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> * fast_alloc_mw </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> * fast_alloc_mw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00211">211</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  211</span>                         {</div>
-<div class="line"><span class="lineno">  212</span>  <span class="keywordflow">if</span> (s &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
-<div class="line"><span class="lineno">  213</span>    <span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s);</div>
-<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classarray.html">ptr</a> == <a class="code hl_class" href="classarray.html">NULL</a>) <span class="keywordflow">return</span> <a class="code hl_function" href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a> (s);</div>
-<div class="line"><span class="lineno">  215</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s)= <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  216</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">  217</span>  }</div>
-<div class="line"><span class="lineno">  218</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_function" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (s);</div>
-<div class="line"><span class="lineno">  219</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00232">232</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>                         {</div>
+<div class="line"><span class="lineno">  233</span>  <span class="keywordflow">if</span> (s &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s);</div>
+<div class="line"><span class="lineno">  235</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a> == <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">NULL</a>) <span class="keywordflow">return</span> <a class="code hl_function" href="#af223977c34c531b6630f6f5a721397b7">enlarge_malloc</a> (s);</div>
+<div class="line"><span class="lineno">  236</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s)= <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  237</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">  238</span>  }</div>
+<div class="line"><span class="lineno">  239</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_function" href="#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (s);</div>
+<div class="line"><span class="lineno">  240</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -529,26 +582,26 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> fast_free_mw </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> fast_free_mw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em>, </span></td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classarray.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00222">222</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>                                   {</div>
-<div class="line"><span class="lineno">  223</span>  <span class="keywordflow">if</span> (s &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
-<div class="line"><span class="lineno">  224</span>    <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_class" href="classarray.html">ptr</a>)    = <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s);</div>
-<div class="line"><span class="lineno">  225</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s)= <a class="code hl_class" href="classarray.html">ptr</a>;</div>
-<div class="line"><span class="lineno">  226</span>  }</div>
-<div class="line"><span class="lineno">  227</span>  <span class="keywordflow">else</span> <a class="code hl_class" href="classarray.html">free</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  228</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00243">243</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  243</span>                                   {</div>
+<div class="line"><span class="lineno">  244</span>  <span class="keywordflow">if</span> (s &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>) {</div>
+<div class="line"><span class="lineno">  245</span>    <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>)    = <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s);</div>
+<div class="line"><span class="lineno">  246</span>    <a class="code hl_define" href="#a8fea8792e2ea00b700efa7b627e40695">alloc_ptr</a> (s)= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>;</div>
+<div class="line"><span class="lineno">  247</span>  }</div>
+<div class="line"><span class="lineno">  248</span>  <span class="keywordflow">else</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  249</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -561,21 +614,21 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int compute_free </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarray.html">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00235">235</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>                         {</div>
-<div class="line"><span class="lineno">  236</span>  <span class="keywordtype">int</span> i= -1;</div>
-<div class="line"><span class="lineno">  237</span>  <span class="keywordflow">while</span> (<a class="code hl_class" href="classarray.html">ptr</a> != <a class="code hl_class" href="classarray.html">NULL</a>) {</div>
-<div class="line"><span class="lineno">  238</span>    i++;</div>
-<div class="line"><span class="lineno">  239</span>    <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
-<div class="line"><span class="lineno">  240</span>  }</div>
-<div class="line"><span class="lineno">  241</span>  <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  242</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00256">256</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>                         {</div>
+<div class="line"><span class="lineno">  257</span>  <span class="keywordtype">int</span> i= -1;</div>
+<div class="line"><span class="lineno">  258</span>  <span class="keywordflow">while</span> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a> != <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">NULL</a>) {</div>
+<div class="line"><span class="lineno">  259</span>    i++;</div>
+<div class="line"><span class="lineno">  260</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>= <a class="code hl_define" href="#a5bcc8ae5e5cc2101c8d6e5bb24a624d0">ind</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ptr</a>);</div>
+<div class="line"><span class="lineno">  261</span>  }</div>
+<div class="line"><span class="lineno">  262</span>  <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  263</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -586,7 +639,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> mem_info </td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> mem_info </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -594,23 +647,43 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00256">256</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  256</span>            {</div>
-<div class="line"><span class="lineno">  257</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;\n---------------- memory statistics ----------------\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  258</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classarray.html">free_bytes</a>= <a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>;</div>
-<div class="line"><span class="lineno">  259</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classarray.html">chunks_use</a>= <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a> * <a class="code hl_variable" href="#a64481d845d339802738c7cc984ac576b">fast_chunks</a>;</div>
-<div class="line"><span class="lineno">  260</span>  <span class="keywordtype">int</span> i;</div>
-<div class="line"><span class="lineno">  261</span>  <span class="keywordflow">for</span> (i= <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>; i &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>; i+= <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>)</div>
-<div class="line"><span class="lineno">  262</span>    <a class="code hl_class" href="classarray.html">free_bytes</a>+= i * <a class="code hl_function" href="#ad4059a686e41235c933c74b67b19eb8d">compute_free</a> (<a class="code hl_variable" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a> + i);</div>
-<div class="line"><span class="lineno">  263</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classarray.html">small_uses</a>= <a class="code hl_class" href="classarray.html">chunks_use</a> - <a class="code hl_class" href="classarray.html">free_bytes</a>;</div>
-<div class="line"><span class="lineno">  264</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classarray.html">total_uses</a>= <a class="code hl_class" href="classarray.html">small_uses</a> + <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>;</div>
-<div class="line"><span class="lineno">  265</span>  <span class="comment">// cout &lt;&lt; &quot;Fast chunks   : &quot; &lt;&lt; chunks_use &lt;&lt; &quot; bytes\n&quot;;</span></div>
-<div class="line"><span class="lineno">  266</span>  <span class="comment">// cout &lt;&lt; &quot;Free on chunks: &quot; &lt;&lt; alloc_remains &lt;&lt; &quot; bytes\n&quot;;</span></div>
-<div class="line"><span class="lineno">  267</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;User          : &quot;</span> &lt;&lt; <a class="code hl_class" href="classarray.html">total_uses</a> &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  268</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Allocator     : &quot;</span> &lt;&lt; <a class="code hl_class" href="classarray.html">chunks_use</a> + <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a> &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  269</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Small mallocs : &quot;</span></div>
-<div class="line"><span class="lineno">  270</span>       &lt;&lt; ((100 * ((<a class="code hl_class" href="classarray.html">float</a>) <a class="code hl_class" href="classarray.html">small_uses</a>)) / ((<span class="keywordtype">float</span>) <a class="code hl_class" href="classarray.html">total_uses</a>)) &lt;&lt; <span class="stringliteral">&quot;%\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  271</span>}</div>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00277">277</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>            {</div>
+<div class="line"><span class="lineno">  278</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;\n---------------- memory statistics ----------------\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  279</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free_bytes</a>= <a class="code hl_variable" href="#a684234b373f8fd268c4bf1c57a2c41ab">alloc_remains</a>;</div>
+<div class="line"><span class="lineno">  280</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">chunks_use</a>= <a class="code hl_define" href="fast__alloc_8hpp.html#ad51ded0bbd705f02f73fc60c0b721ced">BLOCK_SIZE</a> * <a class="code hl_variable" href="#a64481d845d339802738c7cc984ac576b">fast_chunks</a>;</div>
+<div class="line"><span class="lineno">  281</span>  <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">  282</span>  <span class="keywordflow">for</span> (i= <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>; i &lt; <a class="code hl_define" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>; i+= <a class="code hl_define" href="fast__alloc_8hpp.html#a4c8b6e3f5b517ddc1b9f9670ea0ead8f">WORD_LENGTH</a>)</div>
+<div class="line"><span class="lineno">  283</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free_bytes</a>+= i * <a class="code hl_function" href="#ad4059a686e41235c933c74b67b19eb8d">compute_free</a> (<a class="code hl_variable" href="#a2ff81d1e504ca87346cd76e1f253fbab">alloc_table</a> + i);</div>
+<div class="line"><span class="lineno">  284</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">small_uses</a>= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">chunks_use</a> - <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">free_bytes</a>;</div>
+<div class="line"><span class="lineno">  285</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">total_uses</a>= <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">small_uses</a> + <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a>;</div>
+<div class="line"><span class="lineno">  286</span>  <span class="comment">// cout &lt;&lt; &quot;Fast chunks   : &quot; &lt;&lt; chunks_use &lt;&lt; &quot; bytes\n&quot;;</span></div>
+<div class="line"><span class="lineno">  287</span>  <span class="comment">// cout &lt;&lt; &quot;Free on chunks: &quot; &lt;&lt; alloc_remains &lt;&lt; &quot; bytes\n&quot;;</span></div>
+<div class="line"><span class="lineno">  288</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;User          : &quot;</span> &lt;&lt; <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">total_uses</a> &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  289</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Allocator     : &quot;</span> &lt;&lt; <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">chunks_use</a> + <a class="code hl_variable" href="#a322ea7f0081bb9a08ef28cb08f94e78d">large_uses</a> &lt;&lt; <span class="stringliteral">&quot; bytes\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  290</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;Small mallocs : &quot;</span></div>
+<div class="line"><span class="lineno">  291</span>       &lt;&lt; ((100 * ((<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">float</a>) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">small_uses</a>)) / ((<span class="keywordtype">float</span>) <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">total_uses</a>)) &lt;&lt; <span class="stringliteral">&quot;%\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  292</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9ce51c33e96ef646614c4c93f271e316" name="a9ce51c33e96ef646614c4c93f271e316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce51c33e96ef646614c4c93f271e316">&#9670;&#160;</a></span>mem_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a> mem_init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00307">307</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -622,12 +695,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a>* alloc_table[<a class="el" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>]</td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">void</a>* alloc_table[<a class="el" href="fast__alloc_8hpp.html#abb11cb8fc3beaa4da5c9c2be358eb7c1">MAX_FAST</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00023">23</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00024">24</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>
@@ -638,12 +711,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">char</a>* alloc_mem = <a class="el" href="classarray.html">NULL</a></td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">char</a>* alloc_mem = <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">NULL</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00024">24</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00025">25</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>
@@ -654,12 +727,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">size_t</a> alloc_remains = 0</td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">size_t</a> alloc_remains = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00029">29</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00030">30</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>
@@ -675,7 +748,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00030">30</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00031">31</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>
@@ -691,7 +764,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00031">31</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00032">32</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>
@@ -707,7 +780,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00032">32</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00033">33</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>
@@ -723,7 +796,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00033">33</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fast__alloc_8cpp_source.html#l00034">34</a> of file <a class="el" href="fast__alloc_8cpp_source.html">fast_alloc.cpp</a>.</p>
 
 </div>
 </div>

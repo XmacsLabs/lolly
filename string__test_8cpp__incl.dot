@@ -75,6 +75,4 @@ digraph "string_test.cpp"
   Node27 -> Node5 [id="edge42_Node000027_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node14 -> Node5 [id="edge43_Node000014_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node5 [id="edge44_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node28 [id="edge45_Node000001_Node000028",color="steelblue1",style="solid",tooltip=" "];
-  Node28 [id="Node000028",label="nanobench.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

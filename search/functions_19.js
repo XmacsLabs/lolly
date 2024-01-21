@@ -12,7 +12,7 @@ var searchData=
   ['_7ebuffered_5fostream_5frep_9',['~buffered_ostream_rep',['../classbuffered__ostream__rep.html#a6a81506d8cdc91da23039a6d7dc30542',1,'buffered_ostream_rep']]],
   ['_7ec_5fstring_5frep_10',['~c_string_rep',['../classc__string__rep.html#ac292215fe51d3268d23316dbfc70f89e',1,'c_string_rep']]],
   ['_7echannel_11',['~Channel',['../classChannel.html#a5f15ebd302464069f1a9e3f0ded14482',1,'Channel']]],
-  ['_7ecomplex_12',['~Complex',['../structComplex.html#a70e14b17c92e3da779686b98f9f3bb2d',1,'Complex']]],
+  ['_7ecomplex_12',['~Complex',['../structComplex.html#a70e14b17c92e3da779686b98f9f3bb2d',1,'Complex::~Complex()'],['../structComplex.html#a70e14b17c92e3da779686b98f9f3bb2d',1,'Complex::~Complex()']]],
   ['_7econcrete_5fstruct_13',['~concrete_struct',['../structconcrete__struct.html#a544eff63c43f268e4ac0c2ae257bab0a',1,'concrete_struct']]],
   ['_7ehashmap_5frep_14',['~hashmap_rep',['../classhashmap__rep.html#a1aa449874a7163f4009e71863f98d84b',1,'hashmap_rep']]],
   ['_7ehashset_5frep_15',['~hashset_rep',['../classhashset__rep.html#a5de8db9d83cac104f010d1a3d267b28a',1,'hashset_rep']]],

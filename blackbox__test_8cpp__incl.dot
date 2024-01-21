@@ -78,4 +78,6 @@ digraph "blackbox_test.cpp"
   Node28 [id="Node000028",label="blackbox.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$blackbox_8hpp.html",tooltip=" "];
   Node28 -> Node6 [id="edge45_Node000028_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node5 [id="edge46_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node29 [id="edge47_Node000001_Node000029",color="steelblue1",style="solid",tooltip=" "];
+  Node29 [id="Node000029",label="climits",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

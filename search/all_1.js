@@ -19,6 +19,6 @@ var searchData=
   ['18_2emd_16',['18.md',['../18_8md.html',1,'']]],
   ['19_2emd_17',['19.md',['../19_8md.html',1,'']]],
   ['1_3a_20documentation_18',['Project 1: Documentation',['../md_devel_21.html',1,'']]],
-  ['1_3a_20installing_20xmake_19',['1: Installing xmake',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md34',1,'Step 1: Installing xmake'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md42',1,'Step 1: Installing xmake']]],
-  ['1_3a_20local_20installation_20',['1: Local Installation',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md38',1,'Method 1: Local Installation'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md47',1,'Method 1: Local Installation']]]
+  ['1_3a_20installing_20xmake_19',['1: Installing xmake',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md34',1,'Step 1: Installing xmake'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md71',1,'Step 1: Installing xmake']]],
+  ['1_3a_20local_20installation_20',['1: Local Installation',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md36',1,'Method 1: Local Installation'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md73',1,'Method 1: Local Installation']]]
 ];

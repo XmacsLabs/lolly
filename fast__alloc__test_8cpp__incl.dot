@@ -79,6 +79,4 @@ digraph "fast_alloc_test.cpp"
   Node28 [id="Node000028",label="tm_timer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tm__timer_8hpp.html",tooltip=" "];
   Node28 -> Node29 [id="edge46_Node000028_Node000029",color="steelblue1",style="solid",tooltip=" "];
   Node29 [id="Node000029",label="time.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node1 -> Node30 [id="edge47_Node000001_Node000030",color="steelblue1",style="solid",tooltip=" "];
-  Node30 [id="Node000030",label="nanobench.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

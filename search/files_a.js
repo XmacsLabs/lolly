@@ -9,5 +9,7 @@ var searchData=
   ['blackbox_5ftest_2ecpp_6',['blackbox_test.cpp',['../blackbox__test_8cpp.html',1,'']]],
   ['blank_5furl_2ecpp_7',['blank_url.cpp',['../blank__url_8cpp.html',1,'']]],
   ['block_2ecpp_8',['block.cpp',['../block_8cpp.html',1,'']]],
-  ['block_2ehpp_9',['block.hpp',['../block_8hpp.html',1,'']]]
+  ['block_2ehpp_9',['block.hpp',['../block_8hpp.html',1,'']]],
+  ['block_5fbench_2ecpp_10',['block_bench.cpp',['../block__bench_8cpp.html',1,'']]],
+  ['block_5ftest_2ecpp_11',['block_test.cpp',['../block__test_8cpp.html',1,'']]]
 ];
