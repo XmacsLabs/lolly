@@ -1,8 +1,6 @@
 #include "a_lolly_test.hpp"
 #include "fast_alloc.hpp"
 #include "tm_timer.hpp"
-#include <nanobench.h>
-static ankerl::nanobench::Bench bench;
 
 struct Complex {
 public:
@@ -33,93 +31,25 @@ TEST_MEMORY_LEAK_INIT
 
 TEST_CASE ("test basic data types") {
 
-#ifdef OS_WASM
-#define NUM 100
-#else
-#define NUM 10000
-#endif
+  char*   ch;
+  int*    in;
+  long*   lo;
+  double* dou;
 
-  char*   ch[NUM];
-  int*    in[NUM];
-  long*   lo[NUM];
-  double* dou[NUM];
+  ch = tm_new<char> ();
+  in = tm_new<int> ();
+  lo = tm_new<long> ();
+  dou= tm_new<double> ();
 
-  bench.batch (NUM * 4)
-      .unit ("alloc & free")
-      .run ("basic type, fast collect", [&] {
-        for (int i= 0; i < NUM; i++) { // for gprof
-          ch[i]= tm_new<char> ();
-          tm_delete (ch[i]);
-
-          in[i]= tm_new<int> ();
-          tm_delete (in[i]);
-
-          lo[i]= tm_new<long> ();
-          tm_delete (lo[i]);
-
-          dou[i]= tm_new<double> ();
-          tm_delete (dou[i]);
-        }
-      });
-
-  bench.run ("basic type, bulk collect", [&] {
-    for (int i= 0; i < NUM; i++) {
-      ch[i] = tm_new<char> ();
-      in[i] = tm_new<int> ();
-      lo[i] = tm_new<long> ();
-      dou[i]= tm_new<double> ();
-    }
-
-    for (int i= 0; i < NUM; i++) {
-      tm_delete (ch[i]);
-      tm_delete (in[i]);
-      tm_delete (lo[i]);
-      tm_delete (dou[i]);
-    }
-  });
-  bench.batch (NUM).run ("char, bulk collect", [&] {
-    for (int i= 0; i < NUM; i++) {
-      ch[i]= tm_new<char> ();
-    }
-
-    for (int i= 0; i < NUM; i++) {
-      tm_delete (ch[i]);
-    }
-  });
-  bench.run ("int, bulk collect", [&] {
-    for (int i= 0; i < NUM; i++) {
-      in[i]= tm_new<int> ();
-    }
-
-    for (int i= 0; i < NUM; i++) {
-      tm_delete (in[i]);
-    }
-  });
-  bench.run ("long, bulk collect", [&] {
-    for (int i= 0; i < NUM; i++) {
-      lo[i]= tm_new<long> ();
-    }
-
-    for (int i= 0; i < NUM; i++) {
-      tm_delete (lo[i]);
-    }
-  });
-  bench.run ("double, bulk collect", [&] {
-    for (int i= 0; i < NUM; i++) {
-      dou[i]= tm_new<double> ();
-    }
-
-    for (int i= 0; i < NUM; i++) {
-      tm_delete (dou[i]);
-    }
-  });
+  tm_delete (ch);
+  tm_delete (in);
+  tm_delete (lo);
+  tm_delete (dou);
 }
 
 TEST_CASE ("test class") {
-  bench.batch (1).run ("struct", [&] {
-    Complex* p_complex= tm_new<Complex> (35.8, 26.2);
-    tm_delete (p_complex);
-  });
+  Complex* p_complex= tm_new<Complex> (35.8, 26.2);
+  tm_delete (p_complex);
 }
 
 TEST_CASE ("test tm_*_array") {
@@ -130,14 +60,10 @@ TEST_CASE ("test tm_*_array") {
 #else
   const size_t size_prim= 20000000, size_complex= 5000000;
 #endif
-  bench.batch (size_prim).run ("large array of basic type", [&] {
-    p_complex= tm_new_array<uint8_t> (size_prim);
-    tm_delete_array (p_complex);
-  });
-  bench.batch (size_complex).run ("large array of complex structure", [&] {
-    Complex* p_wide= tm_new_array<Complex> (size_complex);
-    tm_delete_array (p_wide);
-  });
+  p_complex= tm_new_array<uint8_t> (size_prim);
+  tm_delete_array (p_complex);
+  Complex* p_wide= tm_new_array<Complex> (size_complex);
+  tm_delete_array (p_wide);
 }
 
 #ifndef OS_WASM
@@ -156,15 +82,19 @@ TEST_MEMORY_LEAK_RESET
 #endif
 
 TEST_CASE ("test large bunch of tm_*_array with class") {
+
+#ifdef OS_WASM
+#define NUM 100
+#else
+#define NUM 10000
+#endif
   Complex* volume[NUM];
-  bench.batch (NUM).run ("frequent allocation of array, space reused", [&] {
-    for (int i= 0; i < NUM; i++) {
-      volume[i]= tm_new_array<Complex> (9);
-    }
-    for (int i= 0; i < NUM; i++) {
-      tm_delete_array (volume[i]);
-    }
-  });
+  for (int i= 0; i < NUM; i++) {
+    volume[i]= tm_new_array<Complex> (9);
+  }
+  for (int i= 0; i < NUM; i++) {
+    tm_delete_array (volume[i]);
+  }
 }
 
 TEST_MEMORY_LEAK_ALL

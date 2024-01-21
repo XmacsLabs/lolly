@@ -1,8 +1,5 @@
 #include "a_lolly_test.hpp"
 #include "string.hpp"
-#include <nanobench.h>
-
-static ankerl::nanobench::Bench bench;
 
 TEST_CASE ("equality of string") {
   CHECK_EQ (string ("abc") == "abc", true);
@@ -17,14 +14,6 @@ TEST_CASE ("equality of string") {
   CHECK_EQ (string ("abc") != string (), true);
 
   CHECK_EQ (string () == string (), true);
-  bench.run ("construct string", [&] {
-    string ("abc");
-    string ();
-  });
-  bench.run ("equality of string", [&] {
-    static string a ("abc"), b;
-    a == b;
-  });
 }
 
 TEST_CASE ("compare string") {
@@ -34,10 +23,6 @@ TEST_CASE ("compare string") {
   CHECK (string ("ab") <= string ("b"));
   CHECK (string () <= string ());
   CHECK (string () <= string ("0"));
-  bench.run ("compare string", [&] {
-    static string a ("ab"), b ("b");
-    a <= b;
-  });
 }
 
 TEST_CASE ("test slice") {
@@ -49,21 +34,12 @@ TEST_CASE ("test slice") {
   CHECK_EQ (string ("abcde") (3, -2) == string (), true);
   CHECK_EQ (string ("abcde") (10, 11) == string (), true);
   CHECK_EQ (string ("abcde") (-3, -2) == string (), true);
-  bench.run ("slice string", [&] {
-    static string a ("abcde");
-    a (2, 3);
-  });
 }
 
 TEST_CASE ("test concat") {
   CHECK_EQ (string ("abc") * "de" == string ("abcde"), true);
   CHECK_EQ (string ("abc") * string ("de") == string ("abcde"), true);
   CHECK_EQ ("abc" * string ("de") == string ("abcde"), true);
-  bench.minEpochIterations (40000);
-  bench.run ("concat string", [&] {
-    static string a ("abc"), b ("de");
-    a*            b;
-  });
 }
 
 /******************************************************************************
@@ -76,10 +52,6 @@ TEST_CASE ("test append") {
   CHECK_EQ (str == string ("x"), true);
   str << string ("yz");
   CHECK_EQ (str == string ("xyz"), true);
-  bench.run ("append string", [&] {
-    static string a ("abc"), b ("de");
-    a << b;
-  });
 }
 
 /******************************************************************************
@@ -180,8 +152,4 @@ TEST_CASE ("test is quoted") {
   // is_quoted only checks if a string starts with a double quote
   // and ends with another double quote, regardless the validity
   // of the raw string
-  bench.run ("is quoted", [&] {
-    static string a ("H\"ello TeXmacs\"");
-    is_quoted (a);
-  });
 }

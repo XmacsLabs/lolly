@@ -64,3 +64,5 @@ jobs:
         run: xmake build --yes -vD
       - name: test
         run: xmake run --yes -vD --diagnosis --group=tests
+      - name: benchmark
+        run: xmake run --yes --group=bench

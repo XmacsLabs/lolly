@@ -218,7 +218,6 @@ function add_test_target(filepath)
         end
         add_packages("tbox")
         add_packages("doctest")
-        add_packages("nanobench")
 
         if is_plat("linux") then
             add_syslinks("stdc++", "m")
@@ -285,6 +284,75 @@ function add_test_target(filepath)
     end
 end
 
+function add_bench_target(filepath)
+    local benchname = path.basename(filepath)
+    target(benchname) do 
+        set_group("bench")
+        add_deps({"liblolly", "bench_base"})
+        set_languages("c++17")
+        set_policy("check.auto_ignore_flags", false)
+        add_packages("nanobench")
+
+        if is_plat("mingw") then
+            add_packages("mingw-w64")
+        end
+
+        if is_plat("linux") then
+            add_syslinks("stdc++", "m")
+        end
+
+        if is_plat("windows") then
+            set_encodings("utf-8")
+            add_ldflags("/LTCG")
+        end
+
+        if is_plat("windows") or is_plat("mingw") then
+            add_syslinks("secur32")
+        end
+
+        add_includedirs("$(buildir)/L1")
+        add_includedirs(lolly_includedirs)
+        add_includedirs("tests")
+        add_forceincludes(path.absolute("$(buildir)/L1/config.h"))
+        add_files(filepath) 
+
+        if is_plat("wasm") then
+            add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
+            set_values("wasm.preloadfiles", {"bench"})
+            add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
+            on_run(function (target)
+                node = os.getenv("EMSDK_NODE")
+                os.cd(target:targetdir())
+                print("> cd " .. target:targetdir())
+                cmd = node .. " " .. benchname .. ".js"
+                print("> " .. cmd)
+                os.exec(cmd)
+            end)
+        end
+
+        if is_plat("linux", "macosx", "windows") or (is_plat ("mingw") and is_host ("windows")) then
+            on_run(function (target)
+                cmd = target:targetfile()
+                print("> " .. cmd)
+                os.exec(cmd)
+            end)
+        end
+
+        if is_plat("mingw") and is_host("linux") then
+            on_run(function (target)
+                cmd = "wine " .. target:targetfile()
+                print("> " .. cmd)
+                if not mingw_copied then
+                    mingw_copied = true
+                    os.cp("/usr/x86_64-w64-mingw32/lib/libwinpthread-1.dll", "$(buildir)/mingw/x86_64/$(mode)/")
+                    os.cp("/usr/lib/gcc/x86_64-w64-mingw32/10-win32/libgcc_s_seh-1.dll", "$(buildir)/mingw/x86_64/$(mode)/")
+                    os.cp("/usr/lib/gcc/x86_64-w64-mingw32/10-win32/libstdc++-6.dll", "$(buildir)/mingw/x86_64/$(mode)/")
+                end
+                os.exec(cmd)
+            end)
+        end
+    end
+end
 
 if has_config("enable_tests") then
     target("test_base")do
@@ -294,7 +362,6 @@ if has_config("enable_tests") then
         set_policy("check.auto_ignore_flags", false)
         add_packages("tbox")
         add_packages("doctest")
-        add_packages("nanobench")
 
         if is_plat("windows") then
             set_encodings("utf-8")
@@ -307,10 +374,25 @@ if has_config("enable_tests") then
         add_forceincludes(path.absolute("$(buildir)/L1/config.h"))
         add_files("tests/a_tbox_main.cpp")
     end
+    target("bench_base")do
+        set_kind("object")
+        set_languages("c++17")
+        set_policy("check.auto_ignore_flags", false)
+        add_packages("nanobench")
+
+        if is_plat("windows") then
+            set_encodings("utf-8")
+        end
+        add_files("bench/nanobench.cpp")
+    end
 
     cpp_tests_on_all_plat = os.files("tests/**_test.cpp")
     for _, filepath in ipairs(cpp_tests_on_all_plat) do
         add_test_target (filepath)
+    end
+    cpp_bench_on_all_plat = os.files("bench/**_bench.cpp")
+    for _, filepath in ipairs(cpp_bench_on_all_plat) do
+        add_bench_target (filepath)
     end
 end
 
