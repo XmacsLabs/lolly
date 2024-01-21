@@ -31,7 +31,7 @@ fast_free (void* ptr, size_t sz) {
 
 void*
 fast_realloc (void* ptr, size_t, size_t new_size) {
-  return mi_realloc(ptr, new_size);
+  return mi_realloc (ptr, new_size);
 }
 
 void*

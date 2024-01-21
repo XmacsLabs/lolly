@@ -42,7 +42,7 @@ fast_free (void* ptr, size_t sz) {
 
 void*
 fast_realloc (void* ptr, size_t, size_t new_size) {
-  void* new_ptr= realloc(ptr, new_size);
+  void* new_ptr= realloc (ptr, new_size);
 
   if (new_ptr == NULL) {
     cerr << "Fatal error: out of memory\n";
