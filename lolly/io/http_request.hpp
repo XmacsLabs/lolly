@@ -24,13 +24,5 @@ enum http_request_label : int {
   MULTIPART,
 };
 
-inline tree
-http_headers_init () {
-  auto hmap   = hashmap<string, string> ();
-  tree headers= tree (http_request_label::HEADERS,
-                      as<hashmap<string, string>, tree> (hmap));
-  return headers;
-}
-
 } // namespace io
 } // namespace lolly

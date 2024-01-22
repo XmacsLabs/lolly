@@ -63,6 +63,11 @@ response_to_tree (cpr::Response r, string url) {
 static cpr::Header
 hashmap_to_header (hashmap<string, string> hmap) {
   cpr::Header header= cpr::Header{};
+  iterator<string> it= iterate (hmap);
+  while (it->busy ()) {
+    string key= it->next ();
+    header[std::string(c_string(key))]= c_string (hmap[key]);
+  }
   return header;
 }
 
@@ -70,7 +75,11 @@ tree
 http_get (url u, hashmap<string, string> headers) {
   string        u_str = as_string (u);
   c_string      u_cstr= c_string (u_str);
-  cpr::Response r= cpr::Get (cpr::Url{u_cstr}, hashmap_to_header (headers));
+  cpr::Session session;
+  session.SetUrl (cpr::Url(u_cstr));
+  session.SetHeader (hashmap_to_header (headers));
+  session.SetUserAgent (cpr::UserAgent (std::string (c_string (headers["User-Agent"]))));
+  cpr::Response r= session.Get ();
   return response_to_tree (r, u_str);
 }
 
@@ -78,7 +87,11 @@ tree
 http_head (url u, hashmap<string, string> headers) {
   string        u_str = as_string (u);
   c_string      u_cstr= c_string (u_str);
-  cpr::Response r= cpr::Head (cpr::Url{u_cstr}, hashmap_to_header (headers));
+  cpr::Session session;
+  session.SetUrl (cpr::Url(u_cstr));
+  session.SetHeader (hashmap_to_header (headers));
+  session.SetUserAgent (cpr::UserAgent (std::string (c_string (headers["User-Agent"]))));
+  cpr::Response r= session.Head ();
   return response_to_tree (r, u_str);
 }
 
@@ -89,9 +102,12 @@ download (url from, url to, hashmap<string, string> headers) {
   string   to_str   = as_string (to);
   c_string to_cstr  = c_string (to_str);
 
+  cpr::Session session;
+  session.SetUrl (cpr::Url(from_cstr));
+  session.SetHeader (hashmap_to_header (headers));
+  session.SetUserAgent (cpr::UserAgent (std::string (c_string (headers["User-Agent"]))));
   std::ofstream to_stream (to_cstr, std::ios::binary);
-  cpr::Response r= cpr::Download (to_stream, cpr::Url{from_cstr},
-                                  hashmap_to_header (headers));
+  cpr::Response r= session.Download (to_stream);
   return response_to_tree (r, from_str);
 }
 
