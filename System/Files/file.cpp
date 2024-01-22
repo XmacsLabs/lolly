@@ -398,8 +398,7 @@ load_string_try (url u, string& s) {
     return file_status (true, "Must be a local and single file");
   }
   url u_target= find_the_first_exist (u);
-
-  c_string path= as_local_path (u_target);
+  const char* path= as_charp (as_local_path (u_target));
   if (!tb_file_access (path, TB_FILE_MODE_RO)) {
     return file_status (true, "File is not readable", path);
   }
@@ -455,7 +454,7 @@ save_string_try (url u, const string& s) {
     return file_status (true, "Must be an absolute path");
   }
   url      u_target= find_the_first_exist (u);
-  c_string path    = as_local_path (u_target);
+  const char* path= as_charp (as_local_path (u_target));
 
   // tb_file_access cannot check TB_FILE_MODE_CREAT on windows, so create
   // directly
