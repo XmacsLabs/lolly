@@ -53,7 +53,7 @@ var searchData=
   ['color_50',['color',['../basic_8hpp.html#ae561696a8948d3288529e868b68b87f2',1,'basic.hpp']]],
   ['common_51',['common',['../path_8cpp.html#af750161b28cf42a4721b477ef423a90d',1,'common(path start, path end):&#160;path.cpp'],['../path_8hpp.html#af750161b28cf42a4721b477ef423a90d',1,'common(path start, path end):&#160;path.cpp']]],
   ['compability_20issue_20of_20mingw_208_20x_52',['Project: Fix compability issue of mingw 8.x',['../md_devel_27.html',1,'']]],
-  ['compiling_20and_20testing_53',['Compiling and Testing',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md37',1,'Step 3: Compiling and Testing'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md49',1,'Step 3: Compiling and Testing']]],
+  ['compiling_20and_20testing_53',['Compiling and Testing',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md38',1,'Step 3: Compiling and Testing'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md50',1,'Step 3: Compiling and Testing']]],
   ['complex_54',['Complex',['../structComplex.html',1,'Complex'],['../structComplex.html#ab1aaeee52acb23180f477f7ead8ec701',1,'Complex::Complex(double re_, double im_)'],['../structComplex.html#a43b9f07cdf697c71b5fd506a6cc80b8f',1,'Complex::Complex()'],['../structComplex.html#ab1aaeee52acb23180f477f7ead8ec701',1,'Complex::Complex(double re_, double im_)'],['../structComplex.html#a43b9f07cdf697c71b5fd506a6cc80b8f',1,'Complex::Complex()']]],
   ['compound_5frep_55',['compound_rep',['../classcompound__rep.html',1,'compound_rep'],['../classcompound__rep.html#a83bcd3504600ce995f842705b4b1dda7',1,'compound_rep::compound_rep()']]],
   ['compute_5ffree_56',['compute_free',['../fast__alloc_8cpp.html#ad4059a686e41235c933c74b67b19eb8d',1,'fast_alloc.cpp']]],

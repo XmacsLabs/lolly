@@ -87,10 +87,15 @@ digraph "http_test.cpp"
   Node1 -> Node31 [id="edge51_Node000001_Node000031",color="steelblue1",style="solid",tooltip=" "];
   Node31 [id="Node000031",label="lolly/io/http.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8hpp.html",tooltip=" "];
   Node31 -> Node32 [id="edge52_Node000031_Node000032",color="steelblue1",style="solid",tooltip=" "];
-  Node32 [id="Node000032",label="lolly/io/http_response.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__response_8hpp.html",tooltip=" "];
+  Node32 [id="Node000032",label="lolly/io/http_request.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__request_8hpp.html",tooltip=" "];
   Node32 -> Node29 [id="edge53_Node000032_Node000029",color="steelblue1",style="solid",tooltip=" "];
   Node32 -> Node18 [id="edge54_Node000032_Node000018",color="steelblue1",style="solid",tooltip=" "];
   Node32 -> Node14 [id="edge55_Node000032_Node000014",color="steelblue1",style="solid",tooltip=" "];
-  Node31 -> Node14 [id="edge56_Node000031_Node000014",color="steelblue1",style="solid",tooltip=" "];
-  Node31 -> Node13 [id="edge57_Node000031_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node31 -> Node33 [id="edge56_Node000031_Node000033",color="steelblue1",style="solid",tooltip=" "];
+  Node33 [id="Node000033",label="lolly/io/http_response.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__response_8hpp.html",tooltip=" "];
+  Node33 -> Node29 [id="edge57_Node000033_Node000029",color="steelblue1",style="solid",tooltip=" "];
+  Node33 -> Node18 [id="edge58_Node000033_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node33 -> Node14 [id="edge59_Node000033_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node31 -> Node14 [id="edge60_Node000031_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node31 -> Node13 [id="edge61_Node000031_Node000013",color="steelblue1",style="solid",tooltip=" "];
 }
