@@ -12,7 +12,7 @@
 #pragma once
 
 #include "generic_tree.hpp"
-#include "hashmap"
+#include "hashmap.hpp"
 #include "tree.hpp"
 
 namespace lolly {
@@ -26,9 +26,10 @@ enum http_request_label : int {
 
 inline tree
 http_headers_init () {
-  auto hmap  = hashmap<string, string> ();
-  tree header= tree (http_request_label::HEADERS,
-                     as<hashmap<string, string>, tree> (hmap));
+  auto hmap   = hashmap<string, string> ();
+  tree headers= tree (http_request_label::HEADERS,
+                      as<hashmap<string, string>, tree> (hmap));
+  return headers;
 }
 
 } // namespace io

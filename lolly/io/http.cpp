@@ -27,17 +27,17 @@ namespace io {
 #ifdef OS_WASM
 
 tree
-http_head (url u) {
+http_head (url u, tree headers) {
   return http_response_init ();
 }
 
 tree
-http_get (url u) {
+http_get (url u, tree headers) {
   return http_response_init ();
 }
 
 tree
-download (url from, url to) {
+download (url from, url to, tree headers) {
   return http_response_init ();
 }
 
@@ -60,31 +60,38 @@ response_to_tree (cpr::Response r, string url) {
   return ret;
 }
 
+static cpr::Header
+hashmap_to_header (hashmap<string, string> hmap) {
+  cpr::Header header= cpr::Header{};
+  return header;
+}
+
 tree
-http_get (url u, tree headers) {
+http_get (url u, hashmap<string, string> headers) {
   string        u_str = as_string (u);
   c_string      u_cstr= c_string (u_str);
-  cpr::Response r     = cpr::Get (cpr::Url{u_cstr});
+  cpr::Response r= cpr::Get (cpr::Url{u_cstr}, hashmap_to_header (headers));
   return response_to_tree (r, u_str);
 }
 
 tree
-http_head (url u, tree headers) {
+http_head (url u, hashmap<string, string> headers) {
   string        u_str = as_string (u);
   c_string      u_cstr= c_string (u_str);
-  cpr::Response r     = cpr::Head (cpr::Url{u_cstr});
+  cpr::Response r= cpr::Head (cpr::Url{u_cstr}, hashmap_to_header (headers));
   return response_to_tree (r, u_str);
 }
 
 tree
-download (url from, url to) {
+download (url from, url to, hashmap<string, string> headers) {
   string   from_str = as_string (from);
   c_string from_cstr= c_string (from_str);
   string   to_str   = as_string (to);
   c_string to_cstr  = c_string (to_str);
 
   std::ofstream to_stream (to_cstr, std::ios::binary);
-  cpr::Response r= cpr::Download (to_stream, cpr::Url{from_cstr});
+  cpr::Response r= cpr::Download (to_stream, cpr::Url{from_cstr},
+                                  hashmap_to_header (headers));
   return response_to_tree (r, from_str);
 }
 

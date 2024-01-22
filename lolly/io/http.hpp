@@ -11,6 +11,7 @@
 
 #pragma once
 
+#include "lolly/io/http_request.hpp"
 #include "lolly/io/http_response.hpp"
 #include "tree.hpp"
 #include "url.hpp"
@@ -18,9 +19,12 @@
 namespace lolly {
 namespace io {
 
-tree http_get (url u, tree headers);
-tree http_head (url u, tree headers);
-tree download (url from, url to);
+tree http_get (url                     u,
+               hashmap<string, string> headers= hashmap<string, string> ());
+tree http_head (url                     u,
+                hashmap<string, string> headers= hashmap<string, string> ());
+tree download (url from, url to,
+               hashmap<string, string> headers= hashmap<string, string> ());
 
 } // namespace io
 } // namespace lolly
