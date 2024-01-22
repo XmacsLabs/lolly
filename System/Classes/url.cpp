@@ -687,13 +687,16 @@ is_ramdisc (url u) {
 
 string
 as_string (url u, int type) {
-  // This routine pritty prints an url as a string.
+  // This routine pretty prints an url as a string.
   // FIXME: the current algorithm is quadratic in time.
   if (is_none (u)) return "{}";
   if (is_atomic (u)) return u->t->label;
   if (is_concat (u)) {
     int stype= type;
-    if (is_root (u[1]) && (!is_root (u[1], "default"))) stype= URL_STANDARD;
+    if (is_root (u[1]) &&
+        !(is_root (u[1], "default") || is_root (u[1], "file"))) {
+      stype= URL_STANDARD;
+    }
     string sep= (stype == URL_SYSTEM ? string (URL_CONCATER) : string ("/"));
     string s1 = as_string (u[1], type);
     string s2 = as_string (u[2], stype);
@@ -701,9 +704,9 @@ as_string (url u, int type) {
     if ((!is_name (u[1])) && (!is_root (u[1]))) s1= "{" * s1 * "}";
     if ((!is_concat (u[2])) && (!is_atomic (u[2])) && (!is_wildcard (u[2], 1)))
       s2= "{" * s2 * "}";
-#ifdef WINPATHS
-    if (((is_root (u[1], "default") && type == URL_SYSTEM) ||
-         is_root (u[1], "file"))) { // have to return the windows format
+    if (os_win () && // have to return the windows format
+        ((is_root (u[1], "default") && type == URL_SYSTEM) ||
+         is_root (u[1], "file"))) {
       string root, remain;
       if (is_concat (u[2])) {
         root= as_string (u[2][1], type);
@@ -715,15 +718,15 @@ as_string (url u, int type) {
         remain= "";
       }
       if (is_root (u[1], "default")) {
-        if (N (root) == 1) return root * ":\\" * remain; // drive letter
+        if (N (root) == 1) return root * ":" * sep * remain; // drive letter
         else return "\\\\" * root * "\\" * remain;
       }
       else {
-        if (N (root) == 1) return s1 * "/" * root * ":/" * remain; // local file
-        else return s1 * root * "/" * remain;                      // remote
+        if (N (root) == 1)
+          return s1 * "/" * root * ":" * sep * remain; // local file
+        else return s1 * root * "/" * remain;          // remote
       }
     }
-#endif
     return s1 * sep * s2;
   }
   if (is_or (u)) {
@@ -731,23 +734,25 @@ as_string (url u, int type) {
     string s2= as_string (u[2], type);
     if (!is_name_in_path (u[1])) s1= "{" * s1 * "}";
     if ((!is_or (u[2])) && (!is_name_in_path (u[2]))) s2= "{" * s2 * "}";
-#ifdef WINPATHS
-    if (type == URL_STANDARD) return s1 * ":" * s2;
-    else return s1 * string (URL_SEPARATOR) * s2;
-#else
-    return s1 * string (URL_SEPARATOR) * s2;
-#endif
+    if (os_win ()) {
+      if (type == URL_STANDARD) return s1 * ":" * s2;
+      else return s1 * string (URL_SEPARATOR) * s2;
+    }
+    else {
+      return s1 * string (URL_SEPARATOR) * s2;
+    }
   }
-#ifdef WINPATHS
-  if (is_root (u, "default")) {
-    int stype= type;
-    if (is_root (u[1]) && (!is_root (u[1], "default"))) stype= URL_STANDARD;
-    if (stype == URL_SYSTEM) return "";
-    else return "/";
+  if (os_win ()) {
+    if (is_root (u, "default")) {
+      int stype= type;
+      if (is_root (u[1]) && (!is_root (u[1], "default"))) stype= URL_STANDARD;
+      if (stype == URL_SYSTEM) return "";
+      else return "/";
+    }
   }
-#else
-  if (is_root (u, "default")) return "/";
-#endif
+  else {
+    if (is_root (u, "default")) return "/";
+  }
   if (is_root (u, "blank")) return "/";
   if (is_root (u, "file")) return u[1]->t->label * "://";
   if (is_root (u)) return u[1]->t->label * ":/";

@@ -172,10 +172,10 @@ TEST_CASE ("as_string") {
   set_env ("TEST_PWD", as_string (url_pwd ()));
   url file_env_lua= url_system ("file:///$TEST_PWD/xmake.lua");
   string_eq (as_string (file_env_lua),
-             "file://" * as_string (url_pwd () * "xmake.lua"));
+             "file:///" * as_string (url_pwd () * "xmake.lua"));
   url local_env_lua= url_system ("local:$TEST_PWD/xmake.lua");
   string_eq (as_string (local_env_lua),
-             "file://" * as_string (url_pwd () * "xmake.lua"));
+             "file:///" * as_string (url_pwd () * "xmake.lua"));
 
   url dirs= url ("Data") | url ("Kernel") | url ("Plugins");
   string_eq (as_string (dirs), string ("Data") * URL_SEPARATOR * "Kernel" *
@@ -230,6 +230,16 @@ TEST_CASE ("delta") {
       url_eq (delta (url_none (), url_none ()), url_none ());
     }
   }
+}
+
+TEST_CASE ("url_concat") {
+  url_eq (url ("a") * url ("b"), url_system ("a/b"));
+  url_eq (url_root ("file") * url ("tmp"), url_system ("file:///tmp"));
+}
+
+TEST_CASE ("reroot") {
+  CHECK (!is_rooted (reroot (url_system ("tmp"), "file")));
+  CHECK (is_rooted (reroot (url_pwd (), "file")));
 }
 
 TEST_MEMORY_LEAK_ALL
