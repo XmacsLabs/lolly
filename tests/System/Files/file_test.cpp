@@ -38,6 +38,7 @@ TEST_MEMORY_LEAK_INIT
 #if defined(OS_WIN) || defined(OS_MINGW)
 TEST_CASE ("is_directory on Windows") {
   CHECK (is_directory (url_system ("C:/Windows")));
+  CHECK (is_directory (url_system ("file:///C:/Windows")));
 }
 #endif
 
@@ -48,8 +49,11 @@ TEST_CASE ("is_directory/is_regular") {
   CHECK (is_directory (url_pwd () * "tests"));
 
   CHECK (is_directory (url_pwd ()));
+  CHECK (is_directory (reroot (url_pwd (), "file")));
   CHECK (!is_regular (url_pwd ()));
+  CHECK (!is_regular (reroot (url_pwd (), "file")));
   CHECK (!is_symbolic_link (url_pwd ()));
+  CHECK (!is_symbolic_link (reroot (url_pwd (), "file")));
 
   CHECK (!is_directory (xmake_lua));
   CHECK (is_regular (xmake_lua));
@@ -70,6 +74,7 @@ TEST_CASE ("is_newer") {
 
 TEST_CASE ("is_of_type") {
   CHECK (is_of_type (url_pwd (), "d"));
+  CHECK (is_of_type (reroot (url_pwd (), "file"), "d"));
   CHECK (!is_of_type (url_pwd (), "f"));
   CHECK (is_of_type (xmake_lua, "fr"));
 #if defined(OS_MINGW) || defined(OS_WIN)
@@ -77,9 +82,15 @@ TEST_CASE ("is_of_type") {
 #endif
 }
 
-TEST_CASE ("file_size") { CHECK (file_size (xmake_lua) > 0); }
+TEST_CASE ("file_size") {
+  CHECK (file_size (xmake_lua) > 0);
+  CHECK (file_size (reroot (xmake_lua, "file")) > 0);
+}
 
-TEST_CASE ("last_modified") { CHECK (last_modified (xmake_lua) > 0); }
+TEST_CASE ("last_modified") {
+  CHECK (last_modified (xmake_lua) > 0);
+  CHECK (last_modified (reroot (xmake_lua, "file")) > 0);
+}
 
 TEST_CASE ("mkdir/rmdir") {
   url lolly_tmp = get_lolly_tmp ();
