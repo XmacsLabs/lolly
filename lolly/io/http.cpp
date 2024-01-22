@@ -27,17 +27,17 @@ namespace io {
 #ifdef OS_WASM
 
 tree
-http_head (url u, tree headers) {
+http_head (url u, http_headers headers) {
   return http_response_init ();
 }
 
 tree
-http_get (url u, tree headers) {
+http_get (url u, http_headers headers) {
   return http_response_init ();
 }
 
 tree
-download (url from, url to, tree headers) {
+download (url from, url to, http_headers headers) {
   return http_response_init ();
 }
 
@@ -61,7 +61,7 @@ response_to_tree (cpr::Response r, string url) {
 }
 
 static cpr::Header
-hashmap_to_header (hashmap<string, string> hmap) {
+as_cpr_header (http_headers hmap) {
   cpr::Header      header= cpr::Header{};
   iterator<string> it    = iterate (hmap);
   while (it->busy ()) {
@@ -72,33 +72,33 @@ hashmap_to_header (hashmap<string, string> hmap) {
 }
 
 tree
-http_get (url u, hashmap<string, string> headers) {
+http_get (url u, http_headers headers) {
   string       u_str = as_string (u);
   c_string     u_cstr= c_string (u_str);
   cpr::Session session;
   session.SetUrl (cpr::Url (u_cstr));
-  session.SetHeader (hashmap_to_header (headers));
+  session.SetHeader (as_cpr_header (headers));
   session.SetUserAgent (
-      cpr::UserAgent (std::string (c_string (headers["User-Agent"]))));
+      cpr::UserAgent (std::string (c_string (headers[HTTP_USER_AGENT]))));
   cpr::Response r= session.Get ();
   return response_to_tree (r, u_str);
 }
 
 tree
-http_head (url u, hashmap<string, string> headers) {
+http_head (url u, http_headers headers) {
   string       u_str = as_string (u);
   c_string     u_cstr= c_string (u_str);
   cpr::Session session;
   session.SetUrl (cpr::Url (u_cstr));
   session.SetHeader (hashmap_to_header (headers));
   session.SetUserAgent (
-      cpr::UserAgent (std::string (c_string (headers["User-Agent"]))));
+      cpr::UserAgent (std::string (c_string (headers[HTTP_USER_AGENT]))));
   cpr::Response r= session.Head ();
   return response_to_tree (r, u_str);
 }
 
 tree
-download (url from, url to, hashmap<string, string> headers) {
+download (url from, url to, http_headers headers) {
   string   from_str = as_string (from);
   c_string from_cstr= c_string (from_str);
   string   to_str   = as_string (to);
@@ -108,7 +108,7 @@ download (url from, url to, hashmap<string, string> headers) {
   session.SetUrl (cpr::Url (from_cstr));
   session.SetHeader (hashmap_to_header (headers));
   session.SetUserAgent (
-      cpr::UserAgent (std::string (c_string (headers["User-Agent"]))));
+      cpr::UserAgent (std::string (c_string (headers[HTTP_USER_AGENT]))));
   std::ofstream to_stream (to_cstr, std::ios::binary);
   cpr::Response r= session.Download (to_stream);
   return response_to_tree (r, from_str);

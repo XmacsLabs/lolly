@@ -24,5 +24,6 @@ enum http_request_label : int {
   MULTIPART,
 };
 
+using http_headers= hashmap<string, string>;
 } // namespace io
 } // namespace lolly
