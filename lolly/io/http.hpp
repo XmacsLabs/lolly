@@ -18,13 +18,9 @@
 
 namespace lolly {
 namespace io {
-
-tree http_get (url                     u,
-               hashmap<string, string> headers= hashmap<string, string> ());
-tree http_head (url                     u,
-                hashmap<string, string> headers= hashmap<string, string> ());
-tree download (url from, url to,
-               hashmap<string, string> headers= hashmap<string, string> ());
+tree http_get (url u, http_headers headers= http_headers ());
+tree http_head (url u, http_headers headers= http_headers ());
+tree download (url from, url to, http_headers headers= http_headers ());
 
 } // namespace io
 } // namespace lolly

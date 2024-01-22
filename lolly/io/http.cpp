@@ -24,6 +24,8 @@
 namespace lolly {
 namespace io {
 
+const char* HTTP_USER_AGENT= "User-Agent";
+
 #ifdef OS_WASM
 
 tree
@@ -90,7 +92,7 @@ http_head (url u, http_headers headers) {
   c_string     u_cstr= c_string (u_str);
   cpr::Session session;
   session.SetUrl (cpr::Url (u_cstr));
-  session.SetHeader (hashmap_to_header (headers));
+  session.SetHeader (as_cpr_header (headers));
   session.SetUserAgent (
       cpr::UserAgent (std::string (c_string (headers[HTTP_USER_AGENT]))));
   cpr::Response r= session.Head ();
@@ -106,7 +108,7 @@ download (url from, url to, http_headers headers) {
 
   cpr::Session session;
   session.SetUrl (cpr::Url (from_cstr));
-  session.SetHeader (hashmap_to_header (headers));
+  session.SetHeader (as_cpr_header (headers));
   session.SetUserAgent (
       cpr::UserAgent (std::string (c_string (headers[HTTP_USER_AGENT]))));
   std::ofstream to_stream (to_cstr, std::ios::binary);
