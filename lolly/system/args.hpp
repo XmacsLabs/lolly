@@ -13,17 +13,14 @@ namespace lolly {
 #if defined(OS_WIN) && defined(OS_MINGW)
 class args {
 public:
-  ///
-  /// Fix command line agruments
-  ///
+  // Fix command line agruments
   args (int& argc, char**& argv)
       : old_argc_ (argc), old_argv_ (argv), old_argc_ptr_ (&argc),
         old_argv_ptr_ (&argv), {
     fix_args (argc, argv);
   }
-  ///
-  /// Restore original argc,argv,env values, if changed
-  ///
+
+  // Restore original argc,argv,env values, if changed
   ~args () {
     if (old_argc_ptr_) *old_argc_ptr_= old_argc_;
     if (old_argv_ptr_) *old_argv_ptr_= old_argv_;
@@ -77,5 +74,4 @@ public:
   ~args () {}
 };
 #endif
-
 } // namespace lolly
