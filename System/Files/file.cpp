@@ -272,11 +272,11 @@ chdir (url u) {
 
 url
 url_temp (string suffix) {
-  string filepath= replace (lolly::hash::uuid_make (), "-", "_");
+  string file_name= replace (lolly::hash::uuid_make (), "-", "_");
   if (!is_empty (suffix)) {
-    filepath= filepath * string (".") * suffix;
+    file_name= file_name * string (".") * suffix;
   }
-  url u= url_temp_dir () * url (filepath);
+  url u= url_temp_dir () * url (file_name);
   if (file_size (u) == -1) {
     return u;
   }
