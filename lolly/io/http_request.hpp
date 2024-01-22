@@ -1,7 +1,7 @@
 
 /******************************************************************************
- * MODULE     : http.hpp
- * DESCRIPTION: HTTP related routines
+ * MODULE     : http_request.hpp
+ * DESCRIPTION: Tree repr of HTTP Request
  * COPYRIGHT  : (C) 2023  Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
@@ -11,16 +11,19 @@
 
 #pragma once
 
-#include "lolly/io/http_request.hpp"
-#include "lolly/io/http_response.hpp"
+#include "generic_tree.hpp"
+#include "hashmap.hpp"
 #include "tree.hpp"
-#include "url.hpp"
 
 namespace lolly {
 namespace io {
-tree http_get (url u, http_headers headers= http_headers ());
-tree http_head (url u, http_headers headers= http_headers ());
-tree download (url from, url to, http_headers headers= http_headers ());
+enum http_request_label : int {
+  HEADERS= 1,
+  PARAMETERS,
+  PAYLOAD,
+  MULTIPART,
+};
 
+using http_headers= hashmap<string, string>;
 } // namespace io
 } // namespace lolly
