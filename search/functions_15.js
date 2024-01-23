@@ -44,7 +44,9 @@ var searchData=
   ['url_5ftuple_41',['url_tuple',['../url_8cpp.html#a6c4d32caefa1e56361ddf8f7933505d1',1,'url_tuple(string label):&#160;url.cpp'],['../url_8cpp.html#a83459ca5f7108bc1c15c7a9c4590fcee',1,'url_tuple(string label, string value):&#160;url.cpp'],['../url_8cpp.html#a1e88a6f51572439b49317369454ac25e',1,'url_tuple(string label, string value, string content):&#160;url.cpp'],['../url_8cpp.html#ad405dc4db54642279f4bcc3029de6586',1,'url_tuple(string label, tree t1, tree t2):&#160;url.cpp']]],
   ['url_5funix_42',['url_unix',['../file__url_8cpp.html#aa168893a111417fb004dfd9df14ee20d',1,'url_unix(string name):&#160;file_url.cpp'],['../file__url_8cpp.html#a9c2cd890a2e1c85b3811c208a75bd0c6',1,'url_unix(string dir, string name):&#160;file_url.cpp'],['../url_8hpp.html#aa168893a111417fb004dfd9df14ee20d',1,'url_unix(string name):&#160;file_url.cpp'],['../url_8hpp.html#a9c2cd890a2e1c85b3811c208a75bd0c6',1,'url_unix(string dir, string name):&#160;file_url.cpp']]],
   ['url_5fwildcard_43',['url_wildcard',['../url_8cpp.html#ac77eee1ed23ae27f2944549e96e10995',1,'url_wildcard():&#160;url.cpp'],['../url_8cpp.html#a23a8dfdd01974e33d8236137f6e5ba99',1,'url_wildcard(string name):&#160;url.cpp'],['../url_8hpp.html#ac77eee1ed23ae27f2944549e96e10995',1,'url_wildcard():&#160;url.cpp'],['../url_8hpp.html#a23a8dfdd01974e33d8236137f6e5ba99',1,'url_wildcard(string name):&#160;url.cpp']]],
-  ['utf8_5fto_5fcork_44',['utf8_to_cork',['../analyze_8hpp.html#a50cc724691856a8ee53dc4ec6dbb760d',1,'analyze.hpp']]],
-  ['utf8_5fto_5ft2a_45',['utf8_to_t2a',['../analyze_8hpp.html#aaeeb6ad44424d3b081b6f4fe21dd69c4',1,'analyze.hpp']]],
-  ['uuid_5fmake_46',['uuid_make',['../namespacelolly_1_1hash.html#a6629d52733d84e7b9ad3b2ef1ea490bf',1,'lolly::hash']]]
+  ['utf16_5fto_5futf8_44',['utf16_to_utf8',['../namespacelolly_1_1data.html#aabc50238b75a16e520d70bb9b0d3a007',1,'lolly::data']]],
+  ['utf8_5fto_5fcork_45',['utf8_to_cork',['../analyze_8hpp.html#a50cc724691856a8ee53dc4ec6dbb760d',1,'analyze.hpp']]],
+  ['utf8_5fto_5ft2a_46',['utf8_to_t2a',['../analyze_8hpp.html#aaeeb6ad44424d3b081b6f4fe21dd69c4',1,'analyze.hpp']]],
+  ['utf8_5fto_5futf16_47',['utf8_to_utf16',['../namespacelolly_1_1data.html#abdc026363bf4501b73bfed3dba228770',1,'lolly::data']]],
+  ['uuid_5fmake_48',['uuid_make',['../namespacelolly_1_1hash.html#a6629d52733d84e7b9ad3b2ef1ea490bf',1,'lolly::hash']]]
 ];
