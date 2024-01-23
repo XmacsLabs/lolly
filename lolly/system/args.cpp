@@ -2,9 +2,13 @@
 #include "lolly/data/unicode.hpp"
 #include "string.hpp"
 
-#include <shellapi.h>
-#include <stdio.h>
+#if defined(OS_WIN) || defined(OS_MINGW)
 #include <windows.h>
+#endif
+#include <stdio.h>
+#if defined(OS_WIN) || defined(OS_MINGW)
+#include <shellapi.h>
+#endif
 
 using lolly::data::wchar_to_utf8;
 
