@@ -229,7 +229,7 @@ function add_test_target(filepath)
         end
 
         if is_plat("windows") or is_plat("mingw") then
-            add_syslinks("secur32")
+            add_syslinks("secur32", "shell32")
         end
 
         add_includedirs("$(buildir)/L1")
@@ -307,7 +307,7 @@ function add_bench_target(filepath)
         end
 
         if is_plat("windows") or is_plat("mingw") then
-            add_syslinks("secur32")
+            add_syslinks("secur32", "shell32")
         end
 
         add_includedirs("$(buildir)/L1")
