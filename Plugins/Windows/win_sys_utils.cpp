@@ -11,8 +11,11 @@
 
 #include "win_sys_utils.hpp"
 #include "analyze.hpp"
+#include "lolly/data/unicode.hpp"
 #include "tm_timer.hpp"
 #include <windows.h>
+
+using lolly::data::utf16_to_utf8;
 
 SN
 win_get_process_id () {
@@ -141,7 +144,9 @@ win_get_username () {
   ULONG     len;
   GetUserNameExA (NameDisplay, buffer, &len);
   if (len == 0) return string ("");
-  else return string (buffer);
+  else {
+    return utf16_to_utf8 (string (buffer));
+  }
 }
 
 } // namespace lolly
