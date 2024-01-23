@@ -1,7 +1,7 @@
 
 /******************************************************************************
  * MODULE     : args.hpp
- * DESCRIPTION: lolly::args like nowide::args
+ * DESCRIPTION: lolly::system::args like nowide::args
  * COPYRIGHT  : (C) 2024  Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
