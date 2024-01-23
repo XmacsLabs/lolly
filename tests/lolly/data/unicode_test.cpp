@@ -17,7 +17,10 @@ using lolly::data::is_cjk_unified_ideographs;
 using lolly::data::unicode_get_range;
 using lolly::data::utf16_to_utf8;
 using lolly::data::utf8_to_utf16;
+
+#if defined(OS_MINGW) || defined(OS_WIN)
 using lolly::data::wchar_to_utf8;
+#endif
 
 TEST_CASE ("unicode_get_range") {
   string_eq (unicode_get_range ((int) 'a'), "ascii");

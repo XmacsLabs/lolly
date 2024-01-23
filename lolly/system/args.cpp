@@ -10,7 +10,9 @@
 #include <shellapi.h>
 #endif
 
+#if defined(OS_MINGW) || defined(OS_WIN)
 using lolly::data::wchar_to_utf8;
+#endif
 
 namespace lolly {
 namespace system {
