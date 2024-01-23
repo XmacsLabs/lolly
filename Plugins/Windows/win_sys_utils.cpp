@@ -15,7 +15,7 @@
 #include "tm_timer.hpp"
 #include <windows.h>
 
-using lolly::data::utf16_to_utf8;
+using lolly::data::wchar_to_utf8;
 
 SN
 win_get_process_id () {
@@ -140,12 +140,12 @@ namespace lolly {
 string
 win_get_username () {
   const int MAX_LEN= 100;
-  char      buffer[MAX_LEN]; // it is in UTF-16
+  wchar_t   buffer[MAX_LEN]; // it is in UTF-16
   ULONG     len;
-  GetUserNameExA (NameDisplay, buffer, &len);
+  GetUserNameExW (NameDisplay, buffer, &len);
   if (len == 0) return string ("");
   else {
-    return utf16_to_utf8 (string (buffer));
+    return wchar_to_utf8 (buffer);
   }
 }
 
