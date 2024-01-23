@@ -17,6 +17,7 @@ using lolly::data::is_cjk_unified_ideographs;
 using lolly::data::unicode_get_range;
 using lolly::data::utf16_to_utf8;
 using lolly::data::utf8_to_utf16;
+using lolly::data::wchar_to_utf8;
 
 TEST_CASE ("unicode_get_range") {
   string_eq (unicode_get_range ((int) 'a'), "ascii");
@@ -30,6 +31,8 @@ TEST_CASE ("cjk_unified_ideographs") {
   CHECK (has_cjk_unified_ideographs ("bib-<#4E2D>"));
   CHECK (!is_cjk_unified_ideographs ("bib-<#4E2D>"));
 }
+
+TEST_CASE ("wchar to utf8") { string_eq (wchar_to_utf8 (L"中"), "中"); }
 
 TEST_CASE ("utf16 to utf8") {
   string t= "";

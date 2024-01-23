@@ -9,56 +9,32 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
+#include "string.hpp"
+#include <vector>
+
 namespace lolly {
-#if defined(OS_WIN) && defined(OS_MINGW)
+namespace system {
+#if defined(OS_WIN) || defined(OS_MINGW)
 class args {
 public:
   // Fix command line agruments
   args (int& argc, char**& argv)
       : old_argc_ (argc), old_argv_ (argv), old_argc_ptr_ (&argc),
-        old_argv_ptr_ (&argv), {
+        old_argv_ptr_ (&argv) {
     fix_args (argc, argv);
   }
 
-  // Restore original argc,argv,env values, if changed
+  // Restore original argc, argv if changed
   ~args () {
     if (old_argc_ptr_) *old_argc_ptr_= old_argc_;
     if (old_argv_ptr_) *old_argv_ptr_= old_argv_;
   }
 
 private:
-  void fix_args (int& argc, char**& argv) {
-    int       wargc;
-    wchar_t** wargv= CommandLineToArgvW (GetCommandLineW (), &wargc);
-    if (!wargv) {
-      argc              = 0;
-      static char* dummy= 0;
-      argv              = &dummy;
-      return;
-    }
-    try {
-      args_.resize (wargc + 1, 0);
-      arg_values_.resize (wargc);
-      for (int i= 0; i < wargc; i++) {
-        if (!arg_values_[i].convert (wargv[i])) {
-          wargc= i;
-          break;
-        }
-        args_[i]= arg_values_[i].c_str ();
-      }
-      argc= wargc;
-      argv= &args_[0];
-    } catch (...) {
-      LocalFree (wargv);
-      throw;
-    }
-    LocalFree (wargv);
-  }
+  void fix_args (int& argc, char**& argv);
 
-  std::vector<char*>             args_;
-  std::vector<short_stackstring> arg_values_;
-  stackstring                    env_;
-  std::vector<char*>             envp_;
+  std::vector<char*>  args_;
+  std::vector<string> arg_values_;
 
   int    old_argc_;
   char** old_argv_;
@@ -74,4 +50,5 @@ public:
   ~args () {}
 };
 #endif
+} // namespace system
 } // namespace lolly

@@ -92,6 +92,30 @@ utf16_to_utf8 (string s_u16) {
 }
 
 string
+wchar_to_utf8 (const wchar_t* s_u16) {
+  int        wchar_size= tb_wcslen (s_u16);
+  tb_size_t  isize     = wchar_size * 2;
+  tb_byte_t* idata     = tb_malloc_bytes (isize);
+  tb_long_t  osize     = (tb_long_t) (isize << 2);
+  tb_byte_t* odata     = tb_malloc_bytes ((tb_size_t) osize);
+
+  for (int i= 0; i < wchar_size; i++) {
+    uint16_t bytes  = (uint16_t) s_u16[i];
+    idata[2 * i]    = (tb_byte_t) (bytes >> 8);
+    idata[2 * i + 1]= (tb_byte_t) (bytes & 0x00FF);
+  }
+
+  osize= tb_charset_conv_data (TB_CHARSET_TYPE_UTF16, TB_CHARSET_TYPE_UTF8,
+                               idata, isize, odata, osize);
+
+  string ret;
+  for (int i= 0; i < osize; i++) {
+    ret << (char) odata[i];
+  }
+  return ret;
+}
+
+string
 utf8_to_utf16 (string s_u8) {
   tb_long_t  osize= (tb_long_t) (N (s_u8) << 2);
   tb_byte_t* odata= tb_malloc_bytes ((tb_size_t) osize);
