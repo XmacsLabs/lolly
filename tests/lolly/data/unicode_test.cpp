@@ -32,7 +32,9 @@ TEST_CASE ("cjk_unified_ideographs") {
   CHECK (!is_cjk_unified_ideographs ("bib-<#4E2D>"));
 }
 
+#if defined(OS_MINGW) || defined(OS_WIN)
 TEST_CASE ("wchar to utf8") { string_eq (wchar_to_utf8 (L"中"), "中"); }
+#endif
 
 TEST_CASE ("utf16 to utf8") {
   string t= "";

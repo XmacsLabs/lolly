@@ -47,6 +47,7 @@ bool has_cjk_unified_ideographs (string s);
  */
 string utf16_to_utf8 (string s_u16);
 
+#if defined(OS_MINGW) || defined(OS_WIN)
 /**
  * @brief Convert wchar_t* to UTF-8 string
  * @param s_u16 the string using the UTF-16 encoding
@@ -54,6 +55,7 @@ string utf16_to_utf8 (string s_u16);
  * @note For invalid UTF-16 string, only the valid part will be converted
  */
 string wchar_to_utf8 (const wchar_t* s_u16);
+#endif
 
 /**
  * @brief Convert UTF-8 string to UTF-16 string

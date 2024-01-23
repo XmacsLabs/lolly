@@ -93,6 +93,7 @@ utf16_to_utf8 (string s_u16) {
   return ret;
 }
 
+#if defined(OS_MINGW) || defined(OS_WIN)
 string
 wchar_to_utf8 (const wchar_t* s_u16) {
   int        wchar_size= tb_wcslen (s_u16);
@@ -120,6 +121,7 @@ wchar_to_utf8 (const wchar_t* s_u16) {
   if (odata) tb_free (odata);
   return ret;
 }
+#endif
 
 string
 utf8_to_utf16 (string s_u8) {
