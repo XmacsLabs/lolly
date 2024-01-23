@@ -88,6 +88,8 @@ utf16_to_utf8 (string s_u16) {
   for (int i= 0; i < osize; i++) {
     ret << (char) odata[i];
   }
+  if (idata) tb_free (idata);
+  if (odata) tb_free (odata);
   return ret;
 }
 
@@ -100,10 +102,13 @@ wchar_to_utf8 (const wchar_t* s_u16) {
   tb_byte_t* odata     = tb_malloc_bytes ((tb_size_t) osize);
 
   for (int i= 0; i < wchar_size; i++) {
-    uint16_t bytes  = (uint16_t) s_u16[i];
-    idata[2 * i]    = (tb_byte_t) (bytes >> 8);
-    idata[2 * i + 1]= (tb_byte_t) (bytes & 0x00FF);
+    uint16_t  bytes = (uint16_t) s_u16[i];
+    tb_byte_t high  = (tb_byte_t) (bytes >> 8);
+    tb_byte_t low   = (tb_byte_t) (bytes & 0x00FF);
+    idata[2 * i]    = high;
+    idata[2 * i + 1]= low;
   }
+  cout << isize << LF;
 
   osize= tb_charset_conv_data (TB_CHARSET_TYPE_UTF16, TB_CHARSET_TYPE_UTF8,
                                idata, isize, odata, osize);
@@ -112,6 +117,8 @@ wchar_to_utf8 (const wchar_t* s_u16) {
   for (int i= 0; i < osize; i++) {
     ret << (char) odata[i];
   }
+  if (idata) tb_free (idata);
+  if (odata) tb_free (odata);
   return ret;
 }
 
@@ -125,6 +132,7 @@ utf8_to_utf16 (string s_u8) {
   for (int i= 0; i < osize; i++) {
     ret << (char) odata[i];
   }
+  if (odata) tb_free (odata);
   return ret;
 }
 

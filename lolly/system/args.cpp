@@ -1,7 +1,9 @@
 #include "args.hpp"
 #include "lolly/data/unicode.hpp"
 #include "string.hpp"
+
 #include <shellapi.h>
+#include <stdio.h>
 #include <windows.h>
 
 using lolly::data::wchar_to_utf8;
@@ -11,7 +13,7 @@ namespace system {
 void
 args::fix_args (int& argc, char**& argv) {
   int       wargc;
-  wchar_t** wargv= CommandLineToArgvW (GetCommandLineW (), &argc);
+  wchar_t** wargv= CommandLineToArgvW (GetCommandLineW (), &wargc);
   if (!wargv) {
     argc              = 0;
     static char* dummy= 0;
@@ -28,10 +30,10 @@ args::fix_args (int& argc, char**& argv) {
     argc= wargc;
     argv= &args_[0];
   } catch (...) {
-    LocalFree (argv);
+    LocalFree (wargv);
     throw;
   }
-  LocalFree (argv);
+  LocalFree (wargv);
 }
 
 } // namespace system
