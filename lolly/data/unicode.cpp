@@ -10,6 +10,7 @@
  ******************************************************************************/
 
 #include "unicode.hpp"
+#include "tbox/tbox.h"
 
 namespace lolly {
 namespace data {
@@ -67,6 +68,27 @@ has_cjk_unified_ideographs (string s) {
       continue;
     }
   return false;
+}
+
+string
+utf16_to_utf8 (string s_u16) {
+  tb_size_t  isize= N (s_u16);
+  tb_byte_t* idata= tb_malloc_bytes (isize);
+  tb_long_t  osize= (tb_long_t) (isize << 2);
+  tb_byte_t* odata= tb_malloc_bytes ((tb_size_t) osize);
+
+  for (int i= 0; i < isize; i++) {
+    idata[i]= (tb_byte_t) s_u16[i];
+  }
+
+  osize= tb_charset_conv_data (TB_CHARSET_TYPE_UTF16, TB_CHARSET_TYPE_UTF8,
+                               idata, isize, odata, osize);
+
+  string ret;
+  for (int i= 0; i < osize; i++) {
+    ret << (char) odata[i];
+  }
+  return ret;
 }
 
 } // namespace data

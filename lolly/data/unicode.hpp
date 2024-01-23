@@ -38,5 +38,13 @@ bool is_cjk_unified_ideographs (string s);
  * encoded format.
  */
 bool has_cjk_unified_ideographs (string s);
+
+/**
+ * @brief Convert UTF-16 string to UTF-8 string
+ * @param s_u16 the string using the UTF-16 encoding
+ * @return the string using the UTF-8 encoding
+ * @note For invalid UTF-16 string, only the valid part will be converted
+ */
+string utf16_to_utf8 (string s_u16);
 } // namespace data
 } // namespace lolly
