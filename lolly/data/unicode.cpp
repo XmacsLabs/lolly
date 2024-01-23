@@ -91,5 +91,18 @@ utf16_to_utf8 (string s_u16) {
   return ret;
 }
 
+string
+utf8_to_utf16 (string s_u8) {
+  tb_long_t  osize= (tb_long_t) (N (s_u8) << 2);
+  tb_byte_t* odata= tb_malloc_bytes ((tb_size_t) osize);
+  osize= tb_charset_conv_cstr (TB_CHARSET_TYPE_UTF8, TB_CHARSET_TYPE_UTF16,
+                               c_string (s_u8), odata, osize);
+  string ret;
+  for (int i= 0; i < osize; i++) {
+    ret << (char) odata[i];
+  }
+  return ret;
+}
+
 } // namespace data
 } // namespace lolly
