@@ -14,6 +14,7 @@ using lolly::data::wchar_to_utf8;
 
 namespace lolly {
 namespace system {
+#if defined(OS_WIN) || defined(OS_MINGW)
 void
 args::fix_args (int& argc, char**& argv) {
   int       wargc;
@@ -39,6 +40,7 @@ args::fix_args (int& argc, char**& argv) {
   }
   LocalFree (wargv);
 }
+#endif
 
 } // namespace system
 } // namespace lolly

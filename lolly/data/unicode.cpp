@@ -108,7 +108,6 @@ wchar_to_utf8 (const wchar_t* s_u16) {
     idata[2 * i]    = high;
     idata[2 * i + 1]= low;
   }
-  cout << isize << LF;
 
   osize= tb_charset_conv_data (TB_CHARSET_TYPE_UTF16, TB_CHARSET_TYPE_UTF8,
                                idata, isize, odata, osize);
