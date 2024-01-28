@@ -38,5 +38,14 @@ main () {
                      array<string> ("long string", "short", "", "<#ABCD>"));
   bench_string_join ("join two string", array<string> ("long string", "short"));
   bench_string_join ("join empty ones", array<string> (5));
+
+  ankerl::nanobench::Rng rng;
+  int                    total= 20;
+  array<string>          test_case;
+  for (int i= 0; i < total; i++) {
+    test_case << string ('!' + i, rng.bounded (30));
+  }
+  bench_string_join ("join a bunch of random string", test_case);
+
   return 0;
 }
