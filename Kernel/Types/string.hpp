@@ -13,9 +13,10 @@
 #ifndef STRING_H
 #define STRING_H
 #include "basic.hpp"
+#include <memory>
 
 class string;
-class string_rep : concrete_struct {
+class string_rep {
   int   n;
   char* a;
 
@@ -31,22 +32,22 @@ public:
   friend inline int N (string a);
 };
 
-class string {
-  CONCRETE (string);
-  inline string () : rep (tm_new<string_rep> ()) {}
-  inline string (int n) : rep (tm_new<string_rep> (n)) {}
+using string_ptr= std::shared_ptr<string_rep>;
+class string : public string_ptr {
+public:
+  inline string () : string_ptr (tm_new<string_rep> ()) {}
+  inline string (int n) : string_ptr (tm_new<string_rep> (n)) {}
   string (char c);
   string (char c, int n);
   string (const char* s);
   string (const char* s, int n);
-  inline char& operator[] (int i) { return rep->a[i]; }
+  inline char& operator[] (int i) { return get ()->a[i]; }
   bool         operator== (const char* s);
   bool         operator!= (const char* s);
   bool         operator== (string s);
   bool         operator!= (string s);
   string       operator() (int start, int end);
 };
-CONCRETE_CODE (string);
 
 extern inline int
 N (string a) {

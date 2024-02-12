@@ -51,29 +51,25 @@ string_rep::resize (int m) {
   n= m;
 }
 
-string::string (char c) {
-  rep      = tm_new<string_rep> (1);
-  rep->a[0]= c;
+string::string (char c) : string_ptr (tm_new<string_rep> (1)) {
+  get ()->a[0]= c;
 }
 
-string::string (char c, int n) {
-  rep= tm_new<string_rep> (n);
+string::string (char c, int n) : string_ptr (tm_new<string_rep> (n)) {
   for (int i= 0; i < n; i++)
-    rep->a[i]= c;
+    get ()->a[i]= c;
 }
 
-string::string (const char* a) {
+string::string (const char* a) : string_ptr (tm_new<string_rep> (strlen (a))) {
   int i, n= strlen (a);
-  rep= tm_new<string_rep> (n);
   for (i= 0; i < n; i++)
-    rep->a[i]= a[i];
+    get ()->a[i]= a[i];
 }
 
-string::string (const char* a, int n) {
+string::string (const char* a, int n) : string_ptr (tm_new<string_rep> (n)) {
   int i;
-  rep= tm_new<string_rep> (n);
   for (i= 0; i < n; i++)
-    rep->a[i]= a[i];
+    get ()->a[i]= a[i];
 }
 
 /******************************************************************************
@@ -82,8 +78,8 @@ string::string (const char* a, int n) {
 
 bool
 string::operator== (const char* s) {
-  int   i, n= rep->n;
-  char* S= rep->a;
+  int   i, n= get ()->n;
+  char* S= get ()->a;
   for (i= 0; i < n; i++) {
     if (s[i] != S[i]) return false;
     if (s[i] == '\0') return false;
@@ -93,8 +89,8 @@ string::operator== (const char* s) {
 
 bool
 string::operator!= (const char* s) {
-  int   i, n= rep->n;
-  char* S= rep->a;
+  int   i, n= get ()->n;
+  char* S= get ()->a;
   for (i= 0; i < n; i++) {
     if (s[i] != S[i]) return true;
     if (s[i] == '\0') return true;
@@ -105,18 +101,18 @@ string::operator!= (const char* s) {
 bool
 string::operator== (string a) {
   int i;
-  if (rep->n != a->n) return false;
-  for (i= 0; i < rep->n; i++)
-    if (rep->a[i] != a->a[i]) return false;
+  if (get ()->n != a->n) return false;
+  for (i= 0; i < get ()->n; i++)
+    if (get ()->a[i] != a->a[i]) return false;
   return true;
 }
 
 bool
 string::operator!= (string a) {
   int i;
-  if (rep->n != a->n) return true;
-  for (i= 0; i < rep->n; i++)
-    if (rep->a[i] != a->a[i]) return true;
+  if (get ()->n != a->n) return true;
+  for (i= 0; i < get ()->n; i++)
+    if (get ()->a[i] != a->a[i]) return true;
   return false;
 }
 
@@ -125,11 +121,11 @@ string::operator() (int begin, int end) {
   if (end <= begin) return string ();
 
   int i;
-  begin= max (min (rep->n, begin), 0);
-  end  = max (min (rep->n, end), 0);
+  begin= max (min (get ()->n, begin), 0);
+  end  = max (min (get ()->n, end), 0);
   string r (end - begin);
   for (i= begin; i < end; i++)
-    r[i - begin]= rep->a[i];
+    r[i - begin]= get ()->a[i];
   return r;
 }
 
