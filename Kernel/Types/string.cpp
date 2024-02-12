@@ -51,25 +51,31 @@ string_rep::resize (int m) {
   n= m;
 }
 
-string::string (char c) : string_ptr (tm_new<string_rep> (1)) {
+string::string (char c) : string_ptr (tm_new<string_rep> (1), string_deleter) {
   get ()->a[0]= c;
 }
 
-string::string (char c, int n) : string_ptr (tm_new<string_rep> (n)) {
+string::string (char c, int n)
+    : string_ptr (tm_new<string_rep> (n), string_deleter) {
+  char* S= get ()->a;
   for (int i= 0; i < n; i++)
-    get ()->a[i]= c;
+    S[i]= c;
 }
 
-string::string (const char* a) : string_ptr (tm_new<string_rep> (strlen (a))) {
+string::string (const char* a)
+    : string_ptr (tm_new<string_rep> (strlen (a)), string_deleter) {
   int i, n= strlen (a);
+  char* S= get ()->a;
   for (i= 0; i < n; i++)
-    get ()->a[i]= a[i];
+    S[i]= a[i];
 }
 
-string::string (const char* a, int n) : string_ptr (tm_new<string_rep> (n)) {
+string::string (const char* a, int n)
+    : string_ptr (tm_new<string_rep> (n), string_deleter) {
   int i;
+  char* S= get ()->a;
   for (i= 0; i < n; i++)
-    get ()->a[i]= a[i];
+    S[i]= a[i];
 }
 
 /******************************************************************************
@@ -100,19 +106,21 @@ string::operator!= (const char* s) {
 
 bool
 string::operator== (string a) {
-  int i;
-  if (get ()->n != a->n) return false;
-  for (i= 0; i < get ()->n; i++)
-    if (get ()->a[i] != a->a[i]) return false;
+  int i, n= get()->n;
+  char* S= get ()->a;
+  if (n != a->n) return false;
+  for (i= 0; i < n; i++)
+    if (S[i] != a->a[i]) return false;
   return true;
 }
 
 bool
 string::operator!= (string a) {
-  int i;
-  if (get ()->n != a->n) return true;
-  for (i= 0; i < get ()->n; i++)
-    if (get ()->a[i] != a->a[i]) return true;
+  int i, n= get()->n;
+  char* S= get ()->a;
+  if (n != a->n) return true;
+  for (i= 0; i < n; i++)
+    if (S[i] != a->a[i]) return true;
   return false;
 }
 
@@ -121,11 +129,12 @@ string::operator() (int begin, int end) {
   if (end <= begin) return string ();
 
   int i;
+  char* S= get ()->a;
   begin= max (min (get ()->n, begin), 0);
   end  = max (min (get ()->n, end), 0);
   string r (end - begin);
   for (i= begin; i < end; i++)
-    r[i - begin]= get ()->a[i];
+    r[i - begin]= S[i];
   return r;
 }
 

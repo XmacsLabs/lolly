@@ -33,10 +33,11 @@ public:
 };
 
 using string_ptr= std::shared_ptr<string_rep>;
+static const tm_deleter<string_rep> string_deleter;
 class string : public string_ptr {
 public:
-  inline string () : string_ptr (tm_new<string_rep> ()) {}
-  inline string (int n) : string_ptr (tm_new<string_rep> (n)) {}
+  inline string () : string_ptr (tm_new<string_rep> (), string_deleter) {}
+  inline string (int n) : string_ptr (tm_new<string_rep> (n), string_deleter) {}
   string (char c);
   string (char c, int n);
   string (const char* s);
@@ -53,16 +54,17 @@ extern inline int
 N (string a) {
   return a->n;
 }
-string      copy (string a);
-tm_ostream& operator<< (tm_ostream& out, string a);
-string&     operator<< (string& a, char);
-string&     operator<< (string& a, string b);
-string      operator* (const char* a, string b);
-string      operator* (string a, string b);
-string      operator* (string a, const char* b);
-bool        operator< (string a, string b);
-bool        operator<= (string a, string b);
-int         hash (string s);
+string        copy (string a);
+tm_ostream&   operator<< (tm_ostream& out, string a);
+std::ostream& operator<< (std::ostream& out, string a)= delete;
+string&       operator<< (string& a, char);
+string&       operator<< (string& a, string b);
+string        operator* (const char* a, string b);
+string        operator* (string a, string b);
+string        operator* (string a, const char* b);
+bool          operator< (string a, string b);
+bool          operator<= (string a, string b);
+int           hash (string s);
 
 bool     as_bool (string s);
 int      as_int (string s);

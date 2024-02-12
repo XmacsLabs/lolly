@@ -711,4 +711,14 @@ tm_delete_array (C* Ptr) {
 
 #endif // defined(NO_FAST_ALLOC) || defined(X11TEXMACS)
 
+template <class T>
+struct tm_deleter{
+  tm_deleter(const tm_deleter<T>&) = default;
+  tm_deleter(tm_deleter<T>&&) = default;
+  tm_deleter() = default;
+  void operator()(T* ptr){
+    tm_delete(ptr);
+  }
+};
+
 #endif // defined FAST_ALLOC_H
