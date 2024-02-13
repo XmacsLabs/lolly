@@ -711,14 +711,88 @@ tm_delete_array (C* Ptr) {
 
 #endif // defined(NO_FAST_ALLOC) || defined(X11TEXMACS)
 
-template <class T>
-struct tm_deleter{
-  tm_deleter(const tm_deleter<T>&) = default;
-  tm_deleter(tm_deleter<T>&&) = default;
-  tm_deleter() = default;
-  void operator()(T* ptr){
-    tm_delete(ptr);
-  }
+#ifdef __cplusplus
+#if (__cplusplus >= 201103L) || (_MSC_VER > 1900) // C++11
+#define tm_attr_noexcept noexcept
+#else
+#define tm_attr_noexcept throw ()
+#endif
+#else
+#define tm_attr_noexcept
+#endif
+
+template <class T> struct tm_deleter {
+  tm_deleter (const tm_deleter<T>&)= default;
+  tm_deleter (tm_deleter<T>&&)     = default;
+  tm_deleter ()                    = default;
+  void operator() (T* ptr) { tm_delete (ptr); }
 };
+
+template <class T> struct tm_allocator {
+  typedef T                 value_type;
+  typedef std::size_t       size_type;
+  typedef std::ptrdiff_t    difference_type;
+  typedef value_type&       reference;
+  typedef value_type const& const_reference;
+  typedef value_type*       pointer;
+  typedef value_type const* const_pointer;
+  typedef const void*       void_pointer;
+
+#if ((__cplusplus >= 201103L) || (_MSC_VER > 1900)) // C++11
+  using propagate_on_container_copy_assignment= std::true_type;
+  using propagate_on_container_move_assignment= std::true_type;
+  using propagate_on_container_swap           = std::true_type;
+  template <class U, class... Args> void construct (U* p, Args&&... args) {
+    ::new (p) U (std::forward<Args> (args)...);
+  }
+  template <class U> void destroy (U* p) tm_attr_noexcept { p->~U (); }
+#else
+  void construct (pointer p, value_type const& val) {
+    ::new (p) value_type (val);
+  }
+  void    destroy (pointer p) { p->~value_type (); }
+#endif
+
+  size_type max_size () const tm_attr_noexcept {
+    return (PTRDIFF_MAX / sizeof (value_type));
+  }
+  pointer       address (reference x) const { return &x; }
+  const_pointer address (const_reference x) const { return &x; }
+  template <class U> struct rebind {
+    typedef tm_allocator<U> other;
+  };
+
+  tm_allocator () tm_attr_noexcept                   = default;
+  tm_allocator (const tm_allocator&) tm_attr_noexcept= default;
+  template <class U> tm_allocator (const tm_allocator<U>&) tm_attr_noexcept {}
+  tm_allocator select_on_container_copy_construction () const { return *this; }
+  void         deallocate (T* p, size_type) { fast_delete (p); }
+
+#if (__cplusplus >= 201703L) // C++17
+  T* allocate (size_type count) {
+    return static_cast<T*> (fast_new (count * sizeof (T)));
+  }
+  T* allocate (size_type count, void_pointer) { return allocate (count); }
+#else
+  pointer allocate (size_type count, void_pointer= 0) {
+    return static_cast<pointer> (fast_new (count * sizeof (T)));
+  }
+#endif
+
+#if ((__cplusplus >= 201103L) || (_MSC_VER > 1900)) // C++11
+  using is_always_equal= std::true_type;
+#endif
+};
+
+template <class T1, class T2>
+bool
+operator== (const tm_allocator<T1>&, const tm_allocator<T2>&) tm_attr_noexcept {
+  return true;
+}
+template <class T1, class T2>
+bool
+operator!= (const tm_allocator<T1>&, const tm_allocator<T2>&) tm_attr_noexcept {
+  return false;
+}
 
 #endif // defined FAST_ALLOC_H

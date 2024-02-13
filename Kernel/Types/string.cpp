@@ -51,28 +51,30 @@ string_rep::resize (int m) {
   n= m;
 }
 
-string::string (char c) : string_ptr (tm_new<string_rep> (1), string_deleter) {
+string::string (char c)
+    : string_ptr (std::allocate_shared<string_rep> (string_allocator, 1)) {
   get ()->a[0]= c;
 }
 
 string::string (char c, int n)
-    : string_ptr (tm_new<string_rep> (n), string_deleter) {
+    : string_ptr (std::allocate_shared<string_rep> (string_allocator, n)) {
   char* S= get ()->a;
   for (int i= 0; i < n; i++)
     S[i]= c;
 }
 
 string::string (const char* a)
-    : string_ptr (tm_new<string_rep> (strlen (a)), string_deleter) {
-  int i, n= strlen (a);
+    : string_ptr (
+          std::allocate_shared<string_rep> (string_allocator, strlen (a))) {
+  int   i, n= strlen (a);
   char* S= get ()->a;
   for (i= 0; i < n; i++)
     S[i]= a[i];
 }
 
 string::string (const char* a, int n)
-    : string_ptr (tm_new<string_rep> (n), string_deleter) {
-  int i;
+    : string_ptr (std::allocate_shared<string_rep> (string_allocator, n)) {
+  int   i;
   char* S= get ()->a;
   for (i= 0; i < n; i++)
     S[i]= a[i];
@@ -106,21 +108,22 @@ string::operator!= (const char* s) {
 
 bool
 string::operator== (string a) {
-  int i, n= get()->n;
-  char* S= get ()->a;
+  int   i, n= get ()->n;
+  char *S= get ()->a, *Sa= a->a;
+
   if (n != a->n) return false;
   for (i= 0; i < n; i++)
-    if (S[i] != a->a[i]) return false;
+    if (S[i] != Sa[i]) return false;
   return true;
 }
 
 bool
 string::operator!= (string a) {
-  int i, n= get()->n;
-  char* S= get ()->a;
+  int   i, n= get ()->n;
+  char *S= get ()->a, *Sa= a->a;
   if (n != a->n) return true;
   for (i= 0; i < n; i++)
-    if (S[i] != a->a[i]) return true;
+    if (S[i] != Sa[i]) return true;
   return false;
 }
 
@@ -128,13 +131,14 @@ string
 string::operator() (int begin, int end) {
   if (end <= begin) return string ();
 
-  int i;
+  int   i;
   char* S= get ()->a;
-  begin= max (min (get ()->n, begin), 0);
-  end  = max (min (get ()->n, end), 0);
+  begin  = max (min (get ()->n, begin), 0);
+  end    = max (min (get ()->n, end), 0);
   string r (end - begin);
+  char*  Sr= r->a;
   for (i= begin; i < end; i++)
-    r[i - begin]= S[i];
+    Sr[i - begin]= S[i];
   return r;
 }
 

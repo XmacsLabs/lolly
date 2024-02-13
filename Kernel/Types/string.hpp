@@ -33,11 +33,13 @@ public:
 };
 
 using string_ptr= std::shared_ptr<string_rep>;
-static const tm_deleter<string_rep> string_deleter;
+static const tm_allocator<string_rep> string_allocator;
 class string : public string_ptr {
 public:
-  inline string () : string_ptr (tm_new<string_rep> (), string_deleter) {}
-  inline string (int n) : string_ptr (tm_new<string_rep> (n), string_deleter) {}
+  inline string ()
+      : string_ptr (std::allocate_shared<string_rep> (string_allocator)) {}
+  inline string (int n)
+      : string_ptr (std::allocate_shared<string_rep> (string_allocator, n)) {}
   string (char c);
   string (char c, int n);
   string (const char* s);
