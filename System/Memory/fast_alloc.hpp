@@ -722,6 +722,7 @@ tm_delete_array (C* Ptr) {
 #endif
 
 #include <type_traits>
+#include <utility>
 
 template <class T> struct tm_allocator {
   typedef T                 value_type;
