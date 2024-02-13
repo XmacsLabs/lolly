@@ -721,12 +721,7 @@ tm_delete_array (C* Ptr) {
 #define tm_attr_noexcept
 #endif
 
-template <class T> struct tm_deleter {
-  tm_deleter (const tm_deleter<T>&)= default;
-  tm_deleter (tm_deleter<T>&&)     = default;
-  tm_deleter ()                    = default;
-  void operator() (T* ptr) { tm_delete (ptr); }
-};
+#include <type_traits>
 
 template <class T> struct tm_allocator {
   typedef T                 value_type;
