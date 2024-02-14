@@ -26,6 +26,10 @@ main () {
     static string a ("ab"), b ("b");
     a <= b;
   });
+  bench.run ("compare larger string", [&] {
+    static string a ("compare larger string"), b ("compare LARGER string");
+    a <= b;
+  });
   bench.run ("slice string", [&] {
     static string a ("abcde");
     a (2, 3);
