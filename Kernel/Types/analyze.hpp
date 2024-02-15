@@ -271,14 +271,6 @@ string igerman_to_german (string s);
 string german_to_igerman (string s);
 
 /**
- * @brief Checks if the string contains unicode characters.
- *
- * @param s The string to check.
- * @return True if the string contains unicode characters, False otherwise.
- */
-bool contains_unicode_char (string s);
-
-/**
  * @brief Converts tabs in a string to spaces.
  *
  * @param s The original string with tabs.
@@ -286,14 +278,6 @@ bool contains_unicode_char (string s);
  * @return A new string with tabs replaced by spaces.
  */
 string convert_tabs_to_spaces (string s, int w);
-
-/**
- * @brief Downgrades certain LaTeX-like mathematical letters to plain text.
- *
- * @param s The original string.
- * @return A new string with certain LaTeX-like letters downgraded.
- */
-string downgrade_math_letters (string s);
 
 /**
  * @brief Generates an alphabetic string for an integer.
