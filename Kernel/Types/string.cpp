@@ -106,8 +106,9 @@ bool
 string::operator== (string a) {
   int i;
   if (rep->n != a->n) return false;
+  char* S = rep->a, *s = a->a;
   for (i= 0; i < rep->n; i++)
-    if (rep->a[i] != a->a[i]) return false;
+    if (S[i] != s[i]) return false;
   return true;
 }
 
@@ -115,8 +116,9 @@ bool
 string::operator!= (string a) {
   int i;
   if (rep->n != a->n) return true;
+  char* S = rep->a, *s = a->a;
   for (i= 0; i < rep->n; i++)
-    if (rep->a[i] != a->a[i]) return true;
+    if (S[i] != s[i]) return true;
   return false;
 }
 
