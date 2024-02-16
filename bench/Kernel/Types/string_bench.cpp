@@ -23,7 +23,8 @@ main () {
     a == b;
   });
   bench.run ("equality of larger string", [&] {
-    static string a ("equality of larger string"), b ("equality of larger strinG");
+    static string a ("equality of larger string"),
+        b ("equality of larger strinG");
     a == b;
   });
   bench.run ("compare string", [&] {
