@@ -51,29 +51,33 @@ string_rep::resize (int m) {
   n= m;
 }
 
-string::string (char c) {
-  rep      = tm_new<string_rep> (1);
-  rep->a[0]= c;
+string::string (char c)
+    : string_ptr (std::allocate_shared<string_rep> (string_allocator, 1)) {
+  get ()->a[0]= c;
 }
 
-string::string (char c, int n) {
-  rep= tm_new<string_rep> (n);
+string::string (char c, int n)
+    : string_ptr (std::allocate_shared<string_rep> (string_allocator, n)) {
+  char* S= get ()->a;
   for (int i= 0; i < n; i++)
-    rep->a[i]= c;
+    S[i]= c;
 }
 
-string::string (const char* a) {
-  int i, n= strlen (a);
-  rep= tm_new<string_rep> (n);
+string::string (const char* a)
+    : string_ptr (
+          std::allocate_shared<string_rep> (string_allocator, strlen (a))) {
+  int   i, n= strlen (a);
+  char* S= get ()->a;
   for (i= 0; i < n; i++)
-    rep->a[i]= a[i];
+    S[i]= a[i];
 }
 
-string::string (const char* a, int n) {
-  int i;
-  rep= tm_new<string_rep> (n);
+string::string (const char* a, int n)
+    : string_ptr (std::allocate_shared<string_rep> (string_allocator, n)) {
+  int   i;
+  char* S= get ()->a;
   for (i= 0; i < n; i++)
-    rep->a[i]= a[i];
+    S[i]= a[i];
 }
 
 /******************************************************************************
@@ -82,8 +86,8 @@ string::string (const char* a, int n) {
 
 bool
 string::operator== (const char* s) {
-  int   i, n= rep->n;
-  char* S= rep->a;
+  int   i, n= get ()->n;
+  char* S= get ()->a;
   for (i= 0; i < n; i++) {
     if (s[i] != S[i]) return false;
     if (s[i] == '\0') return false;
@@ -93,8 +97,8 @@ string::operator== (const char* s) {
 
 bool
 string::operator!= (const char* s) {
-  int   i, n= rep->n;
-  char* S= rep->a;
+  int   i, n= get ()->n;
+  char* S= get ()->a;
   for (i= 0; i < n; i++) {
     if (s[i] != S[i]) return true;
     if (s[i] == '\0') return true;
@@ -104,19 +108,22 @@ string::operator!= (const char* s) {
 
 bool
 string::operator== (string a) {
-  int i;
-  if (rep->n != a->n) return false;
-  for (i= 0; i < rep->n; i++)
-    if (rep->a[i] != a->a[i]) return false;
+  int   i, n= get ()->n;
+  char *S= get ()->a, *Sa= a->a;
+
+  if (n != a->n) return false;
+  for (i= 0; i < n; i++)
+    if (S[i] != Sa[i]) return false;
   return true;
 }
 
 bool
 string::operator!= (string a) {
-  int i;
-  if (rep->n != a->n) return true;
-  for (i= 0; i < rep->n; i++)
-    if (rep->a[i] != a->a[i]) return true;
+  int   i, n= get ()->n;
+  char *S= get ()->a, *Sa= a->a;
+  if (n != a->n) return true;
+  for (i= 0; i < n; i++)
+    if (S[i] != Sa[i]) return true;
   return false;
 }
 
@@ -124,12 +131,14 @@ string
 string::operator() (int begin, int end) {
   if (end <= begin) return string ();
 
-  int i;
-  begin= max (min (rep->n, begin), 0);
-  end  = max (min (rep->n, end), 0);
+  int   i;
+  char* S= get ()->a;
+  begin  = max (min (get ()->n, begin), 0);
+  end    = max (min (get ()->n, end), 0);
   string r (end - begin);
+  char*  Sr= r->a;
   for (i= begin; i < end; i++)
-    r[i - begin]= rep->a[i];
+    Sr[i - begin]= S[i];
   return r;
 }
 

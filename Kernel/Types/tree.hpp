@@ -175,12 +175,16 @@ tree::operator[] (int i) {
 }
 inline int
 N (tree t) {
-  CHECK_COMPOUND (t);
-  return N ((static_cast<compound_rep*> (t.rep))->a);
+  if (is_atomic (t)) {
+    return N ((static_cast<atomic_rep*> (t.rep))->label);
+  }
+  else {
+    return N ((static_cast<compound_rep*> (t.rep))->a);
+  }
 }
 inline int
 arity (tree t) {
-  if (t.rep->op == /*STRING*/ 0) return 0;
+  if (is_atomic (t)) return 0;
   else return N ((static_cast<compound_rep*> (t.rep))->a);
 }
 inline int

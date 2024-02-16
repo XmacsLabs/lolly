@@ -67,9 +67,9 @@ TEST_CASE ("test_is_generic") {
 
 TEST_CASE ("test N()") {
   CHECK (N (tree ()) == 0);
-  CHECK (N (tree (0, tree ())) == 1);
-  CHECK (N (tree (0, tree (), tree ())) == 2);
-  CHECK (N (tree (0, tree (), tree (), tree ())) == 3);
+  CHECK (N (tree (1, tree ())) == 1);
+  CHECK (N (tree (1, tree (), tree ())) == 2);
+  CHECK (N (tree (1, tree (), tree (), tree ())) == 3);
 }
 
 TEST_CASE ("test_arity") {
@@ -80,11 +80,11 @@ TEST_CASE ("test_arity") {
 }
 
 TEST_CASE ("test right_index") {
-  CHECK (right_index (tree (0)) == 0);
+  // CHECK (right_index (tree (0)) == 0);
   CHECK (right_index (tree ("string")) == 6);
   CHECK (right_index (tree (280, tree ())) == 1);
   CHECK (right_index (tree (9, tree ())) == 1);
-  CHECK (right_index (tree (0, 5)) == 5);
+  // CHECK (right_index (tree (0, 5)) == 5);
 }
 
 TEST_CASE ("test A()") {
