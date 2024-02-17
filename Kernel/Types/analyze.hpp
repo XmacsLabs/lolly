@@ -491,6 +491,7 @@ int count_occurrences (string what, string in);
 bool occurs (string what, string in);
 
 bool contains (string s, string what);
+bool contains (string s, char c);
 
 /**
  * Finds the length of the longest string that is both a suffix of the first

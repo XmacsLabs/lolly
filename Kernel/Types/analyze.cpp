@@ -945,7 +945,8 @@ parse (string s, int& pos, SI*& a, int len) {
 
 int
 index_of (string s, char c) {
-  for (int i= 0; i < N (s); i++) {
+  int s_N= N (s);
+  for (int i= 0; i < s_N; i++) {
     if (s[i] == c) {
       return i;
     }
@@ -990,6 +991,17 @@ occurs (string what, string in) {
 bool
 contains (string s, string what) {
   return search_forwards (what, 0, s) >= 0;
+}
+
+bool
+contains (string s, char c) {
+  int s_N= N (s);
+  for (int i= 0; i < s_N; i++) {
+    if (s[i] == c) {
+      return true;
+    }
+  }
+  return false;
 }
 
 int
