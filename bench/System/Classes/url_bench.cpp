@@ -14,6 +14,7 @@ static ankerl::nanobench::Bench bench;
 int
 main () {
   lolly::init_tbox ();
+  bench.run ("url construct 8", [&] { url ("a/b/c/d/e/f/g/h"); });
   bench.run ("url descends equal",
              [&] { descends (url ("a/b/c"), url ("a/b/c")); });
   bench.run ("url descends concat 2",
