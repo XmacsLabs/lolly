@@ -184,7 +184,7 @@ TEST_CASE ("as_string") {
 
   SUBCASE ("tree with empty string") {
     string_eq (as_string (url ("")), "");
-    string_eq (as_string (url ("a") * url ("")), "a/");
+    string_eq (as_string (url ("a") * url ("")), string ("a") * URL_CONCATER);
   }
 
 #if defined(OS_MINGW) || defined(OS_WIN)
@@ -303,9 +303,13 @@ TEST_CASE ("is_atomic") {
   CHECK (is_atomic (url ("")));
 
   CHECK (!is_atomic (ustc_edu));
-  CHECK (!is_atomic (unix_root));
-  CHECK (!is_atomic (unix_tmp));
   CHECK (!is_atomic (url_none ()));
+  SUBCASE ("unix") {
+    if (!os_win ()) {
+      CHECK (!is_atomic (unix_root));
+      CHECK (!is_atomic (unix_tmp));
+    }
+  }
 }
 
 TEST_MEMORY_LEAK_ALL
