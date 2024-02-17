@@ -282,8 +282,6 @@ TEST_CASE ("load_string from newly created file") {
   }
 }
 
-TEST_MEMORY_LEAK_ALL
-
 TEST_CASE ("load_string from 3 local files and check exception") {
   url    lolly_tmp= get_lolly_tmp ();
   url    u1       = url_pwd () * url ("tests/System/Files/sample_file.txt");
@@ -294,10 +292,8 @@ TEST_CASE ("load_string from 3 local files and check exception") {
   CHECK (!load_string (u2, s2, false));
   string_eq (s1, s2);
 
-  CHECK_THROWS (load_string (u3, s3, true));
+  TM_CHECK_THROWS (load_string (u3, s3, true));
 }
-// because exception throw, some object will not be released.
-TEST_MEMORY_LEAK_RESET
 
 TEST_CASE ("load_string from url with :") {
   url u=
