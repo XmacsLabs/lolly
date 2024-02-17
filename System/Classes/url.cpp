@@ -543,9 +543,21 @@ factor (url u) {
 bool
 descends (url u, url base) {
   if (u == base) return true;
-  if (is_concat (u) && is_concat (base))
-    return u[1] == base[1] && descends (u[2], base[2]);
   if (is_concat (u) && is_atomic (base)) return u[1] == base;
+  if (is_concat (u) && is_concat (base)) {
+    url iter_u= u, iter_base= base;
+    while (iter_u[1] == iter_base[1]) {
+      iter_u   = iter_u[2];
+      iter_base= iter_base[2];
+      if (is_concat (iter_u) && is_concat (iter_base)) {
+        continue;
+      }
+      else {
+        return descends (iter_u, iter_base);
+      }
+    }
+    return false;
+  }
   if (is_or (u)) return descends (u[1], base) && descends (u[2], base);
   if (is_or (base)) return descends (u, base[1]) || descends (u, base[2]);
   return false;
