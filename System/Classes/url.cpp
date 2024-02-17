@@ -177,7 +177,7 @@ url_get_atom (string s, int type) {
       return unblank (url_system (val));
     }
   }
-  if (occurs ("*", s)) return url_wildcard (s);
+  if (contains (s, '*')) return url_wildcard (s);
 #ifdef WINPATHS
   if (N (s) == 2 && ends (s, ":"))
     s->resize (1); // remove the ':' after unit letter
