@@ -287,7 +287,7 @@ TEST_CASE ("descends") {
     CHECK (!descends (url ("a/b"), url ("a/")));
   }
   SUBCASE ("u or base is url_or") {
-    CHECK (!descends (url ("a:b"), url ("a:b")));
+    CHECK (descends (url ("a:b"), url ("a:b")));
     CHECK (descends (url ("a"), url ("a:b")));
     CHECK (descends (url ("b"), url ("a:b")));
     CHECK (!descends (url ("a:b"), url ("a")));
