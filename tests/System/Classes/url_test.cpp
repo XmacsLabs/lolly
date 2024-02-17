@@ -179,7 +179,7 @@ TEST_CASE ("as_string") {
   SUBCASE ("is_atomic") {
     string_eq (as_string (url_here ()), string ("."));
     string_eq (as_string (url_parent ()), string (".."));
-    string_eq (as_string (url_ancestor()), string ("..."));
+    string_eq (as_string (url_ancestor ()), string ("..."));
   }
 
   SUBCASE ("tree with empty string") {
