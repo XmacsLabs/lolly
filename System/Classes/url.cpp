@@ -212,7 +212,16 @@ url_get_name (string s, int type, int i) {
   url ret= u_list->item;
   u_list = u_list->next;
   while (!is_nil (u_list)) {
-    ret   = u_list->item * ret;
+    url u= u_list->item;
+    if (is_here (u) || (u->t == "")) {
+      // do nothing
+    }
+    else if (is_atomic (u)) {
+      ret= as_url (url_tuple ("concat", u->t, ret->t));
+    }
+    else {
+      ret= u * ret;
+    }
     u_list= u_list->next;
   }
   return ret;
@@ -583,10 +592,6 @@ descends (url u, url base) {
 
 url
 operator* (url u1, url u2) {
-  if (is_here (u1) || (u1->t == "")) return u2;
-  if (is_atomic (u1) && is_concat (u2)) {
-    return as_url (url_tuple ("concat", u1->t, u2->t));
-  }
   if (is_root (u2) || (is_concat (u2) && is_root (u2[1]))) {
     if (is_concat (u1) && is_root_web (u1[1])) {
       if (is_root (u2, "default") ||
@@ -605,6 +610,7 @@ operator* (url u1, url u2) {
     }
     return u2;
   }
+  if (is_here (u1) || (u1->t == "")) return u2;
   if (is_here (u2)) return u1;
   if (is_none (u1)) return url_none ();
   if (is_none (u2)) return url_none ();

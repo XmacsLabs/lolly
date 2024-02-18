@@ -256,6 +256,13 @@ TEST_CASE ("url_concat") {
   url_eq (url_root ("file") * url ("tmp"), url_system ("file:///tmp"));
 }
 
+TEST_CASE ("expand") {
+  if (!os_win ()) {
+    url tmp_or_usr= url ("/tmp") | url ("/usr");
+    url_eq (expand (url_pwd () * tmp_or_usr), tmp_or_usr);
+  }
+}
+
 TEST_CASE ("reroot") {
   CHECK (!is_rooted (reroot (url_system ("tmp"), "file")));
   CHECK (is_rooted (reroot (url_pwd (), "file")));
