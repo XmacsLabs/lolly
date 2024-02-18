@@ -215,11 +215,9 @@ url_get_name (string s, int type, int i) {
     url u= u_list->item;
     if (is_here (u) || (u->t == "")) {
       // do nothing
-    }
-    else if (is_atomic (u)) {
+    } else if (is_atomic (u)) {
       ret= as_url (url_tuple ("concat", u->t, ret->t));
-    }
-    else {
+    } else {
       ret= u * ret;
     }
     u_list= u_list->next;
