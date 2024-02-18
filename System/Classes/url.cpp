@@ -212,7 +212,7 @@ url_get_name (string s, int type, int i) {
   url ret= u_list->item;
   u_list = u_list->next;
   while (!is_nil (u_list)) {
-    ret   = as_url (url_tuple ("concat", u_list->item->t, ret->t));
+    ret   = u_list->item * ret;
     u_list= u_list->next;
   }
   return ret;
