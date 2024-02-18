@@ -257,7 +257,7 @@ TEST_CASE ("url_concat") {
 }
 
 TEST_CASE ("expand") {
-  url tmp_or_usr= url("/tmp") | url("/usr");
+  url tmp_or_usr= url ("/tmp") | url ("/usr");
   url_eq (expand (url_pwd () * tmp_or_usr), tmp_or_usr);
 }
 
