@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.22</span>
    </div>
   </td>
  </tr>
@@ -108,13 +108,13 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span>*</div>
 <div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="je__malloc_8cpp.html#ad279aae3c5ebab1b0555ee8736c17ba5">   23</a></span><a class="code hl_function" href="je__malloc_8cpp.html#ad279aae3c5ebab1b0555ee8736c17ba5">safe_malloc</a> (<span class="keywordtype">size_t</span> sz) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>= <a class="code hl_class" href="classarray.html">malloc</a> (sz);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">void</span>* <a class="code hl_class" href="classlist.html">ptr</a>= <a class="code hl_class" href="classlist.html">malloc</a> (sz);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classarray.html">ptr</a> == <a class="code hl_class" href="classarray.html">NULL</a>) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">ptr</a> == <a class="code hl_class" href="classlist.html">NULL</a>) {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_variable" href="tm__ostream_8cpp.html#a046e54865aa998d93de1c39c09d3da21">cerr</a> &lt;&lt; <span class="stringliteral">&quot;Fatal error: out of memory\n&quot;</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="classarray.html">abort</a> ();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="classlist.html">abort</a> ();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">ptr</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">ptr</a>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
@@ -127,21 +127,21 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span></div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="je__malloc_8cpp.html#a2f0da830980b741e5d30452b85c3336b">   39</a></span><a class="code hl_function" href="je__malloc_8cpp.html#a2f0da830980b741e5d30452b85c3336b">fast_free</a> (<span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>, <span class="keywordtype">size_t</span> sz) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_class" href="classarray.html">free</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="je__malloc_8cpp.html#a2f0da830980b741e5d30452b85c3336b">   39</a></span><a class="code hl_function" href="je__malloc_8cpp.html#a2f0da830980b741e5d30452b85c3336b">fast_free</a> (<span class="keywordtype">void</span>* <a class="code hl_class" href="classlist.html">ptr</a>, <span class="keywordtype">size_t</span> sz) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_class" href="classlist.html">free</a> (<a class="code hl_class" href="classlist.html">ptr</a>);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
 </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span>*</div>
 <div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="je__malloc_8cpp.html#ade079e321fa9266e7e8e50612e9af2fd">   44</a></span><a class="code hl_function" href="je__malloc_8cpp.html#ade079e321fa9266e7e8e50612e9af2fd">fast_realloc</a> (<span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>, <span class="keywordtype">size_t</span>, <span class="keywordtype">size_t</span> <a class="code hl_class" href="classarray.html">new_size</a>) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">new_ptr</a>= <a class="code hl_class" href="classarray.html">realloc</a> (<a class="code hl_class" href="classarray.html">ptr</a>, <a class="code hl_class" href="classarray.html">new_size</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="je__malloc_8cpp.html#ade079e321fa9266e7e8e50612e9af2fd">   44</a></span><a class="code hl_function" href="je__malloc_8cpp.html#ade079e321fa9266e7e8e50612e9af2fd">fast_realloc</a> (<span class="keywordtype">void</span>* <a class="code hl_class" href="classlist.html">ptr</a>, <span class="keywordtype">size_t</span>, <span class="keywordtype">size_t</span> <a class="code hl_class" href="classlist.html">new_size</a>) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">void</span>* <a class="code hl_class" href="classlist.html">new_ptr</a>= <a class="code hl_class" href="classlist.html">realloc</a> (<a class="code hl_class" href="classlist.html">ptr</a>, <a class="code hl_class" href="classlist.html">new_size</a>);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classarray.html">new_ptr</a> == <a class="code hl_class" href="classarray.html">NULL</a>) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">new_ptr</a> == <a class="code hl_class" href="classlist.html">NULL</a>) {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_variable" href="tm__ostream_8cpp.html#a046e54865aa998d93de1c39c09d3da21">cerr</a> &lt;&lt; <span class="stringliteral">&quot;Fatal error: out of memory\n&quot;</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="classarray.html">abort</a> ();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="classlist.html">abort</a> ();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classarray.html">new_ptr</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">new_ptr</a>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
@@ -154,8 +154,8 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span></div>
 <div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="je__malloc_8cpp.html#a2972888e3e766c07c1842fd506818686">   60</a></span><a class="code hl_function" href="je__malloc_8cpp.html#a2972888e3e766c07c1842fd506818686">fast_delete</a> (<span class="keywordtype">void</span>* <a class="code hl_class" href="classarray.html">ptr</a>) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_class" href="classarray.html">free</a> (<a class="code hl_class" href="classarray.html">ptr</a>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="je__malloc_8cpp.html#a2972888e3e766c07c1842fd506818686">   60</a></span><a class="code hl_function" href="je__malloc_8cpp.html#a2972888e3e766c07c1842fd506818686">fast_delete</a> (<span class="keywordtype">void</span>* <a class="code hl_class" href="classlist.html">ptr</a>) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_class" href="classlist.html">free</a> (<a class="code hl_class" href="classlist.html">ptr</a>);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
 </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
@@ -180,7 +180,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <a class="code hl_variable" href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a> &lt;&lt; <span class="stringliteral">&quot;\n------- (NOT IMPLEMENTED) memory statistics -------\n&quot;</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
 </div>
-<div class="ttc" id="aclassarray_html"><div class="ttname"><a href="classarray.html">array</a></div><div class="ttdoc">A template class representing an array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00095">array.hpp:95</a></div></div>
+<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
 <div class="ttc" id="afast__alloc_8hpp_html"><div class="ttname"><a href="fast__alloc_8hpp.html">fast_alloc.hpp</a></div></div>
 <div class="ttc" id="aje__malloc_8cpp_html_a1fbd1f1e6ecaf3d95792c9c6a55766d4"><div class="ttname"><a href="je__malloc_8cpp.html#a1fbd1f1e6ecaf3d95792c9c6a55766d4">mem_info</a></div><div class="ttdeci">void mem_info()</div><div class="ttdef"><b>Definition</b> <a href="#l00078">je_malloc.cpp:78</a></div></div>
 <div class="ttc" id="aje__malloc_8cpp_html_a2972888e3e766c07c1842fd506818686"><div class="ttname"><a href="je__malloc_8cpp.html#a2972888e3e766c07c1842fd506818686">fast_delete</a></div><div class="ttdeci">void fast_delete(void *ptr)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">je_malloc.cpp:60</a></div></div>

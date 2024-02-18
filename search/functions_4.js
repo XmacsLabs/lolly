@@ -10,7 +10,6 @@ var searchData=
   ['distance_7',['distance',['../analyze_8cpp.html#ac259e5a31378d13ae5ad0c7cb3c532c3',1,'distance(string s1, string s2):&#160;analyze.cpp'],['../analyze_8hpp.html#ac259e5a31378d13ae5ad0c7cb3c532c3',1,'distance(string s1, string s2):&#160;analyze.cpp']]],
   ['done_8',['done',['../classobserver__rep.html#a9cb2ff85da104bf1e5d9b766185acf77',1,'observer_rep']]],
   ['dos_5fto_5fbetter_9',['dos_to_better',['../analyze_8cpp.html#ae798ecf0cbbcb90b9d0a5707fc3110d9',1,'dos_to_better(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#ae798ecf0cbbcb90b9d0a5707fc3110d9',1,'dos_to_better(string s):&#160;analyze.cpp']]],
-  ['downgrade_5fmath_5fletters_10',['downgrade_math_letters',['../analyze_8cpp.html#a7aba74f09662ba05fafc1fc273be5bc6',1,'downgrade_math_letters(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#a7aba74f09662ba05fafc1fc273be5bc6',1,'downgrade_math_letters(string s):&#160;analyze.cpp']]],
-  ['download_11',['download',['../namespacelolly_1_1io.html#a02be76cd209a2d84a7b267e348c170d2',1,'lolly::io']]],
-  ['dump_12',['dump',['../classlolly_1_1data_1_1json.html#ace6a263522b00fbf69c51bc93668751c',1,'lolly::data::json']]]
+  ['download_10',['download',['../namespacelolly_1_1io.html#a02be76cd209a2d84a7b267e348c170d2',1,'lolly::io']]],
+  ['dump_11',['dump',['../classlolly_1_1data_1_1json.html#ace6a263522b00fbf69c51bc93668751c',1,'lolly::data::json']]]
 ];

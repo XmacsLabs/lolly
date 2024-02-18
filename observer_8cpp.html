@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.22</span>
    </div>
   </td>
  </tr>
@@ -95,9 +95,9 @@ Include dependency graph for observer.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aeb219024b15804fdd910692e94d6d64b" id="r_aeb219024b15804fdd910692e94d6d64b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb219024b15804fdd910692e94d6d64b">operator&lt;&lt;</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="classobserver.html">observer</a> <a class="el" href="classarray.html">o</a>)</td></tr>
+<tr class="memitem:aeb219024b15804fdd910692e94d6d64b" id="r_aeb219024b15804fdd910692e94d6d64b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb219024b15804fdd910692e94d6d64b">operator&lt;&lt;</a> (<a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;out, <a class="el" href="classobserver.html">observer</a> <a class="el" href="classlist.html">o</a>)</td></tr>
 <tr class="separator:aeb219024b15804fdd910692e94d6d64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a194934586c73e2a57345274a85f241e2" id="r_a194934586c73e2a57345274a85f241e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarray.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a194934586c73e2a57345274a85f241e2">touch</a> (<a class="el" href="classtree.html">tree</a> &amp;<a class="el" href="classarray.html">ref</a>)</td></tr>
+<tr class="memitem:a194934586c73e2a57345274a85f241e2" id="r_a194934586c73e2a57345274a85f241e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a194934586c73e2a57345274a85f241e2">touch</a> (<a class="el" href="classtree.html">tree</a> &amp;<a class="el" href="classlist.html">ref</a>)</td></tr>
 <tr class="memdesc:a194934586c73e2a57345274a85f241e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modification routines for trees and other observer-related facilities.  <br /></td></tr>
 <tr class="separator:a194934586c73e2a57345274a85f241e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -114,7 +114,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp; <a class="el" href="classarray.html">operator</a>&lt;&lt; </td>
+          <td class="memname"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp; <a class="el" href="classlist.html">operator</a>&lt;&lt; </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classtm__ostream.html">tm_ostream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em>, </span></td>
         </tr>
@@ -129,13 +129,13 @@ Variables</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00018">18</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   19</span>                                         {</div>
 <div class="line"><span class="lineno">   20</span>  out &lt;&lt; <span class="stringliteral">&quot;&lt;observer&quot;</span>;</div>
-<div class="line"><span class="lineno">   21</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (<a class="code hl_class" href="classarray.html">o</a>)) out &lt;&lt; <span class="stringliteral">&quot; null&quot;</span>;</div>
-<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">else</span> <a class="code hl_class" href="classarray.html">o</a>-&gt;print (out);</div>
+<div class="line"><span class="lineno">   21</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (<a class="code hl_class" href="classlist.html">o</a>)) out &lt;&lt; <span class="stringliteral">&quot; null&quot;</span>;</div>
+<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">else</span> <a class="code hl_class" href="classlist.html">o</a>-&gt;print (out);</div>
 <div class="line"><span class="lineno">   23</span>  out &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
 <div class="line"><span class="lineno">   24</span>  <span class="keywordflow">return</span> out;</div>
 <div class="line"><span class="lineno">   25</span>}</div>
 <div class="ttc" id="ablackbox_8hpp_html_aa062545d808e38d833dcb529924000a0"><div class="ttname"><a href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a></div><div class="ttdeci">bool is_nil(blackbox x)</div><div class="ttdef"><b>Definition</b> <a href="blackbox_8hpp_source.html#l00029">blackbox.hpp:29</a></div></div>
-<div class="ttc" id="aclassarray_html"><div class="ttname"><a href="classarray.html">array</a></div><div class="ttdoc">A template class representing an array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00095">array.hpp:95</a></div></div>
+<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -146,7 +146,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarray.html">void</a> touch </td>
+          <td class="memname"><a class="el" href="classlist.html">void</a> touch </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classtree.html">tree</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
           <td></td>
@@ -159,9 +159,8 @@ Variables</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="observer_8cpp_source.html#l00028">28</a> of file <a class="el" href="observer_8cpp_source.html">observer.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>                  {</div>
 <div class="line"><span class="lineno">   29</span>  <span class="comment">// cout &lt;&lt; &quot;Touch &quot; &lt;&lt; ref &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (<a class="code hl_class" href="classarray.html">ref</a>-&gt;obs)) <a class="code hl_class" href="classarray.html">ref</a>-&gt;obs-&gt;touched (<a class="code hl_class" href="classarray.html">ref</a>, <a class="code hl_class" href="classlist.html">path</a> ());</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (<a class="code hl_class" href="classlist.html">ref</a>-&gt;obs)) <a class="code hl_class" href="classlist.html">ref</a>-&gt;obs-&gt;touched (<a class="code hl_class" href="classlist.html">ref</a>, <a class="code hl_class" href="classlist.html">path</a> ());</div>
 <div class="line"><span class="lineno">   31</span>}</div>
-<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list&lt; int &gt;</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
