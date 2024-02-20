@@ -317,11 +317,15 @@ operator< (tm_string<T> a, tm_string<T> b) {
   return ((tm_string_view<T>) a) < ((tm_string_view<T>) b);
 };
 template <typename T>
-bool operator< (tm_string<T>             a,
-                const tm_string_view<T>& b){return ((tm_string_view<T>) a) < b};
+bool
+operator< (tm_string<T> a, const tm_string_view<T>& b) {
+  return ((tm_string_view<T>) a) < b;
+};
 template <typename T, size_t Nb>
-bool operator< (tm_string<T> a,
-                const T (&b)[Nb]){return ((tm_string_view<T>) a) < b};
+bool
+operator< (tm_string<T> a, const T (&b)[Nb]) {
+  return ((tm_string_view<T>) a) < b;
+};
 template <typename T, size_t Na>
 bool
 operator< (const T (&a)[Na], const tm_string_view<T>& b) {

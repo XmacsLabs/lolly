@@ -13,46 +13,46 @@ static ankerl::nanobench::Bench bench;
 namespace lolly {
 extern void init_tbox ();
 } // namespace lolly
-using lolly::data::string;
 
 int
 main () {
   lolly::init_tbox ();
   bench.minEpochIterations (200000).run ("construct string", [&] {
-    string ("abc");
-    string ();
+    lolly::data::string ("abc");
+    lolly::data::string ();
   });
   bench.run ("equality of string", [&] {
-    static string a ("abc"), b;
+    static lolly::data::string a ("abc"), b;
     a == b;
   });
   bench.run ("equality of larger string", [&] {
-    static string a ("equality of larger string"),
-        b ("equality of larger strinG");
+    static lolly::data::string a ("equality of larger string"),
+        b ("equality of larger string");
     a == b;
   });
   bench.run ("compare string", [&] {
-    static string a ("ab"), b ("b");
+    static lolly::data::string a ("ab"), b ("b");
     a <= b;
   });
   bench.run ("compare larger string", [&] {
-    static string a ("compare larger string"), b ("compare LARGER string");
+    static lolly::data::string a ("compare larger string"),
+        b ("compare LARGEr string");
     a <= b;
   });
   bench.run ("slice string", [&] {
-    static string a ("abcdefgh");
+    static lolly::data::string a ("abcdefgh");
     a (2, 3);
   });
   bench.run ("slice string with larger range", [&] {
-    static string a ("abcdefgh");
+    static lolly::data::string a ("abcdefgh");
     a (1, 6);
   });
   bench.run ("concat string", [&] {
-    static string a ("abc"), b ("de");
-    a*            b;
+    static lolly::data::string a ("abc"), b ("de");
+    a*                         b;
   });
   bench.run ("append string", [&] {
-    static string a ("abc"), b ("de");
+    static lolly::data::string a ("abc"), b ("de");
     a << b;
   });
 }
