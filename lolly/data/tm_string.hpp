@@ -103,7 +103,7 @@ tm_string<T>
 operator* (const tm_string_view<T>& a, const tm_string_view<T>& b) {
   int          i, na= a.N, nb= b.N;
   tm_string<T> c ((int) (na + nb));
-  const char * Sa= a.a, *Sb= b.a;
+  const T *    Sa= a.a, *Sb= b.a;
   for (i= 0; i < na; i++)
     c[i]= Sa[i];
   for (i= 0; i < nb; i++)
@@ -121,7 +121,7 @@ operator* (const tm_string_view<T>& a, const T (&b)[Nb]) {
   int           i;
   constexpr int nb= Nb - 1;
   tm_string<T>  c ((int) (a.N + nb));
-  const char*   Sa= a.a;
+  const T*      Sa= a.a;
   for (i= 0; i < a.N; i++)
     c[i]= Sa[i];
   for (i= 0; i < nb; i++)
@@ -177,7 +177,7 @@ template <typename T>
 bool
 operator== (const tm_string_view<T>& a, const tm_string_view<T>& b) {
   if (a.N != b.N) return false;
-  const char *Sa= a.a, *Sb= b.a;
+  const T *Sa= a.a, *Sb= b.a;
   for (int i= 0; i < a.N; i++)
     if (Sa[i] != Sb[i]) return false;
   return true;
@@ -192,7 +192,7 @@ bool
 operator== (const tm_string_view<T>& a, const T (&b)[Nb]) {
   constexpr int nb= Nb - 1;
   if (a.N != nb) return false;
-  const char* Sa= a.a;
+  const T* Sa= a.a;
   for (int i= 0; i < nb; i++)
     if (Sa[i] != b[i]) return false;
   return true;
@@ -217,7 +217,7 @@ bool
 operator== (const T (&a)[Na], const tm_string_view<T>& b) {
   constexpr int na= Na - 1;
   if (na != b.N) return false;
-  const char* Sb= b.a;
+  const T* Sb= b.a;
   for (int i= 0; i < na; i++)
     if (a[i] != Sb[i]) return false;
   return true;
@@ -232,7 +232,7 @@ template <typename T>
 bool
 operator!= (const tm_string_view<T>& a, const tm_string_view<T>& b) {
   if (a.N != b.N) return true;
-  const char *Sa= a.a, *Sb= b.a;
+  const T *Sa= a.a, *Sb= b.a;
   for (int i= 0; i < a.N; i++)
     if (Sa[i] != Sb[i]) return true;
   return false;
@@ -247,7 +247,7 @@ bool
 operator!= (const tm_string_view<T>& a, const T (&b)[Nb]) {
   constexpr int nb= Nb - 1;
   if (a.N != nb) return true;
-  const char* Sa= a.a;
+  const T* Sa= a.a;
   for (int i= 0; i < nb; i++)
     if (Sa[i] != b[i]) return true;
   return false;
@@ -271,7 +271,7 @@ template <typename T, size_t Na>
 bool
 operator!= (const T (&a)[Na], const tm_string_view<T>& b) {
   constexpr int na= Na - 1;
-  const char*   Sb= b.a;
+  const T*      Sb= b.a;
   if (na != b.N) return true;
   for (int i= 0; i < na; i++)
     if (a[i] != Sb[i]) return true;
@@ -286,8 +286,8 @@ operator!= (const T (&a)[Na], tm_string<T> b) {
 template <typename T>
 bool
 operator< (const tm_string_view<T>& a, const tm_string_view<T>& b) {
-  int         i, na= a.N, nb= b.N, nmin= min (na, nb);
-  const char *Sa= a.a, *Sb= b.a;
+  int      i, na= a.N, nb= b.N, nmin= min (na, nb);
+  const T *Sa= a.a, *Sb= b.a;
   for (i= 0; i < nmin; i++) {
     if (Sa[i] < Sb[i]) return true;
     if (Sb[i] < Sa[i]) return false;
@@ -304,7 +304,7 @@ bool
 operator< (const tm_string_view<T>& a, const T (&b)[Nb]) {
   constexpr int nb= Nb - 1;
   int           i, na= a.N, nmin= min (na, nb);
-  const char*   Sa= a.a;
+  const T*      Sa= a.a;
   for (i= 0; i < nmin; i++) {
     if (Sa[i] < b[i]) return true;
     if (b[i] < Sa[i]) return false;
@@ -327,7 +327,7 @@ bool
 operator< (const T (&a)[Na], const tm_string_view<T>& b) {
   constexpr int na= Na - 1;
   int           i, nb= b.N, nmin= min (na, nb);
-  const char*   Sb= b.a;
+  const T*      Sb= b.a;
   for (i= 0; i < nmin; i++) {
     if (a[i] < Sb[i]) return true;
     if (Sb[i] < a[i]) return false;
@@ -343,8 +343,8 @@ operator< (const T (&a)[Na], tm_string<T> b) {
 template <typename T>
 bool
 operator<= (const tm_string_view<T>& a, const tm_string_view<T>& b) {
-  int         i, na= a.N, nb= b.N, nmin= min (na, nb);
-  const char *Sa= a.a, *Sb= b.a;
+  int      i, na= a.N, nb= b.N, nmin= min (na, nb);
+  const T *Sa= a.a, *Sb= b.a;
   for (i= 0; i < nmin; i++) {
     if (Sa[i] < Sb[i]) return true;
     if (Sb[i] < Sa[i]) return false;
@@ -361,7 +361,7 @@ bool
 operator<= (const tm_string_view<T>& a, const T (&b)[Nb]) {
   constexpr int nb= Nb - 1;
   int           i, na= a.N, nmin= min (na, nb);
-  const char*   Sa= a.a;
+  const T*      Sa= a.a;
   for (i= 0; i < nmin; i++) {
     if (Sa[i] < b[i]) return true;
     if (b[i] < Sa[i]) return false;
@@ -388,7 +388,7 @@ bool
 operator<= (const T (&a)[Na], const tm_string_view<T>& b) {
   constexpr int na= Na - 1;
   int           i, nb= b.N, nmin= min (na, nb);
-  const char*   Sb= b.a;
+  const T*      Sb= b.a;
   for (i= 0; i < nmin; i++) {
     if (a[i] < Sb[i]) return true;
     if (Sb[i] < a[i]) return false;
