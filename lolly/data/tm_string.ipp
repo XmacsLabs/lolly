@@ -107,7 +107,7 @@ template <typename T, size_t N>
 tm_string<T>
 copy (const T a[N]) {
   int    i;
-  string r (N);
+  string r ((int) N);
   for (i= 0; i < N; i++)
     r[i]= a[i];
   return r;

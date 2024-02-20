@@ -149,28 +149,17 @@ operator* (const T (&a)[Na], const tm_string_view<T>& b) {
   int           i;
   constexpr int na= Na - 1;
   tm_string<T>  c ((int) (na + b.N));
+  const T*      Sb= b.a;
   for (i= 0; i < na; i++)
     c[i]= a[i];
   for (i= 0; i < b.N; i++)
-    c[i + na]= b.a[i];
+    c[i + na]= Sb[i];
   return c;
 };
 template <typename T, size_t Na>
 tm_string<T>
 operator* (const T (&a)[Na], tm_string<T> b) {
   return a * ((tm_string_view<T>) b);
-};
-template <typename T, size_t Na, size_t Nb>
-tm_string<T>
-operator* (const T (&a)[Na], const T (&b)[Nb]) {
-  int           i;
-  constexpr int na= Na - 1, nb= Nb - 1;
-  tm_string<T>  c ((int) (na + nb));
-  for (i= 0; i < na; i++)
-    c[i]= a[i];
-  for (i= 0; i < nb; i++)
-    c[i + na]= b[i];
-  return c;
 };
 
 template <typename T>
