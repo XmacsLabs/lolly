@@ -28,7 +28,7 @@ call (string cmd) {
 }
 
 int
-check_output (string s, string& result, bool stderr, int64_t timeout) {
+check_output (string s, string& result, bool stderr_only, int64_t timeout) {
   tb_long_t status= -1;
   // init pipe files
   tb_pipe_file_ref_t file[2]= {0};
@@ -40,7 +40,7 @@ check_output (string s, string& result, bool stderr, int64_t timeout) {
   c_string          cmd_ (s);
   tb_process_attr_t attr= {0};
   attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
-  if (stderr) {
+  if (stderr_only) {
     attr.err.pipe= file[1];
     attr.errtype = TB_PROCESS_REDIRECT_TYPE_PIPE;
   }
