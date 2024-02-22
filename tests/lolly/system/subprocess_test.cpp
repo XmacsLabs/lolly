@@ -19,11 +19,13 @@ using lolly::system::check_output;
 TEST_MEMORY_LEAK_INIT
 
 TEST_CASE ("check_output") {
-  string result;
-  CHECK (N (result) == 0);
+  string stdout_result;
+  string stderr_result;
   if (!os_wasm () && !os_mingw ()) {
-    lolly::system::check_output ("xmake --version", result);
-    CHECK (N (result) > 0);
+    lolly::system::check_output ("xmake --version", stdout_result);
+    CHECK (N (stdout_result) > 0);
+    lolly::system::check_output ("ls /no_such_dir", stderr_result, true);
+    CHECK (N (stderr_result) > 0);
   }
 }
 
