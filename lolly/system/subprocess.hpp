@@ -17,7 +17,8 @@
 namespace lolly {
 namespace system {
 int call (string cmd);
-int check_output (string cmd, string& result, bool stderr_only, int64_t timeout);
+int check_output (string cmd, string& result, bool stderr_only,
+                  int64_t timeout);
 inline int
 check_stdout (string cmd, string& result) {
   return check_output (cmd, result, false, 20);
