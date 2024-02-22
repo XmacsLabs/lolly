@@ -61,7 +61,7 @@ local TBOX_VERSION = "1.7.5"
 local DOCTEST_VERSION = "2.4.11"
 local MIMALLOC_VERSION = "2.1.2"
 local JEMALLOC_VERSION = "5.3.0"
-local CPR_VERSION = "1.8.3"
+local CPR_VERSION = "1.10.5"
 
 tbox_configs = {hash=true, ["force-utf8"]=true, charset=true}
 add_requires("tbox " .. TBOX_VERSION, {system=false, configs=tbox_configs})

@@ -28,7 +28,7 @@ call (string cmd) {
 }
 
 int
-check_output (string s, string& result, int64_t timeout) {
+check_output (string s, string& result, bool stderr_only, int64_t timeout) {
   tb_long_t status= -1;
   // init pipe files
   tb_pipe_file_ref_t file[2]= {0};
@@ -38,18 +38,24 @@ check_output (string s, string& result, int64_t timeout) {
 
   // init process
   c_string          cmd_ (s);
-  tb_process_attr_t attr  = {0};
-  attr.out.pipe           = file[1];
-  attr.outtype            = TB_PROCESS_REDIRECT_TYPE_PIPE;
-  attr.flags              = TB_PROCESS_FLAG_NO_WINDOW;
+  tb_process_attr_t attr= {0};
+  attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
+  if (stderr_only) {
+    attr.err.pipe= file[1];
+    attr.errtype = TB_PROCESS_REDIRECT_TYPE_PIPE;
+  }
+  else {
+    attr.out.pipe= file[1];
+    attr.outtype = TB_PROCESS_REDIRECT_TYPE_PIPE;
+  }
   tb_process_ref_t process= tb_process_init_cmd (cmd_, &attr);
   if (process) {
     // read pipe data
     tb_size_t read= 0;
     // TODO: should be a config here
-    tb_byte_t data[8192];
-    tb_size_t size= sizeof (data);
-    tb_bool_t wait= tb_false;
+    tb_byte_t data[8192]= {0};
+    tb_size_t size      = sizeof (data);
+    tb_bool_t wait      = tb_false;
     while (read < size) {
       tb_long_t real= tb_pipe_file_read (file[0], data + read, size - read);
       if (real > 0) {
