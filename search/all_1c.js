@@ -52,8 +52,8 @@ var searchData=
   ['roman_5fones_49',['roman_ones',['../namespacelolly_1_1data.html#a5d661022f1b9e2c4097f172329d93821',1,'lolly::data']]],
   ['roman_5ftens_50',['roman_tens',['../namespacelolly_1_1data.html#a6ffd21906a0295aee34daf329a2068c6',1,'lolly::data']]],
   ['roman_5fthousands_51',['roman_thousands',['../namespacelolly_1_1data.html#a50c7542e69d40b51a1d873f3bb374180',1,'lolly::data']]],
-  ['root_52',['ROOT',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
-  ['root_53',['root',['../modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp'],['../modification_8hpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp']]],
+  ['root_52',['root',['../modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp'],['../modification_8hpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp']]],
+  ['root_53',['ROOT',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
   ['round_5flength_54',['round_length',['../array_8ipp.html#a2db02dec333ae4764479a173b59fa5e3',1,'round_length(int n, size_t s):&#160;array.ipp'],['../string_8cpp.html#a52be85c188a31a687d01b97965cfba23',1,'round_length(int n):&#160;string.cpp']]],
   ['routine_55',['routine',['../hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07',1,'hashmap_test.cpp']]]
 ];

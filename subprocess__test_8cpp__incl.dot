@@ -77,8 +77,10 @@ digraph "subprocess_test.cpp"
   Node1 -> Node28 [id="edge44_Node000001_Node000028",color="steelblue1",style="solid",tooltip=" "];
   Node28 [id="Node000028",label="lolly/system/subprocess.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$subprocess_8hpp.html",tooltip=" "];
   Node28 -> Node5 [id="edge45_Node000028_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node29 [id="edge46_Node000001_Node000029",color="steelblue1",style="solid",tooltip=" "];
-  Node29 [id="Node000029",label="sys_utils.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$sys__utils_8hpp.html",tooltip=" "];
-  Node29 -> Node15 [id="edge47_Node000029_Node000015",color="steelblue1",style="solid",tooltip=" "];
-  Node29 -> Node5 [id="edge48_Node000029_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node28 -> Node29 [id="edge46_Node000028_Node000029",color="steelblue1",style="solid",tooltip=" "];
+  Node29 [id="Node000029",label="stdint.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node30 [id="edge47_Node000001_Node000030",color="steelblue1",style="solid",tooltip=" "];
+  Node30 [id="Node000030",label="sys_utils.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$sys__utils_8hpp.html",tooltip=" "];
+  Node30 -> Node15 [id="edge48_Node000030_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node30 -> Node5 [id="edge49_Node000030_Node000005",color="steelblue1",style="solid",tooltip=" "];
 }
