@@ -83,13 +83,23 @@ call (string cmd) {
 #else
   tb_process_attr_t attr= {0};
   attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
-  c_string cmd_ (cmd);
-  return (int) tb_process_run_cmd (cmd_, &attr);
+
+  array<string> arr  = parse_command_line (cmd);
+  int           arr_N= N (arr);
+  if (arr_N == 0 || arr_N >= 101) return -1;
+  const tb_char_t* args[100]= {0};
+  for (int i= 0; i < arr_N; i++) {
+    args[i]= (char*) c_string (arr[i]);
+  }
+  const tb_char_t** argv   = &args[0];
+  int               retcode= tb_process_run (argv[0], argv, &attr);
+
+  return retcode;
 #endif
 }
 
 int
-check_output (string s, string& result, bool stderr_only, int64_t timeout) {
+check_output (string cmd, string& result, bool stderr_only, int64_t timeout) {
   tb_long_t status= -1;
   // init pipe files
   tb_pipe_file_ref_t file[2]= {0};
@@ -98,7 +108,6 @@ check_output (string s, string& result, bool stderr_only, int64_t timeout) {
   }
 
   // init process
-  c_string          cmd_ (s);
   tb_process_attr_t attr= {0};
   attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
   if (stderr_only) {
@@ -109,7 +118,22 @@ check_output (string s, string& result, bool stderr_only, int64_t timeout) {
     attr.out.pipe= file[1];
     attr.outtype = TB_PROCESS_REDIRECT_TYPE_PIPE;
   }
-  tb_process_ref_t process= tb_process_init_cmd (cmd_, &attr);
+
+  tb_process_ref_t process;
+  array<string>    arr  = parse_command_line (cmd);
+  int              arr_N= N (arr);
+  if (arr_N == 0 || arr_N >= 101) {
+    return -1;
+  }
+  else {
+    const tb_char_t* args[100]= {0};
+    for (int i= 0; i < arr_N; i++) {
+      args[i]= (char*) c_string (arr[i]);
+    }
+    const tb_char_t** argv= &args[0];
+    process               = tb_process_init (argv[0], argv, &attr);
+  }
+
   if (process) {
     // read pipe data
     tb_size_t read= 0;

@@ -20,6 +20,18 @@ using lolly::system::parse_command_line;
 
 TEST_MEMORY_LEAK_INIT
 
+TEST_CASE ("parse_command_line") {
+  array<string> arr;
+  arr << "python3"
+      << "-c" << raw_quote ("print(\\\"hello\\n\\\")");
+  string cmd= recompose (arr, " ");
+  string_eq (cmd, "python3 -c \"print(\\\"hello\\n\\\")\"");
+  CHECK (parse_command_line (cmd) == arr);
+  CHECK (parse_command_line ("ls -l") == array<string> ("ls", "-l"));
+  CHECK (parse_command_line ("python3 -c \"import os; os.name\"") ==
+         array<string> ("python3", "-c", raw_quote ("import os; os.name")));
+}
+
 TEST_CASE ("check_output") {
   string stdout_result;
   string stderr_result;
@@ -43,16 +55,6 @@ TEST_CASE ("call") {
   CHECK (call ("no_such_command") != 0);
   CHECK (call ("") != 0);
 #endif
-}
-
-TEST_CASE ("parse_command_line") {
-  array<string> arr;
-  arr << "python3"
-      << "-c" << raw_quote ("print(\\\"hello\\n\\\")");
-  string cmd= recompose (arr, " ");
-  string_eq (cmd, "python3 -c \"print(\\\"hello\\n\\\")\"");
-  CHECK (parse_command_line (cmd) == arr);
-  CHECK (parse_command_line ("ls -l") == array<string> ("ls", "-l"));
 }
 
 TEST_MEMORY_LEAK_ALL
