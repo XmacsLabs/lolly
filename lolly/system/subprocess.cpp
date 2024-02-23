@@ -78,7 +78,7 @@ parse_command_line (string cmd) {
       else {
         // commit the cmd part and reset the cmd part index j
         i= next_i + 1;
-        ret << unescape_shell (cmd (j, i));
+        ret << cmd (j, i);
         j= i;
         // quite quote mode
         quote_mode= false;
