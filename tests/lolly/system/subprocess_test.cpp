@@ -31,7 +31,7 @@ TEST_CASE ("parse_command_line") {
   // CHECK (parse_command_line ("python3 -c \"import os; os.name\"") ==
   //        array<string> ("python3", "-c", raw_quote ("import os; os.name")));
 
-  lolly::system::call ("/opt/homebrew/Cellar/ghostscript/10.02.1/bin/gs -dQUIET -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dAutoRotatePages=/None -dCompatibilityLevel=1.4 -sOutputFile=/tmp/41_7.pdf -c \" << /PageSize [ 629 524] >> setpagedevice gsave -79 -58 translate 1 1 scale \" -f /Users/da/git/mogan/TeXmacs/tests/eps/41_7.eps -c \" grestore \"");
+  std::system ("/opt/homebrew/Cellar/ghostscript/10.02.1/bin/gs -dQUIET -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dAutoRotatePages=/None -dCompatibilityLevel=1.4 -sOutputFile=/tmp/41_7.pdf -c \" << /PageSize [ 629 524] >> setpagedevice gsave -79 -58 translate 1 1 scale \" -f /Users/da/git/mogan/TeXmacs/tests/eps/41_7.eps -c \" grestore \"");
   exit(0);
 }
 
