@@ -87,7 +87,8 @@ call (string cmd) {
   array<string> arr  = parse_command_line (cmd);
   int           arr_N= N (arr);
   if (arr_N == 0 || arr_N >= 101) return -1;
-  const tb_char_t* args[100]= {0};
+
+  const tb_char_t* args[100]= {tb_null};
   for (int i= 0; i < arr_N; i++) {
     args[i]= (char*) c_string (arr[i]);
   }
@@ -119,20 +120,17 @@ check_output (string cmd, string& result, bool stderr_only, int64_t timeout) {
     attr.outtype = TB_PROCESS_REDIRECT_TYPE_PIPE;
   }
 
+  array<string> arr  = parse_command_line (cmd);
+  int           arr_N= N (arr);
+  if (arr_N == 0 || arr_N >= 101) return -1;
+
   tb_process_ref_t process;
-  array<string>    arr  = parse_command_line (cmd);
-  int              arr_N= N (arr);
-  if (arr_N == 0 || arr_N >= 101) {
-    return -1;
+  const tb_char_t* args[100]= {0};
+  for (int i= 0; i < arr_N; i++) {
+    args[i]= (char*) c_string (arr[i]);
   }
-  else {
-    const tb_char_t* args[100]= {0};
-    for (int i= 0; i < arr_N; i++) {
-      args[i]= (char*) c_string (arr[i]);
-    }
-    const tb_char_t** argv= &args[0];
-    process               = tb_process_init (argv[0], argv, &attr);
-  }
+  const tb_char_t** argv= &args[0];
+  process               = tb_process_init (argv[0], argv, &attr);
 
   if (process) {
     // read pipe data
