@@ -16,6 +16,47 @@
 namespace lolly {
 namespace system {
 
+static
+string unescape_shell (string s) {
+  if (is_quoted (s)) {
+    string ret;
+    s= s(1, N(s)-1);
+    return s;
+    int i=0, s_N=N(s);
+    while (i<s_N) {
+      if (s[i] == '\\' && i+1<s_N) {
+        char c= s[i+1];
+        switch (c) {
+        case '(':
+        case ')':
+        case '<':
+        case '>':
+        case '?':
+        case '&':
+        case '$':
+        case '`':
+        case '\"':
+        case '\\':
+        case ' ':
+          ret << c;
+          break;
+        case 'n':
+          ret << "\n";
+          break;
+        default:
+        }
+        i= i+2;
+      } else {
+        ret << s[i];
+        i= i+1;
+      }
+    }
+    return ret;
+  } else {
+    return s;
+  }
+}
+
 array<string>
 parse_command_line (string cmd) {
   array<string> ret       = array<string> ();
@@ -37,7 +78,7 @@ parse_command_line (string cmd) {
       else {
         // commit the cmd part and reset the cmd part index j
         i= next_i + 1;
-        ret << cmd (j, i);
+        ret << unescape_shell (cmd (j, i));
         j= i;
         // quite quote mode
         quote_mode= false;
@@ -88,6 +129,9 @@ call (string cmd) {
   int           arr_N= N (arr);
   if (arr_N == 0 || arr_N >= 101) return -1;
 
+  cout << cmd << LF;
+  cout << "arr: " << arr << LF;
+
   const tb_char_t* args[100]= {tb_null};
   for (int i= 0; i < arr_N; i++) {
     args[i]= (char*) c_string (arr[i]);
@@ -123,6 +167,8 @@ check_output (string cmd, string& result, bool stderr_only, int64_t timeout) {
   array<string> arr  = parse_command_line (cmd);
   int           arr_N= N (arr);
   if (arr_N == 0 || arr_N >= 101) return -1;
+
+  cout << "arr: " << arr << LF;
 
   tb_process_ref_t process;
   const tb_char_t* args[100]= {0};

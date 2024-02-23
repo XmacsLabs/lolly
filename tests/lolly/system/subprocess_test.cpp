@@ -23,13 +23,20 @@ TEST_MEMORY_LEAK_INIT
 TEST_CASE ("parse_command_line") {
   array<string> arr;
   arr << "python3"
-      << "-c" << raw_quote ("print(\\\"hello\\n\\\")");
+      << "-c" << raw_quote ("print(\\\"hello\\\\n\\\")");
   string cmd= recompose (arr, " ");
-  string_eq (cmd, "python3 -c \"print(\\\"hello\\n\\\")\"");
+  string_eq (cmd, "python3 -c \"print(\\\"hello\\\\n\\\")\"");
   CHECK (parse_command_line (cmd) == arr);
   CHECK (parse_command_line ("ls -l") == array<string> ("ls", "-l"));
   CHECK (parse_command_line ("python3 -c \"import os; os.name\"") ==
          array<string> ("python3", "-c", raw_quote ("import os; os.name")));
+
+  string error;
+  int retcode= lolly::system::check_stderr ("python3 -c", error);
+  cout << "retcode: " << retcode << LF;
+  cout << "error\n" << error <<LF << "---" << LF;
+  exit(0);
+  lolly::system::call ("/opt/homebrew/Cellar/ghostscript/10.02.1/bin/gs -dQUIET -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dAutoRotatePages=/None -dCompatibilityLevel=1.4 -sOutputFile=/tmp/41_7.pdf -c \" << /PageSize [ 629 524] >> setpagedevice gsave -79 -58 translate 1 1 scale \" -f /Users/da/git/mogan/TeXmacs/tests/eps/41_7.eps -c \" grestore \"");
 }
 
 TEST_CASE ("check_output") {
