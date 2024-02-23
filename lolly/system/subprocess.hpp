@@ -11,11 +11,15 @@
 
 #pragma once
 
+#include "array.hpp"
 #include "string.hpp"
 #include <stdint.h>
 
 namespace lolly {
 namespace system {
+
+array<string> parse_command_line (string cmd);
+
 int call (string cmd);
 int check_output (string cmd, string& result, bool stderr_only,
                   int64_t timeout);

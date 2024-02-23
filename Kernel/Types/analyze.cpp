@@ -944,9 +944,9 @@ parse (string s, int& pos, SI*& a, int len) {
  ******************************************************************************/
 
 int
-index_of (string s, char c) {
+index_of (string s, char c, int start_pos) {
   int s_N= N (s);
-  for (int i= 0; i < s_N; i++) {
+  for (int i= start_pos; i < s_N; i++) {
     if (s[i] == c) {
       return i;
     }

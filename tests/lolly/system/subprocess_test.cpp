@@ -10,11 +10,13 @@
  ******************************************************************************/
 
 #include "a_lolly_test.hpp"
+#include "analyze.hpp"
 #include "lolly/system/subprocess.hpp"
 #include "sys_utils.hpp"
 
 using lolly::system::call;
 using lolly::system::check_output;
+using lolly::system::parse_command_line;
 
 TEST_MEMORY_LEAK_INIT
 
@@ -41,6 +43,15 @@ TEST_CASE ("call") {
   CHECK (call ("no_such_command") != 0);
   CHECK (call ("") != 0);
 #endif
+}
+
+TEST_CASE ("parse_command_line") {
+  array<string> arr;
+  arr << "python3"
+      << "-c" << raw_quote ("print(\\\"hello\\n\\\")");
+  string cmd= recompose (arr, " ");
+  string_eq (cmd, "python3 -c \"print(\\\"hello\\n\\\")\"");
+  CHECK (parse_command_line (cmd) == arr);
 }
 
 TEST_MEMORY_LEAK_ALL

@@ -10,10 +10,68 @@
  ******************************************************************************/
 
 #include "lolly/system/subprocess.hpp"
+#include "analyze.hpp"
 #include "tbox/tbox.h"
 
 namespace lolly {
 namespace system {
+
+array<string>
+parse_command_line (string cmd) {
+  array<string> ret       = array<string> ();
+  bool          quote_mode= false;
+  int           i= 0, cmd_N= N (cmd), j= 0;
+  while (i < cmd_N) {
+    if (quote_mode) {
+      // i>0 because is_quoted is false at the beginning
+      int next_i= index_of (cmd, '"', i);
+      if (next_i == -1) {
+        // no ending '"', just commit the cmd part and quite loop
+        i= cmd_N;
+        ret << cmd (j, i);
+      }
+      else if (cmd[next_i - 1] == '\\') {
+        // skip when there is '\\' before '"'
+        i= next_i + 1;
+      }
+      else {
+        // commit the cmd part and reset the cmd part index j
+        i= next_i + 1;
+        ret << cmd (j, i);
+        j= i;
+        // quite quote mode
+        quote_mode= false;
+      }
+    }
+    else {
+      char c= cmd[i];
+      if (c == '"') {
+        // enter the quote mode and reset the cmd part index j
+        quote_mode= true;
+        j         = i;
+        i++;
+      }
+      else if (c == ' ') {
+        if (i == j) {
+          // skip the space
+          i++;
+          j++;
+        }
+        else {
+          // commit the cmd part and reset the cmd part index j
+          ret << cmd (j, i);
+          i++;
+          j= i;
+        }
+      }
+      else {
+        i++;
+      }
+    }
+  }
+
+  return ret;
+}
 
 int
 call (string cmd) {
