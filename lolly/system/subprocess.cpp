@@ -66,6 +66,9 @@ parse_command_line (string cmd) {
       }
       else {
         i++;
+        if (i == cmd_N) {
+          ret << cmd (j, i);
+        }
       }
     }
   }

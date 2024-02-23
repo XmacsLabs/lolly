@@ -52,6 +52,7 @@ TEST_CASE ("parse_command_line") {
   string cmd= recompose (arr, " ");
   string_eq (cmd, "python3 -c \"print(\\\"hello\\n\\\")\"");
   CHECK (parse_command_line (cmd) == arr);
+  CHECK (parse_command_line ("ls -l") == array<string> ("ls", "-l"));
 }
 
 TEST_MEMORY_LEAK_ALL
