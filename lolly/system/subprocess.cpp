@@ -11,7 +11,7 @@
 
 #include <errno.h>
 
-#if defined(OS_MINGW) || defined(OS_WIN)
+#if defined(OS_MACOS) || defined(OS_LINUX)
 #include <wordexp.h>
 #endif
 
@@ -25,11 +25,12 @@ int
 call (string cmd) {
 #ifdef OS_WASM
   return -1;
-#else
+#endif
+
   tb_process_attr_t attr= {tb_null};
   attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
-
   c_string  cmd_c (cmd);
+
 #if defined(OS_MINGW) || defined(OS_WIN)
   return (int) tb_process_run_cmd (cmd_, &attr);
 #else
