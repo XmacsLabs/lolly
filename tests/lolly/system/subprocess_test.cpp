@@ -41,8 +41,6 @@ TEST_CASE ("call") {
   CHECK (call ("no_such_command") != 0);
   CHECK (call ("") != 0);
 #endif
-  cout << "system::call\t" << call ("python3 -c") << LF;
-  cout << "std::system\t" << std::system ("python3 -c") << LF;
 }
 
 TEST_MEMORY_LEAK_ALL
