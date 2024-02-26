@@ -21,18 +21,20 @@
 namespace lolly {
 namespace system {
 
+#ifdef OS_WASM
 int
 call (string cmd) {
-#ifdef OS_WASM
   return -1;
-#endif
-
+}
+#else
+int
+call (string cmd) {
   tb_process_attr_t attr= {tb_null};
   attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
   c_string cmd_c (cmd);
 
 #if defined(OS_MINGW) || defined(OS_WIN)
-  return (int) tb_process_run_cmd (cmd_, &attr);
+  return (int) tb_process_run_cmd (cmd_c, &attr);
 #else
   wordexp_t p;
   int       ret= wordexp (cmd_c, &p, 0);
@@ -49,6 +51,7 @@ call (string cmd) {
   return ret;
 #endif
 }
+#endif
 
 int
 check_output (string s, string& result, bool stderr_only, int64_t timeout) {
