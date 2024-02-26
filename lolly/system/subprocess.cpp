@@ -10,7 +10,10 @@
  ******************************************************************************/
 
 #include <errno.h>
+
+#if defined(OS_MINGW) || defined(OS_WIN)
 #include <wordexp.h>
+#endif
 
 #include "lolly/system/subprocess.hpp"
 #include "tbox/tbox.h"
@@ -27,6 +30,9 @@ call (string cmd) {
   attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
 
   c_string  cmd_c (cmd);
+#if defined(OS_MINGW) || defined(OS_WIN)
+  return (int) tb_process_run_cmd (cmd_, &attr);
+#else
   wordexp_t p;
   int       ret= wordexp (cmd_c, &p, 0);
   if (ret != 0) {
