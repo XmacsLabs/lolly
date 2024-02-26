@@ -29,7 +29,7 @@ call (string cmd) {
 
   tb_process_attr_t attr= {tb_null};
   attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
-  c_string  cmd_c (cmd);
+  c_string cmd_c (cmd);
 
 #if defined(OS_MINGW) || defined(OS_WIN)
   return (int) tb_process_run_cmd (cmd_, &attr);
