@@ -41,6 +41,7 @@ TEST_CASE ("call") {
   CHECK (call ("no_such_command") != 0);
   CHECK (call ("") != 0);
 #endif
+  cout << "retcode: " << call ("/opt/homebrew/Cellar/ghostscript/10.02.1/bin/gs -dQUIET -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dAutoRotatePages=/None -dCompatibilityLevel=1.4 -sOutputFile=/tmp/41_7.pdf -c \" << /PageSize [ 629 524] >> setpagedevice gsave -79 -58 translate 1 1 scale \" -f /Users/da/git/mogan/TeXmacs/tests/eps/41_7.eps -c \" grestore \"") << LF;
 }
 
 TEST_MEMORY_LEAK_ALL
