@@ -9,6 +9,9 @@
  * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
  ******************************************************************************/
 
+#include <errno.h>
+#include <wordexp.h>
+
 #include "lolly/system/subprocess.hpp"
 #include "tbox/tbox.h"
 
@@ -20,10 +23,23 @@ call (string cmd) {
 #ifdef OS_WASM
   return -1;
 #else
-  tb_process_attr_t attr= {0};
+  tb_process_attr_t attr= {tb_null};
   attr.flags            = TB_PROCESS_FLAG_NO_WINDOW;
-  c_string cmd_ (cmd);
-  return (int) tb_process_run_cmd (cmd_, &attr);
+
+  c_string  cmd_c (cmd);
+  wordexp_t p;
+  int       ret= wordexp (cmd_c, &p, 0);
+  if (ret != 0) {
+    return ret;
+  }
+  if (p.we_wordc == 0) {
+    wordfree (&p);
+    return EINVAL;
+  }
+  ret= (int) tb_process_run (p.we_wordv[0], (tb_char_t const**) p.we_wordv,
+                             &attr);
+  wordfree (&p);
+  return ret;
 #endif
 }
 
