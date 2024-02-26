@@ -45,7 +45,7 @@ var searchData=
   ['flush_42',['flush',['../classstd__ostream__rep.html#a02150d29130403a0c41d495f3a63cc91',1,'std_ostream_rep::flush()'],['../classtm__ostream__rep.html#a3d3e2bff933ea7faa8ea3a48a66919ca',1,'tm_ostream_rep::flush()'],['../classtm__ostream.html#a58a2fb6900ce064447f997db3ecddd45',1,'tm_ostream::flush()']]],
   ['fnsymbol_5fnr_43',['fnsymbol_nr',['../analyze_8cpp.html#ac8d6c2e94b0c5b329e8a46940a6ea6c5',1,'fnsymbol_nr(int nr):&#160;analyze.cpp'],['../analyze_8hpp.html#ac8d6c2e94b0c5b329e8a46940a6ea6c5',1,'fnsymbol_nr(int nr):&#160;analyze.cpp']]],
   ['for_20developers_44',['For Developers',['../md_CONTRIBUTING.html#autotoc_md2',1,'']]],
-  ['format_45',['Format',['../md_docs_2guide_2Format.html#autotoc_md43',1,'clang-format'],['../md_docs_2zh_2guide_2Format.html#autotoc_md68',1,'clang-format']]],
+  ['format_45',['Format',['../md_docs_2guide_2Format.html#autotoc_md47',1,'clang-format'],['../md_docs_2zh_2guide_2Format.html#autotoc_md63',1,'clang-format']]],
   ['format_20the_20code_46',['How to format the code',['../md_docs_2guide_2Format.html',1,'']]],
   ['four_5felem_47',['four_elem',['../array__test_8cpp.html#acd211c0420c6d7ef72977233d1082b9f',1,'array_test.cpp']]],
   ['friendly_20c_20standard_20library_20alternative_48',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]],

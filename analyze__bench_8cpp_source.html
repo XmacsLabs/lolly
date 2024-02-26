@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.24</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.25</span>
    </div>
   </td>
  </tr>
@@ -107,14 +107,14 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>          res &lt;&lt; str[i];</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      });</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <a class="code hl_variable" href="block__bench_8cpp.html#aa6cd1b3828e108ccda5026615ba419b9">bench</a>.run (<a class="code hl_class" href="classc__string.html">c_string</a> (base_name * <span class="stringliteral">&quot; by concat&quot;</span>), [&amp;] {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">string</span> res;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">int</span>    lth= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (str);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i= 0; i &lt; lth; i++) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      res= str[i] * res;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <a class="code hl_variable" href="block__bench_8cpp.html#aa6cd1b3828e108ccda5026615ba419b9">bench</a>.run (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_class" href="classlist.html">base_name</a> * <span class="stringliteral">&quot; by concat&quot;</span>), [&amp;] {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">res</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">int</span>    <a class="code hl_class" href="classlist.html">lth</a>= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (str);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i= 0; i &lt; <a class="code hl_class" href="classlist.html">lth</a>; i++) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <a class="code hl_class" href="classlist.html">res</a>= str[i] * <a class="code hl_class" href="classlist.html">res</a>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  });</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_variable" href="block__bench_8cpp.html#aa6cd1b3828e108ccda5026615ba419b9">bench</a>.run (<a class="code hl_class" href="classc__string.html">c_string</a> (base_name * <span class="stringliteral">&quot; by recompose&quot;</span>),</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_variable" href="block__bench_8cpp.html#aa6cd1b3828e108ccda5026615ba419b9">bench</a>.run (<a class="code hl_class" href="classc__string.html">c_string</a> (<a class="code hl_class" href="classlist.html">base_name</a> * <span class="stringliteral">&quot; by recompose&quot;</span>),</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>             [&amp;] { <a class="code hl_function" href="analyze_8cpp.html#aa1af0e0ce1e35dbe38b8f4f307dcbbb8">recompose</a> (str, <span class="stringliteral">&quot;&quot;</span>); });</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 </div>
@@ -124,17 +124,17 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="analyze__bench_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   35</a></span><a class="code hl_function" href="analyze__bench_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> () {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_function" href="namespacelolly.html#a5676a9b980b91430d04a8dd4e469cc19">lolly::init_tbox</a> ();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_function" href="analyze__bench_8cpp.html#aeb1c235133723c5651c1c3899e97a3a7">bench_string_join</a> (<span class="stringliteral">&quot;join regular string&quot;</span>,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                     <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> (<span class="stringliteral">&quot;long string&quot;</span>, <span class="stringliteral">&quot;short&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&lt;#ABCD&gt;&quot;</span>));</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_function" href="analyze__bench_8cpp.html#aeb1c235133723c5651c1c3899e97a3a7">bench_string_join</a> (<span class="stringliteral">&quot;join two string&quot;</span>, <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> (<span class="stringliteral">&quot;long string&quot;</span>, <span class="stringliteral">&quot;short&quot;</span>));</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_function" href="analyze__bench_8cpp.html#aeb1c235133723c5651c1c3899e97a3a7">bench_string_join</a> (<span class="stringliteral">&quot;join empty ones&quot;</span>, <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a> (5));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                     <a class="code hl_class" href="classlist.html">array&lt;string&gt;</a> (<span class="stringliteral">&quot;long string&quot;</span>, <span class="stringliteral">&quot;short&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&lt;#ABCD&gt;&quot;</span>));</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_function" href="analyze__bench_8cpp.html#aeb1c235133723c5651c1c3899e97a3a7">bench_string_join</a> (<span class="stringliteral">&quot;join two string&quot;</span>, <a class="code hl_class" href="classlist.html">array&lt;string&gt;</a> (<span class="stringliteral">&quot;long string&quot;</span>, <span class="stringliteral">&quot;short&quot;</span>));</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_function" href="analyze__bench_8cpp.html#aeb1c235133723c5651c1c3899e97a3a7">bench_string_join</a> (<span class="stringliteral">&quot;join empty ones&quot;</span>, <a class="code hl_class" href="classlist.html">array&lt;string&gt;</a> (5));</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  ankerl::nanobench::Rng rng;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordtype">int</span>                    total= 20;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_class" href="classarray.html">array&lt;string&gt;</a>          test_case;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; total; i++) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    test_case &lt;&lt; <a class="code hl_class" href="classstring.html">string</a> (<span class="charliteral">&#39;!&#39;</span> + i, rng.bounded (30));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  ankerl::nanobench::Rng <a class="code hl_class" href="classlist.html">rng</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordtype">int</span>                    <a class="code hl_class" href="classlist.html">total</a>= 20;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_class" href="classlist.html">array&lt;string&gt;</a>          <a class="code hl_class" href="classlist.html">test_case</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= 0; i &lt; <a class="code hl_class" href="classlist.html">total</a>; i++) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="classlist.html">test_case</a> &lt;&lt; <a class="code hl_class" href="classstring.html">string</a> (<span class="charliteral">&#39;!&#39;</span> + i, <a class="code hl_class" href="classlist.html">rng</a>.bounded (30));</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_function" href="analyze__bench_8cpp.html#aeb1c235133723c5651c1c3899e97a3a7">bench_string_join</a> (<span class="stringliteral">&quot;join a bunch of random string&quot;</span>, test_case);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_function" href="analyze__bench_8cpp.html#aeb1c235133723c5651c1c3899e97a3a7">bench_string_join</a> (<span class="stringliteral">&quot;join a bunch of random string&quot;</span>, <a class="code hl_class" href="classlist.html">test_case</a>);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
@@ -147,6 +147,7 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="ablock__bench_8cpp_html_aa6cd1b3828e108ccda5026615ba419b9"><div class="ttname"><a href="block__bench_8cpp.html#aa6cd1b3828e108ccda5026615ba419b9">bench</a></div><div class="ttdeci">static ankerl::nanobench::Bench bench</div><div class="ttdef"><b>Definition</b> <a href="block__bench_8cpp_source.html#l00014">block_bench.cpp:14</a></div></div>
 <div class="ttc" id="aclassarray_html"><div class="ttname"><a href="classarray.html">array</a></div><div class="ttdoc">A template class representing an array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00095">array.hpp:95</a></div></div>
 <div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00110">string.hpp:110</a></div></div>
+<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
 <div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00034">string.hpp:34</a></div></div>
 <div class="ttc" id="anamespacelolly_html_a5676a9b980b91430d04a8dd4e469cc19"><div class="ttname"><a href="namespacelolly.html#a5676a9b980b91430d04a8dd4e469cc19">lolly::init_tbox</a></div><div class="ttdeci">void init_tbox()</div><div class="ttdef"><b>Definition</b> <a href="sys__utils_8cpp_source.html#l00169">sys_utils.cpp:169</a></div></div>
 <div class="ttc" id="asys__utils_8hpp_html"><div class="ttname"><a href="sys__utils_8hpp.html">sys_utils.hpp</a></div></div>
