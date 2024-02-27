@@ -1,14 +1,10 @@
-
-/******************************************************************************
- * MODULE     : string.hpp
- * DESCRIPTION: Fixed size strings with reference counting and
- *              pointer copying. Zero-characters are allowed in strings.
- * COPYRIGHT  : (C) 1999  Joris van der Hoeven
- *******************************************************************************
- * This software falls under the GNU general public license version 3 or later.
- * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
- * in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
- ******************************************************************************/
+/** \file tm_string.hpp
+ *  \copyright GPLv3
+ *  \details Strings with different type of char, and corresponding readonly
+ *           view of string. Zero-characters are allowed in strings.
+ *  \author jingkaimori
+ *  \date   2024
+ */
 
 #pragma once
 
@@ -115,300 +111,86 @@ template <typename T, size_t Nb>
 inline lolly_string<T>& operator<< (lolly_string<T>& a, const T (&b)[Nb]);
 
 template <typename T>
-lolly_string<T>
-operator* (const lolly_string_view<T>& a, const lolly_string_view<T>& b) {
-  int             i, na= a.N, nb= b.N;
-  lolly_string<T> c ((int) (na + nb));
-  const T *       Sa= a.a, *Sb= b.a;
-  for (i= 0; i < na; i++)
-    c[i]= Sa[i];
-  for (i= 0; i < nb; i++)
-    c[i + na]= Sb[i];
-  return c;
-};
+lolly_string<T> operator* (const lolly_string_view<T>& a,
+                           const lolly_string_view<T>& b);
 template <typename T>
-lolly_string<T>
-operator* (const lolly_string_view<T>& a, lolly_string<T> b) {
-  return a * ((lolly_string_view<T>) b);
-};
+lolly_string<T> operator* (const lolly_string_view<T>& a, lolly_string<T> b);
 template <typename T, size_t Nb>
-lolly_string<T>
-operator* (const lolly_string_view<T>& a, const T (&b)[Nb]) {
-  int             i;
-  constexpr int   nb= Nb - 1;
-  lolly_string<T> c ((int) (a.N + nb));
-  const T*        Sa= a.a;
-  for (i= 0; i < a.N; i++)
-    c[i]= Sa[i];
-  for (i= 0; i < nb; i++)
-    c[i + a.N]= b[i];
-  return c;
-};
+lolly_string<T> operator* (const lolly_string_view<T>& a, const T (&b)[Nb]);
 template <typename T>
-lolly_string<T>
-operator* (lolly_string<T> a, lolly_string<T> b) {
-  return ((lolly_string_view<T>) a) * ((lolly_string_view<T>) b);
-};
+lolly_string<T> operator* (lolly_string<T> a, lolly_string<T> b);
 template <typename T>
-lolly_string<T>
-operator* (lolly_string<T> a, const lolly_string_view<T>& b) {
-  return ((lolly_string_view<T>) a) * b;
-};
+lolly_string<T> operator* (lolly_string<T> a, const lolly_string_view<T>& b);
 template <typename T, size_t Nb>
-lolly_string<T>
-operator* (lolly_string<T> a, const T (&b)[Nb]) {
-  return ((lolly_string_view<T>) a) * b;
-};
+lolly_string<T> operator* (lolly_string<T> a, const T (&b)[Nb]);
 template <typename T, size_t Na>
-lolly_string<T>
-operator* (const T (&a)[Na], const lolly_string_view<T>& b) {
-  int             i;
-  constexpr int   na= Na - 1;
-  lolly_string<T> c ((int) (na + b.N));
-  const T*        Sb= b.a;
-  for (i= 0; i < na; i++)
-    c[i]= a[i];
-  for (i= 0; i < b.N; i++)
-    c[i + na]= Sb[i];
-  return c;
-};
+lolly_string<T> operator* (const T (&a)[Na], const lolly_string_view<T>& b);
 template <typename T, size_t Na>
-lolly_string<T>
-operator* (const T (&a)[Na], lolly_string<T> b) {
-  return a * ((lolly_string_view<T>) b);
-};
+lolly_string<T> operator* (const T (&a)[Na], lolly_string<T> b);
 
 template <typename T>
-bool
-operator== (const lolly_string_view<T>& a, const lolly_string_view<T>& b) {
-  if (a.N != b.N) return false;
-  const T *Sa= a.a, *Sb= b.a;
-  for (int i= 0; i < a.N; i++)
-    if (Sa[i] != Sb[i]) return false;
-  return true;
-};
+bool operator== (const lolly_string_view<T>& a, const lolly_string_view<T>& b);
 template <typename T>
-bool
-operator== (const lolly_string_view<T>& a, lolly_string<T> b) {
-  return a == ((lolly_string_view<T>) b);
-};
+bool operator== (const lolly_string_view<T>& a, lolly_string<T> b);
 template <typename T, size_t Nb>
-bool
-operator== (const lolly_string_view<T>& a, const T (&b)[Nb]) {
-  constexpr int nb= Nb - 1;
-  if (a.N != nb) return false;
-  const T* Sa= a.a;
-  for (int i= 0; i < nb; i++)
-    if (Sa[i] != b[i]) return false;
-  return true;
-};
+bool operator== (const lolly_string_view<T>& a, const T (&b)[Nb]);
+template <typename T> bool operator== (lolly_string<T> a, lolly_string<T> b);
 template <typename T>
-bool
-operator== (lolly_string<T> a, lolly_string<T> b) {
-  return ((lolly_string_view<T>) a) == ((lolly_string_view<T>) b);
-};
-template <typename T>
-bool
-operator== (lolly_string<T> a, const lolly_string_view<T>& b) {
-  return ((lolly_string_view<T>) a) == b;
-};
+bool operator== (lolly_string<T> a, const lolly_string_view<T>& b);
 template <typename T, size_t Nb>
-bool
-operator== (lolly_string<T> a, const T (&b)[Nb]) {
-  return ((lolly_string_view<T>) a) == b;
-};
+bool operator== (lolly_string<T> a, const T (&b)[Nb]);
 template <typename T, size_t Na>
-bool
-operator== (const T (&a)[Na], const lolly_string_view<T>& b) {
-  constexpr int na= Na - 1;
-  if (na != b.N) return false;
-  const T* Sb= b.a;
-  for (int i= 0; i < na; i++)
-    if (a[i] != Sb[i]) return false;
-  return true;
-};
+bool operator== (const T (&a)[Na], const lolly_string_view<T>& b);
 template <typename T, size_t Na>
-bool
-operator== (const T (&a)[Na], lolly_string<T> b) {
-  return a == ((lolly_string_view<T>) b);
-};
+bool operator== (const T (&a)[Na], lolly_string<T> b);
 
 template <typename T>
-bool
-operator!= (const lolly_string_view<T>& a, const lolly_string_view<T>& b) {
-  if (a.N != b.N) return true;
-  const T *Sa= a.a, *Sb= b.a;
-  for (int i= 0; i < a.N; i++)
-    if (Sa[i] != Sb[i]) return true;
-  return false;
-};
+bool operator!= (const lolly_string_view<T>& a, const lolly_string_view<T>& b);
 template <typename T>
-bool
-operator!= (const lolly_string_view<T>& a, lolly_string<T> b) {
-  return a != ((lolly_string_view<T>) b);
-};
+bool operator!= (const lolly_string_view<T>& a, lolly_string<T> b);
 template <typename T, size_t Nb>
-bool
-operator!= (const lolly_string_view<T>& a, const T (&b)[Nb]) {
-  constexpr int nb= Nb - 1;
-  if (a.N != nb) return true;
-  const T* Sa= a.a;
-  for (int i= 0; i < nb; i++)
-    if (Sa[i] != b[i]) return true;
-  return false;
-};
+bool operator!= (const lolly_string_view<T>& a, const T (&b)[Nb]);
+template <typename T> bool operator!= (lolly_string<T> a, lolly_string<T> b);
 template <typename T>
-bool
-operator!= (lolly_string<T> a, lolly_string<T> b) {
-  return ((lolly_string_view<T>) a) != ((lolly_string_view<T>) b);
-};
-template <typename T>
-bool
-operator!= (lolly_string<T> a, const lolly_string_view<T>& b) {
-  return ((lolly_string_view<T>) a) != b;
-};
+bool operator!= (lolly_string<T> a, const lolly_string_view<T>& b);
 template <typename T, size_t Nb>
-bool
-operator!= (lolly_string<T> a, const T (&b)[Nb]) {
-  return ((lolly_string_view<T>) a) != b;
-};
+bool operator!= (lolly_string<T> a, const T (&b)[Nb]);
 template <typename T, size_t Na>
-bool
-operator!= (const T (&a)[Na], const lolly_string_view<T>& b) {
-  constexpr int na= Na - 1;
-  const T*      Sb= b.a;
-  if (na != b.N) return true;
-  for (int i= 0; i < na; i++)
-    if (a[i] != Sb[i]) return true;
-  return false;
-};
+bool operator!= (const T (&a)[Na], const lolly_string_view<T>& b);
 template <typename T, size_t Na>
-bool
-operator!= (const T (&a)[Na], lolly_string<T> b) {
-  return a != ((lolly_string_view<T>) b);
-};
+bool operator!= (const T (&a)[Na], lolly_string<T> b);
 
 template <typename T>
-bool
-operator< (const lolly_string_view<T>& a, const lolly_string_view<T>& b) {
-  int      i, na= a.N, nb= b.N, nmin= min (na, nb);
-  const T *Sa= a.a, *Sb= b.a;
-  for (i= 0; i < nmin; i++) {
-    if (Sa[i] < Sb[i]) return true;
-    if (Sb[i] < Sa[i]) return false;
-  }
-  return na < nb;
-};
+bool operator< (const lolly_string_view<T>& a, const lolly_string_view<T>& b);
 template <typename T>
-bool
-operator< (const lolly_string_view<T>& a, lolly_string<T> b) {
-  return a < ((lolly_string_view<T>) b);
-};
+bool operator< (const lolly_string_view<T>& a, lolly_string<T> b);
 template <typename T, size_t Nb>
-bool
-operator< (const lolly_string_view<T>& a, const T (&b)[Nb]) {
-  constexpr int nb= Nb - 1;
-  int           i, na= a.N, nmin= min (na, nb);
-  const T*      Sa= a.a;
-  for (i= 0; i < nmin; i++) {
-    if (Sa[i] < b[i]) return true;
-    if (b[i] < Sa[i]) return false;
-  }
-  return na < nb;
-};
+bool operator< (const lolly_string_view<T>& a, const T (&b)[Nb]);
+template <typename T> bool operator< (lolly_string<T> a, lolly_string<T> b);
 template <typename T>
-bool
-operator< (lolly_string<T> a, lolly_string<T> b) {
-  return ((lolly_string_view<T>) a) < ((lolly_string_view<T>) b);
-};
-template <typename T>
-bool
-operator< (lolly_string<T> a, const lolly_string_view<T>& b) {
-  return ((lolly_string_view<T>) a) < b;
-};
+bool operator< (lolly_string<T> a, const lolly_string_view<T>& b);
 template <typename T, size_t Nb>
-bool
-operator< (lolly_string<T> a, const T (&b)[Nb]) {
-  return ((lolly_string_view<T>) a) < b;
-};
+bool operator< (lolly_string<T> a, const T (&b)[Nb]);
 template <typename T, size_t Na>
-bool
-operator< (const T (&a)[Na], const lolly_string_view<T>& b) {
-  constexpr int na= Na - 1;
-  int           i, nb= b.N, nmin= min (na, nb);
-  const T*      Sb= b.a;
-  for (i= 0; i < nmin; i++) {
-    if (a[i] < Sb[i]) return true;
-    if (Sb[i] < a[i]) return false;
-  }
-  return na < nb;
-};
+bool operator< (const T (&a)[Na], const lolly_string_view<T>& b);
 template <typename T, size_t Na>
-bool
-operator< (const T (&a)[Na], lolly_string<T> b) {
-  return a < ((lolly_string_view<T>) b);
-};
+bool operator< (const T (&a)[Na], lolly_string<T> b);
 
 template <typename T>
-bool
-operator<= (const lolly_string_view<T>& a, const lolly_string_view<T>& b) {
-  int      i, na= a.N, nb= b.N, nmin= min (na, nb);
-  const T *Sa= a.a, *Sb= b.a;
-  for (i= 0; i < nmin; i++) {
-    if (Sa[i] < Sb[i]) return true;
-    if (Sb[i] < Sa[i]) return false;
-  }
-  return na <= nb;
-};
+bool operator<= (const lolly_string_view<T>& a, const lolly_string_view<T>& b);
 template <typename T>
-bool
-operator<= (const lolly_string_view<T>& a, lolly_string<T> b) {
-  return a <= ((lolly_string_view<T>) b);
-};
+bool operator<= (const lolly_string_view<T>& a, lolly_string<T> b);
 template <typename T, size_t Nb>
-bool
-operator<= (const lolly_string_view<T>& a, const T (&b)[Nb]) {
-  constexpr int nb= Nb - 1;
-  int           i, na= a.N, nmin= min (na, nb);
-  const T*      Sa= a.a;
-  for (i= 0; i < nmin; i++) {
-    if (Sa[i] < b[i]) return true;
-    if (b[i] < Sa[i]) return false;
-  }
-  return na <= nb;
-};
+bool operator<= (const lolly_string_view<T>& a, const T (&b)[Nb]);
+template <typename T> bool operator<= (lolly_string<T> a, lolly_string<T> b);
 template <typename T>
-bool
-operator<= (lolly_string<T> a, lolly_string<T> b) {
-  return ((lolly_string_view<T>) a) <= ((lolly_string_view<T>) b);
-};
-template <typename T>
-bool
-operator<= (lolly_string<T> a, const lolly_string_view<T>& b) {
-  return ((lolly_string_view<T>) a) <= b;
-};
+bool operator<= (lolly_string<T> a, const lolly_string_view<T>& b);
 template <typename T, size_t Nb>
-bool
-operator<= (lolly_string<T> a, const T (&b)[Nb]) {
-  return ((lolly_string_view<T>) a) <= b;
-};
+bool operator<= (lolly_string<T> a, const T (&b)[Nb]);
 template <typename T, size_t Na>
-bool
-operator<= (const T (&a)[Na], const lolly_string_view<T>& b) {
-  constexpr int na= Na - 1;
-  int           i, nb= b.N, nmin= min (na, nb);
-  const T*      Sb= b.a;
-  for (i= 0; i < nmin; i++) {
-    if (a[i] < Sb[i]) return true;
-    if (Sb[i] < a[i]) return false;
-  }
-  return na <= nb;
-};
+bool operator<= (const T (&a)[Na], const lolly_string_view<T>& b);
 template <typename T, size_t Na>
-bool
-operator<= (const T (&a)[Na], lolly_string<T> b) {
-  return a <= ((lolly_string_view<T>) b);
-};
+bool operator<= (const T (&a)[Na], lolly_string<T> b);
 
 template <typename T> int hash (lolly_string_view<T> s);
 template <typename T> int hash (lolly_string<T> s);

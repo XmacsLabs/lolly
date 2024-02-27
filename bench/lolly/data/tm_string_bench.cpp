@@ -1,4 +1,4 @@
-/** \file string_bench.cpp
+/** \file tm_string_bench.cpp
  *  \copyright GPLv3
  *  \details Benchmark for string
  *  \author jingkaimori
