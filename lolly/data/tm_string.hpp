@@ -63,14 +63,28 @@ using string    = lolly_string<char>;
 using string_u16= lolly_string<char16_t>;
 using string_u8 = lolly_string<char8_t>;
 
+/**
+ * Readonly view of string, in which char is store in a continuous space. NUL is
+ * allowed in string. this view can be construct from lolly_string et al.
+ */
 template <typename T> class lolly_string_view {
 public:
   const int      N;
   const T* const a;
+  /**
+   * construct from arbitary const pointer with length. NUL can occurs in given
+   * array
+   */
   lolly_string_view (int N_, const T* a_) : N (N_), a (a_){};
+  /**
+   * construct from string literal
+   */
   template <size_t N_>
   constexpr lolly_string_view (const T null_end_str[N_])
       : N (N_), a (null_end_str){};
+  /**
+   * empty view is not allowed.
+   */
   lolly_string_view ()                                        = delete;
   lolly_string_view (const lolly_string_view<T>&)             = delete;
   lolly_string_view (lolly_string_view<T>&&)                  = default;

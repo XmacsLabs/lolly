@@ -86,7 +86,7 @@ lolly_string_view<T>::operator() (int start, int end) const {
 
 template <typename T>
 lolly_string<T>
-copy (lolly_string_view<T> a) {
+copy (const lolly_string_view<T>& a) {
   int    i;
   string r (a.N);
   for (i= 0; i < a.N; i++)
