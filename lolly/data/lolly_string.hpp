@@ -1,4 +1,4 @@
-/** \file tm_string.hpp
+/** \file lolly_string.hpp
  *  \copyright GPLv3
  *  \details Strings with different type of char, and corresponding readonly
  *           view of string. Zero-characters are allowed in strings.
@@ -197,4 +197,4 @@ template <typename T> int hash (lolly_string<T> s);
 } // namespace data
 } // namespace lolly
 
-#include "tm_string.ipp"
+#include "lolly_string.ipp"

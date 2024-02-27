@@ -1,11 +1,11 @@
-/** \file tm_string_bench.cpp
+/** \file lolly_string_bench.cpp
  *  \copyright GPLv3
  *  \details Benchmark for string
  *  \author jingkaimori
  *  \date   2024
  */
 
-#include "lolly/data/tm_string.hpp"
+#include "lolly/data/lolly_string.hpp"
 #include <nanobench.h>
 
 static ankerl::nanobench::Bench bench;

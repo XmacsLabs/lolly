@@ -1,5 +1,12 @@
+/** \file lolly_string_test.cpp
+ *  \copyright GPLv3
+ *  \details Test for string
+ *  \author jingkaimori
+ *  \date   2024
+ */
+
 #include "doctest/doctest.h"
-#include "lolly/data/tm_string.hpp"
+#include "lolly/data/lolly_string.hpp"
 
 using namespace lolly::data;
 
