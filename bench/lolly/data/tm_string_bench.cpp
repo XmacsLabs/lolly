@@ -17,7 +17,12 @@ extern void init_tbox ();
 int
 main () {
   lolly::init_tbox ();
-  bench.minEpochIterations (200000).run ("construct string", [&] {
+#ifdef OS_WASM
+  bench.minEpochIterations (2000);
+#else
+  bench.minEpochIterations (200000);
+#endif
+  bench.run ("construct string", [&] {
     lolly::data::string ("abc");
     lolly::data::string ();
   });
