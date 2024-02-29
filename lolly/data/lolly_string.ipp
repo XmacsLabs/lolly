@@ -45,27 +45,27 @@ lolly_string_rep<T>::resize (int m) {
 }
 
 template <class T>
-lolly_string<T>::lolly_string (T c) : rep (tm_new<lolly_string_rep<T> > (1)) {
+lolly_string<T>::lolly_string (T c) : rep (tm_new<lolly_string_rep<T>> (1)) {
   rep->a[0]= c;
 };
 
 template <class T>
 lolly_string<T>::lolly_string (const lolly_string_view<T>& c)
-    : rep (tm_new<lolly_string_rep<T> > (c.N)) {
+    : rep (tm_new<lolly_string_rep<T>> (c.N)) {
   for (int i= 0; i < c.N; i++)
     rep->a[i]= c.a[i];
 };
 
 template <class T>
 lolly_string<T>::lolly_string (T c, int n)
-    : rep (tm_new<lolly_string_rep<T> > (n)) {
+    : rep (tm_new<lolly_string_rep<T>> (n)) {
   for (int i= 0; i < n; i++)
     rep->a[i]= c;
 };
 template <class T>
 template <size_t N>
 lolly_string<T>::lolly_string (const T (&s)[N])
-    : rep (tm_new<lolly_string_rep<T> > (N - 1)) {
+    : rep (tm_new<lolly_string_rep<T>> (N - 1)) {
   constexpr int n= N - 1;
   for (int i= 0; i < n; i++)
     rep->a[i]= s[i];
