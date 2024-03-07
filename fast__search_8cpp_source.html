@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.25</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.0</span>
    </div>
   </td>
  </tr>
@@ -144,7 +144,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="classlist.html">codes</a>[i]= (<span class="keywordtype">int</span>) (<span class="keywordtype">unsigned</span> int) (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>) <a class="code hl_variable" href="classstring__searcher__rep.html#a70aa0b2b5be6ccbedebb607b34436c94">s</a>[i];</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">int</span> l= 1;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordflow">while</span> (l &lt;= n) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classlist.html">hashmap&lt;int, array&lt;int&gt;</a> &gt; h;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classlist.html">hashmap&lt;int, array&lt;int&gt;</a>&gt; h;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">for</span> (i= 0; i + l &lt;= n; i++) {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordtype">int</span> <a class="code hl_class" href="classlist.html">c</a>= <a class="code hl_class" href="classlist.html">codes</a>[i];</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordflow">if</span> (!h-&gt;contains (<a class="code hl_class" href="classlist.html">c</a>)) h (<a class="code hl_class" href="classlist.html">c</a>)= <a class="code hl_class" href="classlist.html">array&lt;int&gt;</a> ();</div>
@@ -230,9 +230,9 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_class" href="classstring__searcher.html">string_searcher</a> <a class="code hl_class" href="classlist.html">ss1</a> (<a class="code hl_class" href="classlist.html">s1</a>);</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_class" href="classstring__searcher.html">string_searcher</a> <a class="code hl_class" href="classlist.html">ss2</a> (<a class="code hl_class" href="classlist.html">s2</a>);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i= <a class="code hl_function" href="basic_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classlist.html">ss1</a>-&gt;a), <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (<a class="code hl_class" href="classlist.html">ss2</a>-&gt;a)) - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_class" href="classlist.html">hashmap&lt;int, array&lt;int&gt;</a> &gt; <a class="code hl_class" href="classlist.html">a1</a>= <a class="code hl_class" href="classlist.html">ss1</a>-&gt;a[i];</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <a class="code hl_class" href="classlist.html">hashmap&lt;int, array&lt;int&gt;</a> &gt; <a class="code hl_class" href="classlist.html">a2</a>= <a class="code hl_class" href="classlist.html">ss2</a>-&gt;a[i];</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_class" href="classlist.html">iterator&lt;int&gt;</a>             <a class="code hl_class" href="classlist.html">it</a>= <a class="code hl_function" href="iterator_8hpp.html#ac57c236a9a461ba5c5c414e3d70c0348">iterate</a> (<a class="code hl_class" href="classlist.html">a1</a>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_class" href="classlist.html">hashmap&lt;int, array&lt;int&gt;</a>&gt; <a class="code hl_class" href="classlist.html">a1</a>= <a class="code hl_class" href="classlist.html">ss1</a>-&gt;a[i];</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <a class="code hl_class" href="classlist.html">hashmap&lt;int, array&lt;int&gt;</a>&gt; <a class="code hl_class" href="classlist.html">a2</a>= <a class="code hl_class" href="classlist.html">ss2</a>-&gt;a[i];</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_class" href="classlist.html">iterator&lt;int&gt;</a>            <a class="code hl_class" href="classlist.html">it</a>= <a class="code hl_function" href="iterator_8hpp.html#ac57c236a9a461ba5c5c414e3d70c0348">iterate</a> (<a class="code hl_class" href="classlist.html">a1</a>);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">while</span> (<a class="code hl_class" href="classlist.html">it</a>-&gt;busy ()) {</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="keywordtype">int</span>        h  = <a class="code hl_class" href="classlist.html">it</a>-&gt;next ();</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <a class="code hl_class" href="classlist.html">array&lt;int&gt;</a> <a class="code hl_class" href="classlist.html">ps1</a>= <a class="code hl_class" href="classlist.html">a1</a>[h];</div>
@@ -266,7 +266,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  }</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>}</div>
 </div>
-<div class="ttc" id="aanalyze_8cpp_html_aabda45e3c166f919ffd8850cc2d17169"><div class="ttname"><a href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a></div><div class="ttdeci">bool test(string s, int i, const char *test)</div><div class="ttdef"><b>Definition</b> <a href="analyze_8cpp_source.html#l00689">analyze.cpp:689</a></div></div>
+<div class="ttc" id="aanalyze_8cpp_html_aabda45e3c166f919ffd8850cc2d17169"><div class="ttname"><a href="analyze_8cpp.html#aabda45e3c166f919ffd8850cc2d17169">test</a></div><div class="ttdeci">bool test(string s, int i, const char *test)</div><div class="ttdef"><b>Definition</b> <a href="analyze_8cpp_source.html#l00580">analyze.cpp:580</a></div></div>
 <div class="ttc" id="aanalyze_8hpp_html"><div class="ttname"><a href="analyze_8hpp.html">analyze.hpp</a></div></div>
 <div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
 <div class="ttc" id="aarray_8hpp_html_aa068ba9b72448f1ebfb05738e5e1250d"><div class="ttname"><a href="array_8hpp.html#aa068ba9b72448f1ebfb05738e5e1250d">contains</a></div><div class="ttdeci">bool contains(T a, array&lt; T &gt; b)</div><div class="ttdoc">Check if an array contains a specified element.</div></div>

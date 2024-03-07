@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.25</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.0</span>
    </div>
   </td>
  </tr>
@@ -169,14 +169,14 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span></div>
 <div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classrel__hashmap__rep.html#a0c8a990aeecc6c1a5d881903000de314">   72</a></span><a class="code hl_function" href="classrel__hashmap__rep.html#a0c8a990aeecc6c1a5d881903000de314">rel_hashmap_rep&lt;T, U&gt;::find_changes</a> (<a class="code hl_class" href="classlist.html">hashmap&lt;T, U&gt;</a>&amp; <a class="code hl_class" href="classlist.html">CH</a>) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">int</span>                    i;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <a class="code hl_class" href="classlist.html">rel_hashmap&lt;T, U&gt;</a>      h (item, next);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">int</span>                   i;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <a class="code hl_class" href="classlist.html">rel_hashmap&lt;T, U&gt;</a>     h (item, next);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordflow">for</span> (i= 0; i &lt; <a class="code hl_class" href="classlist.html">CH</a>-&gt;n; i++) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; l (<a class="code hl_class" href="classlist.html">CH</a>-&gt;a[i]);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; l (<a class="code hl_class" href="classlist.html">CH</a>-&gt;a[i]);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">while</span> (!<a class="code hl_function" href="list_8hpp.html#a59e2873221d61701a13da6829ea15626">is_nil</a> (l)) {</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordflow">if</span> (h[l-&gt;item.key] == l-&gt;item.im)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a>= <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; (l-&gt;item, <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a>= <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; (l-&gt;item, <a class="code hl_function" href="list_8hpp.html#a42eb6f916ba8f2e3e1d1266d11e18583">remove</a>);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      l= l-&gt;next;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  }</div>
@@ -191,13 +191,13 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">void</span></div>
 <div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classrel__hashmap__rep.html#a50efb45c067331652b1f1d867f3eb455">   92</a></span><a class="code hl_function" href="classrel__hashmap__rep.html#a50efb45c067331652b1f1d867f3eb455">rel_hashmap_rep&lt;T, U&gt;::find_differences</a> (<a class="code hl_class" href="classlist.html">hashmap&lt;T, U&gt;</a>&amp; <a class="code hl_class" href="classlist.html">CH</a>) {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">int</span>                    i;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">add</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">int</span>                   i;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">add</a>;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">for</span> (i= 0; i &lt; item-&gt;n; i++) {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; l (item-&gt;a[i]);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; l (item-&gt;a[i]);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">while</span> (!<a class="code hl_function" href="list_8hpp.html#a59e2873221d61701a13da6829ea15626">is_nil</a> (l)) {</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keywordflow">if</span> (!<a class="code hl_class" href="classlist.html">CH</a>-&gt;contains (l-&gt;item.key))</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_class" href="classlist.html">add</a>= <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; (l-&gt;item, <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">add</a>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_class" href="classlist.html">add</a>= <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; (l-&gt;item, <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">add</a>);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      l= l-&gt;next;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
@@ -215,7 +215,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classrel__hashmap__rep.html#a1dcd655186b93ff4dbb3dc3439389afb">  112</a></span><a class="code hl_function" href="classrel__hashmap__rep.html#a1dcd655186b93ff4dbb3dc3439389afb">rel_hashmap_rep&lt;T, U&gt;::change</a> (<a class="code hl_class" href="classlist.html">hashmap&lt;T, U&gt;</a> <a class="code hl_class" href="classlist.html">CH</a>) {</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keywordtype">int</span> i;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">for</span> (i= 0; i &lt; <a class="code hl_class" href="classlist.html">CH</a>-&gt;n; i++) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; l (<a class="code hl_class" href="classlist.html">CH</a>-&gt;a[i]);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; l (<a class="code hl_class" href="classlist.html">CH</a>-&gt;a[i]);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">while</span> (!<a class="code hl_function" href="list_8hpp.html#a59e2873221d61701a13da6829ea15626">is_nil</a> (l)) {</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      item (l-&gt;item.key)= l-&gt;item.im;</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      l                 = l-&gt;next;</div>

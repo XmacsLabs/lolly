@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.3.25</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.0</span>
    </div>
   </td>
  </tr>
@@ -190,10 +190,10 @@ template&lt;<a class="el" href="classlist.html">class</a> T , <a class="el" href
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="hashmap__extra_8ipp_source.html#l00072">72</a> of file <a class="el" href="hashmap__extra_8ipp_source.html">hashmap_extra.ipp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                          {</div>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                         {</div>
 <div class="line"><span class="lineno">   73</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) <span class="keywordflow">return</span> l;</div>
 <div class="line"><span class="lineno">   74</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; (</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; (</div>
 <div class="line"><span class="lineno">   76</span>        <a class="code hl_class" href="classlist.html">hashentry&lt;T, U&gt;</a> (l-&gt;item.code, l-&gt;item.key, l-&gt;item.im),</div>
 <div class="line"><span class="lineno">   77</span>        <a class="code hl_function" href="#a375e376f94d79e90094d5e6bb195725b">copy_list</a> (l-&gt;next));</div>
 <div class="line"><span class="lineno">   78</span>}</div>
@@ -275,7 +275,7 @@ template&lt;<a class="el" href="classlist.html">class</a> T , <a class="el" href
 <div class="line"><span class="lineno">   92</span>  <span class="keywordtype">int</span>           i;</div>
 <div class="line"><span class="lineno">   93</span>  <a class="code hl_class" href="classlist.html">hashmap&lt;T, U&gt;</a> h (<a class="code hl_class" href="classlist.html">base</a>-&gt;<a class="code hl_variable" href="classlist.html#aa62645fcaa8cfa1bb3686fc6fd8f2720">init</a>);</div>
 <div class="line"><span class="lineno">   94</span>  <span class="keywordflow">for</span> (i= 0; i &lt; <a class="code hl_class" href="classlist.html">patch</a>-&gt;n; i++) {</div>
-<div class="line"><span class="lineno">   95</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; l (<a class="code hl_class" href="classlist.html">patch</a>-&gt;a[i]);</div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; l (<a class="code hl_class" href="classlist.html">patch</a>-&gt;a[i]);</div>
 <div class="line"><span class="lineno">   96</span>    <span class="keywordflow">while</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) {</div>
 <div class="line"><span class="lineno">   97</span>      <span class="keywordflow">if</span> (l-&gt;item.im != <a class="code hl_class" href="classlist.html">base</a>[l-&gt;item.key]) h (l-&gt;item.key)= l-&gt;item.im;</div>
 <div class="line"><span class="lineno">   98</span>      l= l-&gt;next;</div>
@@ -330,7 +330,7 @@ template&lt;<a class="el" href="classlist.html">class</a> T , <a class="el" href
 <div class="line"><span class="lineno">  106</span>  <span class="keywordtype">int</span>           i;</div>
 <div class="line"><span class="lineno">  107</span>  <a class="code hl_class" href="classlist.html">hashmap&lt;T, U&gt;</a> h (<a class="code hl_class" href="classlist.html">base</a>-&gt;<a class="code hl_variable" href="classlist.html#aa62645fcaa8cfa1bb3686fc6fd8f2720">init</a>);</div>
 <div class="line"><span class="lineno">  108</span>  <span class="keywordflow">for</span> (i= 0; i &lt; <a class="code hl_class" href="classlist.html">patch</a>-&gt;n; i++) {</div>
-<div class="line"><span class="lineno">  109</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a> &gt; l (<a class="code hl_class" href="classlist.html">patch</a>-&gt;a[i]);</div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; l (<a class="code hl_class" href="classlist.html">patch</a>-&gt;a[i]);</div>
 <div class="line"><span class="lineno">  110</span>    <span class="keywordflow">while</span> (!<a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (l)) {</div>
 <div class="line"><span class="lineno">  111</span>      <span class="keywordflow">if</span> (l-&gt;item.im != <a class="code hl_class" href="classlist.html">base</a>[l-&gt;item.key]) h (l-&gt;item.key)= <a class="code hl_class" href="classlist.html">base</a>[l-&gt;item.key];</div>
 <div class="line"><span class="lineno">  112</span>      l= l-&gt;next;</div>

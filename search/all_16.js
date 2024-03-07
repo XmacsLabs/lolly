@@ -15,7 +15,7 @@ var searchData=
   ['lf_12',['LF',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4',1,'basic.hpp']]],
   ['library_20alternative_13',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]],
   ['linux上开发_14',['在GNU/Linux上开发',['../md_docs_2zh_2guide_2Develop__on__Linux.html',1,'']]],
-  ['linux_15',['Linux',['../md_docs_2guide_2Develop__on__Linux.html',1,'Developing on GNU/Linux'],['../md_docs_2guide_2Format.html#autotoc_md50',1,'Linux'],['../md_docs_2zh_2guide_2Format.html#autotoc_md68',1,'Linux']]],
+  ['linux_15',['Linux',['../md_docs_2guide_2Develop__on__Linux.html',1,'Developing on GNU/Linux'],['../md_docs_2guide_2Format.html#autotoc_md51',1,'Linux'],['../md_docs_2zh_2guide_2Format.html#autotoc_md72',1,'Linux']]],
   ['list_16',['list',['../classlist.html',1,'list&lt; T &gt;'],['../classlist.html#a6134d52315f57bcb808223559c8a4760',1,'list::list(T item)'],['../classlist.html#a66b9774b808d0d3b48b8fff83a6ddf7a',1,'list::list(T item, list&lt; T &gt; next)'],['../classlist.html#a0fa8bf4a07aa916278c1e3ffdac3f000',1,'list::list(T item1, T item2, list&lt; T &gt; next)'],['../classlist.html#a2755e7316c28cd865dd2aca9042523c5',1,'list::list(T item1, T item2, T item3, list&lt; T &gt; next)']]],
   ['list_2ehpp_17',['list.hpp',['../list_8hpp.html',1,'']]],
   ['list_2eipp_18',['list.ipp',['../list_8ipp.html',1,'']]],
@@ -31,7 +31,7 @@ var searchData=
   ['listing_20all_20targets_28',['Listing all Targets',['../md_docs_2guide_2Test.html#autotoc_md52',1,'']]],
   ['load_5fstring_29',['load_string',['../file_8cpp.html#a20be21b01deb2d7f37fe75657e177c4a',1,'load_string(url u, string &amp;s, bool fatal):&#160;file.cpp'],['../file_8hpp.html#a939e3f7b6bc67082472215e4d13ba705',1,'load_string(url file_name, string &amp;s, bool fatal):&#160;file.cpp']]],
   ['load_5fstring_5ftry_30',['load_string_try',['../file_8cpp.html#acdc1973a8a3209a41e608b871463f3d4',1,'file.cpp']]],
-  ['local_20installation_31',['Local Installation',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md44',1,'Method 1: Local Installation'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md41',1,'Method 1: Local Installation']]],
+  ['local_20installation_31',['Local Installation',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md36',1,'Method 1: Local Installation'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md43',1,'Method 1: Local Installation']]],
   ['locale_32',['Project: Locale',['../md_devel_214.html',1,'']]],
   ['locale_2ecpp_33',['locale.cpp',['../locale_8cpp.html',1,'']]],
   ['locale_2ehpp_34',['locale.hpp',['../locale_8hpp.html',1,'']]],
@@ -54,5 +54,13 @@ var searchData=
   ['lolly_3a_3ahash_51',['hash',['../namespacelolly_1_1hash.html',1,'lolly']]],
   ['lolly_3a_3aio_52',['io',['../namespacelolly_1_1io.html',1,'lolly']]],
   ['lolly_3a_3asystem_53',['system',['../namespacelolly_1_1system.html',1,'lolly']]],
-  ['lolly_5fdoctests_2ehpp_54',['lolly_doctests.hpp',['../lolly__doctests_8hpp.html',1,'']]]
+  ['lolly_5fdoctests_2ehpp_54',['lolly_doctests.hpp',['../lolly__doctests_8hpp.html',1,'']]],
+  ['lolly_5fstring_55',['lolly_string',['../classlolly_1_1data_1_1lolly__string.html',1,'lolly::data::lolly_string&lt; T &gt;'],['../classlolly_1_1data_1_1lolly__string.html#adfa2098a1a05a1b3b16b1db9189d3e5b',1,'lolly::data::lolly_string::lolly_string()'],['../classlolly_1_1data_1_1lolly__string.html#ac5587f544b928fd32c3ed71f5825de03',1,'lolly::data::lolly_string::lolly_string(int n)'],['../classlolly_1_1data_1_1lolly__string.html#a6841d3950644fb8dcac2a3903dc3b8b9',1,'lolly::data::lolly_string::lolly_string(T c)'],['../classlolly_1_1data_1_1lolly__string.html#a2d759343336a55c6c8e399a157024b9c',1,'lolly::data::lolly_string::lolly_string(const lolly_string_view&lt; T &gt; &amp;c)'],['../classlolly_1_1data_1_1lolly__string.html#afc89840946f9bea8a0a56f3124b7171e',1,'lolly::data::lolly_string::lolly_string(T c, int n)'],['../classlolly_1_1data_1_1lolly__string.html#a80211de9fd4d23fa3c7e349e21473043',1,'lolly::data::lolly_string::lolly_string(const T(&amp;s)[N])']]],
+  ['lolly_5fstring_2ehpp_56',['lolly_string.hpp',['../lolly__string_8hpp.html',1,'']]],
+  ['lolly_5fstring_2eipp_57',['lolly_string.ipp',['../lolly__string_8ipp.html',1,'']]],
+  ['lolly_5fstring_3c_20t_20_3e_58',['lolly_string&lt; T &gt;',['../classlolly_1_1data_1_1lolly__string__rep.html#a09af208df2268612a223189db1e66f25',1,'lolly::data::lolly_string_rep']]],
+  ['lolly_5fstring_5fbench_2ecpp_59',['lolly_string_bench.cpp',['../lolly__string__bench_8cpp.html',1,'']]],
+  ['lolly_5fstring_5frep_60',['lolly_string_rep',['../classlolly_1_1data_1_1lolly__string__rep.html',1,'lolly::data::lolly_string_rep&lt; T &gt;'],['../classlolly_1_1data_1_1lolly__string__rep.html#ab9f5cdd89a120f36a7fac64ba391ed18',1,'lolly::data::lolly_string_rep::lolly_string_rep()'],['../classlolly_1_1data_1_1lolly__string__rep.html#af432a949e0db8852352cdb6f2fc2a21a',1,'lolly::data::lolly_string_rep::lolly_string_rep(int n)']]],
+  ['lolly_5fstring_5ftest_2ecpp_61',['lolly_string_test.cpp',['../lolly__string__test_8cpp.html',1,'']]],
+  ['lolly_5fstring_5fview_62',['lolly_string_view',['../classlolly_1_1data_1_1lolly__string__view.html',1,'lolly::data::lolly_string_view&lt; T &gt;'],['../classlolly_1_1data_1_1lolly__string__view.html#acbf0ed558a2b68c2607273164deb36a8',1,'lolly::data::lolly_string_view::lolly_string_view(int N_, const T *a_)'],['../classlolly_1_1data_1_1lolly__string__view.html#aca88f393d6db3be844c5829322930fb8',1,'lolly::data::lolly_string_view::lolly_string_view(const T null_end_str[N_])'],['../classlolly_1_1data_1_1lolly__string__view.html#a49f7f9f4fd1392c459ce3160e6233e95',1,'lolly::data::lolly_string_view::lolly_string_view()=delete'],['../classlolly_1_1data_1_1lolly__string__view.html#a8250ee3846d5badb5e17a49ceaf09177',1,'lolly::data::lolly_string_view::lolly_string_view(const lolly_string_view&lt; T &gt; &amp;)=delete'],['../classlolly_1_1data_1_1lolly__string__view.html#abb514740960b309619ced2e1db1e6eb2',1,'lolly::data::lolly_string_view::lolly_string_view(lolly_string_view&lt; T &gt; &amp;&amp;)=default']]]
 ];

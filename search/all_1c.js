@@ -38,7 +38,7 @@ var searchData=
   ['reroot_35',['reroot',['../url_8cpp.html#a67790e8e5388514a24a30a8e338f8819',1,'reroot(url u, string protocol):&#160;url.cpp'],['../url_8hpp.html#a2c2c5c9e5c497e44b0630a9300e4861b',1,'reroot(url u, string s):&#160;url.cpp']]],
   ['res_5fname_36',['res_name',['../structrep.html#a20f641edec1b47fecf9a02c5d30ec5cd',1,'rep']]],
   ['reset_37',['reset',['../classhashmap__rep.html#a13551f0f887bea1b6060b1a350c7658b',1,'hashmap_rep']]],
-  ['resize_38',['resize',['../classarray__rep.html#aecdacd699084c6dceb99ee77e0411a8f',1,'array_rep::resize()'],['../classhashmap__rep.html#a0a4f85993aa3f97d0ac1bb18fafcbf14',1,'hashmap_rep::resize()'],['../classhashset__rep.html#a0e1fd94c709222436c46380cae2e26c8',1,'hashset_rep::resize()'],['../classstring__rep.html#ac2d8118c863f5fe6ffa1a547a25fbabe',1,'string_rep::resize()'],['../struct__ts__string.html#af9f8350fa876222790f765f794f7db0f',1,'_ts_string::resize()']]],
+  ['resize_38',['resize',['../classarray__rep.html#aecdacd699084c6dceb99ee77e0411a8f',1,'array_rep::resize()'],['../classhashmap__rep.html#a0a4f85993aa3f97d0ac1bb18fafcbf14',1,'hashmap_rep::resize()'],['../classhashset__rep.html#a0e1fd94c709222436c46380cae2e26c8',1,'hashset_rep::resize()'],['../classstring__rep.html#ac2d8118c863f5fe6ffa1a547a25fbabe',1,'string_rep::resize()'],['../classlolly_1_1data_1_1lolly__string__rep.html#a06c5a83c9edefde9208e69233b4d161d',1,'lolly::data::lolly_string_rep::resize()'],['../struct__ts__string.html#af9f8350fa876222790f765f794f7db0f',1,'_ts_string::resize()']]],
   ['resource_39',['RESOURCE',['../resource_8hpp.html#a30e92dd7364b0fac536dd1998eee30df',1,'resource.hpp']]],
   ['resource_2ehpp_40',['resource.hpp',['../resource_8hpp.html',1,'']]],
   ['resource_5fcode_41',['RESOURCE_CODE',['../resource_8hpp.html#a56e1edb20d69faab5ef6b2882ca1d8e1',1,'resource.hpp']]],
@@ -52,8 +52,8 @@ var searchData=
   ['roman_5fones_49',['roman_ones',['../namespacelolly_1_1data.html#a5d661022f1b9e2c4097f172329d93821',1,'lolly::data']]],
   ['roman_5ftens_50',['roman_tens',['../namespacelolly_1_1data.html#a6ffd21906a0295aee34daf329a2068c6',1,'lolly::data']]],
   ['roman_5fthousands_51',['roman_thousands',['../namespacelolly_1_1data.html#a50c7542e69d40b51a1d873f3bb374180',1,'lolly::data']]],
-  ['root_52',['root',['../modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp'],['../modification_8hpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp']]],
-  ['root_53',['ROOT',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
-  ['round_5flength_54',['round_length',['../array_8ipp.html#a2db02dec333ae4764479a173b59fa5e3',1,'round_length(int n, size_t s):&#160;array.ipp'],['../string_8cpp.html#a52be85c188a31a687d01b97965cfba23',1,'round_length(int n):&#160;string.cpp']]],
+  ['root_52',['ROOT',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
+  ['root_53',['root',['../modification_8cpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp'],['../modification_8hpp.html#aee1ba49fa11cd53b71eb22a8f9a2a88b',1,'root(modification mod):&#160;modification.cpp']]],
+  ['round_5flength_54',['round_length',['../array_8ipp.html#a2db02dec333ae4764479a173b59fa5e3',1,'round_length(int n, size_t s):&#160;array.ipp'],['../string_8cpp.html#a52be85c188a31a687d01b97965cfba23',1,'round_length(int n):&#160;string.cpp'],['../namespacelolly_1_1data.html#af356f0c01fb44ae03e497298b67d11bf',1,'lolly::data::round_length()']]],
   ['routine_55',['routine',['../hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07',1,'hashmap_test.cpp']]]
 ];

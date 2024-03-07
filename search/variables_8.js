@@ -10,7 +10,6 @@ var searchData=
   ['int_5fto_5fb64_7',['int_to_b64',['../namespacelolly_1_1data.html#a2341c30af48b0acaf394d007f4e5a912',1,'lolly::data']]],
   ['is_5fmine_8',['is_mine',['../classstd__ostream__rep.html#a24fe21ae5089178e2f6bebb055a187ba',1,'std_ostream_rep']]],
   ['is_5fw_9',['is_w',['../classstd__ostream__rep.html#a5673236861c342dbb72ed499fa08b4c6',1,'std_ostream_rep']]],
-  ['iso_5fto_5fkoi8_5fstring_10',['iso_to_koi8_string',['../analyze_8cpp.html#a6c05991acdbc9043c00a52f46825c0e5',1,'analyze.cpp']]],
-  ['item_11',['item',['../classlist__rep.html#a0b39af26b1ae8ff956f8168cd97f04d3',1,'list_rep::item'],['../classrel__hashmap__rep.html#a6c7becd6e2ff412299135e243359cdc0',1,'rel_hashmap_rep::item']]],
-  ['iterator_5fcount_12',['iterator_count',['../iterator_8hpp.html#a49aa69e6cf0bf0655101eac0610d19c4',1,'iterator.hpp']]]
+  ['item_10',['item',['../classlist__rep.html#a0b39af26b1ae8ff956f8168cd97f04d3',1,'list_rep::item'],['../classrel__hashmap__rep.html#a6c7becd6e2ff412299135e243359cdc0',1,'rel_hashmap_rep::item']]],
+  ['iterator_5fcount_11',['iterator_count',['../iterator_8hpp.html#a49aa69e6cf0bf0655101eac0610d19c4',1,'iterator.hpp']]]
 ];
