@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['rel_5fhashmap_5fcc_0',['REL_HASHMAP_CC',['../rel__hashmap_8ipp.html#a0b2c3c6deb25f1ec9a5268c2ce9be463',1,'rel_hashmap.ipp']]],
-  ['resource_1',['RESOURCE',['../resource_8hpp.html#a30e92dd7364b0fac536dd1998eee30df',1,'resource.hpp']]],
-  ['resource_5fcode_2',['RESOURCE_CODE',['../resource_8hpp.html#a56e1edb20d69faab5ef6b2882ca1d8e1',1,'resource.hpp']]]
+  ['security_5fwin32_0',['SECURITY_WIN32',['../win__sys__utils_8cpp.html#a1859fb1234511b94993fe8566eba866b',1,'win_sys_utils.cpp']]],
+  ['stack_5fdelete_5farray_1',['STACK_DELETE_ARRAY',['../basic_8hpp.html#ae52e80dc20c32ed44dc042a8190a39c0',1,'basic.hpp']]],
+  ['stack_5fnew_5farray_2',['STACK_NEW_ARRAY',['../basic_8hpp.html#a0e1cc4ae2b47091f01fdf1d0107a68bc',1,'basic.hpp']]]
 ];

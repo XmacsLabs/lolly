@@ -66,10 +66,7 @@ digraph "url_bench.cpp"
   Node24 [id="Node000024",label="merge_sort.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$merge__sort_8hpp.html",tooltip=" "];
   Node24 -> Node3 [id="edge37_Node000024_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node24 -> Node16 [id="edge38_Node000024_Node000016",color="steelblue1",style="solid",tooltip=" "];
-  Node14 -> Node25 [id="edge39_Node000014_Node000025",color="steelblue1",style="solid",tooltip=" "];
-  Node25 [id="Node000025",label="observer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8hpp.html",tooltip=" "];
-  Node25 -> Node12 [id="edge40_Node000025_Node000012",color="steelblue1",style="solid",tooltip=" "];
-  Node14 -> Node12 [id="edge41_Node000014_Node000012",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node26 [id="edge42_Node000001_Node000026",color="steelblue1",style="solid",tooltip=" "];
-  Node26 [id="Node000026",label="nanobench.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node14 -> Node12 [id="edge39_Node000014_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node25 [id="edge40_Node000001_Node000025",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="nanobench.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

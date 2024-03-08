@@ -27,6 +27,4 @@ digraph "blackbox.hpp"
   Node3 -> Node8 [id="edge12_Node000003_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 -> Node10 [id="edge13_Node000003_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node10 [id="Node000010",label="tree.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree_8cpp.html",tooltip=" "];
-  Node1 -> Node11 [id="edge14_Node000001_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="observer.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8cpp.html",tooltip=" "];
 }

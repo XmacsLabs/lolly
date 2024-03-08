@@ -70,10 +70,7 @@ digraph "hashset_test.cpp"
   Node26 [id="Node000026",label="merge_sort.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$merge__sort_8hpp.html",tooltip=" "];
   Node26 -> Node15 [id="edge39_Node000026_Node000015",color="steelblue1",style="solid",tooltip=" "];
   Node26 -> Node18 [id="edge40_Node000026_Node000018",color="steelblue1",style="solid",tooltip=" "];
-  Node14 -> Node27 [id="edge41_Node000014_Node000027",color="steelblue1",style="solid",tooltip=" "];
-  Node27 [id="Node000027",label="observer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8hpp.html",tooltip=" "];
-  Node27 -> Node5 [id="edge42_Node000027_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node14 -> Node5 [id="edge43_Node000014_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node23 [id="edge44_Node000001_Node000023",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node5 [id="edge45_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node14 -> Node5 [id="edge41_Node000014_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node23 [id="edge42_Node000001_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge43_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
 }

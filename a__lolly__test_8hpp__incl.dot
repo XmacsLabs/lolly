@@ -68,8 +68,5 @@ digraph "a_lolly_test.hpp"
   Node25 [id="Node000025",label="merge_sort.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$merge__sort_8hpp.html",tooltip=" "];
   Node25 -> Node14 [id="edge38_Node000025_Node000014",color="steelblue1",style="solid",tooltip=" "];
   Node25 -> Node17 [id="edge39_Node000025_Node000017",color="steelblue1",style="solid",tooltip=" "];
-  Node13 -> Node26 [id="edge40_Node000013_Node000026",color="steelblue1",style="solid",tooltip=" "];
-  Node26 [id="Node000026",label="observer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8hpp.html",tooltip=" "];
-  Node26 -> Node4 [id="edge41_Node000026_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node13 -> Node4 [id="edge42_Node000013_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node4 [id="edge40_Node000013_Node000004",color="steelblue1",style="solid",tooltip=" "];
 }

@@ -10,6 +10,4 @@ digraph "tree_rep"
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ref_count",fontcolor="grey" ];
   Node3 [id="Node000003",label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node1 [id="edge3_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" op",fontcolor="grey" ];
-  Node4 -> Node1 [id="edge4_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" obs",fontcolor="grey" ];
-  Node4 [id="Node000004",label="observer",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classobserver.html",tooltip=" "];
 }

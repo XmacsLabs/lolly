@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['test_5fmemory_5fleak_5fall_0',['TEST_MEMORY_LEAK_ALL',['../lolly__doctests_8hpp.html#a96d60a30156bc5024f0ace85b903300c',1,'lolly_doctests.hpp']]],
-  ['test_5fmemory_5fleak_5finit_1',['TEST_MEMORY_LEAK_INIT',['../lolly__doctests_8hpp.html#a931102e4e092186b370d8091d2cb6712',1,'lolly_doctests.hpp']]],
-  ['test_5fmemory_5fleak_5freset_2',['TEST_MEMORY_LEAK_RESET',['../lolly__doctests_8hpp.html#a0f28f8e42b3e9f5f73cfa264bdab6873',1,'lolly_doctests.hpp']]],
-  ['tm_5fdebug_3',['TM_DEBUG',['../basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b',1,'basic.hpp']]],
-  ['tm_5ffailed_4',['TM_FAILED',['../basic_8hpp.html#a5838c83edf0c6a6cad864112a60415b9',1,'basic.hpp']]],
-  ['tmpl_5',['TMPL',['../array_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4',1,'TMPL:&#160;array.hpp'],['../hashmap_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4',1,'TMPL:&#160;hashmap.hpp'],['../hashmap_8ipp.html#ae651af7bb4896e16cad3623826bb0ee4',1,'TMPL:&#160;hashmap.ipp'],['../hashmap__extra_8ipp.html#ae651af7bb4896e16cad3623826bb0ee4',1,'TMPL:&#160;hashmap_extra.ipp'],['../list_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4',1,'TMPL:&#160;list.hpp'],['../promise_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4',1,'TMPL:&#160;promise.hpp'],['../rel__hashmap_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4',1,'TMPL:&#160;rel_hashmap.hpp'],['../unary__function_8hpp.html#ae651af7bb4896e16cad3623826bb0ee4',1,'TMPL:&#160;unary_function.hpp']]]
+  ['url_5fclean_5funix_0',['URL_CLEAN_UNIX',['../url_8hpp.html#ab2b7dacfa4cc1cc8c2e31bad22a29ee9',1,'url.hpp']]],
+  ['url_5fconcater_1',['URL_CONCATER',['../sys__utils_8hpp.html#abe41c985c10c1bb87632b6a9a40094fa',1,'sys_utils.hpp']]],
+  ['url_5fseparator_2',['URL_SEPARATOR',['../sys__utils_8hpp.html#a802fa41ff455dbced9c5696b81406a95',1,'sys_utils.hpp']]],
+  ['url_5fstandard_3',['URL_STANDARD',['../url_8hpp.html#a1e3620e999db1e0fde8bbe81c01b2185',1,'url.hpp']]],
+  ['url_5fsystem_4',['URL_SYSTEM',['../url_8hpp.html#a81505493a5b834566346c0b4a4f1d833',1,'url.hpp']]],
+  ['url_5ftuple_5',['URL_TUPLE',['../url_8hpp.html#ab5d8c855a682b72afcd72ad133e75ca9',1,'url.hpp']]],
+  ['url_5funix_6',['URL_UNIX',['../url_8hpp.html#ac318c2357fed9222f8152ce73baa9327',1,'url.hpp']]],
+  ['use_5fexceptions_7',['USE_EXCEPTIONS',['../basic_8hpp.html#a5412ce5cb8464f98cd6f37294c65a3bf',1,'basic.hpp']]]
 ];

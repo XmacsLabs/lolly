@@ -56,9 +56,6 @@ digraph "tree.hpp"
   Node20 -> Node2 [id="edge30_Node000020_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node20 -> Node12 [id="edge31_Node000020_Node000012",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node21 [id="edge32_Node000001_Node000021",color="steelblue1",style="solid",tooltip=" "];
-  Node21 [id="Node000021",label="observer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8hpp.html",tooltip=" "];
-  Node21 -> Node22 [id="edge33_Node000021_Node000022",color="steelblue1",style="solid",tooltip=" "];
-  Node22 [id="Node000022",label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
-  Node22 -> Node3 [id="edge34_Node000022_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node22 [id="edge35_Node000001_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node21 [id="Node000021",label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
+  Node21 -> Node3 [id="edge33_Node000021_Node000003",color="steelblue1",style="solid",tooltip=" "];
 }

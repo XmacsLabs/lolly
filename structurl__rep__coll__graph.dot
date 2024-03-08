@@ -15,6 +15,4 @@ digraph "url_rep"
   Node5 [id="Node000005",label="tree_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classtree__rep.html",tooltip=" "];
   Node2 -> Node5 [id="edge5_Node000005_Node000002",dir="back",color="firebrick4",style="solid",tooltip=" "];
   Node3 -> Node5 [id="edge6_Node000005_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" op",fontcolor="grey" ];
-  Node6 -> Node5 [id="edge7_Node000005_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" obs",fontcolor="grey" ];
-  Node6 [id="Node000006",label="observer",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classobserver.html",tooltip=" "];
 }

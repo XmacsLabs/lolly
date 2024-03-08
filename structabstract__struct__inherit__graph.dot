@@ -21,10 +21,8 @@ digraph "abstract_struct"
   Node6 -> Node8 [id="edge7_Node000006_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node8 [id="Node000008",label="hashset_iterator_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classhashset__iterator__rep.html",tooltip=" "];
   Node1 -> Node9 [id="edge8_Node000001_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node9 [id="Node000009",label="observer_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classobserver__rep.html",tooltip=" "];
-  Node1 -> Node10 [id="edge9_Node000001_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node10 [id="Node000010",label="promise_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classpromise__rep.html",tooltip=" "];
-  Node10 -> Node2 [id="edge10_Node000010_Node000002",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< int \>",fontcolor="grey" ];
-  Node1 -> Node11 [id="edge11_Node000001_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="unary_function_rep\l\< T, S \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classunary__function__rep.html",tooltip=" "];
+  Node9 [id="Node000009",label="promise_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classpromise__rep.html",tooltip=" "];
+  Node9 -> Node2 [id="edge9_Node000009_Node000002",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< int \>",fontcolor="grey" ];
+  Node1 -> Node10 [id="edge10_Node000001_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="unary_function_rep\l\< T, S \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classunary__function__rep.html",tooltip=" "];
 }

@@ -10,9 +10,8 @@ var searchData=
   ['abstract_5fnull_5ftemplate_5fcode_7',['ABSTRACT_NULL_TEMPLATE_CODE',['../basic_8hpp.html#a912366d06c0cac1fdff35139c0664190',1,'basic.hpp']]],
   ['abstract_5ftemplate_8',['ABSTRACT_TEMPLATE',['../basic_8hpp.html#a8657a0eb8c0ff24363d1bb2633b84674',1,'basic.hpp']]],
   ['abstract_5ftemplate_5fcode_9',['ABSTRACT_TEMPLATE_CODE',['../basic_8hpp.html#a8480dde7d47481f39a598a182b303463',1,'basic.hpp']]],
-  ['addendum_5fplayer_10',['ADDENDUM_PLAYER',['../observer_8hpp.html#a573ca2d06db4f4da4fa0f4a4c315ff4b',1,'observer.hpp']]],
-  ['alloc_5fptr_11',['alloc_ptr',['../fast__alloc_8cpp.html#a8fea8792e2ea00b700efa7b627e40695',1,'fast_alloc.cpp']]],
-  ['ankerl_5fnanobench_5fimplement_12',['ANKERL_NANOBENCH_IMPLEMENT',['../nanobench_8cpp.html#ac55582c73612eae3129a2346642a9043',1,'nanobench.cpp']]],
-  ['array_5fcc_13',['ARRAY_CC',['../array_8ipp.html#a8e291e63e3dac2c425afe65cf44d6726',1,'array.ipp']]],
-  ['assert_14',['ASSERT',['../basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91',1,'basic.hpp']]]
+  ['alloc_5fptr_10',['alloc_ptr',['../fast__alloc_8cpp.html#a8fea8792e2ea00b700efa7b627e40695',1,'fast_alloc.cpp']]],
+  ['ankerl_5fnanobench_5fimplement_11',['ANKERL_NANOBENCH_IMPLEMENT',['../nanobench_8cpp.html#ac55582c73612eae3129a2346642a9043',1,'nanobench.cpp']]],
+  ['array_5fcc_12',['ARRAY_CC',['../array_8ipp.html#a8e291e63e3dac2c425afe65cf44d6726',1,'array.ipp']]],
+  ['assert_13',['ASSERT',['../basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91',1,'basic.hpp']]]
 ];

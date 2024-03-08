@@ -7,8 +7,8 @@ digraph "list&lt; T &gt;"
   Node1 [id="Node000001",label="list\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="The list class represents a linked list."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< hashentry\< T, U \> \>",fontcolor="grey" ];
   Node2 [id="Node000002",label="list\< hashentry\< T,\l U \> \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlist.html",tooltip=" "];
-  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< int \>",fontcolor="grey" ];
-  Node3 [id="Node000003",label="list\< int \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlist.html",tooltip=" "];
-  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< string \>",fontcolor="grey" ];
-  Node4 [id="Node000004",label="list\< string \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlist.html",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< string \>",fontcolor="grey" ];
+  Node3 [id="Node000003",label="list\< string \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlist.html",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< int \>",fontcolor="grey" ];
+  Node4 [id="Node000004",label="list\< int \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlist.html",tooltip=" "];
 }

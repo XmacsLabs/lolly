@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.0</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.1</span>
    </div>
   </td>
  </tr>
@@ -111,12 +111,12 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8cpp.html#a75ff595248659b96cb36c2b907b751f4">is_local_and_single</a> (<a class="code hl_class" href="classlist.html">u</a>)) {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classstring.html">string</a> (<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">string</span>      <a class="code hl_class" href="classlist.html">name</a>= <a class="code hl_function" href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a> (<a class="code hl_class" href="classlist.html">u</a>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_class" href="classlist.html">path</a>= <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">name</a>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordflow">if</span> (!<a class="code hl_class" href="classlist.html">tb_file_access</a> (<a class="code hl_class" href="classlist.html">path</a>, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_RO</a>)) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">string</span>      <a class="code hl_class" href="classlist.html">name</a>= <a class="code hl_function" href="string_8cpp.html#a4f81ccbfa0538a74f1037b25515739f7">as_string</a> (<a class="code hl_class" href="classlist.html">u</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* path= <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_class" href="classlist.html">name</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordflow">if</span> (!<a class="code hl_class" href="classlist.html">tb_file_access</a> (path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_RO</a>)) {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classstring.html">string</a> (<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_class" href="classlist.html">tb_file_ref_t</a> file= <a class="code hl_class" href="classlist.html">tb_file_init</a> (<a class="code hl_class" href="classlist.html">path</a>, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_RO</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_class" href="classlist.html">tb_file_ref_t</a> file= <a class="code hl_class" href="classlist.html">tb_file_init</a> (path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_RO</a>);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">if</span> (file == <a class="code hl_class" href="classlist.html">tb_null</a>) {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classstring.html">string</a> (<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
@@ -162,7 +162,7 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="anamespacelolly_1_1hash_html_a9875145f47b504850e676928943a19cf"><div class="ttname"><a href="namespacelolly_1_1hash.html#a9875145f47b504850e676928943a19cf">lolly::hash::md5_hexdigest</a></div><div class="ttdeci">string md5_hexdigest(url u)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">md5.cpp:22</a></div></div>
 <div class="ttc" id="anamespacelolly_html"><div class="ttname"><a href="namespacelolly.html">lolly</a></div><div class="ttdef"><b>Definition</b> <a href="lolly__string__bench_8cpp_source.html#l00013">lolly_string_bench.cpp:13</a></div></div>
 <div class="ttc" id="anumeral_8hpp_html"><div class="ttname"><a href="numeral_8hpp.html">numeral.hpp</a></div></div>
-<div class="ttc" id="apath_8cpp_html_a6533057a5c870ee5ec0b2e688dd4d90f"><div class="ttname"><a href="path_8cpp.html#a6533057a5c870ee5ec0b2e688dd4d90f">as_string</a></div><div class="ttdeci">string as_string(path p)</div><div class="ttdef"><b>Definition</b> <a href="path_8cpp_source.html#l00037">path.cpp:37</a></div></div>
+<div class="ttc" id="astring_8cpp_html_a4f81ccbfa0538a74f1037b25515739f7"><div class="ttname"><a href="string_8cpp.html#a4f81ccbfa0538a74f1037b25515739f7">as_string</a></div><div class="ttdeci">string as_string(int i)</div><div class="ttdef"><b>Definition</b> <a href="string_8cpp_source.html#l00297">string.cpp:297</a></div></div>
 <div class="ttc" id="astring_8cpp_html_a6a5cc26a2db9765c14853b9cfd7335b4"><div class="ttname"><a href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a></div><div class="ttdeci">char * as_charp(string s)</div><div class="ttdef"><b>Definition</b> <a href="string_8cpp_source.html#l00281">string.cpp:281</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

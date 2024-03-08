@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['path_0',['path',['../observer_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4',1,'path:&#160;observer.hpp'],['../path_8hpp.html#a2f77c2b4585ee7ef2cf1a73d306f38b4',1,'path:&#160;path.hpp']]],
-  ['pointer_1',['pointer',['../basic_8hpp.html#a4f8e3c8dc03b1c750da13bd49ce4c439',1,'basic.hpp']]]
+  ['qi_0',['QI',['../basic_8hpp.html#aa70c90a0b3d85989a40a2155da9ddc10',1,'basic.hpp']]],
+  ['qn_1',['QN',['../basic_8hpp.html#ae689e762a32dd85f7f8c7f4073d6c521',1,'basic.hpp']]]
 ];

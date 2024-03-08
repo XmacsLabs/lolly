@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['observer_0',['observer',['../classobserver.html',1,'']]],
-  ['observer_5frep_1',['observer_rep',['../classobserver__rep.html',1,'']]]
+  ['quartet_0',['quartet',['../classquartet.html',1,'']]],
+  ['quintuple_1',['quintuple',['../classquintuple.html',1,'']]]
 ];

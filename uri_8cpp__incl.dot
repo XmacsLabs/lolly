@@ -64,8 +64,5 @@ digraph "uri.cpp"
   Node24 [id="Node000024",label="merge_sort.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$merge__sort_8hpp.html",tooltip=" "];
   Node24 -> Node13 [id="edge35_Node000024_Node000013",color="steelblue1",style="solid",tooltip=" "];
   Node24 -> Node16 [id="edge36_Node000024_Node000016",color="steelblue1",style="solid",tooltip=" "];
-  Node12 -> Node25 [id="edge37_Node000012_Node000025",color="steelblue1",style="solid",tooltip=" "];
-  Node25 [id="Node000025",label="observer.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$observer_8hpp.html",tooltip=" "];
-  Node25 -> Node4 [id="edge38_Node000025_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node12 -> Node4 [id="edge39_Node000012_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node4 [id="edge37_Node000012_Node000004",color="steelblue1",style="solid",tooltip=" "];
 }

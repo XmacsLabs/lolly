@@ -12,8 +12,6 @@ digraph "atomic_rep"
   Node4 -> Node3 [id="edge3_Node000003_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ref_count",fontcolor="grey" ];
   Node4 [id="Node000004",label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node4 -> Node2 [id="edge4_Node000002_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" op",fontcolor="grey" ];
-  Node5 -> Node2 [id="edge5_Node000002_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" obs",fontcolor="grey" ];
-  Node5 [id="Node000005",label="observer",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classobserver.html",tooltip=" "];
-  Node6 -> Node1 [id="edge6_Node000001_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" label",fontcolor="grey" ];
-  Node6 [id="Node000006",label="string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classstring.html",tooltip=" "];
+  Node5 -> Node1 [id="edge5_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" label",fontcolor="grey" ];
+  Node5 [id="Node000005",label="string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classstring.html",tooltip=" "];
 }
