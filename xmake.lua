@@ -102,7 +102,6 @@ local lolly_files = {
     "Kernel/**/*.cpp",
     "System/**/*.cpp|Memory/impl/*.cpp",
     "Data/String/**.cpp",
-    "Data/Scheme/**.cpp",
     "lolly/**/**.cpp",
 }
 local lolly_includedirs = {
@@ -111,7 +110,6 @@ local lolly_includedirs = {
     "Kernel/Containers",
     "Kernel/Types",
     "Data/String",
-    "Data/Scheme",
     "System/Classes",
     "System/Files",
     "System/IO",
