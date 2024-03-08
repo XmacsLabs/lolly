@@ -15,7 +15,6 @@
 #include "array.hpp"
 #include "iterator.hpp"
 #include "merge_sort.hpp"
-#include "observer.hpp"
 #include "string.hpp"
 
 /******************************************************************************
@@ -93,8 +92,7 @@ public:
 
 class tree_rep : concrete_struct {
 public:
-  int      op;
-  observer obs;
+  int op;
   inline tree_rep (int op2) : op (op2) {}
   friend class tree;
 };
