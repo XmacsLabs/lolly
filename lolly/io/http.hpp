@@ -13,7 +13,6 @@
 
 #include "lolly/io/http_request.hpp"
 #include "lolly/io/http_response.hpp"
-#include "tree.hpp"
 #include "url.hpp"
 
 namespace lolly {
