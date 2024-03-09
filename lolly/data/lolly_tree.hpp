@@ -153,33 +153,22 @@ public:
     return r;
   }
 
-  friend inline int N (lolly_tree<T> t);
-  friend inline int arity (lolly_tree<T> t);
-  friend inline array<lolly_tree<T>> A (lolly_tree<T> t);
-  friend inline array<lolly_tree<T>>&      AR (lolly_tree<T> t);
-  friend inline bool is_atomic (lolly_tree<T> t);
-  friend inline bool is_compound (lolly_tree<T> t);
-  friend inline bool is_generic (lolly_tree<T> t);
+  inline lolly_tree_rep<T>* inside () { return rep; }
+
+  friend inline int  arity (lolly_tree<T> t);
   friend inline bool operator== (lolly_tree<T> t, int lab);
   friend inline bool operator!= (lolly_tree<T> t, int lab);
   friend inline bool operator== (lolly_tree<T> t, string s);
   friend inline bool operator!= (lolly_tree<T> t, string s);
-  friend inline bool operator== (lolly_tree<T> t, const char* s);
-  friend inline bool operator!= (lolly_tree<T> t, const char* s);
-  friend inline lolly_tree_rep<T>* inside (lolly_tree<T> t);
-  friend inline bool strong_equal (lolly_tree<T> t, lolly_tree<T> u);
   friend inline bool is_func (lolly_tree<T> t, int l);
   friend inline bool is_func (lolly_tree<T> t, int l, int i);
 
-  friend lolly_tree<T> copy (lolly_tree<T> t);
-  friend bool operator== (lolly_tree<T> t, lolly_tree<T> u);
-  friend bool operator!= (lolly_tree<T> t, lolly_tree<T> u);
-  friend lolly_tree<T> operator* (lolly_tree<T> t1, lolly_tree<T> t2);
+  friend lolly_tree<T>  copy (lolly_tree<T> t);
+  friend lolly_tree<T>  operator* (lolly_tree<T> t1, lolly_tree<T> t2);
   friend lolly_tree<T>& operator<< (lolly_tree<T>& t, lolly_tree<T> t2);
   friend lolly_tree<T>& operator<< (lolly_tree<T>& t, array<lolly_tree<T>> a);
-  friend tm_ostream& operator<< (tm_ostream& out, lolly_tree<T> t);
-  friend list<lolly_tree<T>> as_trees (list<pointer> l);
-  friend blackbox as_blackbox (const lolly_tree<T>& t);
+  friend tm_ostream&    operator<< (tm_ostream& out, lolly_tree<T> t);
+  friend blackbox       as_blackbox (const lolly_tree<T>& t);
 };
 
 template <typename T> class lolly_tree_rep : concrete_struct {
@@ -217,7 +206,7 @@ template <typename T>
 inline int
 N (lolly_tree<T> t) {
   // CHECK_COMPOUND (t);
-  return N ((static_cast<compound_rep<T>*> (t.rep))->a);
+  return N ((static_cast<compound_rep<T>*> (t.inside ()))->a);
 }
 
 template <typename T>
@@ -231,32 +220,32 @@ template <typename T>
 inline array<lolly_tree<T>>
 A (lolly_tree<T> t) {
   // CHECK_COMPOUND (t);
-  return (static_cast<compound_rep<T>*> (t.rep))->a;
+  return (static_cast<compound_rep<T>*> (t.inside ()))->a;
 }
 
 template <typename T>
 inline array<lolly_tree<T>>&
 AR (lolly_tree<T> t) {
   // CHECK_COMPOUND (t);
-  return (static_cast<compound_rep<T>*> (t.rep))->a;
+  return (static_cast<compound_rep<T>*> (t.inside ()))->a;
 }
 
 template <typename T>
 inline bool
 is_atomic (lolly_tree<T> t) {
-  return (((int) t.rep->op) == 0);
+  return (((int) (t.inside ())->op) == 0);
 }
 
 template <typename T>
 inline bool
 is_compound (lolly_tree<T> t) {
-  return (((int) t.rep->op) > /*STRING*/ 0);
+  return (((int) (t.inside ())->op) > /*STRING*/ 0);
 }
 
 template <typename T>
 inline bool
 is_generic (lolly_tree<T> t) {
-  return ((int) t.rep->op) < 0;
+  return ((int) (t.inside ())) < 0;
 }
 
 template <typename T>
@@ -286,13 +275,13 @@ operator!= (lolly_tree<T> t, string s) {
 template <typename T>
 inline bool
 operator== (lolly_tree<T> t, const char* s) {
-  return (t.rep->op == /*STRING*/ 0) && (t->label == s);
+  return ((t.inside ())->op == /*STRING*/ 0) && (t->label == s);
 }
 
 template <typename T>
 inline bool
 operator!= (lolly_tree<T> t, const char* s) {
-  return (t.rep->op != /*STRING*/ 0) || (t->label != s);
+  return ((t.inside ())->op != /*STRING*/ 0) || (t->label != s);
 }
 
 template <typename T>
@@ -312,15 +301,9 @@ operator!= (lolly_tree<T> t, lolly_tree<T> u) {
 }
 
 template <typename T>
-inline lolly_tree_rep<T>*
-inside (lolly_tree<T> t) {
-  return t.rep;
-}
-
-template <typename T>
 inline bool
 strong_equal (lolly_tree<T> t, lolly_tree<T> u) {
-  return t.rep == u.rep;
+  return t.inside () == u.inside ();
 }
 
 template <typename T>
