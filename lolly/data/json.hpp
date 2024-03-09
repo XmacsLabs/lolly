@@ -62,22 +62,19 @@ public:
   }
   json (int64_t value) {
     string s= as_string (value);
-    rep= tm_new<json_rep> (
-        json_tree (INT64_TYPE, json_tree (s)));
+    rep     = tm_new<json_rep> (json_tree (INT64_TYPE, json_tree (s)));
   }
   json (int32_t value) {
     string s= as_string (value);
-    rep= tm_new<json_rep> (
-        json_tree (INT64_TYPE, json_tree (s)));
+    rep     = tm_new<json_rep> (json_tree (INT64_TYPE, json_tree (s)));
   }
   json (int16_t value) {
     string s= as_string (value);
-    rep= tm_new<json_rep> (
-        json_tree (INT64_TYPE, json_tree (s)));
+    rep     = tm_new<json_rep> (json_tree (INT64_TYPE, json_tree (s)));
   }
   json (double value) {
-    rep= tm_new<json_rep> (
-        json_tree (DOUBLE_TYPE, json_tree (as_string (value))));
+    string s= as_string (value);
+    rep     = tm_new<json_rep> (json_tree (DOUBLE_TYPE, json_tree (s)));
   }
   json (array<json> value) {
     array<json_tree> arr= array<json_tree> ();

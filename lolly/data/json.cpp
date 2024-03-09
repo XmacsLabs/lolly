@@ -98,7 +98,7 @@ json::dump () {
 string
 as_string (json j) {
   if (j.is_string ()) {
-    return as_string (j->t);
+    return to_string (j->t);
   }
   TM_FAILED ("not a string");
 }
