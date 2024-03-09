@@ -153,49 +153,33 @@ public:
     return r;
   }
 
-  template <typename T> friend inline int N (lolly_tree<T> t);
-  template <typename T> friend inline int arity (lolly_tree<T> t);
-  template <typename T> friend inline array<lolly_tree<T>> A (lolly_tree<T> t);
-  template <typename T>
+  friend inline int N (lolly_tree<T> t);
+  friend inline int arity (lolly_tree<T> t);
+  friend inline array<lolly_tree<T>> A (lolly_tree<T> t);
   friend inline array<lolly_tree<T>>&      AR (lolly_tree<T> t);
-  template <typename T> friend inline bool is_atomic (lolly_tree<T> t);
-  template <typename T> friend inline bool is_compound (lolly_tree<T> t);
-  template <typename T> friend inline bool is_generic (lolly_tree<T> t);
-  template <typename T>
+  friend inline bool is_atomic (lolly_tree<T> t);
+  friend inline bool is_compound (lolly_tree<T> t);
+  friend inline bool is_generic (lolly_tree<T> t);
   friend inline bool operator== (lolly_tree<T> t, int lab);
-  template <typename T>
   friend inline bool operator!= (lolly_tree<T> t, int lab);
-  template <typename T>
   friend inline bool operator== (lolly_tree<T> t, string s);
-  template <typename T>
   friend inline bool operator!= (lolly_tree<T> t, string s);
-  template <typename T>
   friend inline bool operator== (lolly_tree<T> t, const char* s);
-  template <typename T>
   friend inline bool operator!= (lolly_tree<T> t, const char* s);
-  template <typename T>
   friend inline lolly_tree_rep<T>* inside (lolly_tree<T> t);
-  template <typename T>
   friend inline bool strong_equal (lolly_tree<T> t, lolly_tree<T> u);
-  template <typename T> friend inline bool is_func (lolly_tree<T> t, int l);
-  template <typename T>
+  friend inline bool is_func (lolly_tree<T> t, int l);
   friend inline bool is_func (lolly_tree<T> t, int l, int i);
 
-  template <typename T> friend lolly_tree<T> copy (lolly_tree<T> t);
-  template <typename T>
+  friend lolly_tree<T> copy (lolly_tree<T> t);
   friend bool operator== (lolly_tree<T> t, lolly_tree<T> u);
-  template <typename T>
   friend bool operator!= (lolly_tree<T> t, lolly_tree<T> u);
-  template <typename T>
   friend lolly_tree<T> operator* (lolly_tree<T> t1, lolly_tree<T> t2);
-  template <typename T>
   friend lolly_tree<T>& operator<< (lolly_tree<T>& t, lolly_tree<T> t2);
-  template <typename T>
   friend lolly_tree<T>& operator<< (lolly_tree<T>& t, array<lolly_tree<T>> a);
-  template <typename T>
   friend tm_ostream& operator<< (tm_ostream& out, lolly_tree<T> t);
-  template <typename T> friend list<lolly_tree<T>> as_trees (list<pointer> l);
-  template <typename T> friend blackbox as_blackbox (const lolly_tree<T>& t);
+  friend list<lolly_tree<T>> as_trees (list<pointer> l);
+  friend blackbox as_blackbox (const lolly_tree<T>& t);
 };
 
 template <typename T> class lolly_tree_rep : concrete_struct {
