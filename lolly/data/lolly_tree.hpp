@@ -92,7 +92,7 @@ public:
   int op;
   T   data;
   inline lolly_tree_rep (int op2) : op (op2) {}
-  friend class lolly_tree;
+  friend class lolly_tree<T>;
 };
 
 template <typename T> class atomic_rep : public lolly_tree_rep<T> {
