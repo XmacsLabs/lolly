@@ -19,6 +19,8 @@
 #define WINPATHS
 #endif
 
+typedef lolly_tree<int> tree;
+
 static tree
 url_tuple (string label) {
   return tree (URL_TUPLE, tree (label));

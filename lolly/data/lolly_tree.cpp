@@ -4,29 +4,6 @@ namespace lolly {
 namespace data {
 
 template <typename T>
-static void
-destroy_tree_rep (lolly_tree_rep<T>* rep) {
-  if (((int) rep->op) == 0) tm_delete (static_cast<atomic_rep<T>*> (rep));
-  else if (((int) rep->op) > 0) tm_delete (static_cast<compound_rep<T>*> (rep));
-}
-
-template <typename T>
-lolly_tree<T>&
-lolly_tree<T>::operator= (lolly_tree<T> x) {
-  x.rep->ref_count++;
-  if ((--rep->ref_count) == 0) destroy_tree_rep (rep);
-  rep= x.rep;
-  return *this;
-}
-
-template <typename T> lolly_tree<T>::~lolly_tree () {
-  if ((--rep->ref_count) == 0) {
-    destroy_tree_rep (rep);
-    rep= NULL;
-  }
-}
-
-template <typename T>
 lolly_tree<T>
 copy (lolly_tree<T> t) {
   if (is_atomic (t)) return tree (copy (t->label));
@@ -37,22 +14,6 @@ copy (lolly_tree<T> t) {
       t2[i]= copy (t[i]);
     return t2;
   }
-}
-
-template <typename T>
-bool
-operator== (lolly_tree<T> t, lolly_tree<T> u) {
-  if (strong_equal (t, u)) return true;
-  return (t->op == u->op) &&
-         (is_atomic (t) ? (t->label == u->label) : (A (t) == A (u)));
-}
-
-template <typename T>
-bool
-operator!= (lolly_tree<T> t, lolly_tree<T> u) {
-  if (strong_equal (t, u)) return false;
-  return (t->op != u->op) ||
-         (is_atomic (t) ? (t->label != u->label) : (A (t) != A (u)));
 }
 
 template <typename T>
