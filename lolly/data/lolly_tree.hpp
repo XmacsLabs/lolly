@@ -36,7 +36,7 @@ public:
   }
 
   inline lolly_tree () : rep (tm_new<atomic_rep<T>> (string ())) {}
-  inline lolly_tree (string l) : rep (tm_new<atomic_rep<T>> (l)) {}
+  inline lolly_tree<T> (string l) : rep (tm_new<atomic_rep<T>> (l)) {}
   inline lolly_tree (const char* l) : rep (tm_new<atomic_rep<T>> (l)) {}
 
   inline lolly_tree (int l, int n= 0)
