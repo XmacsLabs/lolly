@@ -11,11 +11,9 @@
 
 #include "lolly/io/http.hpp"
 #include "analyze.hpp"
-#include "generic_tree.hpp"
 #include "hashmap.hpp"
+#include "iterator.hpp"
 #include "lolly/data/uri.hpp"
-#include "lolly/io/http_response.hpp"
-#include "tree.hpp"
 
 #ifndef OS_WASM
 #include <cpr/cpr.h>
@@ -28,37 +26,46 @@ const char* HTTP_USER_AGENT= "User-Agent";
 
 #ifdef OS_WASM
 
-tree
+http_tree
 http_head (url u, http_headers headers) {
   return http_response_init ();
 }
 
-tree
+http_tree
 http_get (url u, http_headers headers) {
   return http_response_init ();
 }
 
-tree
+http_tree
 download (url from, url to, http_headers headers) {
   return http_response_init ();
 }
 
 #else
 
-static tree
+static http_tree
 response_to_tree (cpr::Response r, string url) {
-  tree ret= http_response_init ();
-  http_response_set (ret, STATUS_CODE, as<long, tree> (r.status_code));
-  http_response_set (ret, TEXT, tree (r.text.c_str ()));
-  http_response_set (ret, URL, tree (url));
-  http_response_set (ret, ELAPSED, as<double, tree> (r.elapsed));
+  http_tree status_code= http_tree (http_label::STATUS_CODE);
+  status_code->data    = close_box<long> (r.status_code);
+
+  http_tree elapsed= http_tree (http_label::ELAPSED);
+  elapsed->data    = close_box<double> (r.elapsed);
+
   auto hmap= hashmap<string, string> ();
   for (auto i= r.header.begin (); i != r.header.end (); i++) {
     string key  = locase_all (string (i->first.c_str ()));
     string value= string (i->second.c_str ());
     hmap (key)  = value;
   }
-  http_response_set (ret, HEADER, as<hashmap<string, string>, tree> (hmap));
+  http_tree header= http_tree (http_label::HEADER);
+  header->data    = close_box (hmap);
+
+  http_tree ret= http_response_init ();
+  http_response_set (ret, STATUS_CODE, status_code);
+  http_response_set (ret, TEXT, http_tree (r.text.c_str ()));
+  http_response_set (ret, URL, http_tree (url));
+  http_response_set (ret, ELAPSED, elapsed);
+  http_response_set (ret, HEADER, header);
   return ret;
 }
 
@@ -73,7 +80,7 @@ as_cpr_header (http_headers hmap) {
   return header;
 }
 
-tree
+http_tree
 http_get (url u, http_headers headers) {
   string       u_str = as_string (u);
   c_string     u_cstr= c_string (u_str);
@@ -86,7 +93,7 @@ http_get (url u, http_headers headers) {
   return response_to_tree (r, u_str);
 }
 
-tree
+http_tree
 http_head (url u, http_headers headers) {
   string       u_str = as_string (u);
   c_string     u_cstr= c_string (u_str);
@@ -99,7 +106,7 @@ http_head (url u, http_headers headers) {
   return response_to_tree (r, u_str);
 }
 
-tree
+http_tree
 download (url from, url to, http_headers headers) {
   string   from_str = as_string (from);
   c_string from_cstr= c_string (from_str);
