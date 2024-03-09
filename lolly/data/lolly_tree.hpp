@@ -414,7 +414,7 @@ operator<< (tm_ostream& out, lolly_tree<T> t) {
 template <typename T>
 inline lolly_tree<T>
 copy (lolly_tree<T> t) {
-  if (is_atomic (t)) return tree (copy (t->label));
+  if (is_atomic (t)) return lolly_tree<T> (copy (t->label));
   else {
     int           i, n= N (t);
     lolly_tree<T> t2 (t, n);
