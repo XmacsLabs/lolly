@@ -64,19 +64,82 @@ public:
     // CHECK_COMPOUND (t);
   }
 
-  lolly_tree (int l, lolly_tree t1);
-  lolly_tree (int l, lolly_tree t1, lolly_tree t2);
-  lolly_tree (int l, lolly_tree t1, lolly_tree t2, lolly_tree t3);
-  lolly_tree (int l, lolly_tree t1, lolly_tree t2, lolly_tree t3,
-              lolly_tree t4);
-  lolly_tree (int l, lolly_tree t1, lolly_tree t2, lolly_tree t3, lolly_tree t4,
-              lolly_tree t5);
-  lolly_tree (int l, lolly_tree t1, lolly_tree t2, lolly_tree t3, lolly_tree t4,
-              lolly_tree t5, lolly_tree t6);
-  lolly_tree (int l, lolly_tree t1, lolly_tree t2, lolly_tree t3, lolly_tree t4,
-              lolly_tree t5, lolly_tree t6, lolly_tree t7);
-  lolly_tree (int l, lolly_tree t1, lolly_tree t2, lolly_tree t3, lolly_tree t4,
-              lolly_tree t5, lolly_tree t6, lolly_tree t7, lolly_tree t8);
+  inline lolly_tree (int l, lolly_tree<T> t1)
+      : rep (tm_new<compound_rep<T>> (l, array<lolly_tree<T>> (1))) {
+    (static_cast<compound_rep<T>*> (rep))->a[0]= t1;
+  }
+
+  inline lolly_tree (int l, lolly_tree<T> t1, lolly_tree<T> t2)
+      : rep (tm_new<compound_rep<T>> (l, array<lolly_tree<T>> (2))) {
+    (static_cast<compound_rep<T>*> (rep))->a[0]= t1;
+    (static_cast<compound_rep<T>*> (rep))->a[1]= t2;
+  }
+
+  inline lolly_tree (int l, lolly_tree<T> t1, lolly_tree<T> t2,
+                     lolly_tree<T> t3)
+      : rep (tm_new<compound_rep<T>> (l, array<lolly_tree<T>> (3))) {
+    (static_cast<compound_rep<T>*> (rep))->a[0]= t1;
+    (static_cast<compound_rep<T>*> (rep))->a[1]= t2;
+    (static_cast<compound_rep<T>*> (rep))->a[2]= t3;
+  }
+
+  inline lolly_tree (int l, lolly_tree<T> t1, lolly_tree<T> t2,
+                     lolly_tree<T> t3, lolly_tree<T> t4)
+      : rep (tm_new<compound_rep<T>> (l, array<lolly_tree<T>> (4))) {
+    (static_cast<compound_rep<T>*> (rep))->a[0]= t1;
+    (static_cast<compound_rep<T>*> (rep))->a[1]= t2;
+    (static_cast<compound_rep<T>*> (rep))->a[2]= t3;
+    (static_cast<compound_rep<T>*> (rep))->a[3]= t4;
+  }
+
+  inline lolly_tree (int l, lolly_tree<T> t1, lolly_tree<T> t2,
+                     lolly_tree<T> t3, lolly_tree<T> t4, lolly_tree<T> t5)
+      : rep (tm_new<compound_rep<T>> (l, array<lolly_tree<T>> (5))) {
+    (static_cast<compound_rep<T>*> (rep))->a[0]= t1;
+    (static_cast<compound_rep<T>*> (rep))->a[1]= t2;
+    (static_cast<compound_rep<T>*> (rep))->a[2]= t3;
+    (static_cast<compound_rep<T>*> (rep))->a[3]= t4;
+    (static_cast<compound_rep<T>*> (rep))->a[4]= t5;
+  }
+
+  inline lolly_tree (int l, lolly_tree<T> t1, lolly_tree<T> t2,
+                     lolly_tree<T> t3, lolly_tree<T> t4, lolly_tree<T> t5,
+                     lolly_tree<T> t6)
+      : rep (tm_new<compound_rep<T>> (l, array<lolly_tree<T>> (6))) {
+    (static_cast<compound_rep<T>*> (rep))->a[0]= t1;
+    (static_cast<compound_rep<T>*> (rep))->a[1]= t2;
+    (static_cast<compound_rep<T>*> (rep))->a[2]= t3;
+    (static_cast<compound_rep<T>*> (rep))->a[3]= t4;
+    (static_cast<compound_rep<T>*> (rep))->a[4]= t5;
+    (static_cast<compound_rep<T>*> (rep))->a[5]= t6;
+  }
+
+  inline lolly_tree (int l, lolly_tree<T> t1, lolly_tree<T> t2,
+                     lolly_tree<T> t3, lolly_tree<T> t4, lolly_tree<T> t5,
+                     lolly_tree<T> t6, lolly_tree<T> t7)
+      : rep (tm_new<compound_rep<T>> (l, array<lolly_tree<T>> (7))) {
+    (static_cast<compound_rep<T>*> (rep))->a[0]= t1;
+    (static_cast<compound_rep<T>*> (rep))->a[1]= t2;
+    (static_cast<compound_rep<T>*> (rep))->a[2]= t3;
+    (static_cast<compound_rep<T>*> (rep))->a[3]= t4;
+    (static_cast<compound_rep<T>*> (rep))->a[4]= t5;
+    (static_cast<compound_rep<T>*> (rep))->a[5]= t6;
+    (static_cast<compound_rep<T>*> (rep))->a[6]= t7;
+  }
+
+  inline lolly_tree (int l, lolly_tree<T> t1, lolly_tree<T> t2,
+                     lolly_tree<T> t3, lolly_tree<T> t4, lolly_tree<T> t5,
+                     lolly_tree<T> t6, lolly_tree<T> t7, lolly_tree<T> t8)
+      : rep (tm_new<compound_rep<T>> (l, array<lolly_tree<T>> (8))) {
+    (static_cast<compound_rep<T>*> (rep))->a[0]= t1;
+    (static_cast<compound_rep<T>*> (rep))->a[1]= t2;
+    (static_cast<compound_rep<T>*> (rep))->a[2]= t3;
+    (static_cast<compound_rep<T>*> (rep))->a[3]= t4;
+    (static_cast<compound_rep<T>*> (rep))->a[4]= t5;
+    (static_cast<compound_rep<T>*> (rep))->a[5]= t6;
+    (static_cast<compound_rep<T>*> (rep))->a[6]= t7;
+    (static_cast<compound_rep<T>*> (rep))->a[7]= t8;
+  }
 
   inline lolly_tree<T>& operator[] (int i) {
     // CHECK_COMPOUND (*this);
