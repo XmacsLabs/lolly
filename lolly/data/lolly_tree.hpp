@@ -30,23 +30,9 @@ public:
 
   inline lolly_tree (const lolly_tree& x) : rep (x.rep){rep->ref_count++};
 
-  inline ~lolly_tree () {
-    if ((--rep->ref_count) == 0) {
-      // destroy_tree_rep (rep);
-      rep= NULL;
-    }
-  }
-
   inline atomic_rep<T>* operator->() {
     // CHECK_ATOMIC (*this);
     return static_cast<atomic_rep*> (rep);
-  }
-
-  inline lolly_tree& operator= (lolly_tree x) {
-    x.rep->ref_count++;
-    // if ((--rep->ref_count) == 0) destroy_tree_rep (rep);
-    rep= x.rep;
-    return *this;
   }
 
   inline lolly_tree () : rep (tm_new<atomic_rep> (string ())) {}
@@ -141,6 +127,9 @@ public:
     (static_cast<compound_rep<T>*> (rep))->a[7]= t8;
   }
 
+  lolly_tree<T>& operator= (lolly_tree<T> x);
+  ~lolly_tree ();
+
   inline lolly_tree<T>& operator[] (int i) {
     // CHECK_COMPOUND (*this);
     return (static_cast<compound_rep*> (rep))->a[i];
@@ -172,14 +161,20 @@ public:
   friend inline bool is_func (lolly_tree<T> t, int l, int i);
 
   template <typename T> friend lolly_tree<T> copy (lolly_tree<T> t);
-  friend bool        operator== (lolly_tree<T> t, lolly_tree<T> u);
-  friend bool        operator!= (lolly_tree<T> t, lolly_tree<T> u);
-  friend lolly_tree& operator<< (lolly_tree<T>& t, lolly_tree<T> t2);
-  friend lolly_tree& operator<< (lolly_tree<T>& t, array<lolly_tree<T>> a);
+  template <typename T>
+  friend bool operator== (lolly_tree<T> t, lolly_tree<T> u);
+  template <typename T>
+  friend bool operator!= (lolly_tree<T> t, lolly_tree<T> u);
+  template <typename T>
+  friend lolly_tree<T> operator* (lolly_tree<T> t1, lolly_tree<T> t2);
+  template <typename T>
+  friend lolly_tree<T>& operator<< (lolly_tree<T>& t, lolly_tree<T> t2);
+  template <typename T>
+  friend lolly_tree<T>& operator<< (lolly_tree<T>& t, array<lolly_tree<T>> a);
+  template <typename T>
   friend tm_ostream& operator<< (tm_ostream& out, lolly_tree<T> t);
-  friend lolly_tree  operator* (lolly_tree<T> t1, lolly_tree<T> t2);
-  friend list<lolly_tree<T>> as_trees (list<pointer> l);
-  friend blackbox            as_blackbox (const lolly_tree<T>& t);
+  template <typename T> friend list<lolly_tree<T>> as_trees (list<pointer> l);
+  template <typename T> friend blackbox as_blackbox (const lolly_tree<T>& t);
 };
 
 template <typename T> class lolly_tree_rep : concrete_struct {
@@ -372,6 +367,15 @@ as_string (lolly_tree<T> t) {
 }
 
 template <typename T> lolly_tree<T> copy (lolly_tree<T> t);
+template <typename T> bool operator== (lolly_tree<T> t, lolly_tree<T> u);
+template <typename T> bool operator!= (lolly_tree<T> t, lolly_tree<T> u);
+template <typename T>
+lolly_tree<T> operator* (lolly_tree<T> t1, lolly_tree<T> t2);
+template <typename T>
+lolly_tree<T>& operator<< (lolly_tree<T>& t, lolly_tree<T> t2);
+template <typename T>
+lolly_tree<T>& operator<< (lolly_tree<T>& t, array<lolly_tree<T>> a);
+template <typename T> tm_ostream& operator<< (tm_ostream& out, lolly_tree<T> t);
 
 } // namespace data
 } // namespace lolly
