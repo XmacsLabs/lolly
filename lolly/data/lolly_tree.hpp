@@ -20,6 +20,7 @@ template <typename T> class lolly_tree;
 template <typename T> class lolly_tree_rep;
 template <typename T> class atomic_rep;
 template <typename T> class compound_rep;
+class blackbox;
 
 template <typename T> class lolly_tree {
   lolly_tree_rep<T>* rep; // can be atomic or compound or generic
@@ -110,6 +111,90 @@ public:
       : lolly_tree_rep<T> (l), a (a2) {}
   friend class lolly_tree<T>;
 };
+
+template <typename T>
+inline int
+N (lolly_tree<T> t) {
+  // CHECK_COMPOUND (t);
+  return N ((static_cast<compound_rep<T>*> (t.rep))->a);
+}
+
+template <typename T>
+inline int
+arity (lolly_tree<T> t) {
+  if (t.rep->op == /*STRING*/ 0) return 0;
+  else return N ((static_cast<compound_rep<T>*> (t.rep))->a);
+}
+
+template <typename T>
+inline array<lolly_tree<T>>
+A (lolly_tree<T> t) {
+  // CHECK_COMPOUND (t);
+  return (static_cast<compound_rep<T>*> (t.rep))->a;
+}
+
+template <typename T>
+inline array<lolly_tree<T>>&
+AR (lolly_tree<T> t) {
+  // CHECK_COMPOUND (t);
+  return (static_cast<compound_rep<T>*> (t.rep))->a;
+}
+
+template <typename T>
+inline bool
+is_atomic (lolly_tree<T> t) {
+  return (((int) t.rep->op) == 0);
+}
+
+template <typename T>
+inline bool
+is_compound (lolly_tree<T> t) {
+  return (((int) t.rep->op) > /*STRING*/ 0);
+}
+
+template <typename T>
+inline bool
+is_generic (lolly_tree<T> t) {
+  return ((int) t.rep->op) < 0;
+}
+
+template <typename T>
+inline bool
+operator== (lolly_tree<T> t, int lab) {
+  return (t.rep->op == lab) && (N (t) == 0);
+}
+
+template <typename T>
+inline bool
+operator!= (lolly_tree<T> t, int lab) {
+  return (t.rep->op != lab) || (N (t) != 0);
+}
+
+template <typename T>
+inline bool
+operator== (lolly_tree<T> t, string s) {
+  return (t.rep->op == /*STRING*/ 0) && (t->label == s);
+}
+
+template <typename T>
+inline bool
+operator!= (lolly_tree<T> t, string s) {
+  return (t.rep->op != /*STRING*/ 0) || (t->label != s);
+}
+
+template <typename T>
+inline bool
+operator== (lolly_tree<T> t, const char* s) {
+  return (t.rep->op == /*STRING*/ 0) && (t->label == s);
+}
+
+template <typename T>
+inline bool
+operator!= (lolly_tree<T> t, const char* s) {
+  return (t.rep->op != /*STRING*/ 0) || (t->label != s);
+}
+
+template <typename T> lolly_tree<T> copy (lolly_tree<T> t);
 
 } // namespace data
 } // namespace lolly
