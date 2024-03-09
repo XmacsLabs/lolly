@@ -11,6 +11,5 @@ var searchData=
   ['lolly_5fstring_2eipp_8',['lolly_string.ipp',['../lolly__string_8ipp.html',1,'']]],
   ['lolly_5fstring_5fbench_2ecpp_9',['lolly_string_bench.cpp',['../lolly__string__bench_8cpp.html',1,'']]],
   ['lolly_5fstring_5ftest_2ecpp_10',['lolly_string_test.cpp',['../lolly__string__test_8cpp.html',1,'']]],
-  ['lolly_5ftree_2ecpp_11',['lolly_tree.cpp',['../lolly__tree_8cpp.html',1,'']]],
-  ['lolly_5ftree_2ehpp_12',['lolly_tree.hpp',['../lolly__tree_8hpp.html',1,'']]]
+  ['lolly_5ftree_2ehpp_11',['lolly_tree.hpp',['../lolly__tree_8hpp.html',1,'']]]
 ];
