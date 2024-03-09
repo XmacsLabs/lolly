@@ -27,15 +27,28 @@ template <typename T> class lolly_tree {
 
 public:
   inline lolly_tree (lolly_tree_rep<T>* rep2) : rep (rep2){rep->ref_count++};
+
   inline lolly_tree (const lolly_tree& x) : rep (x.rep){rep->ref_count++};
+
   inline ~lolly_tree () {
     if ((--rep->ref_count) == 0) {
       // destroy_tree_rep (rep);
       rep= NULL;
     }
-  };
-  inline atomic_rep<T>* operator->();
-  inline lolly_tree&    operator= (lolly_tree x);
+  }
+
+  inline atomic_rep<T>* operator->() {
+    // CHECK_ATOMIC (*this);
+    return static_cast<atomic_rep*> (rep);
+  }
+
+  inline lolly_tree& operator= (lolly_tree x) {
+    x.rep->ref_count++;
+    // if ((--rep->ref_count) == 0) destroy_tree_rep (rep);
+    rep= x.rep;
+    return *this;
+  }
+
   inline lolly_tree () : rep (tm_new<atomic_rep> (string ())) {}
   inline lolly_tree (string l) : rep (tm_new<atomic_rep> (l)) {}
   inline lolly_tree (const char* l) : rep (tm_new<atomic_rep> (l)) {}
@@ -64,8 +77,18 @@ public:
               lolly_tree t5, lolly_tree t6, lolly_tree t7);
   lolly_tree (int l, lolly_tree t1, lolly_tree t2, lolly_tree t3, lolly_tree t4,
               lolly_tree t5, lolly_tree t6, lolly_tree t7, lolly_tree t8);
-  inline lolly_tree<T>& operator[] (int i);
-  lolly_tree<T>         operator() (int start, int end);
+
+  inline lolly_tree<T>& operator[] (int i) {
+    // CHECK_COMPOUND (*this);
+    return (static_cast<compound_rep*> (rep))->a[i];
+  }
+
+  inline lolly_tree<T> operator() (int start, int end) {
+    lolly_tree<T> r (rep->op, end - start);
+    for (int i= start; i < end; i++)
+      r[i - start]= (static_cast<compound_rep*> (rep))->a[i];
+    return r;
+  }
 
   friend inline int                   N (lolly_tree<T> t);
   friend inline int                   arity (lolly_tree<T> t);
