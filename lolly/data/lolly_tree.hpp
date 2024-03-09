@@ -36,13 +36,21 @@ public:
   };
   inline atomic_rep<T>* operator->();
   inline lolly_tree&    operator= (lolly_tree x);
+  inline lolly_tree () : rep (tm_new<atomic_rep> (string ())) {}
+  inline lolly_tree (string l) : rep (tm_new<atomic_rep> (l)) {}
+  inline lolly_tree (const char* l) : rep (tm_new<atomic_rep> (l)) {}
 
-  inline lolly_tree ();
-  inline lolly_tree (string l);
-  inline lolly_tree (const char* l);
-  inline lolly_tree (int l, int n= 0);
-  inline lolly_tree (int l, array<lolly_tree> a);
-  inline lolly_tree (lolly_tree t, int n);
+  inline lolly_tree (int l, int n= 0)
+      : rep (tm_new<compound_rep> (l, array<tree> (n))) {}
+
+  inline lolly_tree (int l, array<lolly_tree<T>> a)
+      : rep (tm_new<compound_rep> (l, a)) {}
+
+  inline lolly_tree (lolly_tree<T> t, int n)
+      : rep (tm_new<compound_rep> (t.rep->op, array<lolly_tree<T>> (n))) {
+    // CHECK_COMPOUND (t);
+  }
+
   lolly_tree (int l, lolly_tree t1);
   lolly_tree (int l, lolly_tree t1, lolly_tree t2);
   lolly_tree (int l, lolly_tree t1, lolly_tree t2, lolly_tree t3);
@@ -192,6 +200,89 @@ template <typename T>
 inline bool
 operator!= (lolly_tree<T> t, const char* s) {
   return (t.rep->op != /*STRING*/ 0) || (t->label != s);
+}
+
+template <typename T>
+inline lolly_tree_rep<T>*
+inside (lolly_tree<T> t) {
+  return t.rep;
+}
+
+template <typename T>
+inline bool
+strong_equal (lolly_tree<T> t, lolly_tree<T> u) {
+  return t.rep == u.rep;
+}
+
+template <typename T>
+inline bool
+is_func (lolly_tree<T> t, int l) {
+  return (t.rep->op == l) && (N (t) != 0);
+}
+
+template <typename T>
+inline bool
+is_func (lolly_tree<T> t, int l, int i) {
+  return (t.rep->op == l) && (N (t) == i);
+}
+
+template <typename T>
+inline bool
+is_bool (lolly_tree<T> t) {
+  return is_atomic (t) && is_bool (t->label);
+}
+
+template <typename T>
+inline bool
+is_int (lolly_tree<T> t) {
+  return is_atomic (t) && is_int (t->label);
+}
+
+template <typename T>
+inline bool
+is_double (lolly_tree<T> t) {
+  return is_atomic (t) && is_double (t->label);
+}
+
+template <typename T>
+inline bool
+is_string (lolly_tree<T> t) {
+  return is_atomic (t);
+}
+
+template <typename T>
+inline bool
+as_bool (lolly_tree<T> t) {
+  if (is_atomic (t)) return as_bool (t->label);
+  else return false;
+}
+
+template <typename T>
+inline int
+as_int (lolly_tree<T> t) {
+  if (is_atomic (t)) return as_int (t->label);
+  else return 0;
+}
+
+template <typename T>
+inline long int
+as_long_int (lolly_tree<T> t) {
+  if (is_atomic (t)) return as_long_int (t->label);
+  else return 0;
+}
+
+template <typename T>
+inline double
+as_double (lolly_tree<T> t) {
+  if (is_atomic (t)) return as_double (t->label);
+  else return 0.0;
+}
+
+template <typename T>
+inline string
+as_string (lolly_tree<T> t) {
+  if (is_atomic (t)) return t->label;
+  else return "";
 }
 
 template <typename T> lolly_tree<T> copy (lolly_tree<T> t);
