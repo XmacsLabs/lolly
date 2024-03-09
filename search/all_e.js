@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['data',['../classwhitebox__rep.html#a0da646bbb8cf15ed9a581bfb764d25b2',1,'whitebox_rep::data'],['../classgeneric__rep.html#a48b8d3153a69f544cd50b1f05178eb02',1,'generic_rep::data'],['../struct__channel.html#a9efde0dbe6f35bd676e366ef80fe5573',1,'_channel::data']]],
+  ['data_0',['data',['../classwhitebox__rep.html#a0da646bbb8cf15ed9a581bfb764d25b2',1,'whitebox_rep::data'],['../classlolly_1_1data_1_1lolly__tree__rep.html#a3e242580bb61759d82b127c14906b854',1,'lolly::data::lolly_tree_rep::data'],['../struct__channel.html#a9efde0dbe6f35bd676e366ef80fe5573',1,'_channel::data']]],
   ['data_1',['Project: Lolly Data',['../md_devel_219.html',1,'']]],
   ['de_20texmacs_2',['Project: De-TeXmacs',['../md_devel_216.html',1,'']]],
   ['dec_5fcount_3',['DEC_COUNT',['../basic_8hpp.html#a4f8364cb401cc5bd7fd26d6478aa79ff',1,'basic.hpp']]],
@@ -8,9 +8,9 @@ var searchData=
   ['decode_5fbase64_5',['decode_base64',['../namespacelolly_1_1data.html#a083edca3fb16a7cd6cce07a5bae5b1c8',1,'lolly::data::decode_base64(array&lt; int &gt; ac)'],['../namespacelolly_1_1data.html#ab978a41326fa124960a0d7a51438f1d3',1,'lolly::data::decode_base64(string s)']]],
   ['delta_6',['delta',['../url_8cpp.html#ab87a6ee28b0a5dacf177b9c13c5ee9a4',1,'delta(url base, url u):&#160;url.cpp'],['../url_8hpp.html#ab87a6ee28b0a5dacf177b9c13c5ee9a4',1,'delta(url base, url u):&#160;url.cpp']]],
   ['delta_5fsub_7',['delta_sub',['../url_8cpp.html#a7785d18987d57ce39bec171a8a3c4612',1,'url.cpp']]],
-  ['dependency_8',['Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md36',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md44',1,'Method 2: Adding xmake Dependency']]],
+  ['dependency_8',['Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md37',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md44',1,'Method 2: Adding xmake Dependency']]],
   ['descends_9',['descends',['../url_8cpp.html#a6aa2030640a069317bfa0d04903042b3',1,'descends(url u, url base):&#160;url.cpp'],['../url_8hpp.html#a6aa2030640a069317bfa0d04903042b3',1,'descends(url u, url base):&#160;url.cpp']]],
-  ['destroy_5ftree_5frep_10',['destroy_tree_rep',['../tree_8cpp.html#a54660dbf0eccf41404c8c195463a1ed9',1,'destroy_tree_rep(tree_rep *rep):&#160;tree.cpp'],['../tree_8hpp.html#a54660dbf0eccf41404c8c195463a1ed9',1,'destroy_tree_rep(tree_rep *rep):&#160;tree.cpp']]],
+  ['destroy_5ftree_5frep_10',['destroy_tree_rep',['../namespacelolly_1_1data.html#afe12efc0cacaa384ff03effe031cb59c',1,'lolly::data']]],
   ['developers_11',['For Developers',['../md_CONTRIBUTING.html#autotoc_md2',1,'']]],
   ['developing_20on_20gnu_20linux_12',['Developing on GNU/Linux',['../md_docs_2guide_2Develop__on__Linux.html',1,'']]],
   ['developing_20on_20windows_13',['Developing on Windows',['../md_docs_2guide_2Develop__on__Windows.html',1,'']]],
@@ -25,6 +25,6 @@ var searchData=
   ['documentation_22',['Project 1: Documentation',['../md_devel_21.html',1,'']]],
   ['dos_5fto_5fbetter_23',['dos_to_better',['../analyze_8cpp.html#ae798ecf0cbbcb90b9d0a5707fc3110d9',1,'dos_to_better(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#ae798ecf0cbbcb90b9d0a5707fc3110d9',1,'dos_to_better(string s):&#160;analyze.cpp']]],
   ['double_5ftype_24',['DOUBLE_TYPE',['../namespacelolly_1_1data.html#a01288eee69b7e52dc00ad9021af846d8a1d58cddfbe061a7b045cf7c4d3953a42',1,'lolly::data']]],
-  ['download_25',['download',['../namespacelolly_1_1io.html#a02be76cd209a2d84a7b267e348c170d2',1,'lolly::io']]],
+  ['download_25',['download',['../namespacelolly_1_1io.html#a217d34916d009b9e7fb00b9351938934',1,'lolly::io']]],
   ['dump_26',['dump',['../classlolly_1_1data_1_1json.html#ace6a263522b00fbf69c51bc93668751c',1,'lolly::data::json']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['edit_5fenv_5frep_0',['edit_env_rep',['../classhashmap__rep.html#a96f68e1a31acedbd24804b806aa47635',1,'hashmap_rep']]],
-  ['elapsed_1',['ELAPSED',['../namespacelolly_1_1io.html#a70eabf4dfd1e0569a4f45d6ac8b07d10abe2d03210c1733ce4c512d845f966f17',1,'lolly::io']]],
+  ['elapsed_1',['ELAPSED',['../namespacelolly_1_1io.html#ab6a34ebb135b6e0c21923f8f788091a3abe2d03210c1733ce4c512d845f966f17',1,'lolly::io']]],
   ['empty_2',['empty',['../classhashmap__rep.html#a138275b8ed6bb4bdaefdc7b4441286bf',1,'hashmap_rep']]],
   ['encode_5fbase64_3',['encode_base64',['../namespacelolly_1_1data.html#a70beb077536b3ec520bc1ebd04e88cd3',1,'lolly::data::encode_base64(char c1, char c2, char c3)'],['../namespacelolly_1_1data.html#a1a59469c495b6ae7fbaf9f4242e03359',1,'lolly::data::encode_base64(string s)']]],
   ['ends_4',['ends',['../analyze_8cpp.html#a3bf78d83c6e08edbf9e898b278f9e677',1,'ends(string s, const char *what):&#160;analyze.cpp'],['../analyze_8cpp.html#adcc51946f361554a7faa58452367528d',1,'ends(string s, const string r):&#160;analyze.cpp'],['../analyze_8hpp.html#ac835ed61769e4f35ec7c39f57346595d',1,'ends(string s, const char *test):&#160;analyze.cpp'],['../analyze_8hpp.html#a1f979270044423cc26337327c4d375e9',1,'ends(string s, const string test):&#160;analyze.cpp']]],

@@ -8,23 +8,9 @@ digraph "blackbox.hpp"
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="blackbox_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$blackbox__test_8cpp.html",tooltip=" "];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="generic_tree.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$generic__tree_8hpp.html",tooltip=" "];
+  Node3 [id="Node000003",label="http.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8hpp.html",tooltip=" "];
   Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="generic_tree_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$generic__tree__test_8cpp.html",tooltip=" "];
+  Node4 [id="Node000004",label="http.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8cpp.html",tooltip=" "];
   Node3 -> Node5 [id="edge4_Node000003_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="http.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8cpp.html",tooltip=" "];
-  Node3 -> Node6 [id="edge5_Node000003_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="http_request.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__request_8hpp.html",tooltip=" "];
-  Node6 -> Node7 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="http.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http_8hpp.html",tooltip=" "];
-  Node7 -> Node5 [id="edge7_Node000007_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node7 -> Node8 [id="edge8_Node000007_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node8 [id="Node000008",label="http_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__test_8cpp.html",tooltip=" "];
-  Node3 -> Node9 [id="edge9_Node000003_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node9 [id="Node000009",label="http_response.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__response_8hpp.html",tooltip=" "];
-  Node9 -> Node5 [id="edge10_Node000009_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node9 -> Node7 [id="edge11_Node000009_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 -> Node8 [id="edge12_Node000003_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 -> Node10 [id="edge13_Node000003_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node10 [id="Node000010",label="tree.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree_8cpp.html",tooltip=" "];
+  Node5 [id="Node000005",label="http_test.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http__test_8cpp.html",tooltip=" "];
 }

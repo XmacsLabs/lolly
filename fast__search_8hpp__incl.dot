@@ -41,4 +41,6 @@ digraph "fast_search.hpp"
   Node1 -> Node16 [id="edge20_Node000001_Node000016",color="steelblue1",style="solid",tooltip=" "];
   Node16 [id="Node000016",label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
   Node16 -> Node3 [id="edge21_Node000016_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node16 -> Node17 [id="edge22_Node000016_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="stdint.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

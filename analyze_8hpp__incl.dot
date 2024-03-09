@@ -43,4 +43,5 @@ digraph "analyze.hpp"
   Node1 -> Node17 [id="edge21_Node000001_Node000017",color="steelblue1",style="solid",tooltip=" "];
   Node17 [id="Node000017",label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
   Node17 -> Node4 [id="edge22_Node000017_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node2 [id="edge23_Node000017_Node000002",color="steelblue1",style="solid",tooltip=" "];
 }

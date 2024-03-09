@@ -10,9 +10,19 @@ digraph "url_rep"
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ref_count",fontcolor="grey" ];
   Node3 [id="Node000003",label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" t",fontcolor="grey" ];
-  Node4 [id="Node000004",label="tree",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classtree.html",tooltip=" "];
+  Node4 [id="Node000004",label="lolly::data::lolly\l_tree\< int \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1lolly__tree.html",tooltip=" "];
   Node5 -> Node4 [id="edge4_Node000004_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" rep",fontcolor="grey" ];
-  Node5 [id="Node000005",label="tree_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classtree__rep.html",tooltip=" "];
+  Node5 [id="Node000005",label="lolly::data::lolly\l_tree_rep\< int \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1lolly__tree__rep.html",tooltip=" "];
   Node2 -> Node5 [id="edge5_Node000005_Node000002",dir="back",color="firebrick4",style="solid",tooltip=" "];
-  Node3 -> Node5 [id="edge6_Node000005_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" op",fontcolor="grey" ];
+  Node3 -> Node5 [id="edge6_Node000005_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" data\nop",fontcolor="grey" ];
+  Node6 -> Node5 [id="edge7_Node000005_Node000006",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< int \>",fontcolor="grey" ];
+  Node6 [id="Node000006",label="lolly::data::lolly\l_tree_rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1lolly__tree__rep.html",tooltip=" "];
+  Node2 -> Node6 [id="edge8_Node000006_Node000002",dir="back",color="firebrick4",style="solid",tooltip=" "];
+  Node3 -> Node6 [id="edge9_Node000006_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" op",fontcolor="grey" ];
+  Node7 -> Node6 [id="edge10_Node000006_Node000007",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" data",fontcolor="grey" ];
+  Node7 [id="Node000007",label="T",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node4 [id="edge11_Node000004_Node000008",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< int \>",fontcolor="grey" ];
+  Node8 [id="Node000008",label="lolly::data::lolly\l_tree\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1lolly__tree.html",tooltip=" "];
+  Node9 -> Node8 [id="edge12_Node000008_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" rep",fontcolor="grey" ];
+  Node9 [id="Node000009",label="lolly_tree_rep\< T \> *",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
 }

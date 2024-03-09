@@ -45,9 +45,10 @@ digraph "analyze.cpp"
   Node2 -> Node18 [id="edge22_Node000002_Node000018",color="steelblue1",style="solid",tooltip=" "];
   Node18 [id="Node000018",label="string.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string_8hpp.html",tooltip=" "];
   Node18 -> Node5 [id="edge23_Node000018_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node19 [id="edge24_Node000001_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node18 -> Node3 [id="edge24_Node000018_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node19 [id="edge25_Node000001_Node000019",color="steelblue1",style="solid",tooltip=" "];
   Node19 [id="Node000019",label="lolly/data/numeral.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$numeral_8hpp.html",tooltip=" "];
-  Node19 -> Node18 [id="edge25_Node000019_Node000018",color="steelblue1",style="solid",tooltip=" "];
-  Node19 -> Node3 [id="edge26_Node000019_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node17 [id="edge27_Node000001_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node18 [id="edge26_Node000019_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node19 -> Node3 [id="edge27_Node000019_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node17 [id="edge28_Node000001_Node000017",color="steelblue1",style="solid",tooltip=" "];
 }
