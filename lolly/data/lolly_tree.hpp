@@ -368,8 +368,8 @@ template <typename T>
 inline lolly_tree<T>
 operator* (lolly_tree<T> t1, lolly_tree<T> t2) {
   int i;
-  if (is_atomic (t1)) t1= tree (t2->op, t1);
-  if (is_atomic (t2)) t2= tree (t1->op, t2);
+  if (is_atomic (t1)) t1= lolly_tree (t2->op, t1);
+  if (is_atomic (t2)) t2= lolly_tree (t1->op, t2);
   lolly_tree<T> r (t1, N (t1) + N (t2));
   for (i= 0; i < N (t1); i++)
     r[i]= t1[i];
