@@ -154,21 +154,6 @@ public:
   }
 
   inline lolly_tree_rep<T>* inside () { return rep; }
-
-  friend inline int  arity (lolly_tree<T> t);
-  friend inline bool operator== (lolly_tree<T> t, int lab);
-  friend inline bool operator!= (lolly_tree<T> t, int lab);
-  friend inline bool operator== (lolly_tree<T> t, string s);
-  friend inline bool operator!= (lolly_tree<T> t, string s);
-  friend inline bool is_func (lolly_tree<T> t, int l);
-  friend inline bool is_func (lolly_tree<T> t, int l, int i);
-
-  friend lolly_tree<T>  copy (lolly_tree<T> t);
-  friend lolly_tree<T>  operator* (lolly_tree<T> t1, lolly_tree<T> t2);
-  friend lolly_tree<T>& operator<< (lolly_tree<T>& t, lolly_tree<T> t2);
-  friend lolly_tree<T>& operator<< (lolly_tree<T>& t, array<lolly_tree<T>> a);
-  friend tm_ostream&    operator<< (tm_ostream& out, lolly_tree<T> t);
-  friend blackbox       as_blackbox (const lolly_tree<T>& t);
 };
 
 template <typename T> class lolly_tree_rep : concrete_struct {
@@ -212,8 +197,8 @@ N (lolly_tree<T> t) {
 template <typename T>
 inline int
 arity (lolly_tree<T> t) {
-  if (t.rep->op == /*STRING*/ 0) return 0;
-  else return N ((static_cast<compound_rep<T>*> (t.rep))->a);
+  if (t.inside ()->op == /*STRING*/ 0) return 0;
+  else return N ((static_cast<compound_rep<T>*> (t.inside ()))->a);
 }
 
 template <typename T>
@@ -251,25 +236,25 @@ is_generic (lolly_tree<T> t) {
 template <typename T>
 inline bool
 operator== (lolly_tree<T> t, int lab) {
-  return (t.rep->op == lab) && (N (t) == 0);
+  return (t.inside ()->op == lab) && (N (t) == 0);
 }
 
 template <typename T>
 inline bool
 operator!= (lolly_tree<T> t, int lab) {
-  return (t.rep->op != lab) || (N (t) != 0);
+  return (t.inside ()->op != lab) || (N (t) != 0);
 }
 
 template <typename T>
 inline bool
 operator== (lolly_tree<T> t, string s) {
-  return (t.rep->op == /*STRING*/ 0) && (t->label == s);
+  return (t.inside ()->op == /*STRING*/ 0) && (t->label == s);
 }
 
 template <typename T>
 inline bool
 operator!= (lolly_tree<T> t, string s) {
-  return (t.rep->op != /*STRING*/ 0) || (t->label != s);
+  return (t.inside ()->op != /*STRING*/ 0) || (t->label != s);
 }
 
 template <typename T>
@@ -309,13 +294,13 @@ strong_equal (lolly_tree<T> t, lolly_tree<T> u) {
 template <typename T>
 inline bool
 is_func (lolly_tree<T> t, int l) {
-  return (t.rep->op == l) && (N (t) != 0);
+  return (t.inside ()->op == l) && (N (t) != 0);
 }
 
 template <typename T>
 inline bool
 is_func (lolly_tree<T> t, int l, int i) {
-  return (t.rep->op == l) && (N (t) == i);
+  return (t.inside ()->op == l) && (N (t) == i);
 }
 
 template <typename T>
@@ -397,7 +382,7 @@ template <typename T>
 inline lolly_tree<T>&
 operator<< (lolly_tree<T>& t, lolly_tree<T> t2) {
   // CHECK_COMPOUND (t);
-  (static_cast<compound_rep<T>*> (t.rep))->a << t2;
+  (static_cast<compound_rep<T>*> (t.inside ()))->a << t2;
   return t;
 }
 
@@ -405,7 +390,7 @@ template <typename T>
 inline lolly_tree<T>&
 operator<< (lolly_tree<T>& t, array<lolly_tree<T>> a) {
   // CHECK_COMPOUND (t);
-  (static_cast<compound_rep<T>*> (t.rep))->a << a;
+  (static_cast<compound_rep<T>*> (t.inside ()))->a << a;
   return t;
 }
 
@@ -423,7 +408,6 @@ operator<< (tm_ostream& out, lolly_tree<T> t) {
     out << t[i] << ")";
     return out;
   }
-  else out << as_blackbox (t);
   return out;
 }
 

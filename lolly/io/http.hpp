@@ -30,40 +30,35 @@ enum http_label : int {
   PARAMETERS,
   PAYLOAD,
   MULTIPART,
-  ROOT,
   TUPLE,
+  ROOT,
 };
 
 using http_headers= hashmap<string, string>;
 
+template <typename T> inline http_tree blackbox_tree (int label, T data);
+
 inline http_tree
 http_response_init () {
-  http_tree ret        = http_tree (http_label::ROOT, 0);
-  http_tree status_code= http_tree (http_label::STATUS_CODE);
-  http_tree elapsed    = http_tree (http_label::ELAPSED);
-  http_tree header     = http_tree (http_label::HEADER);
+  http_tree ret= http_tree (http_label::ROOT, 0);
 
-  elapsed->data    = close_box<double> (0.0);
-  status_code->data= close_box<long> (404);
-  auto hmap        = hashmap<string, string> ();
-  header->data     = close_box (hmap);
-
-  ret << status_code;
-  ret << http_tree (http_label::TEXT, http_tree (""));
-  ret << http_tree (http_label::URL, http_tree (""));
-  ret << elapsed;
-  ret << header;
+  ret << blackbox_tree<long> (http_label::STATUS_CODE, 404);
+  ret << blackbox_tree<string> (http_label::TEXT, string (""));
+  ret << blackbox_tree<string> (http_label::URL, string (""));
+  ret << blackbox_tree<double> (http_label::STATUS_CODE, 0.0);
+  ret << blackbox_tree<hashmap<string, string>> (http_label::HEADER,
+                                                 hashmap<string, string> ());
   return ret;
 }
 
 inline http_tree
 http_response_ref (http_tree r, http_label op) {
-  return r[op - 1][0];
+  return r[op - 1];
 }
 
 inline void
 http_response_set (http_tree r, http_label op, http_tree t) {
-  r[op - 1][0]= t;
+  r[op - 1]= t;
 }
 
 http_tree http_get (url u, http_headers headers= http_headers ());

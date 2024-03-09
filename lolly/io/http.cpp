@@ -24,6 +24,14 @@ namespace io {
 
 const char* HTTP_USER_AGENT= "User-Agent";
 
+template <typename T>
+inline http_tree
+blackbox_tree (int label, T data) {
+  http_tree ret= http_tree (label);
+  ret->data    = close_box<T> (data);
+  return ret;
+}
+
 #ifdef OS_WASM
 
 http_tree
@@ -45,11 +53,17 @@ download (url from, url to, http_headers headers) {
 
 static http_tree
 response_to_tree (cpr::Response r, string url) {
-  http_tree status_code= http_tree (http_label::STATUS_CODE);
-  status_code->data    = close_box<long> (r.status_code);
-
-  http_tree elapsed= http_tree (http_label::ELAPSED);
-  elapsed->data    = close_box<double> (r.elapsed);
+  http_tree ret= http_response_init ();
+  http_response_set (
+      ret, STATUS_CODE,
+      blackbox_tree<long> (http_label::STATUS_CODE, r.status_code));
+  http_response_set (
+      ret, TEXT,
+      blackbox_tree<string> (http_label::TEXT, string (r.text.c_str ())));
+  http_response_set (ret, URL,
+                     blackbox_tree<string> (http_label::URL, string (url)));
+  http_response_set (ret, ELAPSED,
+                     blackbox_tree<double> (http_label::ELAPSED, r.elapsed));
 
   auto hmap= hashmap<string, string> ();
   for (auto i= r.header.begin (); i != r.header.end (); i++) {
@@ -57,14 +71,8 @@ response_to_tree (cpr::Response r, string url) {
     string value= string (i->second.c_str ());
     hmap (key)  = value;
   }
-  http_tree header= http_tree (http_label::HEADER);
-  header->data    = close_box (hmap);
-
-  http_tree ret= http_response_init ();
-  http_response_set (ret, STATUS_CODE, status_code);
-  http_response_set (ret, TEXT, http_tree (r.text.c_str ()));
-  http_response_set (ret, URL, http_tree (url));
-  http_response_set (ret, ELAPSED, elapsed);
+  http_tree header=
+      blackbox_tree<hashmap<string, string>> (http_label::HEADER, hmap);
   http_response_set (ret, HEADER, header);
   return ret;
 }
