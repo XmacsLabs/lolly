@@ -4,7 +4,7 @@ var searchData=
   ['delta_1',['delta',['../url_8cpp.html#ab87a6ee28b0a5dacf177b9c13c5ee9a4',1,'delta(url base, url u):&#160;url.cpp'],['../url_8hpp.html#ab87a6ee28b0a5dacf177b9c13c5ee9a4',1,'delta(url base, url u):&#160;url.cpp']]],
   ['delta_5fsub_2',['delta_sub',['../url_8cpp.html#a7785d18987d57ce39bec171a8a3c4612',1,'url.cpp']]],
   ['descends_3',['descends',['../url_8cpp.html#a6aa2030640a069317bfa0d04903042b3',1,'descends(url u, url base):&#160;url.cpp'],['../url_8hpp.html#a6aa2030640a069317bfa0d04903042b3',1,'descends(url u, url base):&#160;url.cpp']]],
-  ['destroy_5ftree_5frep_4',['destroy_tree_rep',['../namespacelolly_1_1data.html#afe12efc0cacaa384ff03effe031cb59c',1,'lolly::data']]],
+  ['destroy_5ftree_5frep_4',['destroy_tree_rep',['../namespacelolly_1_1data.html#a4d4a1cf08a4affd956039a2cfbde583d',1,'lolly::data']]],
   ['differences_5',['differences',['../analyze_8cpp.html#aa40a6a4842f38b1f3af1fda8ade30da5',1,'differences(string s1, string s2):&#160;analyze.cpp'],['../analyze_8hpp.html#aa40a6a4842f38b1f3af1fda8ade30da5',1,'differences(string s1, string s2):&#160;analyze.cpp']]],
   ['display_6',['display',['../classblackbox__rep.html#a4d690d9461c38670be88b31240895192',1,'blackbox_rep::display()'],['../classwhitebox__rep.html#ab6909a24ff08c4d3ff8583e2814416fa',1,'whitebox_rep::display()']]],
   ['distance_7',['distance',['../analyze_8cpp.html#ac259e5a31378d13ae5ad0c7cb3c532c3',1,'distance(string s1, string s2):&#160;analyze.cpp'],['../analyze_8hpp.html#ac259e5a31378d13ae5ad0c7cb3c532c3',1,'distance(string s1, string s2):&#160;analyze.cpp']]],
