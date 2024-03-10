@@ -241,10 +241,6 @@ void skip_ipv6 (string s, int& i);
 string      as_string (url u, int type= URL_SYSTEM);
 tm_ostream& operator<< (tm_ostream& out, url u);
 
-inline url_tree
-as_tree (url u) {
-  return url_tree (u->t);
-}
 inline string
 as_system_string (url u) {
   return as_string (u, URL_SYSTEM);
