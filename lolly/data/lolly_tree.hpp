@@ -181,7 +181,7 @@ public:
 };
 
 template <typename T>
-static void
+inline void
 destroy_tree_rep (lolly_tree_rep<T>* rep) {
   if (((int) rep->op) == 0) tm_delete (static_cast<atomic_rep<T>*> (rep));
   else if (((int) rep->op) > 0) tm_delete (static_cast<compound_rep<T>*> (rep));
