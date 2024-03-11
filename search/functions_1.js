@@ -13,8 +13,8 @@ var searchData=
   ['add_5fnew_5fchild_10',['add_new_child',['../classhashtree__rep.html#afd4ea89970ffe9d0c45d23f4840e386e',1,'hashtree_rep']]],
   ['advance_11',['advance',['../classparse__string__rep.html#aa7634a4e58af30b6c07e6019f39595f2',1,'parse_string_rep']]],
   ['alloc_5fcheck_12',['alloc_check',['../fast__alloc_8hpp.html#ad6d869b80c110e621ba9c128b61c6317',1,'fast_alloc.hpp']]],
-  ['alpha_5fnr_13',['alpha_nr',['../analyze_8cpp.html#a10ba43f47f7f3dba49c82462b07e1b09',1,'alpha_nr(int nr):&#160;analyze.cpp'],['../analyze_8hpp.html#a10ba43f47f7f3dba49c82462b07e1b09',1,'alpha_nr(int nr):&#160;analyze.cpp']]],
-  ['alpha_5fnr_14',['Alpha_nr',['../analyze_8cpp.html#addebf9e3e929bc8654cb67ae8e45b700',1,'Alpha_nr(int nr):&#160;analyze.cpp'],['../analyze_8hpp.html#addebf9e3e929bc8654cb67ae8e45b700',1,'Alpha_nr(int nr):&#160;analyze.cpp']]],
+  ['alpha_5fnr_13',['Alpha_nr',['../analyze_8cpp.html#addebf9e3e929bc8654cb67ae8e45b700',1,'Alpha_nr(int nr):&#160;analyze.cpp'],['../analyze_8hpp.html#addebf9e3e929bc8654cb67ae8e45b700',1,'Alpha_nr(int nr):&#160;analyze.cpp']]],
+  ['alpha_5fnr_14',['alpha_nr',['../analyze_8cpp.html#a10ba43f47f7f3dba49c82462b07e1b09',1,'alpha_nr(int nr):&#160;analyze.cpp'],['../analyze_8hpp.html#a10ba43f47f7f3dba49c82462b07e1b09',1,'alpha_nr(int nr):&#160;analyze.cpp']]],
   ['append_15',['append',['../struct__ts__string.html#a1e4a5d2c19d66e421701df03b11d171d',1,'_ts_string::append()'],['../array_8hpp.html#af48c5156c227d75eb7479c0f12f07508',1,'append(T a, array&lt; T &gt; b):&#160;array.hpp'],['../array_8hpp.html#a2407a7ed82357c98e01214a32289bdef',1,'append(array&lt; T &gt; a, array&lt; T &gt; b):&#160;array.ipp'],['../array_8ipp.html#a7d671d8912c7f7cb3e5cc8a28a8bfec5',1,'append(t a, array&lt; t &gt; b):&#160;array.ipp'],['../array_8ipp.html#a2407a7ed82357c98e01214a32289bdef',1,'append(array&lt; T &gt; a, array&lt; T &gt; b):&#160;array.ipp']]],
   ['append_5fstring_16',['append_string',['../file_8cpp.html#a616fc1dd2eb4e10648bab200699036db',1,'append_string(url u, const string &amp;s, bool fatal):&#160;file.cpp'],['../file_8hpp.html#a616fc1dd2eb4e10648bab200699036db',1,'append_string(url u, const string &amp;s, bool fatal):&#160;file.cpp']]],
   ['append_5fstring_5ftry_17',['append_string_try',['../file_8cpp.html#aa46897865a0c7682edbbc103c4092c95',1,'file.cpp']]],
@@ -38,6 +38,5 @@ var searchData=
   ['as_5fstring_5fbool_35',['as_string_bool',['../string_8cpp.html#a69dabc801b5e0ded09dc09d4a90f97f5',1,'as_string_bool(bool f):&#160;string.cpp'],['../string_8hpp.html#a69dabc801b5e0ded09dc09d4a90f97f5',1,'as_string_bool(bool f):&#160;string.cpp']]],
   ['as_5fsystem_5fstring_36',['as_system_string',['../url_8hpp.html#aaed339aadb4e1943d8992db9b72d7f96',1,'url.hpp']]],
   ['as_5funix_5fstring_37',['as_unix_string',['../url_8hpp.html#abfbe292cf6ba373f40ebe9996741d8f6',1,'url.hpp']]],
-  ['as_5furl_38',['as_url',['../url_8hpp.html#ad4ef81815f366b9cf51088fa381513f8',1,'url.hpp']]],
-  ['atomic_5frep_39',['atomic_rep',['../classlolly_1_1data_1_1atomic__rep.html#a68047d12a3df92398fe3462a97d26744',1,'lolly::data::atomic_rep']]]
+  ['as_5furl_38',['as_url',['../url_8hpp.html#ad4ef81815f366b9cf51088fa381513f8',1,'url.hpp']]]
 ];

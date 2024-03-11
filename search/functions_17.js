@@ -21,7 +21,7 @@ var searchData=
   ['_7eiterator_5frep_18',['~iterator_rep',['../classiterator__rep.html#a31b2e3b5f077632fbe9094e63f4f8089',1,'iterator_rep']]],
   ['_7elist_5frep_19',['~list_rep',['../classlist__rep.html#a5c36d0bf5fd53da9e945c13ba5cc2ee5',1,'list_rep']]],
   ['_7elolly_5fstring_5frep_20',['~lolly_string_rep',['../classlolly_1_1data_1_1lolly__string__rep.html#a1e28edc834928a4b5a344da999945dcb',1,'lolly::data::lolly_string_rep']]],
-  ['_7elolly_5ftree_21',['~lolly_tree',['../classlolly_1_1data_1_1lolly__tree.html#a961731616ddcc021acc70a509d4e949a',1,'lolly::data::lolly_tree']]],
+  ['_7elolly_5ftree_5frep_21',['~lolly_tree_rep',['../classlolly_1_1data_1_1lolly__tree__rep.html#a559c28b746920f06cbf9bbed80471554',1,'lolly::data::lolly_tree_rep']]],
   ['_7eparse_5fstring_5frep_22',['~parse_string_rep',['../classparse__string__rep.html#aa0c9a26001dd49394c02a1e592ed8c75',1,'parse_string_rep']]],
   ['_7epromise_5frep_23',['~promise_rep',['../classpromise__rep.html#a8f5f88f346295c6557a0ef49e11fad32',1,'promise_rep']]],
   ['_7erep_24',['~rep',['../structrep.html#a424f8a4bdaa2106d672efb7da099391f',1,'rep']]],

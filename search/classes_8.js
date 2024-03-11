@@ -12,6 +12,5 @@ var searchData=
   ['lolly_5fstring_5fview_9',['lolly_string_view',['../classlolly_1_1data_1_1lolly__string__view.html',1,'lolly::data']]],
   ['lolly_5ftree_10',['lolly_tree',['../classlolly_1_1data_1_1lolly__tree.html',1,'lolly::data']]],
   ['lolly_5ftree_3c_20int_20_3e_11',['lolly_tree&lt; int &gt;',['../classlolly_1_1data_1_1lolly__tree.html',1,'lolly::data']]],
-  ['lolly_5ftree_5frep_12',['lolly_tree_rep',['../classlolly_1_1data_1_1lolly__tree__rep.html',1,'lolly::data']]],
-  ['lolly_5ftree_5frep_3c_20int_20_3e_13',['lolly_tree_rep&lt; int &gt;',['../classlolly_1_1data_1_1lolly__tree__rep.html',1,'lolly::data']]]
+  ['lolly_5ftree_5frep_12',['lolly_tree_rep',['../classlolly_1_1data_1_1lolly__tree__rep.html',1,'lolly::data']]]
 ];
