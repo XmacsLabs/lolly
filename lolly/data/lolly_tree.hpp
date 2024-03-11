@@ -31,6 +31,8 @@ template <typename T> class lolly_tree {
   inline lolly_tree<T> (string l) : rep (tm_new<lolly_tree_rep<T>> (l)) {}
   inline lolly_tree (const char* l) : rep (tm_new<lolly_tree_rep<T>> (l)) {}
 
+  inline lolly_tree (lolly_tree_rep<T>* rep2) : rep (rep2) { rep->ref_count++; }
+
   inline lolly_tree (int l, int n= 0)
       : rep (tm_new<lolly_tree_rep<T>> (l, array<lolly_tree<T>> (n))) {}
 
