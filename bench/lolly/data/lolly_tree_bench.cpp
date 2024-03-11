@@ -1,6 +1,6 @@
-/** \file lolly_string_bench.cpp
+/** \file lolly_tree_bench.cpp
  *  \copyright GPLv3
- *  \details Benchmark for string
+ *  \details Benchmark for tree
  *  \author jingkaimori
  *  \date   2024
  */
