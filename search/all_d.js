@@ -22,7 +22,7 @@ var searchData=
   ['chin_19',['CHIN',['../classChannel.html#a941cb2b0b77dc8feb02a708207e4a7c9a410a6c98ada11a11b09289fd88c90a9c',1,'Channel']]],
   ['chout_20',['CHOUT',['../classChannel.html#a941cb2b0b77dc8feb02a708207e4a7c9ab57e406d9a27a6e48bb73fbf42423959',1,'Channel']]],
   ['ci_20cd_20on_20gitee_20github_20codeberg_21',['Project: CI/CD on Gitee/Github/Codeberg',['../md_devel_24.html',1,'']]],
-  ['clang_20format_22',['Clang format',['../md_docs_2guide_2Format.html#autotoc_md48',1,'clang-format'],['../md_docs_2zh_2guide_2Format.html#autotoc_md70',1,'clang-format']]],
+  ['clang_20format_22',['Clang format',['../md_docs_2guide_2Format.html#autotoc_md45',1,'clang-format'],['../md_docs_2zh_2guide_2Format.html#autotoc_md67',1,'clang-format']]],
   ['cleanup_5fand_5freturn_5ffinally_23',['cleanup_and_return_finally',['../file_8cpp.html#aa508f0ebbaa61c669d0a4176c64e5f68',1,'file.cpp']]],
   ['clear_24',['clear',['../classtm__ostream__rep.html#acc64de77ae0a7eeeffe8b411c0b789da',1,'tm_ostream_rep::clear()'],['../classtm__ostream.html#ae0ba1b74ca6c31752445ed3b936745cb',1,'tm_ostream::clear()']]],
   ['client_20and_20json_25',['Project: Http Client and JSON',['../md_devel_215.html',1,'']]],
@@ -35,7 +35,7 @@ var searchData=
   ['collect_32',['collect',['../namespacelolly_1_1system.html#a0ecc03ae682411aa3e57593cc11ff848',1,'lolly::system']]],
   ['color_33',['color',['../basic_8hpp.html#ae561696a8948d3288529e868b68b87f2',1,'basic.hpp']]],
   ['compability_20issue_20of_20mingw_208_20x_34',['Project: Fix compability issue of mingw 8.x',['../md_devel_27.html',1,'']]],
-  ['compiling_20and_20testing_35',['Compiling and Testing',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md38',1,'Step 3: Compiling and Testing'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md45',1,'Step 3: Compiling and Testing']]],
+  ['compiling_20and_20testing_35',['Compiling and Testing',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md36',1,'Step 3: Compiling and Testing'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md43',1,'Step 3: Compiling and Testing']]],
   ['complex_36',['Complex',['../structComplex.html',1,'Complex'],['../structComplex.html#ab1aaeee52acb23180f477f7ead8ec701',1,'Complex::Complex(double re_, double im_)'],['../structComplex.html#a43b9f07cdf697c71b5fd506a6cc80b8f',1,'Complex::Complex()'],['../structComplex.html#ab1aaeee52acb23180f477f7ead8ec701',1,'Complex::Complex(double re_, double im_)'],['../structComplex.html#a43b9f07cdf697c71b5fd506a6cc80b8f',1,'Complex::Complex()']]],
   ['compute_5ffree_37',['compute_free',['../fast__alloc_8cpp.html#ad4059a686e41235c933c74b67b19eb8d',1,'fast_alloc.cpp']]],
   ['concrete_38',['CONCRETE',['../classstring__searcher.html#acbc65b6c288ed850879a7892b5156dcb',1,'string_searcher::CONCRETE()'],['../classparse__string.html#a4c62445db1b021ac82b884e64bbaea74',1,'parse_string::CONCRETE()'],['../classstring.html#a753308303d55960aad188b6db05809bb',1,'string::CONCRETE()'],['../classc__string.html#a11fd718896fa30bb8bb2961c4ee395a0',1,'c_string::CONCRETE()'],['../classlolly_1_1data_1_1json.html#ae8707842f12862dd0e848245641e99ca',1,'lolly::data::json::CONCRETE()'],['../classurl.html#a9f74819e1c24e0c2bace1184833422b4',1,'url::CONCRETE()'],['../basic_8hpp.html#aeaea41292f96901c9775fa6d1f424432',1,'CONCRETE:&#160;basic.hpp']]],
@@ -61,8 +61,7 @@ var searchData=
   ['copy_5flist_58',['copy_list',['../hashmap__extra_8ipp.html#a375e376f94d79e90094d5e6bb195725b',1,'hashmap_extra.ipp']]],
   ['cork_5fto_5fil2_59',['cork_to_il2',['../analyze_8cpp.html#a26f2f554bdcd9f2fc6e00c52acf1e80f',1,'cork_to_il2(char c):&#160;analyze.cpp'],['../analyze_8cpp.html#a117f61cc7e639aea4caaa072ef11f87d',1,'cork_to_il2(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#a117f61cc7e639aea4caaa072ef11f87d',1,'cork_to_il2(string s):&#160;analyze.cpp']]],
   ['cork_5fto_5fil2_5fstring_60',['cork_to_il2_string',['../analyze_8cpp.html#ad14de028990a111a47857177fa40cb83',1,'analyze.cpp']]],
-  ['cork_5fto_5futf8_61',['cork_to_utf8',['../analyze_8hpp.html#a992a6211b619d695f21a925792941559',1,'analyze.hpp']]],
-  ['count_5foccurrences_62',['count_occurrences',['../analyze_8cpp.html#a6ff75cf5d3e410ef2b70440880885ecb',1,'count_occurrences(string s, string in):&#160;analyze.cpp'],['../analyze_8hpp.html#ad6eef9a3d821b60b8ecbb4a94f69c3bd',1,'count_occurrences(string what, string in):&#160;analyze.cpp']]],
-  ['cout_63',['cout',['../classtm__ostream.html#ac9f8f1ea26b5fd6409df6baf737c61df',1,'tm_ostream::cout'],['../tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339',1,'cout:&#160;tm_ostream.cpp'],['../tm__ostream_8hpp.html#a48e5827e9cd7a3f85b541ffc24937339',1,'cout:&#160;tm_ostream.cpp']]],
-  ['current_5findent_64',['current_indent',['../basic_8cpp.html#af126a1696f6af28e2d1b7b43465f6049',1,'basic.cpp']]]
+  ['count_5foccurrences_61',['count_occurrences',['../analyze_8cpp.html#a6ff75cf5d3e410ef2b70440880885ecb',1,'count_occurrences(string s, string in):&#160;analyze.cpp'],['../analyze_8hpp.html#ad6eef9a3d821b60b8ecbb4a94f69c3bd',1,'count_occurrences(string what, string in):&#160;analyze.cpp']]],
+  ['cout_62',['cout',['../classtm__ostream.html#ac9f8f1ea26b5fd6409df6baf737c61df',1,'tm_ostream::cout'],['../tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339',1,'cout:&#160;tm_ostream.cpp'],['../tm__ostream_8hpp.html#a48e5827e9cd7a3f85b541ffc24937339',1,'cout:&#160;tm_ostream.cpp']]],
+  ['current_5findent_63',['current_indent',['../basic_8cpp.html#af126a1696f6af28e2d1b7b43465f6049',1,'basic.cpp']]]
 ];
