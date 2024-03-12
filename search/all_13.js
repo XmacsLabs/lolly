@@ -21,7 +21,7 @@ var searchData=
   ['init_5fval_18',['init_val',['../structtype__helper.html#a1c23314728272988d3fe3c2027ec6b94',1,'type_helper']]],
   ['insert_19',['insert',['../classhashset__rep.html#ae689962faef9ac3e57157b58e310f918',1,'hashset_rep']]],
   ['installation_20',['Installation',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md37',1,'Method 1: Local Installation'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md43',1,'Method 1: Local Installation']]],
-  ['installation_20and_20usage_21',['Installation and Usage',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md35',1,'Step 2: Installation and Usage'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md42',1,'Step 2: Installation and Usage']]],
+  ['installation_20and_20usage_21',['Installation and Usage',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md36',1,'Step 2: Installation and Usage'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md42',1,'Step 2: Installation and Usage']]],
   ['installing_20xmake_22',['Installing xmake',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md34',1,'Step 1: Installing xmake'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md41',1,'Step 1: Installing xmake']]],
   ['instances_23',['instances',['../classresource__ptr.html#a8792fc268b073edbc2c03115652c1150',1,'resource_ptr']]],
   ['int64_5ftype_24',['INT64_TYPE',['../namespacelolly_1_1data.html#a01288eee69b7e52dc00ad9021af846d8a52ec12d314e3278b11d03080d043a68c',1,'lolly::data']]],

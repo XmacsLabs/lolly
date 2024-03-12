@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.10</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.11</span>
    </div>
   </td>
  </tr>
@@ -765,7 +765,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  269</span>  }</div>
 <div class="line"><span class="lineno">  270</span>  <span class="keywordflow">else</span> <a class="code hl_define" href="basic_8hpp.html#a5838c83edf0c6a6cad864112a60415b9">TM_FAILED</a> (<span class="stringliteral">&quot;file path invalid&quot;</span>);</div>
 <div class="line"><span class="lineno">  271</span>}</div>
-<div class="ttc" id="abasic_8hpp_html_a5838c83edf0c6a6cad864112a60415b9"><div class="ttname"><a href="basic_8hpp.html#a5838c83edf0c6a6cad864112a60415b9">TM_FAILED</a></div><div class="ttdeci">#define TM_FAILED(msg)</div><div class="ttdoc">Macro used to throw an exception with a specified error message.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00100">basic.hpp:100</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a5838c83edf0c6a6cad864112a60415b9"><div class="ttname"><a href="basic_8hpp.html#a5838c83edf0c6a6cad864112a60415b9">TM_FAILED</a></div><div class="ttdeci">#define TM_FAILED(msg)</div><div class="ttdoc">Macro used to throw an exception with a specified error message.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00101">basic.hpp:101</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1052,11 +1052,9 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  387</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">fatal</a>) {</div>
 <div class="line"><span class="lineno">  388</span>    <a class="code hl_define" href="basic_8hpp.html#a5838c83edf0c6a6cad864112a60415b9">TM_FAILED</a> (status.<a class="code hl_variable" href="structfile__status.html#a69a738204e99ee4503d8f513960d8378">error_msg</a>);</div>
 <div class="line"><span class="lineno">  389</span>  }</div>
-<div class="line"><span class="lineno">  390</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  391</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  392</span>  }</div>
-<div class="line"><span class="lineno">  393</span>}</div>
-<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00372">basic.hpp:372</a></div></div>
+<div class="line"><span class="lineno">  390</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  391</span>}</div>
+<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00373">basic.hpp:373</a></div></div>
 <div class="ttc" id="afast__alloc_8hpp_html_ae8003acebedc36c860028e6f9fd82fd2"><div class="ttname"><a href="fast__alloc_8hpp.html#ae8003acebedc36c860028e6f9fd82fd2">tm_delete_array</a></div><div class="ttdeci">void tm_delete_array(C *Ptr)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00436">fast_alloc.hpp:436</a></div></div>
 <div class="ttc" id="astructfile__status_html_a08cfde39357933be13926cd0167be7ec"><div class="ttname"><a href="structfile__status.html#a08cfde39357933be13926cd0167be7ec">file_status::buffer</a></div><div class="ttdeci">const tb_byte_t * buffer</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00348">file.cpp:348</a></div></div>
 <div class="ttc" id="astructfile__status_html_a2e33a319278cf20c2293d24662f897bf"><div class="ttname"><a href="structfile__status.html#a2e33a319278cf20c2293d24662f897bf">file_status::path</a></div><div class="ttdeci">const char * path</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00347">file.cpp:347</a></div></div>
@@ -1085,45 +1083,45 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00396">396</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  396</span>                                   {</div>
-<div class="line"><span class="lineno">  397</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a75ff595248659b96cb36c2b907b751f4">is_local_and_single</a> (<a class="code hl_class" href="classlist.html">u</a>)) {</div>
-<div class="line"><span class="lineno">  398</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Must be a local and single file&quot;</span>);</div>
-<div class="line"><span class="lineno">  399</span>  }</div>
-<div class="line"><span class="lineno">  400</span>  <a class="code hl_class" href="classurl.html">url</a>         <a class="code hl_class" href="classlist.html">u_target</a>= <a class="code hl_function" href="#a67115504e0c85a7e14b6555d362770b0">find_the_first_exist</a> (<a class="code hl_class" href="classlist.html">u</a>);</div>
-<div class="line"><span class="lineno">  401</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* path    = <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_function" href="#aefa09b762ade8fa4f6816de1c924c5e9">as_local_path</a> (<a class="code hl_class" href="classlist.html">u_target</a>));</div>
-<div class="line"><span class="lineno">  402</span>  <span class="keywordflow">if</span> (!<a class="code hl_class" href="classlist.html">tb_file_access</a> (path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_RO</a>)) {</div>
-<div class="line"><span class="lineno">  403</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;File is not readable&quot;</span>, path);</div>
-<div class="line"><span class="lineno">  404</span>  }</div>
-<div class="line"><span class="lineno">  405</span>  <a class="code hl_class" href="classlist.html">tb_file_ref_t</a> file= <a class="code hl_class" href="classlist.html">tb_file_init</a> (path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_RO</a>);</div>
-<div class="line"><span class="lineno">  406</span>  <span class="keywordflow">if</span> (file == <a class="code hl_class" href="classlist.html">tb_null</a>) {</div>
-<div class="line"><span class="lineno">  407</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Failed to init the file&quot;</span>, path);</div>
-<div class="line"><span class="lineno">  408</span>  }</div>
-<div class="line"><span class="lineno">  409</span>  <a class="code hl_class" href="classlist.html">tb_file_sync</a> (file); <span class="comment">// lock file</span></div>
-<div class="line"><span class="lineno">  410</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a> size= <a class="code hl_class" href="classlist.html">tb_file_size</a> (file);</div>
-<div class="line"><span class="lineno">  411</span>  <span class="keywordflow">if</span> (size == 0) {</div>
-<div class="line"><span class="lineno">  412</span>    s= <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  413</span>    <a class="code hl_class" href="classlist.html">tb_file_exit</a> (file);</div>
-<div class="line"><span class="lineno">  414</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, path);</div>
-<div class="line"><span class="lineno">  415</span>  }</div>
-<div class="line"><span class="lineno">  416</span>  <a class="code hl_class" href="classlist.html">tb_byte_t</a>* buffer     = <a class="code hl_class" href="classlist.html">tm_new_array&lt;tb_byte_t&gt;</a> (size);</div>
-<div class="line"><span class="lineno">  417</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>  <a class="code hl_class" href="classlist.html">real_size</a>  = <a class="code hl_class" href="classlist.html">tb_file_read</a> (file, buffer, size);</div>
-<div class="line"><span class="lineno">  418</span>  <span class="keywordtype">bool</span>       <a class="code hl_class" href="classlist.html">read_sz_equ</a>= (<a class="code hl_class" href="classlist.html">real_size</a> == size);</div>
-<div class="line"><span class="lineno">  419</span>  <span class="keywordtype">bool</span>       <a class="code hl_class" href="classlist.html">exit_suc</a>   = <a class="code hl_class" href="classlist.html">tb_file_exit</a> (file); <span class="comment">// exit file</span></div>
-<div class="line"><span class="lineno">  420</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">read_sz_equ</a> &amp;&amp; <a class="code hl_class" href="classlist.html">exit_suc</a>) {</div>
-<div class="line"><span class="lineno">  421</span>    s-&gt;resize (size);</div>
-<div class="line"><span class="lineno">  422</span>    <span class="comment">// Copying char by char has roughly the same efficiency as constructing new</span></div>
-<div class="line"><span class="lineno">  423</span>    <span class="comment">// string with buffer.</span></div>
-<div class="line"><span class="lineno">  424</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_class" href="classlist.html">seek</a>= 0; <a class="code hl_class" href="classlist.html">seek</a> &lt; size; <a class="code hl_class" href="classlist.html">seek</a>++) {</div>
-<div class="line"><span class="lineno">  425</span>      s[<a class="code hl_class" href="classlist.html">seek</a>]= buffer[<a class="code hl_class" href="classlist.html">seek</a>];</div>
-<div class="line"><span class="lineno">  426</span>    }</div>
-<div class="line"><span class="lineno">  427</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, path, buffer);</div>
-<div class="line"><span class="lineno">  428</span>  }</div>
-<div class="line"><span class="lineno">  429</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  430</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Unexpected behavior during reading&quot;</span>, path,</div>
-<div class="line"><span class="lineno">  431</span>                        buffer);</div>
-<div class="line"><span class="lineno">  432</span>  }</div>
-<div class="line"><span class="lineno">  433</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00394">394</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  394</span>                                   {</div>
+<div class="line"><span class="lineno">  395</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a75ff595248659b96cb36c2b907b751f4">is_local_and_single</a> (<a class="code hl_class" href="classlist.html">u</a>)) {</div>
+<div class="line"><span class="lineno">  396</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Must be a local and single file&quot;</span>);</div>
+<div class="line"><span class="lineno">  397</span>  }</div>
+<div class="line"><span class="lineno">  398</span>  <a class="code hl_class" href="classurl.html">url</a>         <a class="code hl_class" href="classlist.html">u_target</a>= <a class="code hl_function" href="#a67115504e0c85a7e14b6555d362770b0">find_the_first_exist</a> (<a class="code hl_class" href="classlist.html">u</a>);</div>
+<div class="line"><span class="lineno">  399</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* path    = <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_function" href="#aefa09b762ade8fa4f6816de1c924c5e9">as_local_path</a> (<a class="code hl_class" href="classlist.html">u_target</a>));</div>
+<div class="line"><span class="lineno">  400</span>  <span class="keywordflow">if</span> (!<a class="code hl_class" href="classlist.html">tb_file_access</a> (path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_RO</a>)) {</div>
+<div class="line"><span class="lineno">  401</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;File is not readable&quot;</span>, path);</div>
+<div class="line"><span class="lineno">  402</span>  }</div>
+<div class="line"><span class="lineno">  403</span>  <a class="code hl_class" href="classlist.html">tb_file_ref_t</a> file= <a class="code hl_class" href="classlist.html">tb_file_init</a> (path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_RO</a>);</div>
+<div class="line"><span class="lineno">  404</span>  <span class="keywordflow">if</span> (file == <a class="code hl_class" href="classlist.html">tb_null</a>) {</div>
+<div class="line"><span class="lineno">  405</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Failed to init the file&quot;</span>, path);</div>
+<div class="line"><span class="lineno">  406</span>  }</div>
+<div class="line"><span class="lineno">  407</span>  <a class="code hl_class" href="classlist.html">tb_file_sync</a> (file); <span class="comment">// lock file</span></div>
+<div class="line"><span class="lineno">  408</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a> size= <a class="code hl_class" href="classlist.html">tb_file_size</a> (file);</div>
+<div class="line"><span class="lineno">  409</span>  <span class="keywordflow">if</span> (size == 0) {</div>
+<div class="line"><span class="lineno">  410</span>    s= <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  411</span>    <a class="code hl_class" href="classlist.html">tb_file_exit</a> (file);</div>
+<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, path);</div>
+<div class="line"><span class="lineno">  413</span>  }</div>
+<div class="line"><span class="lineno">  414</span>  <a class="code hl_class" href="classlist.html">tb_byte_t</a>* buffer     = <a class="code hl_class" href="classlist.html">tm_new_array&lt;tb_byte_t&gt;</a> (size);</div>
+<div class="line"><span class="lineno">  415</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>  <a class="code hl_class" href="classlist.html">real_size</a>  = <a class="code hl_class" href="classlist.html">tb_file_read</a> (file, buffer, size);</div>
+<div class="line"><span class="lineno">  416</span>  <span class="keywordtype">bool</span>       <a class="code hl_class" href="classlist.html">read_sz_equ</a>= (<a class="code hl_class" href="classlist.html">real_size</a> == size);</div>
+<div class="line"><span class="lineno">  417</span>  <span class="keywordtype">bool</span>       <a class="code hl_class" href="classlist.html">exit_suc</a>   = <a class="code hl_class" href="classlist.html">tb_file_exit</a> (file); <span class="comment">// exit file</span></div>
+<div class="line"><span class="lineno">  418</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">read_sz_equ</a> &amp;&amp; <a class="code hl_class" href="classlist.html">exit_suc</a>) {</div>
+<div class="line"><span class="lineno">  419</span>    s-&gt;resize (size);</div>
+<div class="line"><span class="lineno">  420</span>    <span class="comment">// Copying char by char has roughly the same efficiency as constructing new</span></div>
+<div class="line"><span class="lineno">  421</span>    <span class="comment">// string with buffer.</span></div>
+<div class="line"><span class="lineno">  422</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_class" href="classlist.html">seek</a>= 0; <a class="code hl_class" href="classlist.html">seek</a> &lt; size; <a class="code hl_class" href="classlist.html">seek</a>++) {</div>
+<div class="line"><span class="lineno">  423</span>      s[<a class="code hl_class" href="classlist.html">seek</a>]= buffer[<a class="code hl_class" href="classlist.html">seek</a>];</div>
+<div class="line"><span class="lineno">  424</span>    }</div>
+<div class="line"><span class="lineno">  425</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, path, buffer);</div>
+<div class="line"><span class="lineno">  426</span>  }</div>
+<div class="line"><span class="lineno">  427</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Unexpected behavior during reading&quot;</span>, path,</div>
+<div class="line"><span class="lineno">  429</span>                        buffer);</div>
+<div class="line"><span class="lineno">  430</span>  }</div>
+<div class="line"><span class="lineno">  431</span>}</div>
 <div class="ttc" id="afile_8cpp_html_a67115504e0c85a7e14b6555d362770b0"><div class="ttname"><a href="#a67115504e0c85a7e14b6555d362770b0">find_the_first_exist</a></div><div class="ttdeci">static url find_the_first_exist(const url &amp;u)</div><div class="ttdoc">lookup the first exist path in a bunch of url, if all url does not exist, then the last one will be u...</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00359">file.cpp:359</a></div></div>
 <div class="ttc" id="astring_8cpp_html_a6a5cc26a2db9765c14853b9cfd7335b4"><div class="ttname"><a href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a></div><div class="ttdeci">char * as_charp(string s)</div><div class="ttdef"><b>Definition</b> <a href="string_8cpp_source.html#l00282">string.cpp:282</a></div></div>
 <div class="ttc" id="astructfile__status_html"><div class="ttname"><a href="structfile__status.html">file_status</a></div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00344">file.cpp:344</a></div></div>
@@ -1154,13 +1152,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00436">436</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  436</span>                                           {</div>
-<div class="line"><span class="lineno">  437</span>  <a class="code hl_struct" href="structfile__status.html">file_status</a> <a class="code hl_class" href="classlist.html">stat</a>= <a class="code hl_function" href="#acdc1973a8a3209a41e608b871463f3d4">load_string_try</a> (<a class="code hl_class" href="classlist.html">u</a>, s);</div>
-<div class="line"><span class="lineno">  438</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#aa508f0ebbaa61c669d0a4176c64e5f68">cleanup_and_return_finally</a> (<a class="code hl_class" href="classlist.html">stat</a>, <a class="code hl_class" href="classlist.html">u</a>, <a class="code hl_class" href="classlist.html">fatal</a>, <span class="stringliteral">&quot;load url&quot;</span>);</div>
-<div class="line"><span class="lineno">  439</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00434">434</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  434</span>                                           {</div>
+<div class="line"><span class="lineno">  435</span>  <a class="code hl_struct" href="structfile__status.html">file_status</a> <a class="code hl_class" href="classlist.html">stat</a>= <a class="code hl_function" href="#acdc1973a8a3209a41e608b871463f3d4">load_string_try</a> (<a class="code hl_class" href="classlist.html">u</a>, s);</div>
+<div class="line"><span class="lineno">  436</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#aa508f0ebbaa61c669d0a4176c64e5f68">cleanup_and_return_finally</a> (<a class="code hl_class" href="classlist.html">stat</a>, <a class="code hl_class" href="classlist.html">u</a>, <a class="code hl_class" href="classlist.html">fatal</a>, <span class="stringliteral">&quot;load url&quot;</span>);</div>
+<div class="line"><span class="lineno">  437</span>}</div>
 <div class="ttc" id="afile_8cpp_html_aa508f0ebbaa61c669d0a4176c64e5f68"><div class="ttname"><a href="#aa508f0ebbaa61c669d0a4176c64e5f68">cleanup_and_return_finally</a></div><div class="ttdeci">static bool cleanup_and_return_finally(const file_status &amp;status, const url &amp;u, bool fatal, const string &amp;reason)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00373">file.cpp:373</a></div></div>
-<div class="ttc" id="afile_8cpp_html_acdc1973a8a3209a41e608b871463f3d4"><div class="ttname"><a href="#acdc1973a8a3209a41e608b871463f3d4">load_string_try</a></div><div class="ttdeci">file_status load_string_try(url u, string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00396">file.cpp:396</a></div></div>
+<div class="ttc" id="afile_8cpp_html_acdc1973a8a3209a41e608b871463f3d4"><div class="ttname"><a href="#acdc1973a8a3209a41e608b871463f3d4">load_string_try</a></div><div class="ttdeci">file_status load_string_try(url u, string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00394">file.cpp:394</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1179,14 +1177,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00442">442</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  442</span>                    {</div>
-<div class="line"><span class="lineno">  443</span>  <span class="keywordtype">string</span> s;</div>
-<div class="line"><span class="lineno">  444</span>  <span class="comment">// file_url f= u;</span></div>
-<div class="line"><span class="lineno">  445</span>  (<a class="code hl_class" href="classlist.html">void</a>) <a class="code hl_function" href="#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (<a class="code hl_class" href="classlist.html">u</a>, s, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  446</span>  <span class="keywordflow">return</span> s;</div>
-<div class="line"><span class="lineno">  447</span>}</div>
-<div class="ttc" id="afile_8cpp_html_a20be21b01deb2d7f37fe75657e177c4a"><div class="ttname"><a href="#a20be21b01deb2d7f37fe75657e177c4a">load_string</a></div><div class="ttdeci">bool load_string(url u, string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00436">file.cpp:436</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00440">440</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>                    {</div>
+<div class="line"><span class="lineno">  441</span>  <span class="keywordtype">string</span> s;</div>
+<div class="line"><span class="lineno">  442</span>  <span class="comment">// file_url f= u;</span></div>
+<div class="line"><span class="lineno">  443</span>  (<a class="code hl_class" href="classlist.html">void</a>) <a class="code hl_function" href="#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (<a class="code hl_class" href="classlist.html">u</a>, s, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  444</span>  <span class="keywordflow">return</span> s;</div>
+<div class="line"><span class="lineno">  445</span>}</div>
+<div class="ttc" id="afile_8cpp_html_a20be21b01deb2d7f37fe75657e177c4a"><div class="ttname"><a href="#a20be21b01deb2d7f37fe75657e177c4a">load_string</a></div><div class="ttdeci">bool load_string(url u, string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00434">file.cpp:434</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1209,48 +1207,48 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00450">450</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  450</span>                                         {</div>
-<div class="line"><span class="lineno">  451</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (<span class="keyword">sizeof</span> (<a class="code hl_class" href="classlist.html">tb_byte_t</a>) == <span class="keyword">sizeof</span> (<span class="keywordtype">char</span>),</div>
-<div class="line"><span class="lineno">  452</span>          <span class="stringliteral">&quot;invalid cast from tb_byte_t* to char*&quot;</span>);</div>
-<div class="line"><span class="lineno">  453</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a75ff595248659b96cb36c2b907b751f4">is_local_and_single</a> (<a class="code hl_class" href="classlist.html">u</a>)) {</div>
-<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Must be an absolute path&quot;</span>);</div>
-<div class="line"><span class="lineno">  455</span>  }</div>
-<div class="line"><span class="lineno">  456</span>  <a class="code hl_class" href="classurl.html">url</a>         <a class="code hl_class" href="classlist.html">u_target</a>= <a class="code hl_function" href="#a67115504e0c85a7e14b6555d362770b0">find_the_first_exist</a> (<a class="code hl_class" href="classlist.html">u</a>);</div>
-<div class="line"><span class="lineno">  457</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* path    = <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_function" href="#aefa09b762ade8fa4f6816de1c924c5e9">as_local_path</a> (<a class="code hl_class" href="classlist.html">u_target</a>));</div>
-<div class="line"><span class="lineno">  458</span> </div>
-<div class="line"><span class="lineno">  459</span>  <span class="comment">// tb_file_access cannot check TB_FILE_MODE_CREAT on windows, so create</span></div>
-<div class="line"><span class="lineno">  460</span>  <span class="comment">// directly</span></div>
-<div class="line"><span class="lineno">  461</span>  <a class="code hl_class" href="classlist.html">tb_file_ref_t</a> <a class="code hl_class" href="classlist.html">fout</a>= <a class="code hl_class" href="classlist.html">tb_file_init</a> (path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_WO</a> | <a class="code hl_class" href="classlist.html">TB_FILE_MODE_CREAT</a> |</div>
-<div class="line"><span class="lineno">  462</span>                                              <a class="code hl_class" href="classlist.html">TB_FILE_MODE_TRUNC</a>);</div>
-<div class="line"><span class="lineno">  463</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">fout</a> == <a class="code hl_class" href="classlist.html">tb_null</a>) {</div>
-<div class="line"><span class="lineno">  464</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;File not writeable&quot;</span>, path);</div>
-<div class="line"><span class="lineno">  465</span>  }</div>
-<div class="line"><span class="lineno">  466</span> </div>
-<div class="line"><span class="lineno">  467</span>  <span class="comment">// lock file</span></div>
-<div class="line"><span class="lineno">  468</span>  <a class="code hl_class" href="classlist.html">tb_filelock_ref_t</a> <a class="code hl_class" href="classlist.html">lock</a>= <a class="code hl_class" href="classlist.html">tb_filelock_init</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
-<div class="line"><span class="lineno">  469</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">tb_filelock_enter</a> (<a class="code hl_class" href="classlist.html">lock</a>, <a class="code hl_class" href="classlist.html">TB_FILELOCK_MODE_EX</a>) == <a class="code hl_class" href="classlist.html">tb_false</a>) {</div>
-<div class="line"><span class="lineno">  470</span>    <a class="code hl_class" href="classlist.html">tb_filelock_exit</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
-<div class="line"><span class="lineno">  471</span>    <a class="code hl_class" href="classlist.html">tb_file_exit</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
-<div class="line"><span class="lineno">  472</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Fail to lock file&quot;</span>, path);</div>
-<div class="line"><span class="lineno">  473</span>  }</div>
-<div class="line"><span class="lineno">  474</span> </div>
-<div class="line"><span class="lineno">  475</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>        <a class="code hl_class" href="classlist.html">input_size</a>= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
-<div class="line"><span class="lineno">  476</span>  <span class="keyword">const</span> <a class="code hl_class" href="classlist.html">tb_byte_t</a>* <a class="code hl_class" href="classlist.html">content</a>  = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="classlist.html">tb_byte_t</a>*<span class="keyword">&gt;</span> (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (s));</div>
-<div class="line"><span class="lineno">  477</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>        <a class="code hl_class" href="classlist.html">real_size</a>= <a class="code hl_class" href="classlist.html">tb_file_writ</a> (<a class="code hl_class" href="classlist.html">fout</a>, <a class="code hl_class" href="classlist.html">content</a>, <a class="code hl_class" href="classlist.html">input_size</a>);</div>
-<div class="line"><span class="lineno">  478</span>  <span class="keywordtype">bool</span>             <a class="code hl_class" href="classlist.html">writ_sz_equ</a>= (<a class="code hl_class" href="classlist.html">real_size</a> == <a class="code hl_class" href="classlist.html">input_size</a>);</div>
-<div class="line"><span class="lineno">  479</span>  <span class="keywordtype">bool</span>             <a class="code hl_class" href="classlist.html">release_suc</a>= <a class="code hl_class" href="classlist.html">tb_filelock_leave</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
-<div class="line"><span class="lineno">  480</span>  <a class="code hl_class" href="classlist.html">tb_filelock_exit</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
-<div class="line"><span class="lineno">  481</span>  <span class="keywordtype">bool</span> <a class="code hl_class" href="classlist.html">exit_suc</a>= <a class="code hl_class" href="classlist.html">tb_file_exit</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
-<div class="line"><span class="lineno">  482</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">writ_sz_equ</a> &amp;&amp; <a class="code hl_class" href="classlist.html">exit_suc</a> &amp;&amp; <a class="code hl_class" href="classlist.html">release_suc</a>) {</div>
-<div class="line"><span class="lineno">  483</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, path, <a class="code hl_class" href="classlist.html">content</a>);</div>
-<div class="line"><span class="lineno">  484</span>  }</div>
-<div class="line"><span class="lineno">  485</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  486</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Unexpected behavior during writting&quot;</span>, path,</div>
-<div class="line"><span class="lineno">  487</span>                        <a class="code hl_class" href="classlist.html">content</a>);</div>
-<div class="line"><span class="lineno">  488</span>  }</div>
-<div class="line"><span class="lineno">  489</span>}</div>
-<div class="ttc" id="abasic_8hpp_html_ac6c818ab7aca2e521c97eee817f99f91"><div class="ttname"><a href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a></div><div class="ttdeci">#define ASSERT(cond, msg)</div><div class="ttdoc">Macro used to assert that a condition is true, and throw an exception with an error message if the co...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00092">basic.hpp:92</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00448">448</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  448</span>                                         {</div>
+<div class="line"><span class="lineno">  449</span>  <a class="code hl_define" href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a> (<span class="keyword">sizeof</span> (<a class="code hl_class" href="classlist.html">tb_byte_t</a>) == <span class="keyword">sizeof</span> (<span class="keywordtype">char</span>),</div>
+<div class="line"><span class="lineno">  450</span>          <span class="stringliteral">&quot;invalid cast from tb_byte_t* to char*&quot;</span>);</div>
+<div class="line"><span class="lineno">  451</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a75ff595248659b96cb36c2b907b751f4">is_local_and_single</a> (<a class="code hl_class" href="classlist.html">u</a>)) {</div>
+<div class="line"><span class="lineno">  452</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Must be an absolute path&quot;</span>);</div>
+<div class="line"><span class="lineno">  453</span>  }</div>
+<div class="line"><span class="lineno">  454</span>  <a class="code hl_class" href="classurl.html">url</a>         <a class="code hl_class" href="classlist.html">u_target</a>= <a class="code hl_function" href="#a67115504e0c85a7e14b6555d362770b0">find_the_first_exist</a> (<a class="code hl_class" href="classlist.html">u</a>);</div>
+<div class="line"><span class="lineno">  455</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* path    = <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_function" href="#aefa09b762ade8fa4f6816de1c924c5e9">as_local_path</a> (<a class="code hl_class" href="classlist.html">u_target</a>));</div>
+<div class="line"><span class="lineno">  456</span> </div>
+<div class="line"><span class="lineno">  457</span>  <span class="comment">// tb_file_access cannot check TB_FILE_MODE_CREAT on windows, so create</span></div>
+<div class="line"><span class="lineno">  458</span>  <span class="comment">// directly</span></div>
+<div class="line"><span class="lineno">  459</span>  <a class="code hl_class" href="classlist.html">tb_file_ref_t</a> <a class="code hl_class" href="classlist.html">fout</a>= <a class="code hl_class" href="classlist.html">tb_file_init</a> (path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_WO</a> | <a class="code hl_class" href="classlist.html">TB_FILE_MODE_CREAT</a> |</div>
+<div class="line"><span class="lineno">  460</span>                                              <a class="code hl_class" href="classlist.html">TB_FILE_MODE_TRUNC</a>);</div>
+<div class="line"><span class="lineno">  461</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">fout</a> == <a class="code hl_class" href="classlist.html">tb_null</a>) {</div>
+<div class="line"><span class="lineno">  462</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;File not writeable&quot;</span>, path);</div>
+<div class="line"><span class="lineno">  463</span>  }</div>
+<div class="line"><span class="lineno">  464</span> </div>
+<div class="line"><span class="lineno">  465</span>  <span class="comment">// lock file</span></div>
+<div class="line"><span class="lineno">  466</span>  <a class="code hl_class" href="classlist.html">tb_filelock_ref_t</a> <a class="code hl_class" href="classlist.html">lock</a>= <a class="code hl_class" href="classlist.html">tb_filelock_init</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
+<div class="line"><span class="lineno">  467</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">tb_filelock_enter</a> (<a class="code hl_class" href="classlist.html">lock</a>, <a class="code hl_class" href="classlist.html">TB_FILELOCK_MODE_EX</a>) == <a class="code hl_class" href="classlist.html">tb_false</a>) {</div>
+<div class="line"><span class="lineno">  468</span>    <a class="code hl_class" href="classlist.html">tb_filelock_exit</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
+<div class="line"><span class="lineno">  469</span>    <a class="code hl_class" href="classlist.html">tb_file_exit</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
+<div class="line"><span class="lineno">  470</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Fail to lock file&quot;</span>, path);</div>
+<div class="line"><span class="lineno">  471</span>  }</div>
+<div class="line"><span class="lineno">  472</span> </div>
+<div class="line"><span class="lineno">  473</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>        <a class="code hl_class" href="classlist.html">input_size</a>= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
+<div class="line"><span class="lineno">  474</span>  <span class="keyword">const</span> <a class="code hl_class" href="classlist.html">tb_byte_t</a>* <a class="code hl_class" href="classlist.html">content</a>  = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="classlist.html">tb_byte_t</a>*<span class="keyword">&gt;</span> (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (s));</div>
+<div class="line"><span class="lineno">  475</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>        <a class="code hl_class" href="classlist.html">real_size</a>= <a class="code hl_class" href="classlist.html">tb_file_writ</a> (<a class="code hl_class" href="classlist.html">fout</a>, <a class="code hl_class" href="classlist.html">content</a>, <a class="code hl_class" href="classlist.html">input_size</a>);</div>
+<div class="line"><span class="lineno">  476</span>  <span class="keywordtype">bool</span>             <a class="code hl_class" href="classlist.html">writ_sz_equ</a>= (<a class="code hl_class" href="classlist.html">real_size</a> == <a class="code hl_class" href="classlist.html">input_size</a>);</div>
+<div class="line"><span class="lineno">  477</span>  <span class="keywordtype">bool</span>             <a class="code hl_class" href="classlist.html">release_suc</a>= <a class="code hl_class" href="classlist.html">tb_filelock_leave</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
+<div class="line"><span class="lineno">  478</span>  <a class="code hl_class" href="classlist.html">tb_filelock_exit</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
+<div class="line"><span class="lineno">  479</span>  <span class="keywordtype">bool</span> <a class="code hl_class" href="classlist.html">exit_suc</a>= <a class="code hl_class" href="classlist.html">tb_file_exit</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
+<div class="line"><span class="lineno">  480</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">writ_sz_equ</a> &amp;&amp; <a class="code hl_class" href="classlist.html">exit_suc</a> &amp;&amp; <a class="code hl_class" href="classlist.html">release_suc</a>) {</div>
+<div class="line"><span class="lineno">  481</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, path, <a class="code hl_class" href="classlist.html">content</a>);</div>
+<div class="line"><span class="lineno">  482</span>  }</div>
+<div class="line"><span class="lineno">  483</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  484</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Unexpected behavior during writting&quot;</span>, path,</div>
+<div class="line"><span class="lineno">  485</span>                        <a class="code hl_class" href="classlist.html">content</a>);</div>
+<div class="line"><span class="lineno">  486</span>  }</div>
+<div class="line"><span class="lineno">  487</span>}</div>
+<div class="ttc" id="abasic_8hpp_html_ac6c818ab7aca2e521c97eee817f99f91"><div class="ttname"><a href="basic_8hpp.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a></div><div class="ttdeci">#define ASSERT(cond, msg)</div><div class="ttdoc">Macro used to assert that a condition is true, and throw an exception with an error message if the co...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00093">basic.hpp:93</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1278,12 +1276,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00492">492</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  492</span>                                                 {</div>
-<div class="line"><span class="lineno">  493</span>  <a class="code hl_struct" href="structfile__status.html">file_status</a> <a class="code hl_class" href="classlist.html">stat</a>= <a class="code hl_function" href="#aa765523dc3d36a061e228a0c27b22764">save_string_try</a> (<a class="code hl_class" href="classlist.html">u</a>, s);</div>
-<div class="line"><span class="lineno">  494</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#aa508f0ebbaa61c669d0a4176c64e5f68">cleanup_and_return_finally</a> (<a class="code hl_class" href="classlist.html">stat</a>, <a class="code hl_class" href="classlist.html">u</a>, <a class="code hl_class" href="classlist.html">fatal</a>, <span class="stringliteral">&quot;save to url&quot;</span>);</div>
-<div class="line"><span class="lineno">  495</span>}</div>
-<div class="ttc" id="afile_8cpp_html_aa765523dc3d36a061e228a0c27b22764"><div class="ttname"><a href="#aa765523dc3d36a061e228a0c27b22764">save_string_try</a></div><div class="ttdeci">file_status save_string_try(url u, const string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00450">file.cpp:450</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00490">490</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  490</span>                                                 {</div>
+<div class="line"><span class="lineno">  491</span>  <a class="code hl_struct" href="structfile__status.html">file_status</a> <a class="code hl_class" href="classlist.html">stat</a>= <a class="code hl_function" href="#aa765523dc3d36a061e228a0c27b22764">save_string_try</a> (<a class="code hl_class" href="classlist.html">u</a>, s);</div>
+<div class="line"><span class="lineno">  492</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#aa508f0ebbaa61c669d0a4176c64e5f68">cleanup_and_return_finally</a> (<a class="code hl_class" href="classlist.html">stat</a>, <a class="code hl_class" href="classlist.html">u</a>, <a class="code hl_class" href="classlist.html">fatal</a>, <span class="stringliteral">&quot;save to url&quot;</span>);</div>
+<div class="line"><span class="lineno">  493</span>}</div>
+<div class="ttc" id="afile_8cpp_html_aa765523dc3d36a061e228a0c27b22764"><div class="ttname"><a href="#aa765523dc3d36a061e228a0c27b22764">save_string_try</a></div><div class="ttdeci">file_status save_string_try(url u, const string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00448">file.cpp:448</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1306,11 +1304,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00498">498</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  498</span>                                     {</div>
-<div class="line"><span class="lineno">  499</span>  (<a class="code hl_class" href="classlist.html">void</a>) <a class="code hl_function" href="#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (<a class="code hl_class" href="classlist.html">u</a>, s, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  500</span>}</div>
-<div class="ttc" id="afile_8cpp_html_ab22f9dc8c3a591e553e8bf10a91ab589"><div class="ttname"><a href="#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a></div><div class="ttdeci">bool save_string(url u, const string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00492">file.cpp:492</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00496">496</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  496</span>                                     {</div>
+<div class="line"><span class="lineno">  497</span>  (<a class="code hl_class" href="classlist.html">void</a>) <a class="code hl_function" href="#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a> (<a class="code hl_class" href="classlist.html">u</a>, s, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  498</span>}</div>
+<div class="ttc" id="afile_8cpp_html_ab22f9dc8c3a591e553e8bf10a91ab589"><div class="ttname"><a href="#ab22f9dc8c3a591e553e8bf10a91ab589">save_string</a></div><div class="ttdeci">bool save_string(url u, const string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00490">file.cpp:490</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1333,47 +1331,47 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00503">503</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  503</span>                                           {</div>
-<div class="line"><span class="lineno">  504</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a75ff595248659b96cb36c2b907b751f4">is_local_and_single</a> (<a class="code hl_class" href="classlist.html">u</a>)) {</div>
-<div class="line"><span class="lineno">  505</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Must be a local and single file&quot;</span>);</div>
-<div class="line"><span class="lineno">  506</span>  }</div>
-<div class="line"><span class="lineno">  507</span>  <a class="code hl_class" href="classurl.html">url</a>         <a class="code hl_class" href="classlist.html">u_target</a>= <a class="code hl_function" href="#a67115504e0c85a7e14b6555d362770b0">find_the_first_exist</a> (<a class="code hl_class" href="classlist.html">u</a>);</div>
-<div class="line"><span class="lineno">  508</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* path    = <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_function" href="#aefa09b762ade8fa4f6816de1c924c5e9">as_local_path</a> (<a class="code hl_class" href="classlist.html">u_target</a>));</div>
-<div class="line"><span class="lineno">  509</span> </div>
-<div class="line"><span class="lineno">  510</span>  <span class="comment">// open the file</span></div>
-<div class="line"><span class="lineno">  511</span>  <a class="code hl_class" href="classlist.html">tb_file_ref_t</a> <a class="code hl_class" href="classlist.html">fout</a>= <a class="code hl_class" href="classlist.html">tb_file_init</a> (</div>
-<div class="line"><span class="lineno">  512</span>      path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_WO</a> | <a class="code hl_class" href="classlist.html">TB_FILE_MODE_APPEND</a> | <a class="code hl_class" href="classlist.html">TB_FILE_MODE_CREAT</a>);</div>
-<div class="line"><span class="lineno">  513</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">fout</a> == <a class="code hl_class" href="classlist.html">NULL</a>) {</div>
-<div class="line"><span class="lineno">  514</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;File to append is not found or not appendable&quot;</span>,</div>
-<div class="line"><span class="lineno">  515</span>                        path);</div>
-<div class="line"><span class="lineno">  516</span>  }</div>
-<div class="line"><span class="lineno">  517</span> </div>
-<div class="line"><span class="lineno">  518</span>  <span class="comment">// lock file</span></div>
-<div class="line"><span class="lineno">  519</span>  <a class="code hl_class" href="classlist.html">tb_filelock_ref_t</a> <a class="code hl_class" href="classlist.html">lock</a>= <a class="code hl_class" href="classlist.html">tb_filelock_init</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
-<div class="line"><span class="lineno">  520</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">tb_filelock_enter</a> (<a class="code hl_class" href="classlist.html">lock</a>, <a class="code hl_class" href="classlist.html">TB_FILELOCK_MODE_EX</a>) == <a class="code hl_class" href="classlist.html">tb_false</a>) {</div>
-<div class="line"><span class="lineno">  521</span>    <a class="code hl_class" href="classlist.html">tb_filelock_exit</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
-<div class="line"><span class="lineno">  522</span>    <a class="code hl_class" href="classlist.html">tb_file_exit</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
-<div class="line"><span class="lineno">  523</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Fail to lock file&quot;</span>, path);</div>
-<div class="line"><span class="lineno">  524</span>  }</div>
-<div class="line"><span class="lineno">  525</span> </div>
-<div class="line"><span class="lineno">  526</span>  <span class="comment">// append string to file</span></div>
-<div class="line"><span class="lineno">  527</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>        <a class="code hl_class" href="classlist.html">input_size</a>= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
-<div class="line"><span class="lineno">  528</span>  <span class="keyword">const</span> <a class="code hl_class" href="classlist.html">tb_byte_t</a>* <a class="code hl_class" href="classlist.html">content</a>  = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="classlist.html">tb_byte_t</a>*<span class="keyword">&gt;</span> (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (s));</div>
-<div class="line"><span class="lineno">  529</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>        <a class="code hl_class" href="classlist.html">real_size</a>= <a class="code hl_class" href="classlist.html">tb_file_writ</a> (<a class="code hl_class" href="classlist.html">fout</a>, <a class="code hl_class" href="classlist.html">content</a>, <a class="code hl_class" href="classlist.html">input_size</a>);</div>
-<div class="line"><span class="lineno">  530</span>  <span class="keywordtype">bool</span>             <a class="code hl_class" href="classlist.html">writ_sz_equ</a>= (<a class="code hl_class" href="classlist.html">real_size</a> == <a class="code hl_class" href="classlist.html">input_size</a>);</div>
-<div class="line"><span class="lineno">  531</span>  <span class="keywordtype">bool</span>             <a class="code hl_class" href="classlist.html">release_suc</a>= <a class="code hl_class" href="classlist.html">tb_filelock_leave</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
-<div class="line"><span class="lineno">  532</span>  <a class="code hl_class" href="classlist.html">tb_filelock_exit</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
-<div class="line"><span class="lineno">  533</span>  <span class="keywordtype">bool</span> <a class="code hl_class" href="classlist.html">exit_suc</a>= <a class="code hl_class" href="classlist.html">tb_file_exit</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
-<div class="line"><span class="lineno">  534</span> </div>
-<div class="line"><span class="lineno">  535</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">writ_sz_equ</a> &amp;&amp; <a class="code hl_class" href="classlist.html">exit_suc</a> &amp;&amp; <a class="code hl_class" href="classlist.html">release_suc</a>) {</div>
-<div class="line"><span class="lineno">  536</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, path, <a class="code hl_class" href="classlist.html">content</a>);</div>
-<div class="line"><span class="lineno">  537</span>  }</div>
-<div class="line"><span class="lineno">  538</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  539</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Unexpected behavior during appending&quot;</span>, path,</div>
-<div class="line"><span class="lineno">  540</span>                        <a class="code hl_class" href="classlist.html">content</a>);</div>
-<div class="line"><span class="lineno">  541</span>  }</div>
-<div class="line"><span class="lineno">  542</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00501">501</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  501</span>                                           {</div>
+<div class="line"><span class="lineno">  502</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a75ff595248659b96cb36c2b907b751f4">is_local_and_single</a> (<a class="code hl_class" href="classlist.html">u</a>)) {</div>
+<div class="line"><span class="lineno">  503</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Must be a local and single file&quot;</span>);</div>
+<div class="line"><span class="lineno">  504</span>  }</div>
+<div class="line"><span class="lineno">  505</span>  <a class="code hl_class" href="classurl.html">url</a>         <a class="code hl_class" href="classlist.html">u_target</a>= <a class="code hl_function" href="#a67115504e0c85a7e14b6555d362770b0">find_the_first_exist</a> (<a class="code hl_class" href="classlist.html">u</a>);</div>
+<div class="line"><span class="lineno">  506</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* path    = <a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (<a class="code hl_function" href="#aefa09b762ade8fa4f6816de1c924c5e9">as_local_path</a> (<a class="code hl_class" href="classlist.html">u_target</a>));</div>
+<div class="line"><span class="lineno">  507</span> </div>
+<div class="line"><span class="lineno">  508</span>  <span class="comment">// open the file</span></div>
+<div class="line"><span class="lineno">  509</span>  <a class="code hl_class" href="classlist.html">tb_file_ref_t</a> <a class="code hl_class" href="classlist.html">fout</a>= <a class="code hl_class" href="classlist.html">tb_file_init</a> (</div>
+<div class="line"><span class="lineno">  510</span>      path, <a class="code hl_class" href="classlist.html">TB_FILE_MODE_WO</a> | <a class="code hl_class" href="classlist.html">TB_FILE_MODE_APPEND</a> | <a class="code hl_class" href="classlist.html">TB_FILE_MODE_CREAT</a>);</div>
+<div class="line"><span class="lineno">  511</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">fout</a> == <a class="code hl_class" href="classlist.html">NULL</a>) {</div>
+<div class="line"><span class="lineno">  512</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;File to append is not found or not appendable&quot;</span>,</div>
+<div class="line"><span class="lineno">  513</span>                        path);</div>
+<div class="line"><span class="lineno">  514</span>  }</div>
+<div class="line"><span class="lineno">  515</span> </div>
+<div class="line"><span class="lineno">  516</span>  <span class="comment">// lock file</span></div>
+<div class="line"><span class="lineno">  517</span>  <a class="code hl_class" href="classlist.html">tb_filelock_ref_t</a> <a class="code hl_class" href="classlist.html">lock</a>= <a class="code hl_class" href="classlist.html">tb_filelock_init</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
+<div class="line"><span class="lineno">  518</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">tb_filelock_enter</a> (<a class="code hl_class" href="classlist.html">lock</a>, <a class="code hl_class" href="classlist.html">TB_FILELOCK_MODE_EX</a>) == <a class="code hl_class" href="classlist.html">tb_false</a>) {</div>
+<div class="line"><span class="lineno">  519</span>    <a class="code hl_class" href="classlist.html">tb_filelock_exit</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
+<div class="line"><span class="lineno">  520</span>    <a class="code hl_class" href="classlist.html">tb_file_exit</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
+<div class="line"><span class="lineno">  521</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Fail to lock file&quot;</span>, path);</div>
+<div class="line"><span class="lineno">  522</span>  }</div>
+<div class="line"><span class="lineno">  523</span> </div>
+<div class="line"><span class="lineno">  524</span>  <span class="comment">// append string to file</span></div>
+<div class="line"><span class="lineno">  525</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>        <a class="code hl_class" href="classlist.html">input_size</a>= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s);</div>
+<div class="line"><span class="lineno">  526</span>  <span class="keyword">const</span> <a class="code hl_class" href="classlist.html">tb_byte_t</a>* <a class="code hl_class" href="classlist.html">content</a>  = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="classlist.html">tb_byte_t</a>*<span class="keyword">&gt;</span> (<a class="code hl_function" href="string_8cpp.html#a6a5cc26a2db9765c14853b9cfd7335b4">as_charp</a> (s));</div>
+<div class="line"><span class="lineno">  527</span>  <a class="code hl_class" href="classlist.html">tb_size_t</a>        <a class="code hl_class" href="classlist.html">real_size</a>= <a class="code hl_class" href="classlist.html">tb_file_writ</a> (<a class="code hl_class" href="classlist.html">fout</a>, <a class="code hl_class" href="classlist.html">content</a>, <a class="code hl_class" href="classlist.html">input_size</a>);</div>
+<div class="line"><span class="lineno">  528</span>  <span class="keywordtype">bool</span>             <a class="code hl_class" href="classlist.html">writ_sz_equ</a>= (<a class="code hl_class" href="classlist.html">real_size</a> == <a class="code hl_class" href="classlist.html">input_size</a>);</div>
+<div class="line"><span class="lineno">  529</span>  <span class="keywordtype">bool</span>             <a class="code hl_class" href="classlist.html">release_suc</a>= <a class="code hl_class" href="classlist.html">tb_filelock_leave</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
+<div class="line"><span class="lineno">  530</span>  <a class="code hl_class" href="classlist.html">tb_filelock_exit</a> (<a class="code hl_class" href="classlist.html">lock</a>);</div>
+<div class="line"><span class="lineno">  531</span>  <span class="keywordtype">bool</span> <a class="code hl_class" href="classlist.html">exit_suc</a>= <a class="code hl_class" href="classlist.html">tb_file_exit</a> (<a class="code hl_class" href="classlist.html">fout</a>);</div>
+<div class="line"><span class="lineno">  532</span> </div>
+<div class="line"><span class="lineno">  533</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">writ_sz_equ</a> &amp;&amp; <a class="code hl_class" href="classlist.html">exit_suc</a> &amp;&amp; <a class="code hl_class" href="classlist.html">release_suc</a>) {</div>
+<div class="line"><span class="lineno">  534</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>, path, <a class="code hl_class" href="classlist.html">content</a>);</div>
+<div class="line"><span class="lineno">  535</span>  }</div>
+<div class="line"><span class="lineno">  536</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  537</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structfile__status.html">file_status</a> (<span class="keyword">true</span>, <span class="stringliteral">&quot;Unexpected behavior during appending&quot;</span>, path,</div>
+<div class="line"><span class="lineno">  538</span>                        <a class="code hl_class" href="classlist.html">content</a>);</div>
+<div class="line"><span class="lineno">  539</span>  }</div>
+<div class="line"><span class="lineno">  540</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1401,12 +1399,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00545">545</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  545</span>                                                   {</div>
-<div class="line"><span class="lineno">  546</span>  <a class="code hl_struct" href="structfile__status.html">file_status</a> <a class="code hl_class" href="classlist.html">stat</a>= <a class="code hl_function" href="#aa46897865a0c7682edbbc103c4092c95">append_string_try</a> (<a class="code hl_class" href="classlist.html">u</a>, s);</div>
-<div class="line"><span class="lineno">  547</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#aa508f0ebbaa61c669d0a4176c64e5f68">cleanup_and_return_finally</a> (<a class="code hl_class" href="classlist.html">stat</a>, <a class="code hl_class" href="classlist.html">u</a>, <a class="code hl_class" href="classlist.html">fatal</a>, <span class="stringliteral">&quot;append to url&quot;</span>);</div>
-<div class="line"><span class="lineno">  548</span>}</div>
-<div class="ttc" id="afile_8cpp_html_aa46897865a0c7682edbbc103c4092c95"><div class="ttname"><a href="#aa46897865a0c7682edbbc103c4092c95">append_string_try</a></div><div class="ttdeci">file_status append_string_try(url u, const string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00503">file.cpp:503</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00543">543</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  543</span>                                                   {</div>
+<div class="line"><span class="lineno">  544</span>  <a class="code hl_struct" href="structfile__status.html">file_status</a> <a class="code hl_class" href="classlist.html">stat</a>= <a class="code hl_function" href="#aa46897865a0c7682edbbc103c4092c95">append_string_try</a> (<a class="code hl_class" href="classlist.html">u</a>, s);</div>
+<div class="line"><span class="lineno">  545</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="#aa508f0ebbaa61c669d0a4176c64e5f68">cleanup_and_return_finally</a> (<a class="code hl_class" href="classlist.html">stat</a>, <a class="code hl_class" href="classlist.html">u</a>, <a class="code hl_class" href="classlist.html">fatal</a>, <span class="stringliteral">&quot;append to url&quot;</span>);</div>
+<div class="line"><span class="lineno">  546</span>}</div>
+<div class="ttc" id="afile_8cpp_html_aa46897865a0c7682edbbc103c4092c95"><div class="ttname"><a href="#aa46897865a0c7682edbbc103c4092c95">append_string_try</a></div><div class="ttdeci">file_status append_string_try(url u, const string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00501">file.cpp:501</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1429,11 +1427,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00551">551</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  551</span>                                               {</div>
-<div class="line"><span class="lineno">  552</span>  (<a class="code hl_class" href="classlist.html">void</a>) <a class="code hl_function" href="#a616fc1dd2eb4e10648bab200699036db">append_string</a> (<a class="code hl_class" href="classlist.html">u</a>, s, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  553</span>}</div>
-<div class="ttc" id="afile_8cpp_html_a616fc1dd2eb4e10648bab200699036db"><div class="ttname"><a href="#a616fc1dd2eb4e10648bab200699036db">append_string</a></div><div class="ttdeci">bool append_string(url u, const string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00545">file.cpp:545</a></div></div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00549">549</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  549</span>                                               {</div>
+<div class="line"><span class="lineno">  550</span>  (<a class="code hl_class" href="classlist.html">void</a>) <a class="code hl_function" href="#a616fc1dd2eb4e10648bab200699036db">append_string</a> (<a class="code hl_class" href="classlist.html">u</a>, s, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  551</span>}</div>
+<div class="ttc" id="afile_8cpp_html_a616fc1dd2eb4e10648bab200699036db"><div class="ttname"><a href="#a616fc1dd2eb4e10648bab200699036db">append_string</a></div><div class="ttdeci">bool append_string(url u, const string &amp;s, bool fatal)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00543">file.cpp:543</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1456,12 +1454,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00556">556</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  556</span>                             {</div>
-<div class="line"><span class="lineno">  557</span>  <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">what_s</a>;</div>
-<div class="line"><span class="lineno">  558</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (<a class="code hl_class" href="classlist.html">what</a>, <a class="code hl_class" href="classlist.html">what_s</a>, <span class="keyword">false</span>) || <a class="code hl_function" href="#a616fc1dd2eb4e10648bab200699036db">append_string</a> (<a class="code hl_class" href="classlist.html">to</a>, <a class="code hl_class" href="classlist.html">what_s</a>, <span class="keyword">false</span>))</div>
-<div class="line"><span class="lineno">  559</span>    <a class="code hl_variable" href="tm__ostream_8cpp.html#a046e54865aa998d93de1c39c09d3da21">cerr</a> &lt;&lt; <span class="stringliteral">&quot;Append failed for &quot;</span> &lt;&lt; <a class="code hl_class" href="classlist.html">to</a> &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
-<div class="line"><span class="lineno">  560</span>}</div>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00554">554</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  554</span>                             {</div>
+<div class="line"><span class="lineno">  555</span>  <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">what_s</a>;</div>
+<div class="line"><span class="lineno">  556</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a20be21b01deb2d7f37fe75657e177c4a">load_string</a> (<a class="code hl_class" href="classlist.html">what</a>, <a class="code hl_class" href="classlist.html">what_s</a>, <span class="keyword">false</span>) || <a class="code hl_function" href="#a616fc1dd2eb4e10648bab200699036db">append_string</a> (<a class="code hl_class" href="classlist.html">to</a>, <a class="code hl_class" href="classlist.html">what_s</a>, <span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">  557</span>    <a class="code hl_variable" href="tm__ostream_8cpp.html#a046e54865aa998d93de1c39c09d3da21">cerr</a> &lt;&lt; <span class="stringliteral">&quot;Append failed for &quot;</span> &lt;&lt; <a class="code hl_class" href="classlist.html">to</a> &lt;&lt; <a class="code hl_enumvalue" href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a>;</div>
+<div class="line"><span class="lineno">  558</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

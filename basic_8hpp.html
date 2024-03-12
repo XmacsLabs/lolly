@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.10</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.11</span>
    </div>
   </td>
  </tr>
@@ -457,7 +457,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00052">52</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00053">53</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
 
 </div>
 </div>
@@ -476,7 +476,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00053">53</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00054">54</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
 
 </div>
 </div>
@@ -494,7 +494,7 @@ Variables</h2></td></tr>
 
 <p>Macro used to enable or disable the use of exceptions. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00059">59</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00060">60</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
 
 </div>
 </div>
@@ -524,11 +524,11 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Macro used to assert that a condition is true, and throw an exception with an error message if the condition is false. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00092">92</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span><span class="preprocessor">#define ASSERT(cond, msg)                                                      \</span></div>
-<div class="line"><span class="lineno">   93</span><span class="preprocessor">  {                                                                            \</span></div>
-<div class="line"><span class="lineno">   94</span><span class="preprocessor">    if (!(cond)) tm_throw (msg);                                               \</span></div>
-<div class="line"><span class="lineno">   95</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00093">93</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span><span class="preprocessor">#define ASSERT(cond, msg)                                                      \</span></div>
+<div class="line"><span class="lineno">   94</span><span class="preprocessor">  {                                                                            \</span></div>
+<div class="line"><span class="lineno">   95</span><span class="preprocessor">    if (!(cond)) tm_throw (msg);                                               \</span></div>
+<div class="line"><span class="lineno">   96</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -549,9 +549,9 @@ Variables</h2></td></tr>
 
 <p>Macro used to throw an exception with a specified error message. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00100">100</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span><span class="preprocessor">#define TM_FAILED(msg)                                                         \</span></div>
-<div class="line"><span class="lineno">  101</span><span class="preprocessor">  { tm_throw (msg); }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00101">101</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span><span class="preprocessor">#define TM_FAILED(msg)                                                         \</span></div>
+<div class="line"><span class="lineno">  102</span><span class="preprocessor">  { tm_throw (msg); }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -578,9 +578,9 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00477">477</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  477</span><span class="preprocessor">#define INC_COUNT(R)                                                           \</span></div>
-<div class="line"><span class="lineno">  478</span><span class="preprocessor">  { (R)-&gt;ref_count++; }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00478">478</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  478</span><span class="preprocessor">#define INC_COUNT(R)                                                           \</span></div>
+<div class="line"><span class="lineno">  479</span><span class="preprocessor">  { (R)-&gt;ref_count++; }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -612,13 +612,13 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00487">487</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  487</span><span class="preprocessor">#define DEC_COUNT(R)                                                           \</span></div>
-<div class="line"><span class="lineno">  488</span><span class="preprocessor">  {                                                                            \</span></div>
-<div class="line"><span class="lineno">  489</span><span class="preprocessor">    if (0 == --((R)-&gt;ref_count)) {                                             \</span></div>
-<div class="line"><span class="lineno">  490</span><span class="preprocessor">      tm_delete (R);                                                           \</span></div>
-<div class="line"><span class="lineno">  491</span><span class="preprocessor">    }                                                                          \</span></div>
-<div class="line"><span class="lineno">  492</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00488">488</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  488</span><span class="preprocessor">#define DEC_COUNT(R)                                                           \</span></div>
+<div class="line"><span class="lineno">  489</span><span class="preprocessor">  {                                                                            \</span></div>
+<div class="line"><span class="lineno">  490</span><span class="preprocessor">    if (0 == --((R)-&gt;ref_count)) {                                             \</span></div>
+<div class="line"><span class="lineno">  491</span><span class="preprocessor">      tm_delete (R);                                                           \</span></div>
+<div class="line"><span class="lineno">  492</span><span class="preprocessor">    }                                                                          \</span></div>
+<div class="line"><span class="lineno">  493</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -648,11 +648,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00501">501</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  501</span><span class="preprocessor">#define INC_COUNT_NULL(R)                                                      \</span></div>
-<div class="line"><span class="lineno">  502</span><span class="preprocessor">  {                                                                            \</span></div>
-<div class="line"><span class="lineno">  503</span><span class="preprocessor">    if ((R) != NULL) (R)-&gt;ref_count++;                                         \</span></div>
-<div class="line"><span class="lineno">  504</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00502">502</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  502</span><span class="preprocessor">#define INC_COUNT_NULL(R)                                                      \</span></div>
+<div class="line"><span class="lineno">  503</span><span class="preprocessor">  {                                                                            \</span></div>
+<div class="line"><span class="lineno">  504</span><span class="preprocessor">    if ((R) != NULL) (R)-&gt;ref_count++;                                         \</span></div>
+<div class="line"><span class="lineno">  505</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -685,14 +685,14 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00515">515</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  515</span><span class="preprocessor">#define DEC_COUNT_NULL(R)                                                      \</span></div>
-<div class="line"><span class="lineno">  516</span><span class="preprocessor">  {                                                                            \</span></div>
-<div class="line"><span class="lineno">  517</span><span class="preprocessor">    if ((R) != NULL &amp;&amp; 0 == --((R)-&gt;ref_count)) {                              \</span></div>
-<div class="line"><span class="lineno">  518</span><span class="preprocessor">      tm_delete (R);                                                           \</span></div>
-<div class="line"><span class="lineno">  519</span><span class="preprocessor">      R= NULL;                                                                 \</span></div>
-<div class="line"><span class="lineno">  520</span><span class="preprocessor">    }                                                                          \</span></div>
-<div class="line"><span class="lineno">  521</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00516">516</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  516</span><span class="preprocessor">#define DEC_COUNT_NULL(R)                                                      \</span></div>
+<div class="line"><span class="lineno">  517</span><span class="preprocessor">  {                                                                            \</span></div>
+<div class="line"><span class="lineno">  518</span><span class="preprocessor">    if ((R) != NULL &amp;&amp; 0 == --((R)-&gt;ref_count)) {                              \</span></div>
+<div class="line"><span class="lineno">  519</span><span class="preprocessor">      tm_delete (R);                                                           \</span></div>
+<div class="line"><span class="lineno">  520</span><span class="preprocessor">      R= NULL;                                                                 \</span></div>
+<div class="line"><span class="lineno">  521</span><span class="preprocessor">    }                                                                          \</span></div>
+<div class="line"><span class="lineno">  522</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -717,7 +717,7 @@ Variables</h2></td></tr>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">~PTR</a> ();                                                              \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep</a>* operator-&gt;();                                              \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a>&amp;       <a class="code hl_class" href="classlist.html">operator= </a>(<a class="code hl_class" href="classlist.html">PTR</a> x)</div>
-<div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition</b> <a href="resource_8hpp_source.html#l00016">resource.hpp:16</a></div></div>
+<div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition</b> <a href="resource_8hpp_source.html#l00017">resource.hpp:17</a></div></div>
 </div><!-- fragment -->
 <p>Macro used to define a concrete smart pointer with reference counting. </p>
 <p>The PTR parameter should be a valid identifier that will be used as the name of the smart pointer type.</p>
@@ -733,15 +733,15 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00540">540</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  540</span><span class="preprocessor">#define CONCRETE(PTR)                                                          \</span></div>
-<div class="line"><span class="lineno">  541</span><span class="preprocessor">  PTR##_rep* rep;                                                              \</span></div>
-<div class="line"><span class="lineno">  542</span><span class="preprocessor">                                                                               \</span></div>
-<div class="line"><span class="lineno">  543</span><span class="preprocessor">public:                                                                        \</span></div>
-<div class="line"><span class="lineno">  544</span><span class="preprocessor">  inline PTR (const PTR&amp;);                                                     \</span></div>
-<div class="line"><span class="lineno">  545</span><span class="preprocessor">  inline ~PTR ();                                                              \</span></div>
-<div class="line"><span class="lineno">  546</span><span class="preprocessor">  inline PTR##_rep* operator-&gt;();                                              \</span></div>
-<div class="line"><span class="lineno">  547</span><span class="preprocessor">  inline PTR&amp;       operator= (PTR x)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00541">541</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  541</span><span class="preprocessor">#define CONCRETE(PTR)                                                          \</span></div>
+<div class="line"><span class="lineno">  542</span><span class="preprocessor">  PTR##_rep* rep;                                                              \</span></div>
+<div class="line"><span class="lineno">  543</span><span class="preprocessor">                                                                               \</span></div>
+<div class="line"><span class="lineno">  544</span><span class="preprocessor">public:                                                                        \</span></div>
+<div class="line"><span class="lineno">  545</span><span class="preprocessor">  inline PTR (const PTR&amp;);                                                     \</span></div>
+<div class="line"><span class="lineno">  546</span><span class="preprocessor">  inline ~PTR ();                                                              \</span></div>
+<div class="line"><span class="lineno">  547</span><span class="preprocessor">  inline PTR##_rep* operator-&gt;();                                              \</span></div>
+<div class="line"><span class="lineno">  548</span><span class="preprocessor">  inline PTR&amp;       operator= (PTR x)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -768,8 +768,8 @@ Variables</h2></td></tr>
 <div class="line">    this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>= x.rep;                                                    \</div>
 <div class="line">    <span class="keywordflow">return</span> *<span class="keyword">this</span>;                                                        \</div>
 <div class="line">  }</div>
-<div class="ttc" id="abasic_8hpp_html_a4f8364cb401cc5bd7fd26d6478aa79ff"><div class="ttname"><a href="#a4f8364cb401cc5bd7fd26d6478aa79ff">DEC_COUNT</a></div><div class="ttdeci">#define DEC_COUNT(R)</div><div class="ttdoc">Macro used to decrement the reference count for a structure object and delete it if the count reaches...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00487">basic.hpp:487</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_aca4b440a67d81074341947d73fa6c29b"><div class="ttname"><a href="#aca4b440a67d81074341947d73fa6c29b">INC_COUNT</a></div><div class="ttdeci">#define INC_COUNT(R)</div><div class="ttdoc">Macro used to increment the reference count for a structure object.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00477">basic.hpp:477</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a4f8364cb401cc5bd7fd26d6478aa79ff"><div class="ttname"><a href="#a4f8364cb401cc5bd7fd26d6478aa79ff">DEC_COUNT</a></div><div class="ttdeci">#define DEC_COUNT(R)</div><div class="ttdoc">Macro used to decrement the reference count for a structure object and delete it if the count reaches...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00488">basic.hpp:488</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_aca4b440a67d81074341947d73fa6c29b"><div class="ttname"><a href="#aca4b440a67d81074341947d73fa6c29b">INC_COUNT</a></div><div class="ttdeci">#define INC_COUNT(R)</div><div class="ttdoc">Macro used to increment the reference count for a structure object.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00478">basic.hpp:478</a></div></div>
 <div class="ttc" id="aclasslist_html_a6134d52315f57bcb808223559c8a4760"><div class="ttname"><a href="classlist.html#a6134d52315f57bcb808223559c8a4760">list::list</a></div><div class="ttdeci">list(T item)</div><div class="ttdoc">Construct a new list object with a single item.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00137">list.hpp:137</a></div></div>
 </div><!-- fragment -->
 <p>Macro used to define the implementation of a concrete smart pointer. </p>
@@ -786,17 +786,17 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00562">562</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  562</span><span class="preprocessor">#define CONCRETE_CODE(PTR)                                                     \</span></div>
-<div class="line"><span class="lineno">  563</span><span class="preprocessor">  inline PTR::PTR (const PTR&amp; x) : rep (x.rep) { INC_COUNT (this-&gt;rep); }      \</span></div>
-<div class="line"><span class="lineno">  564</span><span class="preprocessor">  inline PTR::~PTR () { DEC_COUNT (this-&gt;rep); }                               \</span></div>
-<div class="line"><span class="lineno">  565</span><span class="preprocessor">  inline PTR##_rep* PTR::operator-&gt;() { return rep; }                          \</span></div>
-<div class="line"><span class="lineno">  566</span><span class="preprocessor">  inline PTR&amp;       PTR::operator= (PTR x) {                                   \</span></div>
-<div class="line"><span class="lineno">  567</span><span class="preprocessor">    INC_COUNT (x.rep);                                                   \</span></div>
-<div class="line"><span class="lineno">  568</span><span class="preprocessor">    DEC_COUNT (this-&gt;rep);                                               \</span></div>
-<div class="line"><span class="lineno">  569</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                    \</span></div>
-<div class="line"><span class="lineno">  570</span><span class="preprocessor">    return *this;                                                        \</span></div>
-<div class="line"><span class="lineno">  571</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00563">563</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  563</span><span class="preprocessor">#define CONCRETE_CODE(PTR)                                                     \</span></div>
+<div class="line"><span class="lineno">  564</span><span class="preprocessor">  inline PTR::PTR (const PTR&amp; x) : rep (x.rep) { INC_COUNT (this-&gt;rep); }      \</span></div>
+<div class="line"><span class="lineno">  565</span><span class="preprocessor">  inline PTR::~PTR () { DEC_COUNT (this-&gt;rep); }                               \</span></div>
+<div class="line"><span class="lineno">  566</span><span class="preprocessor">  inline PTR##_rep* PTR::operator-&gt;() { return rep; }                          \</span></div>
+<div class="line"><span class="lineno">  567</span><span class="preprocessor">  inline PTR&amp;       PTR::operator= (PTR x) {                                   \</span></div>
+<div class="line"><span class="lineno">  568</span><span class="preprocessor">    INC_COUNT (x.rep);                                                   \</span></div>
+<div class="line"><span class="lineno">  569</span><span class="preprocessor">    DEC_COUNT (this-&gt;rep);                                               \</span></div>
+<div class="line"><span class="lineno">  570</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                    \</span></div>
+<div class="line"><span class="lineno">  571</span><span class="preprocessor">    return *this;                                                        \</span></div>
+<div class="line"><span class="lineno">  572</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -841,15 +841,15 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00593">593</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  593</span><span class="preprocessor">#define CONCRETE_TEMPLATE(PTR, T)                                              \</span></div>
-<div class="line"><span class="lineno">  594</span><span class="preprocessor">  PTR##_rep&lt;T&gt;* rep;                                                           \</span></div>
-<div class="line"><span class="lineno">  595</span><span class="preprocessor">                                                                               \</span></div>
-<div class="line"><span class="lineno">  596</span><span class="preprocessor">public:                                                                        \</span></div>
-<div class="line"><span class="lineno">  597</span><span class="preprocessor">  inline PTR (const PTR&lt;T&gt;&amp;);                                                  \</span></div>
-<div class="line"><span class="lineno">  598</span><span class="preprocessor">  inline ~PTR ();                                                              \</span></div>
-<div class="line"><span class="lineno">  599</span><span class="preprocessor">  inline PTR##_rep&lt;T&gt;* operator-&gt;();                                           \</span></div>
-<div class="line"><span class="lineno">  600</span><span class="preprocessor">  inline PTR&lt;T&gt;&amp;       operator= (PTR&lt;T&gt; x)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00594">594</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  594</span><span class="preprocessor">#define CONCRETE_TEMPLATE(PTR, T)                                              \</span></div>
+<div class="line"><span class="lineno">  595</span><span class="preprocessor">  PTR##_rep&lt;T&gt;* rep;                                                           \</span></div>
+<div class="line"><span class="lineno">  596</span><span class="preprocessor">                                                                               \</span></div>
+<div class="line"><span class="lineno">  597</span><span class="preprocessor">public:                                                                        \</span></div>
+<div class="line"><span class="lineno">  598</span><span class="preprocessor">  inline PTR (const PTR&lt;T&gt;&amp;);                                                  \</span></div>
+<div class="line"><span class="lineno">  599</span><span class="preprocessor">  inline ~PTR ();                                                              \</span></div>
+<div class="line"><span class="lineno">  600</span><span class="preprocessor">  inline PTR##_rep&lt;T&gt;* operator-&gt;();                                           \</span></div>
+<div class="line"><span class="lineno">  601</span><span class="preprocessor">  inline PTR&lt;T&gt;&amp;       operator= (PTR&lt;T&gt; x)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -906,21 +906,21 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00618">618</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  618</span><span class="preprocessor">#define CONCRETE_TEMPLATE_CODE(PTR, TT, T)                                     \</span></div>
-<div class="line"><span class="lineno">  619</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR (const PTR&lt;T&gt;&amp; x) : rep (x.rep) {         \</span></div>
-<div class="line"><span class="lineno">  620</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  621</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  622</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::~PTR () { DEC_COUNT (this-&gt;rep); }            \</span></div>
-<div class="line"><span class="lineno">  623</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR##_rep&lt;T&gt;* PTR&lt;T&gt;::operator-&gt;() {                  \</span></div>
-<div class="line"><span class="lineno">  624</span><span class="preprocessor">    return this-&gt;rep;                                                          \</span></div>
-<div class="line"><span class="lineno">  625</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  626</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;&amp; PTR&lt;T&gt;::operator= (PTR&lt;T&gt; x) {                \</span></div>
-<div class="line"><span class="lineno">  627</span><span class="preprocessor">    INC_COUNT (x.rep);                                                         \</span></div>
-<div class="line"><span class="lineno">  628</span><span class="preprocessor">    DEC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  629</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                          \</span></div>
-<div class="line"><span class="lineno">  630</span><span class="preprocessor">    return *this;                                                              \</span></div>
-<div class="line"><span class="lineno">  631</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00619">619</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  619</span><span class="preprocessor">#define CONCRETE_TEMPLATE_CODE(PTR, TT, T)                                     \</span></div>
+<div class="line"><span class="lineno">  620</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR (const PTR&lt;T&gt;&amp; x) : rep (x.rep) {         \</span></div>
+<div class="line"><span class="lineno">  621</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  622</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  623</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::~PTR () { DEC_COUNT (this-&gt;rep); }            \</span></div>
+<div class="line"><span class="lineno">  624</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR##_rep&lt;T&gt;* PTR&lt;T&gt;::operator-&gt;() {                  \</span></div>
+<div class="line"><span class="lineno">  625</span><span class="preprocessor">    return this-&gt;rep;                                                          \</span></div>
+<div class="line"><span class="lineno">  626</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  627</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;&amp; PTR&lt;T&gt;::operator= (PTR&lt;T&gt; x) {                \</span></div>
+<div class="line"><span class="lineno">  628</span><span class="preprocessor">    INC_COUNT (x.rep);                                                         \</span></div>
+<div class="line"><span class="lineno">  629</span><span class="preprocessor">    DEC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  630</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                          \</span></div>
+<div class="line"><span class="lineno">  631</span><span class="preprocessor">    return *this;                                                              \</span></div>
+<div class="line"><span class="lineno">  632</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -971,15 +971,15 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00654">654</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  654</span><span class="preprocessor">#define CONCRETE_TEMPLATE_2(PTR, T1, T2)                                       \</span></div>
-<div class="line"><span class="lineno">  655</span><span class="preprocessor">  PTR##_rep&lt;T1, T2&gt;* rep;                                                      \</span></div>
-<div class="line"><span class="lineno">  656</span><span class="preprocessor">                                                                               \</span></div>
-<div class="line"><span class="lineno">  657</span><span class="preprocessor">public:                                                                        \</span></div>
-<div class="line"><span class="lineno">  658</span><span class="preprocessor">  inline PTR (const PTR&lt;T1, T2&gt;&amp;);                                             \</span></div>
-<div class="line"><span class="lineno">  659</span><span class="preprocessor">  inline ~PTR ();                                                              \</span></div>
-<div class="line"><span class="lineno">  660</span><span class="preprocessor">  inline PTR##_rep&lt;T1, T2&gt;* operator-&gt;();                                      \</span></div>
-<div class="line"><span class="lineno">  661</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;&amp;       operator= (PTR&lt;T1, T2&gt; x)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00655">655</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  655</span><span class="preprocessor">#define CONCRETE_TEMPLATE_2(PTR, T1, T2)                                       \</span></div>
+<div class="line"><span class="lineno">  656</span><span class="preprocessor">  PTR##_rep&lt;T1, T2&gt;* rep;                                                      \</span></div>
+<div class="line"><span class="lineno">  657</span><span class="preprocessor">                                                                               \</span></div>
+<div class="line"><span class="lineno">  658</span><span class="preprocessor">public:                                                                        \</span></div>
+<div class="line"><span class="lineno">  659</span><span class="preprocessor">  inline PTR (const PTR&lt;T1, T2&gt;&amp;);                                             \</span></div>
+<div class="line"><span class="lineno">  660</span><span class="preprocessor">  inline ~PTR ();                                                              \</span></div>
+<div class="line"><span class="lineno">  661</span><span class="preprocessor">  inline PTR##_rep&lt;T1, T2&gt;* operator-&gt;();                                      \</span></div>
+<div class="line"><span class="lineno">  662</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;&amp;       operator= (PTR&lt;T1, T2&gt; x)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1053,26 +1053,26 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00681">681</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  681</span><span class="preprocessor">#define CONCRETE_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)                        \</span></div>
-<div class="line"><span class="lineno">  682</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
-<div class="line"><span class="lineno">  683</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;::PTR (const PTR&lt;T1, T2&gt;&amp; x) : rep (x.rep) {               \</span></div>
-<div class="line"><span class="lineno">  684</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  685</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  686</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; inline PTR&lt;T1, T2&gt;::~PTR () {                      \</span></div>
-<div class="line"><span class="lineno">  687</span><span class="preprocessor">    DEC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  688</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  689</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
-<div class="line"><span class="lineno">  690</span><span class="preprocessor">  inline PTR##_rep&lt;T1, T2&gt;* PTR&lt;T1, T2&gt;::operator-&gt;() {                        \</span></div>
-<div class="line"><span class="lineno">  691</span><span class="preprocessor">    return this-&gt;rep;                                                          \</span></div>
-<div class="line"><span class="lineno">  692</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  693</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
-<div class="line"><span class="lineno">  694</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;&amp; PTR&lt;T1, T2&gt;::operator= (PTR&lt;T1, T2&gt; x) {                 \</span></div>
-<div class="line"><span class="lineno">  695</span><span class="preprocessor">    INC_COUNT (x.rep);                                                         \</span></div>
-<div class="line"><span class="lineno">  696</span><span class="preprocessor">    DEC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  697</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                          \</span></div>
-<div class="line"><span class="lineno">  698</span><span class="preprocessor">    return *this;                                                              \</span></div>
-<div class="line"><span class="lineno">  699</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00682">682</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  682</span><span class="preprocessor">#define CONCRETE_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)                        \</span></div>
+<div class="line"><span class="lineno">  683</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
+<div class="line"><span class="lineno">  684</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;::PTR (const PTR&lt;T1, T2&gt;&amp; x) : rep (x.rep) {               \</span></div>
+<div class="line"><span class="lineno">  685</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  686</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  687</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; inline PTR&lt;T1, T2&gt;::~PTR () {                      \</span></div>
+<div class="line"><span class="lineno">  688</span><span class="preprocessor">    DEC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  689</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  690</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
+<div class="line"><span class="lineno">  691</span><span class="preprocessor">  inline PTR##_rep&lt;T1, T2&gt;* PTR&lt;T1, T2&gt;::operator-&gt;() {                        \</span></div>
+<div class="line"><span class="lineno">  692</span><span class="preprocessor">    return this-&gt;rep;                                                          \</span></div>
+<div class="line"><span class="lineno">  693</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  694</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
+<div class="line"><span class="lineno">  695</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;&amp; PTR&lt;T1, T2&gt;::operator= (PTR&lt;T1, T2&gt; x) {                 \</span></div>
+<div class="line"><span class="lineno">  696</span><span class="preprocessor">    INC_COUNT (x.rep);                                                         \</span></div>
+<div class="line"><span class="lineno">  697</span><span class="preprocessor">    DEC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  698</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                          \</span></div>
+<div class="line"><span class="lineno">  699</span><span class="preprocessor">    return *this;                                                              \</span></div>
+<div class="line"><span class="lineno">  700</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1092,7 +1092,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#aeaea41292f96901c9775fa6d1f424432">CONCRETE</a> (<a class="code hl_class" href="classlist.html">PTR</a>);                                                              \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep</a>*)</div>
-<div class="ttc" id="abasic_8hpp_html_aeaea41292f96901c9775fa6d1f424432"><div class="ttname"><a href="#aeaea41292f96901c9775fa6d1f424432">CONCRETE</a></div><div class="ttdeci">#define CONCRETE(PTR)</div><div class="ttdoc">Macro used to define a concrete smart pointer with reference counting.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00540">basic.hpp:540</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_aeaea41292f96901c9775fa6d1f424432"><div class="ttname"><a href="#aeaea41292f96901c9775fa6d1f424432">CONCRETE</a></div><div class="ttdeci">#define CONCRETE(PTR)</div><div class="ttdoc">Macro used to define a concrete smart pointer with reference counting.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00541">basic.hpp:541</a></div></div>
 </div><!-- fragment -->
 <p>Macro to define an abstract pointer type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1102,10 +1102,10 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00709">709</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  709</span><span class="preprocessor">#define ABSTRACT(PTR)                                                          \</span></div>
-<div class="line"><span class="lineno">  710</span><span class="preprocessor">  CONCRETE (PTR);                                                              \</span></div>
-<div class="line"><span class="lineno">  711</span><span class="preprocessor">  inline PTR (PTR##_rep*)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00710">710</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  710</span><span class="preprocessor">#define ABSTRACT(PTR)                                                          \</span></div>
+<div class="line"><span class="lineno">  711</span><span class="preprocessor">  CONCRETE (PTR);                                                              \</span></div>
+<div class="line"><span class="lineno">  712</span><span class="preprocessor">  inline PTR (PTR##_rep*)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1125,7 +1125,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#ab9afd82b7ed4807a99c4194306a33947">CONCRETE_CODE</a> (<a class="code hl_class" href="classlist.html">PTR</a>);                                                         \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">PTR::PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep</a>* <a class="code hl_class" href="classlist.html">rep2</a>) : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_class" href="classlist.html">rep2</a>) { <a class="code hl_define" href="#aca4b440a67d81074341947d73fa6c29b">INC_COUNT</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>); }</div>
-<div class="ttc" id="abasic_8hpp_html_ab9afd82b7ed4807a99c4194306a33947"><div class="ttname"><a href="#ab9afd82b7ed4807a99c4194306a33947">CONCRETE_CODE</a></div><div class="ttdeci">#define CONCRETE_CODE(PTR)</div><div class="ttdoc">Macro used to define the implementation of a concrete smart pointer.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00562">basic.hpp:562</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_ab9afd82b7ed4807a99c4194306a33947"><div class="ttname"><a href="#ab9afd82b7ed4807a99c4194306a33947">CONCRETE_CODE</a></div><div class="ttdeci">#define CONCRETE_CODE(PTR)</div><div class="ttdoc">Macro used to define the implementation of a concrete smart pointer.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00563">basic.hpp:563</a></div></div>
 </div><!-- fragment -->
 <p>Macro to define an abstract pointer type with code. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1135,10 +1135,10 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00718">718</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  718</span><span class="preprocessor">#define ABSTRACT_CODE(PTR)                                                     \</span></div>
-<div class="line"><span class="lineno">  719</span><span class="preprocessor">  CONCRETE_CODE (PTR);                                                         \</span></div>
-<div class="line"><span class="lineno">  720</span><span class="preprocessor">  inline PTR::PTR (PTR##_rep* rep2) : rep (rep2) { INC_COUNT (this-&gt;rep); }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00719">719</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  719</span><span class="preprocessor">#define ABSTRACT_CODE(PTR)                                                     \</span></div>
+<div class="line"><span class="lineno">  720</span><span class="preprocessor">  CONCRETE_CODE (PTR);                                                         \</span></div>
+<div class="line"><span class="lineno">  721</span><span class="preprocessor">  inline PTR::PTR (PTR##_rep* rep2) : rep (rep2) { INC_COUNT (this-&gt;rep); }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1162,7 +1162,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a855dcae3e39a98d3480efdd115d5bd4d">CONCRETE_TEMPLATE</a> (<a class="code hl_class" href="classlist.html">PTR</a>, T);                                                  \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep&lt;T&gt;</a>*)</div>
-<div class="ttc" id="abasic_8hpp_html_a855dcae3e39a98d3480efdd115d5bd4d"><div class="ttname"><a href="#a855dcae3e39a98d3480efdd115d5bd4d">CONCRETE_TEMPLATE</a></div><div class="ttdeci">#define CONCRETE_TEMPLATE(PTR, T)</div><div class="ttdoc">Macro used to define a concrete smart pointer with reference counting for a single template parameter...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00593">basic.hpp:593</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a855dcae3e39a98d3480efdd115d5bd4d"><div class="ttname"><a href="#a855dcae3e39a98d3480efdd115d5bd4d">CONCRETE_TEMPLATE</a></div><div class="ttdeci">#define CONCRETE_TEMPLATE(PTR, T)</div><div class="ttdoc">Macro used to define a concrete smart pointer with reference counting for a single template parameter...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00594">basic.hpp:594</a></div></div>
 </div><!-- fragment -->
 <p>Macro to define a templated abstract pointer type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1173,10 +1173,10 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00728">728</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  728</span><span class="preprocessor">#define ABSTRACT_TEMPLATE(PTR, T)                                              \</span></div>
-<div class="line"><span class="lineno">  729</span><span class="preprocessor">  CONCRETE_TEMPLATE (PTR, T);                                                  \</span></div>
-<div class="line"><span class="lineno">  730</span><span class="preprocessor">  inline PTR (PTR##_rep&lt;T&gt;*)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00729">729</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  729</span><span class="preprocessor">#define ABSTRACT_TEMPLATE(PTR, T)                                              \</span></div>
+<div class="line"><span class="lineno">  730</span><span class="preprocessor">  CONCRETE_TEMPLATE (PTR, T);                                                  \</span></div>
+<div class="line"><span class="lineno">  731</span><span class="preprocessor">  inline PTR (PTR##_rep&lt;T&gt;*)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1207,7 +1207,7 @@ Variables</h2></td></tr>
 <div class="line">  <span class="keyword">template</span> &lt;TT T&gt; <span class="keyword">inline</span> <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">PTR&lt;T&gt;::PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep&lt;T&gt;</a>* <a class="code hl_class" href="classlist.html">rep2</a>) : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_class" href="classlist.html">rep2</a>) {       <a class="code hl_class" href="classlist.html">\</a></div>
 <div class="line"><a class="code hl_class" href="classlist.html">    INC_COUNT</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>);                                                     \</div>
 <div class="line">  }</div>
-<div class="ttc" id="abasic_8hpp_html_a1cbd1f8e336f61ac9fd9deeaa779998a"><div class="ttname"><a href="#a1cbd1f8e336f61ac9fd9deeaa779998a">CONCRETE_TEMPLATE_CODE</a></div><div class="ttdeci">#define CONCRETE_TEMPLATE_CODE(PTR, TT, T)</div><div class="ttdoc">Macro used to define the implementation of a concrete smart pointer with reference counting for a sin...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00618">basic.hpp:618</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a1cbd1f8e336f61ac9fd9deeaa779998a"><div class="ttname"><a href="#a1cbd1f8e336f61ac9fd9deeaa779998a">CONCRETE_TEMPLATE_CODE</a></div><div class="ttdeci">#define CONCRETE_TEMPLATE_CODE(PTR, TT, T)</div><div class="ttdoc">Macro used to define the implementation of a concrete smart pointer with reference counting for a sin...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00619">basic.hpp:619</a></div></div>
 </div><!-- fragment -->
 <p>Macro to define a templated abstract pointer type with code. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1219,12 +1219,12 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00739">739</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  739</span><span class="preprocessor">#define ABSTRACT_TEMPLATE_CODE(PTR, TT, T)                                     \</span></div>
-<div class="line"><span class="lineno">  740</span><span class="preprocessor">  CONCRETE_TEMPLATE_CODE (PTR, TT, T);                                         \</span></div>
-<div class="line"><span class="lineno">  741</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR (PTR##_rep&lt;T&gt;* rep2) : rep (rep2) {       \</span></div>
-<div class="line"><span class="lineno">  742</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  743</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00740">740</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  740</span><span class="preprocessor">#define ABSTRACT_TEMPLATE_CODE(PTR, TT, T)                                     \</span></div>
+<div class="line"><span class="lineno">  741</span><span class="preprocessor">  CONCRETE_TEMPLATE_CODE (PTR, TT, T);                                         \</span></div>
+<div class="line"><span class="lineno">  742</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR (PTR##_rep&lt;T&gt;* rep2) : rep (rep2) {       \</span></div>
+<div class="line"><span class="lineno">  743</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  744</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1255,11 +1255,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00757">757</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  757</span><span class="preprocessor">#define CONCRETE_NULL(PTR)                                                     \</span></div>
-<div class="line"><span class="lineno">  758</span><span class="preprocessor">  CONCRETE (PTR);                                                              \</span></div>
-<div class="line"><span class="lineno">  759</span><span class="preprocessor">  inline PTR ();                                                               \</span></div>
-<div class="line"><span class="lineno">  760</span><span class="preprocessor">  friend bool is_nil </span><span class="comment">/*LESSGTR*/</span><span class="preprocessor"> (PTR x)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00758">758</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  758</span><span class="preprocessor">#define CONCRETE_NULL(PTR)                                                     \</span></div>
+<div class="line"><span class="lineno">  759</span><span class="preprocessor">  CONCRETE (PTR);                                                              \</span></div>
+<div class="line"><span class="lineno">  760</span><span class="preprocessor">  inline PTR ();                                                               \</span></div>
+<div class="line"><span class="lineno">  761</span><span class="preprocessor">  friend bool is_nil </span><span class="comment">/*LESSGTR*/</span><span class="preprocessor"> (PTR x)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1288,8 +1288,8 @@ Variables</h2></td></tr>
 <div class="line">    <span class="keywordflow">return</span> *<span class="keyword">this</span>;                                                        \</div>
 <div class="line">  }                                                                            \</div>
 <div class="line">  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> (<a class="code hl_class" href="classlist.html">PTR</a> x) { <span class="keywordflow">return</span> x.rep == <a class="code hl_class" href="classlist.html">NULL</a>; }</div>
-<div class="ttc" id="abasic_8hpp_html_a909b15fba767295c08fbfb5799417238"><div class="ttname"><a href="#a909b15fba767295c08fbfb5799417238">DEC_COUNT_NULL</a></div><div class="ttdeci">#define DEC_COUNT_NULL(R)</div><div class="ttdoc">Macro used to decrement the reference count for a structure object and delete it if the count reaches...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00515">basic.hpp:515</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_ab7eeb84d8ee75e0aa8607c82e5abb37f"><div class="ttname"><a href="#ab7eeb84d8ee75e0aa8607c82e5abb37f">INC_COUNT_NULL</a></div><div class="ttdeci">#define INC_COUNT_NULL(R)</div><div class="ttdoc">Macro used to increment the reference count for a structure object, only if the object is not NULL.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00501">basic.hpp:501</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a909b15fba767295c08fbfb5799417238"><div class="ttname"><a href="#a909b15fba767295c08fbfb5799417238">DEC_COUNT_NULL</a></div><div class="ttdeci">#define DEC_COUNT_NULL(R)</div><div class="ttdoc">Macro used to decrement the reference count for a structure object and delete it if the count reaches...</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00516">basic.hpp:516</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_ab7eeb84d8ee75e0aa8607c82e5abb37f"><div class="ttname"><a href="#ab7eeb84d8ee75e0aa8607c82e5abb37f">INC_COUNT_NULL</a></div><div class="ttdeci">#define INC_COUNT_NULL(R)</div><div class="ttdoc">Macro used to increment the reference count for a structure object, only if the object is not NULL.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00502">basic.hpp:502</a></div></div>
 </div><!-- fragment -->
 <p>Code for the concrete null pointer type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1299,19 +1299,19 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00767">767</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  767</span><span class="preprocessor">#define CONCRETE_NULL_CODE(PTR)                                                \</span></div>
-<div class="line"><span class="lineno">  768</span><span class="preprocessor">  inline PTR::PTR () : rep (NULL) {}                                           \</span></div>
-<div class="line"><span class="lineno">  769</span><span class="preprocessor">  inline PTR::PTR (const PTR&amp; x) : rep (x.rep) { INC_COUNT_NULL (this-&gt;rep); } \</span></div>
-<div class="line"><span class="lineno">  770</span><span class="preprocessor">  inline PTR::~PTR () { DEC_COUNT_NULL (this-&gt;rep); }                          \</span></div>
-<div class="line"><span class="lineno">  771</span><span class="preprocessor">  inline PTR##_rep* PTR::operator-&gt;() { return this-&gt;rep; }                    \</span></div>
-<div class="line"><span class="lineno">  772</span><span class="preprocessor">  inline PTR&amp;       PTR::operator= (PTR x) {                                   \</span></div>
-<div class="line"><span class="lineno">  773</span><span class="preprocessor">    INC_COUNT_NULL (x.rep);                                              \</span></div>
-<div class="line"><span class="lineno">  774</span><span class="preprocessor">    DEC_COUNT_NULL (this-&gt;rep);                                          \</span></div>
-<div class="line"><span class="lineno">  775</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                    \</span></div>
-<div class="line"><span class="lineno">  776</span><span class="preprocessor">    return *this;                                                        \</span></div>
-<div class="line"><span class="lineno">  777</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  778</span><span class="preprocessor">  inline bool is_nil (PTR x) { return x.rep == NULL; }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00768">768</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  768</span><span class="preprocessor">#define CONCRETE_NULL_CODE(PTR)                                                \</span></div>
+<div class="line"><span class="lineno">  769</span><span class="preprocessor">  inline PTR::PTR () : rep (NULL) {}                                           \</span></div>
+<div class="line"><span class="lineno">  770</span><span class="preprocessor">  inline PTR::PTR (const PTR&amp; x) : rep (x.rep) { INC_COUNT_NULL (this-&gt;rep); } \</span></div>
+<div class="line"><span class="lineno">  771</span><span class="preprocessor">  inline PTR::~PTR () { DEC_COUNT_NULL (this-&gt;rep); }                          \</span></div>
+<div class="line"><span class="lineno">  772</span><span class="preprocessor">  inline PTR##_rep* PTR::operator-&gt;() { return this-&gt;rep; }                    \</span></div>
+<div class="line"><span class="lineno">  773</span><span class="preprocessor">  inline PTR&amp;       PTR::operator= (PTR x) {                                   \</span></div>
+<div class="line"><span class="lineno">  774</span><span class="preprocessor">    INC_COUNT_NULL (x.rep);                                              \</span></div>
+<div class="line"><span class="lineno">  775</span><span class="preprocessor">    DEC_COUNT_NULL (this-&gt;rep);                                          \</span></div>
+<div class="line"><span class="lineno">  776</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                    \</span></div>
+<div class="line"><span class="lineno">  777</span><span class="preprocessor">    return *this;                                                        \</span></div>
+<div class="line"><span class="lineno">  778</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  779</span><span class="preprocessor">  inline bool is_nil (PTR x) { return x.rep == NULL; }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1347,11 +1347,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00786">786</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  786</span><span class="preprocessor">#define CONCRETE_NULL_TEMPLATE(PTR, T)                                         \</span></div>
-<div class="line"><span class="lineno">  787</span><span class="preprocessor">  CONCRETE_TEMPLATE (PTR, T);                                                  \</span></div>
-<div class="line"><span class="lineno">  788</span><span class="preprocessor">  inline PTR ();                                                               \</span></div>
-<div class="line"><span class="lineno">  789</span><span class="preprocessor">  friend bool is_nil LESSGTR (PTR&lt;T&gt; x)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00787">787</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  787</span><span class="preprocessor">#define CONCRETE_NULL_TEMPLATE(PTR, T)                                         \</span></div>
+<div class="line"><span class="lineno">  788</span><span class="preprocessor">  CONCRETE_TEMPLATE (PTR, T);                                                  \</span></div>
+<div class="line"><span class="lineno">  789</span><span class="preprocessor">  inline PTR ();                                                               \</span></div>
+<div class="line"><span class="lineno">  790</span><span class="preprocessor">  friend bool is_nil LESSGTR (PTR&lt;T&gt; x)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1404,23 +1404,23 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00798">798</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  798</span><span class="preprocessor">#define CONCRETE_NULL_TEMPLATE_CODE(PTR, TT, T)                                \</span></div>
-<div class="line"><span class="lineno">  799</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR () : rep (NULL) {}                        \</span></div>
-<div class="line"><span class="lineno">  800</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR (const PTR&lt;T&gt;&amp; x) : rep (x.rep) {         \</span></div>
-<div class="line"><span class="lineno">  801</span><span class="preprocessor">    INC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
-<div class="line"><span class="lineno">  802</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  803</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::~PTR () { DEC_COUNT_NULL (this-&gt;rep); }       \</span></div>
-<div class="line"><span class="lineno">  804</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR##_rep&lt;T&gt;* PTR&lt;T&gt;::operator-&gt;() {                  \</span></div>
-<div class="line"><span class="lineno">  805</span><span class="preprocessor">    return this-&gt;rep;                                                          \</span></div>
-<div class="line"><span class="lineno">  806</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  807</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;&amp; PTR&lt;T&gt;::operator= (PTR&lt;T&gt; x) {                \</span></div>
-<div class="line"><span class="lineno">  808</span><span class="preprocessor">    INC_COUNT_NULL (x.rep);                                                    \</span></div>
-<div class="line"><span class="lineno">  809</span><span class="preprocessor">    DEC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
-<div class="line"><span class="lineno">  810</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                          \</span></div>
-<div class="line"><span class="lineno">  811</span><span class="preprocessor">    return *this;                                                              \</span></div>
-<div class="line"><span class="lineno">  812</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  813</span><span class="preprocessor">  template &lt;TT T&gt; inline bool is_nil (PTR&lt;T&gt; x) { return x.rep == NULL; }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00799">799</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  799</span><span class="preprocessor">#define CONCRETE_NULL_TEMPLATE_CODE(PTR, TT, T)                                \</span></div>
+<div class="line"><span class="lineno">  800</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR () : rep (NULL) {}                        \</span></div>
+<div class="line"><span class="lineno">  801</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR (const PTR&lt;T&gt;&amp; x) : rep (x.rep) {         \</span></div>
+<div class="line"><span class="lineno">  802</span><span class="preprocessor">    INC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
+<div class="line"><span class="lineno">  803</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  804</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::~PTR () { DEC_COUNT_NULL (this-&gt;rep); }       \</span></div>
+<div class="line"><span class="lineno">  805</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR##_rep&lt;T&gt;* PTR&lt;T&gt;::operator-&gt;() {                  \</span></div>
+<div class="line"><span class="lineno">  806</span><span class="preprocessor">    return this-&gt;rep;                                                          \</span></div>
+<div class="line"><span class="lineno">  807</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  808</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;&amp; PTR&lt;T&gt;::operator= (PTR&lt;T&gt; x) {                \</span></div>
+<div class="line"><span class="lineno">  809</span><span class="preprocessor">    INC_COUNT_NULL (x.rep);                                                    \</span></div>
+<div class="line"><span class="lineno">  810</span><span class="preprocessor">    DEC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
+<div class="line"><span class="lineno">  811</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                          \</span></div>
+<div class="line"><span class="lineno">  812</span><span class="preprocessor">    return *this;                                                              \</span></div>
+<div class="line"><span class="lineno">  813</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  814</span><span class="preprocessor">  template &lt;TT T&gt; inline bool is_nil (PTR&lt;T&gt; x) { return x.rep == NULL; }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1450,7 +1450,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#ab4d6d02372d51789edbd6a630b925000">CONCRETE_TEMPLATE_2</a> (<a class="code hl_class" href="classlist.html">PTR</a>, T1, T2);                                           \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a> ();                                                               \</div>
 <div class="line">  <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a> <a class="code hl_define" href="#a00a60464f1b8c2b44f883ed269dffc7d">LESSGTR</a> (<a class="code hl_class" href="classlist.html">PTR&lt;T1, T2&gt;</a> x)</div>
-<div class="ttc" id="abasic_8hpp_html_ab4d6d02372d51789edbd6a630b925000"><div class="ttname"><a href="#ab4d6d02372d51789edbd6a630b925000">CONCRETE_TEMPLATE_2</a></div><div class="ttdeci">#define CONCRETE_TEMPLATE_2(PTR, T1, T2)</div><div class="ttdoc">Macro used to define a concrete smart pointer with reference counting for two template parameters.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00654">basic.hpp:654</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_ab4d6d02372d51789edbd6a630b925000"><div class="ttname"><a href="#ab4d6d02372d51789edbd6a630b925000">CONCRETE_TEMPLATE_2</a></div><div class="ttdeci">#define CONCRETE_TEMPLATE_2(PTR, T1, T2)</div><div class="ttdoc">Macro used to define a concrete smart pointer with reference counting for two template parameters.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00655">basic.hpp:655</a></div></div>
 </div><!-- fragment -->
 <p>Macro for concrete null indirect structure two-template-parameter definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1462,11 +1462,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00822">822</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  822</span><span class="preprocessor">#define CONCRETE_NULL_TEMPLATE_2(PTR, T1, T2)                                  \</span></div>
-<div class="line"><span class="lineno">  823</span><span class="preprocessor">  CONCRETE_TEMPLATE_2 (PTR, T1, T2);                                           \</span></div>
-<div class="line"><span class="lineno">  824</span><span class="preprocessor">  inline PTR ();                                                               \</span></div>
-<div class="line"><span class="lineno">  825</span><span class="preprocessor">  friend bool is_nil LESSGTR (PTR&lt;T1, T2&gt; x)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00823">823</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  823</span><span class="preprocessor">#define CONCRETE_NULL_TEMPLATE_2(PTR, T1, T2)                                  \</span></div>
+<div class="line"><span class="lineno">  824</span><span class="preprocessor">  CONCRETE_TEMPLATE_2 (PTR, T1, T2);                                           \</span></div>
+<div class="line"><span class="lineno">  825</span><span class="preprocessor">  inline PTR ();                                                               \</span></div>
+<div class="line"><span class="lineno">  826</span><span class="preprocessor">  friend bool is_nil LESSGTR (PTR&lt;T1, T2&gt; x)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1537,29 +1537,29 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00838">838</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  838</span><span class="preprocessor">#define CONCRETE_NULL_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)                   \</span></div>
-<div class="line"><span class="lineno">  839</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; inline PTR&lt;T1, T2&gt;::PTR () : rep (NULL) {}         \</span></div>
-<div class="line"><span class="lineno">  840</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
-<div class="line"><span class="lineno">  841</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;::PTR (const PTR&lt;T1, T2&gt;&amp; x) : rep (x.rep) {               \</span></div>
-<div class="line"><span class="lineno">  842</span><span class="preprocessor">    INC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
-<div class="line"><span class="lineno">  843</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  844</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; inline PTR&lt;T1, T2&gt;::~PTR () {                      \</span></div>
-<div class="line"><span class="lineno">  845</span><span class="preprocessor">    DEC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
-<div class="line"><span class="lineno">  846</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  847</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; PTR##_rep&lt;T1, T2&gt;* PTR&lt;T1, T2&gt;::operator-&gt;() {     \</span></div>
-<div class="line"><span class="lineno">  848</span><span class="preprocessor">    return this-&gt;rep;                                                          \</span></div>
-<div class="line"><span class="lineno">  849</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  850</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
-<div class="line"><span class="lineno">  851</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;&amp; PTR&lt;T1, T2&gt;::operator= (PTR&lt;T1, T2&gt; x) {                 \</span></div>
-<div class="line"><span class="lineno">  852</span><span class="preprocessor">    INC_COUNT_NULL (x.rep);                                                    \</span></div>
-<div class="line"><span class="lineno">  853</span><span class="preprocessor">    DEC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
-<div class="line"><span class="lineno">  854</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                          \</span></div>
-<div class="line"><span class="lineno">  855</span><span class="preprocessor">    return *this;                                                              \</span></div>
-<div class="line"><span class="lineno">  856</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  857</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; inline bool is_nil (PTR&lt;T1, T2&gt; x) {               \</span></div>
-<div class="line"><span class="lineno">  858</span><span class="preprocessor">    return x.rep == NULL;                                                      \</span></div>
-<div class="line"><span class="lineno">  859</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00839">839</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  839</span><span class="preprocessor">#define CONCRETE_NULL_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)                   \</span></div>
+<div class="line"><span class="lineno">  840</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; inline PTR&lt;T1, T2&gt;::PTR () : rep (NULL) {}         \</span></div>
+<div class="line"><span class="lineno">  841</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
+<div class="line"><span class="lineno">  842</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;::PTR (const PTR&lt;T1, T2&gt;&amp; x) : rep (x.rep) {               \</span></div>
+<div class="line"><span class="lineno">  843</span><span class="preprocessor">    INC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
+<div class="line"><span class="lineno">  844</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  845</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; inline PTR&lt;T1, T2&gt;::~PTR () {                      \</span></div>
+<div class="line"><span class="lineno">  846</span><span class="preprocessor">    DEC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
+<div class="line"><span class="lineno">  847</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  848</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; PTR##_rep&lt;T1, T2&gt;* PTR&lt;T1, T2&gt;::operator-&gt;() {     \</span></div>
+<div class="line"><span class="lineno">  849</span><span class="preprocessor">    return this-&gt;rep;                                                          \</span></div>
+<div class="line"><span class="lineno">  850</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  851</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
+<div class="line"><span class="lineno">  852</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;&amp; PTR&lt;T1, T2&gt;::operator= (PTR&lt;T1, T2&gt; x) {                 \</span></div>
+<div class="line"><span class="lineno">  853</span><span class="preprocessor">    INC_COUNT_NULL (x.rep);                                                    \</span></div>
+<div class="line"><span class="lineno">  854</span><span class="preprocessor">    DEC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
+<div class="line"><span class="lineno">  855</span><span class="preprocessor">    this-&gt;rep= x.rep;                                                          \</span></div>
+<div class="line"><span class="lineno">  856</span><span class="preprocessor">    return *this;                                                              \</span></div>
+<div class="line"><span class="lineno">  857</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  858</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt; inline bool is_nil (PTR&lt;T1, T2&gt; x) {               \</span></div>
+<div class="line"><span class="lineno">  859</span><span class="preprocessor">    return x.rep == NULL;                                                      \</span></div>
+<div class="line"><span class="lineno">  860</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1579,7 +1579,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a3975960fba332af12c518dd3d8637ac1">CONCRETE_NULL</a> (<a class="code hl_class" href="classlist.html">PTR</a>);                                                         \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep</a>*)</div>
-<div class="ttc" id="abasic_8hpp_html_a3975960fba332af12c518dd3d8637ac1"><div class="ttname"><a href="#a3975960fba332af12c518dd3d8637ac1">CONCRETE_NULL</a></div><div class="ttdeci">#define CONCRETE_NULL(PTR)</div><div class="ttdoc">Macro to define a concrete null pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00757">basic.hpp:757</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a3975960fba332af12c518dd3d8637ac1"><div class="ttname"><a href="#a3975960fba332af12c518dd3d8637ac1">CONCRETE_NULL</a></div><div class="ttdeci">#define CONCRETE_NULL(PTR)</div><div class="ttdoc">Macro to define a concrete null pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00758">basic.hpp:758</a></div></div>
 </div><!-- fragment -->
 <p>Macro for abstract null indirect structure definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1589,10 +1589,10 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00869">869</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  869</span><span class="preprocessor">#define ABSTRACT_NULL(PTR)                                                     \</span></div>
-<div class="line"><span class="lineno">  870</span><span class="preprocessor">  CONCRETE_NULL (PTR);                                                         \</span></div>
-<div class="line"><span class="lineno">  871</span><span class="preprocessor">  inline PTR (PTR##_rep*)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00870">870</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  870</span><span class="preprocessor">#define ABSTRACT_NULL(PTR)                                                     \</span></div>
+<div class="line"><span class="lineno">  871</span><span class="preprocessor">  CONCRETE_NULL (PTR);                                                         \</span></div>
+<div class="line"><span class="lineno">  872</span><span class="preprocessor">  inline PTR (PTR##_rep*)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1612,7 +1612,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a6d84dafc62b4973aae6ea4f2a46d9842">CONCRETE_NULL_CODE</a> (<a class="code hl_class" href="classlist.html">PTR</a>);                                                    \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">PTR::PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep</a>* <a class="code hl_class" href="classlist.html">rep2</a>) : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_class" href="classlist.html">rep2</a>) { <a class="code hl_define" href="#ab7eeb84d8ee75e0aa8607c82e5abb37f">INC_COUNT_NULL</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>); }</div>
-<div class="ttc" id="abasic_8hpp_html_a6d84dafc62b4973aae6ea4f2a46d9842"><div class="ttname"><a href="#a6d84dafc62b4973aae6ea4f2a46d9842">CONCRETE_NULL_CODE</a></div><div class="ttdeci">#define CONCRETE_NULL_CODE(PTR)</div><div class="ttdoc">Code for the concrete null pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00767">basic.hpp:767</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a6d84dafc62b4973aae6ea4f2a46d9842"><div class="ttname"><a href="#a6d84dafc62b4973aae6ea4f2a46d9842">CONCRETE_NULL_CODE</a></div><div class="ttdeci">#define CONCRETE_NULL_CODE(PTR)</div><div class="ttdoc">Code for the concrete null pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00768">basic.hpp:768</a></div></div>
 </div><!-- fragment -->
 <p>Macro for abstract null indirect structure code definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1622,10 +1622,10 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00877">877</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  877</span><span class="preprocessor">#define ABSTRACT_NULL_CODE(PTR)                                                \</span></div>
-<div class="line"><span class="lineno">  878</span><span class="preprocessor">  CONCRETE_NULL_CODE (PTR);                                                    \</span></div>
-<div class="line"><span class="lineno">  879</span><span class="preprocessor">  inline PTR::PTR (PTR##_rep* rep2) : rep (rep2) { INC_COUNT_NULL (this-&gt;rep); }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00878">878</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  878</span><span class="preprocessor">#define ABSTRACT_NULL_CODE(PTR)                                                \</span></div>
+<div class="line"><span class="lineno">  879</span><span class="preprocessor">  CONCRETE_NULL_CODE (PTR);                                                    \</span></div>
+<div class="line"><span class="lineno">  880</span><span class="preprocessor">  inline PTR::PTR (PTR##_rep* rep2) : rep (rep2) { INC_COUNT_NULL (this-&gt;rep); }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1649,7 +1649,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a73d179d804e480fa994186c7854db969">CONCRETE_NULL_TEMPLATE</a> (<a class="code hl_class" href="classlist.html">PTR</a>, T);                                             \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep&lt;T&gt;</a>*)</div>
-<div class="ttc" id="abasic_8hpp_html_a73d179d804e480fa994186c7854db969"><div class="ttname"><a href="#a73d179d804e480fa994186c7854db969">CONCRETE_NULL_TEMPLATE</a></div><div class="ttdeci">#define CONCRETE_NULL_TEMPLATE(PTR, T)</div><div class="ttdoc">Macro to define a templated concrete null pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00786">basic.hpp:786</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a73d179d804e480fa994186c7854db969"><div class="ttname"><a href="#a73d179d804e480fa994186c7854db969">CONCRETE_NULL_TEMPLATE</a></div><div class="ttdeci">#define CONCRETE_NULL_TEMPLATE(PTR, T)</div><div class="ttdoc">Macro to define a templated concrete null pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00787">basic.hpp:787</a></div></div>
 </div><!-- fragment -->
 <p>Macro for abstract null indirect structure template definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1660,10 +1660,10 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00886">886</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  886</span><span class="preprocessor">#define ABSTRACT_NULL_TEMPLATE(PTR, T)                                         \</span></div>
-<div class="line"><span class="lineno">  887</span><span class="preprocessor">  CONCRETE_NULL_TEMPLATE (PTR, T);                                             \</span></div>
-<div class="line"><span class="lineno">  888</span><span class="preprocessor">  inline PTR (PTR##_rep&lt;T&gt;*)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00887">887</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  887</span><span class="preprocessor">#define ABSTRACT_NULL_TEMPLATE(PTR, T)                                         \</span></div>
+<div class="line"><span class="lineno">  888</span><span class="preprocessor">  CONCRETE_NULL_TEMPLATE (PTR, T);                                             \</span></div>
+<div class="line"><span class="lineno">  889</span><span class="preprocessor">  inline PTR (PTR##_rep&lt;T&gt;*)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1694,7 +1694,7 @@ Variables</h2></td></tr>
 <div class="line">  <span class="keyword">template</span> &lt;TT T&gt; <span class="keyword">inline</span> <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">PTR&lt;T&gt;::PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep&lt;T&gt;</a>* <a class="code hl_class" href="classlist.html">rep2</a>) : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_class" href="classlist.html">rep2</a>) {       <a class="code hl_class" href="classlist.html">\</a></div>
 <div class="line"><a class="code hl_class" href="classlist.html">    INC_COUNT</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>);                                                     \</div>
 <div class="line">  }</div>
-<div class="ttc" id="abasic_8hpp_html_a4f27490a5dee00cb6f89a68f96ff4875"><div class="ttname"><a href="#a4f27490a5dee00cb6f89a68f96ff4875">CONCRETE_NULL_TEMPLATE_CODE</a></div><div class="ttdeci">#define CONCRETE_NULL_TEMPLATE_CODE(PTR, TT, T)</div><div class="ttdoc">Code for the templated concrete null pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00798">basic.hpp:798</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a4f27490a5dee00cb6f89a68f96ff4875"><div class="ttname"><a href="#a4f27490a5dee00cb6f89a68f96ff4875">CONCRETE_NULL_TEMPLATE_CODE</a></div><div class="ttdeci">#define CONCRETE_NULL_TEMPLATE_CODE(PTR, TT, T)</div><div class="ttdoc">Code for the templated concrete null pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00799">basic.hpp:799</a></div></div>
 </div><!-- fragment -->
 <p>Macro for abstract null indirect structure template code definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1706,12 +1706,12 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00896">896</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  896</span><span class="preprocessor">#define ABSTRACT_NULL_TEMPLATE_CODE(PTR, TT, T)                                \</span></div>
-<div class="line"><span class="lineno">  897</span><span class="preprocessor">  CONCRETE_NULL_TEMPLATE_CODE (PTR, TT, T);                                    \</span></div>
-<div class="line"><span class="lineno">  898</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR (PTR##_rep&lt;T&gt;* rep2) : rep (rep2) {       \</span></div>
-<div class="line"><span class="lineno">  899</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  900</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00897">897</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  897</span><span class="preprocessor">#define ABSTRACT_NULL_TEMPLATE_CODE(PTR, TT, T)                                \</span></div>
+<div class="line"><span class="lineno">  898</span><span class="preprocessor">  CONCRETE_NULL_TEMPLATE_CODE (PTR, TT, T);                                    \</span></div>
+<div class="line"><span class="lineno">  899</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::PTR (PTR##_rep&lt;T&gt;* rep2) : rep (rep2) {       \</span></div>
+<div class="line"><span class="lineno">  900</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  901</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1740,7 +1740,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a228b054409d57b0dcc3ba4af11bed5ef">CONCRETE_NULL_TEMPLATE_2</a> (<a class="code hl_class" href="classlist.html">PTR</a>, T1, T2);                                      \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep&lt;T1, T2&gt;</a>*)</div>
-<div class="ttc" id="abasic_8hpp_html_a228b054409d57b0dcc3ba4af11bed5ef"><div class="ttname"><a href="#a228b054409d57b0dcc3ba4af11bed5ef">CONCRETE_NULL_TEMPLATE_2</a></div><div class="ttdeci">#define CONCRETE_NULL_TEMPLATE_2(PTR, T1, T2)</div><div class="ttdoc">Macro for concrete null indirect structure two-template-parameter definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00822">basic.hpp:822</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a228b054409d57b0dcc3ba4af11bed5ef"><div class="ttname"><a href="#a228b054409d57b0dcc3ba4af11bed5ef">CONCRETE_NULL_TEMPLATE_2</a></div><div class="ttdeci">#define CONCRETE_NULL_TEMPLATE_2(PTR, T1, T2)</div><div class="ttdoc">Macro for concrete null indirect structure two-template-parameter definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00823">basic.hpp:823</a></div></div>
 </div><!-- fragment -->
 <p>Macro for abstract null indirect structure two-template-parameter definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1752,10 +1752,10 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00909">909</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  909</span><span class="preprocessor">#define ABSTRACT_NULL_TEMPLATE_2(PTR, T1, T2)                                  \</span></div>
-<div class="line"><span class="lineno">  910</span><span class="preprocessor">  CONCRETE_NULL_TEMPLATE_2 (PTR, T1, T2);                                      \</span></div>
-<div class="line"><span class="lineno">  911</span><span class="preprocessor">  inline PTR (PTR##_rep&lt;T1, T2&gt;*)</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00910">910</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  910</span><span class="preprocessor">#define ABSTRACT_NULL_TEMPLATE_2(PTR, T1, T2)                                  \</span></div>
+<div class="line"><span class="lineno">  911</span><span class="preprocessor">  CONCRETE_NULL_TEMPLATE_2 (PTR, T1, T2);                                      \</span></div>
+<div class="line"><span class="lineno">  912</span><span class="preprocessor">  inline PTR (PTR##_rep&lt;T1, T2&gt;*)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1797,7 +1797,7 @@ Variables</h2></td></tr>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">PTR&lt;T1, T2&gt;::PTR</a> (<a class="code hl_class" href="classlist.html">PTR</a>##<a class="code hl_class" href="classlist.html">_rep&lt;T1, T2&gt;</a>* <a class="code hl_class" href="classlist.html">rep2</a>) : <a class="code hl_struct" href="structrep.html">rep</a> (<a class="code hl_class" href="classlist.html">rep2</a>) {             <a class="code hl_class" href="classlist.html">\</a></div>
 <div class="line"><a class="code hl_class" href="classlist.html">    INC_COUNT</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>);                                                     \</div>
 <div class="line">  }</div>
-<div class="ttc" id="abasic_8hpp_html_a96c2f4706e56cf12a57960e98d279204"><div class="ttname"><a href="#a96c2f4706e56cf12a57960e98d279204">CONCRETE_NULL_TEMPLATE_2_CODE</a></div><div class="ttdeci">#define CONCRETE_NULL_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)</div><div class="ttdoc">Macro for concrete null indirect structure two-template-parameter code definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00838">basic.hpp:838</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a96c2f4706e56cf12a57960e98d279204"><div class="ttname"><a href="#a96c2f4706e56cf12a57960e98d279204">CONCRETE_NULL_TEMPLATE_2_CODE</a></div><div class="ttdeci">#define CONCRETE_NULL_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)</div><div class="ttdoc">Macro for concrete null indirect structure two-template-parameter code definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00839">basic.hpp:839</a></div></div>
 </div><!-- fragment -->
 <p>Macro for abstract null indirect structure two-template-parameter code definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1811,13 +1811,13 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00924">924</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  924</span><span class="preprocessor">#define ABSTRACT_NULL_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)                   \</span></div>
-<div class="line"><span class="lineno">  925</span><span class="preprocessor">  CONCRETE_NULL_TEMPLATE_2_CODE (PTR, TT1, T1, TT2, T2);                       \</span></div>
-<div class="line"><span class="lineno">  926</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
-<div class="line"><span class="lineno">  927</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;::PTR (PTR##_rep&lt;T1, T2&gt;* rep2) : rep (rep2) {             \</span></div>
-<div class="line"><span class="lineno">  928</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  929</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00925">925</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  925</span><span class="preprocessor">#define ABSTRACT_NULL_TEMPLATE_2_CODE(PTR, TT1, T1, TT2, T2)                   \</span></div>
+<div class="line"><span class="lineno">  926</span><span class="preprocessor">  CONCRETE_NULL_TEMPLATE_2_CODE (PTR, TT1, T1, TT2, T2);                       \</span></div>
+<div class="line"><span class="lineno">  927</span><span class="preprocessor">  template &lt;TT1 T1, TT2 T2&gt;                                                    \</span></div>
+<div class="line"><span class="lineno">  928</span><span class="preprocessor">  inline PTR&lt;T1, T2&gt;::PTR (PTR##_rep&lt;T1, T2&gt;* rep2) : rep (rep2) {             \</span></div>
+<div class="line"><span class="lineno">  929</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  930</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1842,7 +1842,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a179640bd0e849d9dcce1f62b4dbc7bc6">ABSTRACT</a> (<a class="code hl_class" href="classlist.html">PTR</a>);                                                              \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a> (<a class="code hl_class" href="classlist.html">BASE</a>&amp;);                                                          \</div>
 <div class="line">  <span class="keyword">inline</span> <span class="keyword">operator</span> <a class="code hl_class" href="classlist.html">BASE</a> ()</div>
-<div class="ttc" id="abasic_8hpp_html_a179640bd0e849d9dcce1f62b4dbc7bc6"><div class="ttname"><a href="#a179640bd0e849d9dcce1f62b4dbc7bc6">ABSTRACT</a></div><div class="ttdeci">#define ABSTRACT(PTR)</div><div class="ttdoc">Macro to define an abstract pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00709">basic.hpp:709</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a179640bd0e849d9dcce1f62b4dbc7bc6"><div class="ttname"><a href="#a179640bd0e849d9dcce1f62b4dbc7bc6">ABSTRACT</a></div><div class="ttdeci">#define ABSTRACT(PTR)</div><div class="ttdoc">Macro to define an abstract pointer type.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00710">basic.hpp:710</a></div></div>
 </div><!-- fragment -->
 <p>Macro for extension of a base indirect structure with an abstract indirect structure. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1853,11 +1853,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00943">943</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  943</span><span class="preprocessor">#define EXTEND(BASE, PTR)                                                      \</span></div>
-<div class="line"><span class="lineno">  944</span><span class="preprocessor">  ABSTRACT (PTR);                                                              \</span></div>
-<div class="line"><span class="lineno">  945</span><span class="preprocessor">  inline PTR (BASE&amp;);                                                          \</span></div>
-<div class="line"><span class="lineno">  946</span><span class="preprocessor">  inline operator BASE ()</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00944">944</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  944</span><span class="preprocessor">#define EXTEND(BASE, PTR)                                                      \</span></div>
+<div class="line"><span class="lineno">  945</span><span class="preprocessor">  ABSTRACT (PTR);                                                              \</span></div>
+<div class="line"><span class="lineno">  946</span><span class="preprocessor">  inline PTR (BASE&amp;);                                                          \</span></div>
+<div class="line"><span class="lineno">  947</span><span class="preprocessor">  inline operator BASE ()</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1884,7 +1884,7 @@ Variables</h2></td></tr>
 <div class="line"><a class="code hl_class" href="classlist.html">    INC_COUNT</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>);                                                     \</div>
 <div class="line">  }                                                                            \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">PTR::operator</a> <a class="code hl_class" href="classlist.html">BASE</a> () { <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">BASE</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>); }</div>
-<div class="ttc" id="abasic_8hpp_html_a3ba5573f8419c9117021895fd81c666b"><div class="ttname"><a href="#a3ba5573f8419c9117021895fd81c666b">ABSTRACT_CODE</a></div><div class="ttdeci">#define ABSTRACT_CODE(PTR)</div><div class="ttdoc">Macro to define an abstract pointer type with code.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00718">basic.hpp:718</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a3ba5573f8419c9117021895fd81c666b"><div class="ttname"><a href="#a3ba5573f8419c9117021895fd81c666b">ABSTRACT_CODE</a></div><div class="ttdeci">#define ABSTRACT_CODE(PTR)</div><div class="ttdoc">Macro to define an abstract pointer type with code.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00719">basic.hpp:719</a></div></div>
 </div><!-- fragment -->
 <p>Macro for extension of a base indirect structure with an abstract indirect structure code implementation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1895,13 +1895,13 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00955">955</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  955</span><span class="preprocessor">#define EXTEND_CODE(BASE, PTR)                                                 \</span></div>
-<div class="line"><span class="lineno">  956</span><span class="preprocessor">  ABSTRACT_CODE (PTR);                                                         \</span></div>
-<div class="line"><span class="lineno">  957</span><span class="preprocessor">  inline PTR::PTR (BASE&amp; x) : rep (static_cast&lt;PTR##_rep*&gt; (x.rep)) {          \</span></div>
-<div class="line"><span class="lineno">  958</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
-<div class="line"><span class="lineno">  959</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  960</span><span class="preprocessor">  inline PTR::operator BASE () { return BASE (this-&gt;rep); }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00956">956</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  956</span><span class="preprocessor">#define EXTEND_CODE(BASE, PTR)                                                 \</span></div>
+<div class="line"><span class="lineno">  957</span><span class="preprocessor">  ABSTRACT_CODE (PTR);                                                         \</span></div>
+<div class="line"><span class="lineno">  958</span><span class="preprocessor">  inline PTR::PTR (BASE&amp; x) : rep (static_cast&lt;PTR##_rep*&gt; (x.rep)) {          \</span></div>
+<div class="line"><span class="lineno">  959</span><span class="preprocessor">    INC_COUNT (this-&gt;rep);                                                     \</span></div>
+<div class="line"><span class="lineno">  960</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  961</span><span class="preprocessor">  inline PTR::operator BASE () { return BASE (this-&gt;rep); }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1926,7 +1926,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a7877eaaba69f361fc39b8b2fc004410b">ABSTRACT_NULL</a> (<a class="code hl_class" href="classlist.html">PTR</a>);                                                         \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR</a> (<a class="code hl_class" href="classlist.html">BASE</a>&amp;);                                                          \</div>
 <div class="line">  <span class="keyword">inline</span> <span class="keyword">operator</span> <a class="code hl_class" href="classlist.html">BASE</a> ()</div>
-<div class="ttc" id="abasic_8hpp_html_a7877eaaba69f361fc39b8b2fc004410b"><div class="ttname"><a href="#a7877eaaba69f361fc39b8b2fc004410b">ABSTRACT_NULL</a></div><div class="ttdeci">#define ABSTRACT_NULL(PTR)</div><div class="ttdoc">Macro for abstract null indirect structure definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00869">basic.hpp:869</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a7877eaaba69f361fc39b8b2fc004410b"><div class="ttname"><a href="#a7877eaaba69f361fc39b8b2fc004410b">ABSTRACT_NULL</a></div><div class="ttdeci">#define ABSTRACT_NULL(PTR)</div><div class="ttdoc">Macro for abstract null indirect structure definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00870">basic.hpp:870</a></div></div>
 </div><!-- fragment -->
 <p>Macro for extension of a base indirect structure with a concrete null indirect structure. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1937,11 +1937,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00972">972</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  972</span><span class="preprocessor">#define EXTEND_NULL(BASE, PTR)                                                 \</span></div>
-<div class="line"><span class="lineno">  973</span><span class="preprocessor">  ABSTRACT_NULL (PTR);                                                         \</span></div>
-<div class="line"><span class="lineno">  974</span><span class="preprocessor">  inline PTR (BASE&amp;);                                                          \</span></div>
-<div class="line"><span class="lineno">  975</span><span class="preprocessor">  inline operator BASE ()</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00973">973</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  973</span><span class="preprocessor">#define EXTEND_NULL(BASE, PTR)                                                 \</span></div>
+<div class="line"><span class="lineno">  974</span><span class="preprocessor">  ABSTRACT_NULL (PTR);                                                         \</span></div>
+<div class="line"><span class="lineno">  975</span><span class="preprocessor">  inline PTR (BASE&amp;);                                                          \</span></div>
+<div class="line"><span class="lineno">  976</span><span class="preprocessor">  inline operator BASE ()</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1968,7 +1968,7 @@ Variables</h2></td></tr>
 <div class="line"><a class="code hl_class" href="classlist.html">    INC_COUNT_NULL</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>);                                                \</div>
 <div class="line">  }                                                                            \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">PTR::operator</a> <a class="code hl_class" href="classlist.html">BASE</a> () { <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">BASE</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>); }</div>
-<div class="ttc" id="abasic_8hpp_html_a250d9a6414185f6c37a9adb69793fed7"><div class="ttname"><a href="#a250d9a6414185f6c37a9adb69793fed7">ABSTRACT_NULL_CODE</a></div><div class="ttdeci">#define ABSTRACT_NULL_CODE(PTR)</div><div class="ttdoc">Macro for abstract null indirect structure code definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00877">basic.hpp:877</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a250d9a6414185f6c37a9adb69793fed7"><div class="ttname"><a href="#a250d9a6414185f6c37a9adb69793fed7">ABSTRACT_NULL_CODE</a></div><div class="ttdeci">#define ABSTRACT_NULL_CODE(PTR)</div><div class="ttdoc">Macro for abstract null indirect structure code definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00878">basic.hpp:878</a></div></div>
 </div><!-- fragment -->
 <p>Macro for extension of a base indirect structure with a concrete null indirect structure code implementation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1979,13 +1979,13 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00984">984</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  984</span><span class="preprocessor">#define EXTEND_NULL_CODE(BASE, PTR)                                            \</span></div>
-<div class="line"><span class="lineno">  985</span><span class="preprocessor">  ABSTRACT_NULL_CODE (PTR);                                                    \</span></div>
-<div class="line"><span class="lineno">  986</span><span class="preprocessor">  inline PTR::PTR (BASE&amp; x) : rep (static_cast&lt;PTR##_rep*&gt; (x.rep)) {          \</span></div>
-<div class="line"><span class="lineno">  987</span><span class="preprocessor">    INC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
-<div class="line"><span class="lineno">  988</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno">  989</span><span class="preprocessor">  inline PTR::operator BASE () { return BASE (this-&gt;rep); }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00985">985</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  985</span><span class="preprocessor">#define EXTEND_NULL_CODE(BASE, PTR)                                            \</span></div>
+<div class="line"><span class="lineno">  986</span><span class="preprocessor">  ABSTRACT_NULL_CODE (PTR);                                                    \</span></div>
+<div class="line"><span class="lineno">  987</span><span class="preprocessor">  inline PTR::PTR (BASE&amp; x) : rep (static_cast&lt;PTR##_rep*&gt; (x.rep)) {          \</span></div>
+<div class="line"><span class="lineno">  988</span><span class="preprocessor">    INC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
+<div class="line"><span class="lineno">  989</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno">  990</span><span class="preprocessor">  inline PTR::operator BASE () { return BASE (this-&gt;rep); }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2015,7 +2015,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a65a861c88afd58f673a45f92fc4add6a">ABSTRACT_NULL_TEMPLATE</a> (<a class="code hl_class" href="classlist.html">PTR</a>, T);                                             \</div>
 <div class="line">  <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR&lt;T&gt;</a> (<a class="code hl_class" href="classlist.html">BASE</a>&amp;);                                                       \</div>
 <div class="line">  <span class="keyword">inline</span> <span class="keyword">operator</span> <a class="code hl_class" href="classlist.html">BASE</a> ()</div>
-<div class="ttc" id="abasic_8hpp_html_a65a861c88afd58f673a45f92fc4add6a"><div class="ttname"><a href="#a65a861c88afd58f673a45f92fc4add6a">ABSTRACT_NULL_TEMPLATE</a></div><div class="ttdeci">#define ABSTRACT_NULL_TEMPLATE(PTR, T)</div><div class="ttdoc">Macro for abstract null indirect structure template definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00886">basic.hpp:886</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a65a861c88afd58f673a45f92fc4add6a"><div class="ttname"><a href="#a65a861c88afd58f673a45f92fc4add6a">ABSTRACT_NULL_TEMPLATE</a></div><div class="ttdeci">#define ABSTRACT_NULL_TEMPLATE(PTR, T)</div><div class="ttdoc">Macro for abstract null indirect structure template definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00887">basic.hpp:887</a></div></div>
 </div><!-- fragment -->
 <p>Macro for extension of a base indirect structure with a concrete null indirect structure with a template parameter. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2027,11 +2027,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00999">999</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  999</span><span class="preprocessor">#define EXTEND_NULL_TEMPLATE(BASE, PTR, T)                                     \</span></div>
-<div class="line"><span class="lineno"> 1000</span><span class="preprocessor">  ABSTRACT_NULL_TEMPLATE (PTR, T);                                             \</span></div>
-<div class="line"><span class="lineno"> 1001</span><span class="preprocessor">  inline PTR&lt;T&gt; (BASE&amp;);                                                       \</span></div>
-<div class="line"><span class="lineno"> 1002</span><span class="preprocessor">  inline operator BASE ()</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l01000">1000</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1000</span><span class="preprocessor">#define EXTEND_NULL_TEMPLATE(BASE, PTR, T)                                     \</span></div>
+<div class="line"><span class="lineno"> 1001</span><span class="preprocessor">  ABSTRACT_NULL_TEMPLATE (PTR, T);                                             \</span></div>
+<div class="line"><span class="lineno"> 1002</span><span class="preprocessor">  inline PTR&lt;T&gt; (BASE&amp;);                                                       \</span></div>
+<div class="line"><span class="lineno"> 1003</span><span class="preprocessor">  inline operator BASE ()</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2069,7 +2069,7 @@ Variables</h2></td></tr>
 <div class="line"><a class="code hl_class" href="classlist.html">    INC_COUNT_NULL</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>);                                                \</div>
 <div class="line">  }                                                                            \</div>
 <div class="line">  <span class="keyword">template</span> &lt;TT T&gt; <span class="keyword">inline</span> <a class="code hl_class" href="classlist.html">PTR&lt;T&gt;::operator</a> <a class="code hl_class" href="classlist.html">BASE</a> () { <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">BASE</a> (this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>); }</div>
-<div class="ttc" id="abasic_8hpp_html_a912366d06c0cac1fdff35139c0664190"><div class="ttname"><a href="#a912366d06c0cac1fdff35139c0664190">ABSTRACT_NULL_TEMPLATE_CODE</a></div><div class="ttdeci">#define ABSTRACT_NULL_TEMPLATE_CODE(PTR, TT, T)</div><div class="ttdoc">Macro for abstract null indirect structure template code definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00896">basic.hpp:896</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_a912366d06c0cac1fdff35139c0664190"><div class="ttname"><a href="#a912366d06c0cac1fdff35139c0664190">ABSTRACT_NULL_TEMPLATE_CODE</a></div><div class="ttdeci">#define ABSTRACT_NULL_TEMPLATE_CODE(PTR, TT, T)</div><div class="ttdoc">Macro for abstract null indirect structure template code definition.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00897">basic.hpp:897</a></div></div>
 </div><!-- fragment -->
 <p>Macro for extension of a base indirect structure with a concrete null indirect structure with a template parameter code implementation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2082,14 +2082,14 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l01013">1013</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1013</span><span class="preprocessor">#define EXTEND_NULL_TEMPLATE_CODE(BASE, PTR, TT, T)                            \</span></div>
-<div class="line"><span class="lineno"> 1014</span><span class="preprocessor">  ABSTRACT_NULL_TEMPLATE_CODE (PTR, TT, T);                                    \</span></div>
-<div class="line"><span class="lineno"> 1015</span><span class="preprocessor">  template &lt;TT T&gt;                                                              \</span></div>
-<div class="line"><span class="lineno"> 1016</span><span class="preprocessor">  inline PTR&lt;T&gt;::PTR (BASE&amp; x) : rep (static_cast&lt;PTR##_rep&lt;T&gt;*&gt; (x.rep)) {    \</span></div>
-<div class="line"><span class="lineno"> 1017</span><span class="preprocessor">    INC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
-<div class="line"><span class="lineno"> 1018</span><span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><span class="lineno"> 1019</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::operator BASE () { return BASE (this-&gt;rep); }</span></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l01014">1014</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1014</span><span class="preprocessor">#define EXTEND_NULL_TEMPLATE_CODE(BASE, PTR, TT, T)                            \</span></div>
+<div class="line"><span class="lineno"> 1015</span><span class="preprocessor">  ABSTRACT_NULL_TEMPLATE_CODE (PTR, TT, T);                                    \</span></div>
+<div class="line"><span class="lineno"> 1016</span><span class="preprocessor">  template &lt;TT T&gt;                                                              \</span></div>
+<div class="line"><span class="lineno"> 1017</span><span class="preprocessor">  inline PTR&lt;T&gt;::PTR (BASE&amp; x) : rep (static_cast&lt;PTR##_rep&lt;T&gt;*&gt; (x.rep)) {    \</span></div>
+<div class="line"><span class="lineno"> 1018</span><span class="preprocessor">    INC_COUNT_NULL (this-&gt;rep);                                                \</span></div>
+<div class="line"><span class="lineno"> 1019</span><span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><span class="lineno"> 1020</span><span class="preprocessor">  template &lt;TT T&gt; inline PTR&lt;T&gt;::operator BASE () { return BASE (this-&gt;rep); }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2275,12 +2275,12 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4" name="aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"></a>LF&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00372">372</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  372</span>{ <a class="code hl_enumvalue" href="#aeb608c7a0e6ed0b39e11d99b3130d242aaae81a0b1ffa6ba389c5a8398774bb69">INDENT</a>, <a class="code hl_enumvalue" href="#aeb608c7a0e6ed0b39e11d99b3130d242a5ba15b0a1ceaf400e3b265c8ff701316">UNINDENT</a>, <a class="code hl_enumvalue" href="#aeb608c7a0e6ed0b39e11d99b3130d242a88d425b54c630fffd0e35379e037c38f">HRULE</a>, <a class="code hl_enumvalue" href="#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a> };</div>
-<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a5ba15b0a1ceaf400e3b265c8ff701316"><div class="ttname"><a href="#aeb608c7a0e6ed0b39e11d99b3130d242a5ba15b0a1ceaf400e3b265c8ff701316">UNINDENT</a></div><div class="ttdeci">@ UNINDENT</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00372">basic.hpp:372</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00372">basic.hpp:372</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a88d425b54c630fffd0e35379e037c38f"><div class="ttname"><a href="#aeb608c7a0e6ed0b39e11d99b3130d242a88d425b54c630fffd0e35379e037c38f">HRULE</a></div><div class="ttdeci">@ HRULE</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00372">basic.hpp:372</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242aaae81a0b1ffa6ba389c5a8398774bb69"><div class="ttname"><a href="#aeb608c7a0e6ed0b39e11d99b3130d242aaae81a0b1ffa6ba389c5a8398774bb69">INDENT</a></div><div class="ttdeci">@ INDENT</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00372">basic.hpp:372</a></div></div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00373">373</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  373</span>{ <a class="code hl_enumvalue" href="#aeb608c7a0e6ed0b39e11d99b3130d242aaae81a0b1ffa6ba389c5a8398774bb69">INDENT</a>, <a class="code hl_enumvalue" href="#aeb608c7a0e6ed0b39e11d99b3130d242a5ba15b0a1ceaf400e3b265c8ff701316">UNINDENT</a>, <a class="code hl_enumvalue" href="#aeb608c7a0e6ed0b39e11d99b3130d242a88d425b54c630fffd0e35379e037c38f">HRULE</a>, <a class="code hl_enumvalue" href="#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a> };</div>
+<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a5ba15b0a1ceaf400e3b265c8ff701316"><div class="ttname"><a href="#aeb608c7a0e6ed0b39e11d99b3130d242a5ba15b0a1ceaf400e3b265c8ff701316">UNINDENT</a></div><div class="ttdeci">@ UNINDENT</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00373">basic.hpp:373</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00373">basic.hpp:373</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a88d425b54c630fffd0e35379e037c38f"><div class="ttname"><a href="#aeb608c7a0e6ed0b39e11d99b3130d242a88d425b54c630fffd0e35379e037c38f">HRULE</a></div><div class="ttdeci">@ HRULE</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00373">basic.hpp:373</a></div></div>
+<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242aaae81a0b1ffa6ba389c5a8398774bb69"><div class="ttname"><a href="#aeb608c7a0e6ed0b39e11d99b3130d242aaae81a0b1ffa6ba389c5a8398774bb69">INDENT</a></div><div class="ttdeci">@ INDENT</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00373">basic.hpp:373</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2417,11 +2417,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The smaller of the two integers. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00159">159</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                 {</div>
-<div class="line"><span class="lineno">  160</span>  <span class="keywordflow">if</span> (i &lt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  161</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
-<div class="line"><span class="lineno">  162</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00160">160</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>                 {</div>
+<div class="line"><span class="lineno">  161</span>  <span class="keywordflow">if</span> (i &lt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
+<div class="line"><span class="lineno">  163</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2462,11 +2462,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The larger of the two integers. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00172">172</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                 {</div>
-<div class="line"><span class="lineno">  173</span>  <span class="keywordflow">if</span> (i &gt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  174</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
-<div class="line"><span class="lineno">  175</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00173">173</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>                 {</div>
+<div class="line"><span class="lineno">  174</span>  <span class="keywordflow">if</span> (i &gt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  175</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
+<div class="line"><span class="lineno">  176</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2507,11 +2507,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The smaller of the two integers. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00185">185</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                 {</div>
-<div class="line"><span class="lineno">  186</span>  <span class="keywordflow">if</span> (i &lt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  187</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
-<div class="line"><span class="lineno">  188</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00186">186</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>                 {</div>
+<div class="line"><span class="lineno">  187</span>  <span class="keywordflow">if</span> (i &lt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  188</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
+<div class="line"><span class="lineno">  189</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2552,11 +2552,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The larger of the two integers. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00198">198</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>                 {</div>
-<div class="line"><span class="lineno">  199</span>  <span class="keywordflow">if</span> (i &gt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  200</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
-<div class="line"><span class="lineno">  201</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00199">199</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>                 {</div>
+<div class="line"><span class="lineno">  200</span>  <span class="keywordflow">if</span> (i &gt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  201</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
+<div class="line"><span class="lineno">  202</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2597,11 +2597,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The smaller of the two doubles. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00211">211</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  211</span>                         {</div>
-<div class="line"><span class="lineno">  212</span>  <span class="keywordflow">if</span> (i &lt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  213</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
-<div class="line"><span class="lineno">  214</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00212">212</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>                         {</div>
+<div class="line"><span class="lineno">  213</span>  <span class="keywordflow">if</span> (i &lt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  214</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
+<div class="line"><span class="lineno">  215</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2642,11 +2642,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The larger of the two doubles. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00224">224</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  224</span>                         {</div>
-<div class="line"><span class="lineno">  225</span>  <span class="keywordflow">if</span> (i &gt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
-<div class="line"><span class="lineno">  227</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00225">225</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>                         {</div>
+<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">if</span> (i &gt; <a class="code hl_class" href="classlist.html">j</a>) <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  227</span>  <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">j</a>;</div>
+<div class="line"><span class="lineno">  228</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2682,10 +2682,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The hashed value of the integer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00236">236</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  236</span>             {</div>
-<div class="line"><span class="lineno">  237</span>  <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  238</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00237">237</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  237</span>             {</div>
+<div class="line"><span class="lineno">  238</span>  <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  239</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2721,10 +2721,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The hashed value of the long integer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00247">247</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  247</span>                  {</div>
-<div class="line"><span class="lineno">  248</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) i;</div>
-<div class="line"><span class="lineno">  249</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00248">248</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>                  {</div>
+<div class="line"><span class="lineno">  249</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) i;</div>
+<div class="line"><span class="lineno">  250</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2760,10 +2760,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The hashed value of the double integer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00258">258</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>            {</div>
-<div class="line"><span class="lineno">  259</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) i;</div>
-<div class="line"><span class="lineno">  260</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00259">259</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  259</span>            {</div>
+<div class="line"><span class="lineno">  260</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) i;</div>
+<div class="line"><span class="lineno">  261</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2799,10 +2799,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The hashed value of the unsigned integer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00269">269</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  269</span>                      {</div>
-<div class="line"><span class="lineno">  270</span>  <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  271</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00270">270</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                      {</div>
+<div class="line"><span class="lineno">  271</span>  <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  272</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2838,10 +2838,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The hashed value of the unsigned long integer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00280">280</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  280</span>                           {</div>
-<div class="line"><span class="lineno">  281</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) i;</div>
-<div class="line"><span class="lineno">  282</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00281">281</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>                           {</div>
+<div class="line"><span class="lineno">  282</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) i;</div>
+<div class="line"><span class="lineno">  283</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2877,10 +2877,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The hashed value of the double number. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00291">291</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  291</span>            {</div>
-<div class="line"><span class="lineno">  292</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) i;</div>
-<div class="line"><span class="lineno">  293</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00292">292</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  292</span>            {</div>
+<div class="line"><span class="lineno">  293</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) i;</div>
+<div class="line"><span class="lineno">  294</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2916,15 +2916,15 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The hashed value of the float number. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00302">302</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  302</span>               {</div>
-<div class="line"><span class="lineno">  303</span>  <span class="keyword">union </span>{</div>
-<div class="line"><span class="lineno">  304</span>    <span class="keywordtype">int</span>   n;</div>
-<div class="line"><span class="lineno">  305</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="classlist.html">d</a>;</div>
-<div class="line"><span class="lineno">  306</span>  } <a class="code hl_class" href="classlist.html">u</a>;</div>
-<div class="line"><span class="lineno">  307</span>  <a class="code hl_class" href="classlist.html">u</a>.d= x;</div>
-<div class="line"><span class="lineno">  308</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">u</a>.n &amp; 0xffffffff;</div>
-<div class="line"><span class="lineno">  309</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00303">303</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  303</span>               {</div>
+<div class="line"><span class="lineno">  304</span>  <span class="keyword">union </span>{</div>
+<div class="line"><span class="lineno">  305</span>    <span class="keywordtype">int</span>   n;</div>
+<div class="line"><span class="lineno">  306</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="classlist.html">d</a>;</div>
+<div class="line"><span class="lineno">  307</span>  } <a class="code hl_class" href="classlist.html">u</a>;</div>
+<div class="line"><span class="lineno">  308</span>  <a class="code hl_class" href="classlist.html">u</a>.d= x;</div>
+<div class="line"><span class="lineno">  309</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">u</a>.n &amp; 0xffffffff;</div>
+<div class="line"><span class="lineno">  310</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2960,15 +2960,15 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The hashed value of the double number. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00318">318</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>                {</div>
-<div class="line"><span class="lineno">  319</span>  <span class="keyword">union </span>{</div>
-<div class="line"><span class="lineno">  320</span>    <a class="code hl_typedef" href="#a87af088da4ecabcbe91dc0dd5ee3a139">DI</a>     n;</div>
-<div class="line"><span class="lineno">  321</span>    <span class="keywordtype">double</span> <a class="code hl_class" href="classlist.html">d</a>;</div>
-<div class="line"><span class="lineno">  322</span>  } <a class="code hl_class" href="classlist.html">u</a>;</div>
-<div class="line"><span class="lineno">  323</span>  <a class="code hl_class" href="classlist.html">u</a>.d= x;</div>
-<div class="line"><span class="lineno">  324</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) (<a class="code hl_class" href="classlist.html">u</a>.n ^ (<a class="code hl_class" href="classlist.html">u</a>.n &gt;&gt; 32));</div>
-<div class="line"><span class="lineno">  325</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00319">319</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  319</span>                {</div>
+<div class="line"><span class="lineno">  320</span>  <span class="keyword">union </span>{</div>
+<div class="line"><span class="lineno">  321</span>    <a class="code hl_typedef" href="#a87af088da4ecabcbe91dc0dd5ee3a139">DI</a>     n;</div>
+<div class="line"><span class="lineno">  322</span>    <span class="keywordtype">double</span> <a class="code hl_class" href="classlist.html">d</a>;</div>
+<div class="line"><span class="lineno">  323</span>  } <a class="code hl_class" href="classlist.html">u</a>;</div>
+<div class="line"><span class="lineno">  324</span>  <a class="code hl_class" href="classlist.html">u</a>.d= x;</div>
+<div class="line"><span class="lineno">  325</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) (<a class="code hl_class" href="classlist.html">u</a>.n ^ (<a class="code hl_class" href="classlist.html">u</a>.n &gt;&gt; 32));</div>
+<div class="line"><span class="lineno">  326</span>}</div>
 <div class="ttc" id="abasic_8hpp_html_a87af088da4ecabcbe91dc0dd5ee3a139"><div class="ttname"><a href="#a87af088da4ecabcbe91dc0dd5ee3a139">DI</a></div><div class="ttdeci">long long int DI</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00032">basic.hpp:32</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -3005,10 +3005,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A copy of the integer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00334">334</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  334</span>             {</div>
-<div class="line"><span class="lineno">  335</span>  <span class="keywordflow">return</span> x;</div>
-<div class="line"><span class="lineno">  336</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00335">335</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  335</span>             {</div>
+<div class="line"><span class="lineno">  336</span>  <span class="keywordflow">return</span> x;</div>
+<div class="line"><span class="lineno">  337</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3044,10 +3044,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted signed integer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00346">346</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  346</span>                  {</div>
-<div class="line"><span class="lineno">  347</span>  <span class="keywordflow">return</span> (<a class="code hl_typedef" href="#ae5f8c752bdc5c81c9ef12931088c2305">SI</a>) <a class="code hl_class" href="classlist.html">floor</a> (x + 0.5);</div>
-<div class="line"><span class="lineno">  348</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00347">347</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>                  {</div>
+<div class="line"><span class="lineno">  348</span>  <span class="keywordflow">return</span> (<a class="code hl_typedef" href="#ae5f8c752bdc5c81c9ef12931088c2305">SI</a>) <a class="code hl_class" href="classlist.html">floor</a> (x + 0.5);</div>
+<div class="line"><span class="lineno">  349</span>}</div>
 <div class="ttc" id="abasic_8hpp_html_ae5f8c752bdc5c81c9ef12931088c2305"><div class="ttname"><a href="#ae5f8c752bdc5c81c9ef12931088c2305">SI</a></div><div class="ttdeci">int SI</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00026">basic.hpp:26</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -3084,10 +3084,10 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The rounded double. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00357">357</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  357</span>                    {</div>
-<div class="line"><span class="lineno">  358</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">floor</a> (x + 0.5);</div>
-<div class="line"><span class="lineno">  359</span>}</div>
+<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00358">358</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  358</span>                    {</div>
+<div class="line"><span class="lineno">  359</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">floor</a> (x + 0.5);</div>
+<div class="line"><span class="lineno">  360</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
