@@ -11,7 +11,7 @@
 namespace lolly {
 namespace data {
 
-static inline int
+static inline constexpr int
 round_length (int n) {
   n= (n + 3) & (0xfffffffc);
   if (n < 24) return n;
@@ -23,25 +23,37 @@ round_length (int n) {
 
 template <class T>
 lolly_string_rep<T>::lolly_string_rep (int n2)
-    : n (n2), a ((n == 0) ? ((T*) NULL) : tm_new_array<T> (round_length (n))) {}
+    : n (n2), a_size (round_length (n)),
+      a ((n == 0) ? ((T*) NULL) : tm_new_array<T> (a_size)) {}
 
 template <class T>
 void
-lolly_string_rep<T>::resize (int m) {
-  int nn= round_length (n);
-  int mm= round_length (m);
-  if (mm != nn) {
-    if (mm != 0) {
-      if (nn != 0) {
-        a= tm_resize_array<T> (mm, a);
-      }
-      else {
-        a= tm_new_array<T> (mm);
-      }
+lolly_string_rep<T>::resize (int new_n) {
+  reserve (new_n);
+  n= new_n;
+}
+
+template <class T>
+void
+lolly_string_rep<T>::reserve (int new_n) {
+  int old_size= a_size;
+  if (new_n != 0) {
+    if (old_size == 0) {
+      a_size= round_length (new_n);
+      a     = tm_new_array<T> (a_size);
     }
-    else if (nn != 0) tm_delete_array (a);
+    else if (old_size < new_n) {
+      a_size= round_length (new_n);
+      a     = tm_resize_array<T> (a_size, a);
+    }
   }
-  n= m;
+  else {
+    if (old_size != 0) {
+      tm_delete_array (a);
+      a     = NULL;
+      a_size= 0;
+    };
+  }
 }
 
 template <class T>

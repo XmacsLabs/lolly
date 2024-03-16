@@ -69,3 +69,14 @@ TEST_CASE ("test append") {
   str << string_u16 (u"yz");
   CHECK_EQ (str == string_u16 (u"xyz"), true);
 }
+
+TEST_CASE ("test reserve along with append") {
+  auto str= string_u16 ();
+  str->reserve (6);
+  str << u'x';
+  CHECK_EQ (str == string_u16 (u"x"), true);
+  str << string_u16 (u"yz");
+  CHECK_EQ (str == string_u16 (u"xyz"), true);
+  str << string_u16 (u": larger than reserved space");
+  CHECK_EQ (str == string_u16 (u"xyz: larger than reserved space"), true);
+}

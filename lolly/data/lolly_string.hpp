@@ -19,15 +19,17 @@ template <typename T> class lolly_string;
 template <typename T> int N (lolly_string<T> a);
 template <typename T> class lolly_string_rep : concrete_struct {
   int n;
+  int a_size;
   T*  a;
 
 public:
-  inline lolly_string_rep () : n (0), a (NULL) {}
+  inline lolly_string_rep () : n (0), a_size (0), a (NULL) {}
   lolly_string_rep (int n);
   inline ~lolly_string_rep () {
     if (n != 0) tm_delete_array (a);
   }
   void resize (int n);
+  void reserve (int n);
 
   friend class lolly_string<T>;
   friend int N<> (lolly_string<T> a);
