@@ -329,7 +329,7 @@ url
 url_pwd () {
   char path[TB_PATH_MAXN];
   if (tb_directory_current (path, TB_PATH_MAXN)) {
-    return url_system (as_string(path));
+    return url_system (as_string (path));
   }
   else {
     TM_FAILED ("FAILED to get pwd");
