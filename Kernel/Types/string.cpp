@@ -91,95 +91,83 @@ as_string_bool (bool f) {
   else return string ("false");
 }
 
-using c_string_view= lolly::data::lolly_string_view<char>;
+using string_view= lolly::data::lolly_string_view<char>;
 
 string
 as_string (int16_t i) {
-  string res (6);
-  char*  buffer = res.buffer ();
+  char buffer[6];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 6, i);
   if (ec == std::errc ()) {
-    res->resize (ptr - buffer);
+    return string ();
   }
   else {
-    res->resize (0);
+    return string (string_view (ptr - buffer, buffer));
   }
-  return res;
 }
 
 string
 as_string (int32_t i) {
-  string res (11);
-  char*  buffer = res.buffer ();
+  char buffer[11];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 11, i);
   if (ec == std::errc ()) {
-    res->resize (ptr - buffer);
+    return string ();
   }
   else {
-    res->resize (0);
+    return string (string_view (ptr - buffer, buffer));
   }
-  return res;
 }
 
 string
 as_string (int64_t i) {
-  string res (20);
-  char*  buffer = res.buffer ();
+  char buffer[20];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 20, i);
   if (ec == std::errc ()) {
-    res->resize (ptr - buffer);
+    return string ();
   }
   else {
-    res->resize (0);
+    return string (string_view (ptr - buffer, buffer));
   }
-  return res;
 }
 
 string
 as_string (unsigned int i) {
-  string res (64);
-  char*  buffer = res.buffer ();
-  auto [ptr, ec]= std::to_chars (buffer, buffer + 64, i);
+  char buffer[32];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 32, i);
   if (ec == std::errc ()) {
-    res->resize (ptr - buffer);
+    return string ();
   }
   else {
-    res->resize (0);
+    return string (string_view (ptr - buffer, buffer));
   }
-  return res;
 }
 
 string
 as_string (unsigned long int i) {
-  string res (64);
-  char*  buffer = res.buffer ();
-  auto [ptr, ec]= std::to_chars (buffer, buffer + 64, i);
+  char buffer[32];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 32, i);
   if (ec == std::errc ()) {
-    res->resize (ptr - buffer);
+    return string ();
   }
   else {
-    res->resize (0);
+    return string (string_view (ptr - buffer, buffer));
   }
-  return res;
 }
 
 string
 as_string (double x) {
-  string res (64);
-  char*  buffer = res.buffer ();
-  auto [ptr, ec]= std::to_chars (buffer, buffer + 64, x);
+  char buffer[64];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 32, x);
   if (ec == std::errc ()) {
-    res->resize (ptr - buffer);
+    return string ();
   }
   else {
-    res->resize (0);
+    return string (string_view (ptr - buffer, buffer));
   }
-  return res;
 }
 
 string
 as_string (const char* s) {
-  return string (c_string_view (std::strlen (s), s));
+  return string (string_view (std::strlen (s), s));
 }
 
 bool
@@ -256,5 +244,4 @@ is_id (string s) {
   return true;
 }
 
-c_string::c_string (string s)
-    : rep (tm_new<c_string_rep> (as_charp (s))) {}
+c_string::c_string (string s) : rep (tm_new<c_string_rep> (as_charp (s))) {}
