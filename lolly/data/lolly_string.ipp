@@ -29,6 +29,30 @@ lolly_string_rep<T>::lolly_string_rep (int n2)
 template <class T>
 void
 lolly_string_rep<T>::resize (int new_n) {
+  int old_size= a_size, new_size= round_length (new_n);
+  if (new_n != 0) {
+    if (old_size == 0) {
+      a_size= new_size;
+      a     = tm_new_array<T> (a_size);
+    }
+    else if (old_size != new_size) {
+      a_size= new_size;
+      a     = tm_resize_array<T> (a_size, a);
+    }
+  }
+  else {
+    if (old_size != 0) {
+      tm_delete_array (a);
+      a     = NULL;
+      a_size= 0;
+    };
+  }
+  n= new_n;
+}
+
+template <class T>
+void
+lolly_string_rep<T>::expand (int new_n) {
   reserve (new_n);
   n= new_n;
 }
@@ -146,7 +170,7 @@ template <typename T>
 lolly_string<T>&
 operator<< (lolly_string<T>& a, T ch) {
   int i, na= N (a);
-  a->resize (na + 1);
+  a->expand (na + 1);
   a[na]= ch;
   return a;
 };
@@ -155,7 +179,7 @@ template <typename T>
 inline lolly_string<T>&
 operator<< (lolly_string<T>& a, lolly_string<T> b) {
   int i, na= N (a), nb= N (b);
-  a->resize (na + nb);
+  a->expand (na + nb);
   for (i= 0; i < nb; i++)
     a[i + na]= b[i];
   return a;
@@ -165,7 +189,7 @@ template <typename T>
 inline lolly_string<T>&
 operator<< (lolly_string<T>& a, const lolly_string_view<T>& b) {
   int i, na= N (a);
-  a->resize (na + b.N);
+  a->expand (na + b.N);
   for (i= 0; i < b.N; i++)
     a[i + na]= b.a[i];
   return a;
@@ -176,7 +200,7 @@ inline lolly_string<T>&
 operator<< (lolly_string<T>& a, const T (&b)[Nb]) {
   int           i, na= N (a);
   constexpr int nb= Nb - 1;
-  a->resize (na + nb);
+  a->expand (na + nb);
   for (i= 0; i < nb; i++)
     a[i + na]= b[i];
   return a;
