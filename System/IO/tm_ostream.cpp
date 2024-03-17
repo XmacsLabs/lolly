@@ -12,6 +12,7 @@
 #include "tm_ostream.hpp"
 #include "fast_alloc.hpp"
 #include "string.hpp"
+#include <string.h>
 
 #if defined(OS_WIN) || defined(OS_MINGW)
 #include <windows.h>
