@@ -22,7 +22,7 @@
 namespace lolly {
 namespace io {
 
-const char* HTTP_USER_AGENT= "User-Agent";
+const string HTTP_USER_AGENT ("User-Agent");
 
 template <typename T>
 inline http_tree
@@ -59,7 +59,7 @@ response_to_tree (cpr::Response r, string url) {
       blackbox_tree<long> (http_label::STATUS_CODE, r.status_code));
   http_response_set (
       ret, TEXT,
-      blackbox_tree<string> (http_label::TEXT, string (r.text.c_str ())));
+      blackbox_tree<string> (http_label::TEXT, as_string (r.text.c_str ())));
   http_response_set (ret, URL,
                      blackbox_tree<string> (http_label::URL, string (url)));
   http_response_set (ret, ELAPSED,
@@ -67,8 +67,8 @@ response_to_tree (cpr::Response r, string url) {
 
   auto hmap= hashmap<string, string> ();
   for (auto i= r.header.begin (); i != r.header.end (); i++) {
-    string key  = locase_all (string (i->first.c_str ()));
-    string value= string (i->second.c_str ());
+    string key  = locase_all (as_string (i->first.c_str ()));
+    string value= as_string (i->second.c_str ());
     hmap (key)  = value;
   }
   http_tree header=

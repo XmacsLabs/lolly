@@ -8,6 +8,7 @@
 
 #pragma once
 #include "lolly_string.hpp"
+#include "minmax.hpp"
 namespace lolly {
 namespace data {
 
@@ -105,8 +106,8 @@ template <typename T>
 lolly_string<T>
 copy (lolly_string<T> a) {
   int    i, n= N (a);
-  string r (a);
-  for (i= 0; i < a; i++)
+  string r (n);
+  for (i= 0; i < n; i++)
     r[i]= a[i];
   return r;
 };
@@ -119,15 +120,6 @@ copy (const T a[N]) {
   for (i= 0; i < N; i++)
     r[i]= a[i];
   return r;
-};
-
-tm_ostream&
-operator<< (tm_ostream& out, lolly_string_view<char> a) {
-  int i, n= a.N;
-  if (n == 0) return out;
-  for (i= 0; i < n; i++)
-    out << a.a[i];
-  return out;
 };
 
 template <typename T>

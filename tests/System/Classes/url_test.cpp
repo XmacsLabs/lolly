@@ -173,8 +173,8 @@ TEST_CASE ("as_string") {
   url file_env_lua = url_system ("file:///$TEST_PWD/xmake.lua");
   url local_env_lua= url_system ("local:$TEST_PWD/xmake.lua");
   url dirs         = url ("Data") | url ("Kernel") | url ("Plugins");
-  string_eq (as_string (dirs), string ("Data") * URL_SEPARATOR * "Kernel" *
-                                   URL_SEPARATOR * "Plugins");
+  string_eq (as_string (dirs), string ("Data") * string(URL_SEPARATOR) * "Kernel" *
+                                   string(URL_SEPARATOR) * "Plugins");
 
   SUBCASE ("is_atomic") {
     string_eq (as_string (url_here ()), string ("."));
@@ -184,7 +184,7 @@ TEST_CASE ("as_string") {
 
   SUBCASE ("tree with empty string") {
     string_eq (as_string (url ("")), "");
-    string_eq (as_string (url ("a") * url ("")), string ("a") * URL_CONCATER);
+    string_eq (as_string (url ("a") * url ("")), string ("a") * string(URL_CONCATER));
   }
 
 #if defined(OS_MINGW) || defined(OS_WIN)

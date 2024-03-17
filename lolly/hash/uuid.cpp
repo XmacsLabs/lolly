@@ -10,6 +10,7 @@
  ******************************************************************************/
 
 #include "uuid.hpp"
+#include "basic.hpp"
 
 #include <tbox/tbox.h>
 
@@ -22,7 +23,7 @@ uuid_make () {
   if (ret == NULL) {
     TM_FAILED ("Failed to generate UUID");
   }
-  return string (ret);
+  return as_string (ret);
 }
 } // namespace hash
 } // namespace lolly

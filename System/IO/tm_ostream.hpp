@@ -13,8 +13,9 @@
 #define OUT_STREAM_HPP
 
 // #include "url.hpp"
+#include "string.hpp"
 #include <cstdio>
-class string;
+#include <cstdlib>
 class tm_ostream;
 
 class tm_ostream_rep {
@@ -74,6 +75,8 @@ public:
   tm_ostream& operator<< (double);
   tm_ostream& operator<< (long double);
   tm_ostream& operator<< (const char*);
+  tm_ostream& operator<< (lolly::data::lolly_string_view<char> a);
+  tm_ostream& operator<< (string a);
 };
 
 extern tm_ostream& cout;

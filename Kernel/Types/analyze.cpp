@@ -493,7 +493,7 @@ escape_spaces (string s) {
   int    i, n= N (s);
   string r;
   for (i= 0; i < n; i++) {
-    unsigned char c= (unsigned char) s[i];
+    char c= s[i];
     if (c == ' ') r << '\\';
     r << c;
   }
@@ -524,7 +524,7 @@ unescape_guile (string s) {
       else if (i + 3 < n && s[i + 1] == 'x' && is_hex_digit (s[i + 2]) &&
                is_hex_digit (s[i + 3])) {
         string e= s (i + 2, i + 4);
-        r << (unsigned char) lolly::data::from_hex (e);
+        r << (char) lolly::data::from_hex (e);
         i+= 3;
       }
       else r << s[i];
@@ -574,7 +574,7 @@ starts (string s, const string what) {
 
 bool
 ends (string s, const char* what) {
-  string r (what);
+  string r= as_string (what);
   if (N (r) > N (s)) return false;
   return s (N (s) - N (r), N (s)) == r;
 }
@@ -950,12 +950,12 @@ tokenize (string s, string sep) {
   array<string> a;
   for (int i= 0; i < N (s);)
     if (test (s, i, sep)) {
-      a << s (start, i);
+      a << string (s (start, i));
       i+= N (sep);
       start= i;
     }
     else i++;
-  a << s (start, N (s));
+  a << string (s (start, N (s)));
   return a;
 }
 

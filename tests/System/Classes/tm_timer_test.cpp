@@ -68,7 +68,7 @@ to_zero (tm_ostream& out) {
       current++;
     }
   }
-  return (char*) ans;
+  return as_string (ans);
 }
 
 TEST_MEMORY_LEAK_INIT

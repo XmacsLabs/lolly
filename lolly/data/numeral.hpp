@@ -12,6 +12,7 @@
 #pragma once
 
 #include "string.hpp"
+#include "basic.hpp"
 #include <stdint.h>
 
 namespace lolly {

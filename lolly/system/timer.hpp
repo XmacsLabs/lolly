@@ -12,6 +12,7 @@
 #pragma once
 
 #include "string.hpp"
+#include "tm_ostream.hpp"
 #include <stdint.h>
 
 namespace lolly {

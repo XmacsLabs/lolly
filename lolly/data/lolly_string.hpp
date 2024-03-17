@@ -8,7 +8,8 @@
 
 #pragma once
 
-#include "basic.hpp"
+#include "classdef.hpp"
+#include "fast_alloc.hpp"
 
 namespace lolly {
 namespace data {
@@ -77,7 +78,7 @@ public:
    */
   template <size_t N_>
   constexpr lolly_string_view (const T null_end_str[N_])
-      : N (N_), a (null_end_str){};
+      : N (N_ - 1), a (null_end_str){};
   /**
    * empty view is not allowed.
    */
@@ -94,8 +95,6 @@ inline int
 N (lolly_string<T> a) {
   return a->n;
 }
-
-tm_ostream& operator<< (tm_ostream& out, lolly_string_view<char> a);
 
 template <typename T> lolly_string<T> copy (const lolly_string_view<T>& a);
 template <typename T> lolly_string<T> copy (lolly_string<T> a);

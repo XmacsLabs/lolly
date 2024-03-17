@@ -12,57 +12,11 @@
 
 #ifndef STRING_H
 #define STRING_H
-#include "basic.hpp"
+
+#include "lolly/data/lolly_string.hpp"
 #include <stdint.h>
 
-class string;
-class string_rep : concrete_struct {
-  int   n;
-  char* a;
-
-public:
-  inline string_rep () : n (0), a (NULL) {}
-  string_rep (int n);
-  inline ~string_rep () {
-    if (n != 0) tm_delete_array (a);
-  }
-  void resize (int n);
-
-  friend class string;
-  friend inline int N (string a);
-};
-
-class string {
-  CONCRETE (string);
-  inline string () : rep (tm_new<string_rep> ()) {}
-  inline string (int n) : rep (tm_new<string_rep> (n)) {}
-  string (char c);
-  string (char c, int n);
-  string (const char* s);
-  string (const char* s, int n);
-  inline char& operator[] (int i) { return rep->a[i]; }
-  bool         operator== (const char* s);
-  bool         operator!= (const char* s);
-  bool         operator== (string s);
-  bool         operator!= (string s);
-  string       operator() (int start, int end);
-};
-CONCRETE_CODE (string);
-
-extern inline int
-N (string a) {
-  return a->n;
-}
-string      copy (string a);
-tm_ostream& operator<< (tm_ostream& out, string a);
-string&     operator<< (string& a, char);
-string&     operator<< (string& a, string b);
-string      operator* (const char* a, string b);
-string      operator* (string a, string b);
-string      operator* (string a, const char* b);
-bool        operator< (string a, string b);
-bool        operator<= (string a, string b);
-int         hash (string s);
+using lolly::data::string;
 
 bool     as_bool (string s);
 int      as_int (string s);
@@ -86,10 +40,12 @@ bool     is_charp (string s);
 bool is_quoted (string s);
 bool is_id (string s);
 
-/******************************************************************************
- * C-style strings with automatic memory management
- ******************************************************************************/
-
+/**
+ * @brief C-style strings with automatic memory management. NUL is appended to
+ * the end of string
+ *
+ * @note Use this interface instead of as_charp whenever possible.
+ */
 class c_string;
 class c_string_rep : concrete_struct {
   char* value;
@@ -115,7 +71,7 @@ public:
   inline c_string () : rep (tm_new<c_string_rep> ()) {}
   inline c_string (int len)
       : rep (tm_new<c_string_rep> (tm_new_array<char> (len))) {}
-  inline c_string (string s) : rep (tm_new<c_string_rep> (as_charp (s))) {}
+  c_string (string s);
   inline operator char* () const { return rep->value; }
 };
 CONCRETE_CODE (c_string);
