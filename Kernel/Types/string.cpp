@@ -168,7 +168,7 @@ as_string (double x) {
 
 string
 as_string (const char* s) {
-  return string (string_view (std::strlen (s), s));
+  return string (string_view (strlen (s), s));
 }
 
 bool
