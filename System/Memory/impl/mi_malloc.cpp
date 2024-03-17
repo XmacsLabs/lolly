@@ -10,8 +10,8 @@
  ******************************************************************************/
 
 #include "assert.h"
-#include "basic.hpp"
 #include "fast_alloc.hpp"
+#include "tm_ostream.hpp"
 #include <errno.h>
 #include <mimalloc.h>
 
