@@ -1,6 +1,6 @@
-/** \file basic.hpp
+/** \file minmax.hpp
  *  \copyright GPLv3
- *  \details defines basic types and macros used throughout the kernel.
+ *  \details defines basic type aliases and min/max function for these types.
  *  \author Joris van der Hoeven
  *  \date   1999
  */
