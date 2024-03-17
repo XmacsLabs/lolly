@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <string>
+#include <system_error>
 
 /******************************************************************************
  * Conversion routines
@@ -98,10 +99,10 @@ as_string (int16_t i) {
   char buffer[6];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 6, i);
   if (ec == std::errc ()) {
-    return string ();
+    return string (string_view (ptr - buffer, buffer));
   }
   else {
-    return string (string_view (ptr - buffer, buffer));
+    return string ();
   }
 }
 
@@ -110,10 +111,10 @@ as_string (int32_t i) {
   char buffer[11];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 11, i);
   if (ec == std::errc ()) {
-    return string ();
+    return string (string_view (ptr - buffer, buffer));
   }
   else {
-    return string (string_view (ptr - buffer, buffer));
+    return string ();
   }
 }
 
@@ -122,10 +123,10 @@ as_string (int64_t i) {
   char buffer[20];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 20, i);
   if (ec == std::errc ()) {
-    return string ();
+    return string (string_view (ptr - buffer, buffer));
   }
   else {
-    return string (string_view (ptr - buffer, buffer));
+    return string ();
   }
 }
 
@@ -134,10 +135,10 @@ as_string (unsigned int i) {
   char buffer[32];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 32, i);
   if (ec == std::errc ()) {
-    return string ();
+    return string (string_view (ptr - buffer, buffer));
   }
   else {
-    return string (string_view (ptr - buffer, buffer));
+    return string ();
   }
 }
 
@@ -146,10 +147,10 @@ as_string (unsigned long int i) {
   char buffer[32];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 32, i);
   if (ec == std::errc ()) {
-    return string ();
+    return string (string_view (ptr - buffer, buffer));
   }
   else {
-    return string (string_view (ptr - buffer, buffer));
+    return string ();
   }
 }
 
@@ -158,10 +159,10 @@ as_string (double x) {
   char buffer[64];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 32, x);
   if (ec == std::errc ()) {
-    return string ();
+    return string (string_view (ptr - buffer, buffer));
   }
   else {
-    return string (string_view (ptr - buffer, buffer));
+    return string ();
   }
 }
 
