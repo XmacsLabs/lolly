@@ -51,10 +51,11 @@ lolly_string_rep<T>::resize (int new_n) {
 }
 
 template <class T>
-void
-lolly_string_rep<T>::expand (int new_n) {
-  reserve (new_n);
-  n= new_n;
+int
+lolly_string_rep<T>::expand_by (int delta) {
+  n+= delta;
+  reserve (n);
+  return n;
 }
 
 template <class T>
@@ -169,17 +170,17 @@ operator<< (tm_ostream& out, lolly_string_view<char> a) {
 template <typename T>
 lolly_string<T>&
 operator<< (lolly_string<T>& a, T ch) {
-  int i, na= N (a);
-  a->expand (na + 1);
-  a[na]= ch;
+  int na   = a->expand_by (1);
+  a[na - 1]= ch;
   return a;
 };
 
 template <typename T>
 inline lolly_string<T>&
 operator<< (lolly_string<T>& a, lolly_string<T> b) {
-  int i, na= N (a), nb= N (b);
-  a->expand (na + nb);
+  int i, nb= N (b);
+  int new_na= a->expand_by (nb);
+  int na    = new_na - nb;
   for (i= 0; i < nb; i++)
     a[i + na]= b[i];
   return a;
@@ -189,7 +190,8 @@ template <typename T>
 inline lolly_string<T>&
 operator<< (lolly_string<T>& a, const lolly_string_view<T>& b) {
   int i, na= N (a);
-  a->expand (na + b.N);
+  int new_na= a->expand_by (b.N);
+  int na    = new_na - b.N;
   for (i= 0; i < b.N; i++)
     a[i + na]= b.a[i];
   return a;
@@ -199,8 +201,9 @@ template <typename T, size_t Nb>
 inline lolly_string<T>&
 operator<< (lolly_string<T>& a, const T (&b)[Nb]) {
   int           i, na= N (a);
-  constexpr int nb= Nb - 1;
-  a->expand (na + nb);
+  constexpr int nb    = Nb - 1;
+  int           new_na= a->expand_by (nb);
+  int           na    = new_na - nb;
   for (i= 0; i < nb; i++)
     a[i + na]= b[i];
   return a;

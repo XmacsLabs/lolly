@@ -28,7 +28,7 @@ public:
   inline ~lolly_string_rep () {
     if (n != 0) tm_delete_array (a);
   }
-  void expand (int n);
+  int expand_by (int delta);
   void resize (int n);
   void reserve (int n);
 
