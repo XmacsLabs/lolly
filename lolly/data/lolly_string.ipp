@@ -44,7 +44,7 @@ lolly_string_rep<T>::resize (int m) {
     }
     else if (nn != 0) {
       a_size= 0;
-      tm_delete_array (a)
+      tm_delete_array (a);
     };
   }
   n= m;
@@ -189,7 +189,7 @@ operator<< (lolly_string<T>& a, lolly_string<T> b) {
 template <typename T>
 inline lolly_string<T>&
 operator<< (lolly_string<T>& a, const lolly_string_view<T>& b) {
-  int i, na= N (a);
+  int i;
   int na= a->expand_by (b.N);
   for (i= 0; i < b.N; i++)
     a[i + na]= b.a[i];
@@ -199,7 +199,7 @@ operator<< (lolly_string<T>& a, const lolly_string_view<T>& b) {
 template <typename T, size_t Nb>
 inline lolly_string<T>&
 operator<< (lolly_string<T>& a, const T (&b)[Nb]) {
-  int           i, na= N (a);
+  int           i;
   constexpr int nb= Nb - 1;
   int           na= a->expand_by (nb);
   for (i= 0; i < nb; i++)
