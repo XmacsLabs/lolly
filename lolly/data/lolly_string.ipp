@@ -28,26 +28,26 @@ lolly_string_rep<T>::lolly_string_rep (int n2)
 
 template <class T>
 void
-lolly_string_rep<T>::resize (int new_n) {
-  int old_size= a_size, new_size= round_length (new_n);
-  if (new_n != 0) {
-    if (old_size == 0) {
-      a_size= new_size;
-      a     = tm_new_array<T> (a_size);
+lolly_string_rep<T>::resize (int m) {
+  int nn= round_length (n);
+  int mm= round_length (m);
+  if (mm != nn) {
+    if (mm != 0) {
+      if (nn != 0) {
+        a_size= mm;
+        a     = tm_resize_array<T> (mm, a);
+      }
+      else {
+        a_size= mm;
+        a     = tm_new_array<T> (mm);
+      }
     }
-    else if (old_size != new_size) {
-      a_size= new_size;
-      a     = tm_resize_array<T> (a_size, a);
-    }
-  }
-  else {
-    if (old_size != 0) {
-      tm_delete_array (a);
-      a     = NULL;
+    else if (nn != 0) {
       a_size= 0;
+      tm_delete_array (a)
     };
   }
-  n= new_n;
+  n= m;
 }
 
 template <class T>
