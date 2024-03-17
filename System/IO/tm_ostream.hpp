@@ -15,7 +15,6 @@
 // #include "url.hpp"
 #include "string.hpp"
 #include <cstdio>
-#include <cstdlib>
 class tm_ostream;
 
 class tm_ostream_rep {
