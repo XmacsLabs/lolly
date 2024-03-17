@@ -28,8 +28,27 @@ public:
   inline ~lolly_string_rep () {
     if (n != 0) tm_delete_array (a);
   }
+  /**
+   * @brief expand (or shrink) string by delta, but do not release memory when
+   * string is shrinked.
+   *
+   * @return string length before expansionl
+   */
   int expand_by (int delta);
+
+  /**
+   * @brief expand (or shrink) string to given length n, and try to release
+   * memory when string is shrinked.
+   *
+   * @note expand_by may be faster if memory space is reserved
+   */
   void resize (int n);
+
+  /**
+   * @brief reserve memory space to contain at least n word in the whole string.
+   * Do not affect length of string, and do not release memory when n is smaller
+   * than current space.
+   */
   void reserve (int n);
 
   friend class lolly_string<T>;
