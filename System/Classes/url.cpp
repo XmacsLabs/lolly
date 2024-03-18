@@ -57,7 +57,6 @@ is_tuple (url_tree t, const char* s, int n) {
   return (t->op == URL_TUPLE) && (N (t) == (n + 1)) && (t[0] == s);
 }
 
-url::url () : rep (tm_new<url_rep> (url_tuple ("none"))) {}
 url::url (const char* name) : rep (tm_new<url_rep> (url_system (name)->t)) {}
 url::url (string name) : rep (tm_new<url_rep> (url_system (name)->t)) {}
 url::url (string path_name, string name)

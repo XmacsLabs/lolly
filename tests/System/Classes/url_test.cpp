@@ -101,10 +101,8 @@ TEST_CASE ("is_none") {
   CHECK (!is_none (file_root));
   CHECK (is_none (none_url));
 
-  CHECK (is_none (url ()));
-  url_eq (url (), url_none ());
   CHECK (!is_none (url ("")));
-  url_neq (url (), url (""));
+  CHECK (!is_none (url_none ()));
 }
 
 TEST_CASE ("is_root") {
