@@ -147,7 +147,13 @@ template <class T>
 int
 N (list<T> l) {
   if (is_nil (l)) return 0;
-  else return N (l->next) + 1;
+
+  int cnt= 0;
+  while (!is_nil (l->next)) {
+    cnt= cnt + 1;
+    l  = l->next;
+  }
+  return cnt;
 }
 
 template <class T>
