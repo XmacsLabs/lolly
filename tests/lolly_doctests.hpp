@@ -31,6 +31,14 @@ url_eq (url left, url right) {
   CHECK_EQ (left == right, true);
 }
 
+inline void
+url_neq (url left, url right) {
+  if (left == right) {
+    cout << "same: " << left << LF;
+  }
+  CHECK_EQ (left != right, true);
+}
+
 #define TEST_MEMORY_LEAK_ALL                                                   \
   TEST_CASE ("test memory leak above") { CHECK_EQ (mem_used (), mem_lolly); }
 
