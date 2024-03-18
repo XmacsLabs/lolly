@@ -102,7 +102,7 @@ TEST_CASE ("is_none") {
   CHECK (is_none (none_url));
 
   CHECK (!is_none (url ("")));
-  CHECK (!is_none (url_none ()));
+  CHECK (is_none (url_none ()));
 }
 
 TEST_CASE ("is_root") {
