@@ -157,8 +157,9 @@ as_string (unsigned long int i) {
 string
 as_string (double x) {
 #if defined(__clang__) && (__clang_major__ < 14)
-  std::string str= std::to_string (x);
-  return string (string_view (str.size (), str.data ()));
+  char buf[64];
+  int  size= sprintf (buf, "%g", x);
+  return string (string_view (size, buf));
 #else
   char buffer[64];
   auto [ptr, ec]= std::to_chars (buffer, buffer + 32, x);
