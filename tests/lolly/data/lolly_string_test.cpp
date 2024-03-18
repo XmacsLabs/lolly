@@ -71,12 +71,25 @@ TEST_CASE ("test append") {
 }
 
 TEST_CASE ("test reserve along with append") {
-  auto str= string_u16 ();
-  str->reserve (6);
-  str << u'x';
-  CHECK_EQ (str == string_u16 (u"x"), true);
-  str << string_u16 (u"yz");
-  CHECK_EQ (str == string_u16 (u"xyz"), true);
-  str << string_u16 (u": larger than reserved space");
-  CHECK_EQ (str == string_u16 (u"xyz: larger than reserved space"), true);
+
+  SUBCASE ("reserved more space") {
+    auto str= string_u16 ();
+    str->reserve (6);
+    str << u'x';
+    CHECK_EQ (str == u"x", true);
+    str << string_u16 (u"yz");
+    CHECK_EQ (str == u"xyz", true);
+    str << string_u16 (u": larger than reserved space");
+    CHECK_EQ (str == u"xyz: larger than reserved space", true);
+  }
+  SUBCASE ("reserved the same space") {
+    auto str= string_u16 (u"abc");
+    str->reserve (3);
+    CHECK_EQ (str == u"abc", true);
+  }
+  SUBCASE ("reserved less space should take no effect") {
+    auto str= string_u16 (u"abc");
+    str->reserve (2);
+    CHECK_EQ (str == u"abc", true);
+  }
 }
