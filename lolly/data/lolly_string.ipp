@@ -35,16 +35,17 @@ lolly_string_rep<T>::resize (int m) {
     if (mm != 0) {
       if (nn != 0) {
         a_N= mm;
-        a     = tm_resize_array<T> (mm, a);
+        a  = tm_resize_array<T> (mm, a);
       }
       else {
         a_N= mm;
-        a     = tm_new_array<T> (mm);
+        a  = tm_new_array<T> (mm);
       }
     }
     else if (nn != 0) {
-      a_N= 0;
       tm_delete_array (a);
+      a_N= 0;
+      a  = NULL;
     };
   }
   n= m;
@@ -66,17 +67,17 @@ lolly_string_rep<T>::reserve (int new_n) {
   if (new_n != 0) {
     if (old_size == 0) {
       a_N= round_length (new_n);
-      a     = tm_new_array<T> (a_N);
+      a  = tm_new_array<T> (a_N);
     }
     else if (old_size < new_n) {
       a_N= round_length (new_n);
-      a     = tm_resize_array<T> (a_N, a);
+      a  = tm_resize_array<T> (a_N, a);
     }
   }
   else {
     if (old_size != 0) {
       tm_delete_array (a);
-      a     = NULL;
+      a  = NULL;
       a_N= 0;
     };
   }

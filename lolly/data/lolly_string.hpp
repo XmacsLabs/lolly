@@ -32,7 +32,7 @@ public:
    * @brief expand (or shrink) string by delta, but do not release memory when
    * string is shrinked.
    *
-   * @return string length before expansionl
+   * @return string length before expansion
    */
   int expand_or_shrink_by (int delta);
 
