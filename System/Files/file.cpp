@@ -298,8 +298,8 @@ url_temp_dir_sub () {
 
 url
 url_temp_dir () {
-  static url u;
-  if (u == url_none ()) {
+  static url u= url_none ();
+  if (is_none (u)) {
     u= url_temp_dir_sub ();
     make_dir (u);
   }
