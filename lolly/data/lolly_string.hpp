@@ -19,11 +19,11 @@ template <typename T> class lolly_string;
 template <typename T> int N (lolly_string<T> a);
 template <typename T> class lolly_string_rep : concrete_struct {
   int n;
-  int a_size;
+  int a_N;
   T*  a;
 
 public:
-  inline lolly_string_rep () : n (0), a_size (0), a (NULL) {}
+  inline lolly_string_rep () : n (0), a_N (0), a (NULL) {}
   lolly_string_rep (int n);
   inline ~lolly_string_rep () {
     if (n != 0) tm_delete_array (a);
@@ -34,13 +34,13 @@ public:
    *
    * @return string length before expansionl
    */
-  int expand_by (int delta);
+  int expand_or_shrink_by (int delta);
 
   /**
    * @brief expand (or shrink) string to given length n, and try to release
    * memory when string is shrinked.
    *
-   * @note expand_by may be faster if memory space is reserved
+   * @note expand_or_shrink_by may be faster if memory space is reserved
    */
   void resize (int n);
 
