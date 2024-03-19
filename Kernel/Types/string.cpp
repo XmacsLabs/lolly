@@ -12,206 +12,12 @@
 
 #include "string.hpp"
 #include "basic.hpp"
+#include <charconv>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <string>
-
-/******************************************************************************
- * Low level routines and constructors
- ******************************************************************************/
-
-static inline int
-round_length (int n) {
-  n= (n + 3) & (0xfffffffc);
-  if (n < 24) return n;
-  int i= 32;
-  while (n > i)
-    i<<= 1;
-  return i;
-}
-
-string_rep::string_rep (int n2)
-    : n (n2),
-      a ((n == 0) ? ((char*) NULL) : tm_new_array<char> (round_length (n))) {}
-
-void
-string_rep::resize (int m) {
-  int nn= round_length (n);
-  int mm= round_length (m);
-  if (mm != nn) {
-    if (mm != 0) {
-      if (nn != 0) {
-        a= tm_resize_array<char> (mm, a);
-      }
-      else {
-        a= tm_new_array<char> (mm);
-      }
-    }
-    else if (nn != 0) tm_delete_array (a);
-  }
-  n= m;
-}
-
-string::string (char c) {
-  rep      = tm_new<string_rep> (1);
-  rep->a[0]= c;
-}
-
-string::string (char c, int n) {
-  rep= tm_new<string_rep> (n);
-  for (int i= 0; i < n; i++)
-    rep->a[i]= c;
-}
-
-string::string (const char* a) {
-  int i, n= strlen (a);
-  rep= tm_new<string_rep> (n);
-  for (i= 0; i < n; i++)
-    rep->a[i]= a[i];
-}
-
-string::string (const char* a, int n) {
-  int i;
-  rep= tm_new<string_rep> (n);
-  for (i= 0; i < n; i++)
-    rep->a[i]= a[i];
-}
-
-/******************************************************************************
- * Common routines for strings
- ******************************************************************************/
-
-bool
-string::operator== (const char* s) {
-  int   i, n= rep->n;
-  char* S= rep->a;
-  for (i= 0; i < n; i++) {
-    if (s[i] != S[i]) return false;
-    if (s[i] == '\0') return false;
-  }
-  return (s[i] == '\0');
-}
-
-bool
-string::operator!= (const char* s) {
-  int   i, n= rep->n;
-  char* S= rep->a;
-  for (i= 0; i < n; i++) {
-    if (s[i] != S[i]) return true;
-    if (s[i] == '\0') return true;
-  }
-  return (s[i] != '\0');
-}
-
-bool
-string::operator== (string a) {
-  int i;
-  if (rep->n != a->n) return false;
-  char *S_left= rep->a, *S_right= a->a;
-  for (i= 0; i < rep->n; i++)
-    if (S_left[i] != S_right[i]) return false;
-  return true;
-}
-
-bool
-string::operator!= (string a) {
-  int i;
-  if (rep->n != a->n) return true;
-  char *S_left= rep->a, *S_right= a->a;
-  for (i= 0; i < rep->n; i++)
-    if (S_left[i] != S_right[i]) return true;
-  return false;
-}
-
-string
-string::operator() (int begin, int end) {
-  if (end <= begin) return string ();
-
-  int i;
-  begin= max (min (rep->n, begin), 0);
-  end  = max (min (rep->n, end), 0);
-  string r (end - begin);
-  for (i= begin; i < end; i++)
-    r[i - begin]= rep->a[i];
-  return r;
-}
-
-string
-copy (string s) {
-  int    i, n= N (s);
-  string r (n);
-  for (i= 0; i < n; i++)
-    r[i]= s[i];
-  return r;
-}
-
-string&
-operator<< (string& a, char x) {
-  a->resize (N (a) + 1);
-  a[N (a) - 1]= x;
-  return a;
-}
-
-string&
-operator<< (string& a, string b) {
-  int i, k1= N (a), k2= N (b);
-  a->resize (k1 + k2);
-  for (i= 0; i < k2; i++)
-    a[i + k1]= b[i];
-  return a;
-}
-
-string
-operator* (string a, string b) {
-  int    i, n1= N (a), n2= N (b);
-  string c (n1 + n2);
-  for (i= 0; i < n1; i++)
-    c[i]= a[i];
-  for (i= 0; i < n2; i++)
-    c[i + n1]= b[i];
-  return c;
-}
-
-string
-operator* (const char* a, string b) {
-  return string (a) * b;
-}
-
-string
-operator* (string a, const char* b) {
-  return a * string (b);
-}
-
-bool
-operator< (string s1, string s2) {
-  int i, n1= N (s1), n2= N (s2), nmin= min (n1, n2);
-  for (i= 0; i < nmin; i++) {
-    if (s1[i] < s2[i]) return true;
-    if (s2[i] < s1[i]) return false;
-  }
-  return n1 < n2;
-}
-
-bool
-operator<= (string s1, string s2) {
-  int i, n1= N (s1), n2= N (s2), nmin= min (n1, n2);
-  for (i= 0; i < nmin; i++) {
-    if (s1[i] < s2[i]) return true;
-    if (s2[i] < s1[i]) return false;
-  }
-  return n1 <= n2;
-}
-
-int
-hash (string s) {
-  int i, h= 0, n= N (s);
-  for (i= 0; i < n; i++) {
-    h= (h << 9) + (h >> 23);
-    h= h + ((int) s[i]);
-  }
-  return h;
-}
+#include <system_error>
 
 /******************************************************************************
  * Conversion routines
@@ -286,48 +92,89 @@ as_string_bool (bool f) {
   else return string ("false");
 }
 
+using string_view= lolly::data::lolly_string_view<char>;
+
 string
 as_string (int16_t i) {
-  return string ((std::to_string (i)).c_str ());
+  char buffer[6];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 6, i);
+  if (ec == std::errc ()) {
+    return string (string_view (ptr - buffer, buffer));
+  }
+  else {
+    return string ();
+  }
 }
 
 string
 as_string (int32_t i) {
-  return string ((std::to_string (i)).c_str ());
+  char buffer[11];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 11, i);
+  if (ec == std::errc ()) {
+    return string (string_view (ptr - buffer, buffer));
+  }
+  else {
+    return string ();
+  }
 }
 
 string
 as_string (int64_t i) {
-  return string ((std::to_string (i)).c_str ());
+  char buffer[20];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 20, i);
+  if (ec == std::errc ()) {
+    return string (string_view (ptr - buffer, buffer));
+  }
+  else {
+    return string ();
+  }
 }
 
 string
 as_string (unsigned int i) {
-  char buf[64];
-  sprintf (buf, "%u", i);
-  // sprintf (buf, "%u\0", i);
-  return string (buf);
+  char buffer[32];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 32, i);
+  if (ec == std::errc ()) {
+    return string (string_view (ptr - buffer, buffer));
+  }
+  else {
+    return string ();
+  }
 }
 
 string
 as_string (unsigned long int i) {
-  char buf[64];
-  sprintf (buf, "%lu", i);
-  // sprintf (buf, "%lu\0", i);
-  return string (buf);
+  char buffer[32];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 32, i);
+  if (ec == std::errc ()) {
+    return string (string_view (ptr - buffer, buffer));
+  }
+  else {
+    return string ();
+  }
 }
 
 string
 as_string (double x) {
+#if defined(__clang__) && (__clang_major__ < 14)
   char buf[64];
-  sprintf (buf, "%g", x);
-  // sprintf (buf, "%g\0", x);
-  return string (buf);
+  int  size= sprintf (buf, "%g", x);
+  return string (string_view (size, buf));
+#else
+  char buffer[64];
+  auto [ptr, ec]= std::to_chars (buffer, buffer + 32, x);
+  if (ec == std::errc ()) {
+    return string (string_view (ptr - buffer, buffer));
+  }
+  else {
+    return string ();
+  }
+#endif
 }
 
 string
 as_string (const char* s) {
-  return string (s);
+  return string (string_view (strlen (s), s));
 }
 
 bool
@@ -403,3 +250,5 @@ is_id (string s) {
   }
   return true;
 }
+
+c_string::c_string (string s) : rep (tm_new<c_string_rep> (as_charp (s))) {}

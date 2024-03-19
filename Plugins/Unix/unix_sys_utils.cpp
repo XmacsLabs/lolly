@@ -63,11 +63,14 @@ _ts_free (void* a) {
 struct _ts_string {
   int   n, l;
   char* a;
+  using string_view= lolly::data::lolly_string_view<char>;
 
   inline _ts_string () : n (0), l (0), a (NULL) {}
   inline ~_ts_string () {
     if (l != 0) _ts_free ((void*) a);
   }
+
+  operator string_view () { return string_view (n, a); }
 
   void resize (int m) {
     if (m <= n) return;
@@ -300,7 +303,7 @@ unix_system (array<string> arg, array<int> fd_in, array<string> str_in,
   }
   for (int i= 0; i < n_out; i++) {
     pthread_join (threads_read[i], &exit_status);
-    *(str_out[i])= string (channels_out[i].data.a, channels_out[i].data.n);
+    *(str_out[i])= string (channels_out[i].data);
     if (channels_out[i].status < 0) thread_status= -1;
   }
 
@@ -313,12 +316,12 @@ string
 unix_get_login () {
   uid_t          uid= getuid ();
   struct passwd* pwd= getpwuid (uid);
-  return string (pwd->pw_name);
+  return as_string (pwd->pw_name);
 }
 
 string
 unix_get_username () {
   uid_t          uid= getuid ();
   struct passwd* pwd= getpwuid (uid);
-  return tokenize (string (pwd->pw_gecos), string (","))[0];
+  return tokenize (as_string (pwd->pw_gecos), string (","))[0];
 }

@@ -159,7 +159,9 @@ to_Hex (int32_t i) {
   if (i == INT32_MIN) return "-80000000";
   if (i < 0) return "-" * to_Hex (-i);
   if (i < 16) return hex_string[i & 15];
-  return to_Hex (i >> 4) * hex_string[i & 15];
+  string res= to_Hex (i >> 4);
+  res << hex_string[i & 15];
+  return res;
 }
 
 string
@@ -172,7 +174,9 @@ to_Hex (pointer ptr) {
   intptr_t i= (intptr_t) ptr;
   if (i < 0) return "-" * to_Hex (-i);
   if (i < 16) return hex_string[i & 15];
-  return to_Hex (i >> 4) * hex_string[i & 15];
+  string res= to_Hex (i >> 4);
+  res << hex_string[i & 15];
+  return res;
 }
 
 string
@@ -196,7 +200,11 @@ from_hex (string s) {
 string
 as_hexadecimal (int i, int len) {
   if (len == 1) return hex_string[i & 15];
-  else return as_hexadecimal (i >> 4, len - 1) * hex_string[i & 15];
+  else {
+    string res= as_hexadecimal (i >> 4, len - 1);
+    res << hex_string[i & 15];
+    return res;
+  };
 }
 
 } // namespace data
