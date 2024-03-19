@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.11</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.12</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ $(function() {
 <p>Structure representing a concrete object with a reference count.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="basic_8hpp_source.html">basic.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for concrete_struct:</div>
 <div class="dyncontent">
@@ -113,7 +113,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure representing a concrete object with a reference count. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00428">428</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="classdef_8hpp_source.html#l00024">24</a> of file <a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad1296bdd43fd3f176513a736d2057dab" name="ad1296bdd43fd3f176513a736d2057dab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad1296bdd43fd3f176513a736d2057dab">&#9670;&#160;</a></span>concrete_struct()</h2>
@@ -140,11 +140,11 @@ Public Attributes</h2></td></tr>
 
 <p>Default constructor for the concrete object. Increments the reference count. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00435">435</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  435</span>: <a class="code hl_variable" href="#afc5338943439e46e06de35833de1105a">ref_count</a> (1) { <a class="code hl_define" href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="basic_8hpp.html#a2633dca1586e291e5aff35517b33bb16">concrete_count</a>++); }</div>
-<div class="ttc" id="abasic_8hpp_html_a2633dca1586e291e5aff35517b33bb16"><div class="ttname"><a href="basic_8hpp.html#a2633dca1586e291e5aff35517b33bb16">concrete_count</a></div><div class="ttdeci">int concrete_count</div><div class="ttdoc">Global variable holding the number of concrete structures currently active.</div></div>
-<div class="ttc" id="abasic_8hpp_html_a6bf49670f3546977b9ec55e86fc2e72b"><div class="ttname"><a href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a></div><div class="ttdeci">#define TM_DEBUG(x)</div><div class="ttdoc">Debugging macro used to disable debugging output.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00024">basic.hpp:24</a></div></div>
-<div class="ttc" id="astructconcrete__struct_html_afc5338943439e46e06de35833de1105a"><div class="ttname"><a href="#afc5338943439e46e06de35833de1105a">concrete_struct::ref_count</a></div><div class="ttdeci">int ref_count</div><div class="ttdoc">The reference count for the concrete object.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00429">basic.hpp:429</a></div></div>
+<p class="definition">Definition at line <a class="el" href="classdef_8hpp_source.html#l00031">31</a> of file <a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>: <a class="code hl_variable" href="#afc5338943439e46e06de35833de1105a">ref_count</a> (1) { <a class="code hl_define" href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="classdef_8hpp.html#a2633dca1586e291e5aff35517b33bb16">concrete_count</a>++); }</div>
+<div class="ttc" id="aclassdef_8hpp_html_a2633dca1586e291e5aff35517b33bb16"><div class="ttname"><a href="classdef_8hpp.html#a2633dca1586e291e5aff35517b33bb16">concrete_count</a></div><div class="ttdeci">int concrete_count</div><div class="ttdoc">Global variable holding the number of concrete structures currently active.</div></div>
+<div class="ttc" id="aclassdef_8hpp_html_a6bf49670f3546977b9ec55e86fc2e72b"><div class="ttname"><a href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a></div><div class="ttdeci">#define TM_DEBUG(x)</div><div class="ttdoc">Debugging macro used to disable debugging output.</div><div class="ttdef"><b>Definition</b> <a href="classdef_8hpp_source.html#l00013">classdef.hpp:13</a></div></div>
+<div class="ttc" id="astructconcrete__struct_html_afc5338943439e46e06de35833de1105a"><div class="ttname"><a href="#afc5338943439e46e06de35833de1105a">concrete_struct::ref_count</a></div><div class="ttdeci">int ref_count</div><div class="ttdoc">The reference count for the concrete object.</div><div class="ttdef"><b>Definition</b> <a href="classdef_8hpp_source.html#l00025">classdef.hpp:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -173,8 +173,8 @@ Public Attributes</h2></td></tr>
 
 <p>Virtual destructor for the concrete object. Decrements the reference count. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00441">441</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  441</span>{ <a class="code hl_define" href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="basic_8hpp.html#a2633dca1586e291e5aff35517b33bb16">concrete_count</a>--); }</div>
+<p class="definition">Definition at line <a class="el" href="classdef_8hpp_source.html#l00037">37</a> of file <a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{ <a class="code hl_define" href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="classdef_8hpp.html#a2633dca1586e291e5aff35517b33bb16">concrete_count</a>--); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -193,12 +193,12 @@ Public Attributes</h2></td></tr>
 
 <p>The reference count for the concrete object. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00429">429</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="classdef_8hpp_source.html#l00025">25</a> of file <a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="basic_8hpp_source.html">basic.hpp</a></li>
+<li><a class="el" href="classdef_8hpp_source.html">classdef.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

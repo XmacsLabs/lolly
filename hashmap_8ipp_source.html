@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.11</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.12</span>
    </div>
   </td>
  </tr>
@@ -185,7 +185,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (l-&gt;item.code == <a class="code hl_class" href="classlist.html">hv</a> &amp;&amp; l-&gt;item.key == x) <span class="keywordflow">return</span> l-&gt;item.im;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    l= l-&gt;next;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">if</span> (size &gt;= n * <a class="code hl_function" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>) resize (n &lt;&lt; 1);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">if</span> (size &gt;= n * <a class="code hl_function" href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>) resize (n &lt;&lt; 1);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt;&amp; <a class="code hl_class" href="classlist.html">rl</a>= a[<a class="code hl_class" href="classlist.html">hv</a> &amp; (n - 1)];</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_class" href="classlist.html">rl</a>                       = <a class="code hl_class" href="classlist.html">list&lt;hashentry&lt;T, U&gt;</a>&gt; (<a class="code hl_define" href="hashmap_8ipp.html#abec92cc72a096640b821b8cd56a02495">H</a> (<a class="code hl_class" href="classlist.html">hv</a>, x, <a class="code hl_variable" href="classlist.html#aa62645fcaa8cfa1bb3686fc6fd8f2720">init</a>), <a class="code hl_function" href="classlist.html#a6134d52315f57bcb808223559c8a4760">rl</a>);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  size++;</div>
@@ -215,7 +215,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">if</span> ((*l)-&gt;item.code == <a class="code hl_class" href="classlist.html">hv</a> &amp;&amp; (*l)-&gt;item.key == x) {</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      *l= (*l)-&gt;next;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      size--;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keywordflow">if</span> (size &lt; (n &gt;&gt; 1) * <a class="code hl_function" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>) resize (n &gt;&gt; 1);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keywordflow">if</span> (size &lt; (n &gt;&gt; 1) * <a class="code hl_function" href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a>) resize (n &gt;&gt; 1);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    l= &amp;((*l)-&gt;next);</div>
@@ -291,7 +291,6 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#undef TMPL</span></div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#endif </span><span class="comment">// defined HASHMAP_CC</span></div>
 <div class="ttc" id="abasic_8cpp_html_a268a13446e8dbe3fd3885ff9c4827e1a"><div class="ttname"><a href="basic_8cpp.html#a268a13446e8dbe3fd3885ff9c4827e1a">hash</a></div><div class="ttdeci">int hash(pointer ptr)</div><div class="ttdoc">Computes a hash value for a pointer.</div><div class="ttdef"><b>Definition</b> <a href="basic_8cpp_source.html#l00017">basic.cpp:17</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_a722bf3cd3acddf15e6bca8135bad679d"><div class="ttname"><a href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a></div><div class="ttdeci">SI max(SI i, SI j)</div><div class="ttdoc">Returns the maximum of two signed integers.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00173">basic.hpp:173</a></div></div>
 <div class="ttc" id="ablackbox_8hpp_html_aa062545d808e38d833dcb529924000a0"><div class="ttname"><a href="blackbox_8hpp.html#aa062545d808e38d833dcb529924000a0">is_nil</a></div><div class="ttdeci">bool is_nil(blackbox x)</div><div class="ttdef"><b>Definition</b> <a href="blackbox_8hpp_source.html#l00029">blackbox.hpp:29</a></div></div>
 <div class="ttc" id="aclasshashmap__rep_html_a0a4f85993aa3f97d0ac1bb18fafcbf14"><div class="ttname"><a href="classhashmap__rep.html#a0a4f85993aa3f97d0ac1bb18fafcbf14">hashmap_rep::resize</a></div><div class="ttdeci">void resize(int n)</div><div class="ttdoc">Resizes the hashmap and rehashes all existing keys.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">hashmap.ipp:48</a></div></div>
 <div class="ttc" id="aclasshashmap__rep_html_a13551f0f887bea1b6060b1a350c7658b"><div class="ttname"><a href="classhashmap__rep.html#a13551f0f887bea1b6060b1a350c7658b">hashmap_rep::reset</a></div><div class="ttdeci">void reset(T x)</div><div class="ttdoc">Remove a specific key from the hashmap, if it exists.</div><div class="ttdef"><b>Definition</b> <a href="#l00108">hashmap.ipp:108</a></div></div>
@@ -305,7 +304,7 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="aclasslist_html_a6134d52315f57bcb808223559c8a4760"><div class="ttname"><a href="classlist.html#a6134d52315f57bcb808223559c8a4760">list::list</a></div><div class="ttdeci">list(T item)</div><div class="ttdoc">Construct a new list object with a single item.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00137">list.hpp:137</a></div></div>
 <div class="ttc" id="aclasslist_html_aa62645fcaa8cfa1bb3686fc6fd8f2720"><div class="ttname"><a href="classlist.html#aa62645fcaa8cfa1bb3686fc6fd8f2720">list::init</a></div><div class="ttdeci">static list&lt; T &gt; init</div><div class="ttdoc">A static list object used for initializing new list objects.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00100">list.hpp:100</a></div></div>
 <div class="ttc" id="aclasstm__ostream_html"><div class="ttname"><a href="classtm__ostream.html">tm_ostream</a></div><div class="ttdef"><b>Definition</b> <a href="tm__ostream_8hpp_source.html#l00036">tm_ostream.hpp:36</a></div></div>
-<div class="ttc" id="afast__alloc_8hpp_html_ae8003acebedc36c860028e6f9fd82fd2"><div class="ttname"><a href="fast__alloc_8hpp.html#ae8003acebedc36c860028e6f9fd82fd2">tm_delete_array</a></div><div class="ttdeci">void tm_delete_array(C *Ptr)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00436">fast_alloc.hpp:436</a></div></div>
+<div class="ttc" id="afast__alloc_8hpp_html_ae8003acebedc36c860028e6f9fd82fd2"><div class="ttname"><a href="fast__alloc_8hpp.html#ae8003acebedc36c860028e6f9fd82fd2">tm_delete_array</a></div><div class="ttdeci">void tm_delete_array(C *Ptr)</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00435">fast_alloc.hpp:435</a></div></div>
 <div class="ttc" id="ahashmap_8hpp_html"><div class="ttname"><a href="hashmap_8hpp.html">hashmap.hpp</a></div></div>
 <div class="ttc" id="ahashmap_8ipp_html_a37193e2469c5afc622af210e6dcd93db"><div class="ttname"><a href="hashmap_8ipp.html#a37193e2469c5afc622af210e6dcd93db">operator==</a></div><div class="ttdeci">bool operator==(H h1, H h2)</div><div class="ttdef"><b>Definition</b> <a href="#l00034">hashmap.ipp:34</a></div></div>
 <div class="ttc" id="ahashmap_8ipp_html_abec92cc72a096640b821b8cd56a02495"><div class="ttname"><a href="hashmap_8ipp.html#abec92cc72a096640b821b8cd56a02495">H</a></div><div class="ttdeci">#define H</div><div class="ttdef"><b>Definition</b> <a href="#l00017">hashmap.ipp:17</a></div></div>
@@ -315,6 +314,7 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="ahashmap__test_8cpp_html_a89004bb8340b90c70d3a66af077bed07"><div class="ttname"><a href="hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07">routine</a></div><div class="ttdeci">void routine(int key)</div><div class="ttdef"><b>Definition</b> <a href="hashmap__test_8cpp_source.html#l00031">hashmap_test.cpp:31</a></div></div>
 <div class="ttc" id="alist_8hpp_html_a59e2873221d61701a13da6829ea15626"><div class="ttname"><a href="list_8hpp.html#a59e2873221d61701a13da6829ea15626">is_nil</a></div><div class="ttdeci">bool is_nil(list&lt; T &gt; l)</div><div class="ttdoc">Check if a list is nil (i.e., an empty list).</div></div>
 <div class="ttc" id="alist_8hpp_html_a6a055027c8af0fbb1da0d4a724225ad9"><div class="ttname"><a href="list_8hpp.html#a6a055027c8af0fbb1da0d4a724225ad9">copy</a></div><div class="ttdeci">list&lt; T &gt; copy(list&lt; T &gt; l)</div><div class="ttdoc">Create a copy of a list.</div><div class="ttdef"><b>Definition</b> <a href="list_8ipp_source.html#l00155">list.ipp:155</a></div></div>
+<div class="ttc" id="aminmax_8hpp_html_a722bf3cd3acddf15e6bca8135bad679d"><div class="ttname"><a href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a></div><div class="ttdeci">SI max(SI i, SI j)</div><div class="ttdoc">Returns the maximum of two signed integers.</div><div class="ttdef"><b>Definition</b> <a href="minmax_8hpp_source.html#l00040">minmax.hpp:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

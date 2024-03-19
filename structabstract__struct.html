@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.11</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.12</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ $(function() {
 <p>Structure representing an abstract object with a reference count.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="basic_8hpp_source.html">basic.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for abstract_struct:</div>
 <div class="dyncontent">
@@ -113,7 +113,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure representing an abstract object with a reference count. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00453">453</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="classdef_8hpp_source.html#l00049">49</a> of file <a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a92e124f5a8095cbe52e62b3324ff28d7" name="a92e124f5a8095cbe52e62b3324ff28d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a92e124f5a8095cbe52e62b3324ff28d7">&#9670;&#160;</a></span>abstract_struct()</h2>
@@ -140,11 +140,11 @@ Public Attributes</h2></td></tr>
 
 <p>Default constructor for the abstract object. Sets the reference count to 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00460">460</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  460</span>: <a class="code hl_variable" href="#ae8c2d63325c539d21d614db5da9f42d9">ref_count</a> (0) { <a class="code hl_define" href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="basic_8hpp.html#acbea12bb1ba3fa12fac6d9566d289b4c">abstract_count</a>++); }</div>
-<div class="ttc" id="abasic_8hpp_html_a6bf49670f3546977b9ec55e86fc2e72b"><div class="ttname"><a href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a></div><div class="ttdeci">#define TM_DEBUG(x)</div><div class="ttdoc">Debugging macro used to disable debugging output.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00024">basic.hpp:24</a></div></div>
-<div class="ttc" id="abasic_8hpp_html_acbea12bb1ba3fa12fac6d9566d289b4c"><div class="ttname"><a href="basic_8hpp.html#acbea12bb1ba3fa12fac6d9566d289b4c">abstract_count</a></div><div class="ttdeci">int abstract_count</div><div class="ttdoc">Global variable holding the number of abstract structures currently active.</div></div>
-<div class="ttc" id="astructabstract__struct_html_ae8c2d63325c539d21d614db5da9f42d9"><div class="ttname"><a href="#ae8c2d63325c539d21d614db5da9f42d9">abstract_struct::ref_count</a></div><div class="ttdeci">int ref_count</div><div class="ttdoc">The reference count for the abstract object.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00454">basic.hpp:454</a></div></div>
+<p class="definition">Definition at line <a class="el" href="classdef_8hpp_source.html#l00056">56</a> of file <a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>: <a class="code hl_variable" href="#ae8c2d63325c539d21d614db5da9f42d9">ref_count</a> (0) { <a class="code hl_define" href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="classdef_8hpp.html#acbea12bb1ba3fa12fac6d9566d289b4c">abstract_count</a>++); }</div>
+<div class="ttc" id="aclassdef_8hpp_html_a6bf49670f3546977b9ec55e86fc2e72b"><div class="ttname"><a href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a></div><div class="ttdeci">#define TM_DEBUG(x)</div><div class="ttdoc">Debugging macro used to disable debugging output.</div><div class="ttdef"><b>Definition</b> <a href="classdef_8hpp_source.html#l00013">classdef.hpp:13</a></div></div>
+<div class="ttc" id="aclassdef_8hpp_html_acbea12bb1ba3fa12fac6d9566d289b4c"><div class="ttname"><a href="classdef_8hpp.html#acbea12bb1ba3fa12fac6d9566d289b4c">abstract_count</a></div><div class="ttdeci">int abstract_count</div><div class="ttdoc">Global variable holding the number of abstract structures currently active.</div></div>
+<div class="ttc" id="astructabstract__struct_html_ae8c2d63325c539d21d614db5da9f42d9"><div class="ttname"><a href="#ae8c2d63325c539d21d614db5da9f42d9">abstract_struct::ref_count</a></div><div class="ttdeci">int ref_count</div><div class="ttdoc">The reference count for the abstract object.</div><div class="ttdef"><b>Definition</b> <a href="classdef_8hpp_source.html#l00050">classdef.hpp:50</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -173,8 +173,8 @@ Public Attributes</h2></td></tr>
 
 <p>Virtual destructor for the abstract object. Decrements the reference count. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00466">466</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  466</span>{ <a class="code hl_define" href="basic_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="basic_8hpp.html#acbea12bb1ba3fa12fac6d9566d289b4c">abstract_count</a>--); }</div>
+<p class="definition">Definition at line <a class="el" href="classdef_8hpp_source.html#l00062">62</a> of file <a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{ <a class="code hl_define" href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="classdef_8hpp.html#acbea12bb1ba3fa12fac6d9566d289b4c">abstract_count</a>--); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -193,12 +193,12 @@ Public Attributes</h2></td></tr>
 
 <p>The reference count for the abstract object. </p>
 
-<p class="definition">Definition at line <a class="el" href="basic_8hpp_source.html#l00454">454</a> of file <a class="el" href="basic_8hpp_source.html">basic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="classdef_8hpp_source.html#l00050">50</a> of file <a class="el" href="classdef_8hpp_source.html">classdef.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="basic_8hpp_source.html">basic.hpp</a></li>
+<li><a class="el" href="classdef_8hpp_source.html">classdef.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

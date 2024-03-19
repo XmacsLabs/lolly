@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.11</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.12</span>
    </div>
   </td>
  </tr>
@@ -201,14 +201,14 @@ Public Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="unix__sys__utils_8cpp_source.html#l00072">72</a> of file <a class="el" href="unix__sys__utils_8cpp_source.html">unix_sys_utils.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   72</span>                      {</div>
 <div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">m</a> &lt;= <a class="code hl_variable" href="#a487f00a4990528ee2aa8943161d389a4">n</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   74</span>    <span class="keywordtype">int</span>   <a class="code hl_class" href="classlist.html">new_l</a>= <a class="code hl_function" href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a> (2 * <a class="code hl_variable" href="#a487f00a4990528ee2aa8943161d389a4">n</a>, <a class="code hl_class" href="classlist.html">m</a>);</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordtype">int</span>   <a class="code hl_class" href="classlist.html">new_l</a>= <a class="code hl_function" href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a> (2 * <a class="code hl_variable" href="#a487f00a4990528ee2aa8943161d389a4">n</a>, <a class="code hl_class" href="classlist.html">m</a>);</div>
 <div class="line"><span class="lineno">   75</span>    <span class="keywordtype">char</span>* <a class="code hl_class" href="classlist.html">new_a</a>= (<span class="keywordtype">char</span>*) <a class="code hl_function" href="unix__sys__utils_8cpp.html#aaead32a69075afc0ce24b683e80f8010">_ts_malloc</a> (<a class="code hl_class" href="classlist.html">new_l</a> * <span class="keyword">sizeof</span> (<span class="keywordtype">char</span>));</div>
 <div class="line"><span class="lineno">   76</span>    <a class="code hl_class" href="classlist.html">memcpy</a> (<a class="code hl_class" href="classlist.html">new_a</a>, <a class="code hl_variable" href="#ae2e376b781d30b94dd0108df255a3020">a</a>, <a class="code hl_variable" href="#a487f00a4990528ee2aa8943161d389a4">n</a>);</div>
 <div class="line"><span class="lineno">   77</span>    <a class="code hl_function" href="unix__sys__utils_8cpp.html#a769233c07fb42c0de38049629de83e9a">_ts_free</a> ((<span class="keywordtype">void</span>*) <a class="code hl_variable" href="#ae2e376b781d30b94dd0108df255a3020">a</a>);</div>
 <div class="line"><span class="lineno">   78</span>    <a class="code hl_variable" href="#ae2e376b781d30b94dd0108df255a3020">a</a>= <a class="code hl_class" href="classlist.html">new_a</a>;</div>
 <div class="line"><span class="lineno">   79</span>    <a class="code hl_variable" href="#a8bd961d14f4f17db14d79521c932c21d">l</a>= <a class="code hl_class" href="classlist.html">new_l</a>;</div>
 <div class="line"><span class="lineno">   80</span>  }</div>
-<div class="ttc" id="abasic_8hpp_html_a722bf3cd3acddf15e6bca8135bad679d"><div class="ttname"><a href="basic_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a></div><div class="ttdeci">SI max(SI i, SI j)</div><div class="ttdoc">Returns the maximum of two signed integers.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00173">basic.hpp:173</a></div></div>
+<div class="ttc" id="aminmax_8hpp_html_a722bf3cd3acddf15e6bca8135bad679d"><div class="ttname"><a href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a></div><div class="ttdeci">SI max(SI i, SI j)</div><div class="ttdoc">Returns the maximum of two signed integers.</div><div class="ttdef"><b>Definition</b> <a href="minmax_8hpp_source.html#l00040">minmax.hpp:40</a></div></div>
 <div class="ttc" id="aunix__sys__utils_8cpp_html_aaead32a69075afc0ce24b683e80f8010"><div class="ttname"><a href="unix__sys__utils_8cpp.html#aaead32a69075afc0ce24b683e80f8010">_ts_malloc</a></div><div class="ttdeci">void * _ts_malloc(int n)</div><div class="ttdef"><b>Definition</b> <a href="unix__sys__utils_8cpp_source.html#l00051">unix_sys_utils.cpp:51</a></div></div>
 </div><!-- fragment -->
 </div>
