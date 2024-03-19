@@ -31,9 +31,7 @@ digraph "Graphical Class Hierarchy"
   Node0 -> Node12 [id="edge21_Node000000_Node000012",dir="back",color="firebrick4",style="solid",tooltip=" "];
   Node12 [id="Node000012",label="rel_hashmap_rep\< T, U \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrel__hashmap__rep.html",tooltip=" "];
   Node0 -> Node13 [id="edge22_Node000000_Node000013",dir="back",color="firebrick4",style="solid",tooltip=" "];
-  Node13 [id="Node000013",label="string_rep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classstring__rep.html",tooltip=" "];
-  Node0 -> Node14 [id="edge23_Node000000_Node000014",dir="back",color="firebrick4",style="solid",tooltip=" "];
-  Node14 [id="Node000014",label="string_searcher_rep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classstring__searcher__rep.html",tooltip=" "];
-  Node0 -> Node15 [id="edge24_Node000000_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node15 [id="Node000015",label="url_rep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structurl__rep.html",tooltip=" "];
+  Node13 [id="Node000013",label="string_searcher_rep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classstring__searcher__rep.html",tooltip=" "];
+  Node0 -> Node14 [id="edge23_Node000000_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="url_rep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structurl__rep.html",tooltip=" "];
 }

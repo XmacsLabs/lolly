@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_0',['a',['../classstring__searcher__rep.html#acc89588e17c835f004c42ba35656c7c2',1,'string_searcher_rep::a'],['../classarray__rep.html#ad404a178b9cb63d9b4225388833fcbdd',1,'array_rep::a'],['../classhashmap__rep.html#aa5b24e749f6555ff9edb5571c86d6b7f',1,'hashmap_rep::a'],['../classhashset__rep.html#a27ff10a827ee9732d095a34bf55e5792',1,'hashset_rep::a'],['../classstring__rep.html#a1b0c6b719af39ca89c6253c2380612fe',1,'string_rep::a'],['../classlolly_1_1data_1_1lolly__string__rep.html#a09776b8b992ebbf9e2757efb8a569f73',1,'lolly::data::lolly_string_rep::a'],['../classlolly_1_1data_1_1lolly__string__view.html#a10da906c98849ae14702980bfe31a87e',1,'lolly::data::lolly_string_view::a'],['../classlolly_1_1data_1_1lolly__tree__rep.html#a8429fdf9f13584906fcba411976343c0',1,'lolly::data::lolly_tree_rep::a'],['../struct__ts__string.html#ae2e376b781d30b94dd0108df255a3020',1,'_ts_string::a']]],
+  ['a_0',['a',['../classstring__searcher__rep.html#acc89588e17c835f004c42ba35656c7c2',1,'string_searcher_rep::a'],['../classarray__rep.html#ad404a178b9cb63d9b4225388833fcbdd',1,'array_rep::a'],['../classhashmap__rep.html#aa5b24e749f6555ff9edb5571c86d6b7f',1,'hashmap_rep::a'],['../classhashset__rep.html#a27ff10a827ee9732d095a34bf55e5792',1,'hashset_rep::a'],['../classlolly_1_1data_1_1lolly__string__rep.html#a09776b8b992ebbf9e2757efb8a569f73',1,'lolly::data::lolly_string_rep::a'],['../classlolly_1_1data_1_1lolly__string__view.html#a10da906c98849ae14702980bfe31a87e',1,'lolly::data::lolly_string_view::a'],['../classlolly_1_1data_1_1lolly__tree__rep.html#a8429fdf9f13584906fcba411976343c0',1,'lolly::data::lolly_tree_rep::a'],['../struct__ts__string.html#ae2e376b781d30b94dd0108df255a3020',1,'_ts_string::a']]],
   ['a_1',['A',['../array_8hpp.html#a104e332b2ad67c0ec3ff5b1d3f57d11a',1,'A():&#160;array.hpp'],['../namespacelolly_1_1data.html#a01036cfee05fceeab9ac866f58e11522',1,'lolly::data::A()']]],
   ['a_20package_20in_20mogan_2',['Project: Use lolly as a package in Mogan',['../md_devel_25.html',1,'']]],
   ['a_20user_20friendly_20c_20standard_20library_20alternative_3',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]],
@@ -23,7 +23,7 @@ var searchData=
   ['access_5flast_20',['access_last',['../list_8hpp.html#ad639ac8216b7992f849258af7aae5d1e',1,'access_last(list&lt; T &gt; &amp;l):&#160;list.ipp'],['../list_8ipp.html#ad639ac8216b7992f849258af7aae5d1e',1,'access_last(list&lt; T &gt; &amp;l):&#160;list.ipp']]],
   ['add_5fchild_21',['add_child',['../classhashtree__rep.html#a59a9913e7ca5eb291c1a6435c74b3378',1,'hashtree_rep']]],
   ['add_5fnew_5fchild_22',['add_new_child',['../classhashtree__rep.html#afd4ea89970ffe9d0c45d23f4840e386e',1,'hashtree_rep']]],
-  ['adding_20xmake_20dependency_23',['Adding xmake Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md37',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md43',1,'Method 2: Adding xmake Dependency']]],
+  ['adding_20xmake_20dependency_23',['Adding xmake Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md38',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md44',1,'Method 2: Adding xmake Dependency']]],
   ['advance_24',['advance',['../classparse__string__rep.html#aa7634a4e58af30b6c07e6019f39595f2',1,'parse_string_rep']]],
   ['all_20targets_25',['Listing all Targets',['../md_docs_2guide_2Test.html#autotoc_md52',1,'']]],
   ['alloc_5fcheck_26',['alloc_check',['../fast__alloc_8hpp.html#ad6d869b80c110e621ba9c128b61c6317',1,'fast_alloc.hpp']]],
@@ -41,9 +41,9 @@ var searchData=
   ['analyze_5ftest_2ecpp_38',['analyze_test.cpp',['../analyze__test_8cpp.html',1,'']]],
   ['and_20json_39',['Project: Http Client and JSON',['../md_devel_215.html',1,'']]],
   ['and_20others_40',['Project: Use tbox to implement file and others',['../md_devel_212.html',1,'']]],
-  ['and_20testing_41',['And Testing',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md38',1,'Step 3: Compiling and Testing'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md44',1,'Step 3: Compiling and Testing']]],
+  ['and_20testing_41',['And Testing',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md39',1,'Step 3: Compiling and Testing'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md45',1,'Step 3: Compiling and Testing']]],
   ['and_20url_20from_20mogan_42',['Project: Migrate file and url from mogan',['../md_devel_210.html',1,'']]],
-  ['and_20usage_43',['And Usage',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md34',1,'Step 2: Installation and Usage'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md41',1,'Step 2: Installation and Usage']]],
+  ['and_20usage_43',['And Usage',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md36',1,'Step 2: Installation and Usage'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md42',1,'Step 2: Installation and Usage']]],
   ['and_20wasm_44',['13: xmake 2.8.3 and wasm',['../md_devel_213.html',1,'']]],
   ['ankerl_5fnanobench_5fimplement_45',['ANKERL_NANOBENCH_IMPLEMENT',['../nanobench_8cpp.html#ac55582c73612eae3129a2346642a9043',1,'nanobench.cpp']]],
   ['append_46',['append',['../struct__ts__string.html#a1e4a5d2c19d66e421701df03b11d171d',1,'_ts_string::append()'],['../array_8hpp.html#af48c5156c227d75eb7479c0f12f07508',1,'append(T a, array&lt; T &gt; b):&#160;array.hpp'],['../array_8hpp.html#a2407a7ed82357c98e01214a32289bdef',1,'append(array&lt; T &gt; a, array&lt; T &gt; b):&#160;array.ipp'],['../array_8ipp.html#a7d671d8912c7f7cb3e5cc8a28a8bfec5',1,'append(t a, array&lt; t &gt; b):&#160;array.ipp'],['../array_8ipp.html#a2407a7ed82357c98e01214a32289bdef',1,'append(array&lt; T &gt; a, array&lt; T &gt; b):&#160;array.ipp']]],
