@@ -33,5 +33,10 @@ main () {
   bench.run ("N 32", [&] { N (l32); });
 
   bench.minEpochIterations (40000);
+
+  bench.run ("contains 1", [&] {contains (l32, 1L); });
+  bench.run ("contains 16", [&] {contains (l32, 16L); });
+  bench.run ("contains 32", [&] {contains (l32, 32L); });
+
   bench.run ("l1 == l2 32", [&] { l32 == l32_2; });
 }
