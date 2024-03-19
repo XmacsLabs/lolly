@@ -53,8 +53,8 @@ public:
 
   // primitives constructors
   json (string value) { rep= tm_new<json_rep> (json_tree (value)); }
-  json (const char* value) {
-    rep= tm_new<json_rep> (json_tree (string (value)));
+  template <size_t N> json (const char (&value)[N]) {
+    rep= tm_new<json_rep> (json_tree (value));
   }
   json (bool value) {
     rep= tm_new<json_rep> (

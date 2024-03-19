@@ -31,7 +31,7 @@ get_env (string var) {
     size= tb_environment_load (environment, var_);
     if (size >= 1) {
       tb_for_all_if (tb_char_t const*, value, environment, value) {
-        ret= ret * string (value) * URL_SEPARATOR;
+        ret= ret * as_string (value) * string (URL_SEPARATOR);
       }
     }
   }
@@ -205,7 +205,7 @@ get_stacktrace (unsigned int max_frames) {
       r << "  null\n";
     }
     else {
-      r << "  " << string (curname) << "\n";
+      r << "  " << as_string (curname) << "\n";
     }
   }
 
