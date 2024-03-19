@@ -220,7 +220,10 @@ remove (list<T> l, T what) {
 template <class T>
 bool
 contains (list<T> l, T what) {
-  return (!is_nil (l) && (l->item == what || contains (l->next, what)));
+  if (is_nil (l)) return false;
+  if (l->item == what) return true;
+
+  return contains (l->next, what);
 }
 
 #endif // defined LIST_CC
