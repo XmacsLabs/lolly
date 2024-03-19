@@ -279,19 +279,19 @@ is_func (lolly_tree<T> t, int l, int i) {
 template <typename T>
 inline bool
 is_bool (lolly_tree<T> t) {
-  return is_atomic (t) && is_bool (t->label);
+  return is_atomic (t) && ::is_bool (t->label);
 }
 
 template <typename T>
 inline bool
 is_int (lolly_tree<T> t) {
-  return is_atomic (t) && is_int (t->label);
+  return is_atomic (t) && ::is_int (t->label);
 }
 
 template <typename T>
 inline bool
 is_double (lolly_tree<T> t) {
-  return is_atomic (t) && is_double (t->label);
+  return is_atomic (t) && ::is_double (t->label);
 }
 
 template <typename T>
@@ -303,28 +303,28 @@ is_string (lolly_tree<T> t) {
 template <typename T>
 inline bool
 as_bool (lolly_tree<T> t) {
-  if (is_atomic (t)) return as_bool (t->label);
+  if (is_atomic (t)) return ::as_bool (t->label);
   else return false;
 }
 
 template <typename T>
 inline int
 as_int (lolly_tree<T> t) {
-  if (is_atomic (t)) return as_int (t->label);
+  if (is_atomic (t)) return ::as_int (t->label);
   else return 0;
 }
 
 template <typename T>
 inline long int
 as_long_int (lolly_tree<T> t) {
-  if (is_atomic (t)) return as_long_int (t->label);
+  if (is_atomic (t)) return ::as_long_int (t->label);
   else return 0;
 }
 
 template <typename T>
 inline double
 as_double (lolly_tree<T> t) {
-  if (is_atomic (t)) return as_double (t->label);
+  if (is_atomic (t)) return ::as_double (t->label);
   else return 0.0;
 }
 
