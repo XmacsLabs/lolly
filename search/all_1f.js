@@ -13,7 +13,7 @@ var searchData=
   ['unicode_5fget_5frange_10',['unicode_get_range',['../namespacelolly_1_1data.html#a600300cd50b77ad463498256968ca50e',1,'lolly::data']]],
   ['unicode_5ftest_2ecpp_11',['unicode_test.cpp',['../unicode__test_8cpp.html',1,'']]],
   ['unindent_12',['UNINDENT',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a5ba15b0a1ceaf400e3b265c8ff701316',1,'basic.hpp']]],
-  ['unit_20tests_13',['Unit Tests',['../md_devel_22.html',1,'Project 2: Unit Tests'],['../md_docs_2guide_2Test.html#autotoc_md54',1,'Unit Tests']]],
+  ['unit_20tests_13',['Unit Tests',['../md_devel_22.html',1,'Project 2: Unit Tests'],['../md_docs_2guide_2Test.html#autotoc_md75',1,'Unit Tests']]],
   ['unix_5fget_5flogin_14',['unix_get_login',['../unix__sys__utils_8cpp.html#a6a32597f2fe0043c202bedc9aa57ba39',1,'unix_get_login():&#160;unix_sys_utils.cpp'],['../unix__sys__utils_8hpp.html#a6a32597f2fe0043c202bedc9aa57ba39',1,'unix_get_login():&#160;unix_sys_utils.cpp']]],
   ['unix_5fget_5fprocess_5fid_15',['unix_get_process_id',['../unix__sys__utils_8cpp.html#a52149aad50c4f334c08d48bedc213dcf',1,'unix_get_process_id():&#160;unix_sys_utils.cpp'],['../unix__sys__utils_8hpp.html#a52149aad50c4f334c08d48bedc213dcf',1,'unix_get_process_id():&#160;unix_sys_utils.cpp']]],
   ['unix_5fget_5fusername_16',['unix_get_username',['../unix__sys__utils_8cpp.html#af197345d30384ae4130d00720108435d',1,'unix_get_username():&#160;unix_sys_utils.cpp'],['../unix__sys__utils_8hpp.html#af197345d30384ae4130d00720108435d',1,'unix_get_username():&#160;unix_sys_utils.cpp']]],
