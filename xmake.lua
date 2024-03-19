@@ -125,6 +125,8 @@ target("liblolly") do
     set_languages("c++17")
     set_policy("check.auto_ignore_flags", false)
     set_encodings("utf-8")
+    set_optimize("fastest")
+
     my_configvar_check()
 
     set_basename("lolly")
@@ -289,6 +291,7 @@ function add_bench_target(filepath)
         add_deps({"liblolly", "bench_base"})
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
+        set_optimize("fastest")
         add_packages("nanobench")
 
         if is_plat("mingw") then
