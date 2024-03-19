@@ -114,8 +114,11 @@ strong_equal (list<T> l1, list<T> l2) {
 template <class T>
 bool
 operator== (list<T> l1, list<T> l2) {
-  if (is_nil (l1) || is_nil (l2)) return (is_nil (l1) == is_nil (l2));
-  return (l1->item == l2->item) && (l1->next == l2->next);
+  bool l1_nil= is_nil (l1), l2_nil= is_nil (l2);
+  if (l1_nil || l2_nil) return l1_nil == l2_nil;
+  if (l1->item != l2->item) return false;
+
+  return l1->next == l2->next;
 }
 
 template <class T>
