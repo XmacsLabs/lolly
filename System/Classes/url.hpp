@@ -41,7 +41,7 @@ private:
   url (url_tree t) : rep (tm_new<url_rep> (t)) {}
 
 public:
-  url ()= delete;
+  url ();
   url (const char* name);
   url (string name);
   url (string dir, string name);
