@@ -39,6 +39,12 @@ main () {
   bench.run ("contains 32", [&] { contains (l32, 32L); });
   bench.run ("contains 64", [&] { contains (l32, 64L); });
 
+  bench.run ("append item 1", [&] { l1 * 2L; });
+  bench.run ("append item 4", [&] { l4 * 2L; });
+  bench.run ("append item 16", [&] { l16 * 2L; });
+  bench.run ("append item 32", [&] { l32 * 2L; });
+  bench.run ("append item 64", [&] { l64 * 2L; });
+
   bench.minEpochIterations (40000);
   bench.run ("l1 == l2 32", [&] { l32 == l32_2; });
 }
