@@ -148,7 +148,7 @@ int
 N (list<T> l) {
   if (is_nil (l)) return 0;
 
-  int cnt= 0;
+  int cnt= 1;
   while (!is_nil (l->next)) {
     cnt= cnt + 1;
     l  = l->next;
