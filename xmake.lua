@@ -240,9 +240,9 @@ function add_test_target(filepath)
         add_files(filepath) 
 
         if is_plat("wasm") then
-            add_cxxflags("-sDISABLE_EXCEPTION_CATCHING=0")
+            add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
             set_values("wasm.preloadfiles", {"xmake.lua", "tests", "LICENSE"})
-            add_ldflags("-sDISABLE_EXCEPTION_CATCHING=0")
+            add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
             on_run(function (target)
                 node = os.getenv("EMSDK_NODE")
                 os.cd("$(buildir)/wasm/wasm32/$(mode)/")
