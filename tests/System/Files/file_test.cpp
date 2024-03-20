@@ -288,7 +288,7 @@ TEST_MEMORY_LEAK_ALL
 #endif
 
 TEST_CASE ("load_string from 3 local files and check exception") {
-  url    u1       = url_pwd () * url ("tests/System/Files/sample_file.txt");
+  url    u1= url_pwd () * url ("tests/System/Files/sample_file.txt");
   url    u2= url_pwd () * url ("tests/System/Files/sample_file_copy.txt");
   url    u3= url_pwd () * url ("tests/System/Files/sample_file_throw.txt");
   string s1, s2, s3;
