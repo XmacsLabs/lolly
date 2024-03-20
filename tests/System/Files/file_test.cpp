@@ -282,8 +282,12 @@ TEST_CASE ("load_string from newly created file") {
   }
 }
 
+#ifdef OS_WASM
+// because exception throw, some object will not be released.
+TEST_MEMORY_LEAK_ALL
+#endif
+
 TEST_CASE ("load_string from 3 local files and check exception") {
-  url    lolly_tmp= get_lolly_tmp ();
   url    u1       = url_pwd () * url ("tests/System/Files/sample_file.txt");
   url    u2= url_pwd () * url ("tests/System/Files/sample_file_copy.txt");
   url    u3= url_pwd () * url ("tests/System/Files/sample_file_throw.txt");
@@ -294,6 +298,11 @@ TEST_CASE ("load_string from 3 local files and check exception") {
 
   TM_CHECK_THROWS (load_string (u3, s3, true));
 }
+
+#ifdef OS_WASM
+// because exception throw, some object will not be released.
+TEST_MEMORY_LEAK_RESET
+#endif
 
 TEST_CASE ("load_string from url with :") {
   url u=
