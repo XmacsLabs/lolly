@@ -5,7 +5,7 @@ set_allowedmodes("releasedbg", "release", "debug")
 add_rules("mode.debug")
 
 set_project("lolly")
-LOLLY_VERSION= "1.4.16"
+LOLLY_VERSION= "1.4.17"
 
 set_languages("c++17")
 includes("@builtin/check")
