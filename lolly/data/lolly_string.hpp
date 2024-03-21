@@ -10,7 +10,6 @@
 
 #include "classdef.hpp"
 #include "fast_alloc.hpp"
-#include <string>
 
 namespace lolly {
 namespace data {
@@ -97,16 +96,11 @@ public:
    */
   lolly_string_view (int N_, const T* a_) : N (N_), a (a_){};
   /**
-   * construct from std::string
-   */
-  lolly_string_view (std::basic_string<T> str)
-      : N (str.size ()), a (str.data ()){};
-  /**
    * construct from string literal
    */
   template <size_t N_>
   constexpr lolly_string_view (const T null_end_str[N_])
-      : N (N_ - 1), a (null_end_str){};
+      : N (N_), a (null_end_str){};
   /**
    * empty view is not allowed.
    */
@@ -116,10 +110,6 @@ public:
   lolly_string_view&   operator= (const lolly_string_view<T>&)= delete;
   lolly_string_view&   operator= (lolly_string_view<T>&&)     = delete;
   lolly_string_view<T> operator() (int start, int end) const;
-  /**
-   * construct std::string from view
-   */
-  operator std::basic_string<T> () { return std::basic_string<T> (a, N); };
 };
 
 template <typename T>

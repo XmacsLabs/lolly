@@ -15,4 +15,4 @@
 ftp_url::ftp_url (string name) : url (url_root ("ftp") * url_get_name (name)) {}
 
 ftp_url::ftp_url (const char* name)
-    : url (url_root ("ftp") * url_get_name (as_string (name))) {}
+    : url (url_root ("ftp") * url_get_name (string (name))) {}

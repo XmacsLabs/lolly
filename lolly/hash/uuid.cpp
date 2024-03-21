@@ -23,7 +23,7 @@ uuid_make () {
   if (ret == NULL) {
     TM_FAILED ("Failed to generate UUID");
   }
-  return as_string (ret);
+  return string (ret);
 }
 } // namespace hash
 } // namespace lolly

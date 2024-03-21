@@ -16,4 +16,4 @@ http_url::http_url (string name)
     : url (url_root ("http") * url_get_name (name)) {}
 
 http_url::http_url (const char* name)
-    : url (url_root ("http") * url_get_name (as_string (name))) {}
+    : url (url_root ("http") * url_get_name (string (name))) {}

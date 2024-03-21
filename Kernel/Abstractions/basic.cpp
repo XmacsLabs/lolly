@@ -12,7 +12,6 @@
 #include "basic.hpp"
 #include "analyze.hpp"
 #include "string.hpp"
-#include <string.h>
 
 int
 hash (pointer ptr) {
@@ -26,14 +25,13 @@ string the_report;
 
 void
 tm_throw (const char* msg) {
-  string msg_  = as_string (msg);
-  the_exception= msg_;
+  the_exception= msg;
   // the_report   = get_crash_report (msg);
   cout << "Throwing " << msg << LF;
   cout << "-------------------------------------------------\n";
   cout << the_report << LF;
   cout << "-------------------------------------------------\n";
-  throw string (msg_);
+  throw string (msg);
 }
 
 void
