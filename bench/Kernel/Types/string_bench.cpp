@@ -14,13 +14,46 @@ static ankerl::nanobench::Bench bench;
 int
 main () {
   lolly::init_tbox ();
-#ifdef OS_WASM
-  bench.minEpochIterations (2000);
-#else
-  bench.minEpochIterations (200000);
-#endif
-  bench.run ("string from int_16", [&] { as_string ((int16_t) 400); });
-  bench.run ("string from int_32", [&] { as_string ((int32_t) 400); });
-  bench.run ("string from int_64", [&] { as_string ((int64_t) 400); });
-  bench.run ("string from double", [&] { as_string ((double) 400.0); });
+  bench.run ("construct string", [&] {
+    string ("abc");
+    string ();
+  });
+  bench.run ("equality of string", [&] {
+    static string a ("abc"), b;
+    a == b;
+  });
+  bench.run ("equality of larger string", [&] {
+    static string a ("equality of larger string"),
+        b ("equality of larger strinG");
+    a == b;
+  });
+  bench.run ("compare string", [&] {
+    static string a ("ab"), b ("b");
+    a <= b;
+  });
+  bench.run ("compare larger string", [&] {
+    static string a ("compare larger string"), b ("compare LARGER string");
+    a <= b;
+  });
+  bench.run ("slice string", [&] {
+    static string a ("abcdefgh");
+    a (2, 3);
+  });
+  bench.run ("slice string with larger range", [&] {
+    static string a ("abcdefgh");
+    a (1, 6);
+  });
+  bench.minEpochIterations (40000);
+  bench.run ("concat string", [&] {
+    static string a ("abc"), b ("de");
+    a*            b;
+  });
+  bench.run ("append string", [&] {
+    static string a ("abc"), b ("de");
+    a << b;
+  });
+  bench.run ("is quoted", [&] {
+    static string a ("H\"ello TeXmacs\"");
+    is_quoted (a);
+  });
 }

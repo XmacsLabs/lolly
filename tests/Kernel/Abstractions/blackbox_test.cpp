@@ -40,9 +40,9 @@ blackbox t12= close_box<long double> (7.345);
 blackbox t[13]   = {t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12};
 blackbox b[13]   = {b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12};
 string   bout[13]= {"",
-                    "-2147483648",
+                    "-2147483648\0",
                     "2147483647",
-                    "-32768",
+                    "-32768\0",
                     "32767",
                     "`",
                     "255",
@@ -116,9 +116,8 @@ TEST_CASE ("Test fot display() and operator<<") {
     out.buffer ();
     out << b[i];
     str= out.unbuffer ();
-    CAPTURE (i);
-    string_neq (str, tout[i]);
-    if (i != 0) string_eq (str, bout[i]);
-    else string_neq (str, bout[i]);
+    CHECK_EQ (str != tout[i], true);
+    if (i != 0) CHECK_EQ (str == bout[i], true);
+    else CHECK_EQ (str != bout[i], true);
   }
 }

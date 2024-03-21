@@ -186,7 +186,7 @@ tb_directory_walk_func (tb_char_t const* path, tb_file_info_t const* info,
   tb_assert_and_check_return_val (path && info, TB_DIRECTORY_WALK_CODE_END);
 
   array<string>* p_arr_result= (array<string>*) priv;
-  (*p_arr_result) << as_string (tail (url_system (as_string (path))));
+  (*p_arr_result) << as_string (tail (url_system (string (path))));
   return TB_DIRECTORY_WALK_CODE_CONTINUE;
 }
 

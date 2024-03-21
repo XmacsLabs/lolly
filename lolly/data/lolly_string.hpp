@@ -100,7 +100,7 @@ public:
    */
   template <size_t N_>
   constexpr lolly_string_view (const T null_end_str[N_])
-      : N (N_ - 1), a (null_end_str){};
+      : N (N_), a (null_end_str){};
   /**
    * empty view is not allowed.
    */

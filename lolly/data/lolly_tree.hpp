@@ -29,9 +29,7 @@ template <typename T> class lolly_tree {
 
   inline lolly_tree () : rep (tm_new<lolly_tree_rep<T>> (string ())) {}
   inline lolly_tree<T> (string l) : rep (tm_new<lolly_tree_rep<T>> (l)) {}
-  template <size_t N>
-  inline lolly_tree (const char (&l)[N])
-      : rep (tm_new<lolly_tree_rep<T>> (l)) {}
+  inline lolly_tree (const char* l) : rep (tm_new<lolly_tree_rep<T>> (l)) {}
 
   inline lolly_tree (lolly_tree_rep<T>* rep2) : rep (rep2) { rep->ref_count++; }
 
@@ -230,15 +228,15 @@ operator!= (lolly_tree<T> t, string s) {
   return (t->op != /*STRING*/ 0) || (t->label != s);
 }
 
-template <typename T, size_t Ns>
+template <typename T>
 inline bool
-operator== (lolly_tree<T> t, const char (&s)[Ns]) {
+operator== (lolly_tree<T> t, const char* s) {
   return (t->op == /*STRING*/ 0) && (t->label == s);
 }
 
-template <typename T, size_t Ns>
+template <typename T>
 inline bool
-operator!= (lolly_tree<T> t, const char (&s)[Ns]) {
+operator!= (lolly_tree<T> t, const char* s) {
   return (t->op != /*STRING*/ 0) || (t->label != s);
 }
 

@@ -16,4 +16,4 @@ https_url::https_url (string name)
     : url (url_root ("https") * url_get_name (name)) {}
 
 https_url::https_url (const char* name)
-    : url (url_root ("https") * url_get_name (as_string (name))) {}
+    : url (url_root ("https") * url_get_name (string (name))) {}

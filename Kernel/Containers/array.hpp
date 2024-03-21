@@ -310,7 +310,7 @@ TMPL int hash (array<T> a);
 // cast implicitely.
 inline array<string>&
 operator<< (array<string>& a, char* x) {
-  return a << as_string (x);
+  return a << string (x);
 }
 #endif
 

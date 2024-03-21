@@ -44,24 +44,21 @@ static inline bool
 is_tuple (url_tree t, string s) {
   return (t->op == URL_TUPLE) && (N (t) >= 1) && (t[0] == s);
 }
-template <size_t Ns>
 static inline bool
-is_tuple (url_tree t, const char (&s)[Ns]) {
+is_tuple (url_tree t, const char* s) {
   return (t->op == URL_TUPLE) && (N (t) >= 1) && (t[0] == s);
 }
 static inline bool
 is_tuple (url_tree t, string s, int n) {
   return (t->op == URL_TUPLE) && (N (t) == (n + 1)) && (t[0] == s);
 }
-template <size_t Ns>
 static inline bool
-is_tuple (url_tree t, const char (&s)[Ns], int n) {
+is_tuple (url_tree t, const char* s, int n) {
   return (t->op == URL_TUPLE) && (N (t) == (n + 1)) && (t[0] == s);
 }
 
 url::url () : rep (tm_new<url_rep> (url_tuple ("none"))) {}
-url::url (const char* name)
-    : rep (tm_new<url_rep> (url_system (as_string (name))->t)) {}
+url::url (const char* name) : rep (tm_new<url_rep> (url_system (name)->t)) {}
 url::url (string name) : rep (tm_new<url_rep> (url_system (name)->t)) {}
 url::url (string path_name, string name)
     : rep (tm_new<url_rep> (url_system (path_name, name)->t)) {}
@@ -329,7 +326,7 @@ url
 url_pwd () {
   char path[TB_PATH_MAXN];
   if (tb_directory_current (path, TB_PATH_MAXN)) {
-    return url_system (as_string (path));
+    return url_system (path);
   }
   else {
     TM_FAILED ("FAILED to get pwd");

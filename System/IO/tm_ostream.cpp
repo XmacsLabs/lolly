@@ -12,7 +12,6 @@
 #include "tm_ostream.hpp"
 #include "fast_alloc.hpp"
 #include "string.hpp"
-#include <string.h>
 
 #if defined(OS_WIN) || defined(OS_MINGW)
 #include <windows.h>
@@ -140,7 +139,7 @@ buffered_ostream_rep::is_writable () const {
 
 void
 buffered_ostream_rep::write (const char* s) {
-  buf << lolly::data::lolly_string_view (strlen (s), s);
+  buf << s;
 }
 
 /******************************************************************************
@@ -326,24 +325,13 @@ tm_ostream::operator<< (const char* s) {
 }
 
 tm_ostream&
-tm_ostream::operator<< (lolly::data::lolly_string_view<char> a) {
-  using namespace lolly::data;
-  int i, n= a.N;
-  if (n == 0) return *this;
-  c_string buf (a);
-  rep->write (buf);
-  return *this;
-};
-
-tm_ostream&
-tm_ostream::operator<< (string a) {
-  using namespace lolly::data;
+operator<< (tm_ostream& out, string a) {
   int i, n= N (a);
-  if (n == 0) return *this;
-  c_string buf (a);
-  rep->write (buf);
-  return *this;
-};
+  if (n == 0) return out;
+  for (i= 0; i < n; i++)
+    out << a[i];
+  return out;
+}
 
 /******************************************************************************
  * Standard output streams

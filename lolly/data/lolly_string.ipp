@@ -145,8 +145,8 @@ template <typename T>
 lolly_string<T>
 copy (lolly_string<T> a) {
   int    i, n= N (a);
-  string r (n);
-  for (i= 0; i < n; i++)
+  string r (a);
+  for (i= 0; i < a; i++)
     r[i]= a[i];
   return r;
 };
