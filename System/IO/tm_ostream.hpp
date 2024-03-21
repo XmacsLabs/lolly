@@ -74,7 +74,7 @@ public:
   tm_ostream& operator<< (double);
   tm_ostream& operator<< (long double);
   tm_ostream& operator<< (const char*);
-  tm_ostream& operator<< (lolly::data::lolly_string_view<char> a);
+  tm_ostream& operator<< (string_view a);
   tm_ostream& operator<< (string a);
 };
 

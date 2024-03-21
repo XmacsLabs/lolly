@@ -77,8 +77,6 @@ response_to_tree (cpr::Response r, string url) {
   return ret;
 }
 
-using string_view= lolly::data::lolly_string_view<char>;
-
 static cpr::Header
 as_cpr_header (http_headers hmap) {
   cpr::Header      header= cpr::Header{};

@@ -63,7 +63,6 @@ _ts_free (void* a) {
 struct _ts_string {
   int   n, l;
   char* a;
-  using string_view= lolly::data::lolly_string_view<char>;
 
   inline _ts_string () : n (0), l (0), a (NULL) {}
   inline ~_ts_string () {

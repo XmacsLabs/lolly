@@ -99,7 +99,7 @@ public:
   /**
    * construct from std::string
    */
-  lolly_string_view (std::basic_string<T> str)
+  lolly_string_view (const std::basic_string<T>& str)
       : N (str.size ()), a (str.data ()){};
   /**
    * construct from string literal

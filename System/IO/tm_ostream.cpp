@@ -140,7 +140,7 @@ buffered_ostream_rep::is_writable () const {
 
 void
 buffered_ostream_rep::write (const char* s) {
-  buf << lolly::data::lolly_string_view (strlen (s), s);
+  buf << string_view (strlen (s), s);
 }
 
 /******************************************************************************
@@ -326,7 +326,7 @@ tm_ostream::operator<< (const char* s) {
 }
 
 tm_ostream&
-tm_ostream::operator<< (lolly::data::lolly_string_view<char> a) {
+tm_ostream::operator<< (string_view a) {
   using namespace lolly::data;
   int i, n= a.N;
   if (n == 0) return *this;

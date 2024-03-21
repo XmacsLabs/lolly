@@ -94,8 +94,6 @@ as_string_bool (bool f) {
   else return string ("false");
 }
 
-using string_view= lolly::data::lolly_string_view<char>;
-
 string
 as_string (int16_t i) {
   char buffer[6];

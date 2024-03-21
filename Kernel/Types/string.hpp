@@ -17,6 +17,7 @@
 #include <stdint.h>
 
 using lolly::data::string;
+using string_view= lolly::data::lolly_string_view<char>;
 
 bool     as_bool (string s);
 int      as_int (string s);

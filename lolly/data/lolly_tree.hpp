@@ -29,6 +29,7 @@ template <typename T> class lolly_tree {
 
   inline lolly_tree () : rep (tm_new<lolly_tree_rep<T>> (string ())) {}
   inline lolly_tree<T> (string l) : rep (tm_new<lolly_tree_rep<T>> (l)) {}
+  inline lolly_tree<T> (string_view l) : rep (tm_new<lolly_tree_rep<T>> (l)) {}
   template <size_t N>
   inline lolly_tree (const char (&l)[N])
       : rep (tm_new<lolly_tree_rep<T>> (l)) {}
