@@ -38,7 +38,7 @@ var searchData=
   ['res_5fname_35',['res_name',['../structrep.html#a20f641edec1b47fecf9a02c5d30ec5cd',1,'rep']]],
   ['reserve_36',['reserve',['../classlolly_1_1data_1_1lolly__string__rep.html#a987bd506f77fe1842cb5ea24114d0d8e',1,'lolly::data::lolly_string_rep']]],
   ['reset_37',['reset',['../classhashmap__rep.html#a13551f0f887bea1b6060b1a350c7658b',1,'hashmap_rep']]],
-  ['resize_38',['resize',['../classarray__rep.html#aecdacd699084c6dceb99ee77e0411a8f',1,'array_rep::resize()'],['../classhashmap__rep.html#a0a4f85993aa3f97d0ac1bb18fafcbf14',1,'hashmap_rep::resize()'],['../classhashset__rep.html#a0e1fd94c709222436c46380cae2e26c8',1,'hashset_rep::resize()'],['../classlolly_1_1data_1_1lolly__string__rep.html#a06c5a83c9edefde9208e69233b4d161d',1,'lolly::data::lolly_string_rep::resize()'],['../struct__ts__string.html#af9f8350fa876222790f765f794f7db0f',1,'_ts_string::resize()']]],
+  ['resize_38',['resize',['../classarray__rep.html#aecdacd699084c6dceb99ee77e0411a8f',1,'array_rep::resize()'],['../classhashmap__rep.html#a0a4f85993aa3f97d0ac1bb18fafcbf14',1,'hashmap_rep::resize()'],['../classhashset__rep.html#a0e1fd94c709222436c46380cae2e26c8',1,'hashset_rep::resize()'],['../classstring__rep.html#ac2d8118c863f5fe6ffa1a547a25fbabe',1,'string_rep::resize()'],['../classlolly_1_1data_1_1lolly__string__rep.html#a06c5a83c9edefde9208e69233b4d161d',1,'lolly::data::lolly_string_rep::resize()'],['../struct__ts__string.html#af9f8350fa876222790f765f794f7db0f',1,'_ts_string::resize()']]],
   ['resource_39',['RESOURCE',['../resource_8hpp.html#a30e92dd7364b0fac536dd1998eee30df',1,'resource.hpp']]],
   ['resource_2ehpp_40',['resource.hpp',['../resource_8hpp.html',1,'']]],
   ['resource_5fcode_41',['RESOURCE_CODE',['../resource_8hpp.html#a56e1edb20d69faab5ef6b2882ca1d8e1',1,'resource.hpp']]],
@@ -52,6 +52,6 @@ var searchData=
   ['roman_5ftens_49',['roman_tens',['../namespacelolly_1_1data.html#a6ffd21906a0295aee34daf329a2068c6',1,'lolly::data']]],
   ['roman_5fthousands_50',['roman_thousands',['../namespacelolly_1_1data.html#a50c7542e69d40b51a1d873f3bb374180',1,'lolly::data']]],
   ['root_51',['ROOT',['../namespacelolly_1_1io.html#ab6a34ebb135b6e0c21923f8f788091a3afd1c1127e67039733762957d75e54a59',1,'lolly::io']]],
-  ['round_5flength_52',['round_length',['../array_8ipp.html#a2db02dec333ae4764479a173b59fa5e3',1,'round_length():&#160;array.ipp'],['../namespacelolly_1_1data.html#ad0fb8adce5254a6877715107b0a5ff3d',1,'lolly::data::round_length()']]],
+  ['round_5flength_52',['round_length',['../array_8ipp.html#a2db02dec333ae4764479a173b59fa5e3',1,'round_length(int n, size_t s):&#160;array.ipp'],['../string_8cpp.html#a52be85c188a31a687d01b97965cfba23',1,'round_length(int n):&#160;string.cpp'],['../namespacelolly_1_1data.html#ad0fb8adce5254a6877715107b0a5ff3d',1,'lolly::data::round_length()']]],
   ['routine_53',['routine',['../hashmap__test_8cpp.html#a89004bb8340b90c70d3a66af077bed07',1,'hashmap_test.cpp']]]
 ];

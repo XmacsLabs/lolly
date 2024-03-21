@@ -10,7 +10,7 @@ digraph "string_searcher_rep"
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" ref_count",fontcolor="grey" ];
   Node3 [id="Node000003",label="int",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" s",fontcolor="grey" ];
-  Node4 [id="Node000004",label="string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 [id="Node000004",label="string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classstring.html",tooltip=" "];
   Node5 -> Node1 [id="edge4_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" a",fontcolor="grey" ];
   Node5 [id="Node000005",label="array\< hashmap\< int,\l array\< int \> \> \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classarray.html",tooltip=" "];
   Node6 -> Node5 [id="edge5_Node000005_Node000006",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< hashmap\< int, array\l\< int \> \> \>",fontcolor="grey" ];

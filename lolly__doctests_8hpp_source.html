@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.16</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.17</span>
    </div>
   </td>
  </tr>
@@ -134,23 +134,29 @@ $(function() { codefold.init(0); });
 </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="foldopen" id="foldopen00042" data-start="" data-end="">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a96d60a30156bc5024f0ace85b903300c">   42</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_ALL                                                   \</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">  TEST_CASE (&quot;test memory leak above&quot;) { CHECK_EQ (mem_used (), mem_lolly); }</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a893d6946d0422f925fe526011798ab07">   42</a></span><span class="preprocessor">#define TM_CHECK_THROWS(statements)                                            \</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">  CHECK_THROWS (statements);                                                   \</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">  handle_exceptions ();</span></div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="foldopen" id="foldopen00045" data-start="" data-end="">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a931102e4e092186b370d8091d2cb6712">   45</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_INIT                                                  \</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">  int mem_lolly= 0;                                                            \</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">  TEST_CASE (&quot;read before test&quot;) { mem_lolly= mem_used (); }</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="" data-end="">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a96d60a30156bc5024f0ace85b903300c">   46</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_ALL                                                   \</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">  TEST_CASE (&quot;test memory leak above&quot;) { CHECK_EQ (mem_used (), mem_lolly); }</span></div>
 </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="foldopen" id="foldopen00049" data-start="" data-end="">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a0f28f8e42b3e9f5f73cfa264bdab6873">   49</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_RESET                                                 \</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">  TEST_CASE (&quot;reset test of memory leak&quot;) { mem_lolly= mem_used (); }</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a931102e4e092186b370d8091d2cb6712">   49</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_INIT                                                  \</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">  int mem_lolly= 0;                                                            \</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">  TEST_CASE (&quot;read before test&quot;) { mem_lolly= mem_used (); }</span></div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00285">basic.hpp:285</a></div></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="" data-end="">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="lolly__doctests_8hpp.html#a0f28f8e42b3e9f5f73cfa264bdab6873">   53</a></span><span class="preprocessor">#define TEST_MEMORY_LEAK_RESET                                                 \</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">  TEST_CASE (&quot;reset test of memory leak&quot;) { mem_lolly= mem_used (); }</span></div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abasic_8hpp_html_aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4"><div class="ttname"><a href="basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4">LF</a></div><div class="ttdeci">@ LF</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00287">basic.hpp:287</a></div></div>
 <div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
 <div class="ttc" id="aclassurl_html"><div class="ttname"><a href="classurl.html">url</a></div><div class="ttdef"><b>Definition</b> <a href="url_8hpp_source.html#l00037">url.hpp:37</a></div></div>
 <div class="ttc" id="alolly__doctests_8hpp_html_a5e6ba44351f0142ae25657aa0aaa56e0"><div class="ttname"><a href="lolly__doctests_8hpp.html#a5e6ba44351f0142ae25657aa0aaa56e0">url_eq</a></div><div class="ttdeci">void url_eq(url left, url right)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">lolly_doctests.hpp:26</a></div></div>
@@ -158,7 +164,7 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="alolly__doctests_8hpp_html_ab237fa2fdfc1f7dd8169681df7b8d8c5"><div class="ttname"><a href="lolly__doctests_8hpp.html#ab237fa2fdfc1f7dd8169681df7b8d8c5">url_neq</a></div><div class="ttdeci">void url_neq(url left, url right)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">lolly_doctests.hpp:35</a></div></div>
 <div class="ttc" id="alolly__doctests_8hpp_html_ae80799ed3b9557f6a730d78567d94145"><div class="ttname"><a href="lolly__doctests_8hpp.html#ae80799ed3b9557f6a730d78567d94145">string_neq</a></div><div class="ttdeci">void string_neq(string left, string right)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">lolly_doctests.hpp:18</a></div></div>
 <div class="ttc" id="astring_8hpp_html"><div class="ttname"><a href="string_8hpp.html">string.hpp</a></div></div>
-<div class="ttc" id="atm__ostream_8cpp_html_a48e5827e9cd7a3f85b541ffc24937339"><div class="ttname"><a href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a></div><div class="ttdeci">tm_ostream &amp; cout</div><div class="ttdef"><b>Definition</b> <a href="tm__ostream_8cpp_source.html#l00355">tm_ostream.cpp:355</a></div></div>
+<div class="ttc" id="atm__ostream_8cpp_html_a48e5827e9cd7a3f85b541ffc24937339"><div class="ttname"><a href="tm__ostream_8cpp.html#a48e5827e9cd7a3f85b541ffc24937339">cout</a></div><div class="ttdeci">tm_ostream &amp; cout</div><div class="ttdef"><b>Definition</b> <a href="tm__ostream_8cpp_source.html#l00343">tm_ostream.cpp:343</a></div></div>
 <div class="ttc" id="aurl_8hpp_html"><div class="ttname"><a href="url_8hpp.html">url.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

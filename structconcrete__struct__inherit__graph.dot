@@ -31,7 +31,9 @@ digraph "concrete_struct"
   Node1 -> Node13 [id="edge12_Node000001_Node000013",dir="back",color="firebrick4",style="solid",tooltip=" "];
   Node13 [id="Node000013",label="rel_hashmap_rep\< T, U \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classrel__hashmap__rep.html",tooltip=" "];
   Node1 -> Node14 [id="edge13_Node000001_Node000014",dir="back",color="firebrick4",style="solid",tooltip=" "];
-  Node14 [id="Node000014",label="string_searcher_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classstring__searcher__rep.html",tooltip=" "];
-  Node1 -> Node15 [id="edge14_Node000001_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node15 [id="Node000015",label="url_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structurl__rep.html",tooltip=" "];
+  Node14 [id="Node000014",label="string_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classstring__rep.html",tooltip=" "];
+  Node1 -> Node15 [id="edge14_Node000001_Node000015",dir="back",color="firebrick4",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="string_searcher_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classstring__searcher__rep.html",tooltip=" "];
+  Node1 -> Node16 [id="edge15_Node000001_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="url_rep",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structurl__rep.html",tooltip=" "];
 }
