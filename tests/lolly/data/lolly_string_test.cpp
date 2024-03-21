@@ -10,6 +10,18 @@
 
 using namespace lolly::data;
 
+using string_u16_view= lolly::data::lolly_string_view<char16_t>;
+
+TEST_CASE ("construct string_view") {
+  CHECK (string_u16_view (u"abc") == u"abc");
+
+  const char16_t* str= u"def";
+  CHECK (string_u16_view (3, str) == u"def");
+
+  const std::u16string std_str (u"ghij");
+  CHECK (string_u16_view (std_str) == u"ghij");
+}
+
 TEST_CASE ("equality of string") {
   CHECK_EQ (string_u16 (u"abc") == u"abc", true);
   CHECK_EQ (string_u16 (u"abc") == u"", false);

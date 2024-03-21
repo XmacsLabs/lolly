@@ -95,17 +95,17 @@ public:
    * construct from arbitary const pointer with length. NUL can occurs in given
    * array
    */
-  lolly_string_view (int N_, const T* a_) : N (N_), a (a_){};
+  constexpr lolly_string_view (int N_, const T* a_) : N (N_), a (a_){};
   /**
    * construct from std::string
    */
-  lolly_string_view (std::basic_string<T> str)
+  constexpr lolly_string_view (const std::basic_string<T>& str)
       : N (str.size ()), a (str.data ()){};
   /**
    * construct from string literal
    */
   template <size_t N_>
-  constexpr lolly_string_view (const T null_end_str[N_])
+  constexpr lolly_string_view (const T (&null_end_str)[N_])
       : N (N_ - 1), a (null_end_str){};
   /**
    * empty view is not allowed.
