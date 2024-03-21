@@ -71,8 +71,10 @@ extern string the_exception;
 void tm_throw (const char* msg);
 
 /**
- * @brief Function used to handle exceptions by displaying the exception message
- * and exiting the program.
+ * @brief Function used to handle exceptions by displaying and clearing the
+ * exception message.
+ * @note if catching an exception throwed by \ref tm_throw, this function must
+ * be appended after catch(){...} block.
  */
 void handle_exceptions ();
 
