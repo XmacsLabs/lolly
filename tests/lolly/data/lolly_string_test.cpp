@@ -15,6 +15,8 @@ using string_u16_view= lolly::data::lolly_string_view<char16_t>;
 TEST_CASE ("construct string_view") {
   const char16_t arr[6]= u"hello";
   CHECK (string_u16_view (arr) == u"hello");
+  const char16_t arr3[6]= {u'5', u'c', u'h', u'a', u'r', u's'};
+  CHECK (string_u16_view (arr3) == u"5char");
 
   CHECK (string_u16_view (u"abc") == u"abc");
 
