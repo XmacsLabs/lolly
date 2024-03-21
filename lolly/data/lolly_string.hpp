@@ -95,7 +95,7 @@ public:
    * construct from arbitary const pointer with length. NUL can occurs in given
    * array
    */
-  constexpr lolly_string_view (int N_, const T* a_) : N (N_), a (a_){};
+  lolly_string_view (int N_, const T* a_) : N (N_), a (a_){};
   /**
    * construct from std::string
    */
