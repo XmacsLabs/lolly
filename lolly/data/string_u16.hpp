@@ -1,0 +1,153 @@
+
+/** \file string_u16.hpp
+ *  \copyright GPLv3
+ *  \details Strings with different type of char, and corresponding readonly
+ *           view of string. Zero-characters are allowed in strings.
+ *  \author jingkaimori
+ *  \date   2024
+ */
+
+#pragma once
+
+#include "classdef.hpp"
+#include "fast_alloc.hpp"
+#include "string_view.hpp"
+
+namespace lolly {
+namespace data {
+
+using string_u16_view= lolly::data::string_view<char16_t>;
+
+class string_u16_rep : concrete_struct {
+  int       n;
+  int       a_N;
+  char16_t* a;
+
+public:
+  inline string_u16_rep () : n (0), a_N (0), a (NULL) {}
+  string_u16_rep (int n);
+  inline ~string_u16_rep () {
+    if (n != 0) tm_delete_array (a);
+  }
+  /**
+   * @brief expand (or shrink) string by delta, but do not release memory when
+   * string is shrinked.
+   *
+   * @return string length before expansion
+   */
+  int expand_or_shrink_by (int delta);
+
+  /**
+   * @brief expand (or shrink) string to given length n, and try to release
+   * memory when string is shrinked.
+   *
+   * @note expand_or_shrink_by may be faster if memory space is reserved
+   */
+  void resize (int n);
+
+  /**
+   * @brief reserve memory space to contain at least n word in the whole string.
+   * Do not affect length of string, and do not release memory when n is smaller
+   * than current space.
+   */
+  void reserve (int n);
+
+  friend class string_u16;
+  friend int N (string_u16 a);
+};
+
+class string_u16 {
+  CONCRETE (string_u16);
+  inline string_u16 () : rep (tm_new<string_u16_rep> ()) {}
+  inline explicit string_u16 (int n) : rep (tm_new<string_u16_rep> (n)) {}
+  string_u16 (char16_t c);
+  string_u16 (const string_u16_view& c);
+  string_u16 (char16_t c, int n);
+  template <size_t N> string_u16 (const char16_t (&s)[N]);
+  inline char16_t* buffer () { return rep->a; }
+  inline char16_t* buffer (int size) {
+    rep->resize (size);
+    return rep->a;
+  }
+  inline operator string_u16_view () {
+    return string_u16_view (rep->n, rep->a);
+  }
+  inline char16_t& operator[] (int i) { return rep->a[i]; }
+  string_u16_view  operator() (int start, int end);
+};
+CONCRETE_CODE (string_u16);
+
+inline int
+N (string_u16 a) {
+  return a->n;
+}
+
+int
+hash (string_u16 s) {
+  int i, h= 0, n= N (s);
+  for (i= 0; i < n; i++) {
+    h= (h << 9) + (h >> 23);
+    h= h + ((int) s[i]);
+  }
+  return h;
+};
+
+// string_u16                     copy (const string_u16_view& a);
+// string_u16                     copy (string_u16 a);
+// template <size_t N> string_u16 copy (const char16_t b[N]);
+//
+// string_u16&        operator<< (string_u16& a, char16_t c);
+// inline string_u16& operator<< (string_u16& a, string_u16 b);
+// inline string_u16& operator<< (string_u16& a, const string_u16_view& b);
+// template <size_t Nb>
+// inline string_u16& operator<< (string_u16& a, const char16_t (&b)[Nb]);
+//
+// template <typename T>
+// string_u16 operator* (const string_u16_view& a, string_u16 b);
+// template <typename T, size_t Nb>
+// string_u16 operator* (const string_u16_view& a, const T (&b)[Nb]);
+// string_u16 operator* (string_u16 a, string_u16 b);
+// string_u16 operator* (string_u16 a, const string_u16_view& b);
+// template <typename T, size_t Nb>
+// string_u16 operator* (string_u16 a, const T (&b)[Nb]);
+// template <typename T, size_t Na>
+// string_u16 operator* (const T (&a)[Na], const string_u16_view& b);
+// template <typename T, size_t Na>
+// string_u16 operator* (const T (&a)[Na], string_u16 b);
+//
+// template <typename T> bool operator== (const string_u16_view& a, string_u16
+// b); template <typename T, size_t Nb> bool operator== (const string_u16_view&
+// a, const T (&b)[Nb]); template <typename T> bool operator== (string_u16 a,
+// string_u16 b); template <typename T> bool operator== (string_u16 a, const
+// string_u16_view& b); template <typename T, size_t Nb> bool operator==
+// (string_u16 a, const T (&b)[Nb]); template <typename T, size_t Na> bool
+// operator== (const T (&a)[Na], string_u16 b);
+//
+// bool operator!= (const string_u16_view& a, string_u16 b);
+// template <typename T, size_t Nb>
+// bool operator!= (const string_u16_view& a, const T (&b)[Nb]);
+// template <typename T> bool operator!= (string_u16 a, string_u16 b);
+// template <typename T> bool operator!= (string_u16 a, const string_u16_view&
+// b); template <typename T, size_t Nb> bool operator!= (string_u16 a, const T
+// (&b)[Nb]); template <typename T, size_t Na> bool operator!= (const T
+// (&a)[Na], const string_u16_view& b); template <typename T, size_t Na> bool
+// operator!= (const T (&a)[Na], string_u16 b);
+//
+// template <typename T> bool operator< (const string_u16_view& a, string_u16
+// b); template <typename T> bool operator< (string_u16 a, string_u16 b);
+// template <typename T> bool operator< (string_u16 a, const string_u16_view&
+// b); template <typename T, size_t Nb> bool operator< (string_u16 a, const T
+// (&b)[Nb]); template <typename T, size_t Na> bool operator< (const T (&a)[Na],
+// const string_u16_view& b); template <typename T, size_t Na> bool operator<
+// (const T (&a)[Na], string_u16 b);
+//
+// template <typename T> bool operator<= (const string_u16_view& a, string_u16
+// b); template <typename T> bool operator<= (string_u16 a, string_u16 b);
+// template <typename T> bool operator<= (string_u16 a, const string_u16_view&
+// b); template <typename T, size_t Nb> bool operator<= (string_u16 a, const T
+// (&b)[Nb]); template <typename T, size_t Na> bool operator<= (const T
+// (&a)[Na], string_u16 b);
+//
+// template <typename T> int hash (string_u16 s);
+} // namespace data
+} // namespace lolly

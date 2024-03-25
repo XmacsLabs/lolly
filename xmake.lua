@@ -213,6 +213,7 @@ function add_test_target(filepath)
         add_deps("test_base")
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
+        set_exceptions("cxx")
 
         if is_plat("mingw") then
             add_packages("mingw-w64")
