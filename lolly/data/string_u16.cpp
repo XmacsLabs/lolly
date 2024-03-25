@@ -98,14 +98,6 @@ string_u16::string_u16 (char16_t c, int n) : rep (tm_new<string_u16_rep> (n)) {
     rep->a[i]= c;
 };
 
-template <size_t N>
-string_u16::string_u16 (const char16_t (&s)[N])
-    : rep (tm_new<string_u16_rep> (N - 1)) {
-  constexpr int n= N - 1;
-  for (int i= 0; i < n; i++)
-    rep->a[i]= s[i];
-};
-
 string_u16_view
 string_u16::operator() (int start, int end) {
   if (end <= start) {
@@ -231,11 +223,6 @@ string_u16::operator() (int start, int end) {
 // bool
 // operator!= (const string_u16_view& a, string_u16 b) {
 //   return a != ((string_u16_view) b);
-// };
-//
-// bool
-// operator!= (string_u16 a, string_u16 b) {
-//   return ((string_u16_view) a) != ((string_u16_view) b);
 // };
 //
 // bool

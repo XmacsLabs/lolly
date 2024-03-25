@@ -58,22 +58,33 @@ public:
 
 class string_u16 {
   CONCRETE (string_u16);
+
   inline string_u16 () : rep (tm_new<string_u16_rep> ()) {}
   inline explicit string_u16 (int n) : rep (tm_new<string_u16_rep> (n)) {}
+
+  template <size_t N_>
+  string_u16 (const char16_t (&s)[N_]) : rep (tm_new<string_u16_rep> (N_ - 1)) {
+    constexpr int n= N_ - 1;
+    for (int i= 0; i < n; i++)
+      rep->a[i]= s[i];
+  };
+
   string_u16 (char16_t c);
-  string_u16 (const string_u16_view& c);
   string_u16 (char16_t c, int n);
-  template <size_t N> string_u16 (const char16_t (&s)[N]);
+  string_u16 (const string_u16_view& c);
+
   inline char16_t* buffer () { return rep->a; }
   inline char16_t* buffer (int size) {
     rep->resize (size);
     return rep->a;
   }
+
   inline operator string_u16_view () {
     return string_u16_view (rep->n, rep->a);
   }
+  string_u16_view operator() (int start, int end);
+
   inline char16_t& operator[] (int i) { return rep->a[i]; }
-  string_u16_view  operator() (int start, int end);
 };
 CONCRETE_CODE (string_u16);
 
@@ -82,7 +93,7 @@ N (string_u16 a) {
   return a->n;
 }
 
-int
+inline int
 hash (string_u16 s) {
   int i, h= 0, n= N (s);
   for (i= 0; i < n; i++) {
@@ -90,6 +101,16 @@ hash (string_u16 s) {
     h= h + ((int) s[i]);
   }
   return h;
+};
+
+inline bool
+operator== (string_u16 a, string_u16 b) {
+  return ((string_u16_view) a) == ((string_u16_view) b);
+};
+
+inline bool
+operator!= (string_u16 a, string_u16 b) {
+  return ((string_u16_view) a) != ((string_u16_view) b);
 };
 
 // string_u16                     copy (const string_u16_view& a);
@@ -117,16 +138,16 @@ hash (string_u16 s) {
 //
 // template <typename T> bool operator== (const string_u16_view& a, string_u16
 // b); template <typename T, size_t Nb> bool operator== (const string_u16_view&
-// a, const T (&b)[Nb]); template <typename T> bool operator== (string_u16 a,
-// string_u16 b); template <typename T> bool operator== (string_u16 a, const
+// a, const T (&b)[Nb]);
+
+// template <typename T> bool operator== (string_u16 a, const
 // string_u16_view& b); template <typename T, size_t Nb> bool operator==
 // (string_u16 a, const T (&b)[Nb]); template <typename T, size_t Na> bool
 // operator== (const T (&a)[Na], string_u16 b);
-//
+
 // bool operator!= (const string_u16_view& a, string_u16 b);
 // template <typename T, size_t Nb>
 // bool operator!= (const string_u16_view& a, const T (&b)[Nb]);
-// template <typename T> bool operator!= (string_u16 a, string_u16 b);
 // template <typename T> bool operator!= (string_u16 a, const string_u16_view&
 // b); template <typename T, size_t Nb> bool operator!= (string_u16 a, const T
 // (&b)[Nb]); template <typename T, size_t Na> bool operator!= (const T

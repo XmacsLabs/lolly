@@ -5,25 +5,25 @@
  *  \date   2024
  */
 
-#include "doctest/doctest.h"
 #include "lolly/data/string_u16.hpp"
+#include <doctest/doctest.h>
 
 using namespace lolly::data;
 
-// TEST_CASE ("equality of string") {
-//   CHECK_EQ (string_u16 (u"abc") == u"abc", true);
-//   CHECK_EQ (string_u16 (u"abc") == u"", false);
-//
-//   CHECK_EQ (string_u16 (u"abc") != u"abc", false);
-//   CHECK_EQ (string_u16 (u"abc") != u"", true);
-//
-//   CHECK_EQ (string_u16 (u"abc") == string_u16 (u"abc"), true);
-//   CHECK_EQ (string_u16 (u"abc") == string_u16 (), false);
-//   CHECK_EQ (string_u16 (u"abc") != string_u16 (u"abc"), false);
-//   CHECK_EQ (string_u16 (u"abc") != string_u16 (), true);
-//
-//   CHECK_EQ (string_u16 () == string_u16 (), true);
-// }
+TEST_CASE ("equality of string") {
+  CHECK_EQ (string_u16 () == string_u16 (), true);
+  CHECK_EQ (string_u16 (u"abc") == u"abc", true);
+  CHECK_EQ (string_u16 (u"abc") == u"", false);
+
+  CHECK_EQ (string_u16 (u"abc") != u"abc", false);
+  CHECK_EQ (string_u16 (u"abc") != u"", true);
+
+  CHECK_EQ (string_u16 (u"abc") == string_u16 (u"abc"), true);
+  CHECK_EQ (string_u16 (u"abc") == string_u16 (), false);
+  CHECK_EQ (string_u16 (u"abc") != string_u16 (u"abc"), false);
+  CHECK_EQ (string_u16 (u"abc") != string_u16 (), true);
+}
+
 //
 // TEST_CASE ("compare string") {
 //   CHECK (string_u16 (u"ab") < string_u16 (u"b"));
