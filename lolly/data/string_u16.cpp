@@ -171,17 +171,11 @@ string_u16::operator() (int start, int end) {
 //     a[i + na]= b[i];
 //   return a;
 // }
-//
-// string_u16
-// operator* (const string_u16& a, string_u16 b) {
-//   return a * ((string_u16_view) b);
-// };
-//
-// string_u16
-// operator* (string_u16 a, const lolly_string_view<T>& b) {
-//   return ((string_u16_view) a) * b;
-// };
-//
+
+string_u16 operator* (const string_u16 a, string_u16 b){};
+
+string_u16 operator* (string_u16 a, const string_u16_view& b){};
+
 // bool
 // operator== (const lolly_string_view<T>& a, string_u16 b) {
 //   return a == ((string_u16_view) b);

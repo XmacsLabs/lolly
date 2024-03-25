@@ -11,6 +11,7 @@
 
 #include "classdef.hpp"
 #include "fast_alloc.hpp"
+#include "minmax.hpp"
 
 namespace lolly {
 namespace data {

@@ -38,27 +38,28 @@ TEST_CASE ("equality of string") {
 //   CHECK (string_u16 () <= string_u16 (u"0"));
 //   CHECK (!(string_u16 (u"0") <= string_u16 ()));
 // }
-//
-// TEST_CASE ("test slice") {
-//   CHECK_EQ (string_u16 (u"abcde") (0, 0) == string_u16 (), true);
-//   CHECK_EQ (string_u16 (u"abcde") (0, 1) == string_u16 (u"a"), true);
-//   CHECK_EQ (string_u16 (u"abcde") (1, 3) (0, 1) == string_u16 (u"b"), true);
-//   CHECK_EQ (string_u16 (u"abcde") (0, 10) == string_u16 (u"abcde"), true);
-//   CHECK_EQ (string_u16 (u"abcde") (-1, 1) == string_u16 (u"a"), true);
-//   CHECK_EQ (string_u16 (u"abcde") (3, 2) == string_u16 (), true);
-//   CHECK_EQ (string_u16 (u"abcde") (3, -2) == string_u16 (), true);
-//   CHECK_EQ (string_u16 (u"abcde") (10, 11) == string_u16 (), true);
-//   CHECK_EQ (string_u16 (u"abcde") (-3, -2) == string_u16 (), true);
-// }
-//
-// TEST_CASE ("test concat") {
-//   CHECK_EQ (string_u16 (u"abc") * u"de" == string_u16 (u"abcde"), true);
-//   CHECK_EQ (string_u16 (u"abc") * string_u16 (u"de") == string_u16
-//   (u"abcde"),
-//             true);
-//   CHECK_EQ (u"abc" * string_u16 (u"de") == string_u16 (u"abcde"), true);
-// }
-//
+
+TEST_CASE ("test slice") {
+  CHECK_EQ (string_u16 (u"abcde") (0, 0) == string_u16 (), true);
+  CHECK_EQ (string_u16 (u"abcde") (0, 1) == string_u16 (u"a"), true);
+  CHECK_EQ (string_u16 (u"abcde") (1, 3) (0, 1) == string_u16 (u"b"), true);
+  CHECK_EQ (string_u16 (u"abcde") (0, 10) == string_u16 (u"abcde"), true);
+  CHECK_EQ (string_u16 (u"abcde") (-1, 1) == string_u16 (u"a"), true);
+  CHECK_EQ (string_u16 (u"abcde") (3, 2) == string_u16 (), true);
+  CHECK_EQ (string_u16 (u"abcde") (3, -2) == string_u16 (), true);
+  CHECK_EQ (string_u16 (u"abcde") (10, 11) == string_u16 (), true);
+  CHECK_EQ (string_u16 (u"abcde") (-3, -2) == string_u16 (), true);
+}
+
+TEST_CASE ("test concat") {
+  CHECK_EQ (string_u16 (u"abc") * u"de" == string_u16 (u"abcde"), true);
+  CHECK_EQ (string_u16 (u"abc") * string_u16 (u"de") == string_u16 (u"abcde"),
+            true);
+  CHECK_EQ (string_u16 (u"abc") * string_u16 (u"Hello") (0, 2) ==
+                string_u16 (u"abcHe"),
+            true);
+}
+
 // /******************************************************************************
 //  * Modifications
 //  ******************************************************************************/
