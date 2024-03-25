@@ -121,4 +121,6 @@ public:
 };
 CONCRETE_CODE (c_string);
 
+typedef string string_u8;
+
 #endif // defined STRING_H
