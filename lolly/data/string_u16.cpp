@@ -172,9 +172,23 @@ string_u16::operator() (int start, int end) {
 //   return a;
 // }
 
-string_u16 operator* (const string_u16 a, string_u16 b){};
+string_u16
+operator* (string_u16 a, const string_u16_view& b) {
+  int        a_N= N (a), b_N= N (b);
+  string_u16 c (a_N + b_N);
+  for (int i= 0; i < a_N; i++) {
+    c[i]= a[i];
+  }
+  for (int i= 0; i < b_N; i++) {
+    c[i + a_N]= b.a[i];
+  }
+  return c;
+};
 
-string_u16 operator* (string_u16 a, const string_u16_view& b){};
+string_u16
+operator* (string_u16 a, string_u16 b) {
+  return a * ((string_u16_view) b);
+}
 
 // bool
 // operator== (const lolly_string_view<T>& a, string_u16 b) {

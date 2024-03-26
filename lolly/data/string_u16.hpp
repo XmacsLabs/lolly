@@ -18,6 +18,8 @@ namespace data {
 
 using string_u16_view= lolly::data::string_view<char16_t>;
 
+class string_u16;
+
 class string_u16_rep : concrete_struct {
   int       n;
   int       a_N;
