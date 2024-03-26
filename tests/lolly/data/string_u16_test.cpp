@@ -5,6 +5,7 @@
  *  \date   2024
  */
 
+#include "a_lolly_test.hpp"
 #include "lolly/data/string_u16.hpp"
 #include <doctest/doctest.h>
 
@@ -60,18 +61,18 @@ TEST_CASE ("test concat") {
             true);
 }
 
-// /******************************************************************************
-//  * Modifications
-//  ******************************************************************************/
-//
-// TEST_CASE ("test append") {
-//   auto str= string_u16 ();
-//   str << u'x';
-//   CHECK_EQ (str == string_u16 (u"x"), true);
-//   str << string_u16 (u"yz");
-//   CHECK_EQ (str == string_u16 (u"xyz"), true);
-// }
-//
+/******************************************************************************
+ * Modifications
+ ******************************************************************************/
+
+TEST_CASE ("test append") {
+  auto str= string_u16 ();
+  str << u'x';
+  string_eq (str, u"x");
+  str << string_u16 (u"yz");
+  string_eq (str, u"xyz");
+}
+
 // TEST_CASE ("test reserve along with append") {
 //
 //   SUBCASE ("reserved more space") {

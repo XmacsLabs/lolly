@@ -73,7 +73,7 @@ class string_u16 {
 
   string_u16 (char16_t c);
   string_u16 (char16_t c, int n);
-  string_u16 (const string_u16_view& c);
+  string_u16 (const string_u16_view& sv);
 
   inline char16_t* buffer () { return rep->a; }
   inline char16_t* buffer (int size) {
@@ -118,9 +118,10 @@ operator!= (string_u16 a, string_u16 b) {
 // string_u16                     copy (const string_u16_view& a);
 // string_u16                     copy (string_u16 a);
 // template <size_t N> string_u16 copy (const char16_t b[N]);
-//
-// string_u16&        operator<< (string_u16& a, char16_t c);
-// inline string_u16& operator<< (string_u16& a, string_u16 b);
+
+string_u16& operator<< (string_u16& a, char16_t c);
+string_u16& operator<< (string_u16& a, string_u16 b);
+
 // inline string_u16& operator<< (string_u16& a, const string_u16_view& b);
 // template <size_t Nb>
 // inline string_u16& operator<< (string_u16& a, const char16_t (&b)[Nb]);

@@ -7,8 +7,6 @@
  *  \date   2024
  */
 
-#pragma once
-
 #include "string_u16.hpp"
 #include "minmax.hpp"
 
@@ -135,23 +133,23 @@ string_u16::operator() (int start, int end) {
 //     r[i]= a[i];
 //   return r;
 // };
-//
-// string_u16&
-// operator<< (string_u16& a, T ch) {
-//   int na= a->expand_or_shrink_by (1);
-//   a[na] = ch;
-//   return a;
-// };
-//
-// inline string_u16&
-// operator<< (string_u16& a, string_u16 b) {
-//   int i, nb= N (b);
-//   int na= a->expand_or_shrink_by (nb);
-//   for (i= 0; i < nb; i++)
-//     a[i + na]= b[i];
-//   return a;
-// };
-//
+
+string_u16&
+operator<< (string_u16& a, char16_t ch) {
+  int old_a_N= a->expand_or_shrink_by (1);
+  a[old_a_N] = ch;
+  return a;
+};
+
+string_u16&
+operator<< (string_u16& a, string_u16 b) {
+  int b_N    = N (b);
+  int old_a_N= a->expand_or_shrink_by (b_N);
+  for (int i= 0; i < b_N; i++)
+    a[i + old_a_N]= b[i];
+  return a;
+};
+
 // inline string_u16&
 // operator<< (string_u16& a, const string_u16& b) {
 //   int i;
