@@ -25,20 +25,19 @@ TEST_CASE ("equality of string") {
   CHECK_EQ (string_u16 (u"abc") != string_u16 (), true);
 }
 
-//
-// TEST_CASE ("compare string") {
-//   CHECK (string_u16 (u"ab") < string_u16 (u"b"));
-//   CHECK (!(string_u16 (u"b") < string_u16 (u"ab")));
-//   CHECK (string_u16 () < string_u16 (u"0"));
-//   CHECK (!(string_u16 (u"0") < string_u16 ()));
-//   CHECK (string_u16 (u"a") <= string_u16 (u"a"));
-//   CHECK (!(string_u16 (u"ab") <= string_u16 (u"a")));
-//   CHECK (string_u16 (u"ab") <= string_u16 (u"b"));
-//   CHECK (!(string_u16 (u"b") <= string_u16 (u"ab")));
-//   CHECK (string_u16 () <= string_u16 ());
-//   CHECK (string_u16 () <= string_u16 (u"0"));
-//   CHECK (!(string_u16 (u"0") <= string_u16 ()));
-// }
+TEST_CASE ("compare string") {
+  CHECK (string_u16 (u"ab") < string_u16 (u"b"));
+  CHECK (!(string_u16 (u"b") < string_u16 (u"ab")));
+  CHECK (string_u16 () < string_u16 (u"0"));
+  CHECK (!(string_u16 (u"0") < string_u16 ()));
+  CHECK (string_u16 (u"a") <= string_u16 (u"a"));
+  CHECK (!(string_u16 (u"ab") <= string_u16 (u"a")));
+  CHECK (string_u16 (u"ab") <= string_u16 (u"b"));
+  CHECK (!(string_u16 (u"b") <= string_u16 (u"ab")));
+  CHECK (string_u16 () <= string_u16 ());
+  CHECK (string_u16 () <= string_u16 (u"0"));
+  CHECK (!(string_u16 (u"0") <= string_u16 ()));
+}
 
 TEST_CASE ("test slice") {
   CHECK_EQ (string_u16 (u"abcde") (0, 0) == string_u16 (), true);
