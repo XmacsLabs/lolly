@@ -106,33 +106,23 @@ string_u16::operator() (int start, int end) {
   return string_u16_view (end - start, rep->a + start);
 }
 
-// string_u16
-// copy (const string_u16_view& a) {
-//   int        i;
-//   string_u16 r (a.N);
-//   for (i= 0; i < a.N; i++)
-//     r[i]= a.a[i];
-//   return r;
-// };
-//
-// string_u16
-// copy (string_u16 a) {
-//   int        i, n= N (a);
-//   string_u16 r (a);
-//   for (i= 0; i < a; i++)
-//     r[i]= a[i];
-//   return r;
-// };
-//
-// template <size_t N>
-// string_u16
-// copy (const T a[N]) {
-//   int    i;
-//   string r ((int) N);
-//   for (i= 0; i < N; i++)
-//     r[i]= a[i];
-//   return r;
-// };
+string_u16
+copy (const string_u16_view& a) {
+  int        i;
+  string_u16 r (a.N);
+  for (i= 0; i < a.N; i++)
+    r[i]= a.a[i];
+  return r;
+};
+
+string_u16
+copy (string_u16 a) {
+  int        i, n= N (a);
+  string_u16 r (a);
+  for (i= 0; i < a; i++)
+    r[i]= a[i];
+  return r;
+};
 
 string_u16&
 operator<< (string_u16& a, char16_t ch) {
@@ -149,26 +139,6 @@ operator<< (string_u16& a, string_u16 b) {
     a[i + old_a_N]= b[i];
   return a;
 };
-
-// inline string_u16&
-// operator<< (string_u16& a, const string_u16& b) {
-//   int i;
-//   int na= a->expand_or_shrink_by (b.N);
-//   for (i= 0; i < b.N; i++)
-//     a[i + na]= b.a[i];
-//   return a;
-// };
-//
-// template <size_t Nb>
-// inline string_u16&
-// operator<< (string_u16& a, const char16_t (&b)[Nb]) {
-//   int           i;
-//   constexpr int nb= Nb - 1;
-//   int           na= a->expand_or_shrink_by (nb);
-//   for (i= 0; i < nb; i++)
-//     a[i + na]= b[i];
-//   return a;
-// }
 
 string_u16
 operator* (string_u16 a, const string_u16_view& b) {
@@ -188,127 +158,5 @@ operator* (string_u16 a, string_u16 b) {
   return a * ((string_u16_view) b);
 }
 
-// bool
-// operator== (const lolly_string_view<T>& a, string_u16 b) {
-//   return a == ((string_u16_view) b);
-// };
-//
-// template <typename T, size_t Nb>
-// bool
-// operator== (const lolly_string_view<T>& a, const T (&b)[Nb]) {
-//   constexpr int nb= Nb - 1;
-//   if (a.N != nb) return false;
-//   const T* Sa= a.a;
-//   for (int i= 0; i < nb; i++)
-//     if (Sa[i] != b[i]) return false;
-//   return true;
-// };
-//
-// bool
-// operator== (string_u16 a, string_u16 b) {
-//   return ((string_u16_view) a) == ((string_u16_view) b);
-// };
-//
-// bool
-// operator== (string_u16 a, const string_u16_view& b) {
-//   return ((string_u16_view) a) == b;
-// };
-//
-// template <typename T, size_t Nb>
-// bool
-// operator== (string_u16 a, const T (&b)[Nb]) {
-//   return ((string_u16_view) a) == b;
-// };
-//
-// template <typename T, size_t Na>
-// bool
-// operator== (const T (&a)[Na], string_u16 b) {
-//   return a == ((string_u16_view) b);
-// };
-//
-// bool
-// operator!= (const string_u16_view& a, string_u16 b) {
-//   return a != ((string_u16_view) b);
-// };
-//
-// bool
-// operator!= (string_u16 a, const lolly_string_view<T>& b) {
-//   return ((string_u16_view) a) != b;
-// };
-//
-// template <typename T, size_t Nb>
-// bool
-// operator!= (string_u16 a, const T (&b)[Nb]) {
-//   return ((string_u16_view) a) != b;
-// };
-//
-// template <typename T, size_t Na>
-// bool
-// operator!= (const T (&a)[Na], string_u16 b) {
-//   return a != ((string_u16_view) b);
-// };
-//
-// template <typename T>
-// bool
-// operator< (const lolly_string_view<T>& a, string_u16 b) {
-//   return a < ((string_u16_view) b);
-// };
-// template <typename T>
-// bool
-// operator< (string_u16 a, string_u16 b) {
-//   return ((string_u16_view) a) < ((string_u16_view) b);
-// };
-// template <typename T>
-// bool
-// operator< (string_u16 a, const lolly_string_view<T>& b) {
-//   return ((string_u16_view) a) < b;
-// };
-// template <typename T, size_t Nb>
-// bool
-// operator< (string_u16 a, const T (&b)[Nb]) {
-//   return ((string_u16_view) a) < b;
-// };
-// template <typename T, size_t Na>
-// bool
-// operator< (const T (&a)[Na], string_u16 b) {
-//   return a < ((string_u16_view) b);
-// };
-//
-// template <typename T>
-// bool
-// operator<= (const lolly_string_view<T>& a, string_u16 b) {
-//   return a <= ((string_u16_view) b);
-// };
-// template <typename T>
-// bool
-// operator<= (string_u16 a, string_u16 b) {
-//   return ((string_u16_view) a) <= ((string_u16_view) b);
-// };
-// template <typename T>
-// bool
-// operator<= (string_u16 a, const lolly_string_view<T>& b) {
-//   return ((string_u16_view) a) <= b;
-// };
-// template <typename T, size_t Nb>
-// bool
-// operator<= (string_u16 a, const T (&b)[Nb]) {
-//   return ((string_u16_view) a) <= b;
-// };
-// template <typename T, size_t Na>
-// bool
-// operator<= (const T (&a)[Na], string_u16 b) {
-//   return a <= ((string_u16_view) b);
-// };
-//
-// template <typename T>
-// int
-// hash (lolly_string_view<T> s) {
-//   int i, h= 0, n= s.N;
-//   for (i= 0; i < n; i++) {
-//     h= (h << 9) + (h >> 23);
-//     h= h + ((int) s.a[i]);
-//   }
-//   return h;
-// };
 } // namespace data
 } // namespace lolly

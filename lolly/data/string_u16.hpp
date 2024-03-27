@@ -131,54 +131,8 @@ string_u16& operator<< (string_u16& a, string_u16 b);
 string_u16 operator* (string_u16 a, string_u16 b);
 string_u16 operator* (string_u16 a, const string_u16_view& b);
 
-// string_u16                     copy (const string_u16_view& a);
-// string_u16                     copy (string_u16 a);
-// template <size_t N> string_u16 copy (const char16_t b[N]);
+string_u16 copy (const string_u16_view& a);
+string_u16 copy (string_u16 a);
 
-// inline string_u16& operator<< (string_u16& a, const string_u16_view& b);
-// template <size_t Nb>
-// inline string_u16& operator<< (string_u16& a, const char16_t (&b)[Nb]);
-
-// template <typename T, size_t Nb>
-// string_u16 operator* (string_u16 a, const T (&b)[Nb]);
-// template <typename T, size_t Na>
-// string_u16 operator* (const T (&a)[Na], const string_u16_view& b);
-// template <typename T, size_t Na>
-// string_u16 operator* (const T (&a)[Na], string_u16 b);
-//
-// template <typename T> bool operator== (const string_u16_view& a, string_u16
-// b); template <typename T, size_t Nb> bool operator== (const string_u16_view&
-// a, const T (&b)[Nb]);
-
-// template <typename T> bool operator== (string_u16 a, const
-// string_u16_view& b); template <typename T, size_t Nb> bool operator==
-// (string_u16 a, const T (&b)[Nb]); template <typename T, size_t Na> bool
-// operator== (const T (&a)[Na], string_u16 b);
-
-// bool operator!= (const string_u16_view& a, string_u16 b);
-// template <typename T, size_t Nb>
-// bool operator!= (const string_u16_view& a, const T (&b)[Nb]);
-// template <typename T> bool operator!= (string_u16 a, const string_u16_view&
-// b); template <typename T, size_t Nb> bool operator!= (string_u16 a, const T
-// (&b)[Nb]); template <typename T, size_t Na> bool operator!= (const T
-// (&a)[Na], const string_u16_view& b); template <typename T, size_t Na> bool
-// operator!= (const T (&a)[Na], string_u16 b);
-//
-// template <typename T> bool operator< (const string_u16_view& a, string_u16
-// b);
-// template <typename T> bool operator< (string_u16 a, const string_u16_view&
-// b); template <typename T, size_t Nb> bool operator< (string_u16 a, const T
-// (&b)[Nb]); template <typename T, size_t Na> bool operator< (const T (&a)[Na],
-// const string_u16_view& b); template <typename T, size_t Na> bool operator<
-// (const T (&a)[Na], string_u16 b);
-//
-// template <typename T> bool operator<= (const string_u16_view& a, string_u16
-// b); template <typename T>
-// template <typename T> bool operator<= (string_u16 a, const string_u16_view&
-// b); template <typename T, size_t Nb> bool operator<= (string_u16 a, const T
-// (&b)[Nb]); template <typename T, size_t Na> bool operator<= (const T
-// (&a)[Na], string_u16 b);
-//
-// template <typename T> int hash (string_u16 s);
 } // namespace data
 } // namespace lolly
