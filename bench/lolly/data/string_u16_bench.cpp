@@ -8,6 +8,8 @@
 #include "lolly/data/string_u16.hpp"
 #include <nanobench.h>
 
+using lolly::data::string_u16;
+
 static ankerl::nanobench::Bench bench;
 
 namespace lolly {
@@ -22,39 +24,39 @@ main () {
 #else
   bench.minEpochIterations (200000);
 #endif
-  bench.run ("construct string_u16", [&] { lolly::data::string_u16 (); });
-  //   bench.run ("equality of string", [&] {
-  //     static lolly::data::string a ("abc"), b;
-  //     a == b;
-  //   });
-  //   bench.run ("equality of larger string", [&] {
-  //     static lolly::data::string a ("equality of larger string"),
-  //         b ("equality of larger string");
-  //     a == b;
-  //   });
-  //   bench.run ("compare string", [&] {
-  //     static lolly::data::string a ("ab"), b ("b");
-  //     a <= b;
-  //   });
-  //   bench.run ("compare larger string", [&] {
-  //     static lolly::data::string a ("compare larger string"),
-  //         b ("compare LARGEr string");
-  //     a <= b;
-  //   });
-  //   bench.run ("slice string", [&] {
-  //     static lolly::data::string a ("abcdefgh");
-  //     a (2, 3);
-  //   });
-  //   bench.run ("slice string with larger range", [&] {
-  //     static lolly::data::string a ("abcdefgh");
-  //     a (1, 6);
-  //   });
-  //   bench.run ("concat string", [&] {
-  //     static lolly::data::string a ("abc"), b ("de");
-  //     a*                         b;
-  //   });
-  //   bench.run ("append string", [&] {
-  //     static lolly::data::string a ("abc"), b ("de");
-  //     a << b;
-  //   });
+  bench.run ("construct string_u16", [&] { string_u16 (); });
+  bench.run ("equality of string", [&] {
+    static string_u16 a (u"abc"), b;
+    a == b;
+  });
+  bench.run ("equality of larger string", [&] {
+    static string_u16 a (u"equality of larger string"),
+        b (u"equality of larger string");
+    a == b;
+  });
+  bench.run ("compare string", [&] {
+    static string_u16 a (u"ab"), b (u"b");
+    a <= b;
+  });
+  bench.run ("compare larger string", [&] {
+    static string_u16 a (u"compare larger string"),
+        b (u"compare LARGEr string");
+    a <= b;
+  });
+  bench.run ("slice string", [&] {
+    static string_u16 a (u"abcdefgh");
+    a (2, 3);
+  });
+  bench.run ("slice string with larger range", [&] {
+    static string_u16 a (u"abcdefgh");
+    a (1, 6);
+  });
+  bench.run ("concat string", [&] {
+    static string_u16 a (u"abc"), b (u"de");
+    a*                b;
+  });
+  bench.run ("append string", [&] {
+    static string_u16 a (u"abc"), b (u"de");
+    a << b;
+  });
 }
