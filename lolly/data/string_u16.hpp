@@ -82,9 +82,11 @@ class string_u16 {
   }
 
   inline operator string_u16_view () {
-    return string_u16_view (rep->n, rep->a);
+    return string_u16_view (rep->a, rep->n);
   }
-  string_u16_view operator() (int start, int end);
+  inline string_u16_view operator() (int start, int end) {
+    return ((string_u16_view) * this) (start, end);
+  }
 
   inline char16_t& operator[] (int i) { return rep->a[i]; }
 };

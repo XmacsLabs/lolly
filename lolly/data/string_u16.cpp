@@ -96,16 +96,6 @@ string_u16::string_u16 (char16_t c, int n) : rep (tm_new<string_u16_rep> (n)) {
     rep->a[i]= c;
 };
 
-string_u16_view
-string_u16::operator() (int start, int end) {
-  if (end <= start) {
-    return string_u16_view (0, nullptr);
-  }
-  start= max (min (rep->n, start), 0);
-  end  = max (min (rep->n, end), 0);
-  return string_u16_view (end - start, rep->a + start);
-}
-
 string_u16
 copy (const string_u16_view& a) {
   int        i;

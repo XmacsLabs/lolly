@@ -27,7 +27,7 @@ TEST_CASE ("construct string_view") {
   CHECK (string_u16_view (u"abc") == u"abc");
 
   const char16_t* str= u"def";
-  CHECK (string_u16_view (3, str) == u"def");
+  CHECK (string_u16_view (str, 3) == u"def");
 
   const std::u16string std_str (u"ghij");
   CHECK (string_u16_view (std_str) == u"ghij");

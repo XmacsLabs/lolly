@@ -29,7 +29,7 @@ public:
    * construct from arbitary const pointer with length. NUL can occurs in given
    * array
    */
-  string_view (int N_, const T* a_) : N (N_), a (a_){};
+  string_view (const T* a_, int N_) : N (N_), a (a_){};
   /**
    * construct from string literal
    */
@@ -58,11 +58,11 @@ template <class T>
 string_view<T>
 string_view<T>::operator() (int start, int end) const {
   if (end <= start) {
-    return string_view<T> (0, nullptr);
+    return string_view<T> (nullptr, 0);
   }
   start= max (min (N, start), 0);
   end  = max (min (N, end), 0);
-  return string_view<T> (end - start, a + start);
+  return string_view<T> (a + start, end - start);
 }
 
 template <typename T>
