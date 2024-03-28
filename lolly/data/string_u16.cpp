@@ -149,10 +149,5 @@ operator* (string_u16 a, const string_u16_view& b) {
   return c;
 };
 
-string_u16
-operator* (string_u16 a, string_u16 b) {
-  return a * ((string_u16_view) b);
-}
-
 } // namespace data
 } // namespace lolly

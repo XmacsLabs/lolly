@@ -128,7 +128,6 @@ operator<= (string_u16 a, string_u16 b) {
 string_u16& operator<< (string_u16& a, char16_t c);
 string_u16& operator<< (string_u16& a, string_u16 b);
 
-string_u16 operator* (string_u16 a, string_u16 b);
 string_u16 operator* (string_u16 a, const string_u16_view& b);
 
 string_u16 copy (const string_u16_view& a);
