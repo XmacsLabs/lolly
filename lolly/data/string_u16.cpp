@@ -117,11 +117,7 @@ copy (const string_u16_view& a) {
 
 string_u16
 copy (string_u16 a) {
-  int        i, n= N (a);
-  string_u16 r (a);
-  for (i= 0; i < a; i++)
-    r[i]= a[i];
-  return r;
+  return copy ((string_u16_view) a);
 };
 
 string_u16&
@@ -142,7 +138,7 @@ operator<< (string_u16& a, string_u16 b) {
 
 string_u16
 operator* (string_u16 a, const string_u16_view& b) {
-  int        a_N= N (a), b_N= N (b);
+  int        a_N= N (a), b_N= b.N;
   string_u16 c (a_N + b_N);
   for (int i= 0; i < a_N; i++) {
     c[i]= a[i];

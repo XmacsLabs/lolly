@@ -12,6 +12,7 @@
 #include "classdef.hpp"
 #include "fast_alloc.hpp"
 #include "minmax.hpp"
+#include <string>
 
 namespace lolly {
 namespace data {
@@ -33,10 +34,16 @@ public:
    * construct from string literal
    */
   template <size_t N_>
-  constexpr string_view (const T null_end_str[N_]) : N (N_), a (null_end_str){};
+  constexpr string_view (const T (&null_end_str)[N_])
+      : N (N_ - 1), a (null_end_str){};
+
+  string_view (string_view<T>&&)= default;
+
+  constexpr string_view (const std::basic_string<T>& str)
+      : N (str.size ()), a (str.data ()){};
+  operator std::basic_string<T> () { return std::basic_string<T> (a, N); };
 
   string_view<T> operator() (int start, int end) const;
-  string_view (string_view<T>&&)= default;
 
   /**
    * empty view is not allowed.
