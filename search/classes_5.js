@@ -5,7 +5,7 @@ var searchData=
   ['hashfunc_5frep_2',['hashfunc_rep',['../classhashfunc__rep.html',1,'']]],
   ['hashmap_3',['hashmap',['../classhashmap.html',1,'']]],
   ['hashmap_3c_20k_2c_20hashtree_3c_20k_2c_20v_20_3e_20_3e_4',['hashmap&lt; K, hashtree&lt; K, V &gt; &gt;',['../classhashmap.html',1,'']]],
-  ['hashmap_3c_20lolly_3a_3adata_3a_3alolly_5fstring_2c_20int_20_3e_5',['hashmap&lt; lolly::data::lolly_string, int &gt;',['../classhashmap.html',1,'']]],
+  ['hashmap_3c_20string_2c_20int_20_3e_5',['hashmap&lt; string, int &gt;',['../classhashmap.html',1,'']]],
   ['hashmap_3c_20string_2c_20pointer_20_3e_6',['hashmap&lt; string, pointer &gt;',['../classhashmap.html',1,'']]],
   ['hashmap_5fiterator_5frep_7',['hashmap_iterator_rep',['../classhashmap__iterator__rep.html',1,'']]],
   ['hashmap_5frep_8',['hashmap_rep',['../classhashmap__rep.html',1,'']]],

@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="lolly::data::lolly\l_string_view\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1lolly__string__view.html",tooltip=" "];
+  Node0 [id="Node000000",label="lolly::data::string_u16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1string__u16.html",tooltip=" "];
 }

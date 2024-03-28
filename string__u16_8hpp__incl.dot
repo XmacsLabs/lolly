@@ -1,10 +1,10 @@
-digraph "lolly_string.hpp"
+digraph "string_u16.hpp"
 {
  // LATEX_PDF_SIZE
   bgcolor="transparent";
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
-  Node1 [id="Node000001",label="lolly_string.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [id="Node000001",label="string_u16.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="classdef.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdef_8hpp.html",tooltip=" "];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
@@ -14,8 +14,11 @@ digraph "lolly_string.hpp"
   Node3 -> Node5 [id="edge4_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node5 [id="Node000005",label="new",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node6 [id="edge5_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="lolly_string.ipp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$lolly__string_8ipp.html",tooltip=" "];
-  Node6 -> Node1 [id="edge6_Node000006_Node000001",color="steelblue1",style="solid",tooltip=" "];
-  Node6 -> Node7 [id="edge7_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="string_view.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$string__view_8hpp.html",tooltip=" "];
+  Node6 -> Node2 [id="edge6_Node000006_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node3 [id="edge7_Node000006_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node7 [id="edge8_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
   Node7 [id="Node000007",label="minmax.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$minmax_8hpp.html",tooltip=" "];
+  Node6 -> Node8 [id="edge9_Node000006_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="string",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

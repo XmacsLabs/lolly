@@ -9,10 +9,16 @@ var searchData=
   ['string_2ehpp_6',['string.hpp',['../string_8hpp.html',1,'']]],
   ['string_5fbench_2ecpp_7',['string_bench.cpp',['../string__bench_8cpp.html',1,'']]],
   ['string_5ftest_2ecpp_8',['string_test.cpp',['../string__test_8cpp.html',1,'']]],
-  ['subprocess_2ecpp_9',['subprocess.cpp',['../subprocess_8cpp.html',1,'']]],
-  ['subprocess_2ehpp_10',['subprocess.hpp',['../subprocess_8hpp.html',1,'']]],
-  ['subprocess_5ftest_2ecpp_11',['subprocess_test.cpp',['../subprocess__test_8cpp.html',1,'']]],
-  ['sys_5futils_2ecpp_12',['sys_utils.cpp',['../sys__utils_8cpp.html',1,'']]],
-  ['sys_5futils_2ehpp_13',['sys_utils.hpp',['../sys__utils_8hpp.html',1,'']]],
-  ['sys_5futils_5ftest_2ecpp_14',['sys_utils_test.cpp',['../sys__utils__test_8cpp.html',1,'']]]
+  ['string_5fu16_2ecpp_9',['string_u16.cpp',['../string__u16_8cpp.html',1,'']]],
+  ['string_5fu16_2ehpp_10',['string_u16.hpp',['../string__u16_8hpp.html',1,'']]],
+  ['string_5fu16_5fbench_2ecpp_11',['string_u16_bench.cpp',['../string__u16__bench_8cpp.html',1,'']]],
+  ['string_5fu16_5ftest_2ecpp_12',['string_u16_test.cpp',['../string__u16__test_8cpp.html',1,'']]],
+  ['string_5fview_2ehpp_13',['string_view.hpp',['../string__view_8hpp.html',1,'']]],
+  ['string_5fview_5ftest_2ecpp_14',['string_view_test.cpp',['../string__view__test_8cpp.html',1,'']]],
+  ['subprocess_2ecpp_15',['subprocess.cpp',['../subprocess_8cpp.html',1,'']]],
+  ['subprocess_2ehpp_16',['subprocess.hpp',['../subprocess_8hpp.html',1,'']]],
+  ['subprocess_5ftest_2ecpp_17',['subprocess_test.cpp',['../subprocess__test_8cpp.html',1,'']]],
+  ['sys_5futils_2ecpp_18',['sys_utils.cpp',['../sys__utils_8cpp.html',1,'']]],
+  ['sys_5futils_2ehpp_19',['sys_utils.hpp',['../sys__utils_8hpp.html',1,'']]],
+  ['sys_5futils_5ftest_2ecpp_20',['sys_utils_test.cpp',['../sys__utils__test_8cpp.html',1,'']]]
 ];

@@ -23,9 +23,9 @@ digraph "Graphical Class Hierarchy"
   Node0 -> Node8 [id="edge17_Node000000_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node8 [id="Node000008",label="lolly::data::json_rep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structlolly_1_1data_1_1json__rep.html",tooltip=" "];
   Node0 -> Node9 [id="edge18_Node000000_Node000009",dir="back",color="firebrick4",style="solid",tooltip=" "];
-  Node9 [id="Node000009",label="lolly::data::lolly\l_string_rep\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1lolly__string__rep.html",tooltip=" "];
+  Node9 [id="Node000009",label="lolly::data::lolly\l_tree_rep\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1lolly__tree__rep.html",tooltip=" "];
   Node0 -> Node10 [id="edge19_Node000000_Node000010",dir="back",color="firebrick4",style="solid",tooltip=" "];
-  Node10 [id="Node000010",label="lolly::data::lolly\l_tree_rep\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1lolly__tree__rep.html",tooltip=" "];
+  Node10 [id="Node000010",label="lolly::data::string\l_u16_rep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classlolly_1_1data_1_1string__u16__rep.html",tooltip=" "];
   Node0 -> Node11 [id="edge20_Node000000_Node000011",dir="back",color="firebrick4",style="solid",tooltip=" "];
   Node11 [id="Node000011",label="parse_string_rep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classparse__string__rep.html",tooltip=" "];
   Node0 -> Node12 [id="edge21_Node000000_Node000012",dir="back",color="firebrick4",style="solid",tooltip=" "];
