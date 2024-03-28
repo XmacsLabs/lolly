@@ -113,6 +113,28 @@ operator== (string_u16 a, string_u16 b) {
 };
 
 inline bool
+operator== (string_u16 a, string_u16_view b) {
+  return ((string_u16_view) a) == b;
+}
+
+inline bool
+operator== (string_u16_view a, string_u16 b) {
+  return a == ((string_u16_view) b);
+}
+
+template <size_t Nb>
+bool
+operator== (string_u16 a, const char16_t (&b)[Nb]) {
+  return ((string_u16_view) a) == string_u16_view (b);
+}
+
+template <size_t Na>
+bool
+operator== (const char16_t (&a)[Na], string_u16 b) {
+  return string_u16_view (a) == ((string_u16_view) b);
+}
+
+inline bool
 operator!= (string_u16 a, string_u16 b) {
   return ((string_u16_view) a) != ((string_u16_view) b);
 };

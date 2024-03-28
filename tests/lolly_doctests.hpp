@@ -20,27 +20,10 @@ string_eq (string left, string right) {
 }
 
 inline void
-string_eq (string_u16 left, string_u16 right) {
-  // if (left != right) {
-  //   cout << "left : " << left << LF;
-  //   cout << "right: " << right << LF;
-  // }
-  CHECK_EQ (left == right, true);
-}
-
-inline void
 string_neq (string left, string right) {
   if (left == right) {
     cout << "same: " << left << LF;
   }
-  CHECK_EQ (left != right, true);
-}
-
-inline void
-string_neq (string_u16 left, string_u16 right) {
-  // if (left == right) {
-  //   cout << "same: " << left << LF;
-  // }
   CHECK_EQ (left != right, true);
 }
 

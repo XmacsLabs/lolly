@@ -67,9 +67,9 @@ TEST_CASE ("test concat") {
 TEST_CASE ("test append") {
   auto str= string_u16 ();
   str << u'x';
-  string_eq (str, u"x");
+  CHECK (str == u"x");
   str << string_u16 (u"yz");
-  string_eq (str, u"xyz");
+  CHECK (str == u"xyz");
 }
 
 TEST_CASE ("test reserve along with append") {
@@ -137,4 +137,13 @@ TEST_CASE ("test resize") {
     str->resize (3);
     CHECK_EQ (str == u"abc", true);
   }
+}
+
+TEST_CASE ("test copy") {
+  string_u16 str1= u"str1";
+  string_u16 str2= copy (str1);
+  CHECK (str1 == str2);
+
+  string_u16 str3= copy (str1 (0, 3));
+  CHECK (str3 == u"str");
 }
