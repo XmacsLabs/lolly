@@ -12,7 +12,6 @@
 #include "classdef.hpp"
 #include "fast_alloc.hpp"
 #include "minmax.hpp"
-#include "tm_ostream.hpp"
 #include <string>
 
 namespace lolly {
