@@ -106,22 +106,12 @@ string::operator!= (const char* s) {
 
 bool
 string::operator== (string a) {
-  int i;
-  if (rep->n != a->n) return false;
-  char *S_left= rep->a, *S_right= a->a;
-  for (i= 0; i < rep->n; i++)
-    if (S_left[i] != S_right[i]) return false;
-  return true;
+  return ((string_view<char>) *this) == ((string_view<char>) a);
 }
 
 bool
 string::operator!= (string a) {
-  int i;
-  if (rep->n != a->n) return true;
-  char *S_left= rep->a, *S_right= a->a;
-  for (i= 0; i < rep->n; i++)
-    if (S_left[i] != S_right[i]) return true;
-  return false;
+  return ((string_view<char>) *this) != ((string_view<char>) a);
 }
 
 string
@@ -185,22 +175,12 @@ operator* (string a, const char* b) {
 
 bool
 operator< (string s1, string s2) {
-  int i, n1= N (s1), n2= N (s2), nmin= min (n1, n2);
-  for (i= 0; i < nmin; i++) {
-    if (s1[i] < s2[i]) return true;
-    if (s2[i] < s1[i]) return false;
-  }
-  return n1 < n2;
+  return ((string_view<char>) s1) < ((string_view<char>) s2);
 }
 
 bool
 operator<= (string s1, string s2) {
-  int i, n1= N (s1), n2= N (s2), nmin= min (n1, n2);
-  for (i= 0; i < nmin; i++) {
-    if (s1[i] < s2[i]) return true;
-    if (s2[i] < s1[i]) return false;
-  }
-  return n1 <= n2;
+  return ((string_view<char>) s1) <= ((string_view<char>) s2);
 }
 
 int
