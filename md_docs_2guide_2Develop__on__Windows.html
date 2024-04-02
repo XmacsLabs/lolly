@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.18</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.19</span>
    </div>
   </td>
  </tr>
@@ -75,29 +75,29 @@ $(function() {
   <div class="headertitle"><div class="title">Developing on Windows</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md39"></a> </p>
-<h1><a class="anchor" id="autotoc_md40"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md41"></a> </p>
+<h1><a class="anchor" id="autotoc_md42"></a>
 Using xmake</h1>
-<h2><a class="anchor" id="autotoc_md41"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 Step 1: Installing xmake</h2>
 <p>Xmake can be installed either from scoop, or from standalone installer for windows.</p>
 <p>It is recommended to use scoop, and other packages need to be installed in this way </p><div class="fragment"><div class="line">scoop install xmake</div>
 <div class="line">scoop install make</div>
 <div class="line">scoop install git</div>
 </div><!-- fragment --><p>Sometimes, it's necessary to ensure that xrepo repository is up-to-date to ensure the usage of the latest dependency build definitions: </p><div class="fragment"><div class="line">xrepo update-repo</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md42"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md44"></a>
 Step 2: Installation and Usage</h2>
 <p>Taking xmake as an example: </p>
-<h3><a class="anchor" id="autotoc_md43"></a>
+<h3><a class="anchor" id="autotoc_md45"></a>
 Method 1: Local Installation</h3>
 <div class="fragment"><div class="line">xmake config --yes</div>
 <div class="line">xmake build liblolly</div>
 <div class="line">xmake install --admin liblolly</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md44"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md46"></a>
 Method 2: Adding xmake Dependency</h3>
 <p>In the library where lolly is required, add the following to <a class="el" href="classlist.html#a6134d52315f57bcb808223559c8a4760" title="Construct a new list object with a single item.">xmake.lua:</a> </p><div class="fragment"><div class="line">add_requires(&quot;lolly&quot;, {system=false})</div>
 </div><!-- fragment --><p>For a detailed example, refer to <a href="https://github.com/XmacsLabs/mogan/blob/branch-1.2/misc/xmake/packages.lua">mogan</a>.</p>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 Step 3: Compiling and Testing</h2>
 <p>Refer to <a class="el" href="md_docs_2guide_2Test.html">How to Test</a>. </p>
 </div></div><!-- contents -->

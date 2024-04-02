@@ -11,7 +11,7 @@ var indexSectionsWithContent =
   8: "bcdehijlmnprstu",
   9: "abceghilnoprst",
   10: "abcdehilmnorstuw",
-  11: "012358acdfghijlmnopstuwx在如"
+  11: "0123458acdfghijlmnopstuwx在如"
 };
 
 var indexSectionNames =

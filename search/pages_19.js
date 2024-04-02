@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['如何格式化代码_0',['如何格式化代码',['../md_docs_2zh_2guide_2Format.html',1,'']]],
-  ['如何测试_1',['如何测试',['../md_docs_2zh_2guide_2Test.html',1,'']]]
+  ['在gnu_20linux上开发_0',['在GNU/Linux上开发',['../md_docs_2zh_2guide_2Develop__on__Linux.html',1,'']]],
+  ['在windows上开发_1',['在Windows上开发',['../md_docs_2zh_2guide_2Develop__on__Windows.html',1,'']]]
 ];

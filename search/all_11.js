@@ -26,7 +26,7 @@ var searchData=
   ['get_5fuser_5fname_23',['get_user_name',['../sys__utils_8cpp.html#a2efd376c8a64ca818f2c92f6e2d62375',1,'get_user_name():&#160;sys_utils.cpp'],['../sys__utils_8hpp.html#a2efd376c8a64ca818f2c92f6e2d62375',1,'get_user_name():&#160;sys_utils.cpp']]],
   ['getpid_24',['getpid',['../classspawn__system.html#aa628c5d7016a299f40591a986b414560',1,'spawn_system']]],
   ['getpipe_25',['getPipe',['../classChannel.html#aa3b4544cb3416325d9b33299a148971b',1,'Channel']]],
-  ['getting_20started_26',['Getting Started',['../md_README.html#autotoc_md79',1,'']]],
+  ['getting_20started_26',['Getting Started',['../md_README.html#autotoc_md82',1,'']]],
   ['gitee_20github_20codeberg_27',['Project: CI/CD on Gitee/Github/Codeberg',['../md_devel_24.html',1,'']]],
   ['github_20codeberg_28',['Project: CI/CD on Gitee/Github/Codeberg',['../md_devel_24.html',1,'']]],
   ['glue_29',['glue',['../url_8cpp.html#addd29930e7fb72555219d5e90bdaec42',1,'glue(url u, string s):&#160;url.cpp'],['../url_8hpp.html#addd29930e7fb72555219d5e90bdaec42',1,'glue(url u, string s):&#160;url.cpp']]],

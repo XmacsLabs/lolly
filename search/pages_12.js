@@ -1,25 +1,10 @@
 var searchData=
 [
-  ['package_20in_20mogan_0',['Project: Use lolly as a package in Mogan',['../md_devel_25.html',1,'']]],
-  ['perform_20testing_1',['How to Perform Testing',['../md_docs_2guide_2Test.html',1,'']]],
-  ['performance_20of_20lolly_2',['Optimize the Performance of Lolly',['../md_devel_28.html',1,'']]],
-  ['port_20lolly_20to_20msvc_3',['Project: Port lolly to msvc',['../md_devel_23.html',1,'']]],
-  ['project_201_3a_20documentation_4',['Project 1: Documentation',['../md_devel_21.html',1,'']]],
-  ['project_202_3a_20unit_20tests_5',['Project 2: Unit Tests',['../md_devel_22.html',1,'']]],
-  ['project_3a_20ci_20cd_20on_20gitee_20github_20codeberg_6',['Project: CI/CD on Gitee/Github/Codeberg',['../md_devel_24.html',1,'']]],
-  ['project_3a_20de_20texmacs_7',['Project: De-TeXmacs',['../md_devel_216.html',1,'']]],
-  ['project_3a_20fix_20compability_20issue_20of_20mingw_208_20x_8',['Project: Fix compability issue of mingw 8.x',['../md_devel_27.html',1,'']]],
-  ['project_3a_20http_20client_20and_20json_9',['Project: Http Client and JSON',['../md_devel_215.html',1,'']]],
-  ['project_3a_20locale_10',['Project: Locale',['../md_devel_214.html',1,'']]],
-  ['project_3a_20lolly_201_200_20x_11',['Project: Lolly 1.0.x',['../md_devel_26.html',1,'']]],
-  ['project_3a_20lolly_20data_12',['Project: Lolly Data',['../md_devel_219.html',1,'']]],
-  ['project_3a_20lolly_20hash_13',['Project: Lolly Hash',['../md_devel_220.html',1,'']]],
-  ['project_3a_20migrate_20file_20and_20url_20from_20mogan_14',['Project: Migrate file and url from mogan',['../md_devel_210.html',1,'']]],
-  ['project_3a_20migrate_20tree_20from_20mogan_20to_20lolly_15',['Project: Migrate tree from mogan to lolly',['../md_devel_29.html',1,'']]],
-  ['project_3a_20number_16',['Project: Number',['../md_devel_217.html',1,'']]],
-  ['project_3a_20port_20lolly_20to_20msvc_17',['Project: Port lolly to msvc',['../md_devel_23.html',1,'']]],
-  ['project_3a_20upgrade_20to_20xmake_202_208_202_18',['Project: Upgrade to xmake 2.8.2',['../md_devel_211.html',1,'']]],
-  ['project_3a_20upgrade_20to_20xmake_202_208_205_19',['Project: Upgrade to xmake 2.8.5',['../md_devel_218.html',1,'']]],
-  ['project_3a_20use_20lolly_20as_20a_20package_20in_20mogan_20',['Project: Use lolly as a package in Mogan',['../md_devel_25.html',1,'']]],
-  ['project_3a_20use_20tbox_20to_20implement_20file_20and_20others_21',['Project: Use tbox to implement file and others',['../md_devel_212.html',1,'']]]
+  ['of_20lolly_0',['Optimize the Performance of Lolly',['../md_devel_28.html',1,'']]],
+  ['of_20mingw_208_20x_1',['Project: Fix compability issue of mingw 8.x',['../md_devel_27.html',1,'']]],
+  ['on_20gitee_20github_20codeberg_2',['Project: CI/CD on Gitee/Github/Codeberg',['../md_devel_24.html',1,'']]],
+  ['on_20gnu_20linux_3',['Developing on GNU/Linux',['../md_docs_2guide_2Develop__on__Linux.html',1,'']]],
+  ['on_20windows_4',['Developing on Windows',['../md_docs_2guide_2Develop__on__Windows.html',1,'']]],
+  ['optimize_20the_20performance_20of_20lolly_5',['Optimize the Performance of Lolly',['../md_devel_28.html',1,'']]],
+  ['others_6',['Project: Use tbox to implement file and others',['../md_devel_212.html',1,'']]]
 ];
