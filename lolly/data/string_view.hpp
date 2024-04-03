@@ -150,7 +150,7 @@ operator<= (const string_view<T>& a, const string_view<T>& b) {
 template <typename T, size_t Nb>
 bool
 operator<= (const string_view<T>& a, const T (&b)[Nb]) {
-  return a <= string_view (b);
+  return a <= string_view<T> (b);
 };
 
 template <typename T, size_t Na>
