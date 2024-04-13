@@ -1,6 +1,7 @@
 
 #include "shared_lib.hpp"
 
+#ifndef OS_WASM
 namespace lolly {
 namespace system {
 
@@ -20,3 +21,4 @@ load_shared_library (string name, url path) {
 } // namespace system
 } // namespace lolly
 RESOURCE_CODE (lolly::system::shared_lib);
+#endif

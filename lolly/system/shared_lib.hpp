@@ -16,6 +16,7 @@
 #include <stdint.h>
 #include <tbox/tbox.h>
 
+#ifndef OS_WASM
 namespace lolly {
 namespace system {
 
@@ -40,3 +41,4 @@ shared_lib load_shared_library (string name, url path);
 
 } // namespace system
 } // namespace lolly
+#endif
