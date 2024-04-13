@@ -16,12 +16,10 @@
 using lolly::system::load_shared_library;
 using lolly::system::shared_lib;
 
-TEST_MEMORY_LEAK_INIT
-
 TEST_CASE ("check_output") {
-  shared_lib lib          = load_shared_library ("test", url_none ());
-  void       (*func) (int)= lib->get_function<void, int> ("func");
-  func (0);
+  shared_lib lib          = load_shared_library ("example_dynamic_library",
+                                                 url_pwd () * "example_dynamic_library");
+  double     (*func) (int)= lib->get_function<double, int> ("pow_div_2");
+  double     res          = func (5);
+  CHECK_EQ (res, 12.5);
 }
-
-TEST_MEMORY_LEAK_ALL
