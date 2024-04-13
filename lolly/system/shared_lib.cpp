@@ -7,7 +7,11 @@ namespace system {
 
 shared_lib_rep::shared_lib_rep (string dynamic_name, url path)
     : dynamic_ref (tb_dynamic_init (c_string (as_system_string (path)))),
-      rep (dynamic_name){};
+      rep (dynamic_name) {
+  if (dynamic_ref == nullptr) {
+    TM_FAILED ("error occurs during loading of library")
+  }
+};
 shared_lib_rep::~shared_lib_rep () {
   tb_dynamic_exit (dynamic_ref);
   shared_lib::instances->reset (res_name);
