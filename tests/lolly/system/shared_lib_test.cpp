@@ -17,9 +17,9 @@ using lolly::system::load_shared_library;
 using lolly::system::shared_lib;
 
 TEST_CASE ("check_output") {
-  shared_lib lib          = load_shared_library ("example_dynamic_library",
-                                                 url_pwd () * "example_dynamic_library");
-  double     (*func) (int)= lib->get_function<double, int> ("pow_div_2");
-  double     res          = func (5);
+  shared_lib lib      = load_shared_library ("example_dynamic_library",
+                                             url_pwd () * "example_dynamic_library");
+  double (*func) (int)= lib->get_function<double, int> ("pow_div_2");
+  double res          = func (5);
   CHECK_EQ (res, 12.5);
 }

@@ -371,7 +371,6 @@ if has_config("enable_tests") then
         set_languages("c++17")
         set_default (false)
         add_packages("tbox")
-        add_packages("doctest")
 
         add_deps("liblolly")
 
