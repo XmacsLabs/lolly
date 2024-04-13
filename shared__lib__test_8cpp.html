@@ -113,14 +113,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="shared__lib__test_8cpp_source.html#l00019">19</a> of file <a class="el" href="shared__lib__test_8cpp_source.html">shared_lib_test.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                           {</div>
-<div class="line"><span class="lineno">   20</span>  shared_lib <a class="code hl_class" href="classlist.html">lib</a>      = load_shared_library (<span class="stringliteral">&quot;example_dynamic_library&quot;</span>,</div>
-<div class="line"><span class="lineno">   21</span>                                             <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <span class="stringliteral">&quot;example_dynamic_library&quot;</span>);</div>
-<div class="line"><span class="lineno">   22</span>  double (*func) (int)= <a class="code hl_class" href="classlist.html">lib</a>-&gt;get_function&lt;<span class="keywordtype">double</span>, <span class="keywordtype">int</span>&gt; (<span class="stringliteral">&quot;pow_div_2&quot;</span>);</div>
-<div class="line"><span class="lineno">   23</span>  <span class="keywordtype">double</span> <a class="code hl_class" href="classlist.html">res</a>          = func (5);</div>
-<div class="line"><span class="lineno">   24</span>  <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_class" href="classlist.html">res</a>, 12.5);</div>
-<div class="line"><span class="lineno">   25</span>}</div>
+<p class="definition">Definition at line <a class="el" href="shared__lib__test_8cpp_source.html#l00021">21</a> of file <a class="el" href="shared__lib__test_8cpp_source.html">shared_lib_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                           {</div>
+<div class="line"><span class="lineno">   22</span><span class="preprocessor">#ifndef OS_WASM</span></div>
+<div class="line"><span class="lineno">   23</span>  shared_lib <a class="code hl_class" href="classlist.html">lib</a>      = load_shared_library (<span class="stringliteral">&quot;example_dynamic_library&quot;</span>,</div>
+<div class="line"><span class="lineno">   24</span>                                             <a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <span class="stringliteral">&quot;example_dynamic_library&quot;</span>);</div>
+<div class="line"><span class="lineno">   25</span>  double (*func) (int)= <a class="code hl_class" href="classlist.html">lib</a>-&gt;get_function&lt;<span class="keywordtype">double</span>, <span class="keywordtype">int</span>&gt; (<span class="stringliteral">&quot;pow_div_2&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>  <span class="keywordtype">double</span> <a class="code hl_class" href="classlist.html">res</a>          = func (5);</div>
+<div class="line"><span class="lineno">   27</span>  <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_class" href="classlist.html">res</a>, 12.5);</div>
+<div class="line"><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   29</span>}</div>
 <div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
 <div class="ttc" id="aurl_8cpp_html_ad57b04b152246c8df432e5064370005c"><div class="ttname"><a href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a></div><div class="ttdeci">url url_pwd()</div><div class="ttdef"><b>Definition</b> <a href="url_8cpp_source.html#l00326">url.cpp:326</a></div></div>
 </div><!-- fragment -->

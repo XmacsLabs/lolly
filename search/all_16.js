@@ -13,7 +13,7 @@ var searchData=
   ['lf_10',['LF',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4',1,'basic.hpp']]],
   ['library_20alternative_11',['Lolly: a user-friendly C++ standard library alternative',['../md_README.html',1,'']]],
   ['linux上开发_12',['在GNU/Linux上开发',['../md_docs_2zh_2guide_2Develop__on__Linux.html',1,'']]],
-  ['linux_13',['Linux',['../md_docs_2guide_2Develop__on__Linux.html',1,'Developing on GNU/Linux'],['../md_docs_2guide_2Format.html#autotoc_md54',1,'Linux'],['../md_docs_2zh_2guide_2Format.html#autotoc_md76',1,'Linux']]],
+  ['linux_13',['Linux',['../md_docs_2guide_2Develop__on__Linux.html',1,'Developing on GNU/Linux'],['../md_docs_2guide_2Format.html#autotoc_md53',1,'Linux'],['../md_docs_2zh_2guide_2Format.html#autotoc_md76',1,'Linux']]],
   ['list_14',['list',['../classlist.html',1,'list&lt; T &gt;'],['../classlist.html#a6134d52315f57bcb808223559c8a4760',1,'list::list(T item)'],['../classlist.html#a66b9774b808d0d3b48b8fff83a6ddf7a',1,'list::list(T item, list&lt; T &gt; next)'],['../classlist.html#a0fa8bf4a07aa916278c1e3ffdac3f000',1,'list::list(T item1, T item2, list&lt; T &gt; next)'],['../classlist.html#a2755e7316c28cd865dd2aca9042523c5',1,'list::list(T item1, T item2, T item3, list&lt; T &gt; next)']]],
   ['list_2ehpp_15',['list.hpp',['../list_8hpp.html',1,'']]],
   ['list_2eipp_16',['list.ipp',['../list_8ipp.html',1,'']]],
