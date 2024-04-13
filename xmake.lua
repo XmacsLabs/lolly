@@ -382,9 +382,10 @@ if has_config("enable_tests") then
 
         add_includedirs(lolly_includedirs)
         add_includedirs("tests")
+        add_forceincludes(path.absolute("$(buildir)/L1/config.h"))
         add_tests("shared_lib_test", {
             kind = "binary",
-            files = "tests/lolly/system/shared_lib_test.cpp",
+            files = "$(projectdir)/tests/lolly/system/shared_lib_test.cpp",
             packages = "doctest",
             defines = "DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN"})
     end
