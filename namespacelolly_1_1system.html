@@ -88,9 +88,15 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlolly_1_1system_1_1args.html">args</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlolly_1_1system_1_1shared__lib__rep.html">shared_lib_rep</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ac68d6d68ed2b176fb117b6ed5fa7e39a" id="r_ac68d6d68ed2b176fb117b6ed5fa7e39a"><td class="memItemLeft" align="right" valign="top">shared_lib&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac68d6d68ed2b176fb117b6ed5fa7e39a">load_shared_library</a> (<a class="el" href="classstring.html">string</a> <a class="el" href="classlist.html">name</a>, <a class="el" href="classurl.html">url</a> path)</td></tr>
+<tr class="separator:ac68d6d68ed2b176fb117b6ed5fa7e39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e99df4752166c31ea51ffda48b07b3" id="r_a74e99df4752166c31ea51ffda48b07b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74e99df4752166c31ea51ffda48b07b3">RESOURCE</a> (shared_lib)</td></tr>
+<tr class="separator:a74e99df4752166c31ea51ffda48b07b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a124592b7376ef6e1e38929074a1aed58" id="r_a124592b7376ef6e1e38929074a1aed58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a124592b7376ef6e1e38929074a1aed58">call</a> (<a class="el" href="classstring.html">string</a> <a class="el" href="classlist.html">cmd</a>)</td></tr>
 <tr class="separator:a124592b7376ef6e1e38929074a1aed58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ff68efb7776ba81b3192ee04dbba650" id="r_a8ff68efb7776ba81b3192ee04dbba650"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ff68efb7776ba81b3192ee04dbba650">check_output</a> (<a class="el" href="classstring.html">string</a> s, <a class="el" href="classstring.html">string</a> &amp;<a class="el" href="classlist.html">result</a>, bool <a class="el" href="classlist.html">stderr_only</a>, <a class="el" href="classlist.html">int64_t</a> <a class="el" href="classlist.html">timeout</a>)</td></tr>
@@ -124,6 +130,51 @@ Variables</h2></td></tr>
 <tr class="separator:ae2d5ecc198f394a6d39bbf96b0462d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ac68d6d68ed2b176fb117b6ed5fa7e39a" name="ac68d6d68ed2b176fb117b6ed5fa7e39a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68d6d68ed2b176fb117b6ed5fa7e39a">&#9670;&#160;</a></span>load_shared_library()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_lib lolly::system::load_shared_library </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstring.html">string</a></td>          <td class="paramname"><span class="paramname"><em>name</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classurl.html">url</a></td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="shared__lib_8cpp_source.html#l00017">17</a> of file <a class="el" href="shared__lib_8cpp_source.html">shared_lib.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                                            {</div>
+<div class="line"><span class="lineno">   18</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="resource_8hpp.html#a0807bbf366c168aa4647ab940011a91b">make</a> (shared_lib, <a class="code hl_class" href="classlist.html">name</a>, <a class="code hl_class" href="classlist.html">tm_new&lt;shared_lib_rep&gt;</a> (<a class="code hl_class" href="classlist.html">name</a>, path));</div>
+<div class="line"><span class="lineno">   19</span>}</div>
+<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
+<div class="ttc" id="aresource_8hpp_html_a0807bbf366c168aa4647ab940011a91b"><div class="ttname"><a href="resource_8hpp.html#a0807bbf366c168aa4647ab940011a91b">make</a></div><div class="ttdeci">#define make(T, s, im)</div><div class="ttdef"><b>Definition</b> <a href="resource_8hpp_source.html#l00072">resource.hpp:72</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74e99df4752166c31ea51ffda48b07b3" name="a74e99df4752166c31ea51ffda48b07b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e99df4752166c31ea51ffda48b07b3">&#9670;&#160;</a></span>RESOURCE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lolly::system::RESOURCE </td>
+          <td>(</td>
+          <td class="paramtype">shared_lib</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a124592b7376ef6e1e38929074a1aed58" name="a124592b7376ef6e1e38929074a1aed58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a124592b7376ef6e1e38929074a1aed58">&#9670;&#160;</a></span>call()</h2>
 
@@ -164,7 +215,6 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">   53</span>}</div>
 <div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00119">string.hpp:119</a></div></div>
-<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

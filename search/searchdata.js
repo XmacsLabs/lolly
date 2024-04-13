@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "0123456789_abcdefghijklmnopqrstuvwxyz~使列单在如对报方步第贡",
   1: "_abcfhijlpqrstuw",
   2: "l",
-  3: "123456789abcfghijlmnprstuwz",
+  3: "123456789abcefghijlmnprstuwz",
   4: "_abcdefghijlmnopqrstuvw~",
   5: "_abcdefhiklmnoprstuvwxyz",
   6: "cdhjpqstu",

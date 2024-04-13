@@ -6,7 +6,7 @@ var searchData=
   ['2_2emd_3',['2.md',['../2_8md.html',1,'']]],
   ['20_2emd_4',['20.md',['../20_8md.html',1,'']]],
   ['21_2emd_5',['21.md',['../21_8md.html',1,'']]],
-  ['2_3a_20adding_20xmake_20dependency_6',['2: Adding xmake Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md40',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md47',1,'Method 2: Adding xmake Dependency']]],
-  ['2_3a_20installation_20and_20usage_7',['2: Installation and Usage',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md38',1,'Step 2: Installation and Usage'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md45',1,'Step 2: Installation and Usage']]],
+  ['2_3a_20adding_20xmake_20dependency_6',['2: Adding xmake Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md41',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md47',1,'Method 2: Adding xmake Dependency']]],
+  ['2_3a_20installation_20and_20usage_7',['2: Installation and Usage',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md39',1,'Step 2: Installation and Usage'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md45',1,'Step 2: Installation and Usage']]],
   ['2_3a_20unit_20tests_8',['Project 2: Unit Tests',['../md_devel_22.html',1,'']]]
 ];
