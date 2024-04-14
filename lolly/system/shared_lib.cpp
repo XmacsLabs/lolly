@@ -24,5 +24,4 @@ load_shared_library (string name, url path) {
 
 } // namespace system
 } // namespace lolly
-RESOURCE_CODE (lolly::system::shared_lib);
 #endif
