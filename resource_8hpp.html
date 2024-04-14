@@ -153,15 +153,15 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassresource__ptr_html"><div class="ttname"><a href="classresource__ptr.html">resource_ptr</a></div><div class="ttdef"><b>Definition</b> <a href="resource_8hpp_source.html#l00025">resource.hpp:25</a></div></div>
 <div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdef"><b>Definition</b> <a href="resource_8hpp_source.html#l00017">resource.hpp:17</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00044">44</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span><span class="preprocessor">#define RESOURCE(PTR)                                                          \</span></div>
-<div class="line"><span class="lineno">   45</span><span class="preprocessor">  struct PTR##_rep;                                                            \</span></div>
-<div class="line"><span class="lineno">   46</span><span class="preprocessor">  template &lt;&gt; hashmap&lt;string, pointer&gt; resource_ptr&lt;PTR##_rep&gt;::instances;     \</span></div>
-<div class="line"><span class="lineno">   47</span><span class="preprocessor">  struct PTR : public resource_ptr&lt;PTR##_rep&gt; {                                \</span></div>
-<div class="line"><span class="lineno">   48</span><span class="preprocessor">    inline PTR (PTR##_rep* rep2= NULL) { rep= rep2; }                          \</span></div>
-<div class="line"><span class="lineno">   49</span><span class="preprocessor">    inline PTR (string s) { rep= (PTR##_rep*) instances[s]; }                  \</span></div>
-<div class="line"><span class="lineno">   50</span><span class="preprocessor">    inline ~PTR () {}                                                          \</span></div>
-<div class="line"><span class="lineno">   51</span><span class="preprocessor">  }</span></div>
+<p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00045">45</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span><span class="preprocessor">#define RESOURCE(PTR)                                                          \</span></div>
+<div class="line"><span class="lineno">   46</span><span class="preprocessor">  struct PTR##_rep;                                                            \</span></div>
+<div class="line"><span class="lineno">   47</span><span class="preprocessor">  template &lt;&gt; hashmap&lt;string, pointer&gt; resource_ptr&lt;PTR##_rep&gt;::instances;     \</span></div>
+<div class="line"><span class="lineno">   48</span><span class="preprocessor">  struct PTR : public resource_ptr&lt;PTR##_rep&gt; {                                \</span></div>
+<div class="line"><span class="lineno">   49</span><span class="preprocessor">    inline PTR (PTR##_rep* rep2= NULL) { rep= rep2; }                          \</span></div>
+<div class="line"><span class="lineno">   50</span><span class="preprocessor">    inline PTR (string s) { rep= (PTR##_rep*) instances[s]; }                  \</span></div>
+<div class="line"><span class="lineno">   51</span><span class="preprocessor">    inline ~PTR () {}                                                          \</span></div>
+<div class="line"><span class="lineno">   52</span><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -179,15 +179,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">template</span> &lt;&gt;                                                                  \</div>
-<div class="line">  <a class="code hl_class" href="classlist.html">hashmap&lt;string, pointer&gt;</a> <a class="code hl_variable" href="classresource__ptr.html#a8792fc268b073edbc2c03115652c1150">resource_ptr&lt;PTR##_rep&gt;::instances</a> (<a class="code hl_class" href="classlist.html">NULL</a>);</div>
-<div class="ttc" id="aclassresource__ptr_html_a8792fc268b073edbc2c03115652c1150"><div class="ttname"><a href="classresource__ptr.html#a8792fc268b073edbc2c03115652c1150">resource_ptr::instances</a></div><div class="ttdeci">static hashmap&lt; string, pointer &gt; instances</div><div class="ttdef"><b>Definition</b> <a href="resource_8hpp_source.html#l00031">resource.hpp:31</a></div></div>
-</div><!-- fragment -->
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated</a></b></dt><dd></dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00058">58</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span><span class="preprocessor">#define RESOURCE_CODE(PTR)                                                     \</span></div>
-<div class="line"><span class="lineno">   59</span><span class="preprocessor">  template &lt;&gt;                                                                  \</span></div>
-<div class="line"><span class="lineno">   60</span><span class="preprocessor">  hashmap&lt;string, pointer&gt; resource_ptr&lt;PTR##_rep&gt;::instances (NULL);</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0807bbf366c168aa4647ab940011a91b" name="a0807bbf366c168aa4647ab940011a91b"></a>
@@ -214,7 +209,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00072">72</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00069">69</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
 
 </div>
 </div>
@@ -244,10 +239,10 @@ template&lt;<a class="el" href="classlist.html">class</a> <a class="el" href="cl
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00065">65</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                    {</div>
-<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">res</a>.rep == <a class="code hl_class" href="classlist.html">NULL</a>;</div>
-<div class="line"><span class="lineno">   67</span>}</div>
+<p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00062">62</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                    {</div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">res</a>.rep == <a class="code hl_class" href="classlist.html">NULL</a>;</div>
+<div class="line"><span class="lineno">   64</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -295,10 +290,10 @@ template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00075">75</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                       {</div>
-<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">return</span> out &lt;&lt; <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>-&gt;res_name;</div>
-<div class="line"><span class="lineno">   78</span>}</div>
+<p class="definition">Definition at line <a class="el" href="resource_8hpp_source.html#l00072">72</a> of file <a class="el" href="resource_8hpp_source.html">resource.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                       {</div>
+<div class="line"><span class="lineno">   74</span>  <span class="keywordflow">return</span> out &lt;&lt; <a class="code hl_variable" href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a>-&gt;res_name;</div>
+<div class="line"><span class="lineno">   75</span>}</div>
 <div class="ttc" id="ablackbox__test_8cpp_html_ae6d631320ed189a50f11ed922bc06d7e"><div class="ttname"><a href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a></div><div class="ttdeci">blackbox t[13]</div><div class="ttdef"><b>Definition</b> <a href="blackbox__test_8cpp_source.html#l00040">blackbox_test.cpp:40</a></div></div>
 </div><!-- fragment -->
 </div>
