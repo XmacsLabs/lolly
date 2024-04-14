@@ -24,6 +24,9 @@ TEST_CASE ("check_output") {
   if (os_win ()) {
     lib_path= url_pwd () * "example_dynamic_library.dll";
   }
+  else if (os_macos ()) {
+    lib_path= url_pwd () * "libexample_dynamic_library.dylib";
+  }
   else {
     lib_path= url_pwd () * "libexample_dynamic_library.so";
   }
