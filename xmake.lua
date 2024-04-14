@@ -374,7 +374,7 @@ if has_config("enable_tests") then
         add_packages("tbox")
 
         add_deps("liblolly")
-        add_deps("example_dynamic_library")
+        add_deps("example_dynamic_library", {inherit = false})
 
         if is_plat("windows") then
             set_encodings("utf-8")
