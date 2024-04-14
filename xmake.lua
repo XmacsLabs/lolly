@@ -360,6 +360,7 @@ end
 if has_config("enable_tests") then
     target("example_dynamic_library") do
         set_kind ("shared")
+        set_prefixname("")
         set_languages("c++17")
         set_default (false)
         add_files("tests/lolly/system/example_dynamic_library.cpp")
