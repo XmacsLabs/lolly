@@ -20,10 +20,16 @@ using lolly::system::shared_lib;
 
 TEST_CASE ("check_output") {
 #ifndef OS_WASM
-  shared_lib lib      = load_shared_library ("example_dynamic_library",
-                                             url_pwd () * "example_dynamic_library");
-  double (*func) (int)= lib->get_function<double, int> ("pow_div_2");
-  double res          = func (5);
+  url lib_path;
+  if (os_win ()) {
+    lib_path= url_pwd () * "example_dynamic_library.dll";
+  }
+  else {
+    lib_path= url_pwd () * "libexample_dynamic_library.so";
+  }
+  shared_lib lib= load_shared_library ("example_dynamic_library", lib_path);
+  double     (*func) (int)= lib->get_function<double, int> ("pow_div_2");
+  double     res          = func (5);
   CHECK_EQ (res, 12.5);
 #endif
 }
