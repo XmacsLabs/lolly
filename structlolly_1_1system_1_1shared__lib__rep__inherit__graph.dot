@@ -8,5 +8,5 @@ digraph "lolly::system::shared_lib_rep"
   Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="rep\< shared_lib \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structrep.html",tooltip=" "];
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< shared_lib \>",fontcolor="grey" ];
-  Node3 [id="Node000003",label="rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structrep.html",tooltip=" "];
+  Node3 [id="Node000003",label="rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structrep.html",tooltip="base class of resources"];
 }

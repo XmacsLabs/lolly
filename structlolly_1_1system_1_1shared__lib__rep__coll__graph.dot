@@ -10,7 +10,7 @@ digraph "lolly::system::shared_lib_rep"
   Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" res_name",fontcolor="grey" ];
   Node3 [id="Node000003",label="string",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classstring.html",tooltip=" "];
   Node4 -> Node2 [id="edge3_Node000002_Node000004",dir="back",color="orange",style="dashed",tooltip=" ",label=" \< shared_lib \>",fontcolor="grey" ];
-  Node4 [id="Node000004",label="rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structrep.html",tooltip=" "];
+  Node4 [id="Node000004",label="rep\< T \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structrep.html",tooltip="base class of resources"];
   Node3 -> Node4 [id="edge4_Node000004_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" res_name",fontcolor="grey" ];
   Node5 -> Node1 [id="edge5_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" dynamic_ref",fontcolor="grey" ];
   Node5 [id="Node000005",label="tb_dynamic_ref_t",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
