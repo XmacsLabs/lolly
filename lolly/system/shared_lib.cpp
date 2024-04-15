@@ -1,4 +1,11 @@
 
+/** \file shared_lib.cpp
+ *  \copyright GPLv3
+ *  \details dynamic (shared) library related routines
+ *  \author jingkaimori
+ *  \date   2024
+ */
+
 #include "shared_lib.hpp"
 
 #ifndef OS_WASM

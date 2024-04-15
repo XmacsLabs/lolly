@@ -18,7 +18,7 @@ using lolly::system::load_shared_library;
 using lolly::system::shared_lib;
 #endif
 
-TEST_CASE ("check_output") {
+TEST_CASE ("load_shared_library") {
 #ifndef OS_WASM
   url lib_path;
   if (os_win ()) {
@@ -31,7 +31,7 @@ TEST_CASE ("check_output") {
     lib_path= url_pwd () * "libexample_dynamic_library.so";
   }
   shared_lib lib= load_shared_library ("example_dynamic_library", lib_path);
-  double (*func) (int)= lib->get_function<double, int> ("pow_div_2");
+  double (*func) (int)= lib->get_function<double, int> ("square_div_2");
   double res          = func (5);
   CHECK_EQ (res, 12.5);
 #endif

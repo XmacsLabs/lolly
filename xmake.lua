@@ -364,7 +364,7 @@ if has_config("enable_tests") then
         set_default (false)
         add_files("tests/lolly/system/example_dynamic_library.cpp")
         add_rules("utils.symbols.export_list", {
-            symbols = {"pow_div_2"}})
+            symbols = {"square_div_2"}})
     end
     target("test_dynamic_library") do
         set_kind ("binary")
