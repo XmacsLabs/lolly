@@ -20,5 +20,18 @@ For XmacsLabs, Lolly is created for the following reasons:
 |-|-|-|
 | How to develop on Linux? | [English](docs/guide/Develop_on_Linux.md) | [Chinese](docs/zh/guide/Develop_on_Linux.md) |
 | How to develop on Windows? | [English](docs/guide/Develop_on_Windows.md) | [Chinese](docs/zh/guide/Develop_on_Windows.md) |
-| How to format the code? | [English](docs/guide/Format.md) |[Chinese](zh/docs/guide/Format.md) |
-| How to test? | [English](docs/guide/Test.md) | [Chinese](zh/docs/guide/Test.md) |
+| How to format the code? | [English](docs/guide/Format.md) | [Chinese](docs/zh/guide/Format.md) |
+| How to test? | [English](docs/guide/Test.md) | [Chinese](docs/zh/guide/Test.md) |
+
+## In-repo Project Management
+In-repo Project Management is the core of libre software:
++ Software Foundation free
++ Bi-directional generation of structured code or structured text
++ Guarantee the freedom of the developers
+
+Projects:
++ Lolly [1.4.x](devel/1.4.md)
++ Lolly [1.3.x](devel/1.3.md): it is for Mogan 1.2.5.x LTS
++ Lolly [1.2.x](devel/1.2.md)
++ Lolly [1.1.x](devel/1.1.md)
++ Lolly [1.0.x](devel/1.0.md)
