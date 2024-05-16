@@ -24,7 +24,6 @@ TEST_CASE ("on string") {
   string_eq (res, "CHARACTER");
 }
 
-
 TEST_CASE ("iterable types") {
   CHECK (iterable_with_subscript<string>::value);
   CHECK_FALSE (iterable_with_subscript<string_view<char>>::value);
