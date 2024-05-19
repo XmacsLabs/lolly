@@ -9,8 +9,8 @@
 
 #pragma once
 
-#include "classdef.hpp"
 #include "fast_alloc.hpp"
+#include "sharedptr.hpp"
 #include "string_view.hpp"
 
 namespace lolly {
@@ -20,7 +20,7 @@ using string_u16_view= lolly::data::string_view<char16_t>;
 
 class string_u16;
 
-class string_u16_rep : concrete_struct {
+class string_u16_rep {
   int       n;
   int       a_N;
   char16_t* a;
@@ -58,41 +58,41 @@ public:
   friend int N (string_u16 a);
 };
 
-class string_u16 {
-  CONCRETE (string_u16);
+using string_u16_base= counted_ptr<string_u16_rep>;
+class string_u16 : public counted_ptr<string_u16_rep> {
 
-  inline string_u16 () : rep (tm_new<string_u16_rep> ()) {}
-  inline explicit string_u16 (int n) : rep (tm_new<string_u16_rep> (n)) {}
+public:
+  inline string_u16 () : base (make ()) {}
+  inline explicit string_u16 (int n) : base (make (n)) {}
 
   template <size_t N_>
-  string_u16 (const char16_t (&s)[N_]) : rep (tm_new<string_u16_rep> (N_ - 1)) {
+  string_u16 (const char16_t (&s)[N_]) : base (make (N_ - 1)) {
     constexpr int n= N_ - 1;
     for (int i= 0; i < n; i++)
-      rep->a[i]= s[i];
+      get ()->a[i]= s[i];
   };
 
   string_u16 (char16_t c);
   string_u16 (char16_t c, int n);
   string_u16 (const string_u16_view& sv);
 
-  inline char16_t* buffer () { return rep->a; }
+  inline char16_t* buffer () { return get ()->a; }
   inline char16_t* buffer (int size) {
-    rep->resize (size);
-    return rep->a;
+    get ()->resize (size);
+    return get ()->a;
   }
   char16_t* begin () { return rep->a; }
   char16_t* end () { return rep->a + rep->n; }
 
   inline operator string_u16_view () {
-    return string_u16_view (rep->a, rep->n);
+    return string_u16_view (get ()->a, get ()->n);
   }
   inline string_u16_view operator() (int start, int end) {
     return ((string_u16_view) * this) (start, end);
   }
 
-  inline char16_t& operator[] (int i) { return rep->a[i]; }
+  inline char16_t& operator[] (int i) { return get ()->a[i]; }
 };
-CONCRETE_CODE (string_u16);
 
 inline int
 N (string_u16 a) {

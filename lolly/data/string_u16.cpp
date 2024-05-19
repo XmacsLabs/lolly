@@ -81,19 +81,16 @@ string_u16_rep::reserve (int new_n) {
   }
 }
 
-string_u16::string_u16 (char16_t c) : rep (tm_new<string_u16_rep> (1)) {
-  rep->a[0]= c;
-};
+string_u16::string_u16 (char16_t c) : base (make (1)) { get ()->a[0]= c; };
 
-string_u16::string_u16 (const string_u16_view& c)
-    : rep (tm_new<string_u16_rep> (c.N)) {
+string_u16::string_u16 (const string_u16_view& c) : base (make (c.N)) {
   for (int i= 0; i < c.N; i++)
-    rep->a[i]= c.a[i];
+    get ()->a[i]= c.a[i];
 };
 
-string_u16::string_u16 (char16_t c, int n) : rep (tm_new<string_u16_rep> (n)) {
+string_u16::string_u16 (char16_t c, int n) : base (make (n)) {
   for (int i= 0; i < n; i++)
-    rep->a[i]= c;
+    get ()->a[i]= c;
 };
 
 string_u16
