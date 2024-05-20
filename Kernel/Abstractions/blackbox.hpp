@@ -8,12 +8,13 @@
 
 #ifndef BLACKBOX_H
 #define BLACKBOX_H
-#include "basic.hpp"
+#include "sharedptr.hpp"
+#include "tm_ostream.hpp"
 
 /**
  * @brief A template class representing an opaque pointer.
  */
-class blackbox_rep : public abstract_struct {
+class blackbox_rep {
 public:
   inline blackbox_rep () {}
   inline virtual ~blackbox_rep () {}
@@ -22,11 +23,10 @@ public:
   virtual tm_ostream& display (tm_ostream& out)= 0;
 };
 
-class blackbox {
-public:
-  ABSTRACT_NULL (blackbox);
+class blackbox : public counted_ptr_nullable<blackbox_rep> {
+  using counted_ptr_nullable<blackbox_rep>::counted_ptr_nullable;
+  template <typename T> friend blackbox close_box (const T&);
 };
-ABSTRACT_NULL_CODE (blackbox);
 
 template <class T> class whitebox_rep : public blackbox_rep {
 public:
@@ -75,7 +75,7 @@ public:
 inline bool
 operator== (blackbox bb1, blackbox bb2) {
   if (is_nil (bb1)) return is_nil (bb2);
-  else return bb1->equal (bb2.rep);
+  else return bb1->equal (bb2.get());
 }
 
 /**
@@ -87,7 +87,7 @@ operator== (blackbox bb1, blackbox bb2) {
 inline bool
 operator!= (blackbox bb1, blackbox bb2) {
   if (is_nil (bb1)) return !is_nil (bb2);
-  else return !bb1->equal (bb2.rep);
+  else return !bb1->equal (bb2.get());
 }
 
 /**
@@ -121,7 +121,7 @@ type_box (blackbox bb) {
 template <class T>
 blackbox
 close_box (const T& data) {
-  return tm_new<whitebox_rep<T>> (data);
+  return blackbox (make<whitebox_rep<T>, blackbox_rep> (data));
 }
 
 /**
@@ -134,7 +134,7 @@ template <class T>
 T
 open_box (blackbox bb) {
   ASSERT (type_box (bb) == type_helper<T>::id, "type mismatch");
-  return ((whitebox_rep<T>*) bb.rep)->data;
+  return ((whitebox_rep<T>*) bb.get())->data;
 }
 
 #endif // BLACKBOX_H
