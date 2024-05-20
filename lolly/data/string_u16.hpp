@@ -68,8 +68,9 @@ public:
   template <size_t N_>
   string_u16 (const char16_t (&s)[N_]) : base (make (N_ - 1)) {
     constexpr int n= N_ - 1;
+    char16_t*     a= get ()->a;
     for (int i= 0; i < n; i++)
-      get ()->a[i]= s[i];
+      a[i]= s[i];
   };
 
   string_u16 (char16_t c);

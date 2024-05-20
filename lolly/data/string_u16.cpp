@@ -84,13 +84,15 @@ string_u16_rep::reserve (int new_n) {
 string_u16::string_u16 (char16_t c) : base (make (1)) { get ()->a[0]= c; };
 
 string_u16::string_u16 (const string_u16_view& c) : base (make (c.N)) {
+  char16_t* a= get ()->a;
   for (int i= 0; i < c.N; i++)
-    get ()->a[i]= c.a[i];
+    a[i]= c.a[i];
 };
 
 string_u16::string_u16 (char16_t c, int n) : base (make (n)) {
+  char16_t* a= get ()->a;
   for (int i= 0; i < n; i++)
-    get ()->a[i]= c;
+    a[i]= c;
 };
 
 string_u16
