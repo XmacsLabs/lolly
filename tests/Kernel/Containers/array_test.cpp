@@ -120,7 +120,7 @@ TEST_CASE ("test iteration") {
     ++expectedIndex;
   }
   CHECK_EQ (expectedIndex, 5);
-  
+
   expectedIndex= 0;
   for (const auto element : zero_elem) {
     CHECK_EQ (element, zero_elem[expectedIndex]);
