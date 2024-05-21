@@ -30,25 +30,30 @@ template <typename T> struct ref_counter : ref_counter_base<T> {
 };
 
 template <typename Stored, typename Regard_As= Stored, typename... Params>
-static ref_counter_base<Regard_As>*
+inline ref_counter_base<Regard_As>*
 make_derived (Params&&... p) {
   return reinterpret_cast<ref_counter_base<Regard_As>*> (
       tm_new<ref_counter<Stored>> (std::forward<Params> (p)...));
 }
 
 template <typename T, bool nullable= false> class counted_ptr {
+
 protected:
-  using base     = counted_ptr<T, nullable>;
   using counter_t= ref_counter_base<T>;
-  counter_t* counter;
-  explicit counted_ptr (counter_t* c) : counter (c) {}
+  using base     = counted_ptr<T, nullable>;
+  explicit counted_ptr (counter_t* c) : counter (c), rep (c->get ()) {}
   template <typename... Params> static counter_t* make (Params&&... p) {
-    return make_derived<T, T> (std::forward<Params> (p)...);
+    return tm_new<ref_counter<T>> (std::forward<Params> (p)...);
   }
 
+private:
+  counter_t* counter;
+
 public:
-  counted_ptr () : counter (nullptr) {}
-  counted_ptr (const counted_ptr<T, nullable>& x) : counter (x.counter) {
+  T* rep;
+  counted_ptr () : counter (nullptr), rep (nullptr) {}
+  counted_ptr (const counted_ptr<T, nullable>& x)
+      : counter (x.counter), rep (x.rep) {
     if constexpr (nullable) {
       if (counter != nullptr) {
         counter->inc_count ();
@@ -82,24 +87,23 @@ public:
       this->counter->dec_count ();
     }
     this->counter= x.counter;
+    this->rep    = x.rep;
     return *this;
   }
-  T* get () {
+  T* operator->() {
     if constexpr (nullable) {
       if (counter != nullptr) {
-        return counter->get ();
+        return rep;
       }
       else {
         return nullptr;
       }
     }
     else {
-      return counter->get ();
+      return rep;
     }
   }
-  const T* get () const { return get (); }
-  T*       operator->() { return get (); }
-  const T* operator->() const { return get (); }
+  const T* operator->() const { return operator->(); }
   bool     is_nil () const {
     if constexpr (nullable) {
       return counter == nullptr;

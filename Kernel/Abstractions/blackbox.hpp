@@ -9,7 +9,7 @@
 #ifndef BLACKBOX_H
 #define BLACKBOX_H
 #include "sharedptr.hpp"
-#include "tm_ostream.hpp"
+#include "basic.hpp"
 
 /**
  * @brief A template class representing an opaque pointer.
@@ -75,7 +75,7 @@ public:
 inline bool
 operator== (blackbox bb1, blackbox bb2) {
   if (is_nil (bb1)) return is_nil (bb2);
-  else return bb1->equal (bb2.get ());
+  else return bb1->equal (bb2.rep);
 }
 
 /**
@@ -87,7 +87,7 @@ operator== (blackbox bb1, blackbox bb2) {
 inline bool
 operator!= (blackbox bb1, blackbox bb2) {
   if (is_nil (bb1)) return !is_nil (bb2);
-  else return !bb1->equal (bb2.get ());
+  else return !bb1->equal (bb2.rep);
 }
 
 /**
@@ -134,7 +134,7 @@ template <class T>
 T
 open_box (blackbox bb) {
   ASSERT (type_box (bb) == type_helper<T>::id, "type mismatch");
-  return ((whitebox_rep<T>*) bb.get ())->data;
+  return ((whitebox_rep<T>*) bb.rep)->data;
 }
 
 #endif // BLACKBOX_H
