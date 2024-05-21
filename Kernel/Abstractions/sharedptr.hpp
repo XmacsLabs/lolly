@@ -90,6 +90,11 @@ public:
     this->rep    = x.rep;
     return *this;
   }
+  counted_ptr<T, nullable>& operator= (counted_ptr<T, nullable>&& x) {
+    std::swap (this->counter, x.counter);
+    std::swap (this->rep, x.rep);
+    return *this;
+  }
   T* operator->() {
     if constexpr (nullable) {
       if (counter != nullptr) {

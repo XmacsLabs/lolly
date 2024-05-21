@@ -8,8 +8,8 @@
 
 #ifndef BLACKBOX_H
 #define BLACKBOX_H
-#include "sharedptr.hpp"
 #include "basic.hpp"
+#include "sharedptr.hpp"
 
 /**
  * @brief A template class representing an opaque pointer.
