@@ -29,86 +29,89 @@ template <typename T> struct ref_counter : ref_counter_base<T> {
   T* get () { return &content; }
 };
 
-template <typename T> class counted_ptr {
-protected:
-  using base     = counted_ptr<T>;
-  using counter_t= ref_counter<T>;
-  counter_t* counter;
-  T*         get () { return &(counter->content); }
-  const T*   get () const { return &(counter->content); }
-  template <typename... Params> static counter_t* make (Params&&... p) {
-    return tm_new<counter_t> (std::forward<Params> (p)...);
-  }
-  explicit counted_ptr (counter_t* c) : counter (c) {}
-
-public:
-  counted_ptr (const counted_ptr<T>& x) : counter (x.counter) {
-    counter->inc_count ();
-  }
-  ~counted_ptr () { counter->dec_count (); }
-  counted_ptr<T>& operator= (counted_ptr& x) {
-    x.counter->inc_count ();
-    this->counter->dec_count ();
-    this->counter= x.counter;
-    return *this;
-  }
-  T*       operator->() { return &(counter->content); }
-  const T* operator->() const { return &(counter->content); }
-};
-
 template <typename Stored, typename Regard_As= Stored, typename... Params>
 static ref_counter_base<Regard_As>*
-make (Params&&... p) {
+make_derived (Params&&... p) {
   return reinterpret_cast<ref_counter_base<Regard_As>*> (
       tm_new<ref_counter<Stored>> (std::forward<Params> (p)...));
 }
 
-template <typename T> class counted_ptr_nullable {
+template <typename T, bool nullable= false> class counted_ptr {
 protected:
-  using base     = counted_ptr_nullable<T>;
+  using base     = counted_ptr<T, nullable>;
   using counter_t= ref_counter_base<T>;
   counter_t* counter;
-  explicit counted_ptr_nullable (counter_t* c) : counter (c) {}
+  explicit counted_ptr (counter_t* c) : counter (c) {}
+  template <typename... Params> static counter_t* make (Params&&... p) {
+    return make_derived<T, T> (std::forward<Params> (p)...);
+  }
 
 public:
-  counted_ptr_nullable () : counter (nullptr) {}
-  counted_ptr_nullable (const counted_ptr_nullable<T>& x)
-      : counter (x.counter) {
-    if (counter != nullptr) {
+  counted_ptr () : counter (nullptr) {}
+  counted_ptr (const counted_ptr<T, nullable>& x) : counter (x.counter) {
+    if constexpr (nullable) {
+      if (counter != nullptr) {
+        counter->inc_count ();
+      }
+    }
+    else {
       counter->inc_count ();
     }
   }
-  ~counted_ptr_nullable () {
-    if (counter != nullptr) {
+  ~counted_ptr () {
+    if constexpr (nullable) {
+      if (counter != nullptr) {
+        counter->dec_count ();
+      }
+    }
+    else {
       counter->dec_count ();
     }
   }
-  counted_ptr_nullable<T>& operator= (counted_ptr_nullable<T>& x) {
-    if (x.counter != nullptr) {
-      x.counter->inc_count ();
+  counted_ptr<T, nullable>& operator= (counted_ptr<T, nullable>& x) {
+    if constexpr (nullable) {
+      if (x.counter != nullptr) {
+        x.counter->inc_count ();
+      }
+      if (this->counter != nullptr) {
+        this->counter->dec_count ();
+      }
     }
-    if (this->counter != nullptr) {
+    else {
+      x.counter->inc_count ();
       this->counter->dec_count ();
     }
     this->counter= x.counter;
     return *this;
   }
   T* get () {
-    if (counter != nullptr) {
-      return counter->get ();
+    if constexpr (nullable) {
+      if (counter != nullptr) {
+        return counter->get ();
+      }
+      else {
+        return nullptr;
+      }
     }
     else {
-      return nullptr;
+      return counter->get ();
     }
   }
   const T* get () const { return get (); }
   T*       operator->() { return get (); }
   const T* operator->() const { return get (); }
-  bool     is_nil () const { return counter == nullptr; }
+  bool     is_nil () const {
+    if constexpr (nullable) {
+      return counter == nullptr;
+    }
+    else {
+      return false;
+    }
+  }
 };
 
 template <typename T>
 inline bool
-is_nil (const counted_ptr_nullable<T> x) {
+is_nil (const counted_ptr<T, true> x) {
   return x.is_nil ();
 }

@@ -23,8 +23,8 @@ public:
   virtual tm_ostream& display (tm_ostream& out)= 0;
 };
 
-class blackbox : public counted_ptr_nullable<blackbox_rep> {
-  using counted_ptr_nullable<blackbox_rep>::counted_ptr_nullable;
+class blackbox : public counted_ptr<blackbox_rep, true> {
+  using counted_ptr<blackbox_rep, true>::counted_ptr;
   template <typename T> friend blackbox close_box (const T&);
 };
 
@@ -75,7 +75,7 @@ public:
 inline bool
 operator== (blackbox bb1, blackbox bb2) {
   if (is_nil (bb1)) return is_nil (bb2);
-  else return bb1->equal (bb2.get());
+  else return bb1->equal (bb2.get ());
 }
 
 /**
@@ -87,7 +87,7 @@ operator== (blackbox bb1, blackbox bb2) {
 inline bool
 operator!= (blackbox bb1, blackbox bb2) {
   if (is_nil (bb1)) return !is_nil (bb2);
-  else return !bb1->equal (bb2.get());
+  else return !bb1->equal (bb2.get ());
 }
 
 /**
@@ -121,7 +121,7 @@ type_box (blackbox bb) {
 template <class T>
 blackbox
 close_box (const T& data) {
-  return blackbox (make<whitebox_rep<T>, blackbox_rep> (data));
+  return blackbox (make_derived<whitebox_rep<T>, blackbox_rep> (data));
 }
 
 /**
@@ -134,7 +134,7 @@ template <class T>
 T
 open_box (blackbox bb) {
   ASSERT (type_box (bb) == type_helper<T>::id, "type mismatch");
-  return ((whitebox_rep<T>*) bb.get())->data;
+  return ((whitebox_rep<T>*) bb.get ())->data;
 }
 
 #endif // BLACKBOX_H
