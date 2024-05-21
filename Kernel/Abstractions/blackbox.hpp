@@ -24,7 +24,7 @@ public:
 };
 
 class blackbox : public counted_ptr<blackbox_rep, true> {
-  using counted_ptr<blackbox_rep, true>::counted_ptr;
+  using base::counted_ptr;
   template <typename T> friend blackbox close_box (const T&);
 };
 
@@ -121,7 +121,7 @@ type_box (blackbox bb) {
 template <class T>
 blackbox
 close_box (const T& data) {
-  return blackbox (make_derived<whitebox_rep<T>, blackbox_rep> (data));
+  return blackbox (blackbox::make<whitebox_rep<T>> (data));
 }
 
 /**

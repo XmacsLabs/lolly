@@ -4,14 +4,13 @@
 #include "fast_alloc.hpp"
 #include <utility>
 
-template <typename T> struct ref_counter_base {
-
-  virtual void inc_count ()= 0;
-  virtual void dec_count ()= 0;
-  virtual T*   get ()      = 0;
+struct ref_counter_base {
+  virtual void  inc_count ()= 0;
+  virtual void  dec_count ()= 0;
+  virtual void* get ()      = 0;
 };
 
-template <typename T> struct ref_counter : ref_counter_base<T> {
+template <typename T> struct ref_counter : ref_counter_base {
   /// @brief the reference count of the object
   int ref_count;
   T   content;
@@ -26,24 +25,18 @@ template <typename T> struct ref_counter : ref_counter_base<T> {
       tm_delete (this);
     }
   }
-  T* get () { return &content; }
+  void* get () { return &content; }
 };
-
-template <typename Stored, typename Regard_As= Stored, typename... Params>
-inline ref_counter_base<Regard_As>*
-make_derived (Params&&... p) {
-  return reinterpret_cast<ref_counter_base<Regard_As>*> (
-      tm_new<ref_counter<Stored>> (std::forward<Params> (p)...));
-}
-
 template <typename T, bool nullable= false> class counted_ptr {
 
 protected:
-  using counter_t= ref_counter_base<T>;
+  using counter_t= ref_counter_base;
   using base     = counted_ptr<T, nullable>;
-  explicit counted_ptr (counter_t* c) : counter (c), rep (c->get ()) {}
-  template <typename... Params> static counter_t* make (Params&&... p) {
-    return tm_new<ref_counter<T>> (std::forward<Params> (p)...);
+  explicit counted_ptr (counter_t* c)
+      : counter (c), rep (static_cast<T*> (c->get ())) {}
+  template <typename Stored= T, typename... Params>
+  static counter_t* make (Params&&... p) {
+    return tm_new<ref_counter<Stored>> (std::forward<Params> (p)...);
   }
 
 private:
