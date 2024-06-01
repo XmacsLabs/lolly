@@ -341,9 +341,9 @@ if has_config("enable_tests") then
             set_values("wasm.preloadfiles", {"xmake.lua", "tests", "LICENSE"})
             on_test(function (target, opt)
                 node = os.getenv("EMSDK_NODE")
-                os.cd("$(buildir)/wasm/wasm32/$(mode)/")
-                print("> cd $(buildir)/wasm/wasm32/$(mode)/")
-                cmd = node .. " " .. opt.name .. ".js"
+                os.cd(target:targetdir())
+                print("> cd " .. target:targetdir())
+                cmd = node .. " " .. target:targetfile()
                 print("> " .. cmd)
                 local retval = try {
                     function ()
