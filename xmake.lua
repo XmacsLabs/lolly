@@ -337,6 +337,27 @@ if has_config("enable_tests") then
             add_ldflags("/LTCG")
         elseif is_plat("wasm") then
             add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
+            add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
+            set_values("wasm.preloadfiles", {"xmake.lua", "tests", "LICENSE"})
+            on_test(function (target)
+                node = os.getenv("EMSDK_NODE")
+                os.cd("$(buildir)/wasm/wasm32/$(mode)/")
+                print("> cd $(buildir)/wasm/wasm32/$(mode)/")
+                cmd = node .. " " .. testname .. ".js"
+                print("> " .. cmd)
+                local retval = try {
+                    function ()
+                        os.exec(cmd)
+                        return true
+                    end,
+                    catch {
+                        function (errors)
+                            return false
+                        end
+                    }
+                }
+                return retval;
+            end)
         end
         add_includedirs("$(buildir)/L1")
         add_includedirs(lolly_includedirs)
