@@ -339,11 +339,11 @@ if has_config("enable_tests") then
             add_cxxflags("-s DISABLE_EXCEPTION_CATCHING=0")
             add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
             set_values("wasm.preloadfiles", {"xmake.lua", "tests", "LICENSE"})
-            on_test(function (target)
+            on_test(function (target, opt)
                 node = os.getenv("EMSDK_NODE")
                 os.cd("$(buildir)/wasm/wasm32/$(mode)/")
                 print("> cd $(buildir)/wasm/wasm32/$(mode)/")
-                cmd = node .. " " .. testname .. ".js"
+                cmd = node .. " " .. opt.name .. ".js"
                 print("> " .. cmd)
                 local retval = try {
                     function ()
@@ -352,7 +352,7 @@ if has_config("enable_tests") then
                     end,
                     catch {
                         function (errors)
-                            return false
+                            return false, errors
                         end
                     }
                 }
