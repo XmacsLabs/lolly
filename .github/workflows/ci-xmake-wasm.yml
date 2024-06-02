@@ -52,7 +52,7 @@ jobs:
       - name: build
         run: xmake build --yes -vD
       - name: test
-        run: elvish bin/test_wasm
+        run: elvish bin/test_wasm "tests/*"
   windowsbuild:
     runs-on: windows-2019
     env:
