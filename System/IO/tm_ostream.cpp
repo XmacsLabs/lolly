@@ -21,7 +21,7 @@
  * Routines for abstract base class
  ******************************************************************************/
 
-tm_ostream_rep::tm_ostream_rep () : ref_count (0) {}
+tm_ostream_rep::tm_ostream_rep () {}
 tm_ostream_rep::~tm_ostream_rep () {}
 void
 tm_ostream_rep::flush () {}
@@ -116,21 +116,21 @@ std_ostream_rep::flush () {
 
 class buffered_ostream_rep : public tm_ostream_rep {
 public:
-  tm_ostream_rep* master;
-  string          buf;
+  tm_ostream master;
+  string     buf;
 
 public:
-  buffered_ostream_rep (tm_ostream_rep* master);
+  buffered_ostream_rep (tm_ostream master);
   ~buffered_ostream_rep ();
 
   bool is_writable () const;
   void write (const char*);
 };
 
-buffered_ostream_rep::buffered_ostream_rep (tm_ostream_rep* master2)
+buffered_ostream_rep::buffered_ostream_rep (tm_ostream master2)
     : master (master2) {}
 
-buffered_ostream_rep::~buffered_ostream_rep () { DEC_COUNT (master); }
+buffered_ostream_rep::~buffered_ostream_rep () {}
 
 bool
 buffered_ostream_rep::is_writable () const {
@@ -146,33 +146,9 @@ buffered_ostream_rep::write (const char* s) {
  * Abstract user interface
  ******************************************************************************/
 
-tm_ostream::tm_ostream () : rep (tm_new<std_ostream_rep> ()) {
-  INC_COUNT (this->rep);
-}
-tm_ostream::tm_ostream (char* s) : rep (tm_new<std_ostream_rep> (s)) {
-  INC_COUNT (this->rep);
-}
-tm_ostream::tm_ostream (FILE* f) : rep (tm_new<std_ostream_rep> (f)) {
-  INC_COUNT (this->rep);
-}
-tm_ostream::tm_ostream (const tm_ostream& x) : rep (x.rep) {
-  INC_COUNT (this->rep);
-}
-tm_ostream::tm_ostream (tm_ostream_rep* rep2) : rep (rep2) {
-  INC_COUNT (this->rep);
-}
-tm_ostream::~tm_ostream () { DEC_COUNT (this->rep); }
-tm_ostream_rep*
-tm_ostream::operator->() {
-  return rep;
-}
-tm_ostream&
-tm_ostream::operator= (tm_ostream x) {
-  INC_COUNT (x.rep);
-  DEC_COUNT (this->rep);
-  this->rep= x.rep;
-  return *this;
-}
+tm_ostream::tm_ostream () : base (make<std_ostream_rep> ()) {}
+tm_ostream::tm_ostream (char* s) : base (make<std_ostream_rep> (s)) {}
+tm_ostream::tm_ostream (FILE* f) : base (make<std_ostream_rep> (f)) {}
 bool
 tm_ostream::operator== (tm_ostream& out) {
   return (&out == this);
@@ -190,25 +166,20 @@ tm_ostream::flush () {
 
 void
 tm_ostream::buffer () {
-  rep= tm_new<buffered_ostream_rep> (rep);
-  INC_COUNT (rep);
+  *this= tm_ostream (make<buffered_ostream_rep> (*this));
 }
 
 string
 tm_ostream::unbuffer () {
   buffered_ostream_rep* ptr= (buffered_ostream_rep*) rep;
-  rep                      = ptr->master;
-  string r                 = ptr->buf;
-  INC_COUNT (rep);
-  DEC_COUNT (ptr);
+  string                r  = ptr->buf;
+  *this                    = ptr->master;
   return r;
 }
 
 void
 tm_ostream::redirect (tm_ostream x) {
-  INC_COUNT (x.rep);
-  DEC_COUNT (this->rep);
-  this->rep= x.rep;
+  *this= x;
 }
 
 /******************************************************************************
