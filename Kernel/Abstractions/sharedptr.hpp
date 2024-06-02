@@ -96,7 +96,10 @@ public:
    */
   T* rep;
 
-  counted_ptr () : counter (nullptr), rep (nullptr) {}
+  counted_ptr () : counter (nullptr), rep (nullptr) {
+    static_assert (nullable,
+                   "null pointer is not allowed in non-null smart pointer.");
+  }
   /**
    * copy constructor of the smart pointer
    */
