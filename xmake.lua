@@ -343,7 +343,7 @@ if has_config("enable_tests") then
                 node = os.getenv("EMSDK_NODE")
                 os.cd(target:targetdir())
                 print("> cd " .. target:targetdir())
-                cmd = node .. " " .. target:targetfile()
+                cmd = node .. " " .. path.join(target:targetdir(), target:basename() .. ".js")
                 print("> " .. cmd)
                 local retval = try {
                     function ()
