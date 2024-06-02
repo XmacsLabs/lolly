@@ -311,7 +311,7 @@ if has_config("enable_tests") then
             defines = "DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN"})
     end
     target("tests")do
-        set_kind("object")
+        set_kind("binary")
         add_deps("liblolly")
         set_languages("c++17")
         set_policy("check.auto_ignore_flags", false)
@@ -322,6 +322,8 @@ if has_config("enable_tests") then
 
         if is_plat("mingw") then
             add_packages("mingw-w64")
+        elseif  is_plat("wasm") then
+            add_packages("emscripten")
         end
         add_packages("tbox")
         add_packages("doctest")
