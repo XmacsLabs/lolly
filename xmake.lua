@@ -342,7 +342,8 @@ if has_config("enable_tests") then
             add_ldflags("-s DISABLE_EXCEPTION_CATCHING=0")
             set_values("wasm.preloadfiles", {"xmake.lua", "tests", "LICENSE"})
             on_test(function (target, opt)
-                node = path.splitenv(os.getenv("EMSDK_NODE"))[1]
+                node_table = path.splitenv(os.getenv("EMSDK_NODE"))
+                node = node_table[table.maxn(node_table)]
                 os.cd(target:targetdir())
                 print("> cd " .. target:targetdir())
                 cmd = node .. " " .. path.join(target:targetdir(), target:basename() .. ".js")
