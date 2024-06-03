@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.22</span>
    </div>
   </td>
  </tr>
@@ -177,19 +177,19 @@ $(function() { codefold.init(0); });
 <div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="namespacelolly_1_1data.html#ab978a41326fa124960a0d7a51438f1d3">   84</a></span><a class="code hl_function" href="namespacelolly_1_1data.html#a083edca3fb16a7cd6cce07a5bae5b1c8">decode_base64</a> (<span class="keywordtype">string</span> s) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">string</span>     <a class="code hl_class" href="classlist.html">r</a>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">bool</span>       <a class="code hl_class" href="classlist.html">end</a>= <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">bool</span>       end= <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_class" href="classlist.html">array&lt;int&gt;</a> <a class="code hl_class" href="classlist.html">tmp</a>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">int</span>        i, n= <a class="code hl_function" href="namespacelolly_1_1data.html#aae8d009f4bacc3a786bfd00cbe520b34">N</a> (s), <a class="code hl_class" href="classlist.html">cnt</a>= 0;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n &amp;&amp; !<a class="code hl_class" href="classlist.html">end</a>; i++) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">for</span> (i= 0; i &lt; n &amp;&amp; !end; i++) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacelolly_1_1data.html#aefb201477968aa5d38ec7dfca41d2b3c">b64_to_int</a>[(<span class="keywordtype">int</span>) s[i]] != <span class="charliteral">&#39;?&#39;</span>) {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <a class="code hl_class" href="classlist.html">tmp</a> &lt;&lt; (int) s[i];</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <a class="code hl_class" href="classlist.html">cnt</a>++;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s[i] == <span class="charliteral">&#39;=&#39;</span>) {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <a class="code hl_class" href="classlist.html">end</a>= <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      end= <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">cnt</a> == 4 || <a class="code hl_class" href="classlist.html">end</a>) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classlist.html">cnt</a> == 4 || end) {</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      <a class="code hl_class" href="classlist.html">r</a> &lt;&lt; <a class="code hl_function" href="namespacelolly_1_1data.html#a083edca3fb16a7cd6cce07a5bae5b1c8">decode_base64</a> (<a class="code hl_class" href="classlist.html">tmp</a>);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <a class="code hl_class" href="classlist.html">cnt</a>= 0;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <a class="code hl_class" href="classlist.html">tmp</a>= <a class="code hl_class" href="classlist.html">array&lt;int&gt;</a> ();</div>

@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.22</span>
    </div>
   </td>
  </tr>
@@ -220,9 +220,27 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_class" href="classlist.html">CHECK</a> (<a class="code hl_function" href="array_8hpp.html#aa068ba9b72448f1ebfb05738e5e1250d">contains</a> (<span class="keywordtype">string</span> (<span class="stringliteral">&quot;】&quot;</span>), <a class="code hl_class" href="classlist.html">arr</a>));</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
 </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="array__test_8cpp.html#aac99fd6dff95f23e3415530b2f080638">  116</a></span><a class="code hl_function" href="parse__string__test_8cpp.html#abd7801c7d460439f849c63ff57e19fa4">TEST_CASE</a> (<span class="stringliteral">&quot;test iteration&quot;</span>) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classlist.html">expectedIndex</a>= 0;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_class" href="classlist.html">element</a> : <a class="code hl_variable" href="array__test_8cpp.html#a7a0a218661e4e8bf917b07ea5138c64e">five_elem</a>) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_class" href="classlist.html">element</a>, <a class="code hl_variable" href="array__test_8cpp.html#a7a0a218661e4e8bf917b07ea5138c64e">five_elem</a>[<a class="code hl_class" href="classlist.html">expectedIndex</a>]);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    ++<a class="code hl_class" href="classlist.html">expectedIndex</a>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_class" href="classlist.html">expectedIndex</a>, 5);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <a class="code hl_class" href="classlist.html">expectedIndex</a>= 0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_class" href="classlist.html">element</a> : <a class="code hl_variable" href="array__test_8cpp.html#a33314050315eadc2189e60d29b2c3bc0">zero_elem</a>) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_class" href="classlist.html">element</a>, <a class="code hl_variable" href="array__test_8cpp.html#a33314050315eadc2189e60d29b2c3bc0">zero_elem</a>[<a class="code hl_class" href="classlist.html">expectedIndex</a>]);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    ++<a class="code hl_class" href="classlist.html">expectedIndex</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_class" href="classlist.html">expectedIndex</a>, 0);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+</div>
 <div class="ttc" id="aa__lolly__test_8hpp_html"><div class="ttname"><a href="a__lolly__test_8hpp.html">a_lolly_test.hpp</a></div></div>
 <div class="ttc" id="aarray_8hpp_html"><div class="ttname"><a href="array_8hpp.html">array.hpp</a></div></div>
-<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
+<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00170">array.hpp:170</a></div></div>
 <div class="ttc" id="aarray_8hpp_html_a51322ab3ef3f86891dc0c29729de9daf"><div class="ttname"><a href="array_8hpp.html#a51322ab3ef3f86891dc0c29729de9daf">reverse</a></div><div class="ttdeci">array&lt; T &gt; reverse(array&lt; T &gt; a)</div><div class="ttdoc">Reverse an array.</div><div class="ttdef"><b>Definition</b> <a href="array_8ipp_source.html#l00195">array.ipp:195</a></div></div>
 <div class="ttc" id="aarray_8hpp_html_a7aac94bc8f6faa2004fd82b2dd853fc3"><div class="ttname"><a href="array_8hpp.html#a7aac94bc8f6faa2004fd82b2dd853fc3">range</a></div><div class="ttdeci">array&lt; T &gt; range(array&lt; T &gt; a, int i, int j)</div><div class="ttdoc">Get a subarray of an array.</div><div class="ttdef"><b>Definition</b> <a href="array_8ipp_source.html#l00184">array.ipp:184</a></div></div>
 <div class="ttc" id="aarray_8hpp_html_aa068ba9b72448f1ebfb05738e5e1250d"><div class="ttname"><a href="array_8hpp.html#aa068ba9b72448f1ebfb05738e5e1250d">contains</a></div><div class="ttdeci">bool contains(T a, array&lt; T &gt; b)</div><div class="ttdoc">Check if an array contains a specified element.</div></div>

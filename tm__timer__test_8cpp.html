@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.22</span>
    </div>
   </td>
  </tr>
@@ -191,7 +191,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   42</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="analyze_8cpp.html#a956f99a38d86bc6070ca9df014ad8203">read_int</a> (<a class="code hl_class" href="classlist.html">tokens</a>[1], <a class="code hl_class" href="classlist.html">pos</a>, <a class="code hl_class" href="classlist.html">result</a>) == <span class="keyword">false</span>) <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">   43</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">result</a>;</div>
 <div class="line"><span class="lineno">   44</span>}</div>
-<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
+<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00170">array.hpp:170</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -244,18 +244,18 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   54</span>                          {</div>
 <div class="line"><span class="lineno">   55</span>  <span class="keywordtype">string</span>   <a class="code hl_class" href="classlist.html">s1</a>= out.<a class="code hl_function" href="classtm__ostream.html#a08f04640d59166f3d3715248d83bb1c5">unbuffer</a> ();</div>
 <div class="line"><span class="lineno">   56</span>  <a class="code hl_class" href="classc__string.html">c_string</a> <a class="code hl_class" href="classlist.html">ans</a> (<a class="code hl_class" href="classlist.html">s1</a>);</div>
-<div class="line"><span class="lineno">   57</span>  <span class="keywordtype">char</span>*    <a class="code hl_class" href="classlist.html">current</a>= <a class="code hl_class" href="classlist.html">ans</a>;</div>
-<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">while</span> ((<a class="code hl_class" href="classlist.html">current</a>= <a class="code hl_class" href="classlist.html">strstr</a> (<a class="code hl_class" href="classlist.html">current</a>, <span class="stringliteral">&quot;took&quot;</span>))) {</div>
-<div class="line"><span class="lineno">   59</span>    <a class="code hl_class" href="classlist.html">current</a>+= <a class="code hl_class" href="classlist.html">strlen</a> (<span class="stringliteral">&quot;took&quot;</span>);</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">while</span> (*<a class="code hl_class" href="classlist.html">current</a> &amp;&amp; (*<a class="code hl_class" href="classlist.html">current</a> == <span class="charliteral">&#39;(&#39;</span>)) {</div>
-<div class="line"><span class="lineno">   61</span>      <a class="code hl_class" href="classlist.html">current</a>+= 2;</div>
+<div class="line"><span class="lineno">   57</span>  <span class="keywordtype">char</span>*    current= <a class="code hl_class" href="classlist.html">ans</a>;</div>
+<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">while</span> ((current= <a class="code hl_class" href="classlist.html">strstr</a> (current, <span class="stringliteral">&quot;took&quot;</span>))) {</div>
+<div class="line"><span class="lineno">   59</span>    current+= <a class="code hl_class" href="classlist.html">strlen</a> (<span class="stringliteral">&quot;took&quot;</span>);</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">while</span> (*current &amp;&amp; (*current == <span class="charliteral">&#39;(&#39;</span>)) {</div>
+<div class="line"><span class="lineno">   61</span>      current+= 2;</div>
 <div class="line"><span class="lineno">   62</span>    }</div>
-<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">while</span> (*<a class="code hl_class" href="classlist.html">current</a> &amp;&amp; (*<a class="code hl_class" href="classlist.html">current</a> &lt; <span class="charliteral">&#39;0&#39;</span> || *<a class="code hl_class" href="classlist.html">current</a> &gt; <span class="charliteral">&#39;9&#39;</span>)) {</div>
-<div class="line"><span class="lineno">   64</span>      <a class="code hl_class" href="classlist.html">current</a>++;</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">while</span> (*current &amp;&amp; (*current &lt; <span class="charliteral">&#39;0&#39;</span> || *current &gt; <span class="charliteral">&#39;9&#39;</span>)) {</div>
+<div class="line"><span class="lineno">   64</span>      current++;</div>
 <div class="line"><span class="lineno">   65</span>    }</div>
-<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">while</span> (*<a class="code hl_class" href="classlist.html">current</a> &amp;&amp; *<a class="code hl_class" href="classlist.html">current</a> &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; *<a class="code hl_class" href="classlist.html">current</a> &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
-<div class="line"><span class="lineno">   67</span>      *<a class="code hl_class" href="classlist.html">current</a>= <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><span class="lineno">   68</span>      <a class="code hl_class" href="classlist.html">current</a>++;</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">while</span> (*current &amp;&amp; *current &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; *current &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
+<div class="line"><span class="lineno">   67</span>      *current= <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><span class="lineno">   68</span>      current++;</div>
 <div class="line"><span class="lineno">   69</span>    }</div>
 <div class="line"><span class="lineno">   70</span>  }</div>
 <div class="line"><span class="lineno">   71</span>  <span class="keywordflow">return</span> (<span class="keywordtype">char</span>*) <a class="code hl_class" href="classlist.html">ans</a>;</div>

@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.22</span>
    </div>
   </td>
  </tr>
@@ -106,8 +106,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8ffca42c928b6be3c3b7d35ce3112185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the iterator has another element.  <br /></td></tr>
 <tr class="separator:a8ffca42c928b6be3c3b7d35ce3112185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47de73f14d2dec46d9e244598793d7d8" id="r_a47de73f14d2dec46d9e244598793d7d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">virtual</a> T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47de73f14d2dec46d9e244598793d7d8">next</a> ()=0</td></tr>
-<tr class="memdesc:a47de73f14d2dec46d9e244598793d7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next element of the iterator.  <br /></td></tr>
+<tr class="memdesc:a47de73f14d2dec46d9e244598793d7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current element of the iterator, and move the iterator forward.  <br /></td></tr>
 <tr class="separator:a47de73f14d2dec46d9e244598793d7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55cbf39ba39eefbf334d3bc448631f3" id="r_af55cbf39ba39eefbf334d3bc448631f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">virtual</a> T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af55cbf39ba39eefbf334d3bc448631f3">current</a> ()=0</td></tr>
+<tr class="memdesc:af55cbf39ba39eefbf334d3bc448631f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current element of the iterator.  <br /></td></tr>
+<tr class="separator:af55cbf39ba39eefbf334d3bc448631f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f88bf9a08b808b9e1413c2c24448cf" id="r_a74f88bf9a08b808b9e1413c2c24448cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">virtual</a> <a class="el" href="classlist.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74f88bf9a08b808b9e1413c2c24448cf">increase</a> ()=0</td></tr>
+<tr class="memdesc:a74f88bf9a08b808b9e1413c2c24448cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the iterator.  <br /></td></tr>
+<tr class="separator:a74f88bf9a08b808b9e1413c2c24448cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acab6f971db073412b7fa085973c191d5" id="r_acab6f971db073412b7fa085973c191d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">virtual</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acab6f971db073412b7fa085973c191d5">remains</a> ()</td></tr>
 <tr class="memdesc:acab6f971db073412b7fa085973c191d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements remaining in the iterator.  <br /></td></tr>
 <tr class="separator:acab6f971db073412b7fa085973c191d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +171,7 @@ template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
 
 <p>Constructor. Increments the iterator count. </p>
 
-<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00086">86</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00107">107</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   26</span>{ <a class="code hl_define" href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="iterator_8hpp.html#a49aa69e6cf0bf0655101eac0610d19c4">iterator_count</a>++); }</div>
 <div class="ttc" id="aclassdef_8hpp_html_a6bf49670f3546977b9ec55e86fc2e72b"><div class="ttname"><a href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a></div><div class="ttdeci">#define TM_DEBUG(x)</div><div class="ttdoc">Debugging macro used to disable debugging output.</div><div class="ttdef"><b>Definition</b> <a href="classdef_8hpp_source.html#l00013">classdef.hpp:13</a></div></div>
 <div class="ttc" id="aiterator_8hpp_html_a49aa69e6cf0bf0655101eac0610d19c4"><div class="ttname"><a href="iterator_8hpp.html#a49aa69e6cf0bf0655101eac0610d19c4">iterator_count</a></div><div class="ttdeci">int iterator_count</div></div>
@@ -199,7 +205,7 @@ template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
 
 <p>Destructor. Decrements the iterator count. </p>
 
-<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00086">86</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00107">107</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   31</span>{ <a class="code hl_define" href="classdef_8hpp.html#a6bf49670f3546977b9ec55e86fc2e72b">TM_DEBUG</a> (<a class="code hl_variable" href="iterator_8hpp.html#a49aa69e6cf0bf0655101eac0610d19c4">iterator_count</a>--); }</div>
 </div><!-- fragment -->
 </div>
@@ -262,10 +268,73 @@ template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the next element of the iterator. </p>
-<dl class="section return"><dt>Returns</dt><dd>The next element of the iterator. </dd></dl>
+<p>Returns the current element of the iterator, and move the iterator forward. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current element of the iterator. </dd></dl>
 
 <p>Implemented in <a class="el" href="classhashset__iterator__rep.html#a61a86ea72c50f500b1ea861855482504">hashset_iterator_rep&lt; T &gt;</a>, and <a class="el" href="classhashmap__iterator__rep.html#a8bd5886672bc230616a33ebcc9329d41">hashmap_iterator_rep&lt; T, U &gt;</a>.</p>
+
+</div>
+</div>
+<a id="af55cbf39ba39eefbf334d3bc448631f3" name="af55cbf39ba39eefbf334d3bc448631f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55cbf39ba39eefbf334d3bc448631f3">&#9670;&#160;</a></span>current()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">virtual</a> T <a class="el" href="classiterator__rep.html">iterator_rep</a>&lt; T &gt;::current </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current element of the iterator. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current element of the iterator. </dd></dl>
+
+<p>Implemented in <a class="el" href="classhashset__iterator__rep.html#abf44f408de698fffb53375de77f1a52b">hashset_iterator_rep&lt; T &gt;</a>, and <a class="el" href="classhashmap__iterator__rep.html#aa119d15e796db1a00e144ea5236dde2f">hashmap_iterator_rep&lt; T, U &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a74f88bf9a08b808b9e1413c2c24448cf" name="a74f88bf9a08b808b9e1413c2c24448cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f88bf9a08b808b9e1413c2c24448cf">&#9670;&#160;</a></span>increase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">virtual</a> <a class="el" href="classlist.html">void</a> <a class="el" href="classiterator__rep.html">iterator_rep</a>&lt; T &gt;::increase </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increase the iterator. </p>
+
+<p>Implemented in <a class="el" href="classhashset__iterator__rep.html#a135b5b4ba89ba78b01762e43d5123e71">hashset_iterator_rep&lt; T &gt;</a>, and <a class="el" href="classhashmap__iterator__rep.html#a747ad2abab06cd442616db1d083dff33">hashmap_iterator_rep&lt; T, U &gt;</a>.</p>
 
 </div>
 </div>

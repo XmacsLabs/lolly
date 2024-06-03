@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.22</span>
    </div>
   </td>
  </tr>
@@ -1228,10 +1228,10 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span><span class="keywordtype">string</span></div>
 <div class="foldopen" id="foldopen00981" data-start="{" data-end="}">
 <div class="line"><a id="l00981" name="l00981"></a><span class="lineno"><a class="line" href="analyze_8cpp.html#afe66c68d9e0d226fd6ce91b36408aa7c">  981</a></span><a class="code hl_function" href="analyze_8cpp.html#afe66c68d9e0d226fd6ce91b36408aa7c">trim_spaces_right</a> (<span class="keywordtype">string</span> s) {</div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="classlist.html">end</a>;</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classlist.html">end</a>= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s) - 1; <a class="code hl_class" href="classlist.html">end</a> &gt;= 0 &amp;&amp; <a class="code hl_function" href="analyze_8hpp.html#a29140d1345bb0eba0d1086e92874972e">is_space</a> (s[<a class="code hl_class" href="classlist.html">end</a>]); <a class="code hl_class" href="classlist.html">end</a>--)</div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>  <span class="keywordtype">int</span> end;</div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>  <span class="keywordflow">for</span> (end= <a class="code hl_function" href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a> (s) - 1; end &gt;= 0 &amp;&amp; <a class="code hl_function" href="analyze_8hpp.html#a29140d1345bb0eba0d1086e92874972e">is_space</a> (s[end]); end--)</div>
 <div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>    ;</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  <span class="keywordflow">return</span> s (0, <a class="code hl_class" href="classlist.html">end</a> + 1);</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  <span class="keywordflow">return</span> s (0, end + 1);</div>
 <div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>}</div>
 </div>
 <div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span> </div>
@@ -1460,7 +1460,7 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="aanalyze_8hpp_html_a2836860d445568b81440bd347f108aa5"><div class="ttname"><a href="analyze_8hpp.html#a2836860d445568b81440bd347f108aa5">is_digit</a></div><div class="ttdeci">bool is_digit(char c)</div><div class="ttdef"><b>Definition</b> <a href="analyze_8hpp_source.html#l00037">analyze.hpp:37</a></div></div>
 <div class="ttc" id="aanalyze_8hpp_html_a29140d1345bb0eba0d1086e92874972e"><div class="ttname"><a href="analyze_8hpp.html#a29140d1345bb0eba0d1086e92874972e">is_space</a></div><div class="ttdeci">bool is_space(char c)</div><div class="ttdef"><b>Definition</b> <a href="analyze_8hpp_source.html#l00063">analyze.hpp:63</a></div></div>
 <div class="ttc" id="aanalyze_8hpp_html_aa7635485d00b6b56bc74a291807061c8"><div class="ttname"><a href="analyze_8hpp.html#aa7635485d00b6b56bc74a291807061c8">is_hex_digit</a></div><div class="ttdeci">bool is_hex_digit(char c)</div><div class="ttdef"><b>Definition</b> <a href="analyze_8hpp_source.html#l00049">analyze.hpp:49</a></div></div>
-<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00167">array.hpp:167</a></div></div>
+<div class="ttc" id="aarray_8hpp_html_a40abcdd4c9b510168a207ac09bf7f222"><div class="ttname"><a href="array_8hpp.html#a40abcdd4c9b510168a207ac09bf7f222">N</a></div><div class="ttdeci">int N(array&lt; T &gt; a)</div><div class="ttdoc">Get the length of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8hpp_source.html#l00170">array.hpp:170</a></div></div>
 <div class="ttc" id="abasic_8hpp_html_aac211c0ff2fe773e2f5e43465ac0adb9"><div class="ttname"><a href="basic_8hpp.html#aac211c0ff2fe773e2f5e43465ac0adb9">as_int</a></div><div class="ttdeci">SI as_int(double x)</div><div class="ttdoc">Converts a double to a signed integer, rounding to the nearest integer.</div><div class="ttdef"><b>Definition</b> <a href="basic_8hpp_source.html#l00261">basic.hpp:261</a></div></div>
 <div class="ttc" id="ablackbox__test_8cpp_html_a8d44fd90fb43432ab6b2957b83f6c486"><div class="ttname"><a href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a></div><div class="ttdeci">blackbox b[13]</div><div class="ttdef"><b>Definition</b> <a href="blackbox__test_8cpp_source.html#l00041">blackbox_test.cpp:41</a></div></div>
 <div class="ttc" id="ablackbox__test_8cpp_html_ae6d631320ed189a50f11ed922bc06d7e"><div class="ttname"><a href="blackbox__test_8cpp.html#ae6d631320ed189a50f11ed922bc06d7e">t</a></div><div class="ttdeci">blackbox t[13]</div><div class="ttdef"><b>Definition</b> <a href="blackbox__test_8cpp_source.html#l00040">blackbox_test.cpp:40</a></div></div>

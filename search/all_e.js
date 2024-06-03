@@ -9,7 +9,7 @@ var searchData=
   ['decode_5ffrom_5futf8_6',['decode_from_utf8',['../namespacelolly_1_1data.html#a7ebbc8b03df1c2230f564beaba9db617',1,'lolly::data']]],
   ['delta_7',['delta',['../url_8cpp.html#ab87a6ee28b0a5dacf177b9c13c5ee9a4',1,'delta(url base, url u):&#160;url.cpp'],['../url_8hpp.html#ab87a6ee28b0a5dacf177b9c13c5ee9a4',1,'delta(url base, url u):&#160;url.cpp']]],
   ['delta_5fsub_8',['delta_sub',['../url_8cpp.html#a7785d18987d57ce39bec171a8a3c4612',1,'url.cpp']]],
-  ['dependency_9',['Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md40',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md47',1,'Method 2: Adding xmake Dependency']]],
+  ['dependency_9',['Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md39',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md47',1,'Method 2: Adding xmake Dependency']]],
   ['descends_10',['descends',['../url_8cpp.html#a6aa2030640a069317bfa0d04903042b3',1,'descends(url u, url base):&#160;url.cpp'],['../url_8hpp.html#a6aa2030640a069317bfa0d04903042b3',1,'descends(url u, url base):&#160;url.cpp']]],
   ['developers_11',['For Developers',['../md_CONTRIBUTING.html#autotoc_md2',1,'']]],
   ['developing_20on_20gnu_20linux_12',['Developing on GNU/Linux',['../md_docs_2guide_2Develop__on__Linux.html',1,'']]],

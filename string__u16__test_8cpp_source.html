@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.22</span>
    </div>
   </td>
  </tr>
@@ -263,10 +263,23 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <a class="code hl_class" href="classlist.html">CHECK</a> (<a class="code hl_class" href="classlist.html">str3</a> == <a class="code hl_class" href="classlist.html">u</a><span class="stringliteral">&quot;str&quot;</span>);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
 </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="string__u16__test_8cpp.html#aac99fd6dff95f23e3415530b2f080638">  163</a></span><a class="code hl_function" href="parse__string__test_8cpp.html#abd7801c7d460439f849c63ff57e19fa4">TEST_CASE</a> (<span class="stringliteral">&quot;test iteration&quot;</span>) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <a class="code hl_class" href="classlolly_1_1data_1_1string__u16.html">string_u16</a> <a class="code hl_class" href="classlist.html">str1</a>         = <a class="code hl_class" href="classlist.html">u</a><span class="stringliteral">&quot;s\0tr1&quot;</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordtype">int</span>        <a class="code hl_class" href="classlist.html">expectedIndex</a>= 0;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_class" href="classlist.html">element</a> : <a class="code hl_class" href="classlist.html">str1</a>) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_class" href="classlist.html">element</a>, <a class="code hl_class" href="classlist.html">str1</a>[<a class="code hl_class" href="classlist.html">expectedIndex</a>]);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    ++<a class="code hl_class" href="classlist.html">expectedIndex</a>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_class" href="classlist.html">expectedIndex</a>, <a class="code hl_function" href="namespacelolly_1_1data.html#aae8d009f4bacc3a786bfd00cbe520b34">N</a> (<a class="code hl_class" href="classlist.html">str1</a>));</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
+</div>
 <div class="ttc" id="aa__lolly__test_8hpp_html"><div class="ttname"><a href="a__lolly__test_8hpp.html">a_lolly_test.hpp</a></div></div>
 <div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
 <div class="ttc" id="aclasslolly_1_1data_1_1string__u16_html"><div class="ttname"><a href="classlolly_1_1data_1_1string__u16.html">lolly::data::string_u16</a></div><div class="ttdef"><b>Definition</b> <a href="string__u16_8hpp_source.html#l00061">string_u16.hpp:61</a></div></div>
 <div class="ttc" id="anamespacelolly_1_1data_html"><div class="ttname"><a href="namespacelolly_1_1data.html">lolly::data</a></div><div class="ttdef"><b>Definition</b> <a href="base64_8cpp_source.html#l00017">base64.cpp:17</a></div></div>
+<div class="ttc" id="anamespacelolly_1_1data_html_aae8d009f4bacc3a786bfd00cbe520b34"><div class="ttname"><a href="namespacelolly_1_1data.html#aae8d009f4bacc3a786bfd00cbe520b34">lolly::data::N</a></div><div class="ttdeci">int N(lolly_tree&lt; T &gt; t)</div><div class="ttdef"><b>Definition</b> <a href="lolly__tree_8hpp_source.html#l00163">lolly_tree.hpp:163</a></div></div>
 <div class="ttc" id="anamespacelolly_1_1data_html_ad16393c4d02d9edfb7057092fc71b37e"><div class="ttname"><a href="namespacelolly_1_1data.html#ad16393c4d02d9edfb7057092fc71b37e">lolly::data::copy</a></div><div class="ttdeci">lolly_tree&lt; T &gt; copy(lolly_tree&lt; T &gt; t)</div><div class="ttdef"><b>Definition</b> <a href="lolly__tree_8hpp_source.html#l00387">lolly_tree.hpp:387</a></div></div>
 <div class="ttc" id="aparse__string__test_8cpp_html_abd7801c7d460439f849c63ff57e19fa4"><div class="ttname"><a href="parse__string__test_8cpp.html#abd7801c7d460439f849c63ff57e19fa4">TEST_CASE</a></div><div class="ttdeci">TEST_CASE(&quot;test for operator+= and advance()&quot;)</div><div class="ttdef"><b>Definition</b> <a href="parse__string__test_8cpp_source.html#l00085">parse_string_test.cpp:85</a></div></div>
 <div class="ttc" id="astring__u16_8hpp_html"><div class="ttname"><a href="string__u16_8hpp.html">string_u16.hpp</a></div></div>

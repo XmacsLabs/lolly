@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.21</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.22</span>
    </div>
   </td>
  </tr>
@@ -88,6 +88,17 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9568a3f441b1cba8aa106a41522a9fb" id="r_ae9568a3f441b1cba8aa106a41522a9fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9568a3f441b1cba8aa106a41522a9fb">ABSTRACT_TEMPLATE</a> (<a class="el" href="structiterator.html">iterator</a>, T)</td></tr>
 <tr class="separator:ae9568a3f441b1cba8aa106a41522a9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc3f93b51933df63c53be696f5686e7" id="r_a9dc3f93b51933df63c53be696f5686e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structiterator.html">iterator</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dc3f93b51933df63c53be696f5686e7">begin</a> ()</td></tr>
+<tr class="separator:a9dc3f93b51933df63c53be696f5686e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd312ef9205205919b6c75b6bf14788" id="r_a8dd312ef9205205919b6c75b6bf14788"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html#a6134d52315f57bcb808223559c8a4760">std::nullptr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd312ef9205205919b6c75b6bf14788">end</a> ()</td></tr>
+<tr class="separator:a8dd312ef9205205919b6c75b6bf14788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac158b83a472926f2b4fdfd4fdc45d7f9" id="r_ac158b83a472926f2b4fdfd4fdc45d7f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac158b83a472926f2b4fdfd4fdc45d7f9">operator++</a> ()</td></tr>
+<tr class="separator:ac158b83a472926f2b4fdfd4fdc45d7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d02dbaf57252f51f1a271404078e8a" id="r_a78d02dbaf57252f51f1a271404078e8a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78d02dbaf57252f51f1a271404078e8a">operator*</a> ()</td></tr>
+<tr class="memdesc:a78d02dbaf57252f51f1a271404078e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current element of the iterator, then move the iterator to the next element.  <br /></td></tr>
+<tr class="separator:a78d02dbaf57252f51f1a271404078e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb55a0adf08b4cab9bf5ad82e2801b4" id="r_affb55a0adf08b4cab9bf5ad82e2801b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affb55a0adf08b4cab9bf5ad82e2801b4">operator!=</a> (<a class="el" href="classlist.html#a6134d52315f57bcb808223559c8a4760">std::nullptr_t</a>)</td></tr>
+<tr class="separator:affb55a0adf08b4cab9bf5ad82e2801b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classlist.html">class</a> T&gt;<br />
@@ -99,7 +110,7 @@ class iterator&lt; T &gt;</div><p>A template class for iterators. </p>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00057">57</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00069">69</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae9568a3f441b1cba8aa106a41522a9fb" name="ae9568a3f441b1cba8aa106a41522a9fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9568a3f441b1cba8aa106a41522a9fb">&#9670;&#160;</a></span>ABSTRACT_TEMPLATE()</h2>
@@ -122,6 +133,159 @@ template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a9dc3f93b51933df63c53be696f5686e7" name="a9dc3f93b51933df63c53be696f5686e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc3f93b51933df63c53be696f5686e7">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structiterator.html">iterator</a>&lt; T &gt; <a class="el" href="structiterator.html">iterator</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00071">71</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>{ <span class="keywordflow">return</span> *<span class="keyword">this</span>; };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8dd312ef9205205919b6c75b6bf14788" name="a8dd312ef9205205919b6c75b6bf14788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd312ef9205205919b6c75b6bf14788">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html#a6134d52315f57bcb808223559c8a4760">std::nullptr_t</a> <a class="el" href="structiterator.html">iterator</a>&lt; T &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00072">72</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>{ <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac158b83a472926f2b4fdfd4fdc45d7f9" name="ac158b83a472926f2b4fdfd4fdc45d7f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac158b83a472926f2b4fdfd4fdc45d7f9">&#9670;&#160;</a></span>operator++()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">void</a> <a class="el" href="structiterator.html">iterator</a>&lt; T &gt;<a class="el" href="classlist.html">::operator</a>++ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00073">73</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>{ this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>-&gt;increase (); };</div>
+<div class="ttc" id="astructrep_html"><div class="ttname"><a href="structrep.html">rep</a></div><div class="ttdoc">base class of resources</div><div class="ttdef"><b>Definition</b> <a href="resource_8hpp_source.html#l00023">resource.hpp:23</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a78d02dbaf57252f51f1a271404078e8a" name="a78d02dbaf57252f51f1a271404078e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78d02dbaf57252f51f1a271404078e8a">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="structiterator.html">iterator</a>&lt; T &gt;<a class="el" href="classlist.html">::operator</a>* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current element of the iterator, then move the iterator to the next element. </p>
+
+<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00078">78</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>{ <span class="keywordflow">return</span> this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>-&gt;current (); };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="affb55a0adf08b4cab9bf5ad82e2801b4" name="affb55a0adf08b4cab9bf5ad82e2801b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb55a0adf08b4cab9bf5ad82e2801b4">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classlist.html">class</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structiterator.html">iterator</a>&lt; T &gt;<a class="el" href="classlist.html">::operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlist.html#a6134d52315f57bcb808223559c8a4760">std::nullptr_t</a></td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="iterator_8hpp_source.html#l00079">79</a> of file <a class="el" href="iterator_8hpp_source.html">iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>{ <span class="keywordflow">return</span> this-&gt;<a class="code hl_struct" href="structrep.html">rep</a>-&gt;busy (); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
