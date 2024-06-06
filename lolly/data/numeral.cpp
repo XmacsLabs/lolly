@@ -154,6 +154,12 @@ to_padded_hex (uint8_t i) {
   return locase_all (to_padded_Hex (i));
 }
 
+/**
+ * @brief Handle positive number separately to avoid unnecessary check of sign.
+ * string is passed into the function as reference, thus no reference counting
+ * is performed.
+ * @tparam T unsigned integral type is expected.
+ */
 template <typename T>
 std::enable_if_t<std::conjunction_v<std::is_integral<T>, std::is_unsigned<T>>,
                  void>
@@ -217,6 +223,16 @@ from_hex (string s) {
   return res;
 }
 
+/**
+ * @brief Handle positive number separately to avoid unnecessary check of sign.
+ * string is passed into the function as reference, thus no reference counting
+ * is performed.
+ * Because length of string s is known here, use index instead of appending
+ * operator can avoid cost of reallocation. Firstly a string of given length is
+ * constructed, then digits is filled according to index rather than appending
+ * to the tail.
+ * @tparam T unsigned integral type is expected.
+ */
 template <typename T>
 std::enable_if_t<std::conjunction_v<std::is_integral<T>, std::is_unsigned<T>>,
                  void>
