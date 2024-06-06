@@ -23,15 +23,37 @@ using lolly::data::string_view;
 class string;
 class string_rep : concrete_struct {
   int   n;
+  int   a_N;
   char* a;
 
 public:
-  inline string_rep () : n (0), a (NULL) {}
+  inline string_rep () : n (0), a_N (0), a (NULL) {}
   string_rep (int n);
   inline ~string_rep () {
     if (n != 0) tm_delete_array (a);
   }
+  /**
+   * @brief expand (or shrink) string by delta, but do not release memory when
+   * string is shrinked.
+   *
+   * @return string length before expansion
+   */
+  int expand_or_shrink_by (int delta);
+
+  /**
+   * @brief expand (or shrink) string to given length n, and try to release
+   * memory when string is shrinked.
+   *
+   * @note expand_or_shrink_by may be faster if memory space is reserved
+   */
   void resize (int n);
+
+  /**
+   * @brief reserve memory space to contain at least n word in the whole string.
+   * Do not affect length of string, and do not release memory when n is smaller
+   * than current space.
+   */
+  void reserve (int n);
 
   friend class string;
   friend inline int N (string a);
