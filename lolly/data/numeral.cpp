@@ -154,12 +154,23 @@ to_padded_hex (uint8_t i) {
   return locase_all (to_padded_Hex (i));
 }
 
+template <typename T>
+std::enable_if_t<std::conjunction_v<std::is_integral<T>, std::is_unsigned<T>>,
+                 string>
+to_Hex_positive (T i) {
+  if (i < 16) return hex_string[i & 15];
+  return to_Hex_positive (i >> 4) << hex_string[i & 15];
+}
+
 string
 to_Hex (int32_t i) {
   if (i == INT32_MIN) return "-80000000";
-  if (i < 0) return "-" * to_Hex (-i);
-  if (i < 16) return hex_string[i & 15];
-  return to_Hex (i >> 4) * hex_string[i & 15];
+  if (i < 0) {
+    return string ("-") << to_Hex_positive ((uint32_t) (-i));
+  }
+  else {
+    return to_Hex_positive ((uint32_t) i);
+  };
 }
 
 string
@@ -170,9 +181,12 @@ to_hex (int32_t i) {
 string
 to_Hex (pointer ptr) {
   intptr_t i= (intptr_t) ptr;
-  if (i < 0) return "-" * to_Hex (-i);
-  if (i < 16) return hex_string[i & 15];
-  return to_Hex (i >> 4) * hex_string[i & 15];
+  if (i < 0) {
+    return string ("-") << to_Hex_positive ((uintptr_t) (-i));
+  }
+  else {
+    return to_Hex_positive ((uintptr_t) i);
+  };
 }
 
 string
@@ -196,7 +210,7 @@ from_hex (string s) {
 string
 as_hexadecimal (int i, int len) {
   if (len == 1) return hex_string[i & 15];
-  else return as_hexadecimal (i >> 4, len - 1) * hex_string[i & 15];
+  else return as_hexadecimal (i >> 4, len - 1) << hex_string[i & 15];
 }
 
 } // namespace data

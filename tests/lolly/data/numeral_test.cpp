@@ -155,3 +155,22 @@ TEST_CASE ("to_hex/to_Hex") {
     string_eq (to_hex (INT32_MAX + 1), "-80000000");
   }
 }
+
+TEST_CASE ("as_hexadecimal") {
+  SUBCASE ("0-15 (+/-)") {
+    for (int i= 1; i < 10; i++) {
+      string_eq (as_hexadecimal (i, 1), as_string (i));
+      string_eq (as_hexadecimal (i, 1), as_string (i));
+    }
+    string_eq (as_hexadecimal (0, 1), "0");
+    string_eq (as_hexadecimal (10, 1), "A");
+    string_eq (as_hexadecimal (11, 1), "B");
+    string_eq (as_hexadecimal (12, 1), "C");
+    string_eq (as_hexadecimal (13, 1), "D");
+    string_eq (as_hexadecimal (14, 1), "E");
+    string_eq (as_hexadecimal (15, 1), "F");
+    string_eq (as_hexadecimal (0x12, 2), "12");
+    string_eq (as_hexadecimal (0xABC, 3), "ABC");
+  }
+  SUBCASE ("max") { string_eq (as_hexadecimal (UINT32_MAX, 8), "FFFFFFFF"); }
+}
