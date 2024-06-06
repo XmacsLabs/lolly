@@ -15,5 +15,6 @@ var searchData=
   ['number_12',['Project: Number',['../md_devel_217.html',1,'']]],
   ['numeral_2ecpp_13',['numeral.cpp',['../numeral_8cpp.html',1,'']]],
   ['numeral_2ehpp_14',['numeral.hpp',['../numeral_8hpp.html',1,'']]],
-  ['numeral_5ftest_2ecpp_15',['numeral_test.cpp',['../numeral__test_8cpp.html',1,'']]]
+  ['numeral_5fbench_2ecpp_15',['numeral_bench.cpp',['../numeral__bench_8cpp.html',1,'']]],
+  ['numeral_5ftest_2ecpp_16',['numeral_test.cpp',['../numeral__test_8cpp.html',1,'']]]
 ];

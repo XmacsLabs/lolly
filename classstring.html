@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.22</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.23</span>
    </div>
   </td>
  </tr>
@@ -107,8 +107,12 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a5580de799d1cd51de55abba90ea7b42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e9e4c9328af5b94cbc3bafa3cbc8cb7" id="r_a7e9e4c9328af5b94cbc3bafa3cbc8cb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e9e4c9328af5b94cbc3bafa3cbc8cb7">operator!=</a> (<a class="el" href="classstring.html">string</a> s)</td></tr>
 <tr class="separator:a7e9e4c9328af5b94cbc3bafa3cbc8cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe661ee5b05a4cc567547771d03e2ca0" id="r_afe661ee5b05a4cc567547771d03e2ca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe661ee5b05a4cc567547771d03e2ca0">operator()</a> (int <a class="el" href="classlist.html">start</a>, int end)</td></tr>
+<tr class="memitem:afe661ee5b05a4cc567547771d03e2ca0" id="r_afe661ee5b05a4cc567547771d03e2ca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstring.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe661ee5b05a4cc567547771d03e2ca0">operator()</a> (int <a class="el" href="classlist.html">start</a>, int <a class="el" href="#aa89059f6ca285d9209b1cc13984d6d08">end</a>)</td></tr>
 <tr class="separator:afe661ee5b05a4cc567547771d03e2ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec1b2113fc0665763aeef528b55dded" id="r_acec1b2113fc0665763aeef528b55dded"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acec1b2113fc0665763aeef528b55dded">begin</a> ()</td></tr>
+<tr class="separator:acec1b2113fc0665763aeef528b55dded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89059f6ca285d9209b1cc13984d6d08" id="r_aa89059f6ca285d9209b1cc13984d6d08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa89059f6ca285d9209b1cc13984d6d08">end</a> ()</td></tr>
+<tr class="separator:aa89059f6ca285d9209b1cc13984d6d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b609b20755ba9660511251486c54d62" id="r_a1b609b20755ba9660511251486c54d62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b609b20755ba9660511251486c54d62">operator string_view&lt; char &gt;</a> ()</td></tr>
 <tr class="separator:a1b609b20755ba9660511251486c54d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -526,19 +530,77 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="string_8cpp_source.html#l00118">118</a> of file <a class="el" href="string_8cpp_source.html">string.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  118</span>                                      {</div>
-<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">if</span> (end &lt;= begin) <span class="keywordflow">return</span> <a class="code hl_function" href="#a362899b7e6f6d35abf0673c0a06f4401">string</a> ();</div>
+<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa89059f6ca285d9209b1cc13984d6d08">end</a> &lt;= <a class="code hl_function" href="#acec1b2113fc0665763aeef528b55dded">begin</a>) <span class="keywordflow">return</span> <a class="code hl_function" href="#a362899b7e6f6d35abf0673c0a06f4401">string</a> ();</div>
 <div class="line"><span class="lineno">  120</span> </div>
 <div class="line"><span class="lineno">  121</span>  <span class="keywordtype">int</span> i;</div>
-<div class="line"><span class="lineno">  122</span>  begin= <a class="code hl_function" href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a> (<a class="code hl_function" href="minmax_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_struct" href="structrep.html">rep</a>-&gt;n, begin), 0);</div>
-<div class="line"><span class="lineno">  123</span>  end  = <a class="code hl_function" href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a> (<a class="code hl_function" href="minmax_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_struct" href="structrep.html">rep</a>-&gt;n, end), 0);</div>
-<div class="line"><span class="lineno">  124</span>  <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">r</a> (end - begin);</div>
-<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">for</span> (i= begin; i &lt; end; i++)</div>
-<div class="line"><span class="lineno">  126</span>    <a class="code hl_class" href="classlist.html">r</a>[i - begin]= <a class="code hl_struct" href="structrep.html">rep</a>-&gt;a[i];</div>
+<div class="line"><span class="lineno">  122</span>  <a class="code hl_function" href="#acec1b2113fc0665763aeef528b55dded">begin</a>= <a class="code hl_function" href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a> (<a class="code hl_function" href="minmax_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_struct" href="structrep.html">rep</a>-&gt;n, <a class="code hl_function" href="#acec1b2113fc0665763aeef528b55dded">begin</a>), 0);</div>
+<div class="line"><span class="lineno">  123</span>  <a class="code hl_function" href="#aa89059f6ca285d9209b1cc13984d6d08">end</a>  = <a class="code hl_function" href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a> (<a class="code hl_function" href="minmax_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a> (<a class="code hl_struct" href="structrep.html">rep</a>-&gt;n, <a class="code hl_function" href="#aa89059f6ca285d9209b1cc13984d6d08">end</a>), 0);</div>
+<div class="line"><span class="lineno">  124</span>  <span class="keywordtype">string</span> <a class="code hl_class" href="classlist.html">r</a> (<a class="code hl_function" href="#aa89059f6ca285d9209b1cc13984d6d08">end</a> - <a class="code hl_function" href="#acec1b2113fc0665763aeef528b55dded">begin</a>);</div>
+<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">for</span> (i= <a class="code hl_function" href="#acec1b2113fc0665763aeef528b55dded">begin</a>; i &lt; <a class="code hl_function" href="#aa89059f6ca285d9209b1cc13984d6d08">end</a>; i++)</div>
+<div class="line"><span class="lineno">  126</span>    <a class="code hl_class" href="classlist.html">r</a>[i - <a class="code hl_function" href="#acec1b2113fc0665763aeef528b55dded">begin</a>]= <a class="code hl_struct" href="structrep.html">rep</a>-&gt;a[i];</div>
 <div class="line"><span class="lineno">  127</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">r</a>;</div>
 <div class="line"><span class="lineno">  128</span>}</div>
 <div class="ttc" id="aclassstring_html_a362899b7e6f6d35abf0673c0a06f4401"><div class="ttname"><a href="#a362899b7e6f6d35abf0673c0a06f4401">string::string</a></div><div class="ttdeci">string()</div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00042">string.hpp:42</a></div></div>
+<div class="ttc" id="aclassstring_html_aa89059f6ca285d9209b1cc13984d6d08"><div class="ttname"><a href="#aa89059f6ca285d9209b1cc13984d6d08">string::end</a></div><div class="ttdeci">char * end()</div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00055">string.hpp:55</a></div></div>
+<div class="ttc" id="aclassstring_html_acec1b2113fc0665763aeef528b55dded"><div class="ttname"><a href="#acec1b2113fc0665763aeef528b55dded">string::begin</a></div><div class="ttdeci">char * begin()</div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00054">string.hpp:54</a></div></div>
 <div class="ttc" id="aminmax_8hpp_html_a3f87cd2d262ac14391344cfe9d268c03"><div class="ttname"><a href="minmax_8hpp.html#a3f87cd2d262ac14391344cfe9d268c03">min</a></div><div class="ttdeci">SI min(SI i, SI j)</div><div class="ttdoc">Returns the minimum of two signed integers.</div><div class="ttdef"><b>Definition</b> <a href="minmax_8hpp_source.html#l00027">minmax.hpp:27</a></div></div>
 <div class="ttc" id="aminmax_8hpp_html_a722bf3cd3acddf15e6bca8135bad679d"><div class="ttname"><a href="minmax_8hpp.html#a722bf3cd3acddf15e6bca8135bad679d">max</a></div><div class="ttdeci">SI max(SI i, SI j)</div><div class="ttdoc">Returns the maximum of two signed integers.</div><div class="ttdef"><b>Definition</b> <a href="minmax_8hpp_source.html#l00040">minmax.hpp:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acec1b2113fc0665763aeef528b55dded" name="acec1b2113fc0665763aeef528b55dded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec1b2113fc0665763aeef528b55dded">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">char</a> * string::begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="string_8hpp_source.html#l00054">54</a> of file <a class="el" href="string_8hpp_source.html">string.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>-&gt;a; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa89059f6ca285d9209b1cc13984d6d08" name="aa89059f6ca285d9209b1cc13984d6d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89059f6ca285d9209b1cc13984d6d08">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlist.html">char</a> * string::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="string_8hpp_source.html#l00055">55</a> of file <a class="el" href="string_8hpp_source.html">string.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>{ <span class="keywordflow">return</span> <a class="code hl_struct" href="structrep.html">rep</a>-&gt;a + <a class="code hl_struct" href="structrep.html">rep</a>-&gt;n; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -565,10 +627,10 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="string_8hpp_source.html#l00055">55</a> of file <a class="el" href="string_8hpp_source.html">string.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>                                       {</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">string_view&lt;char&gt;</a> (<a class="code hl_struct" href="structrep.html">rep</a>-&gt;a, <a class="code hl_struct" href="structrep.html">rep</a>-&gt;n);</div>
-<div class="line"><span class="lineno">   57</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="string_8hpp_source.html#l00057">57</a> of file <a class="el" href="string_8hpp_source.html">string.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                       {</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classlist.html">string_view&lt;char&gt;</a> (<a class="code hl_struct" href="structrep.html">rep</a>-&gt;a, <a class="code hl_struct" href="structrep.html">rep</a>-&gt;n);</div>
+<div class="line"><span class="lineno">   59</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
