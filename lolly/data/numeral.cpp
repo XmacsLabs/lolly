@@ -154,12 +154,35 @@ to_padded_hex (uint8_t i) {
   return locase_all (to_padded_Hex (i));
 }
 
+/**
+ * @brief Handle positive number separately to avoid unnecessary check of sign.
+ * string is passed into the function as reference, thus no reference counting
+ * is performed.
+ * @tparam T unsigned integral type is expected.
+ */
+template <typename T>
+std::enable_if_t<std::conjunction_v<std::is_integral<T>, std::is_unsigned<T>>,
+                 void>
+to_Hex_positive (T i, string& s) {
+  if (i >= 16) {
+    to_Hex_positive (i >> 4, s);
+  }
+  s << hex_string[i & 15];
+}
+
 string
 to_Hex (int32_t i) {
   if (i == INT32_MIN) return "-80000000";
-  if (i < 0) return "-" * to_Hex (-i);
-  if (i < 16) return hex_string[i & 15];
-  return to_Hex (i >> 4) * hex_string[i & 15];
+  if (i < 0) {
+    string result ("-");
+    to_Hex_positive ((uint32_t) (-i), result);
+    return result;
+  }
+  else {
+    string result;
+    to_Hex_positive ((uint32_t) (i), result);
+    return result;
+  };
 }
 
 string
@@ -170,9 +193,16 @@ to_hex (int32_t i) {
 string
 to_Hex (pointer ptr) {
   intptr_t i= (intptr_t) ptr;
-  if (i < 0) return "-" * to_Hex (-i);
-  if (i < 16) return hex_string[i & 15];
-  return to_Hex (i >> 4) * hex_string[i & 15];
+  if (i < 0) {
+    string result ("-");
+    to_Hex_positive ((uintptr_t) (-i), result);
+    return result;
+  }
+  else {
+    string result;
+    to_Hex_positive ((uintptr_t) (i), result);
+    return result;
+  };
 }
 
 string
@@ -193,10 +223,31 @@ from_hex (string s) {
   return res;
 }
 
+/**
+ * @brief Handle positive number separately to avoid unnecessary check of sign.
+ * string is passed into the function as reference, thus no reference counting
+ * is performed.
+ * Because length of string s is known here, use index instead of appending
+ * operator can avoid cost of reallocation. Firstly a string of given length is
+ * constructed, then digits is filled according to index rather than appending
+ * to the tail.
+ * @tparam T unsigned integral type is expected.
+ */
+template <typename T>
+std::enable_if_t<std::conjunction_v<std::is_integral<T>, std::is_unsigned<T>>,
+                 void>
+as_hexadecimal_sub (T i, unsigned int cur, string& s) {
+  if (cur > 0) {
+    as_hexadecimal_sub (i >> 4, cur - 1, s);
+  }
+  s[cur]= hex_string[i & 15];
+}
+
 string
 as_hexadecimal (int i, int len) {
-  if (len == 1) return hex_string[i & 15];
-  else return as_hexadecimal (i >> 4, len - 1) * hex_string[i & 15];
+  string result (len);
+  as_hexadecimal_sub ((unsigned) i, len - 1, result);
+  return result;
 }
 
 } // namespace data
