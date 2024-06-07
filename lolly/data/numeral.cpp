@@ -251,9 +251,9 @@ as_hexadecimal (int i, int len) {
 }
 
 string
-as_hexadecimal (unsigned int i) {
+as_hexadecimal (uint32_t i) {
   string result;
-  to_Hex_positive ((unsigned) i, result);
+  to_Hex_positive (i, result);
   return result;
 }
 

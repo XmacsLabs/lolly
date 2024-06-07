@@ -98,7 +98,7 @@ string as_hexadecimal (int i, int length);
  * @param i The integer to be converted to a hexadecimal string.
  * @return The hexadecimal string representation of the input integer.
  */
-string as_hexadecimal (unsigned int i);
+string as_hexadecimal (uint32_t i);
 
 } // namespace data
 } // namespace lolly
