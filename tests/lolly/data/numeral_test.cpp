@@ -156,7 +156,7 @@ TEST_CASE ("to_hex/to_Hex") {
   }
 }
 
-TEST_CASE ("as_hexadecimal") {
+TEST_CASE ("as_hexadecimal fixed") {
   SUBCASE ("0-15 (+/-)") {
     for (int i= 1; i < 10; i++) {
       string_eq (as_hexadecimal (i, 1), as_string (i));
@@ -169,8 +169,32 @@ TEST_CASE ("as_hexadecimal") {
     string_eq (as_hexadecimal (13, 1), "D");
     string_eq (as_hexadecimal (14, 1), "E");
     string_eq (as_hexadecimal (15, 1), "F");
+  }
+  SUBCASE ("arbitary") {
     string_eq (as_hexadecimal (0x12, 2), "12");
     string_eq (as_hexadecimal (0xABC, 3), "ABC");
   }
   SUBCASE ("max") { string_eq (as_hexadecimal (UINT32_MAX, 8), "FFFFFFFF"); }
+}
+
+TEST_CASE ("as_hexadecimal") {
+  SUBCASE ("0-15 (+/-)") {
+    for (int i= 1; i < 10; i++) {
+      string_eq (as_hexadecimal (i), as_string (i));
+      string_eq (as_hexadecimal (i), as_string (i));
+    }
+    string_eq (as_hexadecimal (0), "0");
+    string_eq (as_hexadecimal (10), "A");
+    string_eq (as_hexadecimal (11), "B");
+    string_eq (as_hexadecimal (12), "C");
+    string_eq (as_hexadecimal (13), "D");
+    string_eq (as_hexadecimal (14), "E");
+    string_eq (as_hexadecimal (15), "F");
+  }
+  SUBCASE ("arbitary") {
+    string_eq (as_hexadecimal (0x12), "12");
+    string_eq (as_hexadecimal (0xABC), "ABC");
+    string_eq (as_hexadecimal (0x80000001), "80000001");
+  }
+  SUBCASE ("max") { string_eq (as_hexadecimal (UINT32_MAX), "FFFFFFFF"); }
 }
