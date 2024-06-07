@@ -14,6 +14,7 @@ static ankerl::nanobench::Bench bench;
 int
 main () {
   lolly::init_tbox ();
+  bench.minEpochTime (std::chrono::milliseconds (20));
   bench.run ("construct string", [&] {
     string ("abc");
     string ();
@@ -43,7 +44,6 @@ main () {
     static string a ("abcdefgh");
     a (1, 6);
   });
-  bench.minEpochIterations (40000);
   bench.run ("concat string", [&] {
     static string a ("abc"), b ("de");
     a*            b;
