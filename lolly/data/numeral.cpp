@@ -250,5 +250,12 @@ as_hexadecimal (int i, int len) {
   return result;
 }
 
+string
+as_hexadecimal (unsigned int i) {
+  string result;
+  to_Hex_positive ((unsigned) i, result);
+  return result;
+}
+
 } // namespace data
 } // namespace lolly
