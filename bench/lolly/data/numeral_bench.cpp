@@ -31,7 +31,7 @@ main () {
     bench.complexityN (d);
     bench.run ("convert hexadecimal string to int",
                [&] { from_hex (hex_string); });
-    int hex_number= (0x1 << (d + 1)) - 1;
+    int hex_number= (0x1 << ((d + 1) * 4)) - 1;
     bench.run ("convert signed int to hexadecimal string",
                [&] { to_Hex (hex_number); });
     bench.run ("convert unsigned int to hexadecimal string",

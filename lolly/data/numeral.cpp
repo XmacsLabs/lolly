@@ -233,12 +233,12 @@ from_hex (string s) {
  * to the tail.
  * @tparam T unsigned integral type is expected.
  */
-template <typename T>
+template <unsigned int cur, typename T>
 std::enable_if_t<std::conjunction_v<std::is_integral<T>, std::is_unsigned<T>>,
                  void>
-as_hexadecimal_sub (T i, unsigned int cur, string& s) {
-  if (cur > 0) {
-    as_hexadecimal_sub (i >> 4, cur - 1, s);
+as_hexadecimal_sub (T i, string& s) {
+  if constexpr (cur > 0) {
+    as_hexadecimal_sub<cur - 1> (i >> 4, s);
   }
   s[cur]= hex_string[i & 15];
 }
@@ -246,7 +246,59 @@ as_hexadecimal_sub (T i, unsigned int cur, string& s) {
 string
 as_hexadecimal (int i, int len) {
   string result (len);
-  as_hexadecimal_sub ((unsigned) i, len - 1, result);
+  switch (len) {
+  case 1:
+    as_hexadecimal_sub<0> ((unsigned int) i, result);
+    break;
+  case 2:
+    as_hexadecimal_sub<1> ((unsigned int) i, result);
+    break;
+  case 3:
+    as_hexadecimal_sub<2> ((unsigned int) i, result);
+    break;
+  case 4:
+    as_hexadecimal_sub<3> ((unsigned int) i, result);
+    break;
+  case 5:
+    as_hexadecimal_sub<4> ((unsigned int) i, result);
+    break;
+  case 6:
+    as_hexadecimal_sub<5> ((unsigned int) i, result);
+    break;
+  case 7:
+    as_hexadecimal_sub<6> ((unsigned int) i, result);
+    break;
+  case 8:
+    as_hexadecimal_sub<7> ((unsigned int) i, result);
+    break;
+  case 9:
+    as_hexadecimal_sub<8> ((unsigned int) i, result);
+    break;
+  case 10:
+    as_hexadecimal_sub<9> ((unsigned int) i, result);
+    break;
+  case 11:
+    as_hexadecimal_sub<10> ((unsigned int) i, result);
+    break;
+  case 12:
+    as_hexadecimal_sub<11> ((unsigned int) i, result);
+    break;
+  case 13:
+    as_hexadecimal_sub<12> ((unsigned int) i, result);
+    break;
+  case 14:
+    as_hexadecimal_sub<13> ((unsigned int) i, result);
+    break;
+  case 15:
+    as_hexadecimal_sub<14> ((unsigned int) i, result);
+    break;
+  case 16:
+    as_hexadecimal_sub<15> ((unsigned int) i, result);
+    break;
+  default:
+    TM_FAILED ("len is too large");
+    break;
+  }
   return result;
 }
 
