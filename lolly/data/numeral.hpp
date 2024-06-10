@@ -100,5 +100,13 @@ string as_hexadecimal (int i, int length);
  */
 string as_hexadecimal (uint32_t i);
 
+/**
+ * @brief Converts a binary stream to its hexadecimal represention.
+ *
+ * @param bin The binary data to be converted to a hexadecimal string.
+ * @return The hexadecimal string representation of the input binary.
+ */
+string binary_to_hexadecimal (string bin);
+
 } // namespace data
 } // namespace lolly

@@ -5,12 +5,11 @@
  *  \date   2024
  */
 
+#include "file.hpp"
 #include "lolly/data/numeral.hpp"
 #include <nanobench.h>
 
 using namespace lolly::data;
-
-static ankerl::nanobench::Bench bench;
 
 namespace lolly {
 extern void init_tbox ();
@@ -19,6 +18,7 @@ extern void init_tbox ();
 int
 main () {
   lolly::init_tbox ();
+  ankerl::nanobench::Bench bench;
 #ifdef OS_WASM
   bench.minEpochIterations (2000);
 #else
@@ -37,4 +37,17 @@ main () {
     bench.run ("convert unsigned int to hexadecimal string",
                [&] { as_hexadecimal (hex_number, d); });
   }
+  string                   content= string_load (url_pwd () * "LICENSE");
+  ankerl::nanobench::Bench bench2;
+  bench2.relative (true)
+      .minEpochTime (std::chrono::milliseconds (10))
+      .run ("convert document to hexadecimal string, legacy",
+            [&] {
+              string result;
+              for (int i= 0; i < N (content); i++)
+                result << as_hexadecimal ((unsigned char) content[i], 2);
+            })
+      .run (
+          "convert document to hexadecimal string, using binary_to_hexadecimal",
+          [&] { string result= binary_to_hexadecimal (content); });
 }

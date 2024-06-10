@@ -198,3 +198,11 @@ TEST_CASE ("as_hexadecimal") {
   }
   SUBCASE ("max") { string_eq (as_hexadecimal (UINT32_MAX), "FFFFFFFF"); }
 }
+
+TEST_CASE ("binary to hexadecimal") {
+  string header_of_png;
+  header_of_png << "\xff\xd8\xff\xe0";
+  header_of_png << '\x00';
+  header_of_png << "\x10\x4A\x46\x49\x46";
+  string_eq (binary_to_hexadecimal (header_of_png), "FFD8FFE000104A464946");
+}
