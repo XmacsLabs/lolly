@@ -312,11 +312,11 @@ as_hexadecimal (uint32_t i) {
 string
 binary_to_hexadecimal (string bin) {
   string res ((int) (N (bin) * 2));
-  int cur=0;
+  int    cur= 0;
   for (unsigned char ch : bin) {
-    res[cur] = hex_string[ch >> 4];
-    res[cur+1] = hex_string[ch & 0x0f];
-    cur += 2;
+    res[cur]    = hex_string[ch >> 4];
+    res[cur + 1]= hex_string[ch & 0x0f];
+    cur+= 2;
   }
   return res;
 }
