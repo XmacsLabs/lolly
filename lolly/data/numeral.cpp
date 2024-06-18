@@ -303,7 +303,7 @@ as_hexadecimal (int i, int len) {
 }
 
 string
-as_hexadecimal (uint32_t i) {
+uint32_to_Hex (uint32_t i) {
   string result;
   to_Hex_positive (i, result);
   return result;
