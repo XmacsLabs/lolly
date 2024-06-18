@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.24</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.25</span>
    </div>
   </td>
  </tr>
@@ -75,29 +75,29 @@ $(function() {
   <div class="headertitle"><div class="title">在Windows上开发</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md63"></a> </p>
-<h1><a class="anchor" id="autotoc_md65"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md57"></a> </p>
+<h1><a class="anchor" id="autotoc_md59"></a>
 使用xmake</h1>
-<h2><a class="anchor" id="autotoc_md66"></a>
+<h2><a class="anchor" id="autotoc_md60"></a>
 步骤1：安装xmake</h2>
 <p>xmake可以通过scoop或Windows的独立安装程序安装。</p>
 <p>建议使用scoop，并以以下方式安装其他包 </p><div class="fragment"><div class="line">scoop install xmake</div>
 <div class="line">scoop install make</div>
 <div class="line">scoop install git</div>
 </div><!-- fragment --><p>有时，需要xrepo仓库是最新的，以确保使用最新的依赖项构建定义： </p><div class="fragment"><div class="line">xrepo update-repo</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md69"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md61"></a>
 步骤2：安装和使用</h2>
 <p>以xmake为例： </p>
-<h3><a class="anchor" id="autotoc_md71"></a>
+<h3><a class="anchor" id="autotoc_md62"></a>
 方法1：本地安装</h3>
 <div class="fragment"><div class="line">xmake config --yes</div>
 <div class="line">xmake build liblolly</div>
 <div class="line">xmake install --admin liblolly</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md73"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md63"></a>
 方法2：添加xmake依赖</h3>
-<p><a class="el" href="classlist.html#a6134d52315f57bcb808223559c8a4760" title="Construct a new list object with a single item.">在需要lolly的库中，将以下内容添加到xmake.lua：</a> </p><div class="fragment"><div class="line">add_requires(&quot;lolly&quot;, {system=false})</div>
+<p>在需要lolly的库中，将以下内容添加到xmake.lua： </p><div class="fragment"><div class="line">add_requires(&quot;lolly&quot;, {system=false})</div>
 </div><!-- fragment --><p>有关详细示例，请参阅<a href="https://github.com/XmacsLabs/mogan/blob/branch-1.2/misc/xmake/packages.lua">mogan</a>。</p>
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="autotoc_md64"></a>
 步骤3：编译和测试</h2>
 <p>请参阅<a class="el" href="md_docs_2zh_2guide_2Test.html">如何测试</a>。 </p>
 </div></div><!-- contents -->

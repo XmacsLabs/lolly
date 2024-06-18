@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.24</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.25</span>
    </div>
   </td>
  </tr>
@@ -100,7 +100,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa6cd1b3828e108ccda5026615ba419b9" id="r_aa6cd1b3828e108ccda5026615ba419b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlist.html">static</a> <a class="el" href="classlist.html#a6134d52315f57bcb808223559c8a4760">ankerl::nanobench::Bench</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6cd1b3828e108ccda5026615ba419b9">bench</a></td></tr>
+<tr class="memitem:aa6cd1b3828e108ccda5026615ba419b9" id="r_aa6cd1b3828e108ccda5026615ba419b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">static</a> <a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ankerl::nanobench::Bench</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6cd1b3828e108ccda5026615ba419b9">bench</a></td></tr>
 <tr class="separator:aa6cd1b3828e108ccda5026615ba419b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -166,11 +166,20 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   52</span>    <span class="keyword">static</span> <span class="keywordtype">string</span> a (<span class="stringliteral">&quot;abc&quot;</span>), <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a> (<span class="stringliteral">&quot;de&quot;</span>);</div>
 <div class="line"><span class="lineno">   53</span>    a &lt;&lt; <a class="code hl_variable" href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a>;</div>
 <div class="line"><span class="lineno">   54</span>  });</div>
-<div class="line"><span class="lineno">   55</span>  <a class="code hl_variable" href="#aa6cd1b3828e108ccda5026615ba419b9">bench</a>.run (<span class="stringliteral">&quot;is quoted&quot;</span>, [&amp;] {</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keyword">static</span> <span class="keywordtype">string</span> a (<span class="stringliteral">&quot;H\&quot;ello TeXmacs\&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   57</span>    <a class="code hl_function" href="string_8cpp.html#adcb54e05f4e6a63da1eebfedcbcb6fb1">is_quoted</a> (a);</div>
+<div class="line"><span class="lineno">   55</span>  <a class="code hl_variable" href="#aa6cd1b3828e108ccda5026615ba419b9">bench</a>.run (<span class="stringliteral">&quot;hash of string&quot;</span>, [&amp;] {</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keyword">static</span> <span class="keywordtype">string</span> a (<span class="stringliteral">&quot;accde&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_function" href="basic_8cpp.html#a268a13446e8dbe3fd3885ff9c4827e1a">hash</a> (a);</div>
 <div class="line"><span class="lineno">   58</span>  });</div>
-<div class="line"><span class="lineno">   59</span>}</div>
+<div class="line"><span class="lineno">   59</span>  <a class="code hl_variable" href="#aa6cd1b3828e108ccda5026615ba419b9">bench</a>.run (<span class="stringliteral">&quot;hash of larger string&quot;</span>, [&amp;] {</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keyword">static</span> <span class="keywordtype">string</span> a (<span class="stringliteral">&quot;compare larger string ,compute hash of LARGER string&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_function" href="basic_8cpp.html#a268a13446e8dbe3fd3885ff9c4827e1a">hash</a> (a);</div>
+<div class="line"><span class="lineno">   62</span>  });</div>
+<div class="line"><span class="lineno">   63</span>  <a class="code hl_variable" href="#aa6cd1b3828e108ccda5026615ba419b9">bench</a>.run (<span class="stringliteral">&quot;is quoted&quot;</span>, [&amp;] {</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keyword">static</span> <span class="keywordtype">string</span> a (<span class="stringliteral">&quot;H\&quot;ello TeXmacs\&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_function" href="string_8cpp.html#adcb54e05f4e6a63da1eebfedcbcb6fb1">is_quoted</a> (a);</div>
+<div class="line"><span class="lineno">   66</span>  });</div>
+<div class="line"><span class="lineno">   67</span>}</div>
+<div class="ttc" id="abasic_8cpp_html_a268a13446e8dbe3fd3885ff9c4827e1a"><div class="ttname"><a href="basic_8cpp.html#a268a13446e8dbe3fd3885ff9c4827e1a">hash</a></div><div class="ttdeci">int hash(pointer ptr)</div><div class="ttdoc">Computes a hash value for a pointer.</div><div class="ttdef"><b>Definition</b> <a href="basic_8cpp_source.html#l00017">basic.cpp:17</a></div></div>
 <div class="ttc" id="ablackbox__test_8cpp_html_a8d44fd90fb43432ab6b2957b83f6c486"><div class="ttname"><a href="blackbox__test_8cpp.html#a8d44fd90fb43432ab6b2957b83f6c486">b</a></div><div class="ttdeci">blackbox b[13]</div><div class="ttdef"><b>Definition</b> <a href="blackbox__test_8cpp_source.html#l00041">blackbox_test.cpp:41</a></div></div>
 <div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00062">string.hpp:62</a></div></div>
 <div class="ttc" id="anamespacelolly_html_a5676a9b980b91430d04a8dd4e469cc19"><div class="ttname"><a href="namespacelolly.html#a5676a9b980b91430d04a8dd4e469cc19">lolly::init_tbox</a></div><div class="ttdeci">void init_tbox()</div><div class="ttdef"><b>Definition</b> <a href="sys__utils_8cpp_source.html#l00169">sys_utils.cpp:169</a></div></div>
@@ -190,7 +199,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classlist.html#a6134d52315f57bcb808223559c8a4760">ankerl::nanobench::Bench</a> bench</td>
+          <td class="memname"><a class="el" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">ankerl::nanobench::Bench</a> bench</td>
         </tr>
       </table>
   </td>
