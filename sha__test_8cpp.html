@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.25</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.26</span>
    </div>
   </td>
  </tr>
@@ -117,24 +117,24 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="sha__test_8cpp_source.html#l00019">19</a> of file <a class="el" href="sha__test_8cpp_source.html">sha_test.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   19</span>                               {</div>
-<div class="line"><span class="lineno">   20</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">SUBCASE</a> (<span class="stringliteral">&quot;normal file&quot;</span>) {</div>
+<div class="line"><span class="lineno">   20</span>  <a class="code hl_class" href="classlist.html">SUBCASE</a> (<span class="stringliteral">&quot;normal file&quot;</span>) {</div>
 <div class="line"><span class="lineno">   21</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (sha224_hexdigest (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <span class="stringliteral">&quot;LICENSE&quot;</span>),</div>
 <div class="line"><span class="lineno">   22</span>               <span class="stringliteral">&quot;2f051189f6ddb2d2fd11faeb8cf3e3b38b4216f2798ce1d92421e129&quot;</span>);</div>
 <div class="line"><span class="lineno">   23</span>  }</div>
-<div class="line"><span class="lineno">   24</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">SUBCASE</a> (<span class="stringliteral">&quot;empty file&quot;</span>) {</div>
-<div class="line"><span class="lineno">   25</span>    <a class="code hl_class" href="classurl.html">url</a> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">temp</a>= <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> ();</div>
-<div class="line"><span class="lineno">   26</span>    <a class="code hl_function" href="file_8cpp.html#a12542e2e173ffb09ead72fca9f5f256b">string_save</a> (<span class="stringliteral">&quot;&quot;</span>, <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">temp</a>);</div>
-<div class="line"><span class="lineno">   27</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">CHECK_EQ</a> (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">temp</a>), 0);</div>
-<div class="line"><span class="lineno">   28</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (sha224_hexdigest (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">temp</a>),</div>
+<div class="line"><span class="lineno">   24</span>  <a class="code hl_class" href="classlist.html">SUBCASE</a> (<span class="stringliteral">&quot;empty file&quot;</span>) {</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_class" href="classurl.html">url</a> <a class="code hl_class" href="classlist.html">temp</a>= <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> ();</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_function" href="file_8cpp.html#a12542e2e173ffb09ead72fca9f5f256b">string_save</a> (<span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classlist.html">temp</a>);</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (<a class="code hl_class" href="classlist.html">temp</a>), 0);</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (sha224_hexdigest (<a class="code hl_class" href="classlist.html">temp</a>),</div>
 <div class="line"><span class="lineno">   29</span>               <span class="stringliteral">&quot;d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f&quot;</span>);</div>
 <div class="line"><span class="lineno">   30</span>  }</div>
-<div class="line"><span class="lineno">   31</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">SUBCASE</a> (<span class="stringliteral">&quot;invalid file&quot;</span>) {</div>
+<div class="line"><span class="lineno">   31</span>  <a class="code hl_class" href="classlist.html">SUBCASE</a> (<span class="stringliteral">&quot;invalid file&quot;</span>) {</div>
 <div class="line"><span class="lineno">   32</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (sha224_hexdigest (<a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;https://mogan.app&quot;</span>)), <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">   33</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (sha224_hexdigest (<a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;/path/to/not_exist&quot;</span>)), <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">   34</span>  }</div>
 <div class="line"><span class="lineno">   35</span>}</div>
+<div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
 <div class="ttc" id="aclassurl_html"><div class="ttname"><a href="classurl.html">url</a></div><div class="ttdef"><b>Definition</b> <a href="url_8hpp_source.html#l00037">url.hpp:37</a></div></div>
-<div class="ttc" id="afast__alloc_8hpp_html_a8c09c4a1ed33efc95abda66d3b5a7231"><div class="ttname"><a href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">tm_new</a></div><div class="ttdeci">C * tm_new()</div><div class="ttdef"><b>Definition</b> <a href="fast__alloc_8hpp_source.html#l00059">fast_alloc.hpp:59</a></div></div>
 <div class="ttc" id="afile_8cpp_html_a12542e2e173ffb09ead72fca9f5f256b"><div class="ttname"><a href="file_8cpp.html#a12542e2e173ffb09ead72fca9f5f256b">string_save</a></div><div class="ttdeci">void string_save(const string &amp;s, url u)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00496">file.cpp:496</a></div></div>
 <div class="ttc" id="afile_8cpp_html_a284b643bc17714f25f658d3cb84527e2"><div class="ttname"><a href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a></div><div class="ttdeci">url url_temp(string suffix)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00274">file.cpp:274</a></div></div>
 <div class="ttc" id="afile_8cpp_html_aa2785cb5277458f95607537f48a2a8c2"><div class="ttname"><a href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a></div><div class="ttdeci">int file_size(url u)</div><div class="ttdef"><b>Definition</b> <a href="file_8cpp_source.html#l00155">file.cpp:155</a></div></div>
@@ -161,20 +161,20 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="sha__test_8cpp_source.html#l00037">37</a> of file <a class="el" href="sha__test_8cpp_source.html">sha_test.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   37</span>                               {</div>
-<div class="line"><span class="lineno">   38</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">SUBCASE</a> (<span class="stringliteral">&quot;normal file&quot;</span>) {</div>
+<div class="line"><span class="lineno">   38</span>  <a class="code hl_class" href="classlist.html">SUBCASE</a> (<span class="stringliteral">&quot;normal file&quot;</span>) {</div>
 <div class="line"><span class="lineno">   39</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (</div>
 <div class="line"><span class="lineno">   40</span>        sha256_hexdigest (<a class="code hl_function" href="url_8cpp.html#ad57b04b152246c8df432e5064370005c">url_pwd</a> () * <span class="stringliteral">&quot;LICENSE&quot;</span>),</div>
 <div class="line"><span class="lineno">   41</span>        <span class="stringliteral">&quot;8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903&quot;</span>);</div>
 <div class="line"><span class="lineno">   42</span>  }</div>
-<div class="line"><span class="lineno">   43</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">SUBCASE</a> (<span class="stringliteral">&quot;empty file&quot;</span>) {</div>
-<div class="line"><span class="lineno">   44</span>    <a class="code hl_class" href="classurl.html">url</a> <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">temp</a>= <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> ();</div>
-<div class="line"><span class="lineno">   45</span>    <a class="code hl_function" href="file_8cpp.html#a12542e2e173ffb09ead72fca9f5f256b">string_save</a> (<span class="stringliteral">&quot;&quot;</span>, <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">temp</a>);</div>
-<div class="line"><span class="lineno">   46</span>    <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">CHECK_EQ</a> (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">temp</a>), 0);</div>
+<div class="line"><span class="lineno">   43</span>  <a class="code hl_class" href="classlist.html">SUBCASE</a> (<span class="stringliteral">&quot;empty file&quot;</span>) {</div>
+<div class="line"><span class="lineno">   44</span>    <a class="code hl_class" href="classurl.html">url</a> <a class="code hl_class" href="classlist.html">temp</a>= <a class="code hl_function" href="file_8cpp.html#a284b643bc17714f25f658d3cb84527e2">url_temp</a> ();</div>
+<div class="line"><span class="lineno">   45</span>    <a class="code hl_function" href="file_8cpp.html#a12542e2e173ffb09ead72fca9f5f256b">string_save</a> (<span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classlist.html">temp</a>);</div>
+<div class="line"><span class="lineno">   46</span>    <a class="code hl_class" href="classlist.html">CHECK_EQ</a> (<a class="code hl_function" href="file_8cpp.html#aa2785cb5277458f95607537f48a2a8c2">file_size</a> (<a class="code hl_class" href="classlist.html">temp</a>), 0);</div>
 <div class="line"><span class="lineno">   47</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (</div>
-<div class="line"><span class="lineno">   48</span>        sha256_hexdigest (<a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">temp</a>),</div>
+<div class="line"><span class="lineno">   48</span>        sha256_hexdigest (<a class="code hl_class" href="classlist.html">temp</a>),</div>
 <div class="line"><span class="lineno">   49</span>        <span class="stringliteral">&quot;e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855&quot;</span>);</div>
 <div class="line"><span class="lineno">   50</span>  }</div>
-<div class="line"><span class="lineno">   51</span>  <a class="code hl_function" href="fast__alloc_8hpp.html#a8c09c4a1ed33efc95abda66d3b5a7231">SUBCASE</a> (<span class="stringliteral">&quot;invalid file&quot;</span>) {</div>
+<div class="line"><span class="lineno">   51</span>  <a class="code hl_class" href="classlist.html">SUBCASE</a> (<span class="stringliteral">&quot;invalid file&quot;</span>) {</div>
 <div class="line"><span class="lineno">   52</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (sha256_hexdigest (<a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;https://mogan.app&quot;</span>)), <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">   53</span>    <a class="code hl_function" href="lolly__doctests_8hpp.html#a9fd61dbcf41093dd553e2c0a64ab9861">string_eq</a> (sha256_hexdigest (<a class="code hl_function" href="url_8cpp.html#a21edc551c14cb93b849eb86c4cf582e4">url_system</a> (<span class="stringliteral">&quot;/path/to/not_exist&quot;</span>)), <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><span class="lineno">   54</span>  }</div>
