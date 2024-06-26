@@ -9,11 +9,12 @@
 #ifndef BLACKBOX_H
 #define BLACKBOX_H
 #include "basic.hpp"
+#include "sharedptr.hpp"
 
 /**
  * @brief A template class representing an opaque pointer.
  */
-class blackbox_rep : public abstract_struct {
+class blackbox_rep {
 public:
   inline blackbox_rep () {}
   inline virtual ~blackbox_rep () {}
@@ -22,11 +23,10 @@ public:
   virtual tm_ostream& display (tm_ostream& out)= 0;
 };
 
-class blackbox {
-public:
-  ABSTRACT_NULL (blackbox);
+class blackbox : public counted_ptr<blackbox_rep, true> {
+  using base::counted_ptr;
+  template <typename T> friend blackbox close_box (const T&);
 };
-ABSTRACT_NULL_CODE (blackbox);
 
 template <class T> class whitebox_rep : public blackbox_rep {
 public:
@@ -121,7 +121,7 @@ type_box (blackbox bb) {
 template <class T>
 blackbox
 close_box (const T& data) {
-  return tm_new<whitebox_rep<T>> (data);
+  return blackbox (blackbox::make<whitebox_rep<T>> (data));
 }
 
 /**
