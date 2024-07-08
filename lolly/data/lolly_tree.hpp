@@ -163,8 +163,12 @@ public:
 template <typename T>
 inline int
 N (lolly_tree<T> t) {
-  CHECK_COMPOUND (t);
-  return N (t->a);
+  if (is_compound (t)) {
+    return N (t->a);
+  }
+  else {
+    return 0;
+  }
 }
 
 template <typename T>
