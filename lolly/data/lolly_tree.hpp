@@ -17,7 +17,7 @@ namespace lolly {
 namespace data {
 
 #define CHECK_COMPOUND(t)                                                      \
-  TM_DEBUG (ASSERT (t->op != 0, "an compound tree use 0 as operator"))
+  TM_DEBUG (ASSERT ((t)->op != 0, "an compound tree use 0 as operator"))
 
 template <typename T> class lolly_tree;
 template <typename T> class lolly_tree_rep;

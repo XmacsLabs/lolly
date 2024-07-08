@@ -10,7 +10,7 @@
 /**
  * @brief Debugging macro used to disable debugging output.
  */
-#define TM_DEBUG(x) (x)
+#define TM_DEBUG(x) x
 
 /**
  * @brief Global variable holding the number of concrete structures currently
