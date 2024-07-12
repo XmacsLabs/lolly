@@ -23,8 +23,8 @@ using lolly::data::string_view;
 class string;
 class string_rep : concrete_struct {
   int   n;
-  int   a_N;
   char* a;
+  int   a_N;
 
 public:
   inline string_rep () : n (0), a_N (0), a (NULL) {}
