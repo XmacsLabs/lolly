@@ -1,8 +1,8 @@
 
 /******************************************************************************
- * MODULE     : json.cpp
- * DESCRIPTION: Json Data Type
- * COPYRIGHT  : (C) 2023  Darcy Shen
+ * MODULE     : unicode.cpp
+ * DESCRIPTION: routines on Unicode
+ * COPYRIGHT  : (C) 2023-2024 Darcy Shen
  *******************************************************************************
  * This software falls under the GNU general public license version 3 or later.
  * It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
