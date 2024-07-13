@@ -30,7 +30,7 @@ public:
   inline string_rep () : n (0), a_N (0), a (NULL) {}
   string_rep (int n);
   inline ~string_rep () {
-    if (n != 0) tm_delete_array (a);
+    if (a_N != 0) tm_delete_array (a);
   }
   /**
    * @brief expand (or shrink) string by delta, but do not release memory when

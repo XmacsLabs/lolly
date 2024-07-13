@@ -31,9 +31,11 @@ round_length (int n) {
   return i;
 }
 
-string_rep::string_rep (int n2)
-    : n (n2), a_N (round_length (n)),
-      a ((n == 0) ? ((char*) NULL) : tm_new_array<char> (round_length (n))) {}
+string_rep::string_rep (int n2) : n (n2), a_N (round_length (n2)), a (nullptr) {
+  if (a_N != 0) {
+    a= tm_new_array<char> (a_N);
+  }
+}
 
 void
 string_rep::resize (int m) {
