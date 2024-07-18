@@ -9,6 +9,5 @@ var searchData=
   ['display_6',['display',['../classblackbox__rep.html#a4d690d9461c38670be88b31240895192',1,'blackbox_rep::display()'],['../classwhitebox__rep.html#ab6909a24ff08c4d3ff8583e2814416fa',1,'whitebox_rep::display()']]],
   ['distance_7',['distance',['../analyze_8cpp.html#ac259e5a31378d13ae5ad0c7cb3c532c3',1,'distance(string s1, string s2):&#160;analyze.cpp'],['../analyze_8hpp.html#ac259e5a31378d13ae5ad0c7cb3c532c3',1,'distance(string s1, string s2):&#160;analyze.cpp']]],
   ['dos_5fto_5fbetter_8',['dos_to_better',['../analyze_8cpp.html#ae798ecf0cbbcb90b9d0a5707fc3110d9',1,'dos_to_better(string s):&#160;analyze.cpp'],['../analyze_8hpp.html#ae798ecf0cbbcb90b9d0a5707fc3110d9',1,'dos_to_better(string s):&#160;analyze.cpp']]],
-  ['download_9',['download',['../namespacelolly_1_1io.html#a217d34916d009b9e7fb00b9351938934',1,'lolly::io']]],
-  ['dump_10',['dump',['../classlolly_1_1data_1_1json.html#ace6a263522b00fbf69c51bc93668751c',1,'lolly::data::json']]]
+  ['download_9',['download',['../namespacelolly_1_1io.html#a217d34916d009b9e7fb00b9351938934',1,'lolly::io']]]
 ];

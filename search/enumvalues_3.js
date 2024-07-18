@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['elapsed_0',['ELAPSED',['../namespacelolly_1_1io.html#ab6a34ebb135b6e0c21923f8f788091a3abe2d03210c1733ce4c512d845f966f17',1,'lolly::io']]]
+  ['indent_0',['INDENT',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242aaae81a0b1ffa6ba389c5a8398774bb69',1,'basic.hpp']]]
 ];

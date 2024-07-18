@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['null_5ftype_0',['NULL_TYPE',['../namespacelolly_1_1data.html#a01288eee69b7e52dc00ad9021af846d8a23e4694f755cce8a8fe52e31b69cfb27',1,'lolly::data']]]
+  ['text_0',['TEXT',['../namespacelolly_1_1io.html#ab6a34ebb135b6e0c21923f8f788091a3a9edfb4c910035937c0559dbbe6d54953',1,'lolly::io']]],
+  ['tuple_1',['TUPLE',['../namespacelolly_1_1io.html#ab6a34ebb135b6e0c21923f8f788091a3af604bb868bee1cab8f67412889c06f4b',1,'lolly::io']]]
 ];

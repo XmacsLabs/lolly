@@ -1,14 +1,14 @@
 var indexSectionsWithContent =
 {
   0: "0123456789_abcdefghijklmnopqrstuvwxyz~使列单在如对报方步第贡",
-  1: "_abcfhijlpqrstuw",
+  1: "_abcfhilpqrstuw",
   2: "l",
   3: "123456789abcefghijlmnprstuwz",
   4: "_abcdefghijlmnopqrstuvw~",
   5: "_abcdefhiklmnoprstuvwxyz",
-  6: "cdhjpqstu",
-  7: "dhjs",
-  8: "bcdehijlmnprstu",
+  6: "cdhpqstu",
+  7: "dhs",
+  8: "cehilmprstu",
   9: "abceghilnoprst",
   10: "abcdehilmnorstuw",
   11: "0123458acdfghijlmnopstuwx在如"

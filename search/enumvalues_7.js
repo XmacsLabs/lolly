@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lf_0',['LF',['../basic_8hpp.html#aeb608c7a0e6ed0b39e11d99b3130d242a6882283dac181897b0f08bb545c6e1e4',1,'basic.hpp']]]
+  ['root_0',['ROOT',['../namespacelolly_1_1io.html#ab6a34ebb135b6e0c21923f8f788091a3afd1c1127e67039733762957d75e54a59',1,'lolly::io']]]
 ];

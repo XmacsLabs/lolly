@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pointer_0',['pointer',['../basic_8hpp.html#a4f8e3c8dc03b1c750da13bd49ce4c439',1,'basic.hpp']]]
+  ['qi_0',['QI',['../minmax_8hpp.html#aa70c90a0b3d85989a40a2155da9ddc10',1,'minmax.hpp']]],
+  ['qn_1',['QN',['../minmax_8hpp.html#ae689e762a32dd85f7f8c7f4073d6c521',1,'minmax.hpp']]]
 ];

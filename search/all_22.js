@@ -11,6 +11,6 @@ var searchData=
   ['xmake_202_208_202_8',['Project: Upgrade to xmake 2.8.2',['../md_devel_211.html',1,'']]],
   ['xmake_202_208_203_20and_20wasm_9',['13: xmake 2.8.3 and wasm',['../md_devel_213.html',1,'']]],
   ['xmake_202_208_205_10',['Project: Upgrade to xmake 2.8.5',['../md_devel_218.html',1,'']]],
-  ['xmake_20dependency_11',['Xmake Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md40',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md48',1,'Method 2: Adding xmake Dependency']]],
+  ['xmake_20dependency_11',['Xmake Dependency',['../md_docs_2guide_2Develop__on__Linux.html#autotoc_md40',1,'Method 2: Adding xmake Dependency'],['../md_docs_2guide_2Develop__on__Windows.html#autotoc_md47',1,'Method 2: Adding xmake Dependency']]],
   ['xmake_5flua_12',['xmake_lua',['../file__test_8cpp.html#a2ad4e8400280f361f7232c59aaf2d9fc',1,'file_test.cpp']]]
 ];

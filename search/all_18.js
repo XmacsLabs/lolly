@@ -10,11 +10,10 @@ var searchData=
   ['normal_7',['normal',['../list__test_8cpp.html#addf96f72c5d192faef044f9f9dd5a4d3',1,'list_test.cpp']]],
   ['ntuple_2ehpp_8',['ntuple.hpp',['../ntuple_8hpp.html',1,'']]],
   ['ntuple_5ftest_2ecpp_9',['ntuple_test.cpp',['../ntuple__test_8cpp.html',1,'']]],
-  ['null_5ftype_10',['NULL_TYPE',['../namespacelolly_1_1data.html#a01288eee69b7e52dc00ad9021af846d8a23e4694f755cce8a8fe52e31b69cfb27',1,'lolly::data']]],
-  ['num_11',['NUM',['../fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a',1,'fast_alloc_test.cpp']]],
-  ['number_12',['Project: Number',['../md_devel_217.html',1,'']]],
-  ['numeral_2ecpp_13',['numeral.cpp',['../numeral_8cpp.html',1,'']]],
-  ['numeral_2ehpp_14',['numeral.hpp',['../numeral_8hpp.html',1,'']]],
-  ['numeral_5fbench_2ecpp_15',['numeral_bench.cpp',['../numeral__bench_8cpp.html',1,'']]],
-  ['numeral_5ftest_2ecpp_16',['numeral_test.cpp',['../numeral__test_8cpp.html',1,'']]]
+  ['num_10',['NUM',['../fast__alloc__test_8cpp.html#aaf0952059602752258dccaa015d7b54a',1,'fast_alloc_test.cpp']]],
+  ['number_11',['Project: Number',['../md_devel_217.html',1,'']]],
+  ['numeral_2ecpp_12',['numeral.cpp',['../numeral_8cpp.html',1,'']]],
+  ['numeral_2ehpp_13',['numeral.hpp',['../numeral_8hpp.html',1,'']]],
+  ['numeral_5fbench_2ecpp_14',['numeral_bench.cpp',['../numeral__bench_8cpp.html',1,'']]],
+  ['numeral_5ftest_2ecpp_15',['numeral_test.cpp',['../numeral__test_8cpp.html',1,'']]]
 ];

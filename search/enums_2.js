@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['json_5flabel_0',['json_label',['../namespacelolly_1_1data.html#a01288eee69b7e52dc00ad9021af846d8',1,'lolly::data']]]
+  ['sha_5fmode_0',['sha_mode',['../namespacelolly_1_1hash.html#ad86f0c52e2822d7f1eb2a189129f95b1',1,'lolly::hash']]]
 ];
