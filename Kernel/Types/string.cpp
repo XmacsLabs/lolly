@@ -31,11 +31,9 @@ round_length (int n) {
   return i;
 }
 
-string_rep::string_rep (int n2) : n (n2), a_N (round_length (n2)), a (nullptr) {
-  if (a_N != 0) {
-    a= tm_new_array<char> (a_N);
-  }
-}
+string_rep::string_rep (int n2)
+    : n (n2),
+      a ((n == 0) ? ((char*) NULL) : tm_new_array<char> (round_length (n))) {}
 
 void
 string_rep::resize (int m) {
@@ -44,51 +42,15 @@ string_rep::resize (int m) {
   if (mm != nn) {
     if (mm != 0) {
       if (nn != 0) {
-        a_N= mm;
-        a  = tm_resize_array<char> (mm, a);
+        a= tm_resize_array<char> (mm, a);
       }
       else {
-        a_N= mm;
-        a  = tm_new_array<char> (mm);
+        a= tm_new_array<char> (mm);
       }
     }
-    else if (nn != 0) {
-      tm_delete_array (a);
-      a_N= 0;
-      a  = NULL;
-    };
+    else if (nn != 0) tm_delete_array (a);
   }
   n= m;
-}
-
-int
-string_rep::expand_or_shrink_by (int delta) {
-  int old_n= n;
-  n+= delta;
-  reserve (n);
-  return old_n;
-}
-
-void
-string_rep::reserve (int new_n) {
-  int old_size= a_N;
-  if (new_n != 0) {
-    if (old_size == 0) {
-      a_N= round_length (new_n);
-      a  = tm_new_array<char> (a_N);
-    }
-    else if (old_size < new_n) {
-      a_N= round_length (new_n);
-      a  = tm_resize_array<char> (a_N, a);
-    }
-  }
-  else {
-    if (old_size != 0) {
-      tm_delete_array (a);
-      a  = NULL;
-      a_N= 0;
-    };
-  }
 }
 
 string::string (char c) {
@@ -176,17 +138,17 @@ copy (string s) {
 
 string&
 operator<< (string& a, char x) {
-  int old_a_N= a->expand_or_shrink_by (1);
-  a[old_a_N] = x;
+  a->resize (N (a) + 1);
+  a[N (a) - 1]= x;
   return a;
 }
 
 string&
 operator<< (string& a, string b) {
-  int b_N    = N (b);
-  int old_a_N= a->expand_or_shrink_by (b_N);
-  for (int i= 0; i < b_N; i++)
-    a[i + old_a_N]= b[i];
+  int i, k1= N (a), k2= N (b);
+  a->resize (k1 + k2);
+  for (i= 0; i < k2; i++)
+    a[i + k1]= b[i];
   return a;
 }
 
