@@ -15,33 +15,6 @@
 #define HASHTREE_C
 #include "hashtree.hpp"
 
-/******************************************************************************
- * Methods normally provided by
- * CONCRETE_TEMPLATE_2_CODE(hashtree,class,K,class,V);
- ******************************************************************************/
-
-template <class K, class V>
-inline hashtree<K, V>::hashtree (const hashtree<K, V>& x) : rep (x.rep) {
-  if (this->rep != NULL) INC_COUNT (this->rep);
-}
-
-template <class K, class V> inline hashtree<K, V>::~hashtree () {
-  if (this->rep != NULL) DEC_COUNT (this->rep);
-}
-
-template <class K, class V>
-inline hashtree<K, V>&
-hashtree<K, V>::operator= (hashtree<K, V> x) {
-  if (this->rep != NULL) DEC_COUNT (this->rep);
-  this->rep= x.rep;
-  if (x.rep != NULL) INC_COUNT (x.rep);
-  return *this;
-}
-
-/******************************************************************************
- * Methods of hashtree_rep<K,V>
- ******************************************************************************/
-
 template <class K, class V>
 inline bool
 hashtree_rep<K, V>::contains (K key) {
@@ -81,9 +54,8 @@ hashtree_rep<K, V>::get_label () {
 template <class K, class V>
 inline void
 hashtree<K, V>::realize () {
-  if (rep == NULL) {
-    rep= tm_new<hashtree_rep<K, V>> ();
-    INC_COUNT (rep);
+  if (this->is_nil ()) {
+    *this= hashtree ();
   }
 }
 
@@ -96,7 +68,7 @@ inline hashtree_rep<K, V>*
 hashtree<K, V>::operator->(void) {
   // always make sure there is a rep!
   realize ();
-  return rep;
+  return this->rep;
 }
 
 template <class K, class V>
@@ -121,7 +93,7 @@ hashtree<K, V>::operator() (K key) {
 template <class K, class V>
 inline bool
 is_nil (hashtree<K, V> ht) {
-  return ht.rep == NULL;
+  return ht.is_nil ();
 }
 
 template <class K, class V>
