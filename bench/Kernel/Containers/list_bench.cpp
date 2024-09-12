@@ -41,4 +41,7 @@ main () {
 
   bench.minEpochIterations (40000);
   bench.run ("l1 == l2 32", [&] { l32 == l32_2; });
+
+  bench.run ("remove 31 of 64", [&] { remove (l64, 31L); });
+  bench.run ("remove 63 of 64", [&] { remove (l64, 63L); });
 }
