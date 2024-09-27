@@ -227,6 +227,9 @@ function add_bench_target(filepath)
         if is_plat("windows") then
             set_encodings("utf-8")
             add_ldflags("/LTCG")
+            -- https://learn.microsoft.com/en-us/cpp/build/reference/stack-stack-allocations?view=msvc-170
+            -- explicitly set stack size to 1M on windows
+            add_ldflags("/STACK:1048576")
         end
 
         if is_plat("windows") or is_plat("mingw") then
