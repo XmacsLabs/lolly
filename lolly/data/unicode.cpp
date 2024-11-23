@@ -99,7 +99,7 @@ string
 unicode_get_range (int code) {
   if (code <= 0x7f) return "ascii";
   else if (code >= 0x80 && code <= 0x37f) return "latin";
-  else if (code >= 0x380 && code <= 0x3ff) return "greek";
+  else if (code >= 0x370 && code <= 0x3ff) return "greek";
   else if (code >= 0x400 && code <= 0x4ff) return "cyrillic";
   else if (code >= 0x2460 && code <= 0x24ff) return "enclosed_alphanumerics";
   else if (code >= 0x3000 && code <= 0x303f) return "cjk";
