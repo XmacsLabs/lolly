@@ -24,7 +24,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.27</span>
+   <div id="projectname">Lolly<span id="projectnumber">&#160;1.4.28</span>
    </div>
   </td>
  </tr>
@@ -190,7 +190,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="namespacelolly_1_1data.html#a600300cd50b77ad463498256968ca50e">   99</a></span><a class="code hl_function" href="namespacelolly_1_1data.html#a600300cd50b77ad463498256968ca50e">unicode_get_range</a> (<span class="keywordtype">int</span> code) {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordflow">if</span> (code &lt;= 0x7f) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ascii&quot;</span>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x80 &amp;&amp; code &lt;= 0x37f) <span class="keywordflow">return</span> <span class="stringliteral">&quot;latin&quot;</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x380 &amp;&amp; code &lt;= 0x3ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;greek&quot;</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x370 &amp;&amp; code &lt;= 0x3ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;greek&quot;</span>;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x400 &amp;&amp; code &lt;= 0x4ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;cyrillic&quot;</span>;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x2460 &amp;&amp; code &lt;= 0x24ff) <span class="keywordflow">return</span> <span class="stringliteral">&quot;enclosed_alphanumerics&quot;</span>;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (code &gt;= 0x3000 &amp;&amp; code &lt;= 0x303f) <span class="keywordflow">return</span> <span class="stringliteral">&quot;cjk&quot;</span>;</div>
@@ -322,9 +322,9 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>} <span class="comment">// namespace data</span></div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>} <span class="comment">// namespace lolly</span></div>
-<div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00143">string.hpp:143</a></div></div>
+<div class="ttc" id="aclassc__string_html"><div class="ttname"><a href="classc__string.html">c_string</a></div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00121">string.hpp:121</a></div></div>
 <div class="ttc" id="aclasslist_html"><div class="ttname"><a href="classlist.html">list</a></div><div class="ttdoc">The list class represents a linked list.</div><div class="ttdef"><b>Definition</b> <a href="list_8hpp_source.html#l00048">list.hpp:48</a></div></div>
-<div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00062">string.hpp:62</a></div></div>
+<div class="ttc" id="aclassstring_html"><div class="ttname"><a href="classstring.html">string</a></div><div class="ttdef"><b>Definition</b> <a href="string_8hpp_source.html#l00040">string.hpp:40</a></div></div>
 <div class="ttc" id="anamespacelolly_1_1data_html_a4f6650c268d586240b7ee05962b79515"><div class="ttname"><a href="namespacelolly_1_1data.html#a4f6650c268d586240b7ee05962b79515">lolly::data::encode_as_utf8</a></div><div class="ttdeci">string_u8 encode_as_utf8(uint32_t code)</div><div class="ttdoc">Encode 4 bytes as string_u8.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">unicode.cpp:19</a></div></div>
 <div class="ttc" id="anamespacelolly_1_1data_html_a600300cd50b77ad463498256968ca50e"><div class="ttname"><a href="namespacelolly_1_1data.html#a600300cd50b77ad463498256968ca50e">lolly::data::unicode_get_range</a></div><div class="ttdeci">string unicode_get_range(int code)</div><div class="ttdef"><b>Definition</b> <a href="#l00099">unicode.cpp:99</a></div></div>
 <div class="ttc" id="anamespacelolly_1_1data_html_a7ebbc8b03df1c2230f564beaba9db617"><div class="ttname"><a href="namespacelolly_1_1data.html#a7ebbc8b03df1c2230f564beaba9db617">lolly::data::decode_from_utf8</a></div><div class="ttdeci">uint32_t decode_from_utf8(string_u8 s, int &amp;i)</div><div class="ttdoc">Decode string_u8 string as 4 bytes at position i.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">unicode.cpp:52</a></div></div>
