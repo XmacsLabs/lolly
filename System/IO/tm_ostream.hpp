@@ -13,14 +13,12 @@
 #define OUT_STREAM_HPP
 
 // #include "url.hpp"
+#include "sharedptr.hpp"
 #include "string.hpp"
 #include <cstdio>
 class tm_ostream;
 
 class tm_ostream_rep {
-public:
-  int ref_count;
-
 public:
   tm_ostream_rep ();
   virtual ~tm_ostream_rep ();
@@ -33,9 +31,8 @@ public:
   friend class tm_ostream;
 };
 
-class tm_ostream {
-public:
-  tm_ostream_rep* rep;
+class tm_ostream : public counted_ptr<tm_ostream_rep> {
+  using base::counted_ptr;
 
 public:
   static tm_ostream  private_cout;
@@ -47,12 +44,7 @@ public:
   tm_ostream ();
   tm_ostream (char*);
   tm_ostream (FILE*);
-  tm_ostream (const tm_ostream&);
-  tm_ostream (tm_ostream_rep*);
-  ~tm_ostream ();
-  tm_ostream_rep* operator->();
-  tm_ostream&     operator= (tm_ostream x);
-  bool            operator== (tm_ostream&);
+  bool operator== (tm_ostream&);
 
   void   clear ();
   void   flush ();

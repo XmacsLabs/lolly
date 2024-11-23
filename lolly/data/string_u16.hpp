@@ -9,8 +9,8 @@
 
 #pragma once
 
-#include "classdef.hpp"
 #include "fast_alloc.hpp"
+#include "sharedptr.hpp"
 #include "string_view.hpp"
 
 namespace lolly {
@@ -20,7 +20,7 @@ using string_u16_view= lolly::data::string_view<char16_t>;
 
 class string_u16;
 
-class string_u16_rep : concrete_struct {
+class string_u16_rep {
   int       n;
   int       a_N;
   char16_t* a;
@@ -58,17 +58,18 @@ public:
   friend int N (string_u16 a);
 };
 
-class string_u16 {
-  CONCRETE (string_u16);
+class string_u16 : public counted_ptr<string_u16_rep> {
 
-  inline string_u16 () : rep (tm_new<string_u16_rep> ()) {}
-  inline explicit string_u16 (int n) : rep (tm_new<string_u16_rep> (n)) {}
+public:
+  inline string_u16 () : base (make ()) {}
+  inline explicit string_u16 (int n) : base (make (n)) {}
 
   template <size_t N_>
-  string_u16 (const char16_t (&s)[N_]) : rep (tm_new<string_u16_rep> (N_ - 1)) {
+  string_u16 (const char16_t (&s)[N_]) : base (make (N_ - 1)) {
     constexpr int n= N_ - 1;
+    char16_t*     a= rep->a;
     for (int i= 0; i < n; i++)
-      rep->a[i]= s[i];
+      a[i]= s[i];
   };
 
   string_u16 (char16_t c);
@@ -92,7 +93,6 @@ class string_u16 {
 
   inline char16_t& operator[] (int i) { return rep->a[i]; }
 };
-CONCRETE_CODE (string_u16);
 
 inline int
 N (string_u16 a) {

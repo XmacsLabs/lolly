@@ -15,12 +15,13 @@
 #define HASHTREE_H
 
 #include "hashmap.hpp"
+#include "sharedptr.hpp"
 
 template <class K, class V> class hashtree;
 template <class K, class V> int  N (hashtree<K, V> tree);
 template <class K, class V> bool is_nil (hashtree<K, V> tree);
 
-template <class K, class V> class hashtree_rep : concrete_struct {
+template <class K, class V> class hashtree_rep {
   hashmap<K, hashtree<K, V>> children;
 
 public:
@@ -75,38 +76,27 @@ public:
  * of NULL pointers so to speak). These NULL nodes are created by passing
  * a boolean value to the hashtree constructor. One cannot accidentally
  * obtain a NULL element by e.g. accessing a child (see below).
- *
- * In general, I tried to imitate the TeXmacs-way of memory management
- * as closely as possibly, however the workaround is not that pretty.
- * As more elegant way might be to modify the hashmap class so that
- * a hashmap contains only a pointer to a function that returns
- * a default value instead of a instance of a value-element.
- * But I didn't want to modify core TeXmacs code.
  ******************************************************************************/
 
-template <class K, class V> class hashtree {
-  // CONCRETE_TEMPLATE_2(hashtree,K,V);
-  hashtree_rep<K, V>* rep;
+template <class K, class V>
+class hashtree : public counted_ptr<hashtree_rep<K, V>, true> {
+  using base= typename counted_ptr<hashtree_rep<K, V>, true>::base;
 
   // this constructor always returns a NULL element
-  inline hashtree (bool) : rep (NULL) {}
+  inline hashtree (bool) : base () {}
 
   // ensures that this hashtree has a rep
   void realize ();
 
 public:
-  inline hashtree (const hashtree<K, V>&);
-  inline ~hashtree ();
-  inline hashtree<K, V>& operator= (hashtree<K, V> x);
-
   // default constructor returns a non-NULL node, which does not have a value
-  inline hashtree () : rep (tm_new<hashtree_rep<K, V>> ()) {}
+  inline hashtree () : base (base::make ()) {}
 
   // returns a non-NULL node, that has value
-  inline hashtree (V val) : rep (tm_new<hashtree_rep<K, V>> (val)) {}
+  inline hashtree (V val) : base (base::make (val)) {}
 
   // returns this node's value
-  inline hashtree_rep<K, V>* operator->(void);
+  inline hashtree_rep<K, V>* operator->();
 
   // returns this node's child with the label "key". If the node doesn't
   // have such a child, an error is raised.
@@ -120,8 +110,7 @@ public:
   inline hashtree<K, V> operator[] (K key); // rw access
 
   friend class hashtree_rep<K, V>;
-  friend bool is_nil<K, V> (hashtree<K, V> ht);
-  friend int  N<K, V> (hashtree<K, V> ht);
+  friend int N<K, V> (hashtree<K, V> ht);
 };
 
 #include "hashtree.ipp"
