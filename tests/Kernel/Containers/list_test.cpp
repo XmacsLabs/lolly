@@ -140,3 +140,16 @@ TEST_CASE ("contains") {
   CHECK_EQ (contains (normal, 2L), true);
   CHECK_EQ (contains (normal, 3L), true);
 }
+
+TEST_CASE ("long list under stack size") {
+  int initial_mem_used= mem_used ();
+  cout << "Initial mem used: " << initial_mem_used << LF;
+  list<string> long_l;
+  // increase the size to 5000, there will be a stackoverflow on Windows
+  for (int i= 0; i < 4000; i++) {
+    long_l= list<string> ("88888888", long_l);
+  }
+  int final_mem_used= mem_used ();
+  cout << "Final mem used: " << final_mem_used << LF;
+  cout << "Actual mem used: " << final_mem_used - initial_mem_used << LF;
+}
