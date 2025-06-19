@@ -368,11 +368,20 @@ if has_config("enable_tests") then
         add_forceincludes(path.absolute("$(buildir)/L1/config.h"))
         add_files("tests/a_tbox_main.cpp")
 
-        local cpp_tests_on_all_plat = os.files("tests/**_test.cpp|**/shared_lib_test.cpp")
-        for _, testfile in ipairs(cpp_tests_on_all_plat) do
-            add_tests(path.basename(testfile), {
-                kind = "binary",
-                files = testfile})
+        for _, file in ipairs(os.files("tests/**_test.cpp|tests/**/shared_lib_test.cpp")) do
+            local name = path.basename(file)
+            target(name)
+                set_kind("binary")
+                set_languages("c++17")
+                set_exceptions("cxx")
+                set_policy("check.auto_ignore_flags", false)
+                add_files(file, "tests/a_tbox_main.cpp")
+                add_deps("liblolly")
+                add_packages("doctest", "tbox")
+                add_includedirs("$(buildir)/L1", "tests", lolly_includedirs)
+                add_forceincludes(path.absolute("$(buildir)/L1/config.h"))
+
+                set_group("tests")
         end
     end
     target("bench_base")do
