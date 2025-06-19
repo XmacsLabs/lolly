@@ -1,5 +1,9 @@
 # 如何测试
 对于开发者来说，一共有两种测试方式，其一为单元测试，其二为集成测试。
+进入工程根目录，执行：
+```
+xmake f
+```
 
 ## 列出所有target
 下面的命令行可以列出所有target，其中以`_test`结尾的是C++的单元测试。
@@ -14,6 +18,17 @@ curl_test            iterator_test        hashfunc_test
 hashtree_test        tm_ostream_test      list_test
 modification_test    parse_string_test    generic_tree_test
 analyze_test         rel_hashmap_test     tree_test
+```
+
+## 构建测试
+
+构建所有单元测试
+```
+xmake build -g tests
+```
+构建单个测试
+```
+xmake build xxx_test
 ```
 
 ## 单元测试

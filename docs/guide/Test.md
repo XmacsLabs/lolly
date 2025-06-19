@@ -1,5 +1,9 @@
 # How to Perform Testing
 For developers, there are two testing methods available: unit testing and integration testing.
+Make sure you have xmake installed and your code has been configured and built at least once:
+```
+xmake f  
+```
 
 ## Listing all Targets
 The following command line can list all targets. Targets ending with `_test` are C++ unit tests.
@@ -14,6 +18,24 @@ curl_test            iterator_test        hashfunc_test
 hashtree_test        tm_ostream_test      list_test
 modification_test    parse_string_test    generic_tree_test
 analyze_test         rel_hashmap_test     tree_test
+```
+
+## Building Tests
+
+Before running tests, ensure the test binaries are up to date. There are two common ways:
+
+1. Build only tests group
+
+```
+xmake build -g tests
+```
+
+This compiles all targets whose xmake.lua set set_group("tests").
+
+2. Build a single test
+
+```
+xmake build xxx_test
 ```
 
 ## Unit Tests
