@@ -1,19 +1,23 @@
 # How to Perform Testing
 For developers, there are two testing methods available: unit testing and integration testing.
 
+## Configuration
+
+```
+xmake config --enable_tests=true
+xmake build
+```
+
 ## Listing all Targets
 The following command line can list all targets. Targets ending with `_test` are C++ unit tests.
 ``` shell
-$ xmake show -l targets
-path_test            ntuple_test          fast_search_test
-base64_test          blackbox_test        hashset_test
-tm_timer_test        string_test          fast_alloc_test
-promise_test         liblolly             array_test
-url_test             sys_utils_test       hashmap_test
-curl_test            iterator_test        hashfunc_test
-hashtree_test        tm_ostream_test      list_test
-modification_test    parse_string_test    generic_tree_test
-analyze_test         rel_hashmap_test     tree_test
+chmod +x ./bin/list_tests.sh
+./bin/list_test.sh
+analyze_test            fast_search_test        hashset_test            md5_test                rel_hashmap_test        string_view_test        unicode_test
+array_test              file_test               hashtree_test           ntuple_test             shared_lib_test         subprocess_test         url_test
+base64_test             file_url_test           http_test               numeral_test            sha_test                sys_utils_test
+blackbox_test           hashfunc_test           iterator_test           parse_string_test       string_test             tm_ostream_test
+fast_alloc_test         hashmap_test            list_test               promise_test            string_u16_test         tm_timer_test
 ```
 
 ## Unit Tests
@@ -21,12 +25,10 @@ As shown above, unit tests are in the format of xxx_test. You can run the follow
 
 Run only one test:
 ```
-xmake run xxx_test
-bin\test_only.bat xxx_test # on Windows
-bin/test_only xxx_test     # on Linux/macOS
+xmake test tests/xxx_test
 ```
 
 Run all tests:
 ```
-xmake run --group=tests
+xmake test
 ```
